@@ -1,0 +1,1 @@
+This repository contains the source for the Cats & Dogs Faction Expansion mod by Balthichou and Patatifique

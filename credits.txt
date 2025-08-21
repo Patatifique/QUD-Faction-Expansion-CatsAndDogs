@@ -1,0 +1,7 @@
+Faction Expansion: Cats & Dogs
+
+- Concept and Design: Balthichou & Patatifique
+- C# Coding: Patatifique
+- Spritework: Balthichou
+- Writing: Balthichou
+- XML Formatting: Patatifique
