@@ -3,11 +3,17 @@
 	<!--Creatures-->
 	
 	<!-- Other Dogs-->
+	
 	<object Name="Guard Dog" Load="Merge">
 		<part Name="Render" DisplayName="guard dog" Tile="Creatures/guarddog.png" RenderString="d" ColorString="&amp;w" DetailColor="K" />
 		<inventoryobject Blueprint="Brothers_CatsDogs_Spiked Collar" Number="1" />
 	</object>
 
+	<object Name="Herding Dog" Load="Merge">
+		<part Name="Render" DisplayName="herding dog" Tile="Creatures/herdingdog.png" RenderString="d" ColorString="&amp;Y" DetailColor="K" />
+		<inventoryobject Blueprint="Brothers_CatsDogs_Herding Scarf" Number="1" />
+	</object>
+	
 	<!--Corpses-->
 
 

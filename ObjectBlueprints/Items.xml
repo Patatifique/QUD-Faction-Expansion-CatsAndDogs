@@ -4,6 +4,7 @@
 	<!--Butcherables-->
 
 	<!--Loot-->
+	
 		<object Name="Brothers_CatsDogs_Spiked Collar" Inherits="BaseFaceJewelry">
 			<part Name="Render" DisplayName="spiked collar" Tile="Items/spikedcollar.png" RenderString="w" ColorString="&amp;w" DetailColor="y" />
 			<part Name="Armor" AV="0" DV="1" WornOn="Face" />
@@ -14,6 +15,17 @@
 			<part Name="Metal" />
 			<tag Name="Tier" Value="2" />
 			<part Name="ModGlassArmor" Tier="3" Type="spiked" />
+		</object>
+  
+  		<object Name="Brothers_CatsDogs_Herding Scarf" Inherits="BaseFaceJewelry">
+			<part Name="Render" DisplayName="herding scarf" Tile="Items/herdingscarf.png" RenderString="w" ColorString="&amp;R" DetailColor="r" />
+			<part Name="Armor" AV="0" DV="1" WornOn="Face" />
+			<part Name="Description" Short="Crimson drapes around the neck, broadcasting oneself as guardian and friend to mud dwellers." />
+			<part Name="Commerce" Value="25" />
+			<tag Name="EquipSound" Value="sfx_equip_armor_cloth" />
+			<part Name="Physics" Weight="2" />
+			<part Name="AddsRep" Faction="Swine" Value="250" />
+			<tag Name="Tier" Value="1" />
 		</object>
   
 	<!--Others-->
