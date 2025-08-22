@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+	
+	<!--Butcherables-->
+
+	<!--Loot-->
+		<object Name="Brothers_CatsDogs_Spiked Collar" Inherits="BaseFaceJewelry">
+			<part Name="Render" DisplayName="spiked collar" Tile="Items/spikedcollar.png" RenderString="w" ColorString="&amp;w" DetailColor="y" />
+			<part Name="Armor" AV="0" DV="1" WornOn="Face" />
+			<part Name="Description" Short="Boiled and beaten, a goat leather strip threatens with studs of metallic deterrence." />
+			<part Name="Commerce" Value="15" />
+			<tag Name="EquipSound" Value="sfx_equip_material_generic_leather" />
+			<part Name="Physics" Weight="3" Organic="true"/>
+			<part Name="Metal" />
+			<tag Name="Tier" Value="2" />
+			<part Name="ModGlassArmor" Tier="3" Type="spiked" />
+		</object>
+  
+	<!--Others-->
+
+
+</objects>
