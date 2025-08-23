@@ -14,8 +14,21 @@
 		<inventoryobject Blueprint="Brothers_CatsDogs_Herding Scarf" Number="1" />
 	</object>
 	
+	<object Name="Hyrkhound" Load="Merge">
+		<part Name="Render" ColorString="&amp;G" TileColor="&amp;w" DetailColor="G" RenderString="d" Tile="Creatures/hyrkhound.png" DisplayName="{{Y|hyrkhound}}" />
+		<part Name="Corpse" CorpseChance="10" CorpseBlueprint="Hyrkhound Corpse" />
+	</object>
+	
 	<!--Corpses-->
 
+	<object Name="Hyrkhound Corpse" Inherits="Small Animal Corpse">
+		<part Name="Render" DisplayName="hyrkhound corpse" />     
+		<part Name="Butcherable" OnSuccess="Hyrk Cestus" />
+		<part Name="Food" Message="Chewing through the meat makes your tooth enamel fizzle." />
+		<part Name="Physics" Weight="75" />
+		<part Name="Commerce" Value="10" />
+		<tag Name="Tier" Value="3" />    		
+	</object>
 
 	<!--NPCs-->
 

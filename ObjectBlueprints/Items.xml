@@ -3,30 +3,42 @@
 	
 	<!--Butcherables-->
 
+	<object Name="Hyrk Cestus" Inherits="BaseGlove">
+		<part Name="Armor" AV="1" DV="1" Acid="15" WornOn="Hands" />
+		<part Name="Render" DisplayName="hyrk cestus" ColorString="&amp;w" DetailColor="G" Tile="Items/hyrkgloves.png" RenderString="]" />
+		<part Name="Commerce" Value="150" />
+		<part Name="Description" Short="Brutality cobbled acidic teeth with sun-dried, sinew-laced leather. Close your fist and let serrated fangs take their toll." />
+		<part Name="Physics" Weight="3" Organic="true" />
+		<part Name="Springy" Factor="0.5" />
+		<tag Name="EquipSound" Value="sfx_equip_armor_leather" />
+		<part Name="AddsRep" Faction="Dogs" Value="250" />
+		<tag Name="Tier" Value="3" />
+	</object>
+
 	<!--Loot-->
 	
-		<object Name="Brothers_CatsDogs_Spiked Collar" Inherits="BaseFaceJewelry">
-			<part Name="Render" DisplayName="spiked collar" Tile="Items/spikedcollar.png" RenderString="w" ColorString="&amp;w" DetailColor="y" />
-			<part Name="Armor" AV="0" DV="1" WornOn="Face" />
-			<part Name="Description" Short="Boiled and beaten, a goat leather strip threatens with studs of metallic deterrence." />
-			<part Name="Commerce" Value="15" />
-			<tag Name="EquipSound" Value="sfx_equip_material_generic_leather" />
-			<part Name="Physics" Weight="3" Organic="true"/>
-			<part Name="Metal" />
-			<tag Name="Tier" Value="2" />
-			<part Name="ModGlassArmor" Tier="3" Type="spiked" />
-		</object>
+	<object Name="Brothers_CatsDogs_Spiked Collar" Inherits="BaseFaceJewelry">
+		<part Name="Render" DisplayName="spiked collar" Tile="Items/spikedcollar.png" RenderString="w" ColorString="&amp;w" DetailColor="y" />
+		<part Name="Armor" AV="0" DV="1" WornOn="Face" />
+		<part Name="Description" Short="Boiled and beaten, a goat leather strip threatens with studs of metallic deterrence." />
+		<part Name="Commerce" Value="15" />
+		<tag Name="EquipSound" Value="sfx_equip_material_generic_leather" />
+		<part Name="Physics" Weight="3" Organic="true"/>
+		<part Name="Metal" />
+		<tag Name="Tier" Value="2" />
+		<part Name="ModGlassArmor" Tier="3" Type="spiked" />
+	</object>
   
-  		<object Name="Brothers_CatsDogs_Herding Scarf" Inherits="BaseFaceJewelry">
-			<part Name="Render" DisplayName="herding scarf" Tile="Items/herdingscarf.png" RenderString="w" ColorString="&amp;R" DetailColor="r" />
-			<part Name="Armor" AV="0" DV="1" WornOn="Face" />
-			<part Name="Description" Short="Crimson drapes around the neck, broadcasting oneself as guardian and friend to mud dwellers." />
-			<part Name="Commerce" Value="25" />
-			<tag Name="EquipSound" Value="sfx_equip_armor_cloth" />
-			<part Name="Physics" Weight="2" />
-			<part Name="AddsRep" Faction="Swine" Value="250" />
-			<tag Name="Tier" Value="1" />
-		</object>
+  	<object Name="Brothers_CatsDogs_Herding Scarf" Inherits="BaseFaceJewelry">
+		<part Name="Render" DisplayName="herding scarf" Tile="Items/herdingscarf.png" RenderString="w" ColorString="&amp;R" DetailColor="r" />
+		<part Name="Armor" AV="0" DV="1" WornOn="Face" />
+		<part Name="Description" Short="Crimson drapes around the neck, broadcasting oneself as guardian and friend to mud dwellers." />
+		<part Name="Commerce" Value="25" />
+		<tag Name="EquipSound" Value="sfx_equip_armor_cloth" />
+		<part Name="Physics" Weight="2" />
+		<part Name="AddsRep" Faction="Swine" Value="250" />
+		<tag Name="Tier" Value="1" />
+	</object>
   
 	<!--Others-->
 
