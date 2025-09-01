@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<populations>
+	<!--Existing Populations modification to include new Creatures-->
+	
+	<population Name="LairOwners_Ruins" Load="Merge">
+		<group Name="Options" Load="Merge">
+			<object Blueprint="Brothers_CatsDogs_Hyrkhound Alpha"/>
+		</group>
+	</population>
+
+	<population Name="RuinsZoneGlobals-Creatures" Load="Merge">
+		<group Name="Hyrk Pack" Chance="5" Style="pickeach">
+			<object Number="4-8" Blueprint="Hyrkhound" />
+			<object Chance="50" Number="1" Blueprint="Brothers_CatsDogs_Hyrkhound Alpha" />
+		</group>
+	</population>
+
+	<population Name="Tier4RuinsCreatures" Load="Merge">
+		<group Name="Creatures" Load="Merge">
+			<object Chance="5" Number="1" Blueprint="Brothers_CatsDogs_Hyrkhound Alpha" />    
+		</group>
+	</population>
+	
+	<population Name="Tier5RuinsCreatures" Load="Merge">
+		<group Name="Creatures" Load="Merge">
+			<object Chance="5" Number="1" Blueprint="Brothers_CatsDogs_Hyrkhound Alpha" />    
+		</group>
+	</population>
+
+</populations>

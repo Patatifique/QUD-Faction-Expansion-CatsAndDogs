@@ -3,7 +3,7 @@
 	
 	<!--Butcherables-->
 
-	<object Name="Hyrk Cestus" Inherits="BaseGlove">
+	<object Name="Brothers_CatsDogs_Hyrk Cestus" Inherits="BaseGlove">
 		<part Name="Armor" AV="1" DV="1" Acid="15" WornOn="Hands" />
 		<part Name="Render" DisplayName="hyrk cestus" ColorString="&amp;w" DetailColor="G" Tile="Items/hyrkgloves.png" RenderString="]" />
 		<part Name="Commerce" Value="150" />
@@ -15,6 +15,18 @@
 		<tag Name="Tier" Value="3" />
 	</object>
 
+	<object Name="Brothers_CatsDogs_Hyrk Hood" Inherits="BaseHat">
+		<part Name="Armor" AV="1" DV="1" Acid="25" WornOn="Head" />
+		<part Name="Render" DisplayName="hyrk pelt hood" ColorString="&amp;w" DetailColor="G" Tile="Items/hyrkhood.png" RenderString="]" />
+		<part Name="Commerce" Value="350" />
+		<part Name="Description" Short="The severed crown of a leader, hollowed and cured. A snout juts forward, fangs bared in a defiance reflecting a thousand successful hunts and a single failed one." />
+		<part Name="Physics" Weight="4" Organic="true" />
+		<part Name="Springy" Factor="0.5" />
+		<tag Name="EquipSound" Value="sfx_equip_armor_leather" />
+		<part Name="AddsRep" Faction="Dogs" Value="250" />
+		<tag Name="Tier" Value="4" />
+	</object>
+	
 	<!--Loot-->
 	
 	<object Name="Brothers_CatsDogs_Spiked Collar" Inherits="BaseFaceJewelry">

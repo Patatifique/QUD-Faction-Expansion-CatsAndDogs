@@ -2,6 +2,31 @@
 <objects>
 	<!--Creatures-->
 	
+	<object Name="Brothers_CatsDogs_Hyrkhound Alpha" Inherits="BaseDog">
+		<part Name="Render" ColorString="&amp;G" TileColor="&amp;w" DetailColor="G" RenderString="d" Tile="Creatures/hyrkleader.png" DisplayName="{{Y|hyrkhound pack leader}}" />
+		<stat Name="Level" Value="22" />
+		<part Name="Brain" Hostile="true" Factions="Dogs-100" />
+		<stat Name="Strength" Boost="4" />
+		<stat Name="Agility" Boost="2" />
+		<stat Name="Toughness" Boost="4" />
+		<stat Name="Ego" Boost="6" />
+		<stat Name="Hitpoints" Value="50" />
+		<stat Name="Speed" Value="120" />
+		<inventoryobject Blueprint="Brothers_CatsDogs_Hyrkhound_BigBite" Number="1" />
+		<part Name="Description" Short="Legs trample acid-drenched soil, the snarling beast assuming a commanding stance over =pronouns.possessive= packmates. A chrome-like droning escapes =pronouns.possessive= chest as the promise of harm yet to come." />
+		<part Name="Swarmer" ExtraBonus="2" />
+		<skill Name="Persuasion_Intimidate" />
+		<part Name="Corpse" CorpseChance="20" CorpseBlueprint="Brothers_CatsDogs_Hyrkhound Alpha Corpse" />
+		<tag Name="DynamicObjectsTable:Jungle_Creatures" />
+	</object>
+	
+	<object Name="Brothers_CatsDogs_Hyrkhound_BigBite" Inherits="Bite">
+		<part Name="Render" DisplayName="{{G|acid-wet}} nasty fangs" />
+		<part Name="MeleeWeapon" BaseDamage="4d2" />
+		<part Name="ElementalDamage" Damage="2d6+12" Attributes="Acid" />
+		<tag Name="Gender" Value="plural" />
+	</object>
+  
 	<!-- Other Dogs-->
 	
 	<object Name="Guard Dog" Load="Merge">
@@ -16,20 +41,29 @@
 	
 	<object Name="Hyrkhound" Load="Merge">
 		<part Name="Render" ColorString="&amp;G" TileColor="&amp;w" DetailColor="G" RenderString="d" Tile="Creatures/hyrkhound.png" DisplayName="{{Y|hyrkhound}}" />
-		<part Name="Corpse" CorpseChance="10" CorpseBlueprint="Hyrkhound Corpse" />
+		<part Name="Corpse" CorpseChance="10" CorpseBlueprint="Brothers_CatsDogs_Hyrkhound Corpse" />
 	</object>
 	
 	<!--Corpses-->
 
-	<object Name="Hyrkhound Corpse" Inherits="Small Animal Corpse">
+	<object Name="Brothers_CatsDogs_Hyrkhound Corpse" Inherits="Small Animal Corpse">
 		<part Name="Render" DisplayName="hyrkhound corpse" />     
-		<part Name="Butcherable" OnSuccess="Hyrk Cestus" />
+		<part Name="Butcherable" OnSuccess="Brothers_CatsDogs_Hyrk Cestus" />
 		<part Name="Food" Message="Chewing through the meat makes your tooth enamel fizzle." />
 		<part Name="Physics" Weight="75" />
 		<part Name="Commerce" Value="10" />
 		<tag Name="Tier" Value="3" />    		
 	</object>
 
+	<object Name="Brothers_CatsDogs_Hyrkhound Alpha Corpse" Inherits="Small Animal Corpse">
+		<part Name="Render" DisplayName="hyrkhound pack leader corpse" />     
+		<part Name="Butcherable" OnSuccess="Brothers_CatsDogs_Hyrk Hood" />
+		<part Name="Food" Message="The meat is tough, chewy and cankerous." />
+		<part Name="Physics" Weight="100" />
+		<part Name="Commerce" Value="15" />
+		<tag Name="Tier" Value="4" />    		
+	</object>
+	
 	<!--NPCs-->
 
 </objects>
