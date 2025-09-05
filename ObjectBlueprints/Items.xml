@@ -11,7 +11,7 @@
 		<part Name="Physics" Weight="3" Organic="true" />
 		<part Name="Springy" Factor="0.5" />
 		<tag Name="EquipSound" Value="sfx_equip_armor_leather" />
-		<part Name="AddsRep" Faction="Dogs" Value="250" />
+		<part Name="AddsRep" Faction="Dogs" Value="-100" />
 		<tag Name="Tier" Value="3" />
 	</object>
 
@@ -23,7 +23,8 @@
 		<part Name="Physics" Weight="4" Organic="true" />
 		<part Name="Springy" Factor="0.5" />
 		<tag Name="EquipSound" Value="sfx_equip_armor_leather" />
-		<part Name="AddsRep" Faction="Dogs" Value="250" />
+		<part Name="AddsRep" Faction="Dogs" Value="-200" />
+		<part Name="ModTerrifyingVisage" />
 		<tag Name="Tier" Value="4" />
 	</object>
 	
