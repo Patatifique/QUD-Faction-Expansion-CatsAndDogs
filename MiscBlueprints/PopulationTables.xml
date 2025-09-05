@@ -17,14 +17,28 @@
 
 	<population Name="Tier4RuinsCreatures" Load="Merge">
 		<group Name="Creatures" Load="Merge">
-			<object Chance="5" Number="1" Blueprint="Brothers_CatsDogs_Hyrkhound Alpha" />    
+			<object Weight="5" Number="1" Blueprint="Brothers_CatsDogs_Hyrkhound Alpha" />    
 		</group>
 	</population>
 	
 	<population Name="Tier5RuinsCreatures" Load="Merge">
 		<group Name="Creatures" Load="Merge">
-			<object Chance="5" Number="1" Blueprint="Brothers_CatsDogs_Hyrkhound Alpha" />    
+			<object Weight="5" Number="1" Blueprint="Brothers_CatsDogs_Hyrkhound Alpha" />    
 		</group>
 	</population>
+
+	<population Name="FlowerfieldCreatures">
+		<group Name="Creatures" Load="Merge">
+			<object Weight="10" Number="1d2" Blueprint="Brothers_CatsDogs_Blinkoodle" />    
+		</group>
+	</population>
+	
+	<population Name="FlowerFieldsPopulation">
+		<group Name="Creatures" Load="Merge">
+			<object Weight="10" Number="1d2" Blueprint="Brothers_CatsDogs_Blinkoodle" />    
+		</group>
+	</population>
+
+
 
 </populations>

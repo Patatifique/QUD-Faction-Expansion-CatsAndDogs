@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+	
+	<!--Raw Food-->
+
+  <object Name="Brothers_CatsDogs_Blinking Flesh" Inherits="Raw Meat">
+    <part Name="Render" DisplayName="{{W|blinking flesh}}" ColorString="&amp;r" DetailColor="W" Tile="Items/blinkingflesh.png" />
+    <part Name="Physics" Weight="3" />
+    <part Name="Commerce" Value="50" />
+    <part Name="TeleportOnEat" Controlled="true" />
+    <part Name="Food" Message="Your teeth bite into folding space." />
+    <part Name="Description" Short="Wavering flesh flickers as muscle fibers recompose inches away from their initial position." />
+    <part Name="PreservableItem" Result="Brothers_CatsDogs_Dimensional Jerky" Number="3" />
+    <tag Name="ChooseToPreserve" />
+		<stag Name="Travel" />
+  </object>
+  
+	<!--Preserved Food-->
+
+  <object Name="Brothers_CatsDogs_Dimensional Jerky" Inherits="Preservable">
+    <part Name="Render" DisplayName="{{W|dimensional jerky}}" RenderString="%" ColorString="&amp;r" TileColor="&amp;r" DetailColor="W" RenderLayer="5" Tile="Items/dimensionjerky.png" />
+    <part Name="Commerce" Value="5" />
+    <part Name="Description" Short="Slowly hung over dessicating  heat, dry flakes of meat sustain and transport one's body." />
+    <part Name="PreparedCookingIngredient" type="teleport" charges="1" />
+    <tag Name="Meat" />
+    <tag Name="DynamicObjectsTable:Ruins_Ingredients" />
+    <tag Name="DynamicObjectsTable:Jungle_Ingredients" />
+		<stag Name="Travel" />
+  </object>
+
+</objects>

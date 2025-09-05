@@ -26,6 +26,25 @@
 		<part Name="ElementalDamage" Damage="2d6+12" Attributes="Acid" />
 		<tag Name="Gender" Value="plural" />
 	</object>
+ 
+   <object Name="Brothers_CatsDogs_Blinkoodle" Inherits="BaseDog">
+		<part Name="Render" ColorString="&amp;G" TileColor="&amp;w" DetailColor="W" RenderString="d" Tile="Creatures/blinkoodle.png" DisplayName="blinkoodle" />
+		<stat Name="Level" Value="16" />
+		<part Name="Brain" Hostile="false" Factions="Dogs-100" />
+		<stat Name="Hitpoints" Value="15" />
+		<stat Name="Speed" Value="100" />
+		<inventoryobject Blueprint="Brothers_CatsDogs_Blinkoodle Bite" Number="1" />
+		<part Name="Description" Short="Instinct and guile stack space on itself as =pronouns.subjective= steps into the created fold. =pronouns.Subjective= is already gone when you turn -- there lingers in =pronouns.possessive= stead the memory of putative barks." />
+		<mutation Name="Teleportation" Level="10" />
+		<tag Name="DynamicObjectsTable:Flowerfields_Creatures" />
+		<part Name="Corpse" CorpseChance="15" CorpseBlueprint="Brothers_CatsDogs_Blinkoodle Corpse" />
+	</object>
+
+  <object Name="Brothers_CatsDogs_Blinkoodle Bite" Inherits="Bite">
+    <part Name="Render" DisplayName="sharp fangs" />
+    <part Name="MeleeWeapon" BaseDamage="2d3" />
+    <tag Name="Gender" Value="plural" />
+  </object>
   
 	<!-- Other Dogs-->
 	
@@ -62,6 +81,15 @@
 		<part Name="Physics" Weight="100" />
 		<part Name="Commerce" Value="15" />
 		<tag Name="Tier" Value="4" />    		
+	</object>
+	
+	<object Name="Brothers_CatsDogs_Blinkoodle Corpse" Inherits="Small Animal Corpse">
+		<part Name="Render" DisplayName="blinkoodle corpse" />     
+		<part Name="Butcherable" OnSuccess="Brothers_CatsDogs_Blinking Flesh" />
+		<part Name="Food" Message="The meat keeps blinking out of your mouth but you still manage to down it all." />
+		<part Name="Physics" Weight="60" />
+		<part Name="Commerce" Value="5" />
+		<tag Name="Tier" Value="2" />    		
 	</object>
 	
 	<!--NPCs-->
