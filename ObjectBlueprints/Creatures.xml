@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <objects>
-	<!--Creatures-->
+	<!--New Creatures-->
 	
 	<object Name="Brothers_CatsDogs_Hyrkhound Alpha" Inherits="BaseDog">
 		<part Name="Render" ColorString="&amp;G" TileColor="&amp;w" DetailColor="G" RenderString="d" Tile="Creatures/hyrkleader.png" DisplayName="{{Y|hyrkhound pack leader}}" />
@@ -40,13 +40,44 @@
 		<part Name="Corpse" CorpseChance="15" CorpseBlueprint="Brothers_CatsDogs_Blinkoodle Corpse" />
 	</object>
 
-  <object Name="Brothers_CatsDogs_Blinkoodle Bite" Inherits="Bite">
-    <part Name="Render" DisplayName="sharp fangs" />
-    <part Name="MeleeWeapon" BaseDamage="2d3" />
-    <tag Name="Gender" Value="plural" />
-  </object>
-  
-	<!-- Other Dogs-->
+	<object Name="Brothers_CatsDogs_Blinkoodle Bite" Inherits="Bite">
+		<part Name="Render" DisplayName="sharp fangs" />
+		<part Name="MeleeWeapon" BaseDamage="2d3" />
+		<tag Name="Gender" Value="plural" />
+	</object>
+ 
+ 	<object Name="Brothers_CatsDogs_Hyrkhound Pet" Inherits="BaseDog">
+		<part Name="Render" DisplayName="{{M|Jerenah, slobbering droolhound}}" Tile="Creatures/hyrkpet.png" ColorString="&amp;w" DetailColor="c" />
+		<part Name="Corpse" CorpseChance="0" />
+		<stat Name="Hitpoints" Value="50" />
+		<part Name="Brain" Hostile="false" Factions="Dogs-100" />
+		<stat Name="Level" Value="5" />
+		<stat Name="Speed" Value="120" />
+		<part Name="Swarmer" />
+		<part Name="SaveModifier" Vs="Frozen Stuck Restraint,Ice Slip Move" Amount="16" WorksOnSelf="true" WorksOnEquipper="false" />
+		<stat Name="Level" Value="5" />
+		<stat Name="AV" Value="4" />
+		<inventoryobject Blueprint="Brothers_CatsDogs_Hyrkhound_Pet_Bite" Number="1" />
+		<part Name="Description" Short="Without a care for the measure of success amongst hyrkhounds, =pronouns.possessive= jaws pool with translucent appetite turned liquid. Over =pronouns.possessive= body, hair is drowned into matted submission." />
+	<!--pet stuff-->
+		<part Name="Pettable" />
+		<tag Name="PetResponse" Value="licks you right back,covers you in saliva,drools on your hands" />
+		<property Name="Story" Value="Droolhound Story" />
+		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_Hyrkhound Pet" />
+		<tag Name="StartingPet" />
+		<tag Name="NoXP" />
+		<tag Name="Gender" Value="male" />
+		<xtagGrammar Proper="true" />
+		<tag Name="ExcludeFromDynamicEncounters" />		
+	</object>
+	
+	<object Name="Brothers_CatsDogs_Hyrkhound_Pet_Bite" Inherits="Bite">
+		<part Name="Render" DisplayName="{{b|drool-wet}} fangs" />
+		<part Name="MeleeWeapon" BaseDamage="4d2" />
+		<tag Name="Gender" Value="plural" />
+	</object>
+	
+	<!--Existing Creatures-->
 	
 	<object Name="Guard Dog" Load="Merge">
 		<part Name="Render" DisplayName="guard dog" Tile="Creatures/guarddog.png" RenderString="d" ColorString="&amp;w" DetailColor="K" />
@@ -86,7 +117,7 @@
 	<object Name="Brothers_CatsDogs_Blinkoodle Corpse" Inherits="Small Animal Corpse">
 		<part Name="Render" DisplayName="blinkoodle corpse" />     
 		<part Name="Butcherable" OnSuccess="Brothers_CatsDogs_Blinking Flesh" />
-		<part Name="Food" Message="The meat keeps blinking out of your mouth but you still manage to down it all." />
+		<part Name="Food" Message="Despite the meat blinking out of your mouth, you still manage to down it all." />
 		<part Name="Physics" Weight="60" />
 		<part Name="Commerce" Value="5" />
 		<tag Name="Tier" Value="2" />    		
