@@ -93,6 +93,10 @@
 		<part Name="Render" ColorString="&amp;G" TileColor="&amp;w" DetailColor="G" RenderString="d" Tile="Creatures/hyrkhound.png" DisplayName="{{Y|hyrkhound}}" />
 		<part Name="Corpse" CorpseChance="10" CorpseBlueprint="Brothers_CatsDogs_Hyrkhound Corpse" />
 	</object>
+
+	<object Name="Ray Cat" Load="Merge">
+		<part Name="Render" Tile="Creatures/raycat.png" RenderString="l" ColorString="&amp;m" DetailColor="y" />
+	</object>
 	
 	<!--Corpses-->
 
