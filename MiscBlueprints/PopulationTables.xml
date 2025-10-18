@@ -39,6 +39,20 @@
 		</group>
 	</population>
 
+	<population Name="LairOwners_Flowerfields" Load="Merge">
+		<group Name="Options" Load="Merge">
+			<object Blueprint="Brothers_CatsDogs_Blinkoodle"/>
+		</group>
+	</population>
+	
+	<population Name="DeepJungleZoneGlobals-Creatures" Load="Merge">
+		<object Chance="1" Number="1-2" Blueprint="Brothers_CatsDogs_Black Puma" />
+	</population>		
 
+	<population Name="LairOwners_DeepJungle" Load="Merge">
+		<group Name="Options" Load="Merge">
+			<object Blueprint="Brothers_CatsDogs_Black Puma"/>
+		</group>
+	</population>
 
 </populations>

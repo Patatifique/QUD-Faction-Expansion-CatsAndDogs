@@ -51,12 +51,9 @@
 		<part Name="Corpse" CorpseChance="0" />
 		<stat Name="Hitpoints" Value="50" />
 		<part Name="Brain" Hostile="false" Factions="Dogs-100" />
-		<stat Name="Level" Value="5" />
 		<stat Name="Speed" Value="120" />
 		<part Name="Swarmer" />
-		<part Name="SaveModifier" Vs="Frozen Stuck Restraint,Ice Slip Move" Amount="16" WorksOnSelf="true" WorksOnEquipper="false" />
 		<stat Name="Level" Value="5" />
-		<stat Name="AV" Value="4" />
 		<inventoryobject Blueprint="Brothers_CatsDogs_Hyrkhound_Pet_Bite" Number="1" />
 		<part Name="Description" Short="Without a care for the measure of success amongst hyrkhounds, =pronouns.possessive= jaws pool with translucent appetite turned liquid. Over =pronouns.possessive= body, hair is drowned into matted submission." />
 	<!--pet stuff-->
@@ -76,7 +73,33 @@
 		<part Name="MeleeWeapon" BaseDamage="4d2" />
 		<tag Name="Gender" Value="plural" />
 	</object>
-	
+
+	<object Name="Brothers_CatsDogs_Black Puma" Inherits="BaseCat">
+		<part Name="Render" DisplayName="{{K|black puma}}" Tile="Creatures/blackpuma.png" RenderString="l" ColorString="&amp;K" TileColor="&amp;K" DetailColor="r"/>
+		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Brothers_CatsDogs_Black Puma Corpse" />
+		<stat Name="AV" Value="9" />
+		<stat Name="Level" Value="31" />
+		<stat Name="Hitpoints" Value="120" />
+		<part Name="Brain" Hostile="false" Factions="Cats-100" />
+		<inventoryobject Blueprint="Brothers_CatsDogs_Black Puma Claw" Number="2" />
+		<part Name="Description" Short="Slick opal black fur rustles in reaction to light, selfishly hoarding the Hind Sun as a prisoner. Beneath =pronouns.possessive= lithe body, paws crowned with khopeshs furrow the ground in ceremonial silence." />
+		<skill Name="ShortBlades" />
+		<skill Name="Multiweapon_Fighting" />
+		<skill Name="ShortBlades_Bloodletter" />
+		<skill Name="Multiweapon_Flurry " />
+		<skill Name="Tactics" />
+		<skill Name="Tactics_Charge" />
+		<skill Name="Tactics_Run" />
+		<tag Name="Role" Value="Tank" />
+		<part Name="Hidden" Difficulty="15" />
+		<tag Name="DynamicObjectsTable:DeepJungle_Creatures" />
+	</object>
+  
+	<object Name="Brothers_CatsDogs_Black Puma Claw" Inherits="NaturalWeapon">
+		<part Name="Render" DisplayName="{{K|shaded claw}}" Tile="Creatures/natural-weapon-paw.bmp" ColorString="&amp;w" />
+		<part Name="MeleeWeapon" BaseDamage="2d6" Skill="ShortBlades" Stat="Strength" Slot="Foot" />
+	</object>
+
 	<!--Existing Creatures-->
 	
 	<object Name="Guard Dog" Load="Merge">
@@ -125,6 +148,15 @@
 		<part Name="Physics" Weight="60" />
 		<part Name="Commerce" Value="5" />
 		<tag Name="Tier" Value="2" />    		
+	</object>
+
+	<object Name="Brothers_CatsDogs_Black Puma Corpse" Inherits="Animal Corpse">
+		<part Name="Butcherable" OnSuccess="Black Puma Haunch" />
+		<part Name="Render" DisplayName="{{K|black puma}} corpse" ColorString="&amp;w" />
+		<part Name="Food" Message="The meat feels elusive in your mouth, and takes some effort hunting down." />
+		<part Name="Physics" Weight="200" />
+		<part Name="Commerce" Value="50" />
+		<tag Name="Tier" Value="3" />    
 	</object>
 	
 	<!--NPCs-->
