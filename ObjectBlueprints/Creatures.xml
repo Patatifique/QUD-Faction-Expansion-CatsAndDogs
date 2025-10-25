@@ -100,6 +100,44 @@
 		<part Name="MeleeWeapon" BaseDamage="2d6" Skill="ShortBlades" Stat="Strength" Slot="Foot" />
 	</object>
 
+	<object Name="Brothers_CatsDogs_Rocky Lion Base" Inherits="BaseCat">
+		<tag Name="BaseObject" Value="*noinherit" />
+		<part Name="Corpse" CorpseChance="40" CorpseBlueprint="Brothers_CatsDogs_Rocky Lion Corpse" />
+		<stat Name="AV" Value="10" />
+		<stat Name="Level" Value="18" />
+		<stat Name="Hitpoints" Value="60" />
+		<part Name="Brain" Hostile="false" Factions="Cats-100" />
+		<inventoryobject Blueprint="Brothers_CatsDogs_Rocky Lion Paw" Number="2" />
+		<skill Name="Cudgel_Expertise" />
+		<skill Name="Cudgel_Bludgeon" />
+		<skill Name="Cudgel_ChargingStrike" />
+		<skill Name="Tactics" />
+		<skill Name="Tactics_Charge" />
+		<tag Name="Role" Value="Tank" />
+		<stag Name="HardMaterial" Value="hide" />
+	</object>
+ 
+	<object Name="Brothers_CatsDogs_Rocky Lion M" Inherits="Brothers_CatsDogs_Rocky Lion Base">
+		<part Name="Render" Tile="creatures/rockylionm.png" DisplayName="{{w|lithic lion}}" ColorString="&amp;y" DetailColor="w" />
+		<tag Name="Gender" Value="male" />
+		<part Name="Description" Short="Here stands the solitary monarch of petrified waterfalls, hide cascading with shale and quarts. Flecks of mica shimmer in =pronouns.possessive= fur, coating a muscular intention made manifest with ponderous materialization." />
+		<tag Name="DynamicObjectsTable:Mountains_Creatures" />
+	</object>
+	
+	<object Name="Brothers_CatsDogs_Rocky Lion F" Inherits="Brothers_CatsDogs_Rocky Lion Base">
+		<part Name="Render" Tile="creatures/rockylionf.png" DisplayName="{{w|lithic lion}}" ColorString="&amp;y" DetailColor="w" />
+		<tag Name="Gender" Value="female" />
+		<part Name="Description" Short="Here stands the solitary queen of petrified waterfalls, =pronouns.possessive= slick neck chiseled by existence. Flecks of mica shimmer in =pronouns.possessive= fur, coating a muscular intention made manifest with ponderous materialization." />
+		<tag Name="DynamicObjectsTable:Mountains_Creatures" />
+	</object>
+	
+	<object Name="Brothers_CatsDogs_Rocky Lion Paw" Inherits="NaturalWeapon">
+		<part Name="Render" DisplayName="pummeling claw" Tile="Creatures/natural-weapon-paw.bmp" ColorString="&amp;w" />
+		<part Name="MeleeWeapon" BaseDamage="2d4" Skill="Cudgel" Stat="Strength" Slot="Foot" />
+	</object>
+  
+  	
+	
 	<!--Existing Creatures-->
 	
 	<object Name="Guard Dog" Load="Merge">
@@ -156,6 +194,15 @@
 		<part Name="Food" Message="The meat feels elusive in your mouth, and takes some effort hunting down." />
 		<part Name="Physics" Weight="200" />
 		<part Name="Commerce" Value="50" />
+		<tag Name="Tier" Value="3" />    
+	</object>
+	
+	<object Name="Brothers_CatsDogs_Rocky Lion Corpse" Inherits="Animal Corpse">
+		<part Name="Butcherable" OnSuccess="Brothers_CatsDogs_Rocky Pelt" />
+		<part Name="Render" DisplayName="{{w|lithic lion}} corpse" ColorString="&amp;w" />
+		<part Name="Food" Message="You have some trouble chewing through chips of meat." />
+		<part Name="Physics" Weight="200" />
+		<part Name="Commerce" Value="40" />
 		<tag Name="Tier" Value="3" />    
 	</object>
 	

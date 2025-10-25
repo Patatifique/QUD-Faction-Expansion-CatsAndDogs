@@ -28,6 +28,16 @@
 		<tag Name="Tier" Value="4" />
 	</object>
 	
+	<object Name="Brothers_CatsDogs_Rocky Pelt" Inherits="Item">
+		<part Name="Render" DisplayName="{{w|lithic lion pelt}}" ColorString="&amp;y" Tile="Items/rockypelt.png" DetailColor="w" />
+		<part Name="Description" Short="Rolled-up lithic hide grinds whenever it shifts, raining grit on its surroundings." />
+		<part Name="Physics" Weight="10" Category="Trade Goods" />
+		<part Name="Commerce" Value="200" />
+		<tag Name="Tier" Value="5" />
+		<tag Name="DynamicObjectsTable:TradeGoods" />
+		<tag Name="Breakable" Value="*delete"/>
+	</object>
+  
 	<!--Loot-->
 	
 	<object Name="Brothers_CatsDogs_Spiked Collar" Inherits="BaseFaceJewelry">

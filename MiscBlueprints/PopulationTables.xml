@@ -27,13 +27,13 @@
 		</group>
 	</population>
 
-	<population Name="FlowerfieldCreatures">
+	<population Name="FlowerfieldCreatures" Load="Merge">
 		<group Name="Creatures" Load="Merge">
 			<object Weight="10" Number="1d2" Blueprint="Brothers_CatsDogs_Blinkoodle" />    
 		</group>
 	</population>
 	
-	<population Name="FlowerFieldsPopulation">
+	<population Name="FlowerFieldsPopulation" Load="Merge">
 		<group Name="Creatures" Load="Merge">
 			<object Weight="10" Number="1d2" Blueprint="Brothers_CatsDogs_Blinkoodle" />    
 		</group>
@@ -52,6 +52,34 @@
 	<population Name="LairOwners_DeepJungle" Load="Merge">
 		<group Name="Options" Load="Merge">
 			<object Blueprint="Brothers_CatsDogs_Black Puma"/>
+		</group>
+	</population>
+
+	<population Name="MountainsPerSector" Load="Merge">
+		<group Name="Creatures" Load="Merge">
+			<object Weight="900" Number="1" Blueprint="Brothers_CatsDogs_Rocky Lion F" />
+			<object Weight="900" Number="1" Blueprint="Brothers_CatsDogs_Rocky Lion M" />
+		</group>
+	</population>
+
+	<population Name="MountainCreatures" Load="Merge">
+		<group Name="Creatures" Load="Merge">
+			<object Weight="10" Number="1" Blueprint="Brothers_CatsDogs_Rocky Lion M" />
+			<object Weight="10" Number="1" Blueprint="Brothers_CatsDogs_Rocky Lion F" />
+		</group>
+	</population>
+
+	<population Name="MountainsZoneGlobals-Reachable" Load="Merge">
+		<group Chance="5" Name="RockyLion" Style="pickone">
+			<object Weight="50" Blueprint="Brothers_CatsDogs_Rocky Lion M" />
+			<object Weight="50" Blueprint="Brothers_CatsDogs_Rocky Lion F" />
+		</group>
+	</population>
+  
+	<population Name="LairOwners_Mountains">
+		<group Name="Options" Load="Merge">
+			<object Weight="2" Blueprint="Brothers_CatsDogs_Rocky Lion M" />
+			<object Weight="2" Blueprint="Brothers_CatsDogs_Rocky Lion F" />
 		</group>
 	</population>
 
