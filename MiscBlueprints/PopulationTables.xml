@@ -76,10 +76,18 @@
 		</group>
 	</population>
   
-	<population Name="LairOwners_Mountains">
+	<population Name="LairOwners_Mountains" Load="Merge">
 		<group Name="Options" Load="Merge">
 			<object Weight="2" Blueprint="Brothers_CatsDogs_Rocky Lion M" />
 			<object Weight="2" Blueprint="Brothers_CatsDogs_Rocky Lion F" />
+		</group>
+	</population>
+
+	<population Name="Tier5CaveCreatures" Load="Merge">
+		<group Name="Creatures" Load="Merge">
+			<object Weight="10" Number="1" Blueprint="Brothers_CatsDogs_Rocky Lion M" />
+			<object Weight="10" Number="1" Blueprint="Brothers_CatsDogs_Rocky Lion F" />
+			<object Weight="5" Number="1" Blueprint="Brothers_CatsDogs_Black Puma" />
 		</group>
 	</population>
 

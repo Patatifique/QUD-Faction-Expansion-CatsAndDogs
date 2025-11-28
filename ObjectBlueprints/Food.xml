@@ -4,7 +4,7 @@
 	<!--Raw Food-->
 
   <object Name="Brothers_CatsDogs_Blinking Flesh" Inherits="Raw Meat">
-    <part Name="Render" DisplayName="{{W|blinking flesh}}" ColorString="&amp;r" DetailColor="W" Tile="Items/blinkingflesh.png" />
+    <part Name="Render" DisplayName="{{W|blinking flesh}}" ColorString="&amp;r" DetailColor="W" Tile="Items/catsdogs/blinkingflesh.png" />
     <part Name="Physics" Weight="3" />
     <part Name="Commerce" Value="50" />
     <part Name="TeleportOnEat" Controlled="true" />
@@ -18,7 +18,7 @@
 	<!--Preserved Food-->
 
   <object Name="Brothers_CatsDogs_Dimensional Jerky" Inherits="Preservable">
-    <part Name="Render" DisplayName="{{W|dimensional jerky}}" RenderString="%" ColorString="&amp;r" TileColor="&amp;r" DetailColor="W" RenderLayer="5" Tile="Items/dimensionjerky.png" />
+    <part Name="Render" DisplayName="{{W|dimensional jerky}}" RenderString="%" ColorString="&amp;r" TileColor="&amp;r" DetailColor="W" RenderLayer="5" Tile="Items/catsdogs/dimensionjerky.png" />
     <part Name="Commerce" Value="5" />
     <part Name="Description" Short="Slowly hung over dessicating  heat, dry flakes of meat sustain and transport one's body." />
     <part Name="PreparedCookingIngredient" type="teleport" charges="1" />

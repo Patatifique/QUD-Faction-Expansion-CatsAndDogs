@@ -3,7 +3,7 @@
 	<!--New Creatures-->
 	
 	<object Name="Brothers_CatsDogs_Hyrkhound Alpha" Inherits="BaseDog">
-		<part Name="Render" ColorString="&amp;G" TileColor="&amp;w" DetailColor="G" RenderString="d" Tile="Creatures/hyrkleader.png" DisplayName="{{Y|hyrkhound pack leader}}" />
+		<part Name="Render" ColorString="&amp;G" TileColor="&amp;w" DetailColor="G" RenderString="d" Tile="Creatures/catsdogs/hyrkleader.png" DisplayName="{{Y|hyrkhound pack leader}}" />
 		<stat Name="Level" Value="22" />
 		<part Name="Brain" Hostile="true" Factions="Dogs-100" />
 		<stat Name="Strength" Boost="4" />
@@ -28,7 +28,7 @@
 	</object>
  
    <object Name="Brothers_CatsDogs_Blinkoodle" Inherits="BaseDog">
-		<part Name="Render" ColorString="&amp;G" TileColor="&amp;w" DetailColor="W" RenderString="d" Tile="Creatures/blinkoodle.png" DisplayName="blinkoodle" />
+		<part Name="Render" ColorString="&amp;G" TileColor="&amp;w" DetailColor="W" RenderString="d" Tile="Creatures/catsdogs/blinkoodle.png" DisplayName="blinkoodle" />
 		<stat Name="Level" Value="16" />
 		<part Name="Brain" Hostile="false" Factions="Dogs-100" />
 		<stat Name="Hitpoints" Value="15" />
@@ -47,7 +47,7 @@
 	</object>
  
  	<object Name="Brothers_CatsDogs_Hyrkhound Pet" Inherits="BaseDog">
-		<part Name="Render" DisplayName="{{M|Jerenah, slobbering droolhound}}" Tile="Creatures/hyrkpet.png" ColorString="&amp;w" DetailColor="c" />
+		<part Name="Render" DisplayName="{{M|Jerenah, slobbering droolhound}}" Tile="Creatures/catsdogs/hyrkpet.png" ColorString="&amp;w" DetailColor="c" />
 		<part Name="Corpse" CorpseChance="0" />
 		<stat Name="Hitpoints" Value="50" />
 		<part Name="Brain" Hostile="false" Factions="Dogs-100" />
@@ -75,7 +75,7 @@
 	</object>
 
 	<object Name="Brothers_CatsDogs_Black Puma" Inherits="BaseCat">
-		<part Name="Render" DisplayName="{{K|black puma}}" Tile="Creatures/blackpuma.png" RenderString="l" ColorString="&amp;K" TileColor="&amp;K" DetailColor="r"/>
+		<part Name="Render" DisplayName="{{K|black puma}}" Tile="Creatures/catsdogs/blackpuma.png" RenderString="l" ColorString="&amp;K" TileColor="&amp;K" DetailColor="r"/>
 		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Brothers_CatsDogs_Black Puma Corpse" />
 		<stat Name="AV" Value="9" />
 		<stat Name="Level" Value="31" />
@@ -96,7 +96,7 @@
 	</object>
   
 	<object Name="Brothers_CatsDogs_Black Puma Claw" Inherits="NaturalWeapon">
-		<part Name="Render" DisplayName="{{K|shaded claw}}" Tile="Creatures/natural-weapon-paw.bmp" ColorString="&amp;w" />
+		<part Name="Render" DisplayName="{{K|shaded claw}}" Tile="Creatures/catsdogs/natural-weapon-paw.bmp" ColorString="&amp;w" />
 		<part Name="MeleeWeapon" BaseDamage="2d6" Skill="ShortBlades" Stat="Strength" Slot="Foot" />
 	</object>
 
@@ -132,31 +132,62 @@
 	</object>
 	
 	<object Name="Brothers_CatsDogs_Rocky Lion Paw" Inherits="NaturalWeapon">
-		<part Name="Render" DisplayName="pummeling claw" Tile="Creatures/natural-weapon-paw.bmp" ColorString="&amp;w" />
+		<part Name="Render" DisplayName="pummeling claw" Tile="Creatures/catsdogs/natural-weapon-paw.bmp" ColorString="&amp;w" />
 		<part Name="MeleeWeapon" BaseDamage="2d4" Skill="Cudgel" Stat="Strength" Slot="Foot" />
 	</object>
-  
+
+ 	<object Name="Brothers_CatsDogs_Brainkitty Pet" Inherits="BaseCat">
+		<part Name="Render" DisplayName="{{M|Alther, elder kitten}}" Tile="Creatures/catsdogs/brainpet.png" ColorString="&amp;c" DetailColor="C" />
+		<part Name="Corpse" CorpseChance="0" />
+		<stat Name="Hitpoints" Value="50" />
+		<stat Name="Strength" sValue="5" />
+		<stat Name="Toughness" sValue="10" />
+		<stat Name="Willpower" sValue="21" />
+		<stat Name="Ego" sValue="19" />
+		<part Name="Brain" Hostile="false" Calm="True" Factions="Cats-100" Wanders="True" />
+		<stat Name="Level" Value="5" />
+		<inventoryobject Blueprint="Cat Claw" Number="2" />
+		<inventoryobject Blueprint="Cat Bite" Number="1" />
+		<mutation Name="SunderMind" Level="1" />
+		<part Name="Description" Short="Without a care for the measure of success amongst hyrkhounds, =pronouns.possessive= jaws pool with translucent appetite turned liquid. Over =pronouns.possessive= body, hair is drowned into matted submission." />
+	<!--pet stuff-->
+		<part Name="Pettable" />
+		<tag Name="PetResponse" Value="looks at you tiredly,levitates for a few seconds,complains about his back" />
+		<property Name="Story" Value="Brainkitty Story" />
+		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_Brainkitty Pet" />
+		<tag Name="StartingPet" />
+		<tag Name="NoXP" />
+		<tag Name="Gender" Value="male" />
+		<xtagGrammar Proper="true" />
+		<tag Name="ExcludeFromDynamicEncounters" />		
+	</object>
+	
+	<object Name="Brothers_CatsDogs_Hyrkhound_Pet_Bite" Inherits="Bite">
+		<part Name="Render" DisplayName="{{b|drool-wet}} fangs" />
+		<part Name="MeleeWeapon" BaseDamage="4d2" />
+		<tag Name="Gender" Value="plural" />
+	</object>
   	
 	
 	<!--Existing Creatures-->
 	
 	<object Name="Guard Dog" Load="Merge">
-		<part Name="Render" DisplayName="guard dog" Tile="Creatures/guarddog.png" RenderString="d" ColorString="&amp;w" DetailColor="K" />
+		<part Name="Render" DisplayName="guard dog" Tile="Creatures/catsdogs/guarddog.png" RenderString="d" ColorString="&amp;w" DetailColor="K" />
 		<inventoryobject Blueprint="Brothers_CatsDogs_Spiked Collar" Number="1" />
 	</object>
 
 	<object Name="Herding Dog" Load="Merge">
-		<part Name="Render" DisplayName="herding dog" Tile="Creatures/herdingdog.png" RenderString="d" ColorString="&amp;Y" DetailColor="K" />
+		<part Name="Render" DisplayName="herding dog" Tile="Creatures/catsdogs/herdingdog.png" RenderString="d" ColorString="&amp;Y" DetailColor="K" />
 		<inventoryobject Blueprint="Brothers_CatsDogs_Herding Scarf" Number="1" />
 	</object>
 	
 	<object Name="Hyrkhound" Load="Merge">
-		<part Name="Render" ColorString="&amp;G" TileColor="&amp;w" DetailColor="G" RenderString="d" Tile="Creatures/hyrkhound.png" DisplayName="{{Y|hyrkhound}}" />
+		<part Name="Render" ColorString="&amp;G" TileColor="&amp;w" DetailColor="G" RenderString="d" Tile="Creatures/catsdogs/hyrkhound.png" DisplayName="{{Y|hyrkhound}}" />
 		<part Name="Corpse" CorpseChance="10" CorpseBlueprint="Brothers_CatsDogs_Hyrkhound Corpse" />
 	</object>
 
 	<object Name="Ray Cat" Load="Merge">
-		<part Name="Render" Tile="Creatures/raycat.png" RenderString="l" ColorString="&amp;m" DetailColor="y" />
+		<part Name="Render" Tile="Creatures/catsdogs/raycat.png" RenderString="l" ColorString="&amp;m" DetailColor="y" />
 	</object>
 	
 	<!--Corpses-->

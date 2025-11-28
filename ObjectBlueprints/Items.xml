@@ -5,7 +5,7 @@
 
 	<object Name="Brothers_CatsDogs_Hyrk Cestus" Inherits="BaseGlove">
 		<part Name="Armor" AV="1" DV="1" Acid="15" WornOn="Hands" />
-		<part Name="Render" DisplayName="hyrk cestus" ColorString="&amp;w" DetailColor="G" Tile="Items/hyrkgloves.png" RenderString="]" />
+		<part Name="Render" DisplayName="hyrk cestus" ColorString="&amp;w" DetailColor="G" Tile="Items/catsdogs/hyrkgloves.png" RenderString="]" />
 		<part Name="Commerce" Value="150" />
 		<part Name="Description" Short="Brutality cobbled acidic teeth with sun-dried, sinew-laced leather. Close your fist and let serrated fangs take their toll." />
 		<part Name="Physics" Weight="3" Organic="true" />
@@ -17,7 +17,7 @@
 
 	<object Name="Brothers_CatsDogs_Hyrk Hood" Inherits="BaseHat">
 		<part Name="Armor" AV="1" DV="1" Acid="25" WornOn="Head" />
-		<part Name="Render" DisplayName="hyrk pelt hood" ColorString="&amp;w" DetailColor="G" Tile="Items/hyrkhood.png" RenderString="]" />
+		<part Name="Render" DisplayName="hyrk pelt hood" ColorString="&amp;w" DetailColor="G" Tile="Items/catsdogs/hyrkhood.png" RenderString="]" />
 		<part Name="Commerce" Value="350" />
 		<part Name="Description" Short="The severed crown of a leader, hollowed and cured. A snout juts forward, fangs bared in a defiance reflecting a thousand successful hunts and a single failed one." />
 		<part Name="Physics" Weight="4" Organic="true" />
@@ -29,7 +29,7 @@
 	</object>
 	
 	<object Name="Brothers_CatsDogs_Rocky Pelt" Inherits="Item">
-		<part Name="Render" DisplayName="{{w|lithic lion pelt}}" ColorString="&amp;y" Tile="Items/rockypelt.png" DetailColor="w" />
+		<part Name="Render" DisplayName="{{w|lithic lion pelt}}" ColorString="&amp;y" Tile="Items/catsdogs/rockypelt.png" DetailColor="w" />
 		<part Name="Description" Short="Rolled-up lithic hide grinds whenever it shifts, raining grit on its surroundings." />
 		<part Name="Physics" Weight="10" Category="Trade Goods" />
 		<part Name="Commerce" Value="200" />
@@ -41,7 +41,7 @@
 	<!--Loot-->
 	
 	<object Name="Brothers_CatsDogs_Spiked Collar" Inherits="BaseFaceJewelry">
-		<part Name="Render" DisplayName="spiked collar" Tile="Items/spikedcollar.png" RenderString="w" ColorString="&amp;w" DetailColor="y" />
+		<part Name="Render" DisplayName="spiked collar" Tile="Items/catsdogs/spikedcollar.png" RenderString="w" ColorString="&amp;w" DetailColor="y" />
 		<part Name="Armor" AV="0" DV="1" WornOn="Face" />
 		<part Name="Description" Short="Boiled and beaten, a goat leather strip threatens with studs of metallic deterrence." />
 		<part Name="Commerce" Value="15" />
@@ -53,7 +53,7 @@
 	</object>
   
   	<object Name="Brothers_CatsDogs_Herding Scarf" Inherits="BaseFaceJewelry">
-		<part Name="Render" DisplayName="herding scarf" Tile="Items/herdingscarf.png" RenderString="w" ColorString="&amp;R" DetailColor="r" />
+		<part Name="Render" DisplayName="herding scarf" Tile="Items/catsdogs/herdingscarf.png" RenderString="w" ColorString="&amp;R" DetailColor="r" />
 		<part Name="Armor" AV="0" DV="1" WornOn="Face" />
 		<part Name="Description" Short="Crimson drapes around the neck, broadcasting oneself as guardian and friend to mud dwellers." />
 		<part Name="Commerce" Value="25" />
