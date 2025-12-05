@@ -2,8 +2,8 @@
 
 <books>
   
-  <book ID="Droolhound Story" Title="{{W|An Unusual Pup}}">
-    <page>
+	<book ID="Droolhound Story" Title="{{W|An Unusual Pup}}">
+		<page>
 With elevated anguish, the small hyrkhound pup bites in the tough gnu carcass again, expecting his saliva to dissolve the leathery meat and let him feast like his siblings. Despite his efforts, neutral saliva pools on the hide, without the telltale hissing nor sizzling that would announce a delicious meal.
 
 A whimpers escape his frail jaws as other pups nudge him out of the way to access delicious meat. The towering silhouettes of the rest of the pack roam the nearby shadows, bleached fangs bared in an unspoken threat against the runt-of-the-litter, unable to feed by itself.
@@ -11,12 +11,19 @@ A whimpers escape his frail jaws as other pups nudge him out of the way to acces
 He makes another attempt to reach for the gnu, but already the rumps of its pack-sibs have taken his place. Pulling one of their tail only gets him a snapping bite on the snout, and he is forced back by yapping barks.
 
 The adults close in, now. With the pups having fed comes their turn, and soon enough there is nothing but faded bones left exposed under the Waning Salt Sun. Yet another day to spend on an empty stomach, and the pack is already on the move.
-    </page>
-    <page>
+		</page>
+		<page>
 With each day they grow stronger and feed faster, while the pup wanes, barely subsisting on tough meat strips. They run faster too, and one day they leave him behind, glowcrows already circling the weakened hyrkhound that could not feed properly.
 
 Such is life in Qud.
-    </page>
-  </book>
-  
+		</page>
+	</book>
+ 
+	<book ID="Brainkitty Story" Title="{{W|The Oldest Kitten Alive}}">
+		<page>
+One could assume time comes for all things in equal manner. In this specific case however, one would be wrong. Ego projection may safeguard the body against the river of time, letting its water glide harmlessly on soft fur that has never known silver nor wrinkle. The mind is keened to point, challenging the expression "wise beyond one's years" with the abrupt insertion of "apparent".
+		</page>
+	</book>
+ 
+ 
 </books>

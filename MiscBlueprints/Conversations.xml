@@ -7,12 +7,26 @@
 		
 		<node ID="Start">
 		  <text>
-			 {{emote|*Jerenah turns in circles before lying down.*}}~
-			 {{emote|*Jerenah chases =pronouns.possessive= tail.*}}~
-			 {{emote|*Jerenah laps some drool right back up.*}}~
-			 {{emote|*Jerenah gets up on =pronouns.possessive= hind legs.*}}~
+			{{emote|*Jerenah turns in circles before lying down.*}}~
+			{{emote|*Jerenah chases =pronouns.possessive= tail.*}}~
+			{{emote|*Jerenah laps some drool right back up.*}}~
+			{{emote|*Jerenah gets up on =pronouns.possessive= hind legs.*}}
 		  </text>
 		  <choice GotoID="End">Live and drool, friendly hyrkhound.</choice>
+		</node>
+	
+	</conversation>
+	
+	<conversation ID="Brothers_CatsDogs_Brainkitty Pet">
+		
+		<node ID="Start">
+		  <text>
+			Kids these days have it easy: when I was young, glotrot used to spoil your whole water supply.~
+			Back in my days, people knew the difference between daggers and short swords.~
+			Humph. Who are you again?~
+			{{emote|*Alther concentrates intensely for a few seconds.*}}
+		  </text>
+		  <choice GotoID="End">Live and drink, elderly feline.</choice>
 		</node>
 	
 	</conversation>

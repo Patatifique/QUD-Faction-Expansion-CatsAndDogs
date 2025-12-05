@@ -149,10 +149,11 @@
 		<inventoryobject Blueprint="Cat Claw" Number="2" />
 		<inventoryobject Blueprint="Cat Bite" Number="1" />
 		<mutation Name="SunderMind" Level="1" />
-		<part Name="Description" Short="Without a care for the measure of success amongst hyrkhounds, =pronouns.possessive= jaws pool with translucent appetite turned liquid. Over =pronouns.possessive= body, hair is drowned into matted submission." />
+		<mutation Name="Esper" />
+		<part Name="Description" Short="No bigger than a waterskin, a runtish feline totters under the weight of a bulbous crown veined with radiance. Rippling air struggles to rearrange reality when =pronouns.possessive= paws kneads the fabric of minds." />
 	<!--pet stuff-->
 		<part Name="Pettable" />
-		<tag Name="PetResponse" Value="looks at you tiredly,levitates for a few seconds,complains about his back" />
+		<tag Name="PetResponse" Value="looks at you tiredly,levitates for a few seconds" />
 		<property Name="Story" Value="Brainkitty Story" />
 		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_Brainkitty Pet" />
 		<tag Name="StartingPet" />
