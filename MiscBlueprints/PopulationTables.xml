@@ -83,6 +83,23 @@
 		</group>
 	</population>
 
+	<population Name="BananaGroveCreatures" Load="Merge">
+		<group Name="Creatures" Load="Merge">
+			<object Weight="10" Number="1-2" Blueprint="Brothers_CatsDogs_Hydric Hound" />
+		</group>
+	</population>
+
+	<population Name="BananaGroveZoneGlobals" Load="Merge">
+		<object Chance="50" Number="2-4" Blueprint="Brothers_CatsDogs_Hydric Hound" />
+	</population>
+
+	<population Name="LairOwners_BananaGrove" Load="Merge">
+		<group Name="Options" Load="Merge">
+			<object Blueprint="Brothers_CatsDogs_Hydric Hound" />
+		</group>
+	</population>
+  
+  
 	<population Name="Tier5CaveCreatures" Load="Merge">
 		<group Name="Creatures" Load="Merge">
 			<object Weight="10" Number="1" Blueprint="Brothers_CatsDogs_Rocky Lion M" />

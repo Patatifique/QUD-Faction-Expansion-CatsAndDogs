@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<factions Load="Merge">
+
+	<faction
+		Name="Shik"
+		DisplayName="dogs of Shik"
+		Old="false"
+		FormatWithArticle="true"
+		InitialPlayerReputation="0"
+		PositiveSound="Sounds/Reputation/sfx_reputation_village_positive"
+		NegativeSound="Sounds/Reputation/sfx_reputation_village_negative"
+		EmblemTile="Terrain/catsdogs/map_shikspardogs.png"
+		EmblemTileColor="c"
+		EmblemDetailColor="K"		
+	>
+		<feeling About="Beasts" Value="-50" />
+		<feeling About="Girsh" Value="-50" />
+		<feeling About="*" Value="0" />
+		<feeling About="Wardens" Value="100" />
+		<feeling About="Dogs" Value="100" />
+		<waterritual
+			Skill="Survival_MountainsSurvival"
+		/>
+		<interests>
+			<interest Tags="apple,settlement" WillBuy="false" WillSell="true" />
+			<interest Tags="dog,lair" WillBuy="false" WillSell="true" />
+			<interest Tags="mountains" />
+		</interests>
+		<factionworshipattitudes>
+			<factionworshipattitude Name="Entropic" Attitude="-100" />
+			<factionworshipattitude Name="Wardens" Attitude="0" />
+			<factionworshipattitude Name="Dogs" Attitude="100" />
+		</factionworshipattitudes>
+	</faction>
+
+<faction
+		Name="Spar"
+		DisplayName="cats of Spar"
+		Old="false"
+		FormatWithArticle="true"
+		InitialPlayerReputation="0"
+		PositiveSound="Sounds/Reputation/sfx_reputation_village_positive"
+		NegativeSound="Sounds/Reputation/sfx_reputation_village_negative"
+		EmblemTile="Terrain/catsdogs/map_shiksparcats.png"
+		EmblemTileColor="c"
+		EmblemDetailColor="K"		
+	>
+		<feeling About="Beasts" Value="-50" />
+		<feeling About="Girsh" Value="-50" />
+		<feeling About="*" Value="0" />
+		<feeling About="Wardens" Value="100" />
+		<feeling About="Cats" Value="100" />
+		<waterritual
+			Skill="Survival_DesertCanyonSurvival"
+		/>
+		<interests>
+			<interest Tags="pig,settlement" WillBuy="false" WillSell="true" />
+			<interest Tags="cat,lair" WillBuy="false" WillSell="true" />
+			<interest Tags="desertcanyons" />
+		</interests>
+		<factionworshipattitudes>
+			<factionworshipattitude Name="Entropic" Attitude="-100" />
+			<factionworshipattitude Name="Wardens" Attitude="0" />
+			<factionworshipattitude Name="Cats" Attitude="100" />
+		</factionworshipattitudes>
+	</faction>
+	
+</factions>

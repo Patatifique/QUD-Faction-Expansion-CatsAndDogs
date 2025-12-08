@@ -32,4 +32,15 @@
 	
 	</conversation>
   
+	<conversation ID="Brothers_Tortoises_Warden Arendurath">
+		
+		<node ID="Start">
+		  <text>
+			I'm a tree.
+		  </text>
+		  <choice GotoID="End">You're a tree.</choice>
+		</node>
+	
+	</conversation>
+
 </conversations>

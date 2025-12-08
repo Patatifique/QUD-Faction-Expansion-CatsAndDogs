@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <objects>
-	<!--New Creatures-->
+	
+<!--New Dogs-->
 	
 	<object Name="Brothers_CatsDogs_Hyrkhound Alpha" Inherits="BaseDog">
-		<part Name="Render" ColorString="&amp;G" TileColor="&amp;w" DetailColor="G" RenderString="d" Tile="Creatures/catsdogs/hyrkleader.png" DisplayName="{{Y|hyrkhound pack leader}}" />
+		<part Name="Render" ColorString="&amp;G" TileColor="&amp;w" DetailColor="G" RenderString="d" Tile="Creatures/catsdogs/hyrkleader.png" DisplayName="{{Y|hyrkhound}} pack leader" />
 		<stat Name="Level" Value="22" />
 		<part Name="Brain" Hostile="true" Factions="Dogs-100" />
 		<stat Name="Strength" Boost="4" />
@@ -11,6 +12,7 @@
 		<stat Name="Toughness" Boost="4" />
 		<stat Name="Ego" Boost="6" />
 		<stat Name="Hitpoints" Value="50" />
+		<stat Name="AV" Value="5" />
 		<stat Name="Speed" Value="120" />
 		<inventoryobject Blueprint="Brothers_CatsDogs_Hyrkhound_BigBite" Number="1" />
 		<part Name="Description" Short="Legs trample acid-drenched soil, the snarling beast assuming a commanding stance over =pronouns.possessive= packmates. A chrome-like droning escapes =pronouns.possessive= chest as the promise of harm yet to come." />
@@ -18,6 +20,7 @@
 		<skill Name="Persuasion_Intimidate" />
 		<part Name="Corpse" CorpseChance="20" CorpseBlueprint="Brothers_CatsDogs_Hyrkhound Alpha Corpse" />
 		<tag Name="DynamicObjectsTable:Jungle_Creatures" />
+		<tag Name="Role" Value="Leader" />
 	</object>
 	
 	<object Name="Brothers_CatsDogs_Hyrkhound_BigBite" Inherits="Bite">
@@ -31,13 +34,18 @@
 		<part Name="Render" ColorString="&amp;G" TileColor="&amp;w" DetailColor="W" RenderString="d" Tile="Creatures/catsdogs/blinkoodle.png" DisplayName="blinkoodle" />
 		<stat Name="Level" Value="16" />
 		<part Name="Brain" Hostile="false" Factions="Dogs-100" />
-		<stat Name="Hitpoints" Value="15" />
+		<stat Name="Hitpoints" Value="20" />
+		<stat Name="Strength" Boost="2" />
+		<stat Name="Agility" Boost="2" />
+		<stat Name="Toughness" Boost="2" />
+		<part Name="Swarmer" />
 		<stat Name="Speed" Value="100" />
 		<inventoryobject Blueprint="Brothers_CatsDogs_Blinkoodle Bite" Number="1" />
 		<part Name="Description" Short="Instinct and guile stack space on itself as =pronouns.subjective= steps into the created fold. =pronouns.Subjective= is already gone when you turn -- there lingers in =pronouns.possessive= stead the memory of putative barks." />
 		<mutation Name="Teleportation" Level="10" />
 		<tag Name="DynamicObjectsTable:Flowerfields_Creatures" />
 		<part Name="Corpse" CorpseChance="15" CorpseBlueprint="Brothers_CatsDogs_Blinkoodle Corpse" />
+		<tag Name="Role" Value="Skirmisher" />
 	</object>
 
 	<object Name="Brothers_CatsDogs_Blinkoodle Bite" Inherits="Bite">
@@ -74,10 +82,44 @@
 		<tag Name="Gender" Value="plural" />
 	</object>
 
+	<object Name="Brothers_CatsDogs_Hydric Hound" Inherits="BaseDog">
+		<part Name="Render" ColorString="&amp;G" TileColor="&amp;r" DetailColor="y" RenderString="d" Tile="Creatures/catsdogs/hydrichound1.png" DisplayName="hydric hound" />
+		<stat Name="Level" Value="25" />
+		<part Name="Brain" Hostile="true" Factions="Dogs-100" />
+		<stat Name="Strength" sValue="26" />
+		<stat Name="Agility" sValue="24" />
+		<stat Name="Toughness" sValue="22" />
+		<stat Name="Willpower" sValue="15" />
+		<stat Name="Intelligence" sValue="15" />
+		<stat Name="Ego" sValue="15" />
+		<stat Name="Hitpoints" Value="50" />
+		<stat Name="AV" Value="6" />
+		<stat Name="Speed" Value="100" />
+		<inventoryobject Blueprint="Brothers_CatsDogs_Hydric Bite" Number="1" />
+		<skill Name="Multiweapon_Fighting" />
+		<skill Name="Multiweapon_Flurry" />
+		<skill Name="Axe" />
+		<skill Name="Axe_Cleave" />
+		<mutation Name="Regeneration" Level="5" />
+		<part Name="Description" Short="A bouquet of growls and yips simmers within the imposing canine. The sparse hair on =pronouns.possessive= crest is pulled taut by snouts poised to burst out, tears in =pronouns.possessive= coat mended by the busy hands of renascence." />
+		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Brothers_CatsDogs_Hydric Hound Corpse" />
+		<tag Name="DynamicObjectsTable:BananaGrove_Creatures" />
+	    <tag Name="Role" Value="Brute" />
+	</object>
+
+	<object Name="Brothers_CatsDogs_Hydric Bite" Inherits="Bite">
+		<part Name="Render" DisplayName="terrific fangs" />
+		<part Name="MeleeWeapon" BaseDamage="4d3" />
+		<tag Name="Gender" Value="plural" />
+	</object>
+
+
+<!--New Cats-->
+
 	<object Name="Brothers_CatsDogs_Black Puma" Inherits="BaseCat">
 		<part Name="Render" DisplayName="{{K|black puma}}" Tile="Creatures/catsdogs/blackpuma.png" RenderString="l" ColorString="&amp;K" TileColor="&amp;K" DetailColor="r"/>
 		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Brothers_CatsDogs_Black Puma Corpse" />
-		<stat Name="AV" Value="9" />
+		<stat Name="AV" Value="6" />
 		<stat Name="Level" Value="31" />
 		<stat Name="Hitpoints" Value="120" />
 		<part Name="Brain" Hostile="false" Factions="Cats-100" />
@@ -90,9 +132,9 @@
 		<skill Name="Tactics" />
 		<skill Name="Tactics_Charge" />
 		<skill Name="Tactics_Run" />
-		<tag Name="Role" Value="Tank" />
 		<part Name="Hidden" Difficulty="15" />
 		<tag Name="DynamicObjectsTable:DeepJungle_Creatures" />
+		<tag Name="Role" Value="Uncommon" />
 	</object>
   
 	<object Name="Brothers_CatsDogs_Black Puma Claw" Inherits="NaturalWeapon">
@@ -103,7 +145,7 @@
 	<object Name="Brothers_CatsDogs_Rocky Lion Base" Inherits="BaseCat">
 		<tag Name="BaseObject" Value="*noinherit" />
 		<part Name="Corpse" CorpseChance="40" CorpseBlueprint="Brothers_CatsDogs_Rocky Lion Corpse" />
-		<stat Name="AV" Value="10" />
+		<stat Name="AV" Value="8" />
 		<stat Name="Level" Value="18" />
 		<stat Name="Hitpoints" Value="60" />
 		<part Name="Brain" Hostile="false" Factions="Cats-100" />
@@ -161,16 +203,9 @@
 		<tag Name="Gender" Value="male" />
 		<xtagGrammar Proper="true" />
 		<tag Name="ExcludeFromDynamicEncounters" />		
-	</object>
+	</object>	
 	
-	<object Name="Brothers_CatsDogs_Hyrkhound_Pet_Bite" Inherits="Bite">
-		<part Name="Render" DisplayName="{{b|drool-wet}} fangs" />
-		<part Name="MeleeWeapon" BaseDamage="4d2" />
-		<tag Name="Gender" Value="plural" />
-	</object>
-  	
-	
-	<!--Existing Creatures-->
+<!--Existing Creatures-->
 	
 	<object Name="Guard Dog" Load="Merge">
 		<part Name="Render" DisplayName="guard dog" Tile="Creatures/catsdogs/guarddog.png" RenderString="d" ColorString="&amp;w" DetailColor="K" />
@@ -191,7 +226,7 @@
 		<part Name="Render" Tile="Creatures/catsdogs/raycat.png" RenderString="l" ColorString="&amp;m" DetailColor="y" />
 	</object>
 	
-	<!--Corpses-->
+<!--Corpses-->
 
 	<object Name="Brothers_CatsDogs_Hyrkhound Corpse" Inherits="Small Animal Corpse">
 		<part Name="Render" DisplayName="hyrkhound corpse" />     
@@ -226,7 +261,7 @@
 		<part Name="Food" Message="The meat feels elusive in your mouth, and takes some effort hunting down." />
 		<part Name="Physics" Weight="200" />
 		<part Name="Commerce" Value="50" />
-		<tag Name="Tier" Value="3" />    
+		<tag Name="Tier" Value="4" />    
 	</object>
 	
 	<object Name="Brothers_CatsDogs_Rocky Lion Corpse" Inherits="Animal Corpse">
@@ -238,6 +273,54 @@
 		<tag Name="Tier" Value="3" />    
 	</object>
 	
-	<!--NPCs-->
+	<object Name="Brothers_CatsDogs_Hydric Hound Corpse" Inherits="Animal Corpse">
+		<part Name="Butcherable" OnSuccess="Brothers_CatsDogs_Burgeoning Meat" />
+		<part Name="Render" DisplayName="hydric hound corpse" ColorString="&amp;w" />
+		<part Name="Food" Message="The meal is impossible to finish, and you throw most of it away." />
+		<part Name="Physics" Weight="200" />
+		<part Name="Commerce" Value="50" />
+		<tag Name="Tier" Value="4" />    
+	</object>
+	
+<!--NPCs-->
+
+  <object Name="Brothers_Tortoises_Warden Arendurath" Inherits="SapientMutatedTree">
+    <part Name="Render" DisplayName="Arendurath" Tile="Creatures/catsdogs/treewarden.png" ColorString="&amp;B" DetailColor="g" RenderString="157" Occluding="true" />
+    <part Name="Honorifics" Primary="Warden" />
+    <part Name="Description" Short="Ballistically scarred rhitidome lines the core of the vegetal guardian, hunched over the tool of =pronouns.possessive= trade. A halo of leaves not yet lowered by age provides shade against the High Salt Sun, and roots poised in anchorage write in the soil a poem of permanency. =pronouns.Possessive= foliage rustles with vigilance, denying the futileness of a stationary guardian." />
+    <stat Name="AV" Value="12" />
+    <stat Name="Level" Value="30" />
+    <stat Name="Hitpoints" Value="250" />
+    <part Name="Brain" Wanders="false" Mobile="false" Hostile="false" Calm="True" Factions="Wardens-100,Trees-50" />
+    <part Name="ConversationScript" ConversationID="Brothers_Tortoises_Warden Arendurath" />
+    <part Name="Physics" Weight="8000" Solid="true" Takeable="false" />
+    <stat Name="ColdResistance" Value="25" />
+    <stat Name="HeatResistance" Value="25" />
+    <stat Name="ElectricResistance" Value="25" />
+    <stat Name="AcidResistance" Value="25" />
+	<stat Name="Strength" sValue="32" />
+	<stat Name="Agility" sValue="28" />
+	<stat Name="Toughness" sValue="38" />
+	<stat Name="Willpower" sValue="30" />
+	<skill Name="Rifle_DrawABead" />
+	<skill Name="Rifle_SteadyHands" />
+    <skill Name="Endurance_Weathered" />
+    <skill Name="Endurance_Calloused" />
+    <skill Name="Endurance" />
+    <skill Name="Discipline_IronMind" />
+	<inventoryobject Blueprint="Light Rail" Number="1" CellChance="100" CellFullChance="100" CellType="Nuclear Cell" />
+	<property Name="WontSell" Value="Light Rail" />
+    <tag Name="Role" Value="NPC" />
+    <part Name="GivesRep" />
+    <tag Name="NoHateFactions" Value="Wardens,Shik,Spar,Farmers" />
+	<tag Name="staticFaction1" Value="Shik,friend,being a neutral arbiter" />
+	<tag Name="staticFaction2" Value="Spar,friend,never taking a side" />
+    <tag Name="NoSleep" />
+    <tag Name="Gender" Value="nonspecific" />
+    <xtagGrammar Proper="true" />
+    <tag Name="HangingSupport" />
+    <tag Name="Noswap" />
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+  </object>
 
 </objects>
