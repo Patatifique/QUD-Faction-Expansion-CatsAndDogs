@@ -41,7 +41,7 @@
 		<part Name="Swarmer" />
 		<stat Name="Speed" Value="100" />
 		<inventoryobject Blueprint="Brothers_CatsDogs_Blinkoodle Bite" Number="1" />
-		<part Name="Description" Short="Instinct and guile stack space on itself as =pronouns.subjective= steps into the created fold. =pronouns.Subjective= is already gone when you turn -- there lingers in =pronouns.possessive= stead the memory of putative barks." />
+		<part Name="Description" Short="Instinct and guile stack space on itself as =pronouns.subjective= =verb:step:afterpronoun= into the created fold. =pronouns.Subjective= =verb:are:afterpronoun= already gone when you turn -- there lingers in =pronouns.possessive= stead the memory of putative barks." />
 		<mutation Name="Teleportation" Level="10" />
 		<tag Name="DynamicObjectsTable:Flowerfields_Creatures" />
 		<part Name="Corpse" CorpseChance="15" CorpseBlueprint="Brothers_CatsDogs_Blinkoodle Corpse" />
@@ -281,10 +281,14 @@
 		<part Name="Commerce" Value="50" />
 		<tag Name="Tier" Value="4" />    
 	</object>
+
+<!--New Gods-->
+
+
 	
 <!--NPCs-->
 
-  <object Name="Brothers_Tortoises_Warden Arendurath" Inherits="SapientMutatedTree">
+  <object Name="Brothers_CatsDogs_Warden Arendurath" Inherits="SapientMutatedTree">
     <part Name="Render" DisplayName="Arendurath" Tile="Creatures/catsdogs/treewarden.png" ColorString="&amp;B" DetailColor="g" RenderString="157" Occluding="true" />
     <part Name="Honorifics" Primary="Warden" />
     <part Name="Description" Short="Ballistically scarred rhitidome lines the core of the vegetal guardian, hunched over the tool of =pronouns.possessive= trade. A halo of leaves not yet lowered by age provides shade against the High Salt Sun, and roots poised in anchorage write in the soil a poem of permanency. =pronouns.Possessive= foliage rustles with vigilance, denying the futileness of a stationary guardian." />
