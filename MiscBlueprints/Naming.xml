@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<naming>
+
+<namestyles>
+
+	<namestyle Name="Cat" TwoNameChance="80" Format="TitleCase">
+		<scopes>
+			<scope Name="Faction" Faction="Cats" Priority="100" Combine="false" />
+			<scope Name="Species" Species="cat" Priority="50" Combine="true" />
+		</scopes>
+		<prefixes Amount="1">
+			<prefix Name="me" Weight="2" />
+			<prefix Name="mee" Weight="2" />
+			<prefix Name="m" Weight="2"/>
+			<prefix Name="mr" Weight="2"/>
+			<prefix Name="mrr" />
+			<prefix Name="pr" />
+			<prefix Name="prr" />
+			<prefix Name="wo" />
+			<prefix Name="HSS" />
+			<prefix Name="KSS" />
+			<prefix Name="PSS" />		
+		</prefixes>
+		<infixes Amount="0-2">
+			<infix Name="e" Weight="2" />
+			<infix Name="ee" Weight="2" />
+			<infix Name="a" Weight="2" />
+			<infix Name="aa" Weight="2" />
+			<infix Name="r" />
+			<infix Name="rr" />
+			<infix Name="EE" />
+			<infix Name="SS" />
+			<infix Name="KSS" />
+		</infixes>
+		<postfixes Amount="1">
+			<postfix Name="ow" />
+			<postfix Name="owr" />
+			<postfix Name="owee" />
+			<postfix Name="ee" />
+			<postfix Name="aw" />
+			<postfix Name="awr" />
+			<postfix Name="awee" />
+			<postfix Name="rr" />
+			<postfix Name="wr" />
+			<postfix Name="EE" />
+			<postfix Name="SS" />
+			<postfix Name="ST" />
+			<postfix Name="EE" />
+		</postfixes>
+    </namestyle>
+
+    <namestyle Name="Cat Hero Title">
+		<scopes>
+			<scope Name="Main" Type="Title" Special="Hero" Faction="Cats" Priority="200" Combine="false" />
+			<scope Name="Culture" Type="Title" Special="Hero" Culture="Cat" Priority="150" Combine="true" />
+		</scopes>
+		<templates>
+			<template Name="*Disposition* *CreatureType*" />
+		</templates>
+		<templatevars>
+			<templatevar Name="Disposition">
+				<value Name="lazy" />
+				<value Name="sleepy" />
+				<value Name="stealthy" />
+				<value Name="proud" />
+				<value Name="shy" />
+				<value Name="playful" />
+				<value Name="cautious" />  
+			</templatevar>
+		</templatevars>
+    </namestyle> 
+
+    <namestyle Name="Dog" TwoNameChance="20" Format="TitleCase">
+		<scopes>
+			<scope Name="Faction" Faction="Dogs" Priority="100" Combine="false" />
+			<scope Name="Species" Species="dog" Priority="50" Combine="true" />
+		</scopes>
+		<prefixes Amount="1">
+			<prefix Name="bo" Weight="2" />
+			<prefix Name="BO" Weight="2" />
+			<prefix Name="wo" Weight="2" />
+			<prefix Name="WO" Weight="2" />
+			<prefix Name="ro" />
+			<prefix Name="ar" />
+			<prefix Name="yap" />
+			<prefix Name="yip" />
+			<prefix Name="roo" />
+			<prefix Name="ru" />
+			<prefix Name="gr" />
+			<prefix Name="GR" />
+			<prefix Name="rr" />
+			<prefix Name="RR" />
+			<prefix Name="ou" />
+			<prefix Name="OU" />
+		</prefixes>
+		<infixes Amount="2-5">
+			<infix Name="ow" Weight="2" />
+			<infix Name="OW" Weight="2" />
+			<infix Name="aw" Weight="2" />
+			<infix Name="AW" Weight="2" />
+			<infix Name="oo" />
+			<infix Name="OO" />
+			<infix Name="yip" />
+			<infix Name="yap" />
+			<infix Name="row" />
+			<infix Name="ROW" />
+			<infix Name="rr" />
+			<infix Name="RR" />			
+		</infixes>
+		<postfixes Amount="1">
+			<postfix Name="f" />
+			<postfix Name="of" />
+			<postfix Name="OF" />
+			<postfix Name="af" />
+			<postfix Name="AF" />
+			<postfix Name="eep" />
+			<postfix Name="gr" />
+			<postfix Name="GR" />
+			<postfix Name="rr" />
+			<postfix Name="RR" />
+			<postfix Name="ah" />
+      </postfixes>
+    </namestyle>
+
+	<namestyle Name="Dog Hero Title">
+		<scopes>
+			<scope Name="Main" Type="Title" Special="Hero" Faction="Dogs" Priority="200" Combine="false" />
+			<scope Name="Culture" Type="Title" Special="Hero" Culture="Dog" Priority="150" Combine="true" />
+		</scopes>
+		<templates>
+			<template Name="*Quality* *CreatureType*" />
+		</templates>
+		<templatevars>
+			<templatevar Name="Quality">
+				<value Name="peerless" />
+				<value Name="loyal" />
+				<value Name="diligent" />
+				<value Name="curious" />
+				<value Name="brave" />
+				<value Name="protective" />
+			</templatevar>
+		</templatevars>
+    </namestyle>
+
+</namestyles>
+
+</naming>

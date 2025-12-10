@@ -138,7 +138,7 @@
 	</object>
   
 	<object Name="Brothers_CatsDogs_Black Puma Claw" Inherits="NaturalWeapon">
-		<part Name="Render" DisplayName="{{K|shaded claw}}" Tile="Creatures/catsdogs/natural-weapon-paw.bmp" ColorString="&amp;w" />
+		<part Name="Render" DisplayName="{{K|shaded claw}}" Tile="Creatures/natural-weapon-paw.bmp" ColorString="&amp;w" />
 		<part Name="MeleeWeapon" BaseDamage="2d6" Skill="ShortBlades" Stat="Strength" Slot="Foot" />
 	</object>
 
@@ -160,21 +160,21 @@
 	</object>
  
 	<object Name="Brothers_CatsDogs_Rocky Lion M" Inherits="Brothers_CatsDogs_Rocky Lion Base">
-		<part Name="Render" Tile="creatures/rockylionm.png" DisplayName="{{w|lithic lion}}" ColorString="&amp;y" DetailColor="w" />
+		<part Name="Render" Tile="creatures/catsdogs/rockylionm.png" DisplayName="{{w|lithic lion}}" ColorString="&amp;y" DetailColor="w" />
 		<tag Name="Gender" Value="male" />
 		<part Name="Description" Short="Here stands the solitary monarch of petrified waterfalls, hide cascading with shale and quarts. Flecks of mica shimmer in =pronouns.possessive= fur, coating a muscular intention made manifest with ponderous materialization." />
 		<tag Name="DynamicObjectsTable:Mountains_Creatures" />
 	</object>
 	
 	<object Name="Brothers_CatsDogs_Rocky Lion F" Inherits="Brothers_CatsDogs_Rocky Lion Base">
-		<part Name="Render" Tile="creatures/rockylionf.png" DisplayName="{{w|lithic lion}}" ColorString="&amp;y" DetailColor="w" />
+		<part Name="Render" Tile="creatures/catsdogs/rockylionf.png" DisplayName="{{w|lithic lion}}" ColorString="&amp;y" DetailColor="w" />
 		<tag Name="Gender" Value="female" />
 		<part Name="Description" Short="Here stands the solitary queen of petrified waterfalls, =pronouns.possessive= slick neck chiseled by existence. Flecks of mica shimmer in =pronouns.possessive= fur, coating a muscular intention made manifest with ponderous materialization." />
 		<tag Name="DynamicObjectsTable:Mountains_Creatures" />
 	</object>
 	
 	<object Name="Brothers_CatsDogs_Rocky Lion Paw" Inherits="NaturalWeapon">
-		<part Name="Render" DisplayName="pummeling claw" Tile="Creatures/catsdogs/natural-weapon-paw.bmp" ColorString="&amp;w" />
+		<part Name="Render" DisplayName="pummeling claw" Tile="Creatures/natural-weapon-paw.bmp" ColorString="&amp;w" />
 		<part Name="MeleeWeapon" BaseDamage="2d4" Skill="Cudgel" Stat="Strength" Slot="Foot" />
 	</object>
 
@@ -206,6 +206,14 @@
 	</object>	
 	
 <!--Existing Creatures-->
+	
+	<object Name="BaseCat" Load="Merge">
+	    <tag Name="Culture" Value="Cat" />
+	</object>
+	
+	<object Name="BaseDog" Load="Merge">
+	    <tag Name="Culture" Value="Dog" />
+	</object>
 	
 	<object Name="Guard Dog" Load="Merge">
 		<part Name="Render" DisplayName="guard dog" Tile="Creatures/catsdogs/guarddog.png" RenderString="d" ColorString="&amp;w" DetailColor="K" />
@@ -288,8 +296,8 @@
 	
 <!--NPCs-->
 
-  <object Name="Brothers_CatsDogs_Warden Arendurath" Inherits="SapientMutatedTree">
-    <part Name="Render" DisplayName="Arendurath" Tile="Creatures/catsdogs/treewarden.png" ColorString="&amp;B" DetailColor="g" RenderString="157" Occluding="true" />
+  <object Name="Brothers_CatsDogs_Warden Arendubark" Inherits="SapientMutatedTree">
+    <part Name="Render" DisplayName="Arendubark" Tile="Creatures/catsdogs/treewarden.png" ColorString="&amp;B" DetailColor="g" RenderString="157" Occluding="true" />
     <part Name="Honorifics" Primary="Warden" />
     <part Name="Description" Short="Ballistically scarred rhitidome lines the core of the vegetal guardian, hunched over the tool of =pronouns.possessive= trade. A halo of leaves not yet lowered by age provides shade against the High Salt Sun, and roots poised in anchorage write in the soil a poem of permanency. =pronouns.Possessive= foliage rustles with vigilance, denying the futileness of a stationary guardian." />
     <stat Name="AV" Value="12" />
