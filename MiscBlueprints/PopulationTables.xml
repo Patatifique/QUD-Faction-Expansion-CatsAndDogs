@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <populations>
-	<!--Existing Populations modification to include new Creatures-->
+	
+<!--Existing Populations modification to include new Creatures-->
 	
 	<population Name="LairOwners_Ruins" Load="Merge">
 		<group Name="Options" Load="Merge">
@@ -99,12 +100,12 @@
 		</group>
 	</population>
   
-  
 	<population Name="Tier5CaveCreatures" Load="Merge">
 		<group Name="Creatures" Load="Merge">
 			<object Weight="10" Number="1" Blueprint="Brothers_CatsDogs_Rocky Lion M" />
 			<object Weight="10" Number="1" Blueprint="Brothers_CatsDogs_Rocky Lion F" />
 			<object Weight="5" Number="1" Blueprint="Brothers_CatsDogs_Black Puma" />
+			<object Weight="5" Number="1" Blueprint="Brothers_CatsDogs_Hydric Hound" />
 		</group>
 	</population>
 

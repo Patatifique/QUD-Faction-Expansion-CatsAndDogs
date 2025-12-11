@@ -62,6 +62,25 @@
 		<part Name="AddsRep" Faction="Swine" Value="250" />
 		<tag Name="Tier" Value="1" />
 	</object>
+
+	<object Name="Brothers_CatsDogs_Catgod Drop" Inherits="BaseDagger">
+		<part Name="Render" DisplayName="{{w|Claw}} of the {{Y|Feline God}}" ColorString="&amp;M" DetailColor="r" Tile="Items/catsdogs/godclaw.png" />
+		<part Name="MeleeWeapon" HitBonus="3" PenBonus="1" MaxStrengthBonus="9999" Ego="1" BaseDamage="4d2" Skill="ShortBlades" Stat="Strength" />
+		<part Name="Commerce" Value="400" />
+		<part Name="ItemElements" Elements="might::6" />
+		<part Name="Description" Short="Plucked off the body of the canyon Saad, one of Her many metakeratin blades stands wrapped with laced safety for the wielder. Alongside sharp peers, Her tool enters history not as writee but as writer." />
+		<part Name="Physics" Weight="5" FlameTemperature="99999" VaporTemperature="99999" Organic="true" />
+		<stat Name="Hitpoints" Value="1000" />
+		<tag Name="Tier" Value="8" />
+		<tag Name="Mods" Value="None" />
+		<part Name="BleedingOnHit" Amount="2-3" SaveTarget="30" Stack="true" />
+		<tag Name="NoAIEquipAsThrownWeapon" />
+		<tag Name="HideThrownWeaponPerformance" />
+		<tag Name="ExcludeFromDynamicEncounters" />
+		<tag Name="SwingSound" Value="Sounds/Abilities/sfx_ability_mutation_stinger_tailWhip" />
+		<tag Name="EquipSound" Value="sfx_equip_material_generic_organic" />
+		<tag Name="EquipmentFrameColors" Value="Yryr" />
+	</object>
   
 	<!--Others-->
 

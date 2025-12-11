@@ -292,8 +292,56 @@
 
 <!--New Gods-->
 
+	<object Name="Brothers_CatsDogs_Catgod" Inherits="BaseCat">
+		<part Name="DropOnDeath" Blueprints="Brothers_CatsDogs_Catgod Drop,Brothers_CatsDogs_Catgod Drop,Brothers_CatsDogs_Catgod Drop,Brothers_CatsDogs_Catgod Drop,Brothers_CatsDogs_Catgod Drop,Brothers_CatsDogs_Catgod Drop" />
+		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_Catgod" />
+		<part Name="Brain" Hostile="true" Wanders="false" Hibernating="true" Factions="Cats-100" />
+		<part Name="Render" DisplayName="Miramihamia" RenderString="A" ColorString="&amp;M" Tile="Creatures/catsdogs/catgod.png" />
+		<part Name="Titles" Primary="Feline God" />
+		<part Name="DisplayNameColor" Color="M" />
+		<stat Name="Level" Value="40" />
+		<stat Name="AV" Value="12" />
+		<stat Name="Hitpoints" Value="760" />
+		<inventoryobject Blueprint="Brothers_CatsDogs_Catgod Weapon" Number="4" />
+		<part Name="Description" Short="An antique statue crossed the threshold of eons and stepped in Qud, flesh and sinew where antique scholars would see nummulite. A sheer personification of the feline form, =pronouns.possessive= peers' likeness raising the interrogation of which came first. The pondering left unanswered, =pronouns.possessive= claws have furrowed the ground and sown it with the countained fury of =pronouns.possessive= kind. No longer watching over decrepit gates, =pronouns.subjective= finds solace in twin scores of nictitation: before you stands the resting divine, neither to be importuned nor awoken." />
+		<skill Name="ShortBlades" />
+		<skill Name="ShortBlades_Expertise" />
+		<skill Name="ShortBlades_Bloodletter" />
+		<skill Name="ShortBlades_Jab" />
+		<skill Name="Multiweapon_Fighting" />
+		<skill Name="Multiweapon_Expertise" />
+		<skill Name="Multiweapon_Mastery" />
+		<skill Name="Tactics_Juke" />
+		<skill Name="ShortBlades_PointedCircle" />
+		<stat Name="Strength" sValue="39" />
+		<stat Name="Agility" sValue="52" />
+		<stat Name="Toughness" sValue="42" />
+		<stat Name="Intelligence" sValue="11" />
+		<stat Name="Willpower" sValue="40" />
+		<stat Name="Ego" sValue="26" />
+		<stat Name="HeatResistance" Value="75" />
+		<stat Name="ColdResistance" Value="75" />
+		<stat Name="ElectricResistance" Value="75" />
+		<mutation Name="ThickFur" />
+		<tag Name="Role" Value="Leader" />
+		<part Name="GivesRep" repValue="800" />
+		<tag Name="Worshippable" />
+		<tag Name="WorshipPower" Value="50" />
+		<tag Name="WorshipColorString" Value="&amp;M" />
+		<tag Name="WorshipDetailColor" Value="K" />
+		<tag Name="Gender" Value="female" />
+		<tag Name="PronounSet" Value="She/Her/Her/Her/Herself/goddess/godling/lady/Daughter/Sister/Mother" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+		<xtagGrammar Proper="true" />
+		<part Name="Interesting" />
+		<part Name="Slumberling" />
+	</object>
+  
+	<object Name="Brothers_CatsDogs_Catgod Weapon" Inherits="NaturalWeapon">
+		<part Name="Render" DisplayName="mighty claw" Tile="Creatures/natural-weapon-paw.bmp" ColorString="&amp;Y" />
+		<part Name="MeleeWeapon" MaxStrengthBonus="9999" BaseDamage="4d3" Skill="ShortBlades" Stat="Strength" Slot="Foot" />
+	</object>
 
-	
 <!--NPCs-->
 
   <object Name="Brothers_CatsDogs_Warden Arendubark" Inherits="SapientMutatedTree">
@@ -328,6 +376,7 @@
 	<tag Name="staticFaction1" Value="Shik,friend,being a neutral arbiter" />
 	<tag Name="staticFaction2" Value="Spar,friend,never taking a side" />
     <tag Name="NoSleep" />
+	<part Name="Interesting" />
     <tag Name="Gender" Value="nonspecific" />
     <xtagGrammar Proper="true" />
     <tag Name="HangingSupport" />
