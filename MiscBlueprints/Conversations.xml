@@ -43,4 +43,26 @@
 	
 	</conversation>
 
+	<conversation ID="Brothers_CatsDogs_Catgod">
+		
+		<node ID="Start">
+		  <text>
+			I'm a cat god.
+		  </text>
+		  <choice GotoID="End">True.</choice>
+		</node>
+	
+	</conversation>
+
+	<conversation ID="Brothers_CatsDogs_Doggod">
+		
+		<node ID="Start">
+		  <text>
+			I'm a dog god.
+		  </text>
+		  <choice GotoID="End">Very true.</choice>
+		</node>
+	
+	</conversation>
+
 </conversations>

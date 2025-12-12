@@ -342,6 +342,63 @@
 		<part Name="MeleeWeapon" MaxStrengthBonus="9999" BaseDamage="4d3" Skill="ShortBlades" Stat="Strength" Slot="Foot" />
 	</object>
 
+	<object Name="Brothers_CatsDogs_Doggod" Inherits="BaseDog">
+		<part Name="DropOnDeath" Blueprints="Brothers_CatsDogs_Doggod Drop" />		
+		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_Doggod" />
+		<part Name="Brain" Hostile="false" Wanders="false" Factions="Dogs-100" />
+		<part Name="Render" DisplayName="Boroworof" RenderString="A" ColorString="&amp;M" Tile="Creatures/catsdogs/doggod.png" />
+		<part Name="Titles" Primary="Canine God" />
+		<part Name="DisplayNameColor" Color="M" />
+		<stat Name="Level" Value="40" />
+		<stat Name="AV" Value="13" />
+		<stat Name="Hitpoints" Value="820" />
+		<inventoryobject Blueprint="Brothers_CatsDogs_Doggod Weapon" Number="1" />
+		<tag Name="Gender" Value="nonspecific" />
+		<tag Name="PronounSet" Value="pseudo-plural/They/Them/Their/Their/Themself/god/godling/regent/Child/Sibling/Parent" />
+		<part Name="Description" Short="Constant vigilance is realized in a noble quadrupedal shape bearing the marks of trials past. Carved out of the canine ideal, inspiration, and achievement, =pronouns.subjective= =verb:point:afterpronoun= wherever =pronouns.possessive= epithelium sorted out the yuckwheat from the chaff. Eons have chiseled =pronouns.possessive= oculi with wisdom unchallenged, and a silent warning not to overstep =pronouns.possessive= forbearance. =pronouns.Subjective= leave but a single trail of pawprints on Qud, devoid of the prospective vessel for =pronouns.possessive= unbound loyalty." />
+		<skill Name="Axe" />
+		<skill Name="Axe_Expertise" />
+		<skill Name="Axe_Dismember" />
+		<skill Name="Axe_Cleave" />
+		<skill Name="Axe_HookAndDrag" />
+	    <skill Name="Axe_Berserk" />
+		<skill Name="Axe_ChargingStrike" />
+		<skill Name="Tactics_Charge" />
+		<skill Name="SingleWeaponFighting" />
+		<skill Name="SingleWeaponFighting_OpportuneAttacks" />
+		<skill Name="SingleWeaponFighting_WeaponExpertise" />
+		<skill Name="SingleWeaponFighting_PenetratingStrikes" />
+		<stat Name="Strength" sValue="46" />
+		<stat Name="Agility" sValue="45" />
+		<stat Name="Toughness" sValue="47" />
+		<stat Name="Intelligence" sValue="11" />
+		<stat Name="Willpower" sValue="35" />
+		<stat Name="Ego" sValue="26" />
+		<stat Name="HeatResistance" Value="75" />
+		<stat Name="ColdResistance" Value="75" />
+		<stat Name="ElectricResistance" Value="75" />
+		<mutation Name="HeightenedSmell" Level="10" />
+		<mutation Name="ThickFur" />
+		<tag Name="Role" Value="Leader" />
+		<part Name="GivesRep" repValue="800" />
+		<tag Name="Worshippable" />
+		<tag Name="WorshipPower" Value="50" />
+		<tag Name="WorshipColorString" Value="&amp;M" />
+		<tag Name="WorshipDetailColor" Value="K" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+		<xtagGrammar Proper="true" />
+		<tag Name="NoSleep" />
+	    <part Name="ImmuneToSleepGas" />
+		<part Name="Interesting" />
+	</object>
+  
+	<object Name="Brothers_CatsDogs_Doggod Weapon" Inherits="Bite">
+		<part Name="Render" DisplayName="mighty fangs" ColorString="&amp;Y" />
+		<part Name="MeleeWeapon" MaxStrengthBonus="9999" BaseDamage="8d6+8" />
+		<tag Name="Gender" Value="plural" />
+		<part Name="LatchesOn" InitialSaveTarget="30" InitialSaveStat="Agility" InitialSaveDifficultyStat="Agility" MoveSaveTarget="30" MoveSaveStat="Strength" MoveSaveDifficultyStat="Strength" BreakSaveTarget="30" BreakSaveStat="Strength" BreakSaveDifficultyStat="Agility" Duration="15-18" AutoAttackOnMove="false" AutoAttackOnMoveAway="false" AutoAttackPerTurn="false" BloodSpatterOnLatch="false" />
+	</object>
+
 <!--NPCs-->
 
   <object Name="Brothers_CatsDogs_Warden Arendubark" Inherits="SapientMutatedTree">

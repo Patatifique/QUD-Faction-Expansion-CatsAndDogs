@@ -81,7 +81,24 @@
 		<tag Name="EquipSound" Value="sfx_equip_material_generic_organic" />
 		<tag Name="EquipmentFrameColors" Value="Yryr" />
 	</object>
-  
+
+	<object Name="Brothers_CatsDogs_Doggod Drop" Inherits="BaseCloak">
+		<part Name="Render" DisplayName="{{r|Pelt}} of the {{Y|Canine God}}" ColorString="&amp;M" DetailColor="r" Tile="Items/catsdogs/godpelt.png" RenderString="]" />
+		<part Name="Armor" Ego="2" AV="2" DV="2" Cold="15" Heat="15" WornOn="Back" />
+		<part Name="Commerce" Value="2500" />
+		<part Name="ItemElements" Elements="might::6" />
+		<part Name="Description" Short="The spirit of the hill Saad weighs heavy on conscience and acromion, the spirit of vigilance unscraped from a husk of pelage. Lo, and feast your gaze on divinity made rainment by hand of the Screaming Men." />
+		<part Name="MutationOnEquip" ClassName="HeightenedSmell" Level="10" />
+		<part Name="Physics" Weight="15" FlameTemperature="99999" VaporTemperature="99999" Organic="true" />
+		<stat Name="Hitpoints" Value="1000" />
+		<tag Name="Tier" Value="8" />
+		<tag Name="Mods" Value="None" />		
+		<part Name="Springy" Factor="0.2" />
+		<tag Name="ExcludeFromDynamicEncounters" />
+		<tag Name="EquipSound" Value="sfx_equip_armor_fur" />
+		<tag Name="EquipmentFrameColors" Value="Yryr" />
+	</object>
+
 	<!--Others-->
 
 
