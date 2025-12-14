@@ -401,44 +401,78 @@
 
 <!--NPCs-->
 
-  <object Name="Brothers_CatsDogs_Warden Arendubark" Inherits="SapientMutatedTree">
-    <part Name="Render" DisplayName="Arendubark" Tile="Creatures/catsdogs/treewarden.png" ColorString="&amp;B" DetailColor="g" RenderString="157" Occluding="true" />
-    <part Name="Honorifics" Primary="Warden" />
-    <part Name="Description" Short="Ballistically scarred rhitidome lines the core of the vegetal guardian, hunched over the tool of =pronouns.possessive= trade. A halo of leaves not yet lowered by age provides shade against the High Salt Sun, and roots poised in anchorage write in the soil a poem of permanency. =pronouns.Possessive= foliage rustles with vigilance, denying the futileness of a stationary guardian." />
-    <stat Name="AV" Value="12" />
-    <stat Name="Level" Value="30" />
-    <stat Name="Hitpoints" Value="250" />
-    <part Name="Brain" Wanders="false" Mobile="false" Hostile="false" Calm="True" Factions="Wardens-100,Trees-50" />
-    <part Name="ConversationScript" ConversationID="Brothers_Tortoises_Warden Arendurath" />
-    <part Name="Physics" Weight="8000" Solid="true" Takeable="false" />
-    <stat Name="ColdResistance" Value="25" />
-    <stat Name="HeatResistance" Value="25" />
-    <stat Name="ElectricResistance" Value="25" />
-    <stat Name="AcidResistance" Value="25" />
-	<stat Name="Strength" sValue="32" />
-	<stat Name="Agility" sValue="28" />
-	<stat Name="Toughness" sValue="38" />
-	<stat Name="Willpower" sValue="30" />
-	<skill Name="Rifle_DrawABead" />
-	<skill Name="Rifle_SteadyHands" />
-    <skill Name="Endurance_Weathered" />
-    <skill Name="Endurance_Calloused" />
-    <skill Name="Endurance" />
-    <skill Name="Discipline_IronMind" />
-	<inventoryobject Blueprint="Light Rail" Number="1" CellChance="100" CellFullChance="100" CellType="Nuclear Cell" />
-	<property Name="WontSell" Value="Light Rail" />
-    <tag Name="Role" Value="NPC" />
-    <part Name="GivesRep" />
-    <tag Name="NoHateFactions" Value="Wardens,Shik,Spar,Farmers" />
-	<tag Name="staticFaction1" Value="Shik,friend,being a neutral arbiter" />
-	<tag Name="staticFaction2" Value="Spar,friend,never taking a side" />
-    <tag Name="NoSleep" />
-	<part Name="Interesting" />
-    <tag Name="Gender" Value="nonspecific" />
-    <xtagGrammar Proper="true" />
-    <tag Name="HangingSupport" />
-    <tag Name="Noswap" />
-    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	<object Name="Brothers_CatsDogs_Warden Arendubark" Inherits="SapientMutatedTree">
+		<part Name="Render" DisplayName="Arendubark" Tile="Creatures/catsdogs/treewarden.png" ColorString="&amp;B" DetailColor="g" RenderString="157" Occluding="true" />
+		<part Name="Honorifics" Primary="Warden" />
+		<part Name="Description" Short="Ballistically scarred rhitidome lines the core of the vegetal guardian, hunched over the tool of =pronouns.possessive= trade. A halo of leaves not yet lowered by age provides shade against the High Salt Sun, and roots poised in anchorage write in the soil a poem of permanency. =pronouns.Possessive= foliage rustles with vigilance, denying the futileness of a stationary guardian." />
+		<stat Name="AV" Value="12" />
+		<stat Name="Level" Value="30" />
+		<stat Name="Hitpoints" Value="250" />
+		<part Name="Brain" Wanders="false" Mobile="false" Hostile="false" Calm="True" Factions="Wardens-100,Trees-50" />
+		<part Name="ConversationScript" ConversationID="Brothers_Tortoises_Warden Arendurath" />
+		<part Name="Physics" Weight="8000" Solid="true" Takeable="false" />
+		<stat Name="ColdResistance" Value="25" />
+		<stat Name="HeatResistance" Value="25" />
+		<stat Name="ElectricResistance" Value="25" />
+		<stat Name="AcidResistance" Value="25" />
+		<stat Name="Strength" sValue="32" />
+		<stat Name="Agility" sValue="28" />
+		<stat Name="Toughness" sValue="38" />
+		<stat Name="Willpower" sValue="30" />
+		<skill Name="Rifle_DrawABead" />
+		<skill Name="Rifle_SteadyHands" />
+		<skill Name="Endurance_Weathered" />
+		<skill Name="Endurance_Calloused" />
+		<skill Name="Endurance" />
+		<skill Name="Discipline_IronMind" />
+		<inventoryobject Blueprint="Light Rail" Number="1" CellChance="100" CellFullChance="100" CellType="Nuclear Cell" />
+		<property Name="WontSell" Value="Light Rail" />
+		<tag Name="Role" Value="NPC" />
+		<part Name="GivesRep" />
+		<tag Name="NoHateFactions" Value="Wardens,Shik,Spar,Farmers" />
+		<tag Name="staticFaction1" Value="Shik,friend,being a neutral arbiter" />
+		<tag Name="staticFaction2" Value="Spar,friend,never taking a side" />
+		<tag Name="NoSleep" />
+		<part Name="Interesting" />
+		<tag Name="Gender" Value="nonspecific" />
+		<xtagGrammar Proper="true" />
+		<tag Name="HangingSupport" />
+		<tag Name="Noswap" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	</object>
+
+
+	<object Name="Brothers_CatsDogs_DogMayor" Inherits="BaseDog">
+		<part Name="Render" DisplayName="Raroofwor" Tile="Creatures/catsdogs/dogmayor.png" ColorString="&amp;K" DetailColor="w" RenderString="d" />
+		<part Name="Description" Short="The massive hound's whiskers droop in disapprobation of =pronouns.possessive= surroundings, while judgmental fur stays matted against skin made taut by mutated sarcomeres. Dirt-smeared muck drips from =pronouns.possessive= jowls as =pronouns.possesssive= environment beckons =pronouns.objective=: here comes the master of this place, not to be triffled with." />
+		<part Name="Honorifics" Primary="Mayor" />
+		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_DogMayor" />
+		<part Name="Brain" Wanders="false" Factions="Shik-100" />
+		<part Name="AISelfPreservation" Threshold="40" />
+		<stat Name="Hitpoints" Value="225" />
+		<stat Name="Level" Value="29" />
+		<stat Name="Strength" Boost="1" />
+		<stat Name="Agility" Boost="1" />
+		<stat Name="Willpower" Boost="1" />
+		<stat Name="Ego" Boost="1" />
+		<skill Name="Customs" />
+		<skill Name="Survival_MountainsSurvival" />
+		<inventoryobject Blueprint="BigDog_Bite" Number="1" />
+		<mutation Name="HeightenedStrength" Level="10" />
+		<mutation Name="SlimeGlands" />
+		<mutation Name="ThickFur" />
+		<part Name="GivesRep" />
+		<tag Name="NoHateFactions" Value="Wardens,Farmers" />
+		<tag Name="staticFaction1" Value="Dogs,welcoming their travelers" />
+		<tag Name="Gender" Value="male" />
+		<tag Name="NoSleep" />
+		<tag Name="NoSignpost" />
+		<xtagGrammar Proper="true" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+		<tag Name="Mayor" Value="Shik" />
   </object>
+
+
+
 
 </objects>

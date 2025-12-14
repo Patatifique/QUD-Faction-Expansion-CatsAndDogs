@@ -33,7 +33,7 @@
 		</factionworshipattitudes>
 	</faction>
 
-<faction
+	<faction
 		Name="Spar"
 		DisplayName="cats of Spar"
 		Old="false"
