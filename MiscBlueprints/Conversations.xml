@@ -76,4 +76,15 @@
 	
 	</conversation>
 
+	<conversation ID="Brothers_CatsDogs_CatMayor">
+		
+		<node ID="Start">
+		  <text>
+			I'm a cat mayor.
+		  </text>
+		  <choice GotoID="End">Very true.</choice>
+		</node>
+	
+	</conversation>
+	
 </conversations>
