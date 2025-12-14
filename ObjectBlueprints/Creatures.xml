@@ -443,8 +443,8 @@
 
 
 	<object Name="Brothers_CatsDogs_DogMayor" Inherits="BaseDog">
-		<part Name="Render" DisplayName="Raroofwor" Tile="Creatures/catsdogs/dogmayor.png" ColorString="&amp;K" DetailColor="w" RenderString="d" />
-		<part Name="Description" Short="The massive hound's whiskers droop in disapprobation of =pronouns.possessive= surroundings, while judgmental fur stays matted against skin made taut by mutated sarcomeres. Dirt-smeared muck drips from =pronouns.possessive= jowls as =pronouns.possesssive= environment beckons =pronouns.objective=: here comes the master of this place, not to be triffled with." />
+		<part Name="Render" DisplayName="Raroofwor" Tile="Creatures/catsdogs/dogmayor.png" ColorString="&amp;K" DetailColor="r" RenderString="d" />
+		<part Name="Description" Short="The massive hound's whiskers droop in disapprobation of =pronouns.possessive= surroundings, while judgmental fur stays matted against skin made taut by mutated sarcomeres. Dirt-smeared muck drips from =pronouns.possessive= jowls as =pronouns.possessive= environment beckons =pronouns.objective=: here comes the master of this place, not to be triffled with." />
 		<part Name="Honorifics" Primary="Mayor" />
 		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_DogMayor" />
 		<part Name="Brain" Wanders="false" Factions="Shik-100" />
@@ -462,15 +462,16 @@
 		<mutation Name="SlimeGlands" />
 		<mutation Name="ThickFur" />
 		<part Name="GivesRep" />
-		<tag Name="NoHateFactions" Value="Wardens,Farmers" />
-		<tag Name="staticFaction1" Value="Dogs,welcoming their travelers" />
 		<tag Name="Gender" Value="male" />
 		<tag Name="NoSleep" />
 		<tag Name="NoSignpost" />
 		<xtagGrammar Proper="true" />
+		<tag Name="NoHateFactions" Value="Wardens,Farmers" />
+		<tag Name="staticFaction1" Value="Dogs,friend,welcoming their travelers" />
+		<part Name="Interesting" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 		<tag Name="Mayor" Value="Shik" />
-  </object>
+	</object>
 
 
 

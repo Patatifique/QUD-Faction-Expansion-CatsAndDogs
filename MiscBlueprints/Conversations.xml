@@ -65,4 +65,15 @@
 	
 	</conversation>
 
+	<conversation ID="Brothers_CatsDogs_DogMayor">
+		
+		<node ID="Start">
+		  <text>
+			I'm a dog mayor.
+		  </text>
+		  <choice GotoID="End">Very true.</choice>
+		</node>
+	
+	</conversation>
+
 </conversations>
