@@ -490,7 +490,6 @@
 		<inventoryobject Blueprint="Brothers_CatsDogs_Black Puma Claw" Number="2" />
 		<mutation Name="HeightenedAgility" Level="10" />
 		<mutation Name="Teleportation" Level="1" />
-		<mutation Name="ThickFur" />
 		<part Name="GivesRep" />
 		<tag Name="Gender" Value="female" />
 		<tag Name="NoSleep" />
@@ -503,5 +502,47 @@
 		<tag Name="Mayor" Value="Spar" />
 	</object>
 
+	<object Name="Brothers_CatsDogs_DogLover" Inherits="BaseDog">
+		<part Name="Render" DisplayName="Oof Growf" Tile="Creatures/catsdogs/doglover.png" ColorString="&amp;K" DetailColor="m" RenderString="d" />
+		<part Name="Description" Short="The young hound smells of warm fur and hopeful devotion. =pronouns.Possessive= gleaming eyes top a snout dried by the canyon winds, mucked up by =pronouns.possessive= lolling tongue with metronomic precision. =pronouns.Subjective= bears a sable field, the family coat." />
+		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_DogLover" />
+		<part Name="Brain" Wanders="false" Factions="Shik-100" />
+		<part Name="AISelfPreservation" Threshold="40" />
+		<stat Name="Hitpoints" Value="150" />
+		<stat Name="Level" Value="18" />
+		<stat Name="Strength" Boost="1" />
+		<skill Name="Customs" />
+		<skill Name="Survival_MountainsSurvival" />
+		<inventoryobject Blueprint="Dog_Bite" Number="1" />
+		<mutation Name="HeightenedStrength" Level="5" />
+		<mutation Name="SlimeGlands" />
+		<mutation Name="ThickFur" />
+		<tag Name="NoSleep" />
+		<tag Name="NoSignpost" />
+		<xtagGrammar Proper="true" />
+		<part Name="Interesting" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	</object>
 
+	<object Name="Brothers_CatsDogs_CatLover" Inherits="BaseCat">
+		<part Name="Render" DisplayName="Rrromaw" Tile="Creatures/catsdogs/catlover.png" ColorString="&amp;Y" DetailColor="m" RenderString="l" />
+		<part Name="Description" Short="With eyes wide as the Beetle Moon, =pronouns.possessive= vibrissae thrum with half-uttered verses. Immaculateness conveys no arrogance on =pronouns.possessive= back, yet vanity still materialized in ribbons spun with wool from the young." />
+		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_CatLover" />
+		<part Name="Brain" Wanders="false" Factions="Spar-100" />
+		<part Name="AISelfPreservation" Threshold="40" />
+		<stat Name="Hitpoints" Value="150" />
+		<stat Name="Level" Value="18" />
+		<stat Name="Agility" Boost="1" />
+		<skill Name="Customs" />
+		<skill Name="Survival_DesertCanyonSurvival" />
+		<inventoryobject Blueprint="Cat Claw" Number="2" />
+		<mutation Name="HeightenedAgility" Level="5" />
+		<mutation Name="Teleportation" Level="1" />
+		<tag Name="NoSleep" />
+		<tag Name="NoSignpost" />
+		<xtagGrammar Proper="true" />
+		<part Name="Interesting" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	</object>
+	
 </objects>

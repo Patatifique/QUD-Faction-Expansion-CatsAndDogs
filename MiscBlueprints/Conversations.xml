@@ -86,5 +86,27 @@
 		</node>
 	
 	</conversation>
+
+	<conversation ID="Brothers_CatsDogs_DogLover">
+		
+		<node ID="Start">
+		  <text>
+			I'm in love with a cat.
+		  </text>
+		  <choice GotoID="End">Cute.</choice>
+		</node>
+	
+	</conversation>
+	
+	<conversation ID="Brothers_CatsDogs_CatLover">
+		
+		<node ID="Start">
+		  <text>
+			I'm in love with a dog.
+		  </text>
+		  <choice GotoID="End">Scandalous.</choice>
+		</node>
+	
+	</conversation>	
 	
 </conversations>
