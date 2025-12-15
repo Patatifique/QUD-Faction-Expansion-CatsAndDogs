@@ -303,7 +303,7 @@
 		<stat Name="AV" Value="12" />
 		<stat Name="Hitpoints" Value="760" />
 		<inventoryobject Blueprint="Brothers_CatsDogs_Catgod Weapon" Number="4" />
-		<part Name="Description" Short="An antique statue crossed the threshold of eons and stepped in Qud, flesh and sinew where antique scholars would see nummulite. A sheer personification of the feline form, =pronouns.possessive= peers' likeness raising the interrogation of which came first. The pondering left unanswered, =pronouns.possessive= claws have furrowed the ground and sown it with the countained fury of =pronouns.possessive= kind. No longer watching over decrepit gates, =pronouns.subjective= finds solace in twin scores of nictitation: before you stands the resting divine, neither to be importuned nor awoken." />
+		<part Name="Description" Short="An antique statue crossed the threshold of eons and stepped in Qud, flesh and sinew where antique scholars would see nummulite. A sheer personification of the feline form, =pronouns.possessive= peers' likeness raising the interrogation of which came first. The pondering left unanswered, =pronouns.possessive= claws have furrowed the ground and sown it with the countained fury of =pronouns.possessive= kind. No longer watching over decrepit gates, =pronouns.subjective= =verb:find:afterpronoun= solace in twin scores of nictitation: before you stands the resting divine, neither to be importuned nor awoken." />
 		<skill Name="ShortBlades" />
 		<skill Name="ShortBlades_Expertise" />
 		<skill Name="ShortBlades_Bloodletter" />
@@ -355,7 +355,7 @@
 		<inventoryobject Blueprint="Brothers_CatsDogs_Doggod Weapon" Number="1" />
 		<tag Name="Gender" Value="nonspecific" />
 		<tag Name="PronounSet" Value="pseudo-plural/They/Them/Their/Their/Themself/god/godling/regent/Child/Sibling/Parent" />
-		<part Name="Description" Short="Constant vigilance is realized in a noble quadrupedal shape bearing the marks of trials past. Carved out of the canine ideal, inspiration, and achievement, =pronouns.subjective= =verb:point:afterpronoun= wherever =pronouns.possessive= epithelium sorted out the yuckwheat from the chaff. Eons have chiseled =pronouns.possessive= oculi with wisdom unchallenged, and a silent warning not to overstep =pronouns.possessive= forbearance. =pronouns.Subjective= leave but a single trail of pawprints on Qud, devoid of the prospective vessel for =pronouns.possessive= unbound loyalty." />
+		<part Name="Description" Short="Constant vigilance is realized in a noble quadrupedal shape bearing the marks of trials past. Carved out of the canine ideal, inspiration, and achievement, =pronouns.subjective= =verb:point:afterpronoun= wherever =pronouns.possessive= epithelium sorted out the yuckwheat from the chaff. Eons have chiseled =pronouns.possessive= oculi with wisdom unchallenged, and a silent warning not to overstep =pronouns.possessive= forbearance. =pronouns.Subjective= =verb:leave:afterpronoun= but a single trail of pawprints on Qud, devoid of the prospective vessel for =pronouns.possessive= unbound loyalty." />
 		<skill Name="Axe" />
 		<skill Name="Axe_Expertise" />
 		<skill Name="Axe_Dismember" />
@@ -474,7 +474,7 @@
 
 	<object Name="Brothers_CatsDogs_CatMayor" Inherits="BaseCat">
 		<part Name="Render" DisplayName="Morrarri" Tile="Creatures/catsdogs/catmayor.png" ColorString="&amp;Y" DetailColor="r" RenderString="l" />
-		<part Name="Description" Short="Signature smugness coats =pronouns.possessive= alabaster pelt unmarred by doubt or dust. =pronouns.Subjective= sits as though Qud itself was a recliner made for =pronouns.possessive= comfort, keratin daggers half-sheathed. A lidded gaze measures you and finds you wanting: yet diligence may let you win =pronouns.possessive= good graces yet." />
+		<part Name="Description" Short="Signature smugness coats =pronouns.possessive= alabaster pelt unmarred by doubt or dust. =pronouns.Subjective= =verb:sit:afterpronoun= as though Qud itself was a recliner made for =pronouns.possessive= comfort, keratin daggers half-sheathed. A lidded gaze measures you and finds you wanting: yet diligence may let you win =pronouns.possessive= good graces yet." />
 		<part Name="Honorifics" Primary="Lady" />
 		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_CatMayor" />
 		<part Name="Brain" Wanders="false" Factions="Spar-100" />
