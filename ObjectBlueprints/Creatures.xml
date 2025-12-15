@@ -488,6 +488,7 @@
 		<skill Name="Customs" />
 		<skill Name="Survival_DesertCanyonSurvival" />
 		<inventoryobject Blueprint="Brothers_CatsDogs_Black Puma Claw" Number="2" />
+		<inventoryobject Blueprint="Cat Bite" Number="1" />
 		<mutation Name="HeightenedAgility" Level="10" />
 		<mutation Name="Teleportation" Level="1" />
 		<part Name="GivesRep" />
@@ -536,6 +537,7 @@
 		<skill Name="Customs" />
 		<skill Name="Survival_DesertCanyonSurvival" />
 		<inventoryobject Blueprint="Cat Claw" Number="2" />
+		<inventoryobject Blueprint="Cat Bite" Number="1" />
 		<mutation Name="HeightenedAgility" Level="5" />
 		<mutation Name="Teleportation" Level="1" />
 		<tag Name="NoSleep" />
