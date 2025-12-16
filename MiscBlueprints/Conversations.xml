@@ -32,7 +32,7 @@
 	
 	</conversation>
   
-	<conversation ID="Brothers_Tortoises_Warden Arendurath">
+	<conversation ID="Brothers_CatsDogs_Warden Arendurath">
 		
 		<node ID="Start">
 		  <text>
@@ -105,6 +105,17 @@
 			I'm in love with a dog.
 		  </text>
 		  <choice GotoID="End">Scandalous.</choice>
+		</node>
+	
+	</conversation>	
+
+	<conversation ID="Brothers_CatsDogs_ShikCitizen">
+		
+		<node ID="Start">
+		  <text>
+			I'm a dog farmer.
+		  </text>
+		  <choice GotoID="End">Nice apples.</choice>
 		</node>
 	
 	</conversation>	
