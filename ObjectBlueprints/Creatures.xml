@@ -4,7 +4,7 @@
 <!--New Dogs-->
 	
 	<object Name="Brothers_CatsDogs_Hyrkhound Alpha" Inherits="BaseDog">
-		<part Name="Render" ColorString="&amp;G" TileColor="&amp;w" DetailColor="G" RenderString="d" Tile="Creatures/catsdogs/hyrkleader.png" DisplayName="{{Y|hyrkhound}} pack leader" />
+		<part Name="Render" ColorString="&amp;w" DetailColor="G" RenderString="d" Tile="Creatures/catsdogs/hyrkleader.png" DisplayName="{{Y|hyrkhound}} pack leader" />
 		<stat Name="Level" Value="22" />
 		<part Name="Brain" Hostile="true" Factions="Dogs-100" />
 		<stat Name="Strength" Boost="4" />
@@ -31,7 +31,7 @@
 	</object>
  
    <object Name="Brothers_CatsDogs_Blinkoodle" Inherits="BaseDog">
-		<part Name="Render" ColorString="&amp;G" TileColor="&amp;w" DetailColor="W" RenderString="d" Tile="Creatures/catsdogs/blinkoodle.png" DisplayName="blinkoodle" />
+		<part Name="Render" ColorString="&amp;w" DetailColor="W" RenderString="d" Tile="Creatures/catsdogs/blinkoodle.png" DisplayName="blinkoodle" />
 		<stat Name="Level" Value="16" />
 		<part Name="Brain" Hostile="false" Factions="Dogs-100" />
 		<stat Name="Hitpoints" Value="20" />
@@ -83,7 +83,7 @@
 	</object>
 
 	<object Name="Brothers_CatsDogs_Hydric Hound" Inherits="BaseDog">
-		<part Name="Render" ColorString="&amp;G" TileColor="&amp;r" DetailColor="y" RenderString="d" Tile="Creatures/catsdogs/hydrichound1.png" DisplayName="hydric hound" />
+		<part Name="Render" ColorString="&amp;r" DetailColor="y" RenderString="d" Tile="Creatures/catsdogs/hydrichound1.png" DisplayName="hydric hound" />
 		<stat Name="Level" Value="25" />
 		<part Name="Brain" Hostile="true" Factions="Dogs-100" />
 		<stat Name="Strength" sValue="26" />
@@ -117,7 +117,7 @@
 <!--New Cats-->
 
 	<object Name="Brothers_CatsDogs_Black Puma" Inherits="BaseCat">
-		<part Name="Render" DisplayName="{{K|black puma}}" Tile="Creatures/catsdogs/blackpuma.png" RenderString="l" ColorString="&amp;K" TileColor="&amp;K" DetailColor="r"/>
+		<part Name="Render" DisplayName="{{K|black puma}}" Tile="Creatures/catsdogs/blackpuma.png" RenderString="l" ColorString="&amp;K" DetailColor="r"/>
 		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Brothers_CatsDogs_Black Puma Corpse" />
 		<stat Name="AV" Value="6" />
 		<stat Name="Level" Value="31" />
@@ -226,7 +226,7 @@
 	</object>
 	
 	<object Name="Hyrkhound" Load="Merge">
-		<part Name="Render" ColorString="&amp;G" TileColor="&amp;w" DetailColor="G" RenderString="d" Tile="Creatures/catsdogs/hyrkhound.png" DisplayName="{{Y|hyrkhound}}" />
+		<part Name="Render" ColorString="&amp;w" DetailColor="G" RenderString="d" Tile="Creatures/catsdogs/hyrkhound.png" DisplayName="{{Y|hyrkhound}}" />
 		<part Name="Corpse" CorpseChance="10" CorpseBlueprint="Brothers_CatsDogs_Hyrkhound Corpse" />
 	</object>
 
@@ -518,7 +518,7 @@
 		<intproperty Name="NamedVillager" Value="1" />
 		<tag Name="PreferChatToPet" />
 		<part Name="Render" DisplayName="Oof Growf" Tile="Creatures/catsdogs/doglover.png" ColorString="&amp;K" DetailColor="m" RenderString="d" />
-		<part Name="Description" Short="The young hound smells of warm fur and hopeful devotion. =pronouns.Possessive= gleaming eyes top a snout dried by the canyon winds, mucked up by =pronouns.possessive= lolling tongue with metronomic precision. =pronouns.Subjective= bears a sable field, the family coat." />
+		<part Name="Description" Short="The young hound smells of warm fur and hopeful devotion. =pronouns.Possessive= gleaming eyes top a snout dried by the canyon winds, mucked up by =pronouns.possessive= lolling tongue with metronomic precision. =pronouns.Subjective= =verb:bear:afterpronoun= a sable field, the family coat." />
 		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_DogLover" />
 		<part Name="Brain" Wanders="false" Factions="Shik-100" />
 		<part Name="AISelfPreservation" Threshold="40" />
@@ -627,10 +627,10 @@
 		<intproperty Name="NamedVillager" Value="1" />
 		<tag Name="PreferChatToPet" />
     	<part Name="Render" DisplayName="Imimiw" Tile="Creatures/catsdogs/cattinker.png" ColorString="&amp;c" DetailColor="w" RenderString="l"  />
-		<part Name="Description" Short="Polyplastic dust settles on =pronouns.possessive= fur cropped short where tinkerfire has not singed it black. Fingerless gloves leave =pronouns.possessive= dextrous digital pads free to prod silicium paths while =pronouns.possessive= tail whips the air back and forth in impatience over cooling solder. =pronouns.Subjective= complements =pronouns.possessive= her gaze with oscillating lenses, peering down the chromed guts of machines." />
-    		<part Name="Brain" Hostile="false" Wanders="False" Factions="Spar-100" />	
+		<part Name="Description" Short="Polyplastic dust settles on =pronouns.possessive= fur cropped short where tinkerfire has not singed it black. Fingerless gloves leave =pronouns.possessive= dextrous digital pads free to prod silicium paths while =pronouns.possessive= tail whips the air back and forth in impatience over cooling solder. =pronouns.Subjective= =verb:complement:afterpronoun= =pronouns.possessive= gaze with oscillating lenses, peering down the chromed guts of machines." />
+    	<part Name="Brain" Hostile="false" Wanders="False" Factions="Spar-100" />	
 		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_CatTinker" />
-		<stat Name="Level" Value="10" />
+		<stat Name="Level" Value="19" />
 		<stat Name="Hitpoints" Value="105" />
 		<skill Name="Tinkering" />
 		<skill Name="Tinkering_Repair" />
@@ -654,5 +654,45 @@
 		<part Name="Interesting" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
+
+
+	<object Name="Brothers_CatsDogs_DogChef" Inherits="BaseDog">
+		<removepart Name="SmartuseForceTwiddles" />
+		<intproperty Name="NamedVillager" Value="1" />
+		<tag Name="PreferChatToPet" />
+    	<part Name="Render" DisplayName="Growarows" Tile="Creatures/catsdogs/dogmerchant2.png" ColorString="&amp;W" DetailColor="Y" RenderString="d"  />
+		<part Name="Description" Short="Out of fur turned into constellation by the remnants of sustenance past jut two necks. The inaugural stands proud and muscular, capped with a white declaration of culinary skill. The successor stoops low, tasting salt in the air, spotting patron and client alike. Both swivel in unisson as =pronouns.subjective= =verb:greet:afterpronoun= a new prospect in a joint homage to water: currency and broth." />
+		<part Name="Brain" Hostile="false" Wanders="False" Factions="Shik-100" />	
+		<stat Name="Strength" sValue="26" />
+		<stat Name="Agility" sValue="24" />
+		<stat Name="Toughness" sValue="22" />
+		<stat Name="Intelligence" sValue="15" />
+		<stat Name="Willpower" Value="36" />
+		<stat Name="Ego" Value="36" />
+		<stat Name="Level" Value="25" />
+		<stat Name="Hitpoints" Value="105" />
+		<stat Name="AV" Value="6" />
+		<stat Name="Speed" Value="100" />
+		<part Name="GenericInventoryRestocker" Table="Brothers_CatsDogs_DogChefWares" />
+		<skill Name="Multiweapon_Fighting" />
+		<skill Name="Multiweapon_Flurry" />
+		<skill Name="Axe" />
+		<skill Name="Axe_Cleave" />
+		<skill Name="CookingAndGathering" />
+		<skill Name="CookingAndGathering_Harvestry" />
+		<skill Name="CookingAndGathering_Butchery" />
+		<skill Name="CookingAndGathering_Spicer" />
+		<inventoryobject Blueprint="Leather Apron" />
+		<inventoryobject Blueprint="Brothers_CatsDogs_Hydric Bite" Number="1" />
+		<tag Name="Gender" Value="plural" />
+		<tag Name="NoSleep" />
+		<tag Name="Unenslavable" />
+		<tag Name="Merchant" />
+		<xtagGrammar Proper="true" />
+		<part Name="Interesting" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	</object>
+
+
 
 </objects>

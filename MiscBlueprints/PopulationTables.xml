@@ -109,4 +109,13 @@
 		</group>
 	</population>
 
+<!--New shopping inventories-->
+
+	<population Name="Brothers_CatsDogs_DogChefWares">
+		<group Name="Items" Style="pickeach">
+			<table Name="ChefInventory" />
+			<table Name="Tier3Wares" />
+		</group>
+	</population>
+
 </populations>

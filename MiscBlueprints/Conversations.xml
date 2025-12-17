@@ -152,5 +152,16 @@
 		</node>
 	
 	</conversation>	
+
+	<conversation ID="Brothers_CatsDogs_DogChef">
+		
+		<node ID="Start">
+		  <text>
+			I sell and cook stuff.
+		  </text>
+		  <choice GotoID="End">Yum.</choice>
+		</node>
+	
+	</conversation>	
 	
 </conversations>
