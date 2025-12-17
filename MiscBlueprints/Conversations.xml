@@ -119,5 +119,27 @@
 		</node>
 	
 	</conversation>	
+
+	<conversation ID="Brothers_CatsDogs_SparCitizen">
+		
+		<node ID="Start">
+		  <text>
+			I tend to pigs.
+		  </text>
+		  <choice GotoID="End">Oink oink.</choice>
+		</node>
 	
+	</conversation>	
+	
+	<conversation ID="Brothers_CatsDogs_CatsuitGuy">
+		
+		<node ID="Start">
+		  <text>
+			I swear I'm a cat.
+		  </text>
+		  <choice GotoID="End">Whatever.</choice>
+		</node>
+	
+	</conversation>	
+		
 </conversations>

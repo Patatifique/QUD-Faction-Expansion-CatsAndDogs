@@ -494,7 +494,6 @@
 		<part Name="GivesRep" />
 		<tag Name="Gender" Value="female" />
 		<tag Name="NoSleep" />
-		<tag Name="NoSignpost" />
 		<xtagGrammar Proper="true" />
 		<tag Name="NoHateFactions" Value="Wardens,Farmers" />
 		<tag Name="staticFaction1" Value="Cats,friend,providing them with a resting place" />
@@ -519,7 +518,6 @@
 		<mutation Name="SlimeGlands" />
 		<mutation Name="ThickFur" />
 		<tag Name="NoSleep" />
-		<tag Name="NoSignpost" />
 		<xtagGrammar Proper="true" />
 		<part Name="Interesting" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
@@ -541,17 +539,17 @@
 		<mutation Name="HeightenedAgility" Level="5" />
 		<mutation Name="Teleportation" Level="1" />
 		<tag Name="NoSleep" />
-		<tag Name="NoSignpost" />
 		<xtagGrammar Proper="true" />
 		<part Name="Interesting" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 
 	<object Name="Brothers_CatsDogs_ShikCitizen" Inherits="BaseDog">
-		<part Name="Render" DisplayName="dog apple herder" Tile="Creatures/catsdogs/dogfarmer.png" ColorString="&amp;w" DetailColor="y" RenderString="d" />
+		<part Name="Render" DisplayName="apple herder" Tile="Creatures/catsdogs/dogfarmer.png" ColorString="&amp;w" DetailColor="y" RenderString="d" />
 		<part Name="Description" Short="Stout and quadrupedal, =pronouns.possessive= coat is matted with starapple juice stains. A wide-brimmed hat casts a redeeming shadow over =pronouns.possessive= short snout, letting =pronouns.objective= exert the finesse needed to grasp fruits unteared. =pronouns.Possessive= sharp fangs become tools of agriculture, sowing and reaping life." />
 		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_ShikCitizen" />
 		<part Name="Brain" Wanders="true" Factions="Shik-100" />
+		<part Name="AISelfPreservation" Threshold="40" />
 		<stat Name="AV" Value="3" />
 		<stat Name="Strength" Boost="1" />
 		<stat Name="Hitpoints" Value="45" />
@@ -562,6 +560,42 @@
 		<inventoryobject Blueprint="Wide-brimmed Hat" />
 		<inventoryobject Blueprint="@Junk 1" Number="1-4" />
 		<skill Name="CookingAndGathering_Harvestry" />
+	</object>
+
+	<object Name="Brothers_CatsDogs_SparCitizen" Inherits="BaseCat">
+		<part Name="Render" DisplayName="pig tender" Tile="Creatures/catsdogs/catgoatherd.png" ColorString="&amp;y" DetailColor="w" RenderString="l" />
+		<part Name="Description" Short="Gloves of mud and salt encase =pronouns.possessive= paws, complementing a dirt-caked tunic thrown over a lithe feline frame. =pronouns.Possessive= crumpled leather hat wards =pronouns.possessive= gaze against the Hind Sun and lets =pronouns.objective= watch over the mud-dwelling herd." />
+		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_SparCitizen" />
+		<part Name="Brain" Wanders="true" Factions="Spar-100" />
+		<part Name="AISelfPreservation" Threshold="40" />
+		<stat Name="AV" Value="3" />
+		<stat Name="Strength" Boost="1" />
+		<stat Name="Hitpoints" Value="45" />
+		<part Name="GenericInventoryRestocker" Table="PigFarmerInventory" Chance="71" />
+		<inventoryobject Blueprint="Cat Bite" Number="1" />
+		<inventoryobject Blueprint="Filthy Toga" />
+		<inventoryobject Blueprint="Leather Cap" />
+		<inventoryobject Blueprint="@Junk 1" Number="1-4" />
+		<skill Name="CookingAndGathering_Butchery" />
+	</object>
+
+	<object Name="Brothers_CatsDogs_CatsuitGuy" Inherits="NPC">
+		<part Name="Render" DisplayName="Zanya" Tile="Creatures/catsdogs/catfursuit.png" ColorString="&amp;y" DetailColor="w" RenderString="h" />	
+		<part Name="Description" Short="Before you stands the assemblage of humanoid figure and feline garb. =pronouns.Possessive= body is covered with fur poached from Qud's dust-grazers, rethreaded to immaculateness, while =pronouns.possessive= hands wear a mud-dweller's hide. Triangular statements have found their place to a plastifer wreath and adverstise the =pronouns.personTerm='s belonging to felids, bipedal posture notwithstanding." />
+		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_CatsuitGuy" />
+		<part Name="Brain" Wanders="false" Factions="Spar-100" />
+		<part Name="AISelfPreservation" Threshold="40" />
+		<stat Name="Hitpoints" Value="60" />
+		<stat Name="Level" Value="19" />
+		<skill Name="Customs" />
+		<inventoryobject Blueprint="Furs" />
+		<inventoryobject Blueprint="Sandals" />
+		<inventoryobject Blueprint="Boar-skin gloves" />
+		<inventoryobject Blueprint="Brothers_CatsDogs_Catears" />
+		<tag Name="Gender" Value="male" />
+		<tag Name="NoSleep" />
+		<xtagGrammar Proper="true" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 	
 </objects>
