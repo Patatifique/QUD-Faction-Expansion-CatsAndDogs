@@ -141,5 +141,16 @@
 		</node>
 	
 	</conversation>	
+
+	<conversation ID="Brothers_CatsDogs_CatTinker">
 		
+		<node ID="Start">
+		  <text>
+			I tinker stuff.
+		  </text>
+		  <choice GotoID="End">Cool.</choice>
+		</node>
+	
+	</conversation>	
+	
 </conversations>

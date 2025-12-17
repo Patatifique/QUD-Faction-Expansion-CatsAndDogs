@@ -293,10 +293,13 @@
 <!--New Gods-->
 
 	<object Name="Brothers_CatsDogs_Catgod" Inherits="BaseCat">
+		<removepart Name="SmartuseForceTwiddles" />
+		<intproperty Name="Hero" Value="1" />
+		<tag Name="PreferChatToPet" />
 		<part Name="DropOnDeath" Blueprints="Brothers_CatsDogs_Catgod Drop,Brothers_CatsDogs_Catgod Drop,Brothers_CatsDogs_Catgod Drop,Brothers_CatsDogs_Catgod Drop,Brothers_CatsDogs_Catgod Drop,Brothers_CatsDogs_Catgod Drop" />
 		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_Catgod" />
 		<part Name="Brain" Hostile="true" Wanders="false" Hibernating="true" Factions="Cats-100" />
-		<part Name="Render" DisplayName="Miramihamia" RenderString="A" ColorString="&amp;M" Tile="Creatures/catsdogs/catgod.png" />
+		<part Name="Render" DisplayName="Miramihamia" RenderString="L" ColorString="&amp;M" Tile="Creatures/catsdogs/catgod.png" />
 		<part Name="Titles" Primary="Feline God" />
 		<part Name="DisplayNameColor" Color="M" />
 		<stat Name="Level" Value="40" />
@@ -343,10 +346,13 @@
 	</object>
 
 	<object Name="Brothers_CatsDogs_Doggod" Inherits="BaseDog">
+		<removepart Name="SmartuseForceTwiddles" />
+		<intproperty Name="Hero" Value="1" />
+		<tag Name="PreferChatToPet" />
 		<part Name="DropOnDeath" Blueprints="Brothers_CatsDogs_Doggod Drop" />		
 		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_Doggod" />
 		<part Name="Brain" Hostile="false" Wanders="false" Factions="Dogs-100" />
-		<part Name="Render" DisplayName="Boroworof" RenderString="A" ColorString="&amp;M" Tile="Creatures/catsdogs/doggod.png" />
+		<part Name="Render" DisplayName="Boroworof" RenderString="D" ColorString="&amp;M" Tile="Creatures/catsdogs/doggod.png" />
 		<part Name="Titles" Primary="Canine God" />
 		<part Name="DisplayNameColor" Color="M" />
 		<stat Name="Level" Value="40" />
@@ -442,6 +448,9 @@
 	</object>
 
 	<object Name="Brothers_CatsDogs_DogMayor" Inherits="BaseDog">
+		<removepart Name="SmartuseForceTwiddles" />
+		<intproperty Name="NamedVillager" Value="1" />
+		<tag Name="PreferChatToPet" />
 		<part Name="Render" DisplayName="Raroofwor" Tile="Creatures/catsdogs/dogmayor.png" ColorString="&amp;K" DetailColor="r" RenderString="d" />
 		<part Name="Description" Short="The massive hound's whiskers droop in disapprobation of =pronouns.possessive= surroundings, while judgmental fur stays matted against skin made taut by mutated sarcomeres. Dirt-smeared muck drips from =pronouns.possessive= jowls as =pronouns.possessive= environment beckons =pronouns.objective=: here comes the master of this place, not to be trifled with." />
 		<part Name="Honorifics" Primary="Mayor" />
@@ -463,7 +472,6 @@
 		<part Name="GivesRep" />
 		<tag Name="Gender" Value="male" />
 		<tag Name="NoSleep" />
-		<tag Name="NoSignpost" />
 		<xtagGrammar Proper="true" />
 		<tag Name="NoHateFactions" Value="Wardens,Farmers" />
 		<tag Name="staticFaction1" Value="Dogs,friend,welcoming their travelers" />
@@ -473,6 +481,9 @@
 	</object>
 
 	<object Name="Brothers_CatsDogs_CatMayor" Inherits="BaseCat">
+		<removepart Name="SmartuseForceTwiddles" />
+		<intproperty Name="NamedVillager" Value="1" />
+		<tag Name="PreferChatToPet" />
 		<part Name="Render" DisplayName="Morrarri" Tile="Creatures/catsdogs/catmayor.png" ColorString="&amp;Y" DetailColor="r" RenderString="l" />
 		<part Name="Description" Short="Signature smugness coats =pronouns.possessive= alabaster pelt unmarred by doubt or dust. =pronouns.Subjective= =verb:sit:afterpronoun= as though Qud itself was a recliner made for =pronouns.possessive= comfort, keratin daggers half-sheathed. A lidded gaze measures you and finds you wanting: yet diligence may let you win =pronouns.possessive= good graces yet." />
 		<part Name="Honorifics" Primary="Lady" />
@@ -503,6 +514,9 @@
 	</object>
 
 	<object Name="Brothers_CatsDogs_DogLover" Inherits="BaseDog">
+		<removepart Name="SmartuseForceTwiddles" />
+		<intproperty Name="NamedVillager" Value="1" />
+		<tag Name="PreferChatToPet" />
 		<part Name="Render" DisplayName="Oof Growf" Tile="Creatures/catsdogs/doglover.png" ColorString="&amp;K" DetailColor="m" RenderString="d" />
 		<part Name="Description" Short="The young hound smells of warm fur and hopeful devotion. =pronouns.Possessive= gleaming eyes top a snout dried by the canyon winds, mucked up by =pronouns.possessive= lolling tongue with metronomic precision. =pronouns.Subjective= bears a sable field, the family coat." />
 		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_DogLover" />
@@ -524,6 +538,9 @@
 	</object>
 
 	<object Name="Brothers_CatsDogs_CatLover" Inherits="BaseCat">
+		<removepart Name="SmartuseForceTwiddles" />
+		<intproperty Name="NamedVillager" Value="1" />
+		<tag Name="PreferChatToPet" />
 		<part Name="Render" DisplayName="Rrromaw" Tile="Creatures/catsdogs/catlover.png" ColorString="&amp;Y" DetailColor="m" RenderString="l" />
 		<part Name="Description" Short="With eyes wide as the Beetle Moon, =pronouns.possessive= vibrissae thrum with half-uttered verses. Immaculateness conveys no arrogance on =pronouns.possessive= back, yet vanity still materialized in ribbons spun with wool from the young." />
 		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_CatLover" />
@@ -545,6 +562,9 @@
 	</object>
 
 	<object Name="Brothers_CatsDogs_ShikCitizen" Inherits="BaseDog">
+		<removepart Name="SmartuseForceTwiddles" />
+		<intproperty Name="ParticipantVillager" Value="1" />
+		<tag Name="PreferChatToPet" />
 		<part Name="Render" DisplayName="apple herder" Tile="Creatures/catsdogs/dogfarmer.png" ColorString="&amp;w" DetailColor="y" RenderString="d" />
 		<part Name="Description" Short="Stout and quadrupedal, =pronouns.possessive= coat is matted with starapple juice stains. A wide-brimmed hat casts a redeeming shadow over =pronouns.possessive= short snout, letting =pronouns.objective= exert the finesse needed to grasp fruits unteared. =pronouns.Possessive= sharp fangs become tools of agriculture, sowing and reaping life." />
 		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_ShikCitizen" />
@@ -563,6 +583,9 @@
 	</object>
 
 	<object Name="Brothers_CatsDogs_SparCitizen" Inherits="BaseCat">
+		<removepart Name="SmartuseForceTwiddles" />
+		<intproperty Name="ParticipantVillager" Value="1" />
+		<tag Name="PreferChatToPet" />
 		<part Name="Render" DisplayName="pig tender" Tile="Creatures/catsdogs/catgoatherd.png" ColorString="&amp;y" DetailColor="w" RenderString="l" />
 		<part Name="Description" Short="Gloves of mud and salt encase =pronouns.possessive= paws, complementing a dirt-caked tunic thrown over a lithe feline frame. =pronouns.Possessive= crumpled leather hat wards =pronouns.possessive= gaze against the Hind Sun and lets =pronouns.objective= watch over the mud-dwelling herd." />
 		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_SparCitizen" />
@@ -595,7 +618,41 @@
 		<tag Name="Gender" Value="male" />
 		<tag Name="NoSleep" />
 		<xtagGrammar Proper="true" />
+		<part Name="Interesting" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
-	
+
+	<object Name="Brothers_CatsDogs_CatTinker" Inherits="BaseCat">
+		<removepart Name="SmartuseForceTwiddles" />
+		<intproperty Name="NamedVillager" Value="1" />
+		<tag Name="PreferChatToPet" />
+    	<part Name="Render" DisplayName="Imimiw" Tile="Creatures/catsdogs/cattinker.png" ColorString="&amp;c" DetailColor="w" RenderString="l"  />
+		<part Name="Description" Short="Polyplastic dust settles on =pronouns.possessive= fur cropped short where tinkerfire has not singed it black. Fingerless gloves leave =pronouns.possessive= dextrous digital pads free to prod silicium paths while =pronouns.possessive= tail whips the air back and forth in impatience over cooling solder. =pronouns.Subjective= complements =pronouns.possessive= her gaze with oscillating lenses, peering down the chromed guts of machines." />
+    		<part Name="Brain" Hostile="false" Wanders="False" Factions="Spar-100" />	
+		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_CatTinker" />
+		<stat Name="Level" Value="10" />
+		<stat Name="Hitpoints" Value="105" />
+		<skill Name="Tinkering" />
+		<skill Name="Tinkering_Repair" />
+		<skill Name="Tinkering_Tinker1" />
+		<skill Name="Tinkering_Disassemble" />
+		<skill Name="Tinkering_DeployTurret" />
+		<skill Name="Tinkering_LayMine" />
+		<part Name="GenericInventoryRestocker" Table="Village Tinker 3" />
+		<part Name="AmbientSoundGenerator" Sounds="sfx_tinker_idle_clink,sfx_tinker_idle_spark" />
+		<part Name="ItemElements" Elements="circuitry::1" />
+		<inventoryobject Blueprint="Pocketed Vest" Number="1" />
+		<inventoryobject Blueprint="Sandals" Number="1" />
+		<inventoryobject Blueprint="Telescopic Monocle" Number="1" />
+		<inventoryobject Blueprint="Basic Toolkit" />
+		<inventoryobject Blueprint="Waterskin" Number="1-2"/>
+		<tag Name="Gender" Value="female" />
+		<tag Name="NoSleep" />
+		<tag Name="Unenslavable" />
+		<tag Name="Merchant" />
+		<xtagGrammar Proper="true" />
+		<part Name="Interesting" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	</object>
+
 </objects>
