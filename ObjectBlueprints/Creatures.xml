@@ -655,7 +655,6 @@
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 
-
 	<object Name="Brothers_CatsDogs_DogChef" Inherits="BaseDog">
 		<removepart Name="SmartuseForceTwiddles" />
 		<intproperty Name="NamedVillager" Value="1" />
@@ -693,6 +692,35 @@
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 
+<!--Cheese Quest-->
 
+	<object Name="Brothers_CatsDogs_CheeseRat" Inherits="BaseAnimal">
+		<part Name="Render" DisplayName="canyon shrew" RenderString="r" ColorString="&amp;K" DetailColor="w" Tile="creatures/catsdogs/cheeserat.png" />
+		<part Name="Description" Short="Skittering along canyon caves, this rodent is reborn a scavenging monarch. Freed from the tyranny of aerial raptors, =pronouns.possessive= septic nose lined with enamel points prods trash and treasure alike." />
+		<stat Name="Agility" Boost="1" />
+		<stat Name="Level" Value="15" />
+		<stat Name="AV" Value="4" />
+		<stat Name="DV" Value="6" />
+		<stat Name="Hitpoints" Value="40" />
+		<skill Name="Acrobatics" />
+		<skill Name="Acrobatics_Dodge" />
+		<skill Name="Acrobatics_Jump" />
+		<skill Name="Tactics" />
+		<skill Name="Tactics_Juke" />
+		<tag Name="Role" Value="Lurker" />
+		<stat Name="Speed" Value="110" />
+		<inventoryobject Blueprint="Brothers_CatsDogs_CheeseRat Bite" Number="1" />
+		<mutation Name="ThickFur" />
+		<tag Name="NoFigurine" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+		 <tag Name="Species" Value="rat" />    
+		<part Name="Swarmer" />  
+	</object>
+
+	<object Name="Brothers_CatsDogs_CheeseRat Bite" Inherits="Bite">
+		<part Name="Render" DisplayName="noxious bite" />
+		<part Name="MeleeWeapon" BaseDamage="2d2" />
+		<part Name="PoisonOnHit" Chance="100" Strength="15" DamageIncrement="1-2" Duration="6-9" />
+	</object>
 
 </objects>
