@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+	
+	<object Name="Brothers_CatsDogs_FounderStatue" Inherits="Statue">
+		<part Name="Render" DisplayName="dilapidated statue" Tile="Terrain/catsdogs/tile_founder.png" RenderLayer="6" RenderString="U" ColorString="&amp;y" DetailColor="g" Occluding="true" />
+		<part Name="Physics" Weight="12000" />
+		<stat Name="Hitpoints" Value="1200" />
+		<part Name="Description" Short="Erosion's gritted fingers have worked the likeness off recrystallized dolomite. A sand-smoothed suggestion of shape lingers still -- diacalyptus columns bearing the proud weight of vast shoulders, and a memory of snout jutting below a faded face. Verdure selfishly reclaims polished spaces and crawls in bryophite clumps, draping the nondescript subject in regal viridian." />
+		<part Name="RulesDescription" Text="This object is a monument to a scene from the history of {{M|Shikspar}}.&#10;&#10;In 857, Bubumube decided to quit traveling Qud. They left Ezra and settled with their followers beyond the southern jungles. There, they named the village Shikspar, and sowed starapple seeds in the furrowed dirt.&#10;" />
+		<stag Name="Contemporary" />	
+	    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	</object>
+
+	<object Name="Brothers_CatsDogs_Cheeseshelf" Inherits="MountedFurniture">
+		<part Name="Render" DisplayName="ripening shelf" Tile="Terrain/catsdogs/tile_cheeseshelf1.png" DetailColor="W" ColorString="&amp;y" RenderString="182" />
+		<builder Name="RandomTile" Tiles="Terrain/catsdogs/tile_cheeseshelf1.png,Terrain/catsdogs/tile_cheeseshelf2.png,Terrain/catsdogs/tile_cheeseshelf3.png" />
+		<part Name="Description" Short="Chrome meshs form successive horizons upon which dairy blossoms and crust colonizes." />
+		<part Name="Container" OpenSound="Sounds/Interact/sfx_interact_open_desk" />
+		<part Name="Inventory" />
+		<inventoryobject Blueprint="Hunk of Cheese" Number="0-6" />
+		<tag Name="FullDetailColor" Value="W" />
+		<tag Name="EmptyDetailColor" Value="k" />
+		<tag Name="NoSparkingQuest" />
+		<part Name="Physics" Organic="true" Weight="50" />
+		<part Name="Metal" />
+		<tag Name="OverlayColor" Value="&amp;w" />
+		<tag Name="HangingSupport" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	</object>
+
+</objects>

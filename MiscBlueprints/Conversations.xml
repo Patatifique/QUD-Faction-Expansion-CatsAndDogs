@@ -163,5 +163,16 @@
 		</node>
 	
 	</conversation>	
+
+	<conversation ID="Brothers_CatsDogs_Cheesejaw">
+		
+		<node ID="Start">
+		  <text>
+			hehehehe cheez!
+		  </text>
+		  <choice GotoID="End">Live and eat cheese.</choice>
+		</node>
+	
+	</conversation>	
 	
 </conversations>

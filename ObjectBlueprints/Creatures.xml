@@ -700,7 +700,7 @@
 		<stat Name="Agility" Boost="1" />
 		<stat Name="Level" Value="15" />
 		<stat Name="AV" Value="4" />
-		<stat Name="DV" Value="6" />
+		<stat Name="DV" Value="4" />
 		<stat Name="Hitpoints" Value="40" />
 		<skill Name="Acrobatics" />
 		<skill Name="Acrobatics_Dodge" />
@@ -729,6 +729,7 @@
 		<part Name="Titles" Primary="snapjaw beastmaster" />
 		<part Name="Description" Short="Crackling thuds secured in a plastifer handle announce the coming of the ringmaster, mangy fur sown with residues of curdled milk. =pronouns.Possessive= ears twitch under the weight of a tiara of litter. As the rest of =pronouns.possessive= kind, =pronouns.Subjective= =verb:bark:afterpronoun= relentlessly: only the stillness of canyons deigns to answer." />
 		<part Name="DisplayNameColor" Color="M" />
+		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_Cheesejaw" />
 		<stat Name="Level" Value="19" />
 		<stat Name="Hitpoints" Value="115" />
 		<stat Name="Strength" Boost="2" />
@@ -738,13 +739,18 @@
 		<stat Name="DV" Value="5" />
 		<tag Name="Role" Value="Hero" />
 		<part Name="Swarmer" ExtraBonus="2" />
+		<skill Name="Persuasion_MenacingStare" />
+		<skill Name="Persuasion_Intimidate" />
 		<part Name="GivesRep" />
 		<tag Name="staticFaction1" Value="Spar,dislike,being the mastermind behind supply raids" />
 		<tag Name="Gender" Value="male" />
 		<xtagGrammar Proper="true" />
-		<tag Name="InventoryPopulationTable" Value="HumanoidEquipment" />
 		<inventoryobject Blueprint="Hunk of Cheese" Number="3-6" />
-		<inventoryobject Blueprint="Brothers_CatsDogs_Stunwhip" Number="1" CellChance="100" CellFullChance="100" CellType="Nuclear Cell" IntProperties="AlwaysEquipAsWeapon:1" />
+		<inventoryobject Blueprint="Brothers_CatsDogs_Stunwhip" Number="1" CellChance="100" CellFullChance="100" CellType="Chem Cell" IntProperties="AlwaysEquipAsWeapon:1" />
+		<inventoryobject Blueprint="Puma Chitin Vest" />
+		<inventoryobject Blueprint="Ape Fur Gloves" />
+		<inventoryobject Blueprint="Puma Chitin Vest" />
+		<inventoryobject Blueprint="Elastyne Slippers" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 

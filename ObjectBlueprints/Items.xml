@@ -116,7 +116,7 @@
 	<object Name="Brothers_CatsDogs_Stunwhip" Inherits="MeleeWeapon">
 		<part Name="Render" DisplayName="{{c|stun}} whip" Tile="Items/catsdogs/stunwhip.png" ColorString="&amp;c" DetailColor="y" />
 		<part Name="Examiner" Complexity="1" />
-		<part Name="MeleeWeapon" MaxStrengthBonus="4" BaseDamage="1d4" Skill="Whip"  />
+		<part Name="MeleeWeapon" MaxStrengthBonus="6" BaseDamage="2d4" Skill="Whip"  />
 		<part Name="Commerce" Value="50" />
 		<part Name="Description" Short="A thong of banded metal jitters with concussive potential. The plastifer handle is slotted on the heel knot with an battery case." />
 		<part Name="EnergyCellSocket" SlotType="EnergyCell" />
@@ -128,7 +128,7 @@
 		<part Name="Physics" Weight="2" />
 		<tag Name="EquipSound" Value="Sounds/Equip/sfx_equip_weapon_bludgeon_artifact" />
 		<tag Name="Mods" Value="WeaponMods,CommonMods,ElectronicsMods" />
-		<tag Name="Tier" Value="1" />    
+		<tag Name="Tier" Value="3" />    
 	</object>
   
 </objects>

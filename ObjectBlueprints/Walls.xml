@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+	
+	<object Name="Brothers_CatsDogs_CrackedMarl" Inherits="BaseSedimentaryRock">
+		<part Name="Render" DisplayName="cracked marl" ColorString="&amp;y^Y" Tile="Terrain/catsdogs/tile_crackedwall.png" TileColor="&amp;y" DetailColor="Y" Occluding="true"  />
+		<stat Name="AV" Value="4" />
+		<stat Name="Hitpoints" Value="30" />
+		<part Name="Description" Short="A thin web of cracks spreads along the deposits, disturbing carbonite -- yet no glauconite shines through." />
+		<xtagGrammar massNoun="true" />
+		<removetag Name="SingleTile" />
+		<removetag Name="PaintedWall" />
+		<tag Name="PaintWith" Value="Marl" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	</object>
+
+</objects>
