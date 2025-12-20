@@ -21,11 +21,16 @@
 		<tag Name="FullDetailColor" Value="W" />
 		<tag Name="EmptyDetailColor" Value="k" />
 		<tag Name="NoSparkingQuest" />
-		<part Name="Physics" Organic="true" Weight="50" />
+		<part Name="Physics" Organic="true" Weight="50" Owner="Spar" />
 		<part Name="Metal" />
 		<tag Name="OverlayColor" Value="&amp;w" />
 		<tag Name="HangingSupport" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 
+	<object Name="Brothers_CatsDogs_Cheesesign" Inherits="Sign">
+		<part Name="Render" DisplayName="sign" Tile="Terrain/catsdogs/tile_cheesesign.png" Occluding="false" />
+		<part Name="Chat" Says="Ripening Caves" ShowInShortDescription="true" />
+	</object>
+  
 </objects>
