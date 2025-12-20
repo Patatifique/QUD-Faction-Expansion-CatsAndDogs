@@ -123,6 +123,7 @@
 		<part Name="AIOffensiveEnergyCellReload" />
 		<part Name="AIPassiveEnergyCellReload" />
 		<part Name="StunOnHit" ChargeUse="10" Chance="35" Duration="1d4" />
+		<part Name="LatchesOn" InitialSaveTarget="14" InitialSaveStat="Agility" InitialSaveDifficultyStat="Agility" MoveSaveTarget="14" MoveSaveStat="Strength" MoveSaveDifficultyStat="Strength" BreakSaveTarget="14" BreakSaveStat="Strength" BreakSaveDifficultyStat="Strength" Duration="3d4" AutoAttackOnMove="false" AutoAttackOnMoveAway="false" AutoAttackPerTurn="true" BloodSpatterOnLatch="false" />
 		<part Name="TinkerItem" Bits="001" CanDisassemble="true" CanBuild="true" />
 		<part Name="Metal" />
 		<part Name="Physics" Weight="2" />
