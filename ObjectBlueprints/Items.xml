@@ -84,7 +84,7 @@
 
 	<object Name="Brothers_CatsDogs_Doggod Drop" Inherits="BaseCloak">
 		<part Name="Render" DisplayName="{{r|Pelt}} of the {{Y|Canine God}}" ColorString="&amp;M" DetailColor="r" Tile="Items/catsdogs/godpelt.png" RenderString="]" />
-		<part Name="Armor" Ego="2" AV="2" DV="2" Cold="15" Heat="15" WornOn="Back" />
+		<part Name="Armor" Ego="2" AV="2" DV="2" MA="2" Cold="15" Heat="15" WornOn="Back" />
 		<part Name="Commerce" Value="2500" />
 		<part Name="ItemElements" Elements="might::6" />
 		<part Name="Description" Short="The spirit of the hill Saad weighs heavy on conscience and acromion, the spirit of vigilance unscraped from a husk of pelage. Lo, and feast your gaze on divinity made rainment by hand of the Screaming Men." />
@@ -100,6 +100,25 @@
 	</object>
 
 	<!--Others-->
+
+	<object Name="Brothers_CatsDogs_MutationJaws" Inherits="NaturalWeapon">
+		<part Name="Render" DisplayName="{{w|feral jaws}}" Tile="Mutation/catsdogs/feraljaws.png" ColorString="&amp;w" />
+		<part Name="Description" Short="Wet rings of shuddering muscle shrink and spew body broth in peristaltic waves." />
+		<part Name="Armor" AV="1" DV="0" WornOn="Face" />
+		<part Name="AddsRep" Faction="Apes:100,Baboons:100,Bears:100,Cats:100,Dogs:100,Prey:100" />
+		<part Name="EquipStatBoost" CountAsBase="true" Boosts="Strength:4;Toughness:4;FireResistance:15;ColdResistance:15" ChargeUse="0" IsBootSensitive="false" IsEMPSensitive="false" />
+		<part Name="MeleeWeapon" MaxStrengthBonus="9999" BaseDamage="2d4" Skill="Axe" Stat="Strength" Slot="Face" />
+		<part Name="LatchesOn" InitialSaveTarget="25" InitialSaveStat="Agility" InitialSaveDifficultyStat="Agility" MoveSaveTarget="25" MoveSaveStat="Strength" MoveSaveDifficultyStat="Strength" BreakSaveTarget="25" BreakSaveStat="Strength" BreakSaveDifficultyStat="Strength" Duration="3d4" AutoAttackOnMove="false" AutoAttackOnMoveAway="false" AutoAttackPerTurn="true" BloodSpatterOnLatch="true" />
+		<part Name="NaturalEquipment" />
+		<part Name="NoDamage" />
+		<part Name="NoBreak" />
+		<tag Name="ExcludeFromDynamicEncounters" />
+		<tag Name="NoSparkingQuest" />
+		<tag Name="NaturalGear" />
+		<tag Name="VisibleAsDefaultBehavior" />
+		<tag Name="ShowAsPhysicalFeature" />
+		<tag Name="HitSound" Value="Sounds/Creatures/VO/sfx_creature_animal_dog_vo_attack"></tag>		
+	</object>
 
 	<object Name="Brothers_CatsDogs_Catears" Inherits="BaseHat">
 		<part Name="Armor" AV="0" DV="0" WornOn="Head" />

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<bodies>
+
+	<bodyparttypes>
+
+		<bodyparttype Type="Forearm" LimbBlueprintProperty="SeveredArmBlueprint" Appendage="true" UsuallyOn="Arm" Branching="Lateral,Vertical,Longitudinal,Stratal" ChimeraWeight="0" />
+
+	</bodyparttypes>
+
+	<anatomies>
+
+		<anatomy Name="Brothers_CatsDogs_FeralTransformation">
+			<part Type="Head">
+				<part Type="Face" Integral="true" />
+			</part>
+			<part Type="Arm" Laterality="Right">
+				<part Type="Forearm" Laterality= "Right">
+					<part Type="Hand" Laterality="Right" SupportsDependent="Hands" />
+				</part>
+			</part>
+			<part Type="Arm" Laterality="Left">
+				<part Type="Forearm" Laterality= "Left">
+					<part Type="Hand" Laterality="Left" SupportsDependent="Hands" />
+				</part>
+			</part>
+			<part Type="Missile Weapon" Laterality="Right" />
+			<part Type="Missile Weapon" Laterality="Left" />
+			<part Type="Hands" DependsOn="Hands" />
+			<part Type="Feet" />
+		</anatomy>
+
+	</anatomies>
+
+</bodies>
