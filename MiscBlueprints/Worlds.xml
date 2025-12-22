@@ -21,12 +21,12 @@
 				<music Track="Music/3rd Spore Phase" />
 			</zone>
 			
-			<zone Level="10" x="1" y="0" Name="palissade between Shik and Spar" IndefiniteArticle="the" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000" >
+			<zone Level="10" x="1" y="0" Name="outskirts between Shik and Spar" IndefiniteArticle="the" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000" >
 				<map FileName="Brothers_ShiksparN.rpm" />
 				<music Track="Music/3rd Spore Phase" />
 			</zone>
 			
-			<zone Level="10" x="1" y="2" Name="palissade between Shik and Spar" IndefiniteArticle="the" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000" >
+			<zone Level="10" x="1" y="2" Name="outskirts between Shik and Spar" IndefiniteArticle="the" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000" >
 				<map FileName="Brothers_ShiksparS.rpm" />
 				<music Track="Music/3rd Spore Phase" />
 			</zone>
@@ -57,7 +57,13 @@
 				<music Track="Music/3rd Spore Phase" />
 				<prebuilder Class="IsCheckpoint" Key="Spar"></prebuilder>
 			</zone>
-			
+
+			<zone Level="11" x="2" y="1" Name="undervillage" NameContext="Spar"      >
+				<builder Class="Strata" Noise="true"></builder>
+				<map FileName="Brothers_ShiksparCheeseCave.rpm" />
+				<music Track="Music/Substrate" />
+			</zone>
+	  
 			<zone Level="10" x="2" y="2" Name="outskirts" NameContext="Spar" IndefiniteArticle="some" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000">
 				<map FileName="Brothers_ShiksparSE.rpm" />
 				<music Track="Music/3rd Spore Phase" />
