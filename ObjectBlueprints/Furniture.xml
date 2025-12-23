@@ -9,8 +9,21 @@
 		<part Name="RulesDescription" Text="This object is a monument to a scene from the history of {{M|Shikspar}}.&#10;&#10;In 857, Bubumube decided to quit traveling Qud. They left Ezra and settled with their followers beyond the southern jungles. There, they named the village Shikspar, and sowed starapple seeds in the furrowed dirt.&#10;" />
 		<stag Name="Contemporary" />	
 	    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+		<part Name="Interesting" />
 	</object>
 
+	<object Name="Brothers_CatsDogs_ShikMonument" Inherits="Village Monument Diptych">
+		<part Name="Render" ColorString="&amp;w" DetailColor="y" />
+		<part Name="RulesDescription" Text="This object is a monument to a scene from the history of {{M|Shik}}.&#10;&#10;In 859, Bubumube left the direction of Shikspar to their loyal canine companion as their final will. They passed away peacefully, and from this day forth, the village was known as Shik.&#10;" />
+		<part Name="Interesting" />
+	</object>
+	
+	<object Name="Brothers_CatsDogs_SparMonument" Inherits="Village Monument Diptych">
+		<part Name="Render" ColorString="&amp;y" DetailColor="w" />
+		<part Name="RulesDescription" Text="This object is a monument to a scene from the history of {{M|Spar}}.&#10;&#10;In 859, Bubumube disappeared from Shikspar, never to be seen again. Come Harvest Dawn, a single feline babe was found swaddled in their bed and, from this day forth, the village was known as Spar.&#10;" />
+		<part Name="Interesting" />
+	</object>
+	
 	<object Name="Brothers_CatsDogs_Cheeseshelf" Inherits="MountedFurniture">
 		<part Name="Render" DisplayName="ripening shelf" Tile="Terrain/catsdogs/tile_cheeseshelf1.png" DetailColor="W" ColorString="&amp;y" RenderString="182" />
 		<builder Name="RandomTile" Tiles="Terrain/catsdogs/tile_cheeseshelf1.png,Terrain/catsdogs/tile_cheeseshelf2.png,Terrain/catsdogs/tile_cheeseshelf3.png" />
@@ -32,5 +45,29 @@
 		<part Name="Render" DisplayName="sign" Tile="Terrain/catsdogs/tile_cheesesign.png" Occluding="false" />
 		<part Name="Chat" Says="Ripening Caves" ShowInShortDescription="true" />
 	</object>
+
+	<object Name="Brothers_CatsDogs_Shiksign" Inherits="Sign">
+		<part Name="Render" DisplayName="sign" Tile="Items/sw_sign_west.bmp" Occluding="false" />
+		<part Name="Chat" Says="&#27; To Shik" ShowInShortDescription="true" />
+	</object>
+	
+	<object Name="Brothers_CatsDogs_Sparsign" Inherits="Sign">
+		<part Name="Render" DisplayName="sign" Tile="Items/sw_sign_east.bmp" Occluding="false" />
+		<part Name="Chat" Says="&#26; To Spar" ShowInShortDescription="true" />
+	</object>
   
+	<object Name="Brothers_CatsDogs_ShikChest" Inherits="Chest">
+		<part Name="Inventory" Builder="InventoryChestJunk2" />
+		<part Name="Physics" Owner="Shik" />
+		<tag Name="NoSparkingQuest" />
+		<tag Name="ExcludeFromDynamicEncounters" />
+	</object>
+
+	<object Name="Brothers_CatsDogs_SparChest" Inherits="Chest">
+		<part Name="Inventory" Builder="InventoryChestJunk2" />
+		<part Name="Physics" Owner="Spar" />
+		<tag Name="NoSparkingQuest" />
+		<tag Name="ExcludeFromDynamicEncounters" />
+	</object>
+	
 </objects>

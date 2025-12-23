@@ -4,7 +4,7 @@
 
 	<object Name="Brothers_TerrainShikspar" Inherits="Terrain">
 		<part Name="Render" DisplayName="Shik / Spar" Tile="Terrain/catsdogs/map_shikspar.png" DetailColor="R" RenderString="216" ColorString="&amp;c" />
-		<part Name="Description" Short="Here, twin huts stand broken apart by a sturdy ashen palissade." />
+		<part Name="Description" Short="Here, twin huts stand broken apart by a sturdy wooden palissade." />
 		<tag Name="NoBiomes" Value="1" />
 		<tag Name="OverlayColor" Value="&amp;W" />
 		<tag Name="Terrain" Value="DesertCanyon" />

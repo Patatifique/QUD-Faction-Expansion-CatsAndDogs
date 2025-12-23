@@ -13,4 +13,24 @@
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 
+	<object Name="Brothers_CatsDogs_StarAppleWall" Inherits="BaseWallWood">
+		<part Name="Render" DisplayName="starapple wood wall" Tile="Walls/wall_brinestalk-00000000.png" RenderString="215" ColorString="&amp;w^y" TileColor="&amp;w" DetailColor="r" Occluding="true" />
+		<part Name="Physics" Weight="10000" Takeable="false" Solid="true" Organic="true" />
+		<part Name="Description" Short="Stripped free of harvest, lignin is forced to stand upright, tied together by natural fiber." />
+		<stat Name="AV" Value="5" />
+		<stat Name="Hitpoints" Value="100" />
+		<tag Name="BodyType" Value="WoodWall" />
+		<tag Name="PaintedWall" Value="wall_brinestalk" />
+		<tag Name="PaintedWallAtlas" Value="Assets_Content_Textures_Walls_" />
+		<tag Name="PaintedWallExtension" Value=".png" />
+		<tag Name="PaintWith" Value="Brothers_CatsDogs_StarAppleWalls" />
+		<tag Name="ImmutableWhenUnexplored" Value="1" />
+		<tag Name="Category_Settlement" />
+		<tag Name="Tier" Value="0" />
+		<part Name="Graffitied" ChanceOneIn="300" />
+		<tag Name="ImpactSound" Value="Sounds/Throw/sfx_throwing_generic_hitWood"></tag>
+		<tag Name="TakeDamageSound" Value="Sounds/Damage/sfx_damage_manufacturedWood" />
+		<tag Name="DeathSounds" Value="Sounds/Damage/sfx_destroy_manufacturedWood" />
+	</object>
+
 </objects>
