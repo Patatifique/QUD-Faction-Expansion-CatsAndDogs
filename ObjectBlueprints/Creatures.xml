@@ -602,6 +602,11 @@
 		<skill Name="CookingAndGathering_Butchery" />
 	</object>
 
+	<object Name="Brothers_CatsDogs_SparPig" Inherits="Farm Pig">
+		<part Name="Brain" Factions="Spar-100" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	</object>
+
 	<object Name="Brothers_CatsDogs_CatsuitGuy" Inherits="NPC">
 		<part Name="Render" DisplayName="Zanya" Tile="Creatures/catsdogs/catfursuit.png" ColorString="&amp;y" DetailColor="w" RenderString="h" />	
 		<part Name="Description" Short="Before you stands the assemblage of humanoid figure and feline garb. =pronouns.Possessive= body is covered with fur poached from Qud's dust-grazers, rethreaded to immaculateness, while =pronouns.possessive= hands wear a mud-dweller's hide. Triangular statements have found their place to a plastifer wreath and adverstise the =pronouns.personTerm='s belonging to felids, bipedal posture notwithstanding." />

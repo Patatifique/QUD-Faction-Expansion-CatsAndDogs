@@ -46,6 +46,21 @@
 		<part Name="Chat" Says="Ripening Caves" ShowInShortDescription="true" />
 	</object>
 
+	<object Name="Brothers_CatsDogs_Tradesign" Inherits="Sign">
+		<part Name="Render" DisplayName="sign" Tile="Items/sw_sign_goods.bmp" Occluding="false" />
+		<part Name="Chat" Says="Left Head Trading" ShowInShortDescription="true" />
+	</object>
+	
+	<object Name="Brothers_CatsDogs_Cooksign" Inherits="Sign">
+		<part Name="Render" DisplayName="sign" Tile="Items/sw_sign_pepper.bmp" Occluding="false" />
+		<part Name="Chat" Says="Right Head Cooking" ShowInShortDescription="true" />
+	</object>
+
+	<object Name="Brothers_CatsDogs_Tinkersign" Inherits="Sign">
+		<part Name="Render" DisplayName="sign" Tile="Items/sw_sign_datadisc.bmp" Occluding="false" />
+		<part Name="Chat" Says="Meowticulous Engineering" ShowInShortDescription="true" />
+	</object>
+	
 	<object Name="Brothers_CatsDogs_Shiksign" Inherits="Sign">
 		<part Name="Render" DisplayName="sign" Tile="Items/sw_sign_west.bmp" Occluding="false" />
 		<part Name="Chat" Says="&#27; To Shik" ShowInShortDescription="true" />

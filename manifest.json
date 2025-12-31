@@ -1,8 +1,9 @@
 {
     "id": "Github_Brothers_CatsDogs",
     "title": "(Github) Faction Expansion: Cats and Dogs",
-    "description": "Expands the 'cats' and 'dogs' factions by updating sprites, adding more creatures, loot and a new settlement in the hills.",
+    "description": "Expands the 'cats' and 'dogs' factions by updating sprites, adding more creatures, loot and a new settlement in the desert canyons.",
     "version": "1.0",
+	"dependency": "Brothers_Library",
     "author": "{{tarnished|Balthichou}} and {{lovesickness|Patatifique}}",
     "tags": "Faction",
     "PreviewImage": "catsdogs-preview.png"
