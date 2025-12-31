@@ -9,8 +9,12 @@
 		<xtagGrammar massNoun="true" />
 		<removetag Name="SingleTile" />
 		<removetag Name="PaintedWall" />
-		<tag Name="PaintWith" Value="Marl" />
+		<tag Name="PaintWith" Value="Brothers_Catdogs_MarlWalls" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	</object>
+
+	<object Name="Marl" Load="Merge">
+		<tag Name="PaintWith" Value="Brothers_Catdogs_MarlWalls" />
 	</object>
 
 	<object Name="Brothers_CatsDogs_StarAppleWall" Inherits="BaseWallWood">

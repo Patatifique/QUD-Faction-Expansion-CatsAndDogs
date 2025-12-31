@@ -666,6 +666,7 @@
 		<tag Name="PreferChatToPet" />
     	<part Name="Render" DisplayName="Growarows" Tile="Creatures/catsdogs/dogmerchant2.png" ColorString="&amp;W" DetailColor="Y" RenderString="d"  />
 		<part Name="Description" Short="Out of fur turned into constellation by the remnants of sustenance past jut two necks. The inaugural stands proud and muscular, capped with a white declaration of culinary skill. The successor stoops low, tasting salt in the air, spotting patron and client alike. Both swivel in unisson as =pronouns.subjective= =verb:greet:afterpronoun= a new prospect in a joint homage to water: currency and broth." />
+		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_DogChef" />
 		<part Name="Brain" Hostile="false" Wanders="False" Factions="Shik-100" />	
 		<stat Name="Strength" sValue="26" />
 		<stat Name="Agility" sValue="24" />
@@ -718,6 +719,7 @@
 		<inventoryobject Blueprint="Hunk of Cheese" Number="0-3" />
 		<mutation Name="ThickFur" />
 		<tag Name="NoFigurine" />
+		<part Name="Sweeper" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 		 <tag Name="Species" Value="rat" />    
 		<part Name="Swarmer" />  
