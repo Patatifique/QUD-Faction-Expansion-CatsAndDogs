@@ -213,6 +213,7 @@
 	
 	<object Name="BaseDog" Load="Merge">
 	    <tag Name="Culture" Value="Dog" />
+		<xtagTextFragments Skin="fur" PoeticFeatures="floppy ears,unwavering loyalty,expressive eyes" YounglingNoise="*yip*,*bow wow*" Activity="barking at dromad caravans" VillageActivity="gnawing on our bone stock" SacredThing="seeking sticks" />
 	</object>
 	
 	<object Name="Guard Dog" Load="Merge">
