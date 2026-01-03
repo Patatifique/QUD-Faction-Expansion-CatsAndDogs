@@ -16,12 +16,25 @@
 		<part Name="Render" ColorString="&amp;w" DetailColor="y" />
 		<part Name="RulesDescription" Text="This object is a monument to a scene from the history of {{M|Shik}}.&#10;&#10;In 859, Bubumube left the direction of Shikspar to their loyal canine companion as their final will. They passed away peacefully, and from this day forth, the village was known as Shik.&#10;" />
 		<part Name="Interesting" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 	
 	<object Name="Brothers_CatsDogs_SparMonument" Inherits="Village Monument Diptych">
 		<part Name="Render" ColorString="&amp;y" DetailColor="w" />
 		<part Name="RulesDescription" Text="This object is a monument to a scene from the history of {{M|Spar}}.&#10;&#10;In 859, Bubumube disappeared from Shikspar, never to be seen again. Come Harvest Dawn, a single feline babe was found swaddled in their bed and, from this day forth, the village was known as Spar.&#10;" />
 		<part Name="Interesting" />
+	    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	</object>
+
+	<object Name="Brothers_CatsDogs_BigTomb" Inherits="MountedFurniture">
+		<part Name="Render" DisplayName="large tombstone" RenderString="239" ColorString="&amp;y" DetailColor="K" Occluding="true" Tile="Terrain/catsdogs/tile_bigtomb.png" />
+		<part Name="Physics" Weight="10000" FlameTemperature="99999" VaporTemperature="1500" />
+		<stat Name="AV" Value="20" />
+		<stat Name="Hitpoints" Value="6000" />
+		<part Name="Description" Short="A monolith of grave-slab stands witness. Merciful time has smoothed the grooves of mourned name that only subsist in minds left grieving by colossal absence." />
+		<tag Name="NoSparkingQuest" />
+		<tag Name="VaporObject" Value="LavaPuddle" />
+	    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 	
 	<object Name="Brothers_CatsDogs_Cheeseshelf" Inherits="MountedFurniture">

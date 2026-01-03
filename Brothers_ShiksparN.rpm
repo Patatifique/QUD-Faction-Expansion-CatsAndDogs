@@ -251,8 +251,8 @@
     <object Name="DirtPath"></object>
   </cell>
   <cell X="44" Y="2">
-    <object Name="LargeBoulder"></object>
     <object Name="DirtPath"></object>
+    <object Name="Rubble"></object>
   </cell>
   <cell X="45" Y="2">
     <object Name="BrickWall"></object>
@@ -356,11 +356,12 @@
     <object Name="DirtPath"></object>
   </cell>
   <cell X="45" Y="3">
-    <object Name="LargeBoulder"></object>
     <object Name="DirtPath"></object>
+    <object Name="Rubble"></object>
   </cell>
   <cell X="46" Y="3">
     <object Name="DirtPath"></object>
+    <object Name="Rubble"></object>
   </cell>
   <cell X="47" Y="3">
     <object Name="PigskinWall"></object>
