@@ -2,7 +2,7 @@
 
 <books>
   
-	<book ID="Droolhound Story" Title="{{W|An Unusual Pup}}">
+	<book ID="Brothers_CatsDogs_DroolhoundStory" Title="{{W|An Unusual Pup}}">
 		<page>
 With elevated anguish, the small hyrkhound pup bites in the tough gnu carcass again, expecting his saliva to dissolve the leathery meat and let him feast like his siblings. Despite his efforts, neutral saliva pools on the hide, without the telltale hissing nor sizzling that would announce a delicious meal.
 
@@ -19,11 +19,40 @@ Such is life in Qud.
 		</page>
 	</book>
  
-	<book ID="Brainkitty Story" Title="{{W|The Oldest Kitten Alive}}">
+	<book ID="Brothers_CatsDogs_BrainkittyStory" Title="{{W|The Oldest Kitten Alive}}">
 		<page>
 One could assume time comes for all things in equal manner. In this specific case however, one would be wrong. Ego projection may safeguard the body against the river of time, letting its water glide harmlessly on soft fur that has never known silver nor wrinkle. The mind is keened to point, challenging the expression "wise beyond one's years" with the abrupt insertion of "apparent".
 		</page>
 	</book>
- 
- 
+
+	<book ID="Brothers_CatsDogs_TravelerJournal" Title="{{W|Audio Travelog CLIV}}" Format="Auto" Margins="1,2,2,2">
+		<page>
+[[{{w|16th of Uulu Ut}}]]
+
+Speculator Ptodelia reporting. I am out of the salt marshes, at long last, and the worst of the rust has been cleared from my weapon. It is now the... {{emote|*rummaging sounds*}} ...16th, if my closcillator has not been completely thrown off. Compared to my last recording, the situation has improved somewhat. I have managed to retrieve most of the packbot's equipment, although I was forced to leave it behind, Academy forgives me.
+
+I have followed the southern edges of the jungles eastwards, and found little sleep nor time to document my travels. Braying in the distance kept me sharp and as awake as possible. More of the cloven-hoofed clans have spread there, and I witnessed from a safe distance demonstration of violence against the local diminutive humanoids. 
+
+I have reached a village -- or maybe two. There stands a large wall in the middle. Have I stepped in the middle of a cold war? Nonetheless, my water stocks are running low. I shall see to trade what I scrounged from the packbot. Speculator Ptodelia, out.
+
+
+[[{{w|21st of Uulu Ut}}]]
+
+Speculator Ptodelia reporting. The situation is not as bad as I first surmised, although it could stand to be improved. I have managed to set up camp in the southern outskirts. The local warden, a diacalyptus tree, seems to pay no mind to my presence for now. The local mayors, for there seems to be two of them, are at daggers drawn for a reason I have yet not determined. Or should I say at fangs bared? {{emote|*long pause*}} That was inconsiderate. Expunge this from the formal transcript.
+
+I found the expected services: trading, and some rudimentary tinkering. I have given the local wiring specialist pointers, but there were seldom welcome. I have restocked and should be ready to head out in a few days. Speculator Ptodelia, out.
+
+
+[[{{w|24th of Uulu Ut}}]]
+
+{{emote|*the entry features a few seconds of silence and nothing else*}}
+
+
+[[{{w|27th of Uulu Ut}}]]
+
+Speculator Ptodelia reporting. I have stayed longer than expected, but will be leaving the villages behind today. I have packed already and intend to be out before Ut yara Ux. The local leaders spared no effort to sway me to their cause, producing empty promises of lavish gifts. As per the Principles I will be limiting my impact and merely documenting -- I already should have left days ago. Speculator Ptodelia, out.
+		</page>
+	</book>
+
+
 </books>

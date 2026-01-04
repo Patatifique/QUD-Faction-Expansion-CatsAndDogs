@@ -67,7 +67,7 @@
 	<!--pet stuff-->
 		<part Name="Pettable" />
 		<tag Name="PetResponse" Value="licks you right back,covers you in saliva,drools on your hands" />
-		<property Name="Story" Value="Droolhound Story" />
+		<property Name="Story" Value="Brothers_CatsDogs_DroolhoundStory" />
 		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_Hyrkhound Pet" />
 		<tag Name="StartingPet" />
 		<tag Name="NoXP" />
@@ -196,7 +196,7 @@
 	<!--pet stuff-->
 		<part Name="Pettable" />
 		<tag Name="PetResponse" Value="looks at you tiredly,levitates for a few seconds" />
-		<property Name="Story" Value="Brainkitty Story" />
+		<property Name="Story" Value="Brothers_CatsDogs_BrainkittyStory" />
 		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_Brainkitty Pet" />
 		<tag Name="StartingPet" />
 		<tag Name="NoXP" />
