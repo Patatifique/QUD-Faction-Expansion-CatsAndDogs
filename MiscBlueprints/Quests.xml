@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<quests>
+
+	<quest ID= "Brothers_CatsDogs_MainQuest1" Name="Ancient Grudges" Level="25" 
+	   Accomplishment="You decided to investigate the foundation of Shik and Spar."
+	   Hagiograph="In the month of =month= of =year=, diligent =name= set the first stone of the Cathedral of Shikspar."
+	   HagiographCategory="DoesSomethingRad"
+	   Gospel="At the Battle of Shikspar, =name= defeated united cats and dogs hordes. In awe, survivors bend the paw and swore fealty to the sultan. From then on, =player.subjective= always kept a lock of fur on =player.possessive= person.">
+
+		<step ID="Brief" Name="Confer with Warden Arendubark" XP="500">
+			<text>Ask Warden Arendubark about the current situation in Shik and Spar.</text>
+		</step>
+
+		<step ID="Find" Name="Investigate the Founder" XP="500">
+			<text>Find clues on Shik and Spar's mysterious founder.</text>
+		</step>
+
+		<step ID="Return" Name="Return to Warden Arendubark" XP="500">
+			<text>Report your findings to Warden Arendubark.</text>
+		</step>
+		
+	</quest>
+
+
+	<quest ID= "Brothers_CatsDogs_MainQuest2" Name="On Bubumube's Trail" Level="25" 
+	   Accomplishment="You set out on a journey to discover the truth about Shik and Spar's founder."
+	   Hagiograph="Selfless =name=, remarking the absence of =player.possessive= counselor Bubumube, rescued them from wild beasts. The sultan protects =player.possessive= folk!"
+	   HagiographCategory="MeetsWithCounselors"
+	   Gospel="Happening upon the funerals of a great leader, =name= stepped forth and held =player.possessive= hand over their forehead. There King Bubumube rose again, and =name= was thenceforth known as the Indigo Mender of Kings.">
+
+		<step ID="Travel" Name="Confer with Mayor Haddas" XP="1500">
+			<text>Travel to Ezra and ask Mayor Haddas about Bubumube.</text>
+		</step>
+
+		<step ID="Investigate" Name="Investigate the Founder" XP="2500" Optional="true">
+			<text>Discover all of Bubumube's history.</text>
+		</step>
+
+		<step ID="Deliver" Name="Return to Shik and Spar" XP="1500">
+			<text>Return to Warden Arendubark and announce your discoveries.</text>
+		</step>
+		
+	</quest>
+
+
+	<quest ID= "Brothers_CatsDogs_MainQuest3" Name="The Gathering of Shikspar" Level="25" 
+	   Accomplishment="You revealed the truth about Shik and Spar's founder to the villages' mayors."
+	   Hagiograph="Knowledge pierces the darkness! =name= unearthed ancient knowledge to broker peace between warring nations."
+	   HagiographCategory="BecomesLoved"
+	   Gospel="When administering justice, =name= was petitioned by siblings arguing over the property of a hut. In perfect fairness, =name= ordered the hut burnt down, and split the ashes evenly between siblings.">
+
+		<step ID="DogMayor" Name="Invite Mayor Raroofwor" XP="500">
+			<text>Invite Shik's leader to take part in the Gathering of Shikspar.</text>
+		</step>
+
+		<step ID="CatMayor" Name="Invite Lady Morrarri" XP="500" >
+			<text>Invite Spar's leader to take part in the Gathering of Shikspar.</text>
+		</step>
+
+		<step ID="Gathering" Name="Reveal the Truth" XP="1500">
+			<text>Take part in the Gathering of Shikspar and reveal the truth about Shik and Spar's founder.</text>
+		</step>
+		
+	</quest>
+
+
+	<quest ID= "Brothers_CatsDogs_DogLoverQuest" Name="Swear by the Beetle Moon" Level="25" 
+	   Accomplishment="You reunited two lovers against all odds."
+	   Hagiograph="Love prospers! In the month of =month= of =year=, adventurous =name= eloped from Shikspar with Oof Growf and Rrromaw."
+	   HagiographCategory="Trysts"
+	   Gospel="Standing in the ruins of a colossal wall, =name= cemented =player.possessive= friendship with the bears of Shikspar by marrying into the royal couple Oof Growf and Rrromaw.">
+
+		<step ID="Note" Name="Deliver the Message" XP="500">
+			<text>Carry Oof Growf's note to Rrromaw, in Spar.</text>
+		</step>
+
+		<step ID="Gifts" Name="Help Prepare the Date" XP="1500">
+			<text>Return to Rrromaw with flowers, a dram of wine, and a smooth gemstone.</text>
+		</step>
+
+		<step ID="Debrief" Name="Deliver the Invitation" XP="1000">
+			<text>Inform Oof Growf of the date's time and location.</text>
+		</step>
+		
+	</quest>
+
+
+	<quest ID= "Brothers_CatsDogs_CatLoverQuest" Name="Swear by the Beetle Moon" Level="25" 
+	   Accomplishment="You reunited two lovers against all odds."
+	   Hagiograph="Love prospers! In the month of =month= of =year=, adventurous =name= eloped from Shikspar with Oof Growf and Rrromaw."
+	   HagiographCategory="Trysts"
+	   Gospel="Standing in the ruins of a colossal wall, =name= cemented =player.possessive= friendship with the bears of Shikspar by marrying into the royal couple Oof Growf and Rrromaw.">
+
+		<step ID="Note" Name="Deliver the Message" XP="500">
+			<text>Carry Rrromaw's note to Oof Growf, in Shik.</text>
+		</step>
+
+		<step ID="Gifts" Name="Help Prepare the Date" XP="1500">
+			<text>Return to Oof Growf with flowers, a dram of wine, and a smooth gemstone.</text>
+		</step>
+
+		<step ID="Debrief" Name="Deliver the Invitation" XP="1000">
+			<text>Inform Rrromaw of the date's time and location.</text>
+		</step>
+		
+	</quest>
+	
+	
+	<quest ID= "Brothers_CatsDogs_CheeseQuest" Name="What's Eating the Porcine Cheese?" Faction="Spar" Level="25" Reputation="200" 
+		Accomplishment="You solved the mystery of the missing cheese."
+		Hagiograph="In the month of =month= of =year=, canny =name= pierced the secret of fermenting milk."
+		HagiographCategory="CreatesSomething"
+		Gospel="Deep in the desert canyons, =name= beheld a basin of cream under the Hind Sun until curds respectfully split from whey. There, =player.subjective= named the dish 'cheese', and distributed it to =player.possessive= followers.">
+
+		<step ID="Find" Name="Find the Cheese Eaters" XP="500">
+			<text>Find the creatures preying on Spar's cheese stock.</text>
+		</step>
+
+		<step ID="Stop" Name="Put a Definitive End to Cheese Eaters" XP="1000">
+			<text>Solve the matter of the vermin eating Spar's cheese.</text>
+		</step>
+
+		<step ID="Debrief" Name="Report Back to Imimiw" XP="2000">
+			<text>Inform Imimiw Spar's cheese stock is safe.</text>
+		</step>
+
+	</quest>
+
+
+	<quest ID= "Brothers_CatsDogs_ChefQuest" Name="Drenched in Asphalt" Faction="Shik" Level="25" Reputation="200" 
+		Accomplishment="You retrieved the final ingredient for an outstanding meal."
+		Hagiograph="Generous =name= feeds the hungry! Walking through the flames, =player.subjective= bestows manna to =player.possessive= attendants."
+		HagiographCategory="FindsObject"
+		Gospel="Let it be known that =name= counted amongst his foes a many-headed beast of hatred. =name= struck it down, and retrieved from its stomach the bituminous remains of a long-lost friend.">
+
+		<step ID="Travel" Name="Travel to the Asphalt Mines" XP="500">
+			<text>Journey three parasangs north and six parasangs east of the Six Day Stilt, to the Asphalt Mines.</text>
+		</step>
+
+		<step ID="Find" Name="Find the Secret Ingredient" XP="1000">
+			<text>Collect tar-encrusted bones.</text>
+		</step>
+
+		<step ID="Debrief" Name="Return with the Ingredient" XP="2000">
+			<text>Bring tar-encrusted bones back to Growarows so they can finish their recipe.</text>
+		</step>
+		
+	</quest>
+
+
+
+</quests>
