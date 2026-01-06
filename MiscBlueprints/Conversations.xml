@@ -160,12 +160,96 @@
 
 	<conversation ID="Brothers_CatsDogs_Cheesejaw">
 		
-		<node ID="Start">
-		  <text>
-			hehehehe cheez!
-		  </text>
-		  <choice GotoID="End">Live and eat cheese.</choice>
+		<node ID="Start" IfFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">
+			<text>
+				eheheheheheh shrooz!~
+				geh! me sulton!~
+				nyeheheheheh, minemineminemine!~
+				sultonofshrooz uhuhuh...~
+				liffen. huh. SHROOZ!
+			</text>		
+			<choice GotoID="End">Live and drink, "sultan".</choice>
 		</node>
+		
+		<node ID="Start" IfNotFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">
+			<text>
+				eheheheheheh cheez!~
+				geh! me sulton!~
+				nyeheheheheh, minemineminemine!~
+				sultonofcheez uhuhuh...~
+				liffen. huh. CHEEZ!
+			</text>
+			<choice GotoID="What"> 
+				<text>Will you resign your charge and swear to unvex the fromagers of this world?</text>
+				<part Name="RequireReputation" Faction="Snapjaws" Level="Liked" />
+			</choice>		
+			<choice GotoID="End">Live and drink. Milk, preferably.</choice>
+		</node>
+
+		<node ID="What">
+			<text>
+				unbex? fromfrom? oooh...
+			</text>
+			<choice GotoID="Stop">... Stop stealing the cats' cheese.</choice>
+			<choice GotoID="End">You know what, never mind. Live and drink.</choice>
+		</node>
+
+		<node ID="Stop">
+			<text>
+				{{emote|*The snapjaw stares at you in disbelief.*}} 
+				
+				cheez...
+			</text>
+			<choice GotoID="Hungry">They sent me to put a stop to it. So I'm asking you nicely.</choice>
+			<choice GotoID="End">This is not working. I'll find another way.</choice>
+		</node>
+	
+		<node ID="Hungry">
+			<text>		
+				nocheez an me go belly bad... livendrink!
+			</text>
+			<choice GotoID="Solution">
+				<text>Wait, is the problem that you'll get hungry without cheese?</text>				
+				<part Name="Brothers_RequireStat" Stat="Intelligence" Value="19" />
+			</choice>
+			<choice GotoID="Byebye">Are you... dismissing me?</choice>
+			<choice GotoID="End">Live and drink, I guess.</choice>
+		</node>
+	
+		<node ID="Byebye">
+			<text>		
+				{{emote|*The snapjaw's knuckles go white on his weapon.*}} 
+				
+				LIFFENDINK!
+			</text>
+			<choice GotoID="Fight">
+				<text>Well, I did try to resolve things peacefully. Have at you!</text>
+				<part Name="StartFight" />
+			</choice>
+			<choice GotoID="End">This will not end well. Live and drink.</choice>
+		</node>	
+
+		<node ID="Solution">
+			<text>		
+				{{emote|*The snapjaw jumps up and down.*}} 
+				
+				neheheheheh belly beat me, sulton ov suldon!
+			</text>
+			<choice GotoID="Idea">Could you not simply eat the shrews you've been training?</choice>
+			<choice GotoID="End">Live and drink, I guess.</choice>
+		</node>
+	
+		<node ID="Idea" AllowEscape="false">
+			<text>		
+				{{emote|*The snapjaw licks his lips, a spark in his gaze.*}} 
+				
+				uhuhuh smard! crisby juisy tasdy shrooz eheheheh...
+				
+				gogo! nocheez! suldon eat shroo now! LIBNEAT!
+			</text>
+			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">That seems settled, then. Live and... eat.</choice>
+		</node>
+	
 	
 	</conversation>	
 

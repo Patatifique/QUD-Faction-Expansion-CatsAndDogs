@@ -736,7 +736,7 @@
 	<object Name="Brothers_CatsDogs_Cheesejaw" Inherits="Snapjaw">
 		<part Name="Render" DisplayName="Rofahougosuubuuz" Tile="Creatures/catsdogs/cheesejaw.png" ColorString="&amp;M" DetailColor="W" />
 		<part Name="Titles" Primary="snapjaw beastmaster" />
-		<part Name="Description" Short="Crackling thuds secured in a plastifer handle announce the coming of the ringmaster, mangy fur sown with residues of curdled milk. =pronouns.Possessive= ears twitch under the weight of a tiara of litter. As the rest of =pronouns.possessive= kind, =pronouns.Subjective= =verb:bark:afterpronoun= relentlessly: only the stillness of canyons deigns to answer." />
+		<part Name="Description" Short="Crackling thuds secured in a plastifer handle announce the coming of the ringmaster, mangy fur sown with residues of curdled milk. =pronouns.Possessive= ears twitch under the weight of a tiara of litter. As the rest of =pronouns.possessive= kind, =pronouns.subjective= =verb:bark:afterpronoun= relentlessly: only the stillness of canyons deigns to answer." />
 		<part Name="DisplayNameColor" Color="M" />
 		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_Cheesejaw" />
 		<stat Name="Level" Value="19" />
