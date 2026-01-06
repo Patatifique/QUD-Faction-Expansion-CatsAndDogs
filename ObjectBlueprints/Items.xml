@@ -159,8 +159,7 @@
 		<xtagGrammar Proper="false" adjunctNoun="" />
 		<part Name="Commerce" Value="150" />
 	</object> 
-	
-	
+		
 	<object Name="Brothers_CatsDogs_LoveNote" Inherits="Book">
 		<part Name="Render" DisplayName="{{Y|folded sheet of paper}}" ColorString="&amp;w" DetailColor="W" RenderString="=" RenderLayer="5" Tile="Items/sw_paper.bmp" />
 		<part Name="Description" Short="Timidity vanquished and laid to rest on crushed brinestalk fibers holds potential for a future yet unrealised." />
@@ -169,6 +168,10 @@
 		<xtagGrammar Proper="false" adjunctNoun="" />
 		<tag Name="NoSparkingQuest" />    
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	</object>
+
+	<object Name="TarBones" Load="Merge">
+		<part Name="CompleteQuestOnTaken" Quest="Brothers_CatsDogs_ChefQuest" QuestStep="Find the Secret Ingredient" />
 	</object>
   
 </objects>

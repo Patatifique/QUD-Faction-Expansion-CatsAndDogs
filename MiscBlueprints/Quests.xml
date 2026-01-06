@@ -9,7 +9,7 @@
 	   Gospel="At the Battle of Shikspar, =name= defeated united cats and dogs hordes. In awe, survivors bend the paw and swore fealty to the sultan. From then on, =player.subjective= always kept a lock of fur on =player.possessive= person.">
 
 		<step ID="Brief" Name="Confer with Warden Arendubark" XP="500">
-			<text>Ask Warden Arendubark about the current situation in Shik and Spar.</text>
+			<text>Ask Warden Arendubark of Shik and Spar about the villages' current situation.</text>
 		</step>
 
 		<step ID="Find" Name="Investigate the Founder" XP="500">
@@ -147,7 +147,6 @@
 		</step>
 		
 	</quest>
-
 
 
 </quests>

@@ -566,7 +566,7 @@
 		<removepart Name="SmartuseForceTwiddles" />
 		<intproperty Name="ParticipantVillager" Value="1" />
 		<tag Name="PreferChatToPet" />
-		<part Name="Render" DisplayName="apple herder" Tile="Creatures/catsdogs/dogfarmer.png" ColorString="&amp;w" DetailColor="y" RenderString="d" />
+		<part Name="Render" DisplayName="starapple herder" Tile="Creatures/catsdogs/dogfarmer.png" ColorString="&amp;w" DetailColor="y" RenderString="d" />
 		<part Name="Description" Short="Stout and quadrupedal, =pronouns.possessive= coat is matted with starapple juice stains. A wide-brimmed hat casts a redeeming shadow over =pronouns.possessive= short snout, letting =pronouns.objective= exert the finesse needed to grasp fruits unteared. =pronouns.Possessive= sharp fangs become tools of agriculture, sowing and reaping life." />
 		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_ShikCitizen" />
 		<part Name="Brain" Wanders="true" Factions="Shik-100" />
@@ -724,6 +724,7 @@
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 		 <tag Name="Species" Value="rat" />    
 		<part Name="Swarmer" />  
+		<part Name="QuestStepFinisher" Trigger="Seen" Quest="Brothers_CatsDogs_CheeseQuest" Step="Find" />            
 	</object>
 
 	<object Name="Brothers_CatsDogs_CheeseRat Bite" Inherits="Bite">
@@ -757,9 +758,9 @@
 		<inventoryobject Blueprint="Brothers_CatsDogs_Stunwhip" Number="1" CellChance="100" CellFullChance="100" CellType="Chem Cell" IntProperties="AlwaysEquipAsWeapon:1" />
 		<inventoryobject Blueprint="Puma Chitin Vest" />
 		<inventoryobject Blueprint="Ape Fur Gloves" />
-		<inventoryobject Blueprint="Puma Chitin Vest" />
 		<inventoryobject Blueprint="Elastyne Slippers" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+		<part Name="FinishQuestStepWhenSlain" Quest="Brothers_CatsDogs_CheeseQuest" Step="Stop" />
 	</object>
 
 </objects>

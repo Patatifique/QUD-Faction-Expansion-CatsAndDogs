@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <conversations>
 	
-	<!--Pet dialogue-->
+<!--Pet dialogue-->
 	
 	<conversation ID="Brothers_CatsDogs_Hyrkhound Pet">
 		
@@ -17,6 +17,7 @@
 	
 	</conversation>
 	
+	
 	<conversation ID="Brothers_CatsDogs_Brainkitty Pet">
 		
 		<node ID="Start">
@@ -24,6 +25,7 @@
 			Kids these days have it easy: when I was young, glotrot used to spoil your whole water supply.~
 			Back in my days, people knew the difference between daggers and short swords.~
 			Young'uns today complicate everything... The Moon what now? They're called the Deathlands, darn it!~
+			Ambidextry everywhere... Way back when, this used to really mean something.~
 			Humph. Who are you again?~
 			{{emote|*Alther concentrates intensely for a few seconds.*}}
 		  </text>
@@ -32,6 +34,10 @@
 	
 	</conversation>
   
+
+<!--Important NPCs-->
+
+
 	<conversation ID="Brothers_CatsDogs_Warden Arendurath">
 		
 		<node ID="Start">
@@ -42,6 +48,7 @@
 		</node>
 	
 	</conversation>
+
 
 	<conversation ID="Brothers_CatsDogs_Catgod">
 		
@@ -54,6 +61,7 @@
 	
 	</conversation>
 
+
 	<conversation ID="Brothers_CatsDogs_Doggod">
 		
 		<node ID="Start">
@@ -64,6 +72,7 @@
 		</node>
 	
 	</conversation>
+
 
 	<conversation ID="Brothers_CatsDogs_DogMayor">
 		
@@ -76,6 +85,7 @@
 	
 	</conversation>
 
+
 	<conversation ID="Brothers_CatsDogs_CatMayor">
 		
 		<node ID="Start">
@@ -87,6 +97,7 @@
 	
 	</conversation>
 
+
 	<conversation ID="Brothers_CatsDogs_DogLover">
 		
 		<node ID="Start">
@@ -97,6 +108,7 @@
 		</node>
 	
 	</conversation>
+
 	
 	<conversation ID="Brothers_CatsDogs_CatLover">
 		
@@ -109,27 +121,6 @@
 	
 	</conversation>	
 
-	<conversation ID="Brothers_CatsDogs_ShikCitizen">
-		
-		<node ID="Start">
-		  <text>
-			I'm a dog farmer.
-		  </text>
-		  <choice GotoID="End">Nice apples.</choice>
-		</node>
-	
-	</conversation>	
-
-	<conversation ID="Brothers_CatsDogs_SparCitizen">
-		
-		<node ID="Start">
-		  <text>
-			I tend to pigs.
-		  </text>
-		  <choice GotoID="End">Oink oink.</choice>
-		</node>
-	
-	</conversation>	
 	
 	<conversation ID="Brothers_CatsDogs_CatsuitGuy">
 		
@@ -142,6 +133,7 @@
 	
 	</conversation>	
 
+
 	<conversation ID="Brothers_CatsDogs_CatTinker">
 		
 		<node ID="Start">
@@ -152,6 +144,7 @@
 		</node>
 	
 	</conversation>	
+
 
 	<conversation ID="Brothers_CatsDogs_DogChef">
 		
@@ -164,6 +157,7 @@
 	
 	</conversation>	
 
+
 	<conversation ID="Brothers_CatsDogs_Cheesejaw">
 		
 		<node ID="Start">
@@ -174,5 +168,45 @@
 		</node>
 	
 	</conversation>	
+
+
+<!--Generic NPCs-->
+
+
+	<conversation ID="Brothers_CatsDogs_ShikCitizen">
+		
+		<node ID="Start">
+			<text>
+				{{emote|*soft growling*}}~
+				{{emote|*tired panting*}}~
+				Yes? {{emote|*interrogative bark*}}~
+				Better not steal them starapples, traveler.~
+				{{emote|*starapple in jaws*}} Hon't neeh hanhs to hick sharahhles.~
+				Anything I can help ye with? {{emote|*tilting head*}}~
+				Take me word for it =player.formalAddressTerm=: always spit out seeds.	
+			</text>
+			<choice GotoID="End">Live, drink, and herd starapples.</choice>
+		</node>
 	
+	</conversation>	
+
+	<conversation ID="Brothers_CatsDogs_SparCitizen">
+		
+		<node ID="Start">
+			<text>
+				{{emote|*purring*}}~
+				{{emote|*soft meowing*}}~
+				What now? {{emote|*ears twitching*}}~~
+				I en't done with the milking for the day, =player.formalAddressTerm=.~
+				Moon and sun, cheese and wafers, =player.formalAddressTerm=.~
+				If you en't helping, don't stand in me way.~
+				Hmm? {{emote|*licking a paw*}}~
+				Get yourself some meat to cook crispy, =player.formalAddressTerm=. You'll thank me later.		  
+			</text>
+			<choice GotoID="End">Live and drink, pig tender.</choice>
+		</node>
+	
+	</conversation>
+
+
 </conversations>
