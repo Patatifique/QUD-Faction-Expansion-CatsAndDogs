@@ -168,7 +168,7 @@
 				sultonofshrooz uhuhuh...~
 				liffen. huh. SHROOZ!
 			</text>		
-			<choice GotoID="End">Live and drink, "sultan".</choice>
+			<choice GotoID="End">Live and eat, "sultan".</choice>
 		</node>
 		
 		<node ID="Start" IfNotFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">
