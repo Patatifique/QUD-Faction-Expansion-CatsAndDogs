@@ -206,7 +206,7 @@
 	
 		<node ID="Hungry">
 			<text>		
-				nocheez an me go belly bad... livendrink!
+				nocheez an me go belly bad... leavendrink!
 			</text>
 			<choice GotoID="Solution">
 				<text>Wait, is the problem that you'll get hungry without cheese?</text>				
@@ -220,7 +220,7 @@
 			<text>		
 				{{emote|*The snapjaw's knuckles go white on his weapon.*}} 
 				
-				LIFFENDINK!
+				LEAFFENDINK!
 			</text>
 			<choice GotoID="Fight">
 				<text>Well, I did try to resolve things peacefully. Have at you!</text>
