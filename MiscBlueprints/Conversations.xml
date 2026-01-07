@@ -121,18 +121,6 @@
 	
 	</conversation>	
 
-	
-	<conversation ID="Brothers_CatsDogs_CatsuitGuy">
-		
-		<node ID="Start">
-		  <text>
-			I swear I'm a cat.
-		  </text>
-		  <choice GotoID="End">Whatever.</choice>
-		</node>
-	
-	</conversation>	
-
 
 	<conversation ID="Brothers_CatsDogs_CatTinker">
 		
@@ -154,6 +142,48 @@
 		  </text>
 		  <choice GotoID="End">Yum.</choice>
 		</node>
+	
+	</conversation>	
+	
+	
+	<conversation ID="Brothers_CatsDogs_CatsuitGuy">
+		
+		<node ID="Start">
+			<text>
+				"Meow", I say. I hope you will enjoy our humble abodes and fit right among us cats.
+			</text>
+			<choice GotoID="Work" IfNotHaveQuest="Brothers_CatsDogs_CheeseQuest">Is there work that needs doing?</choice>
+			<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the matter with the other village?</choice>
+			<choice GotoID="DefinitelyACat">Huh... I "meow" right back at you, fellow cat.</choice>
+			<choice GotoID="NotACat">"Us" cats? You don't look much like a cat.</choice>
+			<choice GotoID="End">I will try to. Live and drink.</choice>
+		</node>
+	
+		<node ID="Work">
+			<text>
+				You'll have to check in with our tinker, Imimiw. She's been dealing with some... Vermin issues lately. She should be in her workshop, in the building right behind me.
+			</text>
+			<choice GotoID="Start">I will see about helping her, thank you. There was something else...</choice>
+			<choice GotoID="End">Duly noted. Live and drink.</choice>
+		</node>
+	
+		<node ID="Division" AllowEscape="false">
+			<text>
+				{{emote|*The fur-clad man leans forward conspiratorially.*}} 
+
+				
+				
+			</text>
+			<choice GotoID="End" StartQuest="Brothers_CatsDogs_MainQuest1">I will talk to the Warden then. In the meantime, live and drink.</choice>
+		</node>
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	</conversation>	
 
@@ -218,9 +248,9 @@
 	
 		<node ID="Byebye">
 			<text>		
-				{{emote|*The snapjaw's knuckles go white on his weapon.*}} 
+				{{emote|*The snapjaw's knuckles go white on =pronouns.possessive= weapon.*}} 
 				
-				LEAFFENDINK!
+				LEAFFENDING!
 			</text>
 			<choice GotoID="Fight">
 				<text>Well, I did try to resolve things peacefully. Have at you!</text>
@@ -241,7 +271,7 @@
 	
 		<node ID="Idea" AllowEscape="false">
 			<text>		
-				{{emote|*The snapjaw licks his lips, a spark in his gaze.*}} 
+				{{emote|*The snapjaw licks =pronouns.possessive= lips, a spark in =pronouns.possessive= gaze.*}} 
 				
 				uhuhuh smard! crisby juisy tasdy shrooz eheheheh...
 				

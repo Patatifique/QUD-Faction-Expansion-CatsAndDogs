@@ -515,6 +515,7 @@
 	</object>
 
 	<object Name="Brothers_CatsDogs_DogLover" Inherits="BaseDog">
+		<part Name="SetStateOnSeen" State="Brothers_CatsDogs_DogLoverSeen" />	
 		<removepart Name="SmartuseForceTwiddles" />
 		<intproperty Name="NamedVillager" Value="1" />
 		<tag Name="PreferChatToPet" />
@@ -539,6 +540,7 @@
 	</object>
 
 	<object Name="Brothers_CatsDogs_CatLover" Inherits="BaseCat">
+		<part Name="SetStateOnSeen" State="Brothers_CatsDogs_CatLoverSeen" />
 		<removepart Name="SmartuseForceTwiddles" />
 		<intproperty Name="NamedVillager" Value="1" />
 		<tag Name="PreferChatToPet" />
