@@ -54,6 +54,23 @@ namespace XRL.World.Parts
         }   
 
         // event stuff
+
+
+        // Event for non 0 stage at start
+        public override bool WantEvent(int ID, int cascade)
+        {
+            return base.WantEvent(ID, cascade) || ID == AfterObjectCreatedEvent.ID;
+        }
+
+        public override bool HandleEvent(AfterObjectCreatedEvent e)
+        {
+            // set initial tile
+            string tile = GetTileForStage();
+            ParentObject.Render.Tile = tile;
+            return base.HandleEvent(e);
+        }
+
+        // Main stage change event
         public override void Register(GameObject Object, IEventRegistrar Registrar)
         {
             Registrar.Register("Brothers_ChangeEvolutiveState");
