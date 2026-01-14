@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using XRL.World;
 using XRL.World.Parts;
 using XRL.World.Anatomy;
+using XRL.Rules;
 
 using XRL.Messages;
 
@@ -191,13 +192,20 @@ namespace XRL.World.Parts
                 // Limit number of heads with early exit
                 if (this.ParentObject.Body.GetPart("Head").Count >= MaxHeads)
                     return base.FireEvent(E);
+
+                // 1 chance out of 2 to do nothing
+                if (Stat.Random(1, 2) == 1)
+                {
+                    return base.FireEvent(E);
+                }
+                
                 // Trigger evolutive tile change
                 this.ParentObject.FireEvent(Event.New("Brothers_ChangeEvolutiveState"));
                 
                 // Add Head
                 AddHead();
                 
-                // debug stuff
+                // player message
                 MessageQueue.AddPlayerMessage($"{this.ParentObject.the}{this.ParentObject.DisplayNameOnly}'s crest ripples and another head bursts out!");
             }
             return base.FireEvent(E);
