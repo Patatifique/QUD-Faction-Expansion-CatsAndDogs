@@ -66,7 +66,7 @@
 		<part Name="Description" Short="Without a care for the measure of success amongst hyrkhounds, =pronouns.possessive= jaws pool with translucent appetite turned liquid. Over =pronouns.possessive= body, hair is drowned into matted submission." />
 	<!--pet stuff-->
 		<part Name="Pettable" />
-		<tag Name="PetResponse" Value="licks you right back,covers you in saliva,drools on your hands" />
+		<tag Name="PetResponse" Value="licks you back until you are clean,covers you in cleaning saliva,drools all over you and your equipment" />
 		<property Name="Story" Value="Brothers_CatsDogs_DroolhoundStory" />
 		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_Hyrkhound Pet" />
 		<tag Name="StartingPet" />
@@ -614,7 +614,7 @@
 	</object>
 
 	<object Name="Brothers_CatsDogs_CatsuitGuy" Inherits="NPC">
-		<part Name="Render" DisplayName="Zanya" Tile="Creatures/catsdogs/catfursuit.png" ColorString="&amp;y" DetailColor="w" RenderString="h" />	
+		<part Name="Render" DisplayName="Zanya" Tile="Creatures/catsdogs/catfursuit.png" ColorString="&amp;y" DetailColor="w" RenderString="h" />
 		<part Name="Description" Short="Before you stands the assemblage of humanoid figure and feline garb. =pronouns.Possessive= body is covered with fur poached from Qud's dust-grazers, rethreaded to immaculateness, while =pronouns.possessive= hands wear a mud-dweller's hide. Triangular statements have found their place to a plastifer wreath and adverstise the =pronouns.personTerm='s belonging to felids, bipedal posture notwithstanding." />
 		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_CatsuitGuy" />
 		<part Name="Brain" Wanders="false" Factions="Spar-100" />
@@ -626,7 +626,7 @@
 		<inventoryobject Blueprint="Sandals" />
 		<inventoryobject Blueprint="Boar-skin gloves" />
 		<inventoryobject Blueprint="Brothers_CatsDogs_Catears" />
-		<tag Name="Gender" Value="male" />
+		<tag Name="Gender" Value="nonspecific" />
 		<tag Name="NoSleep" />
 		<xtagGrammar Proper="true" />
 		<part Name="Interesting" />
@@ -693,8 +693,10 @@
 		<skill Name="CookingAndGathering_Harvestry" />
 		<skill Name="CookingAndGathering_Butchery" />
 		<skill Name="CookingAndGathering_Spicer" />
+		<mutation Name="Regeneration" Level="5" />
 		<inventoryobject Blueprint="Leather Apron" />
 		<inventoryobject Blueprint="Brothers_CatsDogs_Hydric Bite" Number="1" />
+		<part Name="Corpse" CorpseChance="100" CorpseBlueprint="Brothers_CatsDogs_Hydric Hound Corpse" />
 		<tag Name="Gender" Value="plural" />
 		<tag Name="NoSleep" />
 		<tag Name="Unenslavable" />
@@ -702,6 +704,8 @@
 		<xtagGrammar Proper="true" />
 		<part Name="Interesting" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+		<part Name="Brothers_EvolutiveTile" Stage="1" StageTiles="Creatures/catsdogs/hydrichound1.png, Creatures/catsdogs/dogmerchant2.png, Creatures/catsdogs/dogmerchant3.png, Creatures/catsdogs/hydrichound4.png, Creatures/catsdogs/hydrichound5.png, Creatures/catsdogs/hydrichound6.png, Creatures/catsdogs/hydrichound7.png, Creatures/catsdogs/hydrichound8.png, Creatures/catsdogs/hydrichound9.png, Creatures/catsdogs/hydrichound10.png" />
+		<part Name="Brothers_HydraDog" />
 	</object>
 
 <!--Cheese Quest-->

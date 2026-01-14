@@ -122,18 +122,6 @@
 	</conversation>	
 
 
-	<conversation ID="Brothers_CatsDogs_CatTinker">
-		
-		<node ID="Start">
-		  <text>
-			I tinker stuff.
-		  </text>
-		  <choice GotoID="End">Cool.</choice>
-		</node>
-	
-	</conversation>	
-
-
 	<conversation ID="Brothers_CatsDogs_DogChef">
 		
 		<node ID="Start">
@@ -144,46 +132,181 @@
 		</node>
 	
 	</conversation>	
-	
-	
-	<conversation ID="Brothers_CatsDogs_CatsuitGuy">
+
+
+	<conversation ID="Brothers_CatsDogs_CatTinker">
 		
 		<node ID="Start">
 			<text>
-				"Meow", I say. I hope you will enjoy our humble abodes and fit right among us cats.
+				{{emote|*The tinker turns towards you, her workshop in complete disarray.*}}
+				
+				Speak quick, =player.apparentSpecies=! Solder is cooling down already.
+			</text>
+			<choice GotoID="Work" IfNotHaveQuest="Brothers_CatsDogs_CheeseQuest">I am in need of work. Is there any matter I can assist you with?</choice>
+		  	<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the matter with the other village?</choice>
+			<choice GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">What do you think of the current Shik and Spar situation?</choice>
+			<choice GotoID="Zanya">Cool.</choice>
+  			<choice GotoID="About">What is there to know about Spar?</choice>
+			<choice GotoID="End">Cool.</choice>
+			<choice GotoID="End">Cool.</choice>
+		</node>
+	
+	</conversation>		
+
+	
+	<conversation ID="Brothers_CatsDogs_CatsuitGuy">
+			
+		<node ID="Start">
+			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
+				{{emote|*Zanya =verb:beam= at you.*}}
+				
+				If it ain't my good friend =name=! Find some shade in our 'uts, meow!
+			</text>
+			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
+				Meow, I say. I 'ope you will enjoy our 'umble abodes and fit right 'mong us cats!
 			</text>
 			<choice GotoID="Work" IfNotHaveQuest="Brothers_CatsDogs_CheeseQuest">Is there work that needs doing?</choice>
 			<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the matter with the other village?</choice>
-			<choice GotoID="DefinitelyACat">Huh... I "meow" right back at you, fellow cat.</choice>
-			<choice GotoID="NotACat">"Us" cats? You don't look much like a cat.</choice>
+			<choice GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">What do you think of the current Shik and Spar situation?</choice>
+			<choice GotoID="DefinitelyACat" IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">Huh... I "meow" right back at you, fellow cat.</choice>
+			<choice GotoID="About">What is there to know about Spar?</choice>
 			<choice GotoID="End">I will try to. Live and drink.</choice>
 		</node>
 	
 		<node ID="Work">
 			<text>
-				You'll have to check in with our tinker, Imimiw. She's been dealing with some... Vermin issues lately. She should be in her workshop, in the building right behind me.
+				You'll have to check in with the tinker of ours, Imimiw. She's been dealing with some vermin issues lately, meow. She oughta be in her 'orkshop, in that building right o'er there.
 			</text>
 			<choice GotoID="Start">I will see about helping her, thank you. There was something else...</choice>
 			<choice GotoID="End">Duly noted. Live and drink.</choice>
 		</node>
 	
-		<node ID="Division" AllowEscape="false">
-			<text>
-				{{emote|*The fur-clad man leans forward conspiratorially.*}} 
+		<node ID="Division">
+			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
+				{{emote|*Zanya =verb:lean= forward conspiratorially.*}} 
 
-				
-				
+				You noticed too, meow? Lady Morrarri, she's bent on none o' us visiting the other village. Makes for a downright dour atmosphere, le'me tell you.
 			</text>
-			<choice GotoID="End" StartQuest="Brothers_CatsDogs_MainQuest1">I will talk to the Warden then. In the meantime, live and drink.</choice>
+			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
+				{{emote|*=pronouns.Subjective= =verb:lean:afterpronoun= forward conspiratorially.*}} 
+
+				You noticed too, meow? Lady Morrarri, she's bent on none o' us visiting the other village. Makes for a downright dour atmosphere, le'me tell you.
+			</text>
+			<choice GotoID="Who">And that Lady Morrarri would be...?</choice>
+			<choice GotoID="Fix">Is anyone doing aiming to solve the matter?</choice>
+			<choice GotoID="Start">I can imagine. There was something else I wanted to ask.</choice>
+			<choice GotoID="End">Thank you for your answer. Live and drink.</choice>	
 		</node>
 	
+		<node ID="Who">
+			<text>
+				Why, she is Spar's mayor o'course! Although she ain't too keen on the title, prefers to be called a "Lady", meow. Can't blame her, really.
+			</text>
+			<choice GotoID="Fix">I see. And did anyone try to speak some sense into her?</choice>
+			<choice GotoID="Start">There was another matter...</choice>
+			<choice GotoID="End">I guess not. Live and drink.</choice>	
+		</node>	
 	
+		<node ID="Fix" AllowEscape="false">
+			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
+				{{emote|*Zanya =verb:look= left and right before continuing.*}} 
+				
+				Aye, for sure! Our good 'arden's been looking to solve the matter but he could most definitely use a hand or two, meow. Can't investigate much from 'here he's taken root, see?
+			</text>				
+			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
+				{{emote|*=pronouns.Subjective= =verb:look:affterpronoun= left and right before continuing.*}} 
+				
+				Aye, for sure! Our good 'arden's been looking to solve the matter but he coul' most definitely use a hand or two, meow. Can't investigate much from 'here he's taken root, see?
+			</text>			
+			<choice GotoID="End" StartQuest="Brothers_CatsDogs_MainQuest1">I will talk to the Warden then. In the meantime, live and drink.</choice>
+		</node>		
 	
+		<node ID="Opinion">
+			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
+				{{emote|*Zanya =verb:choose= =pronouns.possessive= next words carefully.*}} 
+
+				It all seems a tad excessive to meow. Those dogs from Shik look catlike enough in meow opinion -- not that Lady Morrarri see things the same 'ay.
+			</text>
+			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
+				{{emote|*=pronouns.Subjective= =verb:choose:afterpronoun= =pronouns.possessive= next words carefully.*}} 
+
+				It all seems a tad excessive to meow. Those dogs from Shik look catlike enough in meow opinion -- not that Lady Morrarri see things the same 'ay.
+			</text>
+			<choice GotoID="Start">I can imagine. There was something else I wanted to ask.</choice>
+			<choice GotoID="End">Thank you for your answer. Live and drink.</choice>	
+		</node>	
 	
+		<node ID="DefinitelyACat">
+			<text>
+				{{emote|*Hope and appreciation light up =pronouns.possessive= face.*}} 
+				
+				Oh? You do?
+			</text>
+			<choice GotoID="ACatForReal" SetBooleanState="Brothers_CatsDogs_FurGuyFlattered,true">
+				<text>I do. You're as fine a cat as I've ever seen!</text>
+				<part Name="Brothers_ModifyReputation" Faction="Spar" Value="50" Shown="True" />
+			</choice>
+			<choice GotoID="Start">Potentially, but I wanted to ask you something else first.</choice>
+		</node>	
+		
+		<node ID="ACatForReal" AllowEscape="false">
+			<text>
+				{{emote|*=pronouns.Subjective= =verb:answer:afterpronoun= with excitement palpable through hushed tones, as =pronouns.subjective= =verb:rummage:afterpronoun= through =pronouns.possessive= belongings and produce another headband, similar to the one =pronouns.subjective= =verb:wear:afterpronoun=: triangles of synthetic fibers mounted on a plastifer wreath.*}} 
+				
+				How good it is to find a similar spir't! You could some of this to look more catlike yourself! I craft those meowself.
+			</text>
+			<choice GotoID="Thanks">
+				<text>Thank you! I will take good care of this.</text>
+				<part Name="ReceiveItem" Blueprints="Brothers_CatsDogs_Catears" Identify="All" />			
+			</choice>
+			<choice GotoID="NoThanks">I am flattered, but feel catlike enough.</choice>
+		</node>			
+		
+		<node ID="Thanks" AllowEscape="false">
+			<text>
+				{{emote|*They =verb:watch:afterpronoun= intently, expecting you to put the headband on right away.*}} 
+				
+				Meow name is Zanya, by the way.
+			</text>
+			<choice GotoID="Name">Well met, Zanya! I am =name=.</choice>
+			<choice GotoID="Name">I am not putting it on right away... Nonetheless, you can call me =name=.</choice>
+		</node>
+
+		<node ID="NoThanks" AllowEscape="false">
+			<text>
+				{{emote|*They =verb:seem:afterpronoun= slightly disappointed, and put the headband back in =pronouns.possessive= pack.*}} 
+				
+				'Ave it your way, stranger. Meow name is Zanya, by the way.
+			</text>
+			<choice GotoID="Name">Well met, Zanya! I am =name=.</choice>
+			<choice GotoID="Name">I am not putting it on right away... Nonetheless, you can call me =name=.</choice>
+		</node>	
+
+		<node ID="Name">
+			<text>			
+				In that case, 'ave an excellent day, =name=! You know 'here to find meow if you need anything! Live and drink.
+			</text>
+			<choice GotoID="End">Live and drink, Zanya.</choice>
+		</node>	
 	
-	
-	
-	
+		<node ID="About">
+			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
+				{{emote|*Zanya =verb:tap= =pronouns.possessive= chin pensively.*}} 
+				
+				Not much to tell about this place, we all keep pretty much t'ourselves. Some o' the others tend to the pig farms, and prepare the cheese. Right o'er there is the 'orkshop of Imimiw, our tinker. She'll set any 'ires straight in just a moment. 
+				
+				There is the occasional traveler, but otherwise the days are spent working, trading and napping un'er the Hind Sun.							
+			</text>				
+			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
+				{{emote|*They =verb:tap:afterpronoun= =pronouns.possessive= chin pensively.*}} 
+				
+				Not much to tell about this place, we all keep pretty much t'ourselves. Some o' the others tend to the pig farms, and prepare the cheese. Right o'er there is the 'orkshop of Imimiw, our tinker. She'll set any 'ires straight in just a moment. 
+				
+				There is the occasional traveler, but otherwise the days are spent working, trading and napping un'er the Hind Sun.	
+			</text>	
+			<choice GotoID="Start">Thank you for the pointers. I have a few questions still.</choice>
+			<choice GotoID="End">That is all I needed to know. Live and drink.</choice>
+		</node>	
 	
 	</conversation>	
 
@@ -226,7 +349,7 @@
 
 		<node ID="Stop">
 			<text>
-				{{emote|*The snapjaw stares at you in disbelief.*}} 
+				{{emote|*The snapjaw =verb:stare= at you in disbelief.*}} 
 				
 				cheez...
 			</text>
@@ -261,7 +384,7 @@
 
 		<node ID="Solution">
 			<text>		
-				{{emote|*The snapjaw jumps up and down.*}} 
+				{{emote|*The snapjaw =verb:jump= up and down.*}} 
 				
 				neheheheheh belly beat me, sulton ov suldon!
 			</text>
@@ -271,7 +394,7 @@
 	
 		<node ID="Idea" AllowEscape="false">
 			<text>		
-				{{emote|*The snapjaw licks =pronouns.possessive= lips, a spark in =pronouns.possessive= gaze.*}} 
+				{{emote|*The snapjaw =verb:lick= =pronouns.possessive= lips, a spark in =pronouns.possessive= gaze.*}} 
 				
 				uhuhuh smard! crisby juisy tasdy shrooz eheheheh...
 				
