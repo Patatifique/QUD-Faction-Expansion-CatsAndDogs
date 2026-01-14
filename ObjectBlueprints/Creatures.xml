@@ -693,8 +693,10 @@
 		<skill Name="CookingAndGathering_Harvestry" />
 		<skill Name="CookingAndGathering_Butchery" />
 		<skill Name="CookingAndGathering_Spicer" />
+		<mutation Name="Regeneration" Level="5" />
 		<inventoryobject Blueprint="Leather Apron" />
 		<inventoryobject Blueprint="Brothers_CatsDogs_Hydric Bite" Number="1" />
+		<part Name="Corpse" CorpseChance="100" CorpseBlueprint="Brothers_CatsDogs_Hydric Hound Corpse" />
 		<tag Name="Gender" Value="plural" />
 		<tag Name="NoSleep" />
 		<tag Name="Unenslavable" />
@@ -702,6 +704,8 @@
 		<xtagGrammar Proper="true" />
 		<part Name="Interesting" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+		<part Name="Brothers_EvolutiveTile" Stage="1" StageTiles="Creatures/catsdogs/hydrichound1.png, Creatures/catsdogs/dogmerchant2.png, Creatures/catsdogs/dogmerchant3.png, Creatures/catsdogs/hydrichound4.png, Creatures/catsdogs/hydrichound5.png, Creatures/catsdogs/hydrichound6.png, Creatures/catsdogs/hydrichound7.png, Creatures/catsdogs/hydrichound8.png, Creatures/catsdogs/hydrichound9.png, Creatures/catsdogs/hydrichound10.png" />
+		<part Name="Brothers_HydraDog" />
 	</object>
 
 <!--Cheese Quest-->
