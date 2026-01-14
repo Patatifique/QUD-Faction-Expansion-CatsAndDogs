@@ -107,6 +107,7 @@
 		<tag Name="DynamicObjectsTable:BananaGrove_Creatures" />
 	    <tag Name="Role" Value="Brute" />
 		<part Name="Brothers_EvolutiveTile" Stage="0" StageTiles="Creatures/catsdogs/hydrichound1.png, Creatures/catsdogs/hydrichound2.png, Creatures/catsdogs/hydrichound3.png, Creatures/catsdogs/hydrichound4.png, Creatures/catsdogs/hydrichound5.png, Creatures/catsdogs/hydrichound6.png, Creatures/catsdogs/hydrichound7.png, Creatures/catsdogs/hydrichound8.png, Creatures/catsdogs/hydrichound9.png, Creatures/catsdogs/hydrichound10.png" />
+		<part Name="Brothers_HydraDog" />
 	</object>
 
 	<object Name="Brothers_CatsDogs_Hydric Bite" Inherits="Bite">
