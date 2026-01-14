@@ -611,7 +611,7 @@
 	</object>
 
 	<object Name="Brothers_CatsDogs_CatsuitGuy" Inherits="NPC">
-		<part Name="Render" DisplayName="Zanya" Tile="Creatures/catsdogs/catfursuit.png" ColorString="&amp;y" DetailColor="w" RenderString="h" />	
+		<part Name="Render" DisplayName="Zanya" Tile="Creatures/catsdogs/catfursuit.png" ColorString="&amp;y" DetailColor="w" RenderString="h" />
 		<part Name="Description" Short="Before you stands the assemblage of humanoid figure and feline garb. =pronouns.Possessive= body is covered with fur poached from Qud's dust-grazers, rethreaded to immaculateness, while =pronouns.possessive= hands wear a mud-dweller's hide. Triangular statements have found their place to a plastifer wreath and adverstise the =pronouns.personTerm='s belonging to felids, bipedal posture notwithstanding." />
 		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_CatsuitGuy" />
 		<part Name="Brain" Wanders="false" Factions="Spar-100" />
@@ -623,7 +623,7 @@
 		<inventoryobject Blueprint="Sandals" />
 		<inventoryobject Blueprint="Boar-skin gloves" />
 		<inventoryobject Blueprint="Brothers_CatsDogs_Catears" />
-		<tag Name="Gender" Value="male" />
+		<tag Name="Gender" Value="nonspecific" />
 		<tag Name="NoSleep" />
 		<xtagGrammar Proper="true" />
 		<part Name="Interesting" />
