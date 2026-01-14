@@ -191,7 +191,6 @@ namespace XRL.World.Parts
                 // Limit number of heads with early exit
                 if (this.ParentObject.Body.GetPart("Head").Count >= MaxHeads)
                     return base.FireEvent(E);
-                
                 // Trigger evolutive tile change
                 this.ParentObject.FireEvent(Event.New("Brothers_ChangeEvolutiveState"));
                 
@@ -199,7 +198,7 @@ namespace XRL.World.Parts
                 AddHead();
                 
                 // debug stuff
-                MessageQueue.AddPlayerMessage($"{this.ParentObject.The} {this.ParentObject.DisplayNameOnly}'s crest ripples and another head bursts out!");
+                MessageQueue.AddPlayerMessage($"{this.ParentObject.the}{this.ParentObject.DisplayNameOnly}'s crest ripples and another head bursts out!");
             }
             return base.FireEvent(E);
         }
