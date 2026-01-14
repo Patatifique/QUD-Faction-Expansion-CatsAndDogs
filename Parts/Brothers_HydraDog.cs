@@ -199,7 +199,7 @@ namespace XRL.World.Parts
                 AddHead();
                 
                 // debug stuff
-                MessageQueue.AddPlayerMessage("The hound's crest ripples and another head bursts out!");
+                MessageQueue.AddPlayerMessage($"{this.ParentObject.The} {this.ParentObject.DisplayNameOnly}'s crest ripples and another head bursts out!");
             }
             return base.FireEvent(E);
         }
