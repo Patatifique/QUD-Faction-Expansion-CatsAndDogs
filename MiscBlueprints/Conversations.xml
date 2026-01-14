@@ -137,19 +137,148 @@
 	<conversation ID="Brothers_CatsDogs_CatTinker">
 		
 		<node ID="Start">
-			<text>
-				{{emote|*The tinker turns towards you, her workshop in complete disarray.*}}
+			<text IfFinishedQuest="Brothers_CatsDogs_CheeseQuest">
+				{{emote|*Imimiw =verb:keep= working without paying much attention to you.*}}
+				
+				Settle comfortably if you need to, =player.apparentSpecies=, and grab a soldering iron. Work awaits.
+			</text>
+			<text IfHaveActiveQuest="Brothers_CatsDogs_CheeseQuest">
+				{{emote|*The tinker's bestacled gaze =verb:gauge= you mercilessly.*}}
+				
+				There you are, =player.apparentSpecies=! What news from the ripening caves?
+			</text>
+			<text IfNotHaveQuest="Brothers_CatsDogs_CheeseQuest">
+				{{emote|*The tinker =verb:turn= towards you, =pronouns.possessive= workshop in complete disarray.*}}
 				
 				Speak quick, =player.apparentSpecies=! Solder is cooling down already.
 			</text>
 			<choice GotoID="Work" IfNotHaveQuest="Brothers_CatsDogs_CheeseQuest">I am in need of work. Is there any matter I can assist you with?</choice>
-		  	<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the matter with the other village?</choice>
-			<choice GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">What do you think of the current Shik and Spar situation?</choice>
-			<choice GotoID="Zanya">Cool.</choice>
-  			<choice GotoID="About">What is there to know about Spar?</choice>
-			<choice GotoID="End">Cool.</choice>
-			<choice GotoID="End">Cool.</choice>
+			<choice GotoID="Reward" IfHaveActiveQuest="Brothers_CatsDogs_CheeseQuest" IfFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">I have handled the matter of the vermin in the ripening caves. They will not trouble the village anymore.</choice>
+		  	<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the matter with village behind the wall?</choice>
+			<choice GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">What do you think of the division between Shik and Spar?</choice>
+			<choice GotoID="Zanya">You do know a human set up camp in front of your workshop, right?</choice>
+  			<choice GotoID="About">What do you do here in Spar?</choice>
+			<choice GotoID="End">Live and drink, feline tinker.</choice>
 		</node>
+	
+		<node ID="Work">
+			<text>
+				Yes, yes, I could use a hand or two. I'll speak plainly for you: what do you know about cheese?
+				
+				{{emote|*=pronouns.Subjective= =verb:report:afterpronoun= =pronouns.possessive= attention to the electronics sitting disassembled on a nearby countertop, not waiting for your answer.*}}
+			</text>
+			<choice GotoID="Know">
+				<text>That is somewhat of a broad question. Are we talking pressed or not? Fresh, cooked or stretched? Soft or mold-ripened? There is also the matter of-</text>
+				<part Name="Brothers_RequirePart" Part="CookingAndGathering_Spicer" Render="Cooking and Gathering: Spicer" />
+			</choice>
+			<choice GotoID="DontKnow">Well, most people would agree it tastes delicious, for starters.</choice>
+		</node>
+	
+		<node ID="Know">
+			<text>
+				{{emote|*=pronouns.Subjective= =verb:cut:afterpronoun= you short, tail whipping the air with impatience.*}}
+
+				Alright, you are an expert, I get it! Founder, no need to brag about the matter. 			
+			</text>
+			<choice GotoID="Brief">Well, you asked and got your answer. What is the job about?</choice>
+			<choice GotoID="End">I don't like your attitude much. Live and drink.</choice>
+		</node>
+	
+		<node ID="DontKnow">
+			<text>
+				{{emote|*=pronouns.Subjective= =verb:sigh:afterpronoun= audibly, not bothering to turn away from her current work.*}}
+
+				Well, Founder went and delivered a layperson to my door. Provided you can follow simple instructions, you should still be of use. 			
+			</text>
+			<choice GotoID="Brief1">... That certainly is a choice of words. What do you need to see done?</choice>
+			<choice GotoID="End">I don't need to hear more of this -- go find yourself a dairy scholar if you so require one. Live and drink.</choice>
+		</node>	
+	
+		<node ID="Brief1">
+			<text>
+				{{emote|*The tinker's tone =verb:turn= scholastic with a hint of pride.*}}
+
+				As you may know, much of our output is of porcine dairy. Once pressed, it is left to ripen in special shelves of my doing. You see, those are designed for optimal ventilation and rind blooming...
+			</text>
+			<choice GotoID="Brief2">{{emote|*listen intently*}}</choice>
+			<choice GotoID="Brief2">{{emote|*fidget impatiently*}}</choice>
+		</node>	
+	
+		<node ID="Brief2">
+			<text>
+				... You are not paying attention to any of this, are you?
+			</text>
+			<choice GotoID="Brief3">I most definitely am, tinker. What would you have me do?</choice>
+			<choice GotoID="Brief3">Not really. Can we cut to the chase, and get to the prat where I am supposed to do something?</choice>
+		</node>		
+	
+		<node ID="Brief3" AllowEscape="false">
+			<text>
+				{{emote|*=pronouns.Subjective= =verb:turn:afterpronoun= back to you, letting =pronouns.possessive= chrome work incomplete for the time being.*}}
+			
+				Well, there has been stealing from the ripening caves. Vermin of some sort, I would wager. I would ask that you go there and solve the matter, any way you see fit. It goes without saying you will be duly compensated for your efforts.
+			</text>
+			<choice GotoID="End" IfNotTestState="Brothers_CatsDogs_BeastmasterKilled" StartQuest="Brothers_CatsDogs_CheeseQuest">End the vermin infestation in Spar's cheese ripening caves. Sounds simple enough. Live and drink, tinker -- next time we talk, Spar's food stocks will be safe.</choice>
+			<choice GotoID="End" IfTestState="Brothers_CatsDogs_BeastmasterKilled" StartQuest="Brothers_CatsDogs_CheeseQuest" CompleteQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">End the vermin infestation in Spar's cheese ripening caves. Sounds simple enough. Live and drink, tinker -- I have a feeling I have solved the matter already.</choice>
+			<choice GotoID="End">Vermin and cheese? This certainly cannot be worth my time. Live and drink, tinker.</choice>
+		</node>	
+	
+		<node ID="Reward">
+			<text>
+				{{emote|*=pronouns.Possessive= tail =verb:whip= the air excitedly.*}}
+				
+				Is the matter truly settled then? Was it... On second thought, do not tell me anything. The less taxing this matter on in my mind, the better.
+				
+				You have my thanks, =player.apparentSpecies=.
+			</text>
+			<choice GotoID="Awkward">It was my pleasure, tinker.</choice>
+			<choice GotoID="Awkward">I did my job, an dnow it is your turn.</choice>
+		</node>		
+	
+		<node ID="Awkward">
+			<text>
+				{{emote|*=pronouns.Subjective= =verb:stay:afterpronoun= silent, reporting =pronouns.possessive= attention on =pronouns.possessive= work.*}}
+				
+				...				
+			</text>
+			<choice GotoID="Awkward2">...</choice>
+		</node>	
+	
+		<node ID="Awkward2">
+			<text>			
+				...				
+			</text>
+			<choice GotoID="Awkward3">{{emote|*clear throat*}}</choice>
+			<choice GotoID="Awkward3">Tinker?</choice>
+		</node>		
+	
+		<node ID="Awkward3">
+			<text>			
+				{{emote|*=pronouns.Subjective= =verb:jump:afterpronoun=, startled, as parts and bits scatter from the countertops.*}}
+				
+				Ah! You are still here, =player.apparentSpecies=? Hmm, I wager you must be expecting a reward.				
+			</text>
+			<choice GotoID="GiveMeStuff">This is what you promised.</choice>
+			<choice GotoID="GiveMeStuff">I would rather not have battled vermin and get nothing to show for it.</choice>
+		</node>	
+	
+		<node ID="GiveMeStuff" AllowEscape="False">
+			<text>			
+				... Obviously.
+				
+				{{emote|*The tinker =verb:retrieve= a few items from her well-packed drawers, before handing them to you.*}}
+				
+				There you go, =player.apparentSpecies=. This would conclude our business, yes? Let it not be said Imimiw ever shorted her associates.				
+			</text>
+			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_CheeseQuest~Debrief" FinishQuest="Brothers_CatsDogs_CheeseQuest">
+				<text>I will put those to good use. Live and drink, Imimiw.</text>
+				<part Name="ReceiveItem" Blueprints="Brothers_CatsDogs_SparRecoiler,Fixit Spray,Advanced Toolkit" Identify="Brothers_CatsDogs_SparRecoiler" />
+			</choice>
+			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_CheeseQuest~Debrief" FinishQuest="Brothers_CatsDogs_CheeseQuest">
+				<text>... Only if her associates stick around longer than they should, that is. Live and drink nonetheless, tinker.</text>
+				<part Name="ReceiveItem" Blueprints="Brothers_CatsDogs_SparRecoiler,Fixit Spray,Advanced Toolkit" Identify="Brothers_CatsDogs_SparRecoiler" />
+			</choice>
+		</node>		
 	
 	</conversation>		
 
@@ -193,7 +322,7 @@
 				You noticed too, meow? Lady Morrarri, she's bent on none o' us visiting the other village. Makes for a downright dour atmosphere, le'me tell you.
 			</text>
 			<choice GotoID="Who">And that Lady Morrarri would be...?</choice>
-			<choice GotoID="Fix">Is anyone doing aiming to solve the matter?</choice>
+			<choice GotoID="Fix">Is anyone aiming to solve the matter?</choice>
 			<choice GotoID="Start">I can imagine. There was something else I wanted to ask.</choice>
 			<choice GotoID="End">Thank you for your answer. Live and drink.</choice>	
 		</node>

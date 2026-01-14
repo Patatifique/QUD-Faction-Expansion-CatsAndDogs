@@ -770,6 +770,7 @@
 		<inventoryobject Blueprint="Elastyne Slippers" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 		<part Name="FinishQuestStepWhenSlain" Quest="Brothers_CatsDogs_CheeseQuest" Step="Stop" />
+		<part Name="GameUnique" DeathState="Brothers_CatsDogs_BeastmasterKilled" />
 	</object>
 
 </objects>
