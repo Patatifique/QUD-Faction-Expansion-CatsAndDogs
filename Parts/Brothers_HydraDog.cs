@@ -164,6 +164,11 @@ namespace XRL.World.Parts
         {
             if ((E.ID == "DefenderHit" || E.ID == "DefenderMissileWeaponHit") && E.GetIntParameter("Penetrations") > 0)
             {
+                
+                // Limit number of heads with early exit
+                if (this.ParentObject.Body.GetPart("Head").Count >= MaxHeads)
+                    return base.FireEvent(E);
+                
                 // Trigger evolutive tile change
                 this.ParentObject.FireEvent(Event.New("Brothers_ChangeEvolutiveState"));
                 
