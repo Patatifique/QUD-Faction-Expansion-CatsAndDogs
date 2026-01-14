@@ -153,6 +153,29 @@ namespace XRL.World.Parts
         }
 
 
+        // checking for Evolutive Tile part value for initial number of heads
+        public override bool WantEvent(int ID, int cascade)
+        {
+            return base.WantEvent(ID, cascade)
+                || ID == AfterObjectCreatedEvent.ID;
+        }
+
+        public override bool HandleEvent(AfterObjectCreatedEvent E)
+        {
+            // set initial heads
+            Brothers_EvolutiveTile evolutiveTile;
+
+            if (this.ParentObject.TryGetPart<Brothers_EvolutiveTile>(out evolutiveTile))
+            {
+                for (int i = 0; i < evolutiveTile.Stage; i++)
+                {
+                    AddHead();
+                }
+            }
+            return base.HandleEvent(E);
+        }
+
+
         public override void Register(GameObject Object, IEventRegistrar Registrar)
         {
             Registrar.Register("DefenderHit");
