@@ -74,6 +74,7 @@
 		<tag Name="Gender" Value="male" />
 		<xtagGrammar Proper="true" />
 		<tag Name="ExcludeFromDynamicEncounters" />		
+		<part Name="Brothers_CleanLicker" />
 	</object>
 	
 	<object Name="Brothers_CatsDogs_Hyrkhound_Pet_Bite" Inherits="Bite">
