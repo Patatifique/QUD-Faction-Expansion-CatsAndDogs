@@ -66,7 +66,7 @@
 		<part Name="Description" Short="Without a care for the measure of success amongst hyrkhounds, =pronouns.possessive= jaws pool with translucent appetite turned liquid. Over =pronouns.possessive= body, hair is drowned into matted submission." />
 	<!--pet stuff-->
 		<part Name="Pettable" />
-		<tag Name="PetResponse" Value="licks you right back,covers you in saliva,drools on your hands" />
+		<tag Name="PetResponse" Value="licks you back until you are clean,covers you in cleaning saliva,drools all over you and your equipment" />
 		<property Name="Story" Value="Brothers_CatsDogs_DroolhoundStory" />
 		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_Hyrkhound Pet" />
 		<tag Name="StartingPet" />
