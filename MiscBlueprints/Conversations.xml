@@ -122,18 +122,6 @@
 	</conversation>	
 
 
-	<conversation ID="Brothers_CatsDogs_CatTinker">
-		
-		<node ID="Start">
-		  <text>
-			I tinker stuff.
-		  </text>
-		  <choice GotoID="End">Cool.</choice>
-		</node>
-	
-	</conversation>	
-
-
 	<conversation ID="Brothers_CatsDogs_DogChef">
 		
 		<node ID="Start">
@@ -144,13 +132,33 @@
 		</node>
 	
 	</conversation>	
+
+
+	<conversation ID="Brothers_CatsDogs_CatTinker">
+		
+		<node ID="Start">
+			<text>
+				{{emote|*The tinker turns towards you, her workshop in complete disarray.*}}
+				
+				Speak quick, =player.apparentSpecies=! Solder is cooling down already.
+			</text>
+			<choice GotoID="Work" IfNotHaveQuest="Brothers_CatsDogs_CheeseQuest">I am in need of work. Is there any matter I can assist you with?</choice>
+		  	<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the matter with the other village?</choice>
+			<choice GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">What do you think of the current Shik and Spar situation?</choice>
+			<choice GotoID="Zanya">Cool.</choice>
+  			<choice GotoID="About">What is there to know about Spar?</choice>
+			<choice GotoID="End">Cool.</choice>
+			<choice GotoID="End">Cool.</choice>
+		</node>
 	
+	</conversation>		
+
 	
 	<conversation ID="Brothers_CatsDogs_CatsuitGuy">
 			
 		<node ID="Start">
 			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
-				{{emote|*Zanya beams at you.*}}
+				{{emote|*Zanya =verb:beam= at you.*}}
 				
 				If it ain't my good friend =name=! Find some shade in our 'uts, meow!
 			</text>
@@ -159,6 +167,7 @@
 			</text>
 			<choice GotoID="Work" IfNotHaveQuest="Brothers_CatsDogs_CheeseQuest">Is there work that needs doing?</choice>
 			<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the matter with the other village?</choice>
+			<choice GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">What do you think of the current Shik and Spar situation?</choice>
 			<choice GotoID="DefinitelyACat" IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">Huh... I "meow" right back at you, fellow cat.</choice>
 			<choice GotoID="About">What is there to know about Spar?</choice>
 			<choice GotoID="End">I will try to. Live and drink.</choice>
@@ -174,12 +183,12 @@
 	
 		<node ID="Division">
 			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
-				{{emote|*Zanya leans forward conspiratorially.*}} 
+				{{emote|*Zanya =verb:lean= forward conspiratorially.*}} 
 
 				You noticed too, meow? Lady Morrarri, she's bent on none o' us visiting the other village. Makes for a downright dour atmosphere, le'me tell you.
 			</text>
 			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
-				{{emote|*They lean forward conspiratorially.*}} 
+				{{emote|*=pronouns.Subjective= =verb:lean:afterpronoun= forward conspiratorially.*}} 
 
 				You noticed too, meow? Lady Morrarri, she's bent on none o' us visiting the other village. Makes for a downright dour atmosphere, le'me tell you.
 			</text>
@@ -200,21 +209,36 @@
 	
 		<node ID="Fix" AllowEscape="false">
 			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
-				{{emote|*Zanya looks left and right before continuing.*}} 
+				{{emote|*Zanya =verb:look= left and right before continuing.*}} 
 				
 				Aye, for sure! Our good 'arden's been looking to solve the matter but he could most definitely use a hand or two, meow. Can't investigate much from 'here he's taken root, see?
 			</text>				
 			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
-				{{emote|*Your interlocutor looks left and right before continuing.*}} 
+				{{emote|*=pronouns.Subjective= =verb:look:affterpronoun= left and right before continuing.*}} 
 				
 				Aye, for sure! Our good 'arden's been looking to solve the matter but he coul' most definitely use a hand or two, meow. Can't investigate much from 'here he's taken root, see?
 			</text>			
 			<choice GotoID="End" StartQuest="Brothers_CatsDogs_MainQuest1">I will talk to the Warden then. In the meantime, live and drink.</choice>
 		</node>		
 	
+		<node ID="Opinion">
+			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
+				{{emote|*Zanya =verb:choose= =pronouns.possessive= next words carefully.*}} 
+
+				It all seems a tad excessive to meow. Those dogs from Shik look catlike enough in meow opinion -- not that Lady Morrarri see things the same 'ay.
+			</text>
+			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
+				{{emote|*=pronouns.Subjective= =verb:choose:afterpronoun= =pronouns.possessive= next words carefully.*}} 
+
+				It all seems a tad excessive to meow. Those dogs from Shik look catlike enough in meow opinion -- not that Lady Morrarri see things the same 'ay.
+			</text>
+			<choice GotoID="Start">I can imagine. There was something else I wanted to ask.</choice>
+			<choice GotoID="End">Thank you for your answer. Live and drink.</choice>	
+		</node>	
+	
 		<node ID="DefinitelyACat">
 			<text>
-				{{emote|*Hope and appreciation lights up the man's face.*}} 
+				{{emote|*Hope and appreciation light up =pronouns.possessive= face.*}} 
 				
 				Oh? You do?
 			</text>
@@ -227,7 +251,7 @@
 		
 		<node ID="ACatForReal" AllowEscape="false">
 			<text>
-				{{emote|*They answer with excitement palpable through hushed tones, as they rummage through their belongings and produce another headband, similar to the one they wear: triangles of synthetic fibers mounted on a plastifer wreath.*}} 
+				{{emote|*=pronouns.Subjective= =verb:answer:afterpronoun= with excitement palpable through hushed tones, as =pronouns.subjective= =verb:rummage:afterpronoun= through =pronouns.possessive= belongings and produce another headband, similar to the one =pronouns.subjective= =verb:wear:afterpronoun=: triangles of synthetic fibers mounted on a plastifer wreath.*}} 
 				
 				How good it is to find a similar spir't! You could some of this to look more catlike yourself! I craft those meowself.
 			</text>
@@ -240,7 +264,7 @@
 		
 		<node ID="Thanks" AllowEscape="false">
 			<text>
-				{{emote|*They watch intently, expecting you to put the headband on right away.*}} 
+				{{emote|*They =verb:watch:afterpronoun= intently, expecting you to put the headband on right away.*}} 
 				
 				Meow name is Zanya, by the way.
 			</text>
@@ -250,7 +274,7 @@
 
 		<node ID="NoThanks" AllowEscape="false">
 			<text>
-				{{emote|*They seem slightly disappointed, and put the headband back in their pack.*}} 
+				{{emote|*They =verb:seem:afterpronoun= slightly disappointed, and put the headband back in =pronouns.possessive= pack.*}} 
 				
 				'Ave it your way, stranger. Meow name is Zanya, by the way.
 			</text>
@@ -267,14 +291,14 @@
 	
 		<node ID="About">
 			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
-				{{emote|*Zanya taps their chin pensively.*}} 
+				{{emote|*Zanya =verb:tap= =pronouns.possessive= chin pensively.*}} 
 				
 				Not much to tell about this place, we all keep pretty much t'ourselves. Some o' the others tend to the pig farms, and prepare the cheese. Right o'er there is the 'orkshop of Imimiw, our tinker. She'll set any 'ires straight in just a moment. 
 				
 				There is the occasional traveler, but otherwise the days are spent working, trading and napping un'er the Hind Sun.							
 			</text>				
 			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
-				{{emote|*They tap their chin pensively.*}} 
+				{{emote|*They =verb:tap:afterpronoun= =pronouns.possessive= chin pensively.*}} 
 				
 				Not much to tell about this place, we all keep pretty much t'ourselves. Some o' the others tend to the pig farms, and prepare the cheese. Right o'er there is the 'orkshop of Imimiw, our tinker. She'll set any 'ires straight in just a moment. 
 				
@@ -325,7 +349,7 @@
 
 		<node ID="Stop">
 			<text>
-				{{emote|*The snapjaw stares at you in disbelief.*}} 
+				{{emote|*The snapjaw =verb:stare= at you in disbelief.*}} 
 				
 				cheez...
 			</text>
@@ -360,7 +384,7 @@
 
 		<node ID="Solution">
 			<text>		
-				{{emote|*The snapjaw jumps up and down.*}} 
+				{{emote|*The snapjaw =verb:jump= up and down.*}} 
 				
 				neheheheheh belly beat me, sulton ov suldon!
 			</text>
@@ -370,7 +394,7 @@
 	
 		<node ID="Idea" AllowEscape="false">
 			<text>		
-				{{emote|*The snapjaw licks =pronouns.possessive= lips, a spark in =pronouns.possessive= gaze.*}} 
+				{{emote|*The snapjaw =verb:lick= =pronouns.possessive= lips, a spark in =pronouns.possessive= gaze.*}} 
 				
 				uhuhuh smard! crisby juisy tasdy shrooz eheheheh...
 				
