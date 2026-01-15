@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using XRL.World;
 using XRL.World.Parts;
 using XRL.World.Anatomy;
+using XRL.Rules;
 
 using XRL.Messages;
 
@@ -153,6 +154,29 @@ namespace XRL.World.Parts
         }
 
 
+        // checking for Evolutive Tile part value for initial number of heads
+        public override bool WantEvent(int ID, int cascade)
+        {
+            return base.WantEvent(ID, cascade)
+                || ID == AfterObjectCreatedEvent.ID;
+        }
+
+        public override bool HandleEvent(AfterObjectCreatedEvent E)
+        {
+            // set initial heads
+            Brothers_EvolutiveTile evolutiveTile;
+
+            if (this.ParentObject.TryGetPart<Brothers_EvolutiveTile>(out evolutiveTile))
+            {
+                for (int i = 0; i < evolutiveTile.Stage; i++)
+                {
+                    AddHead();
+                }
+            }
+            return base.HandleEvent(E);
+        }
+
+
         public override void Register(GameObject Object, IEventRegistrar Registrar)
         {
             Registrar.Register("DefenderHit");
@@ -164,14 +188,25 @@ namespace XRL.World.Parts
         {
             if ((E.ID == "DefenderHit" || E.ID == "DefenderMissileWeaponHit") && E.GetIntParameter("Penetrations") > 0)
             {
+                
+                // Limit number of heads with early exit
+                if (this.ParentObject.Body.GetPart("Head").Count >= MaxHeads)
+                    return base.FireEvent(E);
+
+                // 1 chance out of 2 to do nothing
+                if (Stat.Random(1, 2) == 1)
+                {
+                    return base.FireEvent(E);
+                }
+                
                 // Trigger evolutive tile change
                 this.ParentObject.FireEvent(Event.New("Brothers_ChangeEvolutiveState"));
                 
                 // Add Head
                 AddHead();
                 
-                // debug stuff
-                MessageQueue.AddPlayerMessage("The hound's crest ripples and another head bursts out!");
+                // player message
+                MessageQueue.AddPlayerMessage($"{this.ParentObject.the}{this.ParentObject.DisplayNameOnly}'s crest ripples and another head bursts out!");
             }
             return base.FireEvent(E);
         }
