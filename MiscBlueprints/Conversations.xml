@@ -153,6 +153,7 @@
 				Speak quick, =player.apparentSpecies=! Solder is cooling down already.
 			</text>
 			<choice GotoID="Work" IfNotHaveQuest="Brothers_CatsDogs_CheeseQuest">I am in need of work. Is there any matter I can assist you with?</choice>
+			<choice GotoID="Shrews" IfHaveActiveQuest="Brothers_CatsDogs_CheeseQuest" IfFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Find" IfNotFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">The vermin in the ripening caves are canyon shrews, tinker. They have been feasting on the village's cheese stocks.</choice>
 			<choice GotoID="Reward" IfHaveActiveQuest="Brothers_CatsDogs_CheeseQuest" IfFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">I have handled the matter of the vermin in the ripening caves. They will not trouble the village anymore.</choice>
 		  	<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the matter with village behind the wall?</choice>
 			<choice GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">What do you think of the division between Shik and Spar?</choice>
@@ -209,7 +210,7 @@
 				... You are not paying attention to any of this, are you?
 			</text>
 			<choice GotoID="Brief3">I most definitely am, tinker. What would you have me do?</choice>
-			<choice GotoID="Brief3">Not really. Can we cut to the chase, and get to the prat where I am supposed to do something?</choice>
+			<choice GotoID="Brief3">Not really. Can we cut to the chase, and get to the part where I am supposed to do something?</choice>
 		</node>		
 	
 		<node ID="Brief3" AllowEscape="false">
@@ -220,7 +221,17 @@
 			</text>
 			<choice GotoID="End" IfNotTestState="Brothers_CatsDogs_BeastmasterKilled" StartQuest="Brothers_CatsDogs_CheeseQuest">End the vermin infestation in Spar's cheese ripening caves. Sounds simple enough. Live and drink, tinker -- next time we talk, Spar's food stocks will be safe.</choice>
 			<choice GotoID="End" IfTestState="Brothers_CatsDogs_BeastmasterKilled" StartQuest="Brothers_CatsDogs_CheeseQuest" CompleteQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">End the vermin infestation in Spar's cheese ripening caves. Sounds simple enough. Live and drink, tinker -- I have a feeling I have solved the matter already.</choice>
-			<choice GotoID="End">Vermin and cheese? This certainly cannot be worth my time. Live and drink, tinker.</choice>
+			<choice GotoID="End">Vermin and cheese? This cannot possibly be worth my time. Live and drink, tinker.</choice>
+		</node>	
+	
+		<node ID="Shrews">
+			<text>
+				{{emote|*=pronouns.Subjective= =verb:roll:afterpronoun= eyes behind oscillating eyewear.*}}
+			
+				So now we know for certain the cheese did not animate and walked away on its own. Have you handled the matter of those shrews?
+			</text>
+			<choice GotoID="Start">Not quite yet, but there is another matter we need to discuss.</choice>
+			<choice GotoID="End">I am on my way to do just that. Live and drink.</choice>	
 		</node>	
 	
 		<node ID="Reward">
@@ -232,7 +243,7 @@
 				You have my thanks, =player.apparentSpecies=.
 			</text>
 			<choice GotoID="Awkward">It was my pleasure, tinker.</choice>
-			<choice GotoID="Awkward">I did my job, an dnow it is your turn.</choice>
+			<choice GotoID="Awkward">I fulfilled my end of the bargain -- time to fulfill yours.</choice>
 		</node>		
 	
 		<node ID="Awkward">
@@ -248,8 +259,8 @@
 			<text>			
 				...				
 			</text>
-			<choice GotoID="Awkward3">{{emote|*clear throat*}}</choice>
 			<choice GotoID="Awkward3">Tinker?</choice>
+			<choice GotoID="Awkward3">{{emote|*clear throat*}}</choice>
 		</node>		
 	
 		<node ID="Awkward3">
