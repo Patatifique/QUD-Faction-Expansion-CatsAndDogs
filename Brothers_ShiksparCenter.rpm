@@ -2456,14 +2456,11 @@
   </cell>
   <cell X="38" Y="15">
     <object Name="DirtPath"></object>
-    <object Name="Brothers_CatsDogs_Warden Arendubark"></object>
   </cell>
   <cell X="39" Y="15">
     <object Name="DirtPath"></object>
   </cell>
-  <cell X="40" Y="15">
-    <object Name="DirtPath"></object>
-  </cell>
+  <cell X="40" Y="15"></cell>
   <cell X="41" Y="15"></cell>
   <cell X="42" Y="15">
     <object Name="DirtPath"></object>
@@ -2601,15 +2598,9 @@
   </cell>
   <cell X="35" Y="16"></cell>
   <cell X="36" Y="16"></cell>
-  <cell X="37" Y="16">
-    <object Name="DirtPath"></object>
-  </cell>
-  <cell X="38" Y="16">
-    <object Name="DirtPath"></object>
-  </cell>
-  <cell X="39" Y="16">
-    <object Name="DirtPath"></object>
-  </cell>
+  <cell X="37" Y="16"></cell>
+  <cell X="38" Y="16"></cell>
+  <cell X="39" Y="16"></cell>
   <cell X="40" Y="16"></cell>
   <cell X="41" Y="16"></cell>
   <cell X="42" Y="16">
@@ -2735,9 +2726,7 @@
   <cell X="35" Y="17"></cell>
   <cell X="36" Y="17"></cell>
   <cell X="37" Y="17"></cell>
-  <cell X="38" Y="17">
-    <object Name="DirtPath"></object>
-  </cell>
+  <cell X="38" Y="17"></cell>
   <cell X="39" Y="17"></cell>
   <cell X="40" Y="17"></cell>
   <cell X="41" Y="17">

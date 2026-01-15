@@ -695,7 +695,7 @@
 		<skill Name="CookingAndGathering_Spicer" />
 		<mutation Name="Regeneration" Level="5" />
 		<inventoryobject Blueprint="Leather Apron" />
-		<inventoryobject Blueprint="Brothers_CatsDogs_Hydric Bite" Number="1" />
+		<inventoryobject Blueprint="Brothers_CatsDogs_Hydric Bite" Number="0" />
 		<part Name="Corpse" CorpseChance="100" CorpseBlueprint="Brothers_CatsDogs_Hydric Hound Corpse" />
 		<tag Name="Gender" Value="plural" />
 		<tag Name="NoSleep" />

@@ -228,7 +228,7 @@
 			<text>
 				{{emote|*=pronouns.Subjective= =verb:roll:afterpronoun= eyes behind oscillating eyewear.*}}
 			
-				So now we know for certain the cheese did not animate and walked away on its own. Have you handled the matter of those shrews?
+				So now we know for certain the cheese did not walk away of its own volition. Have you handled the matter of those shrews?
 			</text>
 			<choice GotoID="Start">Not quite yet, but there is another matter we need to discuss.</choice>
 			<choice GotoID="End">I am on my way to do just that. Live and drink.</choice>	
@@ -243,7 +243,6 @@
 				You have my thanks, =player.apparentSpecies=.
 			</text>
 			<choice GotoID="Awkward">It was my pleasure, tinker.</choice>
-			<choice GotoID="Awkward">I fulfilled my end of the bargain -- time to fulfill yours.</choice>
 		</node>		
 	
 		<node ID="Awkward">
@@ -285,11 +284,65 @@
 				<text>I will put those to good use. Live and drink, Imimiw.</text>
 				<part Name="ReceiveItem" Blueprints="Brothers_CatsDogs_SparRecoiler,Fixit Spray,Advanced Toolkit" Identify="Brothers_CatsDogs_SparRecoiler" />
 			</choice>
-			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_CheeseQuest~Debrief" FinishQuest="Brothers_CatsDogs_CheeseQuest">
-				<text>... Only if her associates stick around longer than they should, that is. Live and drink nonetheless, tinker.</text>
-				<part Name="ReceiveItem" Blueprints="Brothers_CatsDogs_SparRecoiler,Fixit Spray,Advanced Toolkit" Identify="Brothers_CatsDogs_SparRecoiler" />
-			</choice>
 		</node>		
+
+		<node ID="Division" AllowEscape="False">
+			<text>
+				{{emote|*=pronouns.Subjective= =verb:take:afterpronoun= a sudden bitter interest in a disassembled recoiler.*}} 
+
+				The matter? You'll have to ask our good mayor on that, =player.apparentSpecies=. Or even better, head directly to Warden Arendubark. He is standing guard by the central wall -- you cannot miss him.
+			</text>
+			<choice GotoID="End" StartQuest="Brothers_CatsDogs_MainQuest1">I will ask the Warden for more information, then. In the meantime, live and drink.</choice>	
+		</node>
+
+		<node ID="Opinion">
+			<text>
+				{{emote|*=pronouns.Possessive= words are laced with frustration, and the fur on =pronouns.possessive= back sticks up slightly.*}}
+			
+				You know they have a proper merchant in Shik? I am denied a potential supplier, and for what? Some antique reason no living cat remembers? Founder, the whole affair gets on my nerves. Let us talk about something else, =player.apparentSpecies=.
+			</text>
+			<choice GotoID="Start">My apologies, tinker. Let us.</choice>
+			<choice GotoID="End">Maybe later -- live and drink.</choice>	
+		</node>	
+
+
+
+
+
+
+
+
+
+		<node ID="About">
+			<text>
+				{{emote|*=pronouns.Subjective= =verb:knead:afterpronoun= the ground for a few seconds, but =pronouns.possessive= expression quickly shifts to suspicion.*}}
+			
+				I cut open artifacts, learn of their innards, and put them back together. Somestimes I make more myself, out of the bits and trinkets brought by wandering traders. Are you another student of chrome?
+			</text>
+			<choice GotoID="ATinker">
+				<text>I have been known to tinker my own machines when the need arises.</text>
+				<part Name="Brothers_RequirePart" Part="Tinkering_Tinker1" Render="Tinkering: Tinker I" />
+			</choice>
+			<choice GotoID="NotATinker">I dabble. Is that enough to be called a student of chrome?</choice>	
+		</node>	
+
+		<node ID="ATinker">
+			<text>
+				Well, in that case, I hope you can refrain from spouting unsollicited "advice", =player.formalAddressTerm=. If I need pointers, I will ask for them. Now do you need anything else?
+			</text>
+			<choice GotoID="Start">As a matter of fact, I do.</choice>
+			<choice GotoID="End">Not right now. Live and drink, tinker.</choice>	
+		</node>	
+
+		<node ID="NotATinker">
+			<text>
+				Founder be thanked! I shall be able to work without "suggestions" on how to do things quicker or more efficiently.
+				
+				Well, if you need your gear repaired or your trinkets divined, I am the feline to ask.
+			</text>
+			<choice GotoID="Start">Thank you, tinker. There was something else...</choice>
+			<choice GotoID="End">I will keep that in mind. In the meantime, live and drink.</choice>	
+		</node>	
 	
 	</conversation>		
 
