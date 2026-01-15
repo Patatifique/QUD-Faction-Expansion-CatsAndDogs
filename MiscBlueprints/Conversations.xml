@@ -122,16 +122,22 @@
 	</conversation>	
 
 
-	<conversation ID="Brothers_CatsDogs_DogChef">
+<conversation ID="Brothers_CatsDogs_DogChef">
 		
-		<node ID="Start">
-		  <text>
+	<node ID="Start">
+		<text IfSpeakerEvolutiveTileMoreOrEqual="3">			
+			Wow i'm so evolved, look at me! and i cook too!
+		</text>
+
+
+		<text IfSpeakerNotEvolutiveTileMoreOrEqual="3">
 			I sell and cook stuff.
-		  </text>
-		  <choice GotoID="End">Yum.</choice>
-		</node>
+		</text>
+
+		<choice GotoID="End">Yum.</choice>
+	</node>
 	
-	</conversation>	
+</conversation>
 
 
 	<conversation ID="Brothers_CatsDogs_CatTinker">
