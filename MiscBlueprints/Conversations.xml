@@ -7,10 +7,10 @@
 		
 		<node ID="Start">
 		  <text>
-			{{emote|*Jerenah turns in circles before lying down.*}}~
-			{{emote|*Jerenah chases =pronouns.possessive= tail.*}}~
-			{{emote|*Jerenah laps some drool right back up.*}}~
-			{{emote|*Jerenah gets up on =pronouns.possessive= hind legs.*}}
+			{{emote|*Jerenah =verb:turn= in circles before lying down.*}}~
+			{{emote|*Jerenah =verb:chase= =pronouns.possessive= tail.*}}~
+			{{emote|*Jerenah =verb:lap= some drool right back up.*}}~
+			{{emote|*Jerenah =verb:get= up on =pronouns.possessive= hind legs.*}}
 		  </text>
 		  <choice GotoID="End">Live and drool, friendly hyrkhound.</choice>
 		</node>
@@ -27,7 +27,7 @@
 			Young'uns today complicate everything... The Moon what now? They're called the Deathlands, darn it!~
 			Ambidextry everywhere... Way back when, this used to really mean something.~
 			Humph. Who are you again?~
-			{{emote|*Alther concentrates intensely for a few seconds.*}}
+			{{emote|*Alther =verb:concentrate= intensely for a few seconds.*}}
 		  </text>
 		  <choice GotoID="End">Live and drink, elderly feline.</choice>
 		</node>
