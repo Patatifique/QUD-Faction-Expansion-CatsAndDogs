@@ -61,12 +61,12 @@
 
 	<object Name="Brothers_CatsDogs_Tradesign" Inherits="Sign">
 		<part Name="Render" DisplayName="sign" Tile="Items/sw_sign_goods.bmp" Occluding="false" />
-		<part Name="Chat" Says="Left Head Trading" ShowInShortDescription="true" />
+		<part Name="Chat" Says="Growarow's Trading Emporium" ShowInShortDescription="true" />
 	</object>
 	
 	<object Name="Brothers_CatsDogs_Cooksign" Inherits="Sign">
 		<part Name="Render" DisplayName="sign" Tile="Items/sw_sign_pepper.bmp" Occluding="false" />
-		<part Name="Chat" Says="Right Head Cooking" ShowInShortDescription="true" />
+		<part Name="Chat" Says="Growarow's Preserved Goods" ShowInShortDescription="true" />
 	</object>
 
 	<object Name="Brothers_CatsDogs_Tinkersign" Inherits="Sign">

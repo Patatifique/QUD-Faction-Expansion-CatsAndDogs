@@ -122,20 +122,137 @@
 	</conversation>	
 
 
-<conversation ID="Brothers_CatsDogs_DogChef">
+	<conversation ID="Brothers_CatsDogs_DogChef">
 		
-	<node ID="Start">
-		<text IfSpeakerEvolutiveTileMoreOrEqual="3">			
-			Wow i'm so evolved, look at me! and i cook too!
-		</text>
+		<node ID="Start" IfSpeakerEvolutiveTileMoreOrEqual="3">
+			<text>			
+				{{emote|*The heads argue and bicker among each other in impenetrable cacophony.*}}		
+			</text>
+			<choice ID="Trade" Load="Remove" />
+			<choice GotoID="End">{{emote|*back away slowly*}}</choice>
+		</node>
+	
+		<node ID="Start" IfSpeakerNotEvolutiveTileMoreOrEqual="3">
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+				{{emote|*The first head turns towards you, and greets you apathetically.*}}
+
+				Welcome to Growarow's Preserved Goods... Need any food for the road?
+
+				{{emote|*The second head echoes that greeting.*}}
+
+				{{Y|And you came to Growarow's Trading Emporium... Can we interest you in some of our fine goods, friend?}}
+				
+				{{emote|*The third head chimes in.*}}
+
+				{{K|Preserved! Emporium!}}
+			</text>
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+				{{emote|*The first head turns towards you, and greets you energetically.*}}
+
+				Welcome to Growarow's Preserved Goods! Need any food for the road?
+
+				{{emote|*The second head echoes that greeting.*}}
+
+				{{Y|And glad you came to Growarow's Trading Emporium! Can we interest you in some of our fine goods, friend?}}		
+			</text>
+			<choice GotoID="Work" IfNotHaveQuest="Brothers_CatsDogs_ChefQuest">I am looking for work. Do you require assistance with anything?</choice>
+			<choice GotoID="TarBones" IfHaveActiveQuest="Brothers_CatsDogs_ChefQuest" IfHaveItem="TarBones">I have found the "secret ingredients" you were looking for.</choice>
+			<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is happening with the other village?</choice>
+			<choice GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">What are your stances on the division between Shik and Spar?</choice>
+			<choice GotoID="TwoHeads">I was not expecting that amount of heads.</choice>
+			<choice GotoID="About">What do you do in Shik?</choice>
+			<choice GotoID="End">Live and drink, all of you.</choice>
+		</node>
 
 
-		<text IfSpeakerNotEvolutiveTileMoreOrEqual="3">
-			I sell and cook stuff.
-		</text>
 
-		<choice GotoID="End">Yum.</choice>
-	</node>
+
+
+
+
+
+		<node ID="TwoHeads">
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+				Neither were we. Please ignore our new partner...
+
+				{{Y|As Growarow says, our situation has evolved somewhat. Fret not, friend, we will soon find a new arrangement.}}
+				
+				{{K|Head! Head!}}
+			</text>
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+				Us hydric hounds are quite the uncommon sight indeed.
+				
+				{{Y|It is little surprise you have not seen our kind before, friend!}}
+				
+				{{cloudy|We ask that you greet us separately, for clarity's sake.}}
+			</text>
+			<choice GotoID="Mutated">
+				<text>I am of one mind, but sport several heads myself. I am familiar with people seldom knowing which too adress.</text>
+				<part Name="Brothers_RequirePart" Part="TwoHeaded" Render="Mutation: Two-headed" />
+			</choice>
+			<choice GotoID="Relationship">How do you take decisions? Is the matter not uncomfortable?</choice>
+			<choice GotoID="Start">Duly noted. I had something else to ask you.</choice>
+			<choice GotoID="End">Live, drink, live, and drink.</choice>	
+		</node>
+
+		<node ID="Mutated">
+				
+		</node>
+
+		<node ID="Relationship">
+				
+		</node>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<node ID="About">
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+				Up until now, we collected starapples from our herders, and made them sing until jammy.
+
+				{{Y|We used to trade in commodities with the local travelers. We would ask that you excuse our current situation, friend.}}
+
+				{{K|Star! Apples!}}
+			</text>
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+				Will you believe it if we tell you we are a chef? Collecting starapples from our herders, and making them sing until jammy.
+
+				{{Y|We trade in commodities with the local travelers. Does your pack feel too heavy? We have solutions to offer you, friend.}}
+
+				{{cloudy|Whatever you desire, the Growarows are the place to spend freshwater!}}
+			</text>
+			<choice GotoID="Name">I am confused. Are you called Growarow or Growarows?</choice>
+			<choice GotoID="Start">This is an impressive pitch. I had something else to ask...</choice>
+			<choice GotoID="End">I will return if I need anything. Live and drink.</choice>	
+		</node>
+
+		<node ID="Name">
+				
+		</node>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 </conversation>
 

@@ -702,7 +702,7 @@
 		<tag Name="NoSleep" />
 		<tag Name="Unenslavable" />
 		<tag Name="Merchant" />
-		<xtagGrammar Proper="true" />
+		<xtagGrammar iArticle="the" />
 		<part Name="Interesting" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 		<part Name="Brothers_EvolutiveTile" Stage="1" StageTiles="Creatures/catsdogs/hydrichound1.png, Creatures/catsdogs/dogmerchant2.png, Creatures/catsdogs/dogmerchant3.png, Creatures/catsdogs/hydrichound4.png, Creatures/catsdogs/hydrichound5.png, Creatures/catsdogs/hydrichound6.png, Creatures/catsdogs/hydrichound7.png, Creatures/catsdogs/hydrichound8.png, Creatures/catsdogs/hydrichound9.png, Creatures/catsdogs/hydrichound10.png" />
