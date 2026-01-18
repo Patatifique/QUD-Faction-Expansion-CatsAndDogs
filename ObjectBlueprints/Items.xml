@@ -14,6 +14,7 @@
 		<part Name="AddsRep" Faction="Dogs" Value="-100" />
 		<tag Name="Tier" Value="3" />
 		<part Name="Brothers_ElementalDamageOnHit" WorksOnEquipper= "true" Type="Acid" RequireDamageAttribute="Unarmed" Amount="1d3" AttackMessage="from %t gloves."/>
+	    <part Name="RulesDescription" Text="When worn, your unarmed attacks deal an additional 1d3 acid damage." />
 	</object>
 
 	<object Name="Brothers_CatsDogs_Hyrk Hood" Inherits="BaseHat">
