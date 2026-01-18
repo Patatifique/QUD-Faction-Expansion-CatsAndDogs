@@ -163,7 +163,7 @@
 			<choice GotoID="Reward" IfHaveActiveQuest="Brothers_CatsDogs_CheeseQuest" IfFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">I have handled the matter of the vermin in the ripening caves. They will not trouble the village anymore.</choice>
 		  	<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the matter with village behind the wall?</choice>
 			<choice GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">What do you think of the division between Shik and Spar?</choice>
-			<choice GotoID="Zanya">You do know a human set up camp in front of your workshop, right?</choice>
+			<choice GotoID="Zanya">You do know someone set up camp in front of your workshop, right?</choice>
   			<choice GotoID="About">What do you do here in Spar?</choice>
 			<choice GotoID="End">Live and drink, feline tinker.</choice>
 		</node>
@@ -296,7 +296,7 @@
 			<text>
 				{{emote|*=pronouns.Subjective= =verb:take:afterpronoun= a sudden bitter interest in a disassembled recoiler.*}} 
 
-				The matter? You'll have to ask our good mayor on that, =player.apparentSpecies=. Or even better, head directly to Warden Arendubark. He is standing guard by the central wall -- you cannot miss him.
+				The matter? You'll have to ask our good mayor on that, =player.apparentSpecies=. Or even better, head directly to Warden Arendubark. He is standing guard by the central wall, in the norther outskirts -- you cannot miss him.
 			</text>
 			<choice GotoID="End" StartQuest="Brothers_CatsDogs_MainQuest1">I will ask the Warden for more information, then. In the meantime, live and drink.</choice>	
 		</node>
@@ -311,13 +311,13 @@
 			<choice GotoID="End">Maybe later -- live and drink.</choice>	
 		</node>	
 
-
-
-
-
-
-
-
+		<node ID="Zanya">
+			<text>
+				Obviously, yes. They help me from time to time -- as it happens, bipedality sometimes proves unexpectantly useful.
+			</text>
+			<choice GotoID="Start">This makes sense. I had another question.</choice>
+			<choice GotoID="End">It does. Live and drink.</choice>	
+		</node>	
 
 		<node ID="About">
 			<text>
@@ -415,7 +415,7 @@
 			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
 				{{emote|*=pronouns.Subjective= =verb:look:affterpronoun= left and right before continuing.*}} 
 				
-				Aye, for sure! Our good 'arden's been looking to solve the matter but he coul' most definitely use a hand or two, meow. Can't investigate much from 'here he's taken root, see?
+				Aye, for sure! Our good 'arden's been looking to solve the matter but he coul' most definitely use a hand or two, meow. Can't investigate much from 'here he's taken root, see? You can find 'im in the northern outskirts.
 			</text>			
 			<choice GotoID="End" StartQuest="Brothers_CatsDogs_MainQuest1">I will talk to the Warden then. In the meantime, live and drink.</choice>
 		</node>		
