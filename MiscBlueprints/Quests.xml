@@ -38,7 +38,7 @@
 		</step>
 
 		<step ID="Deliver" Name="Return to Shik and Spar" XP="1500">
-			<text>Return to Warden Arendubark and announce your discoveries.</text>
+			<text>When you are ready, return to Warden Arendubark and announce your discoveries.</text>
 		</step>
 		
 	</quest>

@@ -122,6 +122,52 @@
 	</conversation>	
 
 
+	<conversation ID="Haddas" Load="Merge">
+		
+		<node ID="Start" Load="Merge">
+			<choice GotoID="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They lived in Ezra, some time ago.</choice>
+			<choice GotoID="BubumubeReminder" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Can you remind me where Bubumube went after they left Ezra?</choice>
+		</node>
+	
+		<node ID="Bubumube">
+			<text>			
+				HA! A tree-old name. They found shade under my fingers, many yesteryears ago. Gone to sow their own errancy.
+			</text>
+			<choice GotoID="DogOrCat">Do you remember if they were a dog or a cat? I promise this is important.</choice>
+		</node>
+
+		<node ID="DogOrCat">
+			<text>			
+				HA! HA HA HA...
+				
+				Would you remember which of my kind you witnessed on your first night under sky split by the Star-Tree? Would you deem them dogthorn or diacalyptus? 
+			</text>
+			<choice GotoID="Where">I certainly cannot tell. Do you know of anyone who would remember them?</choice>
+		</node>
+
+		<node ID="Where" AllowEscape="False">
+			<text>			
+				{{emote|*A shiver runs through the foliage.*}}
+				
+				Aye. None left with them; but seedlings confided in me they petitioned the Sleeper and the Mourner for help. They would remember. 
+				
+				HA! Know the path to them, now.
+			</text>
+			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Thank you, mayor. You were of great help.</choice>
+		</node>
+		
+		<node ID="BubumubeReminder">
+			<text>			
+				HA! Slipped from the mind-bark, it has?
+				
+				Miramihamia the Sleeper, Boroworof the Mourner. They would remember Bubumube.
+			</text>
+			<choice GotoID="End">Thank you once again, mayor.</choice>
+		</node>
+	
+	</conversation>
+	
+
 	<conversation ID="Brothers_CatsDogs_DogChef">
 		
 		<node ID="Start" IfSpeakerEvolutiveTileMoreOrEqual="3">
