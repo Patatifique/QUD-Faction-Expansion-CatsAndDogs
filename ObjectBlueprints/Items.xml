@@ -173,7 +173,7 @@
 	</object>
 
 	<object Name="TarBones" Load="Merge">
-		<part Name="CompleteQuestOnTaken" Quest="Brothers_CatsDogs_ChefQuest" QuestStep="Find the Secret Ingredient" />
+		<part Name="CompleteQuestOnTaken" Quest="Brothers_CatsDogs_ChefQuest" QuestStep="Find" />
 	</object>
 
 	<object Name="Brothers_CatsDogs_ShikRecoiler" Inherits="BaseRecoiler">
