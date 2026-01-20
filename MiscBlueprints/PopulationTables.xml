@@ -118,4 +118,10 @@
 		</group>
 	</population>
 
+<!-- Widgets-->
+
+  	<population Name="AsphaltMines" Load="Merge">
+	  <object Blueprint="Finish_Brothers_CatsDogs_ChefQuest_Travel" />
+	</population>
+
 </populations>
