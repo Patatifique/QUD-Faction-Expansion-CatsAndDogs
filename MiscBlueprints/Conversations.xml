@@ -7,10 +7,10 @@
 		
 		<node ID="Start">
 		  <text>
-			{{emote|*Jerenah turns in circles before lying down.*}}~
-			{{emote|*Jerenah chases =pronouns.possessive= tail.*}}~
-			{{emote|*Jerenah laps some drool right back up.*}}~
-			{{emote|*Jerenah gets up on =pronouns.possessive= hind legs.*}}
+			{{emote|*Jerenah =verb:turn= in circles before lying down.*}}~
+			{{emote|*Jerenah =verb:chase= =pronouns.possessive= tail.*}}~
+			{{emote|*Jerenah =verb:lap= some drool right back up.*}}~
+			{{emote|*Jerenah =verb:get= up on =pronouns.possessive= hind legs.*}}
 		  </text>
 		  <choice GotoID="End">Live and drool, friendly hyrkhound.</choice>
 		</node>
@@ -27,7 +27,7 @@
 			Young'uns today complicate everything... The Moon what now? They're called the Deathlands, darn it!~
 			Ambidextry everywhere... Way back when, this used to really mean something.~
 			Humph. Who are you again?~
-			{{emote|*Alther concentrates intensely for a few seconds.*}}
+			{{emote|*Alther =verb:concentrate= intensely for a few seconds.*}}
 		  </text>
 		  <choice GotoID="End">Live and drink, elderly feline.</choice>
 		</node>
@@ -45,30 +45,6 @@
 			I'm a tree.
 		  </text>
 		  <choice GotoID="End">You're a tree.</choice>
-		</node>
-	
-	</conversation>
-
-
-	<conversation ID="Brothers_CatsDogs_Catgod">
-		
-		<node ID="Start">
-		  <text>
-			I'm a cat god.
-		  </text>
-		  <choice GotoID="End">True.</choice>
-		</node>
-	
-	</conversation>
-
-
-	<conversation ID="Brothers_CatsDogs_Doggod">
-		
-		<node ID="Start">
-		  <text>
-			I'm a dog god.
-		  </text>
-		  <choice GotoID="End">Very true.</choice>
 		</node>
 	
 	</conversation>
@@ -122,20 +98,441 @@
 	</conversation>	
 
 
-<conversation ID="Brothers_CatsDogs_DogChef">
+	<conversation ID="Brothers_CatsDogs_Catgod">
 		
-	<node ID="Start">
-		<text IfSpeakerEvolutiveTileMoreOrEqual="3">			
-			Wow i'm so evolved, look at me! and i cook too!
-		</text>
+		<node ID="Start">
+			<text>
+				I'm a cat god.
+			</text>
+			<choice GotoID="Bubumube">True.</choice>
+			<choice GotoID="Activity">True.</choice>
+			<choice GotoID="Worship">True.</choice>
+			<choice GotoID="End">True.</choice>
+		</node>
+	
+	</conversation>
 
 
-		<text IfSpeakerNotEvolutiveTileMoreOrEqual="3">
-			I sell and cook stuff.
-		</text>
+	<conversation ID="Brothers_CatsDogs_Doggod">
+		
+		<node ID="Start">
+			<text>
+				I'm a dog god.
+			</text>
+			<choice GotoID="Bubumube">True.</choice>
+			<choice GotoID="Activity">True.</choice>
+			<choice GotoID="Worship">True.</choice>
+			<choice GotoID="End">True.</choice>
+		</node>
+	
+	</conversation>
+	
 
-		<choice GotoID="End">Yum.</choice>
-	</node>
+	<conversation ID="Haddas" Load="Merge">
+		
+		<node ID="Start" Load="Merge">
+			<choice GotoID="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They lived in Ezra, some time ago.</choice>
+			<choice GotoID="BubumubeReminder" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Can you remind me where Bubumube went after they left Ezra?</choice>
+		</node>
+	
+		<node ID="Bubumube">
+			<text>			
+				HA! A tree-old name. They found shade under my fingers, many yesteryears ago. Gone to sow their own errancy.
+			</text>
+			<choice GotoID="DogOrCat">Do you remember if they were a dog or a cat? I promise this is important.</choice>
+		</node>
+
+		<node ID="DogOrCat">
+			<text>			
+				HA! HA HA HA...
+				
+				Would you remember which of my kind you witnessed on your first night under sky split by the Star-Tree? Would you deem them dogthorn or diacalyptus? 
+			</text>
+			<choice GotoID="Where">I certainly cannot tell. Do you know of anyone who would remember them?</choice>
+		</node>
+
+		<node ID="Where" AllowEscape="False">
+			<text>			
+				{{emote|*A shiver runs through the foliage.*}}
+				
+				Aye. None left with them; but seedlings confided in me they petitioned the Sleeper and the Mourner for help. They would remember. 
+				
+				HA! Know the path to them, now.
+			</text>
+			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Thank you, mayor. You were of great help.</choice>
+		</node>
+		
+		<node ID="BubumubeReminder">
+			<text>			
+				HA! Slipped from the mind-bark, it has?
+				
+				Miramihamia the Sleeper, Boroworof the Mourner. They would remember Bubumube.
+			</text>
+			<choice GotoID="End">Thank you once again, mayor.</choice>
+		</node>
+	
+	</conversation>
+	
+
+	<conversation ID="Brothers_CatsDogs_DogChef">
+		
+		<node ID="Start" IfSpeakerEvolutiveTileMoreOrEqual="3">
+			<text>			
+				{{emote|*The heads argue and bicker among each other in impenetrable cacophony.*}}
+			</text>
+			<choice ID="Trade" Load="Remove" />
+			<choice GotoID="End">{{emote|*back away slowly*}}</choice>
+		</node>
+	
+		<node ID="Start" IfSpeakerNotEvolutiveTileMoreOrEqual="3">
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+				{{emote|*The first head turns towards you, and greets you apathetically.*}}
+
+				Welcome to Growarow's Preserved Goods... Need any food for the road?
+
+				{{emote|*The second head echoes that greeting.*}}
+
+				{{Y|And you came to Growarow's Trading Emporium... Can we interest you in some of our fine goods, friend?}}
+				
+				{{emote|*The third head chimes in.*}}
+
+				{{K|Preserved! Emporium!}}
+			</text>
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+				{{emote|*The first head turns towards you, and greets you energetically.*}}
+
+				Welcome to Growarow's Preserved Goods! Need any food for the road?
+
+				{{emote|*The second head echoes that greeting.*}}
+
+				{{Y|And glad you came to Growarow's Trading Emporium! Can we interest you in some of our fine goods, friend?}}
+			</text>
+			<choice GotoID="Work" IfNotHaveQuest="Brothers_CatsDogs_ChefQuest">I am looking for work. Do you require assistance with anything?</choice>
+			<choice GotoID="TarBones" IfHaveActiveQuest="Brothers_CatsDogs_ChefQuest" IfHaveItem="TarBones">I have found the bones you were looking for.</choice>
+			<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is happening with the other village?</choice>
+			<choice GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What are your stances on the division between Shik and Spar?</choice>
+			<choice GotoID="TwoHeads">I was not expecting that amount of heads.</choice>
+			<choice GotoID="About">What do you do in Shik?</choice>
+			<choice GotoID="End">Live and drink, all of you.</choice>
+		</node>
+
+		<node ID="Work">
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+				{{K|Bones! Bones!}}
+
+				{{emote|*The second head stays silent as the first head chimes in.*}}
+
+				More than ever. Pray tell, are you much of a cook?
+			</text>
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+				{{Y|We do not, but we are certain Growarow does, friend.}}
+
+				{{emote|*The first head chimes in.*}}
+				
+				That we do. Pray tell, are you much of a cook?
+			</text>
+			<choice GotoID="CookALot">
+				<text>My skill is recognized far and wide, and I know a fellow chef when I see one. What are you preparing? Freeze-dried yuckwheat? Fermented tortoise scute? Hoarshroom jam?</text>
+				<part Name="Brothers_RequirePart" Part="CookingAndGathering_CarbideChef " Render="Cooking and Gathering: Carbide Chef" />
+			</choice>
+			<choice GotoID="CookABit">
+				<text>I am enough of a cook to follow recipes, at least. Do you need me to retrieve some?</text>
+				<part Name="Brothers_RequirePart" Part="CookingAndGathering" Render="Cooking and Gathering: Meal Preparation" />
+			</choice>		
+			<choice GotoID="DoNotCook">I can improvise with foraged ingredients -- enough to keep myself fed, at least.</choice>
+			<choice GotoID="End">I will come back to you on that matter.</choice>	
+		</node>
+
+		<node ID="CookALot">
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+				{{K|Bones! Bones!}}
+
+				{{emote|*The second head tries to keep the third one silent, to no avail.*}}
+
+				We cannot reveal it before it is done, and we are lacking a certain ingredient. Could you maybe fetch it for us?
+			</text>
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+				We cannot reveal it before it is done! We are sure you understand. Although we are lacking a certain ingredient. Would you care to obtain it for us?
+				
+				{{emote|*The second head stays silent.*}}
+			</text>
+			<choice GotoID="Brief1">Anything for another student of the culinary arts. What do you need?</choice>
+			<choice GotoID="End">Maybe later. For now, live and drink.</choice>	
+		</node>
+
+		<node ID="CookABit">
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+				{{K|Bones! Bones!}}
+
+				{{emote|*The second head tries to keep the third one silent, to no avail.*}}
+
+				The recipe we already have. It is our secret ingredient we are lacking -- could you fetch it for us?
+			</text>
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+				{{Y|You do not lack initiative, friend!}}
+		
+				Nothing that complicated. But we are missing our secret ingredient. Would you care to obtain it for us?
+			</text>
+			<choice GotoID="Brief1">A secret ingredient? Please tell me more.</choice>
+			<choice GotoID="End">Maybe later. For now, live and drink.</choice>	
+		</node>
+		
+		<node ID="DoNotCook">
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+				{{K|Bones! Bones!}}
+
+				{{emote|*The second head tries to keep the third one silent, to no avail.*}}
+
+				We will keep things simple then. We are missing the key ingredient to our specialty dish -- could you fetch it for us?
+			</text>
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+				{{Y|There is beauty in simplicity, friend.}}
+		
+				There certainly is. To keep matters simple, we are missing the key ingredient to our specialty dish. Would you care to obtain it for us?
+			</text>
+			<choice GotoID="Brief1">This sounds important, please tell me more.</choice>
+			<choice GotoID="End">Maybe later. For now, live and drink.</choice>	
+		</node>
+
+		<node ID="Brief1">
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+				{{K|Bones! Tar!}}
+
+				{{emote|*The second head unsuccessfully hushes the third one.*}}
+
+				We are sorry about this. We need asphalt bone confit for the final step -- tar-encrusted bones, if you will.
+			</text>
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+				Well, not to unveil too much of our recipe, but it is lacking that final crunch for now.
+				
+				{{Y|Growarow always makes it soft and crunchy, friend.}}
+
+				{{emote|*The first head nods emphatically.*}}
+				
+				We do. And for that matter, we require asphalt bone confit. Bones cooked in tar, and the longer the better.
+			</text>
+			<choice GotoID="Brief2">Tar-encrusted bones, duly noted. And where would I find those?</choice>
+			<choice GotoID="End">This will have to wait. Live and drink.</choice>	
+		</node>
+
+		<node ID="Brief2">
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+				{{K|Tar! Bones!}}
+
+				{{emote|*The second head is struggling not to snap at the third one.*}}
+
+				... Asphalt pools. Or should that fail, there are rumors of tunnels near the Mechanimist cathedral. We cannot provide more pointers at the moment.
+			</text>
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+				{{Y|We would recommend checking out any asphalt pools, friend.}}
+
+				We have heard tales of abandoned tunnels near the Mechanimist cathedral, holding jet-black liquids. While we never ventured this far north, this could be a place to investigate.		
+			</text>
+			<choice GotoID="End" IfNotHaveItem="TarBones" StartQuest="Brothers_CatsDogs_ChefQuest">If there is nothing else you need, I will be back with your final ingredient. In the meantime, live and drink!</choice>
+			<choice GotoID="End" IfHaveItem="TarBones" StartQuest="Brothers_CatsDogs_ChefQuest" CompleteQuestStep="Brothers_CatsDogs_ChefQuest~Find">I already have what you ask for -- just give me a second to fetch it for you, and I will be right back.</choice>
+			<choice GotoID="End">I am nary equipped for such a trip and must decline. Live and drink.</choice>	
+		</node>
+
+		<node ID="TarBones">
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+				{{K|Bones! Bones!}}
+
+				{{emote|*The second head has abandoned trying to keep the third one in check.*}}
+
+				Founder be thanked. Can we have them?
+			</text>
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+				{{emote|*The first head perks up.*}}
+				
+				You did? May we have them?
+			</text>
+			<choice GotoID="RewardMutant" IfMutant="true">
+				<text>Please have the bones, Growarow. May I taste the dish once you are done?</text>
+				<part Name="TakeItem" Blueprints="TarBones" Amount="1" />
+			</choice>
+			<choice GotoID="RewardTrueKin" IfTrueKin="true">
+				<text>Please have the bones, Growarow. May I taste the dish once you are done?</text>
+				<part Name="TakeItem" Blueprints="TarBones" Amount="1" />
+			</choice>
+			<choice GotoID="End">Not quite yet.</choice>	
+		</node>		
+		
+		<node ID="RewardMutant" AllowEscape="false">
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+				{{K|Crunch! Snap!}}
+
+				{{Y|Please excuse our situation, friend...}}
+
+				Those will do perfectly, thank you very much. Tasting will prove difficult right now -- but I can offer you a reward still: the recipe of a unique signature dish loved by canines everywhere.
+			</text>
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+				Yes! Those are perfect! The ideal mix between slow-cooked marrow, and a tarry exterior...
+				
+				{{Y|What Growarow is trying to say, friend, is that they are very thankful.}}
+				
+				Please pardon our manners -- very thankful indeed. As for tasting... The meal will sadly not be done for another couple of months, as it needs to cure and ripen properly. Still, you deserve a reward: the recipe of a unique signature dish loved by canines everywhere.
+			</text>
+			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_ChefQuest~Debrief" FinishQuest="Brothers_CatsDogs_ChefQuest">>Thank you, Growarow and Growarow -- Growarows. This knowledge will certainly come in handy. Live and drink.</choice>	
+		</node>
+
+		<node ID="RewardTrueKin" AllowEscape="false">
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+				{{K|Crunch! Snap!}}
+
+				{{Y|Please excuse our situation, friend...}}
+
+				Those will do perfectly, thank you very much. Tasting will prove difficult right now -- but I can offer you a reward still: precious twin drops of nectar.
+			</text>
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+				Yes! Those are perfect! The ideal mix between slow-cooked marrow, and a tarry exterior...
+				
+				{{Y|What Growarow is trying to say, friend, is that they are very thankful.}}
+				
+				Please pardon our manners -- very thankful indeed. As for tasting... The meal will sadly not be done for another couple of months, as it needs to cure and ripen properly. Still, you deserve a reward: twin drops of nectar, to bring a divine kick to any of your meals.
+			</text>
+			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_ChefQuest~Debrief" FinishQuest="Brothers_CatsDogs_ChefQuest">
+				<text>Thank you, Growarow and Growarow -- Growarows. These ingredients will certainly come in handy. Live and drink.</text>
+				<part Name="ReceiveItem" Blueprints="Drop of Nectar,Drop of Nectar"/>
+			</choice>	
+		</node>
+
+		<node ID="Division" AllowEscape="false">
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+				{{emote|*The second head does not have time to answer before being cut off.*}} 
+				
+				{{K|Tree! Gun!}}
+
+				... We have our paws full here. If you are looking into this matter, you should confer with Warden Arendubark. He can be found in the northern outskirts.
+			</text>
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+				{{emote|*The first head prepares to answer, but reconsiders.*}} 
+				
+				{{Y|There is not much that we can say, friend. Fetch Warden Arendubark, north of the wall -- he has been trying to fix this matter for many moons, now.}}
+			</text>
+			<choice GotoID="End" StartQuest="Brothers_CatsDogs_MainQuest1">I will talk to the warden, then. In the meantime, live and drink.</choice>	
+		</node>
+
+		<node ID="Opinion">
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+				{{K|Cat! Friend!}}
+
+				{{emote|*None of the larger heads contradict this exclamation.*}}
+			</text>
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+				{{emote|*Mild annoyance flashes on both their faces.*}}
+
+				{{Y|It is all quite ridiculous, friend.}}
+				
+				Can you picture what succulent meal we could prepare with a new tinker-touched oven? We fail to see how this helps either Shik or Spar.
+			</text>
+			<choice GotoID="Start">I see. Can I ask you something else?</choice>
+			<choice GotoID="End">A concise answer. Live and drink.</choice>	
+		</node>
+
+		<node ID="TwoHeads">
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+				Neither were we. Please ignore our new partner...
+
+				{{Y|As Growarow says, our situation has evolved somewhat. Fret not, friend, we will soon find a new arrangement.}}
+				
+				{{K|Head! Head!}}
+			</text>
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+				Us hydric hounds are quite the uncommon sight indeed.
+				
+				{{Y|It is little surprise you have not seen our kind before, friend!}}
+				
+				{{cloudy|We ask that you greet us separately, for clarity's sake.}}
+			</text>
+			<choice GotoID="Mutated">
+				<text>I am of one mind, but sport several heads myself. I am familiar with people seldom knowing which too adress.</text>
+				<part Name="Brothers_RequirePart" Part="TwoHeaded" Render="Mutation: Two-headed" />
+			</choice>
+			<choice GotoID="Relationship">How do you take decisions? Is the matter not uncomfortable?</choice>
+			<choice GotoID="Start">Duly noted. I had something else to ask you.</choice>
+			<choice GotoID="End">Live, drink, live, and drink.</choice>	
+		</node>
+
+		<node ID="Mutated">
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+				{{emote|*The two larger heads look disheartened.*}}
+
+				Count yourself lucky.
+
+				{{Y|Nowadays, silence is worth all the freshwater in Qud, friend.}}
+
+				{{K|Heads!}}
+			</text>
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+				{{emote|*Both heads nod emphathetically.*}}
+
+				{{cloudy|Folks get confused too easily nowadays.}}
+				
+				{{Y|I could not imagine sharing the same mind over two heads, friend. That sounds utterly lonely.}}
+			</text>
+			<choice GotoID="Start">Can I ask you something else?</choice>
+			<choice GotoID="End">Live and drink.</choice>		
+		</node>
+
+		<node ID="Relationship">
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+				{{K|Left! Right! Left! Right!}}
+				
+				Does that answer your question?
+			</text>
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+				{{Y|Uncomfortable? How so, friend? I get to share every moment with my favorite person in Qud.}}
+				
+				What Growarow says. Founder knows I could not ask for a better cohead.
+				
+				{{emote|*The two heads briefly nuzzle each other.*}}
+			</text>
+			<choice GotoID="Start">There was something else...</choice>
+			<choice GotoID="End">I will leave you to it then. Live and drink.</choice>	
+		</node>
+
+		<node ID="About">
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+				Up until now, we collected starapples from our herders, and made them sing until jammy.
+
+				{{Y|We used to trade in commodities with the local travelers. We would ask that you excuse our current situation, friend.}}
+
+				{{K|Star! Apples!}}
+			</text>
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+				Will you believe it if we tell you we are a chef? Collecting starapples from our herders, and making them sing until jammy.
+
+				{{Y|We trade in commodities with the local travelers. Does your pack feel too heavy? We have solutions to offer you, friend.}}
+
+				{{cloudy|Whatever you desire, the Growarows are the place to spend freshwater!}}
+			</text>
+			<choice GotoID="Name">I am confused. Are you called Growarow or Growarows?</choice>
+			<choice GotoID="Start">This is an impressive pitch. I had something else to ask...</choice>
+			<choice GotoID="End">I will return if I need anything. Live and drink.</choice>	
+		</node>
+
+		<node ID="Name">
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+				{{emote|*The two larger heads exchange a disheartened look.*}}
+
+				The two of us are the Growarows.
+
+				{{Y|As for our new partner, there is no telling what they will want to be called, friend.}}
+
+				{{K|Grarows!}}
+			</text>
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+				{{emote|*Both heads exchange a knowing look.*}}
+
+				It is quite simple, really. We are called Growarow.
+
+				{{Y|And we are called Growarow, friend.}}
+
+				{{cloudy|Together, we are the Growarows.}}
+			</text>
+			<choice GotoID="Start">I see. My name is =name= -- I wanted to ask you something else.</choice>
+			<choice GotoID="End">Live and drink, Growarows.</choice>	
+		</node>
 	
 </conversation>
 
@@ -162,15 +559,15 @@
 			<choice GotoID="Shrews" IfHaveActiveQuest="Brothers_CatsDogs_CheeseQuest" IfFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Find" IfNotFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">The vermin in the ripening caves are canyon shrews, tinker. They have been feasting on the village's cheese stocks.</choice>
 			<choice GotoID="Reward" IfHaveActiveQuest="Brothers_CatsDogs_CheeseQuest" IfFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">I have handled the matter of the vermin in the ripening caves. They will not trouble the village anymore.</choice>
 		  	<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the matter with village behind the wall?</choice>
-			<choice GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">What do you think of the division between Shik and Spar?</choice>
-			<choice GotoID="Zanya">You do know a human set up camp in front of your workshop, right?</choice>
+			<choice GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What do you think of the division between Shik and Spar?</choice>
+			<choice GotoID="Zanya">You do know someone set up camp in front of your workshop, right?</choice>
   			<choice GotoID="About">What do you do here in Spar?</choice>
 			<choice GotoID="End">Live and drink, feline tinker.</choice>
 		</node>
 	
 		<node ID="Work">
 			<text>
-				Yes, yes, I could use a hand or two. I'll speak plainly for you: what do you know about cheese?
+				Yes, yes, I could use a paw or two. I'll speak plainly for you: what do you know about cheese?
 				
 				{{emote|*=pronouns.Subjective= =verb:report:afterpronoun= =pronouns.possessive= attention to the electronics sitting disassembled on a nearby countertop, not waiting for your answer.*}}
 			</text>
@@ -278,7 +675,7 @@
 			<choice GotoID="GiveMeStuff">I would rather not have battled vermin and get nothing to show for it.</choice>
 		</node>	
 	
-		<node ID="GiveMeStuff" AllowEscape="False">
+		<node ID="GiveMeStuff">
 			<text>			
 				... Obviously.
 				
@@ -292,13 +689,13 @@
 			</choice>
 		</node>		
 
-		<node ID="Division" AllowEscape="False">
+		<node ID="Division" AllowEscape="false">
 			<text>
 				{{emote|*=pronouns.Subjective= =verb:take:afterpronoun= a sudden bitter interest in a disassembled recoiler.*}} 
 
-				The matter? You'll have to ask our good mayor on that, =player.apparentSpecies=. Or even better, head directly to Warden Arendubark. He is standing guard by the central wall -- you cannot miss him.
+				The matter? You'll have to ask our good mayor on that, =player.apparentSpecies=. Or even better, head directly to Warden Arendubark. He is standing guard by the central wall, in the norther outskirts -- you cannot miss him.
 			</text>
-			<choice GotoID="End" StartQuest="Brothers_CatsDogs_MainQuest1">I will ask the Warden for more information, then. In the meantime, live and drink.</choice>	
+			<choice GotoID="End" StartQuest="Brothers_CatsDogs_MainQuest1">I will ask the warden for more information, then. In the meantime, live and drink.</choice>	
 		</node>
 
 		<node ID="Opinion">
@@ -311,13 +708,13 @@
 			<choice GotoID="End">Maybe later -- live and drink.</choice>	
 		</node>	
 
-
-
-
-
-
-
-
+		<node ID="Zanya">
+			<text>
+				Obviously, yes. They help me from time to time -- as it happens, bipedality sometimes proves unexpectantly useful.
+			</text>
+			<choice GotoID="Start">This makes sense. I had another question.</choice>
+			<choice GotoID="End">It does. Live and drink.</choice>	
+		</node>	
 
 		<node ID="About">
 			<text>
@@ -366,7 +763,7 @@
 			</text>
 			<choice GotoID="Work" IfNotHaveQuest="Brothers_CatsDogs_CheeseQuest">Is there work that needs doing?</choice>
 			<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the matter with the other village?</choice>
-			<choice GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">What do you think of the current Shik and Spar situation?</choice>
+			<choice GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What do you think of the current Shik and Spar situation?</choice>
 			<choice GotoID="DefinitelyACat" IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">Huh... I "meow" right back at you, fellow cat.</choice>
 			<choice GotoID="About">What is there to know about Spar?</choice>
 			<choice GotoID="End">I will try to. Live and drink.</choice>
@@ -410,14 +807,14 @@
 			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
 				{{emote|*Zanya =verb:look= left and right before continuing.*}} 
 				
-				Aye, for sure! Our good 'arden's been looking to solve the matter but he could most definitely use a hand or two, meow. Can't investigate much from 'here he's taken root, see?
+				Aye, for sure! Our good 'arden's been looking to solve the matter but he could most definitely use a paw or two, meow. Can't investigate much from 'here he's taken root, see?
 			</text>				
 			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
 				{{emote|*=pronouns.Subjective= =verb:look:affterpronoun= left and right before continuing.*}} 
 				
-				Aye, for sure! Our good 'arden's been looking to solve the matter but he coul' most definitely use a hand or two, meow. Can't investigate much from 'here he's taken root, see?
+				Aye, for sure! Our good 'arden's been looking to solve the matter but he coul' most definitely use a hand or two, meow. Can't investigate much from 'here he's taken root, see? You can find 'im in the northern outskirts.
 			</text>			
-			<choice GotoID="End" StartQuest="Brothers_CatsDogs_MainQuest1">I will talk to the Warden then. In the meantime, live and drink.</choice>
+			<choice GotoID="End" StartQuest="Brothers_CatsDogs_MainQuest1">I will talk to the warden then. In the meantime, live and drink.</choice>
 		</node>		
 	
 		<node ID="Opinion">

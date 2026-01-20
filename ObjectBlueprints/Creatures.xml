@@ -616,6 +616,7 @@
 	<object Name="Brothers_CatsDogs_CatsuitGuy" Inherits="NPC">
 		<part Name="Render" DisplayName="Zanya" Tile="Creatures/catsdogs/catfursuit.png" ColorString="&amp;y" DetailColor="w" RenderString="h" />
 		<part Name="Description" Short="Before you stands the assemblage of humanoid figure and feline garb. =pronouns.Possessive= body is covered with fur poached from Qud's dust-grazers, rethreaded to immaculateness, while =pronouns.possessive= hands wear a mud-dweller's hide. Triangular statements have found their place to a plastifer wreath and adverstise the =pronouns.personTerm='s belonging to felids, bipedal posture notwithstanding." />
+		<tag Name="Species" Value="cat" />
 		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_CatsuitGuy" />
 		<part Name="Brain" Wanders="false" Factions="Spar-100" />
 		<part Name="AISelfPreservation" Threshold="40" />
@@ -701,7 +702,7 @@
 		<tag Name="NoSleep" />
 		<tag Name="Unenslavable" />
 		<tag Name="Merchant" />
-		<xtagGrammar Proper="true" />
+		<xtagGrammar iArticle="the" />
 		<part Name="Interesting" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 		<part Name="Brothers_EvolutiveTile" Stage="1" StageTiles="Creatures/catsdogs/hydrichound1.png, Creatures/catsdogs/dogmerchant2.png, Creatures/catsdogs/dogmerchant3.png, Creatures/catsdogs/hydrichound4.png, Creatures/catsdogs/hydrichound5.png, Creatures/catsdogs/hydrichound6.png, Creatures/catsdogs/hydrichound7.png, Creatures/catsdogs/hydrichound8.png, Creatures/catsdogs/hydrichound9.png, Creatures/catsdogs/hydrichound10.png" />

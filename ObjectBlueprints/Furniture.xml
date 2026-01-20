@@ -31,7 +31,7 @@
 		<part Name="Physics" Weight="10000" FlameTemperature="99999" VaporTemperature="1500" />
 		<stat Name="AV" Value="20" />
 		<stat Name="Hitpoints" Value="6000" />
-		<part Name="Description" Short="A monolith of grave-slab stands witness. Merciful time has smoothed the grooves of mourned name that only subsist in minds left grieving by colossal absence." />
+		<part Name="Description" Short="A monolith of grave-slab stands witness. Merciful time has smoothed the grooves of a mourned name that only subsist in minds left grieving by colossal absence." />
 		<tag Name="NoSparkingQuest" />
 		<tag Name="VaporObject" Value="LavaPuddle" />
 	    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
@@ -61,12 +61,12 @@
 
 	<object Name="Brothers_CatsDogs_Tradesign" Inherits="Sign">
 		<part Name="Render" DisplayName="sign" Tile="Items/sw_sign_goods.bmp" Occluding="false" />
-		<part Name="Chat" Says="Left Head Trading" ShowInShortDescription="true" />
+		<part Name="Chat" Says="Growarow's Trading Emporium" ShowInShortDescription="true" />
 	</object>
 	
 	<object Name="Brothers_CatsDogs_Cooksign" Inherits="Sign">
 		<part Name="Render" DisplayName="sign" Tile="Items/sw_sign_pepper.bmp" Occluding="false" />
-		<part Name="Chat" Says="Right Head Cooking" ShowInShortDescription="true" />
+		<part Name="Chat" Says="Growarow's Preserved Goods" ShowInShortDescription="true" />
 	</object>
 
 	<object Name="Brothers_CatsDogs_Tinkersign" Inherits="Sign">
