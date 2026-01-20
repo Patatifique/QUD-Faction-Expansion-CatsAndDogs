@@ -50,30 +50,6 @@
 	</conversation>
 
 
-	<conversation ID="Brothers_CatsDogs_Catgod">
-		
-		<node ID="Start">
-		  <text>
-			I'm a cat god.
-		  </text>
-		  <choice GotoID="End">True.</choice>
-		</node>
-	
-	</conversation>
-
-
-	<conversation ID="Brothers_CatsDogs_Doggod">
-		
-		<node ID="Start">
-		  <text>
-			I'm a dog god.
-		  </text>
-		  <choice GotoID="End">Very true.</choice>
-		</node>
-	
-	</conversation>
-
-
 	<conversation ID="Brothers_CatsDogs_DogMayor">
 		
 		<node ID="Start">
@@ -121,6 +97,36 @@
 	
 	</conversation>	
 
+
+	<conversation ID="Brothers_CatsDogs_Catgod">
+		
+		<node ID="Start">
+			<text>
+				I'm a cat god.
+			</text>
+			<choice GotoID="Bubumube">True.</choice>
+			<choice GotoID="Activity">True.</choice>
+			<choice GotoID="Worship">True.</choice>
+			<choice GotoID="End">True.</choice>
+		</node>
+	
+	</conversation>
+
+
+	<conversation ID="Brothers_CatsDogs_Doggod">
+		
+		<node ID="Start">
+			<text>
+				I'm a dog god.
+			</text>
+			<choice GotoID="Bubumube">True.</choice>
+			<choice GotoID="Activity">True.</choice>
+			<choice GotoID="Worship">True.</choice>
+			<choice GotoID="End">True.</choice>
+		</node>
+	
+	</conversation>
+	
 
 	<conversation ID="Haddas" Load="Merge">
 		
