@@ -71,7 +71,7 @@ namespace XRL.World.Effects
         {
             if (this.targetIsTrueKin)
             {
-                return "Gain +1 Toughness permanently.";
+                return "+1 Toughness permanently";
             }
             else
             {
