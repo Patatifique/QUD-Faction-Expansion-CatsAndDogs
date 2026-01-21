@@ -21,6 +21,7 @@
 		<part Name="Commerce" Value="350" />
 		<part Name="Food" Message="Your stomach nearly bursts open as the regenerative meat prolifers within!" />
 		<part Name="Description" Short="Fasciculating flesh twitches and recomposes: a mere strip peeled away soon births a pear, in patent ignorance of conservation laws." />
+		<part Name="PreparedCookingIngredient" type="brothersRegen" charges="1" />
 		<part Name="Brothers_VomitOnEat" />
 	</object>
   

@@ -1,0 +1,17 @@
+<objects>
+	<!--
+
+    *********************************
+       Cooking ingredient mappings
+    *********************************
+
+  -->
+
+   <object Name="ProceduralCookingIngredient_brothersRegen" Inherits="IngredientMapping">
+    <tag Name="Units" Value="Brothers_CookingDomainRegen_UnitRegenerationMutationOrToughness" />
+    <tag Name="Description" Value="regeneration and toughness-based" />
+    <tag Name="RandomWeight" Value="100" />
+        <tag Name="RandomHighTierWeight" Value="0" />
+  </object>
+
+</objects>
