@@ -16,8 +16,8 @@ namespace XRL.World.Effects
 
         // Mutant stuff
         public bool wasApplied;
-        public string AddedTier = "1-2";
-        public string BonusTier = "2-3";
+        public string AddedTier = "1";
+        public string BonusTier = "1";
         public int Tier = 1;
         public int moddedAmount;
         public string _MutationDisplayName;
