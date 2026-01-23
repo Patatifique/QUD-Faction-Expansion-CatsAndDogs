@@ -41,10 +41,10 @@
 	<conversation ID="Brothers_CatsDogs_Warden Arendurath">
 		
 		<node ID="Start">
-		  <text>
-			I'm a tree.
-		  </text>
-		  <choice GotoID="End">You're a tree.</choice>
+			<text>
+				I'm a tree.
+			</text>
+			<choice GotoID="End">You're a tree.</choice>
 		</node>
 	
 	</conversation>
@@ -53,10 +53,10 @@
 	<conversation ID="Brothers_CatsDogs_DogMayor">
 		
 		<node ID="Start">
-		  <text>
-			I'm a dog mayor.
-		  </text>
-		  <choice GotoID="End">Very true.</choice>
+			<text>
+				I'm a dog mayor.
+			</text>
+			<choice GotoID="End">Very true.</choice>
 		</node>
 	
 	</conversation>
@@ -65,10 +65,10 @@
 	<conversation ID="Brothers_CatsDogs_CatMayor">
 		
 		<node ID="Start">
-		  <text>
-			I'm a cat mayor.
-		  </text>
-		  <choice GotoID="End">Very true.</choice>
+			<text>
+				I'm a cat mayor.
+			</text>
+			<choice GotoID="End">Very true.</choice>
 		</node>
 	
 	</conversation>
@@ -77,10 +77,10 @@
 	<conversation ID="Brothers_CatsDogs_DogLover">
 		
 		<node ID="Start">
-		  <text>
-			I'm in love with a cat.
-		  </text>
-		  <choice GotoID="End">Cute.</choice>
+			<text>
+				I'm in love with a cat.
+			</text>
+			<choice GotoID="End">Cute.</choice>
 		</node>
 	
 	</conversation>
@@ -89,10 +89,10 @@
 	<conversation ID="Brothers_CatsDogs_CatLover">
 		
 		<node ID="Start">
-		  <text>
-			I'm in love with a dog.
-		  </text>
-		  <choice GotoID="End">Scandalous.</choice>
+			<text>
+				I'm in love with a dog.
+			</text>
+			<choice GotoID="End">Scandalous.</choice>
 		</node>
 	
 	</conversation>	
@@ -102,14 +102,51 @@
 		
 		<node ID="Start">
 			<text>
-				I'm a cat god.
+				{{emote|*Miramihamia the Feline God lazily =verb:open= one eye, awakened from =pronouns.possessive= nap.*}}
+				
+				Hmm? Wakest thou me?
 			</text>
-			<choice GotoID="Bubumube">True.</choice>
-			<choice GotoID="Activity">True.</choice>
-			<choice GotoID="Worship">True.</choice>
-			<choice GotoID="End">True.</choice>
+			<choice GotoID="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Investigate">O goddess, I am sorry to disturb Your rest, but I am looking for information on a traveler named Bubumube. They who would have spent some time in Your abode.</choice>
+			<choice GotoID="Activity">How do You spend Your days here?</choice>
+			<choice GotoID="Worship">Are the pilgrims making their way here not disturbing You?</choice>
+			<choice GotoID="End">Live and drink, o goddess.</choice>
 		</node>
 	
+		<node ID="Bubumube">
+			<text>			
+				I did, in very truth. What then of them?
+			</text>
+			<choice GotoID="DogOrCat">I need to know whether they were fashioned after one of Your followers or not.</choice>
+			<choice GotoID="End">I am not sure how to word my question, but I will be back. Live and drink, o goddess.</choice>
+		</node>	
+	
+		<node ID="DogOrCat" AllowEscape="false">
+			<text>			
+				Nay, not in truth; for they were a large and shag-hair’d creature, round ear'd and arm'd with unsheath'd claws.
+				
+				{{emote|*=pronouns.Subjective= =verb:yawn:afterpronoun= and =verb:settle:afterpronoun= on the ground again.*}}
+
+				Away with thee, and leave me now, for rest I need.
+			</text>
+			<choice GotoID="End">Thank you, o goddess. I shall do my best not to disturb You again.</choice>
+		</node>		
+	
+		<node ID="Activity">
+			<text>			
+				Fain would I sleep, were it not for interrupters -- think thyself blest, that thou meet'st me in gracious disposition.
+			</text>
+			<choice GotoID="Start">I shall impose just for a moment longer, if You would allow me.</choice>
+			<choice GotoID="End">I will leave You to it then. Live and drink, o goddess.</choice>
+		</node>
+	
+		<node ID="Worship">
+			<text>			
+				With fans they soothe me, and at my paws they lay their tribute: wherefore should they disturb me?
+			</text>
+			<choice GotoID="Start">Forgive I asked, then. I just have one more question for You.</choice>
+			<choice GotoID="End">I will take my leave, if You would allow me. Live and drink. Live and drink, o goddess.</choice>
+		</node>
+
 	</conversation>
 
 
