@@ -228,9 +228,9 @@
 			<text>			
 				{{emote|*A shiver runs through the foliage.*}}
 				
-				Aye. None left with them; but seedlings confided in me they petitioned the Sleeper and the Mourner for help. They would remember. 
+				Aye. None left with them; but seedlings confided in me they petitioned Miramihamia the Sleeper and Boroworof the Mourner for help. They would remember. 
 				
-				HA! Know the path to them, now.
+				HA! Know the path to them if you did not already.
 			</text>
 			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Thank you, mayor. You were of great help.</choice>
 		</node>
