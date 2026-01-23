@@ -128,7 +128,7 @@
 
 				Away with thee, and leave me now, for rest I need.
 			</text>
-			<choice GotoID="End">Thank you, o goddess. I shall do my best not to disturb You again.</choice>
+			<choice GotoID="End">Thank You, o goddess. I shall do my best not to disturb You again.</choice>
 		</node>		
 	
 		<node ID="Activity">
@@ -144,7 +144,7 @@
 				With fans they soothe me, and at my paws they lay their tribute: wherefore should they disturb me?
 			</text>
 			<choice GotoID="Start">Forgive I asked, then. I just have one more question for You.</choice>
-			<choice GotoID="End">I will take my leave, if You would allow me. Live and drink. Live and drink, o goddess.</choice>
+			<choice GotoID="End">I will take my leave, if You would allow me. Live and drink, o goddess.</choice>
 		</node>
 
 	</conversation>
@@ -154,13 +154,49 @@
 		
 		<node ID="Start">
 			<text>
-				I'm a dog god.
+				{{emote|*Boroworof the Canine God =verb:stay= silent, deep in mournful contemplation.*}}
 			</text>
-			<choice GotoID="Bubumube">True.</choice>
-			<choice GotoID="Activity">True.</choice>
-			<choice GotoID="Worship">True.</choice>
-			<choice GotoID="End">True.</choice>
+			<choice GotoID="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Investigate">I intrude but for a moment: I am after a traveler named Bubumube, who would have spent some of their days here. Do You remember them?</choice>
+			<choice GotoID="Disturb">I do not with to disturb You -- is this a bad moment?</choice>
+			<choice GotoID="Pilgrims">I did not see any pilgrims on my way there...</choice>
+			<choice GotoID="End">Live and drink, o divine.</choice>
 		</node>
+	
+		<node ID="Bubumube">
+			<text>			
+				{{emote|*=pronouns.Subjective= =verb:nod:afterpronoun= slowly, gaze fixed on the large tombstone.*}}
+			</text>
+			<choice GotoID="DogOrCat">I need to know if they seemed like one of Your followers.</choice>
+			<choice GotoID="End">I can see I am overstepping. Live and drink, o divine.</choice>
+		</node>	
+	
+		<node ID="DogOrCat" AllowEscape="false">
+			<text>						
+				{{emote|*=pronouns.Subjective= voice croaks hoarsely, seldom used yet melodic.*}}
+
+				Hardly called one of Mine,
+				Wizened to walk alone,
+				By the river they caught,
+				Gleaming mail of swimmers.
+			</text>
+			<choice GotoID="End">I see. Thank You, o divine. I will take my leave now.</choice>
+		</node>		
+	
+		<node ID="Disturb">
+			<text>			
+				{{emote|*=pronouns.Possessive= colossal paws set in grooves carved by habit in front of the memorial.*}}
+			</text>
+			<choice GotoID="Start">I see. I will not stay long then, but have other questions.</choice>
+			<choice GotoID="End">I apologize, and will be going. Live and drink, o divine.</choice>
+		</node>
+	
+		<node ID="Pilgrims">
+			<text>			
+				{{emote|*=pronouns.Possessive= melancholic gaze turns toward the set of graves laid around the cave.*}}
+			</text>
+			<choice GotoID="Start">Grim prospects. I just have one more question for You.</choice>
+			<choice GotoID="End">I should go before meeting the same fate. Live and drink, o divine.</choice>
+		</node>	
 	
 	</conversation>
 	
