@@ -15,7 +15,7 @@ namespace Brothers.CatsAndDogs
 
             var secret = builder.AddSecret(
                 zoneID,
-                "Boroworof, Canine God's Shrine",
+                "the mourning cave of {{M|Boroworof, Canine God}}",
                 new string[2] { "lair", "dogs" },
                 "Lairs",
                 "$brothers_doggod_lair"
@@ -38,7 +38,7 @@ namespace Brothers.CatsAndDogs
 
 
             // You can also set various properties on the zone, if you wish.
-            zoneManager.SetZoneName(zoneID, "lair of Boroworof, Canine God", Article: "the", Proper: true);
+            zoneManager.SetZoneName(zoneID, "mourning cave of Boroworof, Canine God", Article: "the", Proper: true);
             zoneManager.SetZoneIncludeStratumInZoneDisplay(zoneID, false);
             zoneManager.SetZoneProperty(zoneID, "NoBiomes", "Yes");
         }

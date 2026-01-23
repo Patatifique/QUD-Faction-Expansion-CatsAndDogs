@@ -15,7 +15,7 @@ namespace Brothers.CatsAndDogs
 
             var secret = builder.AddSecret(
                 zoneID,
-                "Miramihamia, Feline God's Shrine",
+                "the napping spot of {{M|Miramihamia, Feline God}}",
                 new string[2] { "lair", "cats" },
                 "Lairs",
                 "$brothers_catgod_lair"
@@ -38,7 +38,7 @@ namespace Brothers.CatsAndDogs
 
 
             // You can also set various properties on the zone, if you wish.
-            zoneManager.SetZoneName(zoneID, "lair of Miramihamia, Feline God", Article: "the", Proper: true);
+            zoneManager.SetZoneName(zoneID, "napping spot of Miramihamia, Feline God", Article: "the", Proper: true);
             zoneManager.SetZoneIncludeStratumInZoneDisplay(zoneID, false);
             zoneManager.SetZoneProperty(zoneID, "NoBiomes", "Yes");
         }
