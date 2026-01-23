@@ -22,6 +22,9 @@ namespace Brothers.CatsAndDogs
             );
 
             var zoneManager = The.ZoneManager;
+            
+            Faction faction = Factions.Get("Dogs");
+            faction.HolyPlaces.Add(zoneID);
 
 
             zoneManager.SetZoneProperty(zoneID, "SkipTerrainBuilders", true);

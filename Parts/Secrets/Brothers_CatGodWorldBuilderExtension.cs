@@ -24,6 +24,9 @@ namespace Brothers.CatsAndDogs
             var zoneManager = The.ZoneManager;
 
 
+            Faction faction = Factions.Get("Cats");
+            faction.HolyPlaces.Add(zoneID);
+
             zoneManager.SetZoneProperty(zoneID, "SkipTerrainBuilders", true);
             zoneManager.AddZonePostBuilder(zoneID, "MapBuilder", "FileName", "Brothers_ShrineCat.rpm");
 
