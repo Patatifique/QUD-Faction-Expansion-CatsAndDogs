@@ -74,59 +74,76 @@
 	</conversation>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<conversation ID="Brothers_CatsDogs_DogLover">
 		
-<node ID="Start">
+		<node ID="Start">
 			<text Priority="-1">
-				Have you seen a cat?
+				{{emote|*=pronouns.Subjective= =verb:seem:afterpronoun= lost in thought.*}}
+				
+				Aye, a voice so melodic, me heart is mourning when I cannae hear it. Tell me, stranger, have ye peered the cat they call Rrromaw?
 			</text>
 			<text IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Gifts">			
-				Do you have what I need?
+				{{emote|*=pronouns.Possessive= ears perk up.*}}
+
+				Have ye come bearing the wee gifts I need?
 			</text>
 			<text IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Gifts">			
-				Have you delivered the invite?
+				=name=! Did ye deliver me note? What did Rrromaw say?			
 			</text>
 			<text IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Invite">
-				I wonder if someone is gonna invite me.
+				{{emote|*=pronouns.Subjective= =verb:mutter:afterpronoun= to =pronouns.reflexive=.*}}
+				
+				The upcoming festival... What to do...
 			</text>
 			<text IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Invite">
-				Take my answer back to the cat.
+				{{emote|*=pronouns.Subjective= =verb:look:afterpronoun= at you expectantly.*}}			
+				
+				I beg of ye, =name=, take me answer back to Rrromaw! 'Tis a yes, a thousand times if ye need them!				
 			</text>
 			<text IfFinishedQuest="Brothers_CatsDogs_DogLoverQuest">
-				Thanks for delivering the invite.
+				{{emote|*=pronouns.Subjective= excitedly =verb:wag:afterpronoun= =pronouns.possessive= tail when seeing you.*}}
+								
+				Aye, 'tis me good friend =name=! I cannae thank ye enough for all ye did.
 			</text>			
 			<text IfFinishedQuest="Brothers_CatsDogs_CatLoverQuest">
-				I can't wait for the festival.
+				The festival cannae come soon enough, now. There is nae thanking you enough for yer work, friend!
 			</text>
-			<choice GotoID="Brief" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_CatLoverSeen">Yes.</choice>
-			<choice GotoID="Gifts" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Gifts" IfHaveLiquid="wine">I have wine.</choice>
-			<choice GotoID="Date" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfHaveItem="Brothers_CatsDogs_LoveNote">You've got a date.</choice>
-			<choice GotoID="Debrief" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Invite">Invitation delivered.</choice>			
-			<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What's the matter with the other village?</choice>
-			<choice GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What do you think of the current situation?</choice>
-			<choice GotoID="Family">Who's your parent?</choice>	
-			<choice GotoID="End">Scandalous.</choice>
+			<choice GotoID="Brief" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_CatLoverSeen">As a matter of fact I have, yes. Why do you want to know?</choice>
+			<choice GotoID="Gifts" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Gifts" IfHaveLiquid="wine">I have wine, for starters. As for gems...</choice>
+			<choice GotoID="Date" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfHaveItem="Brothers_CatsDogs_LoveNote">I come bearing a message: you have got yourself a proper date.</choice>
+			<choice GotoID="Debrief" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Invite">Great news: I have delivered your invitation to Rrromaw, and it has been accepted!</choice>			
+			<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is going on with the other village?</choice>
+			<choice GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What is your stance on the division between Shik and Spar?</choice>
+			<choice GotoID="Family">Are you related to Shik's mayor?</choice>	
+			<choice GotoID="End">Live and drink, smitten dog.</choice>
 		</node>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 		<node ID="Brief">
 			<text>			
@@ -283,7 +300,7 @@
 	<conversation ID="Brothers_CatsDogs_CatLover">
 		
 		<node ID="Start">
-			<text Priority="-1">
+			<text Priority="-1">		
 				Have you seen a dog?
 			</text>
 			<text IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts">			
