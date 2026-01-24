@@ -86,16 +86,118 @@
 	</conversation>
 
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	<conversation ID="Brothers_CatsDogs_CatLover">
 		
 		<node ID="Start">
-			<text>
-				I'm in love with a dog.
+			<text Priority="-1">
+				Have you seen a dog?
 			</text>
+			<text IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts">			
+				Do you have what I need?
+			</text>
+			<text IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts">			
+				Have you delivered the invite?
+			</text>
+			<text IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Invite">
+				I wonder if someone is gonna invite me.
+			</text>
+			<text IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Invite">
+				Take my answer back to the dog.
+			</text>
+			<text IfFinishedQuest="Brothers_CatsDogs_CatLoverQuest">
+				Thanks for delivering the invite.
+			</text>			
+			<text IfFinishedQuest="Brothers_CatsDogs_DogLoverQuest">
+				I can't wait for the festival.
+			</text>
+			<choice GotoID="Brief" IfNotHaveQuest="Brothers_CatsDogs_DogLoverQuest" IfNotHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfNotFinishedQuest="Brothers_CatsDogs_CatLoverQuest" IfHaveState="Brothers_CatsDogs_DogLoverSeen">Yes.</choice>
+			<choice GotoID="Gifts" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts" IfHaveLiquid="wine">I have wine.</choice>
+			<choice GotoID="Date" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfHaveItem="Brothers_CatsDogs_LoveNote">You've got a date.</choice>
+			<choice GotoID="Debrief" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Invite">Invitation delivered.</choice>			
+			<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What's the matter with the other village?</choice>
+			<choice GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What do you think of the current situation?</choice>
+			<choice GotoID="Family">Who's your parent?</choice>	
 			<choice GotoID="End">Scandalous.</choice>
 		</node>
 	
+		<node ID="Brief">
+			<text>			
+				Dog is cute, I need gifts.
+			</text>
+			<choice GotoID="Why">Why don't you go yourself?</choice>
+			<choice GotoID="Secret">Does your parent know about this?</choice>
+			<choice GotoID="WhatGifts">Okay sure what do you need.</choice>
+			<choice GotoID="End">Maybe later.</choice>
+		</node>		
+	
+		<node ID="Why">
+			<text>			
+				Wall.
+			</text>
+			<choice GotoID="Secret">Does your parent know about this?</choice>
+			<choice GotoID="WhatGifts">Okay sure what do you need.</choice>
+			<choice GotoID="End">Maybe later.</choice>
+		</node>		
+	
+		<node ID="Secret">
+			<text>			
+				Of course not you're crazy.
+			</text>
+			<choice GotoID="Why">Why don't you go yourself?</choice>
+			<choice GotoID="WhatGifts">Okay sure what do you need.</choice>
+			<choice GotoID="End">Maybe later.</choice>
+		</node>		
+		
+		<node ID="WhatGifts">
+			<text>			
+				Gemstone and wine.
+			</text>
+			<choice GotoID="End" StartQuest="Brothers_CatsDogs_CatLoverQuest">Okay I'll find this.</choice>
+			<choice GotoID="End">Maybe later.</choice>
+		</node>
+
+		<node ID="Gifts">
+			<text>			
+				And gemstones?
+			</text>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Agate" UseLiquid="wine" TakeItem="Polished Agate">An agate.</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Topaz" UseLiquid="wine" TakeItem="Polished Agate">A topaz.</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Jasper" UseLiquid="wine" TakeItem="Polished Agate">A jasper.</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Amethyst" UseLiquid="wine" TakeItem="Polished Agate">An amethyst.</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Sapphire" UseLiquid="wine" TakeItem="Polished Agate">A sapphire.</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Emerald"UseLiquid="wine" TakeItem="Polished Agate">An emerald.</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Peridot"UseLiquid="wine" TakeItem="Polished Agate">A peridot.</choice>
+			<choice GotoID="End">Maybe later.</choice>
+		</node>
+
+		<node ID="HaveGifts" AllowEscape="false">
+			<text>			
+				And gemstones?
+			</text>
+			<choice GotoID="End">Maybe later.</choice>
+		</node>
+
+
+	
 	</conversation>	
+
+
+
+
+
+
+
+
 
 
 	<conversation ID="Brothers_CatsDogs_Catgod">

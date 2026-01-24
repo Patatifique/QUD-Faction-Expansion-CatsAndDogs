@@ -71,16 +71,16 @@
 	   HagiographCategory="Trysts"
 	   Gospel="Standing in the ruins of a colossal wall, =name= cemented =player.possessive= friendship with the bears of Shikspar by marrying into the royal couple Oof Growf and Rrromaw.">
 
-		<step ID="Note" Name="Deliver the Message" XP="500">
-			<text>Carry Oof Growf's note to Rrromaw, in Spar.</text>
+		<step ID="Gifts" Name="Help Prepare a Date" XP="1000">
+			<text>Return to Oof Growf in Shik with a dram of wine and a smooth gemstone.</text>
 		</step>
 
-		<step ID="Gifts" Name="Help Prepare the Date" XP="1500">
-			<text>Return to Rrromaw with flowers, a dram of wine, and a smooth gemstone.</text>
+		<step ID="Invite" Name="Deliver the Invitation" XP="1000">
+			<text>Deliver a date invitation to Rrromaw in Spar.</text>
 		</step>
 
-		<step ID="Debrief" Name="Deliver the Invitation" XP="1000">
-			<text>Inform Oof Growf of the date's time and location.</text>
+		<step ID="Debrief" Name="Report Back to Oof Growf" XP="1500">
+			<text>Inform Rrromaw the date is secured.</text>
 		</step>
 		
 	</quest>
@@ -92,16 +92,16 @@
 	   HagiographCategory="Trysts"
 	   Gospel="Standing in the ruins of a colossal wall, =name= cemented =player.possessive= friendship with the bears of Shikspar by marrying into the royal couple Oof Growf and Rrromaw.">
 
-		<step ID="Note" Name="Deliver the Message" XP="500">
-			<text>Carry Rrromaw's note to Oof Growf, in Shik.</text>
+		<step ID="Gifts" Name="Help Prepare a Date" XP="1000">
+			<text>Return to Rrromaw in Spar with a dram of wine and a smooth gemstone.</text>
 		</step>
 
-		<step ID="Gifts" Name="Help Prepare the Date" XP="1500">
-			<text>Return to Oof Growf with flowers, a dram of wine, and a smooth gemstone.</text>
+		<step ID="Invite" Name="Deliver the Invitation" XP="1000">
+			<text>Deliver a date invitation to Oof Growf in Shik.</text>
 		</step>
-
-		<step ID="Debrief" Name="Deliver the Invitation" XP="1000">
-			<text>Inform Rrromaw of the date's time and location.</text>
+		
+		<step ID="Debrief" Name="Report Back to Rrromaw" XP="1500">
+			<text>Inform Rrromaw the date is secured.</text>
 		</step>
 		
 	</quest>
