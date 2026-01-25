@@ -6,13 +6,13 @@
 	<conversation ID="Brothers_CatsDogs_Hyrkhound Pet">
 		
 		<node ID="Start">
-		  <text>
-			{{emote|*Jerenah =verb:turn= in circles before lying down.*}}~
-			{{emote|*Jerenah =verb:chase= =pronouns.possessive= tail.*}}~
-			{{emote|*Jerenah =verb:lap= some drool right back up.*}}~
-			{{emote|*Jerenah =verb:get= up on =pronouns.possessive= hind legs.*}}
-		  </text>
-		  <choice GotoID="End">Live and drool, friendly hyrkhound.</choice>
+			<text>
+				{{emote|*Jerenah =verb:turn= in circles before lying down.*}}~
+				{{emote|*Jerenah =verb:chase= =pronouns.possessive= tail.*}}~
+				{{emote|*Jerenah =verb:lap= some drool right back up.*}}~
+				{{emote|*Jerenah =verb:get= up on =pronouns.possessive= hind legs.*}}
+			</text>
+			<choice GotoID="End">Live and drool, friendly hyrkhound.</choice>
 		</node>
 	
 	</conversation>
@@ -21,19 +21,19 @@
 	<conversation ID="Brothers_CatsDogs_Brainkitty Pet">
 		
 		<node ID="Start">
-		  <text>
-			Kids these days have it easy: when I was young, glotrot used to spoil your whole water supply.~
-			Back in my days, people knew the difference between daggers and short swords.~
-			Young'uns today complicate everything... The Moon what now? They're called the Deathlands, darn it!~
-			Ambidextry everywhere... Way back when, this used to really mean something.~
-			Humph. Who are you again?~
-			{{emote|*Alther =verb:concentrate= intensely for a few seconds.*}}
-		  </text>
-		  <choice GotoID="End">Live and drink, elderly feline.</choice>
+			<text>
+				Kids these days have it easy: when I was young, glotrot used to spoil your whole water supply.~
+				Back in my days, people knew the difference between daggers and short swords.~
+				Young'uns today complicate everything... The Moon what now? They're called the Deathlands, darn it!~
+				Ambidextry everywhere... Way back when, this used to really mean something.~
+				Humph. Who are you again?~
+				{{emote|*Alther =verb:concentrate= intensely for a few seconds.*}}
+			</text>
+			<choice GotoID="End">Live and drink, elderly feline.</choice>
 		</node>
 	
 	</conversation>
-  
+
 
 <!--Important NPCs-->
 
@@ -93,7 +93,7 @@
 			<text IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Invite">
 				{{emote|*=pronouns.Subjective= =verb:mutter:afterpronoun= to =pronouns.reflexive=.*}}
 				
-				The upcoming festival... What to do...
+				A wee wall issue... I cannae find a solution...
 			</text>
 			<text IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Invite">
 				{{emote|*=pronouns.Subjective= =verb:look:afterpronoun= at you expectantly.*}}			
@@ -109,13 +109,16 @@
 				The festival cannae come soon enough, now. There is nae thanking you enough for yer work, friend!
 			</text>
 			<choice GotoID="Brief" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_CatLoverSeen">As a matter of fact I have, yes. Why do you want to know?</choice>
-			<choice GotoID="Gifts" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Gifts" IfHaveLiquid="wine">I have wine, for starters. As for gems...</choice>
+			<choice GotoID="Gifts" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Gifts" IfHaveLiquid="wine">I have everything you asked for.</choice>
 			<choice GotoID="Date" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfHaveItem="Brothers_CatsDogs_LoveNote">I come bearing a message: you have got yourself a proper date.</choice>
 			<choice GotoID="Debrief" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Invite">Great news: I have delivered your invitation to Rrromaw, and it has been accepted!</choice>			
 			<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is going on with the other village?</choice>
 			<choice GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What is your stance on the division between Shik and Spar?</choice>
 			<choice GotoID="Family">Are you related to Shik's mayor?</choice>	
-			<choice GotoID="End">Live and drink, smitten dog.</choice>
+			<choice GotoID="End">
+				<text IfHaveState="Brothers_CatsDogs_DogLoverSeen">Live and drink, infatuated dog.</text>
+				<text IfNotHaveState="Brothers_CatsDogs_DogLoverSeen">Sadly, I have not. Live and drink.</text>
+			</choice>
 		</node>
 	
 		<node ID="Brief">
@@ -154,7 +157,7 @@
 		
 		<node ID="WhatGifts">
 			<text>			
-				Aye, at once! Cannae invite the object of one's affection without a proper gift, heh? A dram of wine, to give me pluck -- and I think only the most flawless of gems would befit Rrromaw.
+				Well, 'tis a proper offering I'm after! Cannae invite the object of one's affection without a proper gift, heh? A dram of wine, to give me pluck -- and I think only the most flawless of gems would befit Rrromaw.
 			</text>
 			<choice GotoID="End" StartQuest="Brothers_CatsDogs_DogLoverQuest">Wine for you, and a polished gemstone. I will be back with those, Oof Growf.</choice>
 			<choice GotoID="End">I cannot afford to go look for gemstones right now. Live and drink.</choice>
@@ -164,15 +167,15 @@
 			<text>			
 				{{emote|=pronouns.Subjective= =verb:look:afterpronoun= up expectantly.*}}
 				
-				Aye, liquid bravery! And per chance, a gem that would suit Rrromaw?
+				'Tis true? Liquid bravery and a gem that would suit Rrromaw?
 			</text>
-			<choice GotoID="HaveGifts" IfHaveItem="Polished Agate" UseLiquid="wine" TakeItem="Polished Agate">A dram of wine for you, and an agate, beautiful as the night sky. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
-			<choice GotoID="HaveGifts" IfHaveItem="Polished Topaz" UseLiquid="wine" TakeItem="Polished Topaz">A dram of wine for you, and a topaz yet outshined by your affection. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
-			<choice GotoID="HaveGifts" IfHaveItem="Polished Jasper" UseLiquid="wine" TakeItem="Polished Jasper">A dram of wine for you, and a jasper, befitting of your fiery passion. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
-			<choice GotoID="HaveGifts" IfHaveItem="Polished Amethyst" UseLiquid="wine" TakeItem="Polished Amethyst">A dram of wine for you, and an amethyst, the shade of a bright dusk. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
-			<choice GotoID="HaveGifts" IfHaveItem="Polished Sapphire" UseLiquid="wine" TakeItem="Polished Sapphire">A dram of wine for you, and a sapphire, for a love more precious than freshwater. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
-			<choice GotoID="HaveGifts" IfHaveItem="Polished Emerald" UseLiquid="wine" TakeItem="Polished Emerald">A dram of wine for you, and an emerald, a hue rich as the deep jungles. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
-			<choice GotoID="HaveGifts" IfHaveItem="Polished Peridot" UseLiquid="wine" TakeItem="Polished Peridot">A dram of wine for you, and a peridot, facets as bright as your love. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Agate" UseLiquid="wine" TakeItem="Polished Agate">A dram of wine for you, and for your love an agate, beautiful as the night sky. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Topaz" UseLiquid="wine" TakeItem="Polished Topaz">A dram of wine for you, and for your love a topaz yet outshined by your affection. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Jasper" UseLiquid="wine" TakeItem="Polished Jasper">A dram of wine for you, and for your love a jasper, befitting of your fiery passion. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Amethyst" UseLiquid="wine" TakeItem="Polished Amethyst">A dram of wine for you, and for your love an amethyst, the shade of a bright dusk. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Sapphire" UseLiquid="wine" TakeItem="Polished Sapphire">A dram of wine for you, and for your love a sapphire, for a devotion more precious than freshwater. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Emerald" UseLiquid="wine" TakeItem="Polished Emerald">A dram of wine for you, and for your love an emerald with a hue rich as the deep jungles. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Peridot" UseLiquid="wine" TakeItem="Polished Peridot">A dram of wine for you, and for your love a peridot, facets as bright as your fondness. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
 			<choice GotoID="End">I still need to think about it. Live and drink, Oof Growf.</choice>
 		</node>
 
@@ -192,7 +195,7 @@
 				
 				{{emote|=pronouns.Subjective= =verb:rummage:afterpronoun= through =pronouns.possessive= belongings, and =verb:put:afterpronoun= a carefully folded note in your hand.*}}
 
-				There ye go, =name=. All that's left now is to invite Rrromaw to a wee dance where I will come bearing the gift ye got. 
+				There ye go, =name=. All that's left now is to invite Rrromaw to elope to a wee dance where I will come bearing the gift ye got. 
 			</text>
 			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_DogLoverQuest~Gifts" GiveItem="Brothers_CatsDogs_LoveNote">I am on my way. Live and drink, Oof Growf.</choice>
 		</node>
@@ -209,7 +212,7 @@
 		
 		<node ID="Delivered" AllowEscape="false">
 			<text>			
-				{{emote|After retrieveing the carefully folded note, =pronouns.subjective= =verb:read:afterpronoun= it twice: precipitately at first, then more slowly once the initial shock has subsided.*}}
+				{{emote|After retrieving the carefully folded note, =pronouns.subjective= =verb:read:afterpronoun= it twice: precipitately at first, then more slowly once the initial shock has subsided.*}}
 				
 				Rrromaw! The hearthrob from Spar! The melodic voice that's been haunting me dreams e'er since I heard it first! Of course I'll be there, battling sultans if needs be!
 			</text>
@@ -258,232 +261,195 @@
 	</conversation>
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	<conversation ID="Brothers_CatsDogs_CatLover">
 		
 		<node ID="Start">
 			<text Priority="-1">		
-				Have you seen a dog?
-			</text>
+				{{emote|*=pronouns.Subjective= =verb:fidget:afterpronoun= restlessly, unable to stay put.*}}
+				
+				What to do, what to do... I could maybe... No I can't! Wait, you there! Do you come from Shik? Have you seen the dog called Oof Growf?</text>
 			<text IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts">			
-				Do you have what I need?
+				{{emote|=pronouns.Subjective= =verb:pace:afterpronoun= relentlessly.}}
+				
+				Oh, please, please, tell me you have everything! What if someone invite Oof Growf before I do?
 			</text>
 			<text IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts">			
-				Have you delivered the invite?
+				Oh =name=, I shall surely faint before the day is done. Have you delivered the invite? What did Oof Growf say?
 			</text>
 			<text IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Invite">
-				I wonder if someone is gonna invite me.
+				{{emote|The tip of =pronouns.possessive= ears go pink as you adress =pronouns.objective=.}}
+				
+				Oh? I think you must want to speak with the mayor -- she is right over there.
 			</text>
 			<text IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Invite">
-				Take my answer back to the dog.
+				{{emote|=pronouns.Subjective= =verb:knead:afterpronoun= the ground in impatience.}}
+				
+				You've not forgotten my answer, have you? I'm sorry... It's a yes, of course! 
 			</text>
 			<text IfFinishedQuest="Brothers_CatsDogs_CatLoverQuest">
-				Thanks for delivering the invite.
+				{{emote|*=pronouns.Subjective= =verb:blink:afterpronoun= slowly in your direction.*}}
+								
+				Oh, =name=, it is you! If you ever need help arranging a date or any get-together of your own, you can always count on me!
 			</text>			
 			<text IfFinishedQuest="Brothers_CatsDogs_DogLoverQuest">
-				I can't wait for the festival.
+				Is the bow fine? Is it too much? I have to master wearing it before the festival...
 			</text>
-			<choice GotoID="Brief" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_DogLoverSeen">Yes.</choice>
-			<choice GotoID="Gifts" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts" IfHaveLiquid="wine">I have wine.</choice>
-			<choice GotoID="Date" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfHaveItem="Brothers_CatsDogs_LoveNote">You've got a date.</choice>
-			<choice GotoID="Debrief" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Invite">Invitation delivered.</choice>			
-			<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What's the matter with the other village?</choice>
-			<choice GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What do you think of the current situation?</choice>
-			<choice GotoID="Family">Who's your parent?</choice>	
-			<choice GotoID="End">Scandalous.</choice>
+			<choice GotoID="Brief" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_DogLoverSeen">As a matter of fact I have, yes. Why do you want to know?.</choice>
+			<choice GotoID="Gifts" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts" IfHaveLiquid="wine">Don't worry, I have what you asked for.</choice>
+			<choice GotoID="Date" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfHaveItem="Brothers_CatsDogs_LoveNote">I come bearing a message: you have got yourself a proper date.</choice>
+			<choice GotoID="Debrief" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Invite">Great news: I have delivered your invitation to Oof Growf, and it has been accepted!</choice>			
+			<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is going between Shik and Sp...</choice>
+			<choice GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What is your stance on the division between Shik and Spar?</choice>
+			<choice GotoID="Family">Are you related to Spar's mayor?</choice>	
+			<choice GotoID="End">
+				<text IfHaveState="Brothers_CatsDogs_DogLoverSeen">Live and drink, enamored cat.</text>
+				<text IfNotHaveState="Brothers_CatsDogs_DogLoverSeen">I cannot say I have, but I must go. Live and drink.</text>
+			</choice>
 		</node>
 	
 		<node ID="Brief">
 			<text>			
-				Dog is cute, I need gifts.
+				{{emote|*=pronouns.Subjective= =verb:blush:afterpronoun= and =verb:lean:afterpronoun= forward, whispering.*}}
+				
+				I've heard travelers accounts of Oof Growf: wide-chested and unrelenting, reliable and trustworthy... Tell me, is everything they say true? 
+				
+				... Wait, you don't need to tell me. I've made up my mind already! Is it alright if I ask you for help? Please? I need the invitation to the Ut yara Ux festival to reach the object of all my affections...
 			</text>
-			<choice GotoID="Why">Why don't you go yourself?</choice>
-			<choice GotoID="Secret">Does your parent know about this?</choice>
-			<choice GotoID="WhatGifts">Okay sure what do you need.</choice>
-			<choice GotoID="End">Maybe later.</choice>
+			<choice GotoID="Why">Why do you need my help? Can't you take your invitation to Oof Growf yourself?</choice>
+			<choice GotoID="Secret">I'm not sure I understand why you feel the need to be so secretive.</choice>
+			<choice GotoID="WhatGifts">Before I agree to anything, what do you need me to do?</choice>
+			<choice GotoID="End">I need to think about this. Live and drink.</choice>
 		</node>		
 	
 		<node ID="Why">
 			<text>			
-				Wall.
+				I huh... I cannot cross the wall between Shik and Spar, see? Well, I could, but I can't...
 			</text>
-			<choice GotoID="Secret">Does your parent know about this?</choice>
-			<choice GotoID="WhatGifts">Okay sure what do you need.</choice>
-			<choice GotoID="End">Maybe later.</choice>
+			<choice GotoID="Secret">I'm not sure I understand why you feel the need to be so secretive.</choice>
+			<choice GotoID="WhatGifts">Before I agree to anything, what do you need me to do?</choice>
+			<choice GotoID="End">I need to think about this. Live and drink.</choice>
 		</node>		
 	
 		<node ID="Secret">
 			<text>			
-				Of course not you're crazy.
+				{{emote|*The hair on =pronouns.possessive= back stands up.*}}
+				
+				Mother can't know about this... I'm not sure what would happen if she did, but I am not risking it!
 			</text>
-			<choice GotoID="Why">Why don't you go yourself?</choice>
-			<choice GotoID="WhatGifts">Okay sure what do you need.</choice>
-			<choice GotoID="End">Maybe later.</choice>
+			<choice GotoID="Why">Why do you need my help? Can't you take your invitation to Oof Growf yourself?</choice>
+			<choice GotoID="WhatGifts">Before I agree to anything, what do you need me to do?</choice>
+			<choice GotoID="End">I need to think about this. Live and drink.</choice>
 		</node>		
 	
 		
 		<node ID="WhatGifts">
 			<text>			
-				Gemstone and wine.
+				Oh, of course, of course... Can't agree to anything you're not informed of, can you? Or I supposed you could. Am I rambling? 
+				
+				{{emote|*=pronouns.Subjective= =verb:take:afterpronoun= a moment to recenter =pronouns.reflexive=.*}}
+				
+				Something precious, and rare -- I'm thinking only the most flawless gemstone would do. And huh... Some wine. For the nerves, Founder knows I will need some.
 			</text>
-			<choice GotoID="End" StartQuest="Brothers_CatsDogs_CatLoverQuest">Okay I'll find this.</choice>
-			<choice GotoID="End">Maybe later.</choice>
+			<choice GotoID="End" StartQuest="Brothers_CatsDogs_CatLoverQuest">A smooth gemstone, and some wine for you. I will be back in no time, Rrromaw.</choice>
+			<choice GotoID="End">I cannot afford to go look for gemstones right now. Live and drink.</choice>
 		</node>
 
 		<node ID="Gifts">
 			<text>			
-				And gemstones?
+				{{emote|*=pronouns.Possessive= ears perk up as you present a solution to =pronouns.possessive= issues.*}}			
+				
+				Oh, Founder be thanked. A strong drink, and a proper festival gift for Oof Growf?
 			</text>
-			<choice GotoID="HaveGifts" IfHaveItem="Polished Agate" UseLiquid="wine" TakeItem="Polished Agate">An agate. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
-			<choice GotoID="HaveGifts" IfHaveItem="Polished Topaz" UseLiquid="wine" TakeItem="Polished Topaz">A topaz. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
-			<choice GotoID="HaveGifts" IfHaveItem="Polished Jasper" UseLiquid="wine" TakeItem="Polished Jasper">A jasper. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
-			<choice GotoID="HaveGifts" IfHaveItem="Polished Amethyst" UseLiquid="wine" TakeItem="Polished Amethyst">An amethyst. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
-			<choice GotoID="HaveGifts" IfHaveItem="Polished Sapphire" UseLiquid="wine" TakeItem="Polished Sapphire">A sapphire. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
-			<choice GotoID="HaveGifts" IfHaveItem="Polished Emerald" UseLiquid="wine" TakeItem="Polished Emerald">An emerald. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
-			<choice GotoID="HaveGifts" IfHaveItem="Polished Peridot" UseLiquid="wine" TakeItem="Polished Peridot">A peridot. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
-			<choice GotoID="End">Maybe later.</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Agate" UseLiquid="wine" TakeItem="Polished Agate">A dram of wine for you, and for your love an agate, beautiful as the night sky. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Topaz" UseLiquid="wine" TakeItem="Polished Topaz">A dram of wine for you, and for your love a topaz yet outshined by your affection. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Jasper" UseLiquid="wine" TakeItem="Polished Jasper">A dram of wine for you, and for your love a jasper, befitting of your fiery passion. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Amethyst" UseLiquid="wine" TakeItem="Polished Amethyst">A dram of wine for you, and for your love an amethyst, the shade of a bright dusk. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Sapphire" UseLiquid="wine" TakeItem="Polished Sapphire">A dram of wine for you, and for your love a sapphire, for a devotion more precious than freshwater. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Emerald" UseLiquid="wine" TakeItem="Polished Emerald">A dram of wine for you, and for your love an emerald with a hue rich as the deep jungles. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Peridot" UseLiquid="wine" TakeItem="Polished Peridot">A dram of wine for you, and for your love a peridot, facets as bright as your fondness. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
+			<choice GotoID="End">I still need to think about it. Live and drink, Rrromaw.</choice>
 		</node>
 
 		<node ID="HaveGifts" AllowEscape="false">
 			<text>			
-				Okay that's good.
+				{{emote|Rrromaw =verb:take= the precious stone and the dram of wine you offer =pronouns.objective=.*}}
+
+				Oh, that's a good line, so much better than anything I could come up with. Who must I credit or it?
 			</text>
-			<choice GotoID="Invite">My pleasure. Need anything else?</choice>			
-			<choice GotoID="Invite">What now?</choice>
+			<choice GotoID="Invite">You can claim it for yourself, but if you must know, my name is =name= -- do you need anything else?</choice>			
+			<choice GotoID="Invite">Please remember to praise =name= for it. What now?</choice>
 		</node>
 
 		<node ID="Invite" AllowEscape="false">
 			<text>			
-				Please deliver that invitation.
+				Of course, of course, sorry. You haven't got all day!
+				
+				{{emote|=pronouns.Subjective= =verb:produce:afterpronoun= a carefully folded note, and =verb:stick:afterpronoun= it in your hand.*}}
+
+				Please, =name=, could you give this to Oof Growf? It is an invitation to elope to a festival so I can offer the gift you got me and well, I can't really give it in person, can I?
 			</text>
-			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts" GiveItem="Brothers_CatsDogs_LoveNote">Sure.</choice>
+			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts" GiveItem="Brothers_CatsDogs_LoveNote">I am on my way. Live and drink, Rrromaw.</choice>
 		</node>
 
 		<node ID="Date">
 			<text>			
-				A date? Who with?
-			</text>
-			<choice GotoID="GiveInvite">A dog.</choice>
-			<choice GotoID="GiveInvite">A secret admirer.</choice>
-			<choice GotoID="End">Nevermind.</choice>
-		</node>
+				{{emote|=pronouns.Subjective= =verb:turn:afterpronoun= crimson under =pronouns.possessive= alabaster coat.*}}
 
-		<node ID="GiveInvite">
-			<text>			
-				give me
+				A date? But... I do not even know you...
 			</text>
-			<choice GotoID="Delivered" TakeItem="Brothers_CatsDogs_LoveNote">Sure.</choice>
-		</node>	
-		
+			<choice GotoID="Delivered" TakeItem="Brothers_CatsDogs_LoveNote">Not with me, obviously. With Oof Growf, from Shik: this note will explain everything.</choice>
+			<choice GotoID="GiveInvite" TakeItem="Brothers_CatsDogs_LoveNote">I am heartbroken, but shall recover swiftly. In the meantime, please have this note -- the actual date invitation.</choice>
+		</node>
+	
 		<node ID="Delivered" AllowEscape="false">
 			<text>			
-				I just read and yes!
+				{{emote|=pronouns.Subjective= =verb:read:afterpronoun= but half the note before tossing it aside, nodding energically.*}}
+				
+				Oof Growf, whom I've heard so much about! A model of valor and bravery... I cannot let this occasion pass! I will be there at any cost!
 			</text>
-			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_DogLoverQuest~Invite">Cool I'll let them know.</choice>
+			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_DogLoverQuest~Invite">Oof Growf will be delighted. Live and drink!</choice>
 		</node>			
 		
 		<node ID="Debrief">
 			<text>			
-				Cool, I can't wait for the date to come up.
+				You did? And it was? You are not playing a joke on me?
+
+				{{emote|=pronouns.Subjective= =verb:jump= in place, unable to contain =pronouns.possessive= excitement.*}}
+
+				This is amazing news, =name=! Oh, I've got everything to plan for, the day must be perfect... I have both so much and so little time -- I will never be able to thank you enough, but I will repay you one day, I swear!
 			</text>
-			<choice GotoID="When">When is the date?</choice>
-			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_CatLoverQuest~Debrief">Glad I could help.</choice>
+			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_CatLoverQuest~Debrief">No need to, I am just happy I could help. Live and drink, Rrromaw!</choice>
 		</node>			
-		
-		<node ID="When">
-			<text>			
-				idk lmao.
-			</text>
-			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_CatLoverQuest~Debrief"> Ok well glad I could help.</choice>
-		</node>		
 		
 		<node ID="Division" AllowEscape="false">
 			<text>
-				Can't talk about it, talk with the tree.
+				{{emote|*=pronouns.Subjective= =verb:cut:afterpronoun= you before you can finish, whispering.*}}
+				
+				Not now, not here! Go find our warden, north of the wall. He has been trying to fix that situation for years now.
 			</text>
-			<choice GotoID="End" StartQuest="Brothers_CatsDogs_MainQuest1">huh ok weird ig.</choice>
+			<choice GotoID="End" StartQuest="Brothers_CatsDogs_MainQuest1">Alright... In that case, I will go find the warden.</choice>
 		</node>
 
 		<node ID="Opinion">
 			<text Priority="-1">
-				sucks big time.
+				It is just sad, honestly. To never meet one's neighbors... To never see the face of those you've heard so much about...  
 			</text>
-			<text IfFinishedQuest="Brothers_CatsDogs_CatLoverQuest">
-				sucks big time but you made it better.
-			</text>			
-			<text IfFinishedQuest="Brothers_CatsDogs_DogLoverQuest">
-				sucks big time but I got a date.
+			<text IfFinishedQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest">
+				Until recently I thought it a tragedy, but I believe you just may help us yet, =name=!
 			</text>					
-			<choice GotoID="Start">I see.</choice>
-			<choice GotoID="End">ok live and drink.</choice>	
+			<choice GotoID="Start">There was something else...</choice>
+			<choice GotoID="End">I have to go -- live and drink.</choice>	
 		</node>	
 		
 		<node ID="Family">
 			<text>
-				Mayor.
+				Pray Mother does not hear you call her a mayor! Founder knows she would rather be referred to as "Lady", these days.
 			</text>
-			<choice GotoID="Start">I see.</choice>
-			<choice GotoID="End">ok live and drink.</choice>
+			<choice GotoID="Start">She does sound like a handful. About something else...</choice>
+			<choice GotoID="End">On that note, I must leave. Live and drink.</choice>
 		</node>		
 
 	</conversation>	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 	<conversation ID="Brothers_CatsDogs_Catgod">
@@ -1019,10 +985,10 @@
 			<choice GotoID="Work" IfNotHaveQuest="Brothers_CatsDogs_CheeseQuest">I am in need of work. Is there any matter I can assist you with?</choice>
 			<choice GotoID="Shrews" IfHaveActiveQuest="Brothers_CatsDogs_CheeseQuest" IfFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Find" IfNotFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">The vermin in the ripening caves are canyon shrews, tinker. They have been feasting on the village's cheese stocks.</choice>
 			<choice GotoID="Reward" IfHaveActiveQuest="Brothers_CatsDogs_CheeseQuest" IfFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">I have handled the matter of the vermin in the ripening caves. They will not trouble the village anymore.</choice>
-		  	<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the matter with village behind the wall?</choice>
+			<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the matter with village behind the wall?</choice>
 			<choice GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What do you think of the division between Shik and Spar?</choice>
 			<choice GotoID="Zanya">You do know someone set up camp in front of your workshop, right?</choice>
-  			<choice GotoID="About">What do you do here in Spar?</choice>
+			<choice GotoID="About">What do you do here in Spar?</choice>
 			<choice GotoID="End">Live and drink, feline tinker.</choice>
 		</node>
 	
@@ -1495,7 +1461,7 @@
 				Moon and sun, cheese and wafers, =player.formalAddressTerm=.~
 				If you en't helping, don't stand in me way.~
 				Hmm? {{emote|*licking a paw*}}~
-				Get yourself some meat to cook crispy, =player.formalAddressTerm=. You'll thank me later.		  
+				Get yourself some meat to cook crispy, =player.formalAddressTerm=. You'll thank me later.
 			</text>
 			<choice GotoID="End">Live and drink, pig tender.</choice>
 		</node>
