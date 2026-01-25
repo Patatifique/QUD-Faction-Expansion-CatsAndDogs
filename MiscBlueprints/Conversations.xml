@@ -118,183 +118,171 @@
 			<choice GotoID="End">Live and drink, smitten dog.</choice>
 		</node>
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 		<node ID="Brief">
 			<text>			
-				Cat is cute, I need gifts.
+				{{emote|*=pronouns.Possessive= gaze turns dreamy, but =pronouns.possessive= tone drops to hushed whispers.*}}
+				
+				I've heard that voice through the walls, fancy as the Beetle Moon -- I cannae bear to live without knowing: is Rrromaw as bonnie as I imagine? 
+				
+				On second thought, dinna answer: it dinna matter what me heart's burglar looks like, only that I can get an invitation to the Ut yara Ux festival delivered to this hearthrob of mine. Could ye help me there, stranger?
 			</text>
-			<choice GotoID="Why">Why don't you go yourself?</choice>
-			<choice GotoID="Secret">Does your parent know about this?</choice>
-			<choice GotoID="Reward">What's in this for me?</choice>			
-			<choice GotoID="WhatGifts">Okay sure what do you need.</choice>
-			<choice GotoID="Start">Question before.</choice>
-			<choice GotoID="End">Maybe later.</choice>
+			<choice GotoID="Why">Why do you need my help? Can't you take your invitation to Rrromaw yourself?</choice>
+			<choice GotoID="Secret">I'm not sure I understand why you feel the need to be so secretive.</choice>
+			<choice GotoID="WhatGifts">Before I agree to anything, what do you need me to do?</choice>
+			<choice GotoID="End">I need to think about this. Live and drink.</choice>
 		</node>		
 	
 		<node ID="Why">
 			<text>			
-				Wall.
+				Stranger, dinna ye see the wall splitting our communities asunder?
 			</text>
-			<choice GotoID="Secret">Does your parent know about this?</choice>
-			<choice GotoID="Reward">What's in this for me?</choice>			
-			<choice GotoID="WhatGifts">Okay sure what do you need.</choice>
-			<choice GotoID="Start">Question before.</choice>
-			<choice GotoID="End">Maybe later.</choice>
+			<choice GotoID="Secret">I'm not sure I understand why you feel the need to be so secretive.</choice>
+			<choice GotoID="WhatGifts">Before I agree to anything, what do you need me to do?</choice>
+			<choice GotoID="End">I need to think about this. Live and drink.</choice>
 		</node>		
 	
 		<node ID="Secret">
 			<text>			
-				Of course not you're crazy.
+				{{emote|Fear flashes on *=pronouns.possessive= face for a moment.*}}
+
+				Have ye gone mad? Me paw'd skin me alive if he knew of this!
 			</text>
-			<choice GotoID="Why">Why don't you go yourself?</choice>
-			<choice GotoID="Reward">What's in this for me?</choice>			
-			<choice GotoID="WhatGifts">Okay sure what do you need.</choice>
-			<choice GotoID="Start">Question before.</choice>
-			<choice GotoID="End">Maybe later.</choice>
+			<choice GotoID="Why">Why do you need my help? Can't you take your invitation to Rrromaw yourself?</choice>
+			<choice GotoID="WhatGifts">Before I agree to anything, what do you need me to do?</choice>
+			<choice GotoID="End">I need to think about this. Live and drink.</choice>
 		</node>		
-	
-		<node ID="Reward">
-			<text>			
-				Sorry but no.
-			</text>
-			<choice GotoID="Why">Why don't you go yourself?</choice>
-			<choice GotoID="Secret">Does your parent know about this?</choice>
-			<choice GotoID="WhatGifts">Okay sure what do you need.</choice>
-			<choice GotoID="Start">Question before.</choice>
-			<choice GotoID="End">Maybe later.</choice>
-		</node>	
 		
 		<node ID="WhatGifts">
 			<text>			
-				Gemstone and wine.
+				Aye, at once! Cannae invite the object of one's affection without a proper gift, heh? A dram of wine, to give me pluck -- and I think only the most flawless of gems would befit Rrromaw.
 			</text>
-			<choice GotoID="End" StartQuest="Brothers_CatsDogs_DogLoverQuest">Okay I'll find this.</choice>
-			<choice GotoID="End">Maybe later.</choice>
+			<choice GotoID="End" StartQuest="Brothers_CatsDogs_DogLoverQuest">Wine for you, and a polished gemstone. I will be back with those, Oof Growf.</choice>
+			<choice GotoID="End">I cannot afford to go look for gemstones right now. Live and drink.</choice>
 		</node>
 
 		<node ID="Gifts">
 			<text>			
-				And gemstones?
+				{{emote|=pronouns.Subjective= =verb:look:afterpronoun= up expectantly.*}}
+				
+				Aye, liquid bravery! And per chance, a gem that would suit Rrromaw?
 			</text>
-			<choice GotoID="HaveGifts" IfHaveItem="Polished Agate" UseLiquid="wine" TakeItem="Polished Agate">An agate. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
-			<choice GotoID="HaveGifts" IfHaveItem="Polished Topaz" UseLiquid="wine" TakeItem="Polished Topaz">A topaz. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
-			<choice GotoID="HaveGifts" IfHaveItem="Polished Jasper" UseLiquid="wine" TakeItem="Polished Jasper">A jasper. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
-			<choice GotoID="HaveGifts" IfHaveItem="Polished Amethyst" UseLiquid="wine" TakeItem="Polished Amethyst">An amethyst. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
-			<choice GotoID="HaveGifts" IfHaveItem="Polished Sapphire" UseLiquid="wine" TakeItem="Polished Sapphire">A sapphire. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
-			<choice GotoID="HaveGifts" IfHaveItem="Polished Emerald" UseLiquid="wine" TakeItem="Polished Emerald">An emerald. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
-			<choice GotoID="HaveGifts" IfHaveItem="Polished Peridot" UseLiquid="wine" TakeItem="Polished Peridot">A peridot. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
-			<choice GotoID="End">Maybe later.</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Agate" UseLiquid="wine" TakeItem="Polished Agate">A dram of wine for you, and an agate, beautiful as the night sky. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Topaz" UseLiquid="wine" TakeItem="Polished Topaz">A dram of wine for you, and a topaz yet outshined by your affection. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Jasper" UseLiquid="wine" TakeItem="Polished Jasper">A dram of wine for you, and a jasper, befitting of your fiery passion. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Amethyst" UseLiquid="wine" TakeItem="Polished Amethyst">A dram of wine for you, and an amethyst, the shade of a bright dusk. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Sapphire" UseLiquid="wine" TakeItem="Polished Sapphire">A dram of wine for you, and a sapphire, for a love more precious than freshwater. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Emerald" UseLiquid="wine" TakeItem="Polished Emerald">A dram of wine for you, and an emerald, a hue rich as the deep jungles. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
+			<choice GotoID="HaveGifts" IfHaveItem="Polished Peridot" UseLiquid="wine" TakeItem="Polished Peridot">A dram of wine for you, and a peridot, facets as bright as your love. {{g|[{{c|1}} dram of {{m|wine}}]}}</choice>
+			<choice GotoID="End">I still need to think about it. Live and drink, Oof Growf.</choice>
 		</node>
 
 		<node ID="HaveGifts" AllowEscape="false">
 			<text>			
-				Okay that's good.
+				{{emote|Oof Growf =verb:retrieve= the dram of wine and the precious stone you hand =pronouns.objective=.*}}
+
+				I had not taken ye for a poet! To think I still dinna ken yer name either, ye must think me a brute.
 			</text>
-			<choice GotoID="Invite">My pleasure. Need anything else?</choice>			
-			<choice GotoID="Invite">What now?</choice>
+			<choice GotoID="Invite">It was my pleasure, really. You can call me =name= -- do you need anything else?</choice>			
+			<choice GotoID="Invite">My name is =name= and trust me, I've seen ruder. What now?</choice>
 		</node>
 
 		<node ID="Invite" AllowEscape="false">
 			<text>			
-				Please deliver that invitation.
-			</text>
-			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_DogLoverQuest~Gifts" GiveItem="Brothers_CatsDogs_LoveNote">Sure.</choice>
-		</node>
+				Excuse me for a moment, will ye?
+				
+				{{emote|=pronouns.Subjective= =verb:rummage:afterpronoun= through =pronouns.possessive= belongings, and =verb:put:afterpronoun= a carefully folded note in your hand.*}}
 
+				There ye go, =name=. All that's left now is to invite Rrromaw to a wee dance where I will come bearing the gift ye got. 
+			</text>
+			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_DogLoverQuest~Gifts" GiveItem="Brothers_CatsDogs_LoveNote">I am on my way. Live and drink, Oof Growf.</choice>
+		</node>
+		
 		<node ID="Date">
 			<text>			
-				A date? Who with?
+				{{emote|=pronouns.Subjective= nearly =verb:jump:afterpronoun=, surprised.*}}
+				
+				A date, ye say? Who with?
 			</text>
-			<choice GotoID="GiveInvite">A dog.</choice>
-			<choice GotoID="GiveInvite">A secret admirer.</choice>
-			<choice GotoID="End">Nevermind.</choice>
+			<choice GotoID="Delivered" TakeItem="Brothers_CatsDogs_LoveNote">Rrromaw, from Spar -- this note will explain things better than me.</choice>
+			<choice GotoID="Delivered" TakeItem="Brothers_CatsDogs_LoveNote">A secret admirer who wanted you to have this note.</choice>
 		</node>
-
-		<node ID="GiveInvite">
-			<text>			
-				give me
-			</text>
-			<choice GotoID="Delivered" TakeItem="Brothers_CatsDogs_LoveNote">Sure.</choice>
-		</node>	
 		
 		<node ID="Delivered" AllowEscape="false">
 			<text>			
-				I just read and yes!
+				{{emote|After retrieveing the carefully folded note, =pronouns.subjective= =verb:read:afterpronoun= it twice: precipitately at first, then more slowly once the initial shock has subsided.*}}
+				
+				Rrromaw! The hearthrob from Spar! The melodic voice that's been haunting me dreams e'er since I heard it first! Of course I'll be there, battling sultans if needs be!
 			</text>
-			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_CatLoverQuest~Invite">Cool I'll let them know.</choice>
+			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_CatLoverQuest~Invite">I will let Rrromaw know of your enthusiasm then. In the meantime, live and drink.</choice>
 		</node>			
 		
 		<node ID="Debrief">
 			<text>			
-				Cool, I can't wait for the date to come up.
+				I can scarcely believe ye, =name=! I cannae thank ye enough for all ye've done. Now to prepare for the date... It is not coming up just yet, but I am grateful for the change ye've given me.
+				
+				{{emote|Determination shines bright in =pronouns.possesssive= eyes.*}}
 			</text>
-			<choice GotoID="When">When is the date?</choice>
-			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_DogLoverQuest~Debrief">Glad I could help.</choice>
+			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_DogLoverQuest~Debrief">Glad I could help you, Oof Growf. Live and drink!</choice>
 		</node>			
-		
-		<node ID="When">
-			<text>			
-				idk lmao.
-			</text>
-			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_DogLoverQuest~Debrief"> Ok well glad I could help.</choice>
-		</node>		
 		
 		<node ID="Division" AllowEscape="false">
 			<text>
-				Can't talk about it, talk with the tree.
+				{{emote|*=pronouns.Subjective= =verb:lean:afterpronoun= forward and =verb:whisper:afterpronoun= hatively.*}}
+				
+				I cannae mention it under this roof: go find Warden Arendubark, in the northern outskirts. He will tell ye all about our sorry history!
 			</text>
-			<choice GotoID="End" StartQuest="Brothers_CatsDogs_MainQuest1">huh ok weird ig.</choice>
+			<choice GotoID="End" StartQuest="Brothers_CatsDogs_MainQuest1">Duly noted. I will go find the warden then.</choice>
 		</node>
 
 		<node ID="Opinion">
 			<text Priority="-1">
-				sucks big time.
+				'Tis a sorry affair, that much is certain. No living soul here even remembers why the wall was built, ye ken?
 			</text>
-			<text IfFinishedQuest="Brothers_CatsDogs_DogLoverQuest">
-				sucks big time but you made it better.
-			</text>			
-			<text IfFinishedQuest="Brothers_CatsDogs_CatLoverQuest">
-				sucks big time but I got a date.
-			</text>					
-			<choice GotoID="Start">I see.</choice>
-			<choice GotoID="End">ok live and drink.</choice>	
+			<text IfFinishedQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest">
+				'Tis a sorry affair, but there is a glimmer of hop in me eyes, =name=. Maybe all is not yet lost?
+			</text>							
+			<choice GotoID="Start">I wanted to talk about something else.</choice>
+			<choice GotoID="End">Thank you for your answer. Live and drink.</choice>	
 		</node>	
 		
 		<node ID="Family">
 			<text>
-				Mayor.
+				{{emote|=pronouns.Subjective= =verb:let:afterpronoun= out a short, humorless laugh.*}}
+
+				Aye, related! He is me paw, and he keeps a good eye on me. Wouldnae want "dishonor" to strike the house.
 			</text>
-			<choice GotoID="Start">I see.</choice>
-			<choice GotoID="End">ok live and drink.</choice>
+			<choice GotoID="Start">That cannot be an easy situation. There is something else...</choice>
+			<choice GotoID="End">I see. I must go now -- live and drink.</choice>
 		</node>		
 	
 	</conversation>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	<conversation ID="Brothers_CatsDogs_CatLover">
@@ -337,9 +325,7 @@
 			</text>
 			<choice GotoID="Why">Why don't you go yourself?</choice>
 			<choice GotoID="Secret">Does your parent know about this?</choice>
-			<choice GotoID="Reward">What's in this for me?</choice>			
 			<choice GotoID="WhatGifts">Okay sure what do you need.</choice>
-			<choice GotoID="Start">Question before.</choice>
 			<choice GotoID="End">Maybe later.</choice>
 		</node>		
 	
@@ -348,9 +334,7 @@
 				Wall.
 			</text>
 			<choice GotoID="Secret">Does your parent know about this?</choice>
-			<choice GotoID="Reward">What's in this for me?</choice>			
 			<choice GotoID="WhatGifts">Okay sure what do you need.</choice>
-			<choice GotoID="Start">Question before.</choice>
 			<choice GotoID="End">Maybe later.</choice>
 		</node>		
 	
@@ -359,22 +343,10 @@
 				Of course not you're crazy.
 			</text>
 			<choice GotoID="Why">Why don't you go yourself?</choice>
-			<choice GotoID="Reward">What's in this for me?</choice>			
 			<choice GotoID="WhatGifts">Okay sure what do you need.</choice>
-			<choice GotoID="Start">Question before.</choice>
 			<choice GotoID="End">Maybe later.</choice>
 		</node>		
 	
-		<node ID="Reward">
-			<text>			
-				Sorry but no.
-			</text>
-			<choice GotoID="Why">Why don't you go yourself?</choice>
-			<choice GotoID="Secret">Does your parent know about this?</choice>
-			<choice GotoID="WhatGifts">Okay sure what do you need.</choice>
-			<choice GotoID="Start">Question before.</choice>
-			<choice GotoID="End">Maybe later.</choice>
-		</node>	
 		
 		<node ID="WhatGifts">
 			<text>			
