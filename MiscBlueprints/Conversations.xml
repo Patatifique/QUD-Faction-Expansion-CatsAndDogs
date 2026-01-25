@@ -432,7 +432,7 @@
 
 		<node ID="Opinion">
 			<text Priority="-1">
-				It is just sad, honestly. To never meet one's neighbors... To never see the face of those you've heard so much about...  
+				It is just sad, honestly. To never meet one's neighbors... To never see the face of those you hear so much about...
 			</text>
 			<text IfFinishedQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest">
 				Until recently I thought it a tragedy, but I believe you just may help us yet, =name=!
