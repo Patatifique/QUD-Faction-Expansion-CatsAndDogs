@@ -57,16 +57,72 @@
 			<text>
 				I'm a dog mayor.
 			</text>
-			<choice GotoID="ConcilInvite" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest3~DogMayor">Warden Arendubark wants to settle the division between Shik and Spar once and for all, and wants you to take part in a council with Spar's mayor.</choice>
+			<choice GotoID="CouncilInvite" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest3~DogMayor">Warden Arendubark wants to settle the division between Shik and Spar once and for all, and wants you to take part in a council with Spar's mayor.</choice>
 			<choice GotoID="FounderInfo" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2">Mayor, I have definite information about Shik and Spar's founder.</choice>
-			<choice GotoID="WhatToDo">What can I expect to find in Shik?</choice>
-			<choice GotoID="Goatfolks">Don't you fear attacks from the jungle goatfolks?</choice>
+			<choice GotoID="Services">What can I expect to find in Shik?</choice>
+			<choice GotoID="Goatfolk">Don't you fear attacks from the jungle goatfolks?</choice>
 			<choice GotoID="Work" IfNotHaveQuest="Brothers_CatsDogs_ChefQuest">Is there any work to do in Shik?</choice>
 			<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the deal with the village on the wall's other side?</choice>
 			<choice GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">How come Shik and Spar are divided?</choice>
 			<choice GotoID="End">I will take my leave now. Live and drink, mayor.</choice>
 		</node>
 	
+		<node ID="CouncilInvite">
+			<text>
+				About time.
+			</text>
+			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~DogMayor">See you there.</choice>
+		</node>
+	
+		<node ID="FounderInfo">
+			<text>
+				ahah yes go talk to the warden
+			</text>
+			<choice GotoID="Start">Maybe later</choice>			
+			<choice GotoID="End">Ok I will.</choice>
+		</node>	
+	
+		<node ID="Services">
+			<text>
+				lots of stuff
+			</text>
+			<choice GotoID="Start">Maybe later</choice>			
+			<choice GotoID="End">Ok cya.</choice>
+		</node>	
+	
+		<node ID="Goatfolk">
+			<text>
+				i aint afraid of no goats
+			</text>
+			<choice GotoID="Start">Maybe later</choice>			
+			<choice GotoID="End">Ok cya.</choice>
+		</node>	
+		
+		<node ID="Work">
+			<text>
+				go see the chef / merchant
+			</text>
+			<choice GotoID="Start">Maybe later</choice>			
+			<choice GotoID="End">Ok cya.</choice>
+		</node>	
+
+		<node ID="Division">
+			<text>
+				really good actually, no problem at all
+			</text>
+			<choice GotoID="Start">Maybe later</choice>			
+			<choice GotoID="End">Ok cya.</choice>
+		</node>	
+
+		<node ID="Opinion">
+			<text>
+				cats are dumb
+			</text>
+			<choice GotoID="DogLore">I read some stuff about it you're right</choice>	
+			<choice GotoID="CatLore">I read some stuff about it it's you who is dumb</choice>						
+			<choice GotoID="End">Ok cya.</choice>
+		</node>			
+
 	</conversation>
 
 
