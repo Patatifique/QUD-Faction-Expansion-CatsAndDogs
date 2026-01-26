@@ -106,7 +106,7 @@
 				Aye, 'tis me good friend =name=! I cannae thank ye enough for all ye did.
 			</text>			
 			<text IfFinishedQuest="Brothers_CatsDogs_CatLoverQuest">
-				The festival cannae come soon enough, now. There is nae thanking you enough for yer work, friend!
+				The festival cannae come soon enough, now. There is nae thanking you enough for yer work, =player.formalAddressTerm=!
 			</text>
 			<choice GotoID="Brief" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_CatLoverSeen">As a matter of fact I have, yes. Why do you want to know?</choice>
 			<choice GotoID="Gifts" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Gifts" IfHaveLiquid="wine">I have everything you asked for.</choice>
@@ -619,7 +619,7 @@
 
 				{{emote|*The second head echoes that greeting.*}}
 
-				{{Y|And you came to Growarow's Trading Emporium... Can we interest you in some of our fine goods, friend?}}
+				{{Y|And you came to Growarow's Trading Emporium... Can we interest you in some of our fine goods, =player.formalAddressTerm=?}}
 				
 				{{emote|*The third head chimes in.*}}
 
@@ -632,7 +632,7 @@
 
 				{{emote|*The second head echoes that greeting.*}}
 
-				{{Y|And glad you came to Growarow's Trading Emporium! Can we interest you in some of our fine goods, friend?}}
+				{{Y|And glad you came to Growarow's Trading Emporium! Can we interest you in some of our fine goods, =player.formalAddressTerm=?}}
 			</text>
 			<choice GotoID="Work" IfNotHaveQuest="Brothers_CatsDogs_ChefQuest">I am looking for work. Do you require assistance with anything?</choice>
 			<choice GotoID="TarBones" IfHaveActiveQuest="Brothers_CatsDogs_ChefQuest" IfHaveItem="TarBones">I have found the bones you were looking for.</choice>
@@ -652,7 +652,7 @@
 				More than ever. Pray tell, are you much of a cook?
 			</text>
 			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
-				{{Y|We do not, but we are certain Growarow does, friend.}}
+				{{Y|We do not, but we are certain Growarow does, =player.formalAddressTerm=.}}
 
 				{{emote|*The first head chimes in.*}}
 				
@@ -696,7 +696,7 @@
 				The recipe we already have. It is our secret ingredient we are lacking -- could you fetch it for us?
 			</text>
 			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
-				{{Y|You do not lack initiative, friend!}}
+				{{Y|You do not lack initiative, =player.formalAddressTerm=!}}
 		
 				Nothing that complicated. But we are missing our secret ingredient. Would you care to obtain it for us?
 			</text>
@@ -713,7 +713,7 @@
 				We will keep things simple then. We are missing the key ingredient to our specialty dish -- could you fetch it for us?
 			</text>
 			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
-				{{Y|There is beauty in simplicity, friend.}}
+				{{Y|There is beauty in simplicity, =player.formalAddressTerm=.}}
 		
 				There certainly is. To keep matters simple, we are missing the key ingredient to our specialty dish. Would you care to obtain it for us?
 			</text>
@@ -732,7 +732,7 @@
 			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
 				Well, not to unveil too much of our recipe, but it is lacking that final crunch for now.
 				
-				{{Y|Growarow always makes it soft and crunchy, friend.}}
+				{{Y|Growarow always makes it soft and crunchy, =player.formalAddressTerm=.}}
 
 				{{emote|*The first head nods emphatically.*}}
 				
@@ -751,7 +751,7 @@
 				... Asphalt pools. Or should that fail, there are rumors of tunnels near the Mechanimist cathedral. We cannot provide more pointers at the moment.
 			</text>
 			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
-				{{Y|We would recommend checking out any asphalt pools, friend.}}
+				{{Y|We would recommend checking out any asphalt pools, =player.formalAddressTerm=.}}
 
 				We have heard tales of abandoned tunnels near the Mechanimist cathedral, holding jet-black liquids. While we never ventured this far north, this could be a place to investigate.		
 			</text>
@@ -788,14 +788,14 @@
 			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
 				{{K|Crunch! Snap!}}
 
-				{{Y|Please excuse our situation, friend...}}
+				{{Y|Please excuse our situation, =player.formalAddressTerm=...}}
 
 				Those will do perfectly, thank you very much. Tasting will prove difficult right now -- but I can offer you a reward still: the recipe of a unique signature dish loved by canines everywhere.
 			</text>
 			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
 				Yes! Those are perfect! The ideal mix between slow-cooked marrow, and a tarry exterior...
 				
-				{{Y|What Growarow is trying to say, friend, is that they are very thankful.}}
+				{{Y|What Growarow is trying to say, =player.formalAddressTerm=, is that they are very thankful.}}
 				
 				Please pardon our manners -- very thankful indeed. As for tasting... The meal will sadly not be done for another couple of months, as it needs to cure and ripen properly. Still, you deserve a reward: the recipe of a unique signature dish loved by canines everywhere.
 			</text>
@@ -806,14 +806,14 @@
 			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
 				{{K|Crunch! Snap!}}
 
-				{{Y|Please excuse our situation, friend...}}
+				{{Y|Please excuse our situation, =player.formalAddressTerm=...}}
 
 				Those will do perfectly, thank you very much. Tasting will prove difficult right now -- but I can offer you a reward still: precious twin drops of nectar.
 			</text>
 			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
 				Yes! Those are perfect! The ideal mix between slow-cooked marrow, and a tarry exterior...
 				
-				{{Y|What Growarow is trying to say, friend, is that they are very thankful.}}
+				{{Y|What Growarow is trying to say, =player.formalAddressTerm=, is that they are very thankful.}}
 				
 				Please pardon our manners -- very thankful indeed. As for tasting... The meal will sadly not be done for another couple of months, as it needs to cure and ripen properly. Still, you deserve a reward: twin drops of nectar, to bring a divine kick to any of your meals.
 			</text>
@@ -834,7 +834,7 @@
 			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
 				{{emote|*The first head prepares to answer, but reconsiders.*}} 
 				
-				{{Y|There is not much that we can say, friend. Fetch Warden Arendubark, north of the wall -- he has been trying to fix this matter for many moons, now.}}
+				{{Y|There is not much that we can say, =player.formalAddressTerm=. Fetch Warden Arendubark, north of the wall -- he has been trying to fix this matter for many moons, now.}}
 			</text>
 			<choice GotoID="End" StartQuest="Brothers_CatsDogs_MainQuest1">I will talk to the warden, then. In the meantime, live and drink.</choice>	
 		</node>
@@ -848,7 +848,7 @@
 			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
 				{{emote|*Mild annoyance flashes on both their faces.*}}
 
-				{{Y|It is all quite ridiculous, friend.}}
+				{{Y|It is all quite ridiculous, =player.formalAddressTerm=.}}
 				
 				Can you picture what succulent meal we could prepare with a new tinker-touched oven? We fail to see how this helps either Shik or Spar.
 			</text>
@@ -860,14 +860,14 @@
 			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
 				Neither were we. Please ignore our new partner...
 
-				{{Y|As Growarow says, our situation has evolved somewhat. Fret not, friend, we will soon find a new arrangement.}}
+				{{Y|As Growarow says, our situation has evolved somewhat. Fret not, =player.formalAddressTerm=, we will soon find a new arrangement.}}
 				
 				{{K|Head! Head!}}
 			</text>
 			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
 				Us hydric hounds are quite the uncommon sight indeed.
 				
-				{{Y|It is little surprise you have not seen our kind before, friend!}}
+				{{Y|It is little surprise you have not seen our kind before, =player.formalAddressTerm=!}}
 				
 				{{cloudy|We ask that you greet us separately, for clarity's sake.}}
 			</text>
@@ -886,7 +886,7 @@
 
 				Count yourself lucky.
 
-				{{Y|Nowadays, silence is worth all the freshwater in Qud, friend.}}
+				{{Y|Nowadays, silence is worth all the freshwater in Qud, =player.formalAddressTerm=.}}
 
 				{{K|Heads!}}
 			</text>
@@ -895,7 +895,7 @@
 
 				{{cloudy|Folks get confused too easily nowadays.}}
 				
-				{{Y|I could not imagine sharing the same mind over two heads, friend. That sounds utterly lonely.}}
+				{{Y|I could not imagine sharing the same mind over two heads, =player.formalAddressTerm=. That sounds utterly lonely.}}
 			</text>
 			<choice GotoID="Start">Can I ask you something else?</choice>
 			<choice GotoID="End">Live and drink.</choice>		
@@ -908,7 +908,7 @@
 				Does that answer your question?
 			</text>
 			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
-				{{Y|Uncomfortable? How so, friend? I get to share every moment with my favorite person in Qud.}}
+				{{Y|Uncomfortable? How so, =player.formalAddressTerm=? I get to share every moment with my favorite person in Qud.}}
 				
 				What Growarow says. Founder knows I could not ask for a better cohead.
 				
@@ -922,14 +922,14 @@
 			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
 				Up until now, we collected starapples from our herders, and made them sing until jammy.
 
-				{{Y|We used to trade in commodities with the local travelers. We would ask that you excuse our current situation, friend.}}
+				{{Y|We used to trade in commodities with the local travelers. We would ask that you excuse our current situation, =player.formalAddressTerm=.}}
 
 				{{K|Star! Apples!}}
 			</text>
 			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
 				Will you believe it if we tell you we are a chef? Collecting starapples from our herders, and making them sing until jammy.
 
-				{{Y|We trade in commodities with the local travelers. Does your pack feel too heavy? We have solutions to offer you, friend.}}
+				{{Y|We trade in commodities with the local travelers. Does your pack feel too heavy? We have solutions to offer you, =player.formalAddressTerm=.}}
 
 				{{cloudy|Whatever you desire, the Growarows are the place to spend freshwater!}}
 			</text>
@@ -944,7 +944,7 @@
 
 				The two of us are the Growarows.
 
-				{{Y|As for our new partner, there is no telling what they will want to be called, friend.}}
+				{{Y|As for our new partner, there is no telling what they will want to be called, =player.formalAddressTerm=.}}
 
 				{{K|Grarows!}}
 			</text>
@@ -953,7 +953,7 @@
 
 				It is quite simple, really. We are called Growarow.
 
-				{{Y|And we are called Growarow, friend.}}
+				{{Y|And we are called Growarow, =player.formalAddressTerm=.}}
 
 				{{cloudy|Together, we are the Growarows.}}
 			</text>
@@ -1137,7 +1137,7 @@
 
 		<node ID="Zanya">
 			<text>
-				Obviously, yes. They help me from time to time -- as it happens, bipedality sometimes proves unexpectantly useful.
+				Obviously, yes. They help me from time to time -- as it happens, bipedality proves unexpectantly useful in a cat.
 			</text>
 			<choice GotoID="Start">This makes sense. I had another question.</choice>
 			<choice GotoID="End">It does. Live and drink.</choice>	
@@ -1158,7 +1158,7 @@
 
 		<node ID="ATinker">
 			<text>
-				Well, in that case, I hope you can refrain from spouting unsollicited "advice", =player.formalAddressTerm=. If I need pointers, I will ask for them. Now do you need anything else?
+				Well, in that case, I hope you can refrain from spouting unsollicited "advice", =player.apparentSpecies=. If I need pointers, I will ask for them. Now do you need anything else?
 			</text>
 			<choice GotoID="Start">As a matter of fact, I do.</choice>
 			<choice GotoID="End">Not right now. Live and drink, tinker.</choice>	
