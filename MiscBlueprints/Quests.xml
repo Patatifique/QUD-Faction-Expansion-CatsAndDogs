@@ -2,7 +2,7 @@
 
 <quests>
 
-	<quest ID= "Brothers_CatsDogs_MainQuest1" Name="Ancient Grudges" Level="25" 
+	<quest ID="Brothers_CatsDogs_MainQuest1" Name="Ancient Grudges" Level="25" 
 	   Accomplishment="You decided to investigate the foundation of Shik and Spar."
 	   Hagiograph="In the month of =month= of =year=, diligent =name= set the first stone of the Cathedral of Shikspar."
 	   HagiographCategory="DoesSomethingRad"
@@ -23,7 +23,7 @@
 	</quest>
 
 
-	<quest ID= "Brothers_CatsDogs_MainQuest2" Name="On Bubumube's Trail" Level="25" 
+	<quest ID="Brothers_CatsDogs_MainQuest2" Name="On Bubumube's Trail" Level="25" 
 	   Accomplishment="You set out on a journey to discover the truth about Shik and Spar's founder."
 	   Hagiograph="Selfless =name=, remarking the absence of =player.possessive= counselor Bubumube, rescued them from wild beasts. The sultan protects =player.possessive= folk!"
 	   HagiographCategory="MeetsWithCounselors"
@@ -44,7 +44,7 @@
 	</quest>
 
 
-	<quest ID= "Brothers_CatsDogs_MainQuest3" Name="The Gathering of Shikspar" Level="25" 
+	<quest ID="Brothers_CatsDogs_MainQuest3" Name="The Gathering of Shikspar" Level="25" 
 	   Accomplishment="You revealed the truth about Shik and Spar's founder to the villages' mayors."
 	   Hagiograph="Knowledge pierces the darkness! =name= unearthed ancient knowledge to broker peace between warring nations."
 	   HagiographCategory="BecomesLoved"
@@ -65,7 +65,7 @@
 	</quest>
 
 
-	<quest ID= "Brothers_CatsDogs_DogLoverQuest" Name="Swear by the Beetle Moon" Level="25" 
+	<quest ID="Brothers_CatsDogs_DogLoverQuest" Name="Swear by the Beetle Moon" Level="25" 
 	   Accomplishment="You reunited two lovers against all odds."
 	   Hagiograph="Love prospers! In the month of =month= of =year=, adventurous =name= eloped from Shikspar with Oof Growf and Rrromaw."
 	   HagiographCategory="Trysts"
@@ -86,7 +86,7 @@
 	</quest>
 
 
-	<quest ID= "Brothers_CatsDogs_CatLoverQuest" Name="Swear by the Beetle Moon" Level="25" 
+	<quest ID="Brothers_CatsDogs_CatLoverQuest" Name="Swear by the Beetle Moon" Level="25" 
 	   Accomplishment="You reunited two lovers against all odds."
 	   Hagiograph="Love prospers! In the month of =month= of =year=, adventurous =name= eloped from Shikspar with Oof Growf and Rrromaw."
 	   HagiographCategory="Trysts"
@@ -107,7 +107,7 @@
 	</quest>
 	
 	
-	<quest ID= "Brothers_CatsDogs_CheeseQuest" Name="What's Eating the Porcine Cheese?" Faction="Spar" Level="25" Reputation="200" 
+	<quest ID="Brothers_CatsDogs_CheeseQuest" Name="What's Eating the Porcine Cheese?" Faction="Spar" Level="25" Reputation="200" 
 		Accomplishment="You solved the mystery of the missing cheese."
 		Hagiograph="In the month of =month= of =year=, canny =name= pierced the secret of fermenting milk."
 		HagiographCategory="CreatesSomething"
@@ -128,7 +128,7 @@
 	</quest>
 
 
-	<quest ID= "Brothers_CatsDogs_ChefQuest" Name="Drenched in Asphalt" Faction="Shik" Level="25" Reputation="200" 
+	<quest ID="Brothers_CatsDogs_ChefQuest" Name="Drenched in Asphalt" Faction="Shik" Level="25" Reputation="200" 
 		Accomplishment="You retrieved the final ingredient for an outstanding meal."
 		Hagiograph="Generous =name= feeds the hungry! Walking through the flames, =player.subjective= bestows manna to =player.possessive= attendants."
 		HagiographCategory="FindsObject"

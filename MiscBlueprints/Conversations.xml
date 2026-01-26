@@ -25,6 +25,7 @@
 				Kids these days have it easy: when I was young, glotrot used to spoil your whole water supply.~
 				Back in my days, people knew the difference between daggers and short swords.~
 				Young'uns today complicate everything... The Moon what now? They're called the Deathlands, darn it!~
+				Kyakukya ain't all it used to be, all the good folks have gone away.~
 				Ambidextry everywhere... Way back when, this used to really mean something.~
 				Humph. Who are you again?~
 				{{emote|*Alther =verb:concentrate= intensely for a few seconds.*}}
@@ -56,7 +57,14 @@
 			<text>
 				I'm a dog mayor.
 			</text>
-			<choice GotoID="End">Very true.</choice>
+			<choice GotoID="ConcilInvite" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest3~DogMayor">Warden Arendubark wants to settle the division between Shik and Spar once and for all, and wants you to take part in a council with Spar's mayor.</choice>
+			<choice GotoID="FounderInfo" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2">Mayor, I have definite information about Shik and Spar's founder.</choice>
+			<choice GotoID="WhatToDo">What can I expect to find in Shik?</choice>
+			<choice GotoID="Goatfolks">Don't you fear attacks from the jungle goatfolks?</choice>
+			<choice GotoID="Work" IfNotHaveQuest="Brothers_CatsDogs_ChefQuest">Is there any work to do in Shik?</choice>
+			<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the deal with the village on the wall's other side?</choice>
+			<choice GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">How come Shik and Spar are divided?</choice>
+			<choice GotoID="End">I will take my leave now. Live and drink, mayor.</choice>
 		</node>
 	
 	</conversation>
@@ -439,7 +447,7 @@
 			</text>					
 			<choice GotoID="Start">There was something else...</choice>
 			<choice GotoID="End">I have to go -- live and drink.</choice>	
-		</node>	
+		</node>
 		
 		<node ID="Family">
 			<text>
@@ -447,7 +455,7 @@
 			</text>
 			<choice GotoID="Start">She does sound like a handful. About something else...</choice>
 			<choice GotoID="End">On that note, I must leave. Live and drink.</choice>
-		</node>		
+		</node>
 
 	</conversation>	
 
