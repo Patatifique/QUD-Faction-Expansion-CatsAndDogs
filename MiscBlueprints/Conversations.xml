@@ -55,11 +55,13 @@
 		
 		<node ID="Start">
 			<text>
-				I'm a dog mayor.
+				{{emote|*With each of the hound's words, slime spittles from =pronouns.possessive= jowls.*}}			
+				
+				Oy, traveler, came to gawk at our wee village, have ye? Ye'll nae find a better spot to grab some shuteye or munch on starapples, heh? 
 			</text>
 			<choice GotoID="CouncilInvite" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest3~DogMayor">Warden Arendubark wants to settle the division between Shik and Spar once and for all, and wants you to take part in a council with Spar's mayor.</choice>
 			<choice GotoID="FounderInfo" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2">Mayor, I have definite information about Shik and Spar's founder.</choice>
-			<choice GotoID="Services">What can I expect to find in Shik?</choice>
+			<choice GotoID="Services">What can I expect to find in Shik, beside starapples?</choice>
 			<choice GotoID="Goatfolk">Don't you fear attacks from the jungle goatfolks?</choice>
 			<choice GotoID="Work" IfNotHaveQuest="Brothers_CatsDogs_ChefQuest">Is there any work to do in Shik?</choice>
 			<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the deal with the village on the wall's other side?</choice>
@@ -69,22 +71,28 @@
 	
 		<node ID="CouncilInvite">
 			<text>
-				About time.
+				{{emote|*=pronouns.Subjective= =verb:hawk:afterpronoun= and =verb:spit:afterpronoun= a glob of sludge in the dirt.*}}			
+				
+				In our favor, I wager. 'Twas about bloody time that those nasty hairballs got what was coming to them. Lead the way, will ye?
 			</text>
-			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~DogMayor">See you there.</choice>
+			<choice GotoID="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~DogMayor">That seems awfully excessive. See you there.</choice>
 		</node>
 	
 		<node ID="FounderInfo">
 			<text>
-				ahah yes go talk to the warden
+				Heh! Ye dinna need to tell me anything, I already know Bubumube was a tried and true canine, nae doubt. Ye go and tell all that to the warden, yes? That he definitely settles our wee scuffle.
+				
+				{{emote|*=pronouns.Subjective= =verb:sit:afterpronoun= on the ground, quite content with =pronouns.reflexive=.*}}							
 			</text>
-			<choice GotoID="Start">Maybe later</choice>			
-			<choice GotoID="End">Ok I will.</choice>
+			<choice GotoID="Start">I will see the warden about that situation. But first, something else.</choice>			
+			<choice GotoID="End">You may prove disappointed yet. Live and drink.</choice>
 		</node>	
 	
 		<node ID="Services">
 			<text>
-				lots of stuff
+				Heh, ye will find Shik to have everything ye could possibly need: soft cushions, tasty cooking and a place to trade in commodities.
+				
+				{{emote|*The mayor swells with pride at the list of what =pronouns.possessive= village has to offer.*}}										
 			</text>
 			<choice GotoID="Start">Maybe later</choice>			
 			<choice GotoID="End">Ok cya.</choice>
