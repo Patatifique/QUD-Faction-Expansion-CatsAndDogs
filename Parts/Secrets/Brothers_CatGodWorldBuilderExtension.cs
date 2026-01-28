@@ -44,7 +44,7 @@ namespace Brothers.CatsAndDogs
             zoneManager.SetZoneProperty(zoneID, "NoBiomes", "Yes");
 
 
-            zoneManager.GetZone("JoppaWorld").GetCell(location.X / 3, location.Y / 3).GetFirstObjectWithPart("TerrainTravel")?.GetPart<TerrainTravel>().AddEncounter(new EncounterEntry("cat god lair is here", zoneID, "", secret, true));
+            zoneManager.GetZone("JoppaWorld").GetCell(location.X / 3, location.Y / 3).GetFirstObjectWithPart("TerrainTravel")?.GetPart<TerrainTravel>().AddEncounter(new EncounterEntry("Nestled deep in the canyons is the lair of a godly feline. Would you like to investigate?", zoneID, "", secret, true));
         }
     }
 }

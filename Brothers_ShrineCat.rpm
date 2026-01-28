@@ -100,9 +100,7 @@
   <cell X="15" Y="1"></cell>
   <cell X="16" Y="1"></cell>
   <cell X="17" Y="1"></cell>
-  <cell X="18" Y="1">
-    <object Name="Ray Cat"></object>
-  </cell>
+  <cell X="18" Y="1"></cell>
   <cell X="19" Y="1"></cell>
   <cell X="20" Y="1"></cell>
   <cell X="21" Y="1"></cell>
@@ -160,9 +158,7 @@
   <cell X="65" Y="1"></cell>
   <cell X="66" Y="1"></cell>
   <cell X="67" Y="1"></cell>
-  <cell X="68" Y="1">
-    <object Name="Ray Cat"></object>
-  </cell>
+  <cell X="68" Y="1"></cell>
   <cell X="69" Y="1"></cell>
   <cell X="70" Y="1"></cell>
   <cell X="71" Y="1"></cell>
@@ -178,9 +174,7 @@
   <cell X="1" Y="2"></cell>
   <cell X="2" Y="2"></cell>
   <cell X="3" Y="2"></cell>
-  <cell X="4" Y="2">
-    <object Name="Chitinous Puma"></object>
-  </cell>
+  <cell X="4" Y="2"></cell>
   <cell X="5" Y="2"></cell>
   <cell X="6" Y="2"></cell>
   <cell X="7" Y="2"></cell>
@@ -226,9 +220,7 @@
   <cell X="41" Y="2"></cell>
   <cell X="42" Y="2"></cell>
   <cell X="43" Y="2"></cell>
-  <cell X="44" Y="2">
-    <object Name="Ray Cat"></object>
-  </cell>
+  <cell X="44" Y="2"></cell>
   <cell X="45" Y="2"></cell>
   <cell X="46" Y="2"></cell>
   <cell X="47" Y="2"></cell>
@@ -415,7 +407,9 @@
   <cell X="44" Y="4"></cell>
   <cell X="45" Y="4"></cell>
   <cell X="46" Y="4"></cell>
-  <cell X="47" Y="4"></cell>
+  <cell X="47" Y="4">
+    <object Name="Ray Cat"></object>
+  </cell>
   <cell X="48" Y="4"></cell>
   <cell X="49" Y="4"></cell>
   <cell X="50" Y="4"></cell>
@@ -820,9 +814,7 @@
   <cell X="66" Y="7"></cell>
   <cell X="67" Y="7"></cell>
   <cell X="68" Y="7"></cell>
-  <cell X="69" Y="7">
-    <object Name="Chitinous Puma"></object>
-  </cell>
+  <cell X="69" Y="7"></cell>
   <cell X="70" Y="7"></cell>
   <cell X="71" Y="7"></cell>
   <cell X="72" Y="7"></cell>
@@ -976,7 +968,9 @@
   <cell X="68" Y="8"></cell>
   <cell X="69" Y="8"></cell>
   <cell X="70" Y="8"></cell>
-  <cell X="71" Y="8"></cell>
+  <cell X="71" Y="8">
+    <object Name="Ray Cat"></object>
+  </cell>
   <cell X="72" Y="8"></cell>
   <cell X="73" Y="8"></cell>
   <cell X="74" Y="8"></cell>
@@ -1618,7 +1612,9 @@
   <cell X="11" Y="13"></cell>
   <cell X="12" Y="13"></cell>
   <cell X="13" Y="13"></cell>
-  <cell X="14" Y="13"></cell>
+  <cell X="14" Y="13">
+    <object Name="Ray Cat"></object>
+  </cell>
   <cell X="15" Y="13"></cell>
   <cell X="16" Y="13"></cell>
   <cell X="17" Y="13"></cell>
@@ -1876,9 +1872,7 @@
   <cell X="6" Y="15"></cell>
   <cell X="7" Y="15"></cell>
   <cell X="8" Y="15"></cell>
-  <cell X="9" Y="15">
-    <object Name="Ray Cat"></object>
-  </cell>
+  <cell X="9" Y="15"></cell>
   <cell X="10" Y="15"></cell>
   <cell X="11" Y="15"></cell>
   <cell X="12" Y="15"></cell>
@@ -2109,9 +2103,7 @@
   <cell X="65" Y="16"></cell>
   <cell X="66" Y="16"></cell>
   <cell X="67" Y="16"></cell>
-  <cell X="68" Y="16">
-    <object Name="Ray Cat"></object>
-  </cell>
+  <cell X="68" Y="16"></cell>
   <cell X="69" Y="16"></cell>
   <cell X="70" Y="16"></cell>
   <cell X="71" Y="16"></cell>
@@ -2302,7 +2294,6 @@
   </cell>
   <cell X="41" Y="18">
     <object Name="DirtPath"></object>
-    <object Name="Brothers_CatsDogs_Rocky Lion M"></object>
   </cell>
   <cell X="42" Y="18">
     <object Name="DirtPath"></object>
@@ -2328,7 +2319,9 @@
   <cell X="53" Y="18"></cell>
   <cell X="54" Y="18"></cell>
   <cell X="55" Y="18"></cell>
-  <cell X="56" Y="18"></cell>
+  <cell X="56" Y="18">
+    <object Name="Ray Cat"></object>
+  </cell>
   <cell X="57" Y="18"></cell>
   <cell X="58" Y="18"></cell>
   <cell X="59" Y="18"></cell>
@@ -2348,9 +2341,7 @@
   <cell X="73" Y="18"></cell>
   <cell X="74" Y="18"></cell>
   <cell X="75" Y="18"></cell>
-  <cell X="76" Y="18">
-    <object Name="Chitinous Puma"></object>
-  </cell>
+  <cell X="76" Y="18"></cell>
   <cell X="77" Y="18"></cell>
   <cell X="78" Y="18"></cell>
   <cell X="79" Y="18"></cell>
@@ -2358,9 +2349,7 @@
   <cell X="1" Y="19"></cell>
   <cell X="2" Y="19"></cell>
   <cell X="3" Y="19"></cell>
-  <cell X="4" Y="19">
-    <object Name="Chitinous Puma"></object>
-  </cell>
+  <cell X="4" Y="19"></cell>
   <cell X="5" Y="19"></cell>
   <cell X="6" Y="19"></cell>
   <cell X="7" Y="19"></cell>
@@ -2394,9 +2383,7 @@
   <cell X="24" Y="19"></cell>
   <cell X="25" Y="19"></cell>
   <cell X="26" Y="19"></cell>
-  <cell X="27" Y="19">
-    <object Name="Ray Cat"></object>
-  </cell>
+  <cell X="27" Y="19"></cell>
   <cell X="28" Y="19"></cell>
   <cell X="29" Y="19"></cell>
   <cell X="30" Y="19"></cell>
@@ -2502,7 +2489,9 @@
   <cell X="24" Y="20"></cell>
   <cell X="25" Y="20"></cell>
   <cell X="26" Y="20"></cell>
-  <cell X="27" Y="20"></cell>
+  <cell X="27" Y="20">
+    <object Name="Ray Cat"></object>
+  </cell>
   <cell X="28" Y="20"></cell>
   <cell X="29" Y="20"></cell>
   <cell X="30" Y="20"></cell>
@@ -2530,7 +2519,6 @@
   </cell>
   <cell X="43" Y="20">
     <object Name="DirtPath"></object>
-    <object Name="Brothers_CatsDogs_Rocky Lion F"></object>
   </cell>
   <cell X="44" Y="20"></cell>
   <cell X="45" Y="20">

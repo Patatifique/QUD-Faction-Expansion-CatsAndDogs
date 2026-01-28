@@ -42,7 +42,7 @@ namespace Brothers.CatsAndDogs
             zoneManager.SetZoneIncludeStratumInZoneDisplay(zoneID, false);
             zoneManager.SetZoneProperty(zoneID, "NoBiomes", "Yes");
 
-            zoneManager.GetZone("JoppaWorld").GetCell(location.X / 3, location.Y / 3).GetFirstObjectWithPart("TerrainTravel")?.GetPart<TerrainTravel>().AddEncounter(new EncounterEntry("dog god lair is here", zoneID, "", secret, true));
+            zoneManager.GetZone("JoppaWorld").GetCell(location.X / 3, location.Y / 3).GetFirstObjectWithPart("TerrainTravel")?.GetPart<TerrainTravel>().AddEncounter(new EncounterEntry("Dug in a hillside is the lair of a godly canine. Would you like to investigate?", zoneID, "", secret, true));
         }
     }
 }

@@ -69,7 +69,7 @@
 	   Accomplishment="You reunited two lovers against all odds."
 	   Hagiograph="Love prospers! In the month of =month= of =year=, adventurous =name= eloped from Shikspar with Oof Growf and Rrromaw."
 	   HagiographCategory="Trysts"
-	   Gospel="Standing in the ruins of a colossal wall, =name= cemented =player.possessive= friendship with the bears of Shikspar by marrying into the royal couple Oof Growf and Rrromaw.">
+	   Gospel="Standing in the ruins of a colossal wall, =name= cemented =player.possessive= friendship with the bears of Shikspar by marrying into the royal couple.">
 
 		<step ID="Gifts" Name="Help Prepare a Date" XP="1000">
 			<text>Return to Oof Growf in Shik with a dram of wine and a smooth gemstone.</text>
@@ -90,7 +90,7 @@
 	   Accomplishment="You reunited two lovers against all odds."
 	   Hagiograph="Love prospers! In the month of =month= of =year=, adventurous =name= eloped from Shikspar with Oof Growf and Rrromaw."
 	   HagiographCategory="Trysts"
-	   Gospel="Standing in the ruins of a colossal wall, =name= cemented =player.possessive= friendship with the bears of Shikspar by marrying into the royal couple Oof Growf and Rrromaw.">
+	   Gospel="Standing in the ruins of a colossal wall, =name= cemented =player.possessive= friendship with the bears of Shikspar by marrying into the royal couple.">
 
 		<step ID="Gifts" Name="Help Prepare a Date" XP="1000">
 			<text>Return to Rrromaw in Spar with a dram of wine and a smooth gemstone.</text>

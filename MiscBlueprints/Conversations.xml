@@ -94,44 +94,106 @@
 				
 				{{emote|*The mayor swells with pride at the list of what =pronouns.possessive= village has to offer.*}}										
 			</text>
-			<choice GotoID="Start">Maybe later</choice>			
-			<choice GotoID="End">Ok cya.</choice>
+			<choice GotoID="Tinker">And if my equipment needs tinkering, where should I head?</choice>				
+			<choice GotoID="Start">Thank you. There was something else...</choice>			
+			<choice GotoID="End">More than enough indeed. Live and drink.</choice>
+		</node>	
+
+		<node ID="Tinker">
+			<text>			
+				{{emote|*=pronouns.Subjective= =verb:guffaw:afterpronoun= loudly.*}}
+
+				A tinker? Ye be serious now, there's nae need for dissecting chrome when ye could enjoy our wee village, heh?
+			</text>
+			<choice GotoID="Start">If you say so. I wanted to ask you something else.</choice>			
+			<choice GotoID="End">I will see about that. Live and drink.</choice>
 		</node>	
 	
 		<node ID="Goatfolk">
 			<text>
-				i aint afraid of no goats
+				Bah, brayers and sowers! We dinna fear what we can smell coming from ten parasangs away, ye ken? And our warden's a rightly dreaded shooter. Concern yerself with yer own safety, traveler.
 			</text>
-			<choice GotoID="Start">Maybe later</choice>			
-			<choice GotoID="End">Ok cya.</choice>
+			<choice GotoID="Start">I stand reassured then. If I may ask another question...</choice>			
+			<choice GotoID="End">That was all. Live and drink, mayor.</choice>
 		</node>	
 		
 		<node ID="Work">
 			<text>
-				go see the chef / merchant
+				Aye, there is: go see the Growarows, just across the village square. They've been looking for some kitchen help, and ye seem capable enough. Apart from that, ye can always make the orchard lighter and have yer pick of starapples -- the work is its own reward.
 			</text>
-			<choice GotoID="Start">Maybe later</choice>			
-			<choice GotoID="End">Ok cya.</choice>
+			<choice GotoID="Start">I will see what I can do then. On another topic...</choice>			
+			<choice GotoID="End">I am on my way to do that. Live and drink, mayor.</choice>
 		</node>	
 
 		<node ID="Division">
 			<text>
-				really good actually, no problem at all
+				{{emote|*=pronouns.Subjective= =verb:sit:afterpronoun= proudly and =verb:puff:afterpronoun= up =prounouns.reflexive= chest.*}}			
+				
+				The deal? I'll tell ye the deal, traveler: their mayor thinks she should rule over all of us! I dinna plan to take this lying down, ye hear? We dogs of Shik are a proud sort, mark me words. 
+				
+				Our good warden -- Founder bless his bark -- is trying to speak some sense into her. Think ye could see if he needs a wee hand?
 			</text>
-			<choice GotoID="Start">Maybe later</choice>			
-			<choice GotoID="End">Ok cya.</choice>
+			<choice GotoID="Where">I could always see about that. Where can I find this warden?</choice>
 		</node>	
 
-		<node ID="Opinion">
+		<node ID="Where">
 			<text>
-				cats are dumb
+				In the no dog's land between Shik and Spar, by the northern wall.
+				
+				Watch yerself if ye decide to speak with Spar's mayor: she is as cruel a lass as they make!
 			</text>
-			<choice GotoID="DogLore">I read some stuff about it you're right</choice>	
-			<choice GotoID="CatLore">I read some stuff about it it's you who is dumb</choice>						
-			<choice GotoID="End">Ok cya.</choice>
+			<choice GotoID="End" StartQuest="Brothers_CatsDogs_MainQuest1">Duly noted. I will talk to the warden then.</choice>
+		</node>	
+		
+		<node ID="Opinion">
+			<text>		
+				Well, not by our doing, that much is sure. This wee place of ours was once called Shikspar, ye ken? When our Founder passed away, they passed the burden of leading us all to their kin and most loyal friend: me direct ancestor.
+				
+				Yet, it dinnae quite agree with *someone*, who took their posse and seceded, would ye believe it? Did claim half of our name too, left us with "Shik". Aye well, I dinna mind much, name is more agreeable this way.
+				
+				If ye need more details, it is all engraved on our monument right over there. Give it a peek if ye want.
+			</text>
+			<choice GotoID="CatLore" FlagSecret="true">Your story does not quite match the monument I saw in Spar: supposedly, Bubumube disappeared without appointing a successor.</choice>	
+			<choice GotoID="FounderSpecies">You said "their kin". Was the Founder a dog as well?</choice>		
+			<choice GotoID="Support">Where does the rest of Shik stand on that issue?</choice>				
+			<choice GotoID="Start">That is quite the tale. I wanted to ask you about something else.</choice>		
+			<choice GotoID="End">Fascinating, but I must go. Live and drink.</choice>
 		</node>			
 
+
+
+
+
+
+
+
+
+
 	</conversation>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	<conversation ID="Brothers_CatsDogs_CatMayor">
