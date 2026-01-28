@@ -55,23 +55,23 @@
 		
 		<node ID="Start">
 			<text>
-				{{emote|*With each of the hound's words, slime spittles from =pronouns.possessive= jowls.*}}			
+				{{emote|*With each of the hound's words, slime spittles from =pronouns.possessive= jowls.*}}
 				
-				Oy, traveler, came to gawk at our wee village, have ye? Ye'll nae find a better spot to grab some shuteye or munch on starapples, heh? 
+				Oy, traveler, came to gawk at our wee village, have ye? Ye'll nae find a better spot to grab some shuteye or munch on starapples, heh?
 			</text>
-			<choice GotoID="CouncilInvite" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest3~DogMayor">Warden Arendubark wants to settle the division between Shik and Spar once and for all, and wants you to take part in a council with Spar's mayor.</choice>
-			<choice GotoID="FounderInfo" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2">Mayor, I have definite information about Shik and Spar's founder.</choice>
-			<choice GotoID="Services">What can I expect to find in Shik, beside starapples?</choice>
-			<choice GotoID="Goatfolk">Don't you fear attacks from the jungle goatfolks?</choice>
-			<choice GotoID="Work" IfNotHaveQuest="Brothers_CatsDogs_ChefQuest">Is there any work to do in Shik?</choice>
-			<choice GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the deal with the village on the wall's other side?</choice>
-			<choice GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">How come Shik and Spar are divided?</choice>
-			<choice GotoID="End">I will take my leave now. Live and drink, mayor.</choice>
+			<choice ID="CouncilChoice" GotoID="Council" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest3~DogMayor">Warden Arendubark wants to settle the division between Shik and Spar once and for all, and wants you to take part in a council with Spar's mayor.</choice>
+			<choice ID="FounderInfoChoice" GotoID="FounderInfo" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2">I have definite information about Shik and Spar's founder.</choice>
+			<choice ID="ServicesChoice" GotoID="Services">What can I expect to find in Shik, beside starapples?</choice>
+			<choice ID="GoatfolkChoice" GotoID="Goatfolk">Don't you fear attacks from the jungle goatfolks?</choice>
+			<choice ID="WorkChoice" GotoID="Work" IfNotHaveQuest="Brothers_CatsDogs_ChefQuest">Is there any work to do in Shik?</choice>
+			<choice ID="DivisionChoice" GotoID="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the deal with the village on the wall's other side?</choice>
+			<choice ID="OpinionChoice" GotoID="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">How come Shik and Spar are divided?</choice>
+			<choice ID="EndChoice" GotoID="End">I must take my leave now. Live and drink, mayor.</choice>
 		</node>
 	
 		<node ID="CouncilInvite">
 			<text>
-				{{emote|*=pronouns.Subjective= =verb:hawk:afterpronoun= and =verb:spit:afterpronoun= a glob of sludge in the dirt.*}}			
+				{{emote|*=pronouns.Subjective= =verb:hawk:afterpronoun= and =verb:spit:afterpronoun= a glob of sludge in the dirt.*}}
 				
 				In our favor, I wager. 'Twas about bloody time that those nasty hairballs got what was coming to them. Lead the way, will ye?
 			</text>
@@ -84,8 +84,12 @@
 				
 				{{emote|*=pronouns.Subjective= =verb:sit:afterpronoun= on the ground, quite content with =pronouns.reflexive=.*}}							
 			</text>
-			<choice GotoID="Start">I will see the warden about that situation. But first, something else.</choice>			
-			<choice GotoID="End">You may prove disappointed yet. Live and drink.</choice>
+			<choice UseID="ServicesChoice"/>
+			<choice UseID="GoatfolkChoice"/>
+			<choice UseID="WorkChoice"/>
+			<choice UseID="DivisionChoice"/>			
+			<choice UseID="OpinionChoice"/>			
+			<choice UseID="EndChoice"/>
 		</node>	
 	
 		<node ID="Services">
@@ -127,7 +131,7 @@
 
 		<node ID="Division">
 			<text>
-				{{emote|*=pronouns.Subjective= =verb:sit:afterpronoun= proudly and =verb:puff:afterpronoun= up =prounouns.reflexive= chest.*}}			
+				{{emote|*=pronouns.Subjective= =verb:sit:afterpronoun= proudly and =verb:puff:afterpronoun= up =pronouns.reflexive= chest.*}}			
 				
 				The deal? I'll tell ye the deal, traveler: their mayor thinks she should rule over all of us! I dinna plan to take this lying down, ye hear? We dogs of Shik are a proud sort, mark me words. 
 				
