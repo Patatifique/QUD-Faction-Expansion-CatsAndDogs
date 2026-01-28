@@ -2,6 +2,7 @@ using XRL;
 using XRL.World;
 using XRL.World.WorldBuilders;
 using XRL.World.ZoneBuilders;
+using XRL.World.Parts;
 
 namespace Brothers.CatsAndDogs
 {
@@ -31,6 +32,7 @@ namespace Brothers.CatsAndDogs
             zoneManager.AddZonePostBuilder(zoneID, "MapBuilder", "FileName", "Brothers_ShrineCat.rpm");
 
 
+
             // I might add a music later
             //zoneManager.AddZonePostBuilder(zoneID, "Music", "Track", "Music/Bey Lah Heritage II");
 
@@ -41,6 +43,9 @@ namespace Brothers.CatsAndDogs
             zoneManager.SetZoneName(zoneID, "napping spot of Miramihamia, Feline God", Article: "the", Proper: true);
             zoneManager.SetZoneIncludeStratumInZoneDisplay(zoneID, false);
             zoneManager.SetZoneProperty(zoneID, "NoBiomes", "Yes");
+
+
+            The.ZoneManager.GetZone("JoppaWorld").GetCell(location.X / 3, location.Y / 3).GetFirstObjectWithPart("TerrainTravel")?.GetPart<TerrainTravel>().AddEncounter(new EncounterEntry("I want this message to work", zoneID, "", secret, true));
         }
     }
 }
