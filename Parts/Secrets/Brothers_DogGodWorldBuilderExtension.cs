@@ -2,6 +2,7 @@ using XRL;
 using XRL.World;
 using XRL.World.WorldBuilders;
 using XRL.World.ZoneBuilders;
+using XRL.World.Parts;
 
 namespace Brothers.CatsAndDogs
 {
@@ -37,10 +38,11 @@ namespace Brothers.CatsAndDogs
 
 
 
-            // You can also set various properties on the zone, if you wish.
             zoneManager.SetZoneName(zoneID, "mourning cave of Boroworof, Canine God", Article: "the", Proper: true);
             zoneManager.SetZoneIncludeStratumInZoneDisplay(zoneID, false);
             zoneManager.SetZoneProperty(zoneID, "NoBiomes", "Yes");
+
+            zoneManager.GetZone("JoppaWorld").GetCell(location.X / 3, location.Y / 3).GetFirstObjectWithPart("TerrainTravel")?.GetPart<TerrainTravel>().AddEncounter(new EncounterEntry("dog god lair is here", zoneID, "", secret, true));
         }
     }
 }

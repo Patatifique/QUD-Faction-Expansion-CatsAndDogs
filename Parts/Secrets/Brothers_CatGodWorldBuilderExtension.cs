@@ -39,13 +39,12 @@ namespace Brothers.CatsAndDogs
 
 
 
-            // You can also set various properties on the zone, if you wish.
             zoneManager.SetZoneName(zoneID, "napping spot of Miramihamia, Feline God", Article: "the", Proper: true);
             zoneManager.SetZoneIncludeStratumInZoneDisplay(zoneID, false);
             zoneManager.SetZoneProperty(zoneID, "NoBiomes", "Yes");
 
 
-            The.ZoneManager.GetZone("JoppaWorld").GetCell(location.X / 3, location.Y / 3).GetFirstObjectWithPart("TerrainTravel")?.GetPart<TerrainTravel>().AddEncounter(new EncounterEntry("I want this message to work", zoneID, "", secret, true));
+            zoneManager.GetZone("JoppaWorld").GetCell(location.X / 3, location.Y / 3).GetFirstObjectWithPart("TerrainTravel")?.GetPart<TerrainTravel>().AddEncounter(new EncounterEntry("cat god lair is here", zoneID, "", secret, true));
         }
     }
 }
