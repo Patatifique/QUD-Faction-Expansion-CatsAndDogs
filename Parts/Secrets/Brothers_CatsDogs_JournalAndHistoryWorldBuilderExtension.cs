@@ -14,7 +14,7 @@ namespace Brothers.CatsAndDogs
         {
             //  Gossips to be given by the Gods
             JournalAPI.AddObservation(
-                "Some Gossip about the founder of Shikspar given by the Cat God.", 
+                "Bubumube had round ears and nonretractile claws.", 
                 "$Brothers_CatsDogs_ShiksparFounder_Cat", 
                 "Gossip", 
                 "$Brothers_CatsDogs_ShiksparFounder_Cat", 
@@ -22,7 +22,7 @@ namespace Brothers.CatsAndDogs
             );
 
             JournalAPI.AddObservation(
-                "Some Gossip about the founder of Shikspar given by the Dog God.",
+                "Bubumube had solitary tendecies and fished in Qud's rivers.",
                 "$Brothers_CatsDogs_ShiksparFounder_Dog",
                 "Gossip",
                 "$Brothers_CatsDogs_ShiksparFounder_Dog",
