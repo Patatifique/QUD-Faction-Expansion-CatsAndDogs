@@ -12,6 +12,25 @@ namespace Brothers.CatsAndDogs
     {
         public override void OnAfterBuild(JoppaWorldBuilder builder)
         {
+            //  Gossips to be given by the Gods
+            JournalAPI.AddObservation(
+                "Some Gossip about the founder of Shikspar given by the Cat God.", 
+                "$Brothers_CatsDogs_ShiksparFounder_Cat", 
+                "Gossip", 
+                "$Brothers_CatsDogs_ShiksparFounder_Cat", 
+                new string[1]
+            );
+
+            JournalAPI.AddObservation(
+                "Some Gossip about the founder of Shikspar given by the Dog God.",
+                "$Brothers_CatsDogs_ShiksparFounder_Dog",
+                "Gossip",
+                "$Brothers_CatsDogs_ShiksparFounder_Dog",
+                new string[1]
+            );
+
+
+
             // Coordinates for Shikspar in JoppaWorld
             var shiksparLocation = builder.ZoneIDFromXY("JoppaWorld", 38*3, 23*3);
 
