@@ -16,7 +16,7 @@
 				<builder Class="Sky" />
 			</zone>
 			
-			<zone Level="10" x="1" y="1" Name="palissade between Shik and Spar" IndefiniteArticle="the" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000" >
+			<zone Level="10" x="1" y="1" Name="palisade between Shik and Spar" IndefiniteArticle="the" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000" >
 				<map FileName="Brothers_ShiksparCenter.rpm" />
 				<music Track="Music/3rd Spore Phase" />
 			</zone>

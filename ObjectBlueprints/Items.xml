@@ -89,7 +89,7 @@
 		<part Name="Armor" Ego="2" AV="2" DV="2" MA="2" Cold="15" Heat="15" WornOn="Back" />
 		<part Name="Commerce" Value="2500" />
 		<part Name="ItemElements" Elements="might::6" />
-		<part Name="Description" Short="The spirit of the hill Saad weighs heavy on conscience and acromion, the spirit of vigilance unscraped from a husk of pelage. Lo, and feast your gaze on divinity made rainment by hand of the Screaming Men." />
+		<part Name="Description" Short="The spirit of the hill Saad weighs heavy on conscience and acromion, the spirit of vigilance unscraped from a husk of pelage. Lo, and feast your gaze on divinity made raiment by hand of the Screaming Men." />
 		<part Name="MutationOnEquip" ClassName="HeightenedSmell" Level="10" />
 		<part Name="Physics" Weight="15" FlameTemperature="99999" VaporTemperature="99999" Organic="true" />
 		<stat Name="Hitpoints" Value="1000" />
@@ -164,7 +164,7 @@
 		
 	<object Name="Brothers_CatsDogs_LoveNote" Inherits="Book">
 		<part Name="Render" DisplayName="{{Y|folded sheet of paper}}" ColorString="&amp;w" DetailColor="W" RenderString="=" RenderLayer="5" Tile="Items/sw_paper.bmp" />
-		<part Name="Description" Short="Timidity vanquished and laid to rest on crushed brinestalk fibers holds potential for a future yet unrealised." />
+		<part Name="Description" Short="Timidity vanquished and laid to rest on crushed brinestalk fibers holds potential for a future yet unrealized." />
 		<part Name="Book" ID="Brothers_CatsDogs_DateInvite" />
 		<part Name="Commerce" Value="10" />    
 		<xtagGrammar Proper="false" adjunctNoun="" />

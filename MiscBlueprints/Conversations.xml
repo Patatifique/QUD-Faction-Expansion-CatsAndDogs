@@ -39,7 +39,7 @@
 <!--Important NPCs-->
 
 
-	<conversation ID="Brothers_CatsDogs_Warden Arendurath">
+	<conversation ID="Brothers_CatsDogs_Warden Arendubark">
 		
 		<node ID="Start">
 			<text>
@@ -55,9 +55,9 @@
 		
 		<start ID="Welcome" Inherits="DefaultChoices">
 			<text Priority="-1">
-				{{emote|*With each of the hound's words, slime spittles from =pronouns.possessive= jowls.*}}
+				{{emote|*With each of the hound's words, slime splutters from =pronouns.possessive= jowls.*}}
 				
-				Oy, traveler, came to gawk at our wee village, have ye? Ye'll nae find a better spot to grab some shuteye or munch on starapples, heh?
+				Oy, traveler, came to gawk at our wee village, have ye? Ye willnae find a better spot to grab some shuteye or munch on starapples, heh?
 			</text>
 		</start>
 
@@ -78,7 +78,7 @@
 			<text>
 				{{emote|*=pronouns.Subjective= =verb:shake:afterpronoun= =pronouns.possessive= head.*}}
 				
-				Ye would have us welcome them, traveler. That I cannae agree with. There is too much going on already in our abode without us having another folk around. I am sorry, but I am certain ye will undertand.
+				Ye would have us welcome them, traveler. That I cannae agree with. There is too much going on already in our abode without us having another folk around. I am sorry, but I am certain ye will understand.
 			</text>
 			<choice Target="Start">I think I do. There was something else I needed to ask you.</choice>
 			<choice Target="End">I understand. Live and drink, mayor.</choice>			
@@ -158,7 +158,7 @@
 		</node>	
 
 		<node ID="HistoryChoices">
-			<choice Target="CatLore" IfHaveVillageNote="Brothers_ShiksparSecret3" FlagSecret="true">Your story does not quite match the monument I saw in Spar: supposedly, Bubumube disappeared without appointing a successor.</choice>	
+			<choice Target="CatLore" IfHaveVillageNote="Brothers_ShiksparSecret3" FlagSecret="true">Your story does not quite match the monument I saw in Spar: Bubumube supposedly disappeared without appointing a successor.</choice>	
 			<choice Target="FounderSpecies">You said "their kin". Was the Founder a dog as well?</choice>		
 			<choice Target="Support">Where does the rest of Shik stand on that issue?</choice>
 			<choice Target="Start">A gripping tale. I wanted to ask you about something else.</choice>		
@@ -177,7 +177,7 @@
 
 		<node ID="CatLore" Inherits="HistoryChoices">
 			<text>		
-				{{emote|*=pronouns.Subjective= =verb:look:afterpronoun= outraged, and =pronouns.possessive= next words come with a shower of slimey spittle.*}}
+				{{emote|*=pronouns.Subjective= =verb:look:afterpronoun= outraged, and =pronouns.possessive= next words come with a shower of slimy spittle.*}}
 				
 				Yarn and falsehoods! I knew their mayor to be crafty, but I hadnae taken her for such a devious fabulist. Dinna believe everything you read, ye hear me? There *was* an appointed successor, otherwise I wouldnae be standing here in front of ye.
 			</text>
@@ -409,7 +409,7 @@
 				
 				I've heard that voice through the walls, fancy as the Beetle Moon -- I cannae bear to live without knowing: is Rrromaw as bonnie as I imagine? 
 				
-				On second thought, dinna answer: it dinna matter what me heart's burglar looks like, only that I can get an invitation to the Ut yara Ux festival delivered to this hearthrob of mine. Could ye help me there, stranger?
+				On second thought, dinna answer: it dinna matter what me heart's burglar looks like, only that I can get an invitation to the Ut yara Ux festival delivered to this heartthrob of mine. Could ye help me there, stranger?
 			</text>
 			<choice Target="Why">Why do you need my help? Can't you take your invitation to Rrromaw yourself?</choice>
 			<choice Target="Secret">I'm not sure I understand why you feel the need to be so secretive.</choice>
@@ -496,7 +496,7 @@
 			<text>			
 				{{emote|After retrieving the carefully folded note, =pronouns.subjective= =verb:read:afterpronoun= it twice: precipitately at first, then more slowly once the initial shock has subsided.*}}
 				
-				Rrromaw! The hearthrob from Spar! The melodic voice that's been haunting me dreams e'er since I heard it first! Of course I'll be there, battling sultans if needs be!
+				Rrromaw! The heartthrob from Spar! The melodic voice that's been haunting me dreams e'er since I heard it first! Of course I'll be there, battling sultans if needs be!
 			</text>
 			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_CatLoverQuest~Invite">I will let Rrromaw know of your enthusiasm then. In the meantime, live and drink.</choice>
 		</node>			
@@ -505,14 +505,14 @@
 			<text>			
 				I can scarcely believe ye, =name=! I cannae thank ye enough for all ye've done. Now to prepare for the date... It is not coming up just yet, but I am grateful for the change ye've given me.
 				
-				{{emote|Determination shines bright in =pronouns.possesssive= eyes.*}}
+				{{emote|Determination shines bright in =pronouns.possessive= eyes.*}}
 			</text>
 			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_DogLoverQuest~Debrief">Glad I could help you, Oof Growf. Live and drink!</choice>
 		</node>			
 		
 		<node ID="Division" AllowEscape="false">
 			<text>
-				{{emote|*=pronouns.Subjective= =verb:lean:afterpronoun= forward and =verb:whisper:afterpronoun= hatively.*}}
+				{{emote|*=pronouns.Subjective= =verb:lean:afterpronoun= forward and =verb:whisper:afterpronoun= hastily.*}}
 				
 				I cannae mention it under this roof: go find Warden Arendubark, in the northern outskirts. He will tell ye all about our sorry history!
 			</text>
@@ -555,7 +555,7 @@
 				Oh =name=, I shall surely faint before the day is done. Have you delivered the invite? What did Oof Growf say?
 			</text>
 			<text IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Invite" Priority="-1">
-				{{emote|The tip of =pronouns.possessive= ears go pink as you adress =pronouns.objective=.}}
+				{{emote|The tip of =pronouns.possessive= ears go pink as you address =pronouns.objective=.}}
 				
 				Oh? I think you must want to speak with the mayor -- she is right over there.
 			</text>
@@ -838,7 +838,7 @@
 		</node>	
 
 		<node ID="Reliefs" Load="Merge">
-			<choice Target="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They lived in Ezra, many years ago.</choice>
+			<choice Target="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They supposedly passed by Ezra, many decades ago.</choice>
 			<choice Target="BubumubeReminder" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Can you remind me where Bubumube went after they left Ezra?</choice>
 		</node>
 
@@ -864,7 +864,7 @@
 
 		<node ID="Bubumube">
 			<text>			
-				HA! A tree-old name. They found shade under my fingers, many yesteryears ago. Gone to sow their own errancy.
+				HA! A tree-old name. They found shade under my fingers, many yesteryears back. Gone to sow their own errancy.
 			</text>
 			<choice Target="DogOrCat">Do you remember if they were a dog or a cat? I promise this is important.</choice>
 		</node>
@@ -1190,7 +1190,7 @@
 				{{K|Heads!}}
 			</text>
 			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
-				{{emote|*Both heads nod emphathetically.*}}
+				{{emote|*Both heads nod emphatically.*}}
 
 				{{cloudy|Folks get confused too easily nowadays.}}
 				
@@ -1264,7 +1264,7 @@
 				Settle comfortably if you need to, =player.apparentSpecies=, and grab a soldering iron. Work awaits.
 			</text>
 			<text IfHaveActiveQuest="Brothers_CatsDogs_CheeseQuest" Priority="-1">
-				{{emote|*The tinker's bestacled gaze =verb:gauge= you mercilessly.*}}
+				{{emote|*The tinker's bespectacled gaze =verb:gauge= you mercilessly.*}}
 				
 				There you are, =player.apparentSpecies=! What news from the ripening caves?
 			</text>
@@ -1430,7 +1430,7 @@
 
 		<node ID="Zanya" Inherits="Welcome">
 			<text>
-				Obviously, yes. They help me from time to time -- as it happens, bipedality proves unexpectantly useful in a cat.
+				Obviously, yes. They help me from time to time -- as it happens, bipedality proves unexpectedly useful in a cat.
 			</text>
 		</node>	
 
@@ -1438,7 +1438,7 @@
 			<text>
 				{{emote|*=pronouns.Subjective= =verb:knead:afterpronoun= the ground for a few seconds, but =pronouns.possessive= expression quickly shifts to suspicion.*}}
 			
-				I cut open artifacts, learn of their innards, and put them back together. Somestimes I make more myself, out of the bits and trinkets brought by wandering traders. Are you another student of chrome?
+				I cut open artifacts, learn of their innards, and put them back together. Sometimes I make more myself, out of the bits and trinkets brought by wandering traders. Are you another student of chrome?
 			</text>
 			<choice Target="ATinker">
 				<text>I have been known to tinker my own machines when the need arises.</text>
@@ -1449,7 +1449,7 @@
 
 		<node ID="ATinker" Inherits="Welcome">
 			<text>
-				Well, in that case, I hope you can refrain from spouting unsollicited "advice", =player.apparentSpecies=. If I need pointers, I will ask for them. Now do you need anything else?
+				Well, in that case, I hope you can refrain from spouting unsolicited "advice", =player.apparentSpecies=. If I need pointers, I will ask for them. Now do you need anything else?
 			</text>	
 		</node>	
 
@@ -1524,7 +1524,7 @@
 				Aye, for sure! Our good 'arden's been looking to solve the matter but he could most definitely use a paw or two, meow. Can't investigate much from 'here he's taken root, see?
 			</text>				
 			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
-				{{emote|*=pronouns.Subjective= =verb:look:affterpronoun= left and right before continuing.*}}
+				{{emote|*=pronouns.Subjective= =verb:look:afterpronoun= left and right before continuing.*}}
 				
 				Aye, for sure! Our good 'arden's been looking to solve the matter but he coul' most definitely use a hand or two, meow. Can't investigate much from 'here he's taken root, see? You can find 'im in the northern outskirts.
 			</text>			

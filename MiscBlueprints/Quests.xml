@@ -132,7 +132,7 @@
 		Accomplishment="You retrieved the final ingredient for an outstanding meal."
 		Hagiograph="Generous =name= feeds the hungry! Walking through the flames, =player.subjective= bestows manna to =player.possessive= attendants."
 		HagiographCategory="FindsObject"
-		Gospel="Let it be known that =name= counted amongst his foes a many-headed beast of hatred. =name= struck it down, and retrieved from its stomach the bituminous remains of a long-lost friend.">
+		Gospel="Let it be known that =name= counted among his foes a many-headed beast of hatred. =name= struck it down, and retrieved from its stomach the bituminous remains of a long-lost friend.">
 
 		<step ID="Travel" Name="Travel to the Asphalt Mines" XP="500" Optional="true">
 			<text>Journey three parasangs north and six parasangs east of the Six Day Stilt, to the Asphalt Mines.</text>
