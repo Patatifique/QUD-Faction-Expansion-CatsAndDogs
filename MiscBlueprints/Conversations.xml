@@ -53,22 +53,26 @@
 
 	<conversation ID="Brothers_CatsDogs_DogMayor">
 		
-		<node ID="Start">
-			<text>
+		<start ID="Welcome" Inherits="DefaultChoices">
+			<text Priority="-1">
 				{{emote|*With each of the hound's words, slime spittles from =pronouns.possessive= jowls.*}}
 				
 				Oy, traveler, came to gawk at our wee village, have ye? Ye'll nae find a better spot to grab some shuteye or munch on starapples, heh?
 			</text>
-			<choice ID="CouncilChoice" Target="Council" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest3~DogMayor">Warden Arendubark wants to settle the division between Shik and Spar once and for all, and wants you to take part in a council with Spar's mayor.</choice>
-			<choice ID="FounderInfoChoice" Target="FounderInfo" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2">I have definite information about Shik and Spar's founder.</choice>
-			<choice ID="ServicesChoice" Target="Services">What can I expect to find in Shik, beside starapples?</choice>
-			<choice ID="GoatfolkChoice" Target="Goatfolk">Don't you fear attacks from the jungle goatfolk?</choice>
-			<choice ID="WorkChoice" Target="Work" IfNotHaveQuest="Brothers_CatsDogs_ChefQuest">Is there any work to do in Shik?</choice>
-			<choice ID="DivisionChoice" Target="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the deal with the village on the wall's other side?</choice>
-			<choice ID="OpinionChoice" Target="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">How come Shik and Spar are divided?</choice>
-			<choice ID="EndChoice" Target="End">I must take my leave now. Live and drink, mayor.</choice>
+		</start>
+
+		<node ID="DefaultChoices">
+			<choice Target="Council" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest3~DogMayor">Warden Arendubark wants to settle the division between Shik and Spar once and for all, and wants you to take part in a council with Spar's mayor.</choice>
+			<choice Target="FounderInfo" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2">I have definite information about Shik and Spar's founder.</choice>
+			<choice Target="Services">What can I expect to find in Shik, beside starapples?</choice>
+			<choice Target="Goatfolk">Don't you fear attacks from the jungle goatfolk?</choice>
+			<choice Target="Travelers">I see only dogs living here. Am I allowed here?</choice>			
+			<choice Target="Work" IfNotHaveQuest="Brothers_CatsDogs_ChefQuest">Is there any work to do in Shik?</choice>
+			<choice Target="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the deal with the village on the wall's other side?</choice>
+			<choice Target="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">How come Shik and Spar are divided?</choice>
+			<choice Target="End">I must take my leave now. Live and drink, mayor.</choice>
 		</node>
-	
+		
 		<node ID="CouncilInvite">
 			<text>
 				{{emote|*=pronouns.Subjective= =verb:hawk:afterpronoun= and =verb:spit:afterpronoun= a glob of sludge in the dirt.*}}
@@ -78,66 +82,59 @@
 			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~DogMayor">That seems awfully excessive. See you there.</choice>
 		</node>
 	
-		<node ID="FounderInfo">
+		<node ID="FounderInfo" Inherits="Welcome">
 			<text>
 				Heh! Ye dinna need to tell me anything, I already know Bubumube was a tried and true canine, nae doubt. Ye go and tell all that to the warden, yes? That he definitely settles our wee scuffle.
 				
-				{{emote|*=pronouns.Subjective= =verb:sit:afterpronoun= on the ground, quite content with =pronouns.reflexive=.*}}							
+				{{emote|*=pronouns.Subjective= =verb:sit:afterpronoun= on the ground, quite content with =pronouns.reflexive=.*}}
 			</text>
-			<choice UseID="ServicesChoice"/>
-			<choice UseID="GoatfolkChoice"/>
-			<choice UseID="WorkChoice"/>
-			<choice UseID="DivisionChoice"/>			
-			<choice UseID="OpinionChoice"/>			
-			<choice UseID="EndChoice"/>
 		</node>	
 	
-		<node ID="Services">
+		<node ID="Services" Inherits="Welcome">
 			<text>
 				Heh, ye will find Shik to have everything ye could possibly need: soft cushions, tasty cooking and a place to trade in commodities.
 				
-				{{emote|*The mayor swells with pride at the list of what =pronouns.possessive= village has to offer.*}}										
+				{{emote|*The mayor swells with pride at the list of what =pronouns.possessive= village has to offer.*}}
 			</text>
-			<choice Target="Tinker">And if my equipment needs tinkering, where should I head?</choice>				
-			<choice Target="Start">Thank you. There was something else...</choice>			
-			<choice Target="End">More than enough indeed. Live and drink.</choice>
+			<choice Target="Tinker" Priority="10">And if my equipment needs tinkering, where should I head?</choice>				
 		</node>	
 
-		<node ID="Tinker">
+		<node ID="Tinker" Inherits="Welcome">
 			<text>			
 				{{emote|*=pronouns.Subjective= =verb:guffaw:afterpronoun= loudly.*}}
 
 				A tinker? Ye be serious now, there's nae need for dissecting chrome when ye could enjoy our wee village, heh?
 			</text>
-			<choice Target="Start">If you say so. I wanted to ask you something else.</choice>			
-			<choice Target="End">I will see about that. Live and drink.</choice>
 		</node>	
 	
-		<node ID="Goatfolk">
+		<node ID="Goatfolk" Inherits="Welcome">
 			<text>
 				Bah, brayers and sowers! We dinna fear what we can smell coming from ten parasangs away, ye ken? And our warden's a rightly dreaded shooter. Concern yerself with yer own safety, traveler.
 			</text>
-			<choice Target="Start">I stand reassured then. If I may ask another question...</choice>			
-			<choice Target="End">That was all. Live and drink, mayor.</choice>
+		</node>	
+
+		<node ID="Travelers" Inherits="Welcome">
+			<text>		
+				Aye, why wouldnae ye? Ye can come, trade and rest here if ye want -- as long as ye're nae one of Spar's mayor' sycophants, we have nae quarrel with ye.
+			</text>
 		</node>	
 		
-		<node ID="Work">
+		<node ID="Work" Inherits="Welcome">
 			<text>
 				Aye, there is: go see the Growarows, just across the village square. They've been looking for some kitchen help, and ye seem capable enough. Apart from that, ye can always make the orchard lighter and have yer pick of starapples -- the work is its own reward.
 			</text>
-			<choice Target="Start">I will see what I can do then. On another topic...</choice>			
-			<choice Target="End">I am on my way to do that. Live and drink, mayor.</choice>
 		</node>	
 
 		<node ID="Division">
 			<text>
-				{{emote|*=pronouns.Subjective= =verb:sit:afterpronoun= proudly and =verb:puff:afterpronoun= up =pronouns.reflexive= chest.*}}			
+				{{emote|*=pronouns.Subjective= =verb:sit:afterpronoun= proudly and =verb:puff:afterpronoun= up =pronouns.reflexive= chest.*}}
 				
 				The deal? I'll tell ye the deal, traveler: their mayor thinks she should rule over all of us! I dinna plan to take this lying down, ye hear? We dogs of Shik are a proud sort, mark me words. 
 				
 				Our good warden -- Founder bless his bark -- is trying to speak some sense into her. Think ye could see if he needs a wee hand?
 			</text>
 			<choice Target="Where">I could always see about that. Where can I find this warden?</choice>
+			<choice Target="End">I sadly can't spare the time. Live and drink, mayor.</choice>			
 		</node>	
 
 		<node ID="Where">
@@ -148,56 +145,50 @@
 			</text>
 			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1">Duly noted. I will talk to the warden then.</choice>
 		</node>	
+
+		<node ID="HistoryChoices">
+			<choice Target="CatLore" FlagSecret="true">Your story does not quite match the monument I saw in Spar: supposedly, Bubumube disappeared without appointing a successor.</choice>	
+			<choice Target="FounderSpecies">You said "their kin". Was the Founder a dog as well?</choice>		
+			<choice Target="Support">Where does the rest of Shik stand on that issue?</choice>
+			<choice Target="Start">A gripping tale. I wanted to ask you about something else.</choice>		
+			<choice Target="End">Fascinating, but I must go. Live and drink, mayor.</choice>
+		</node>	
 		
-		<node ID="Opinion">
-			<text>		
+		<node ID="Opinion" Inherits="HistoryChoices">
+			<text Priority="-1">		
 				Well, not by our doing, that much is sure. This wee place of ours was once called Shikspar, ye ken? When our Founder passed away, they passed the burden of leading us all to their kin and most loyal friend: me direct ancestor.
 				
 				Yet, it dinnae quite agree with *someone*, who took their posse and seceded, would ye believe it? Did claim half of our name too, left us with "Shik". Aye well, I dinna mind much, name is more agreeable this way.
 				
 				If ye need more details, it is all engraved on our monument right over there. Give it a peek if ye want.
 			</text>
-			<choice Target="CatLore" FlagSecret="true">Your story does not quite match the monument I saw in Spar: supposedly, Bubumube disappeared without appointing a successor.</choice>	
-			<choice Target="FounderSpecies">You said "their kin". Was the Founder a dog as well?</choice>		
-			<choice Target="Support">Where does the rest of Shik stand on that issue?</choice>				
-			<choice Target="Start">That is quite the tale. I wanted to ask you about something else.</choice>		
-			<choice Target="End">Fascinating, but I must go. Live and drink.</choice>
 		</node>			
 
-
-
-
-
-
-
-
-
-
+		<node ID="CatLore" Inherits="HistoryChoices">
+			<text>		
+				{{emote|*=pronouns.Subjective= =verb:look:afterpronoun= outraged, and =pronouns.possessive= next words come with a shower of slimey spittle.*}}
+				
+				Yarn and falsehoods! I knew their mayor to be crafty, but I hadnae taken her for such a devious fabulist. Dinna believe everything you read, ye hear me? There *was* an appointed successor, otherwise I wouldnae be standing here in front of ye.
+			</text>
+		</node>				
+		
+		<node ID="FounderSpecies" Inherits="HistoryChoices">
+			<text>		
+				{{emote|*Raroofwor =verb:swell:afterpronoun= with pride.*}}
+				
+				Aye, as proper a canine as there ever was, nae doubt on that front.
+			</text>
+		</node>		
+	
+		<node ID="Support" Inherits="HistoryChoices">
+			<text>		
+				{{emote|*The mayor =verb:shoot:afterpronoun= you a perplexed look.*}}
+				
+				Where do they stand? Well, where I tell them to stand! All part of being the mayor, ye ken. I bear the wee burden of decision, and me kin can focus on more pressing matters.
+			</text>
+		</node>	
+		
 	</conversation>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 	<conversation ID="Brothers_CatsDogs_CatMayor">
@@ -234,7 +225,7 @@
 				A wee wall issue... I cannae find a solution...
 			</text>
 			<text IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Invite" Priority="-1">
-				{{emote|*=pronouns.Subjective= =verb:look:afterpronoun= at you expectantly.*}}			
+				{{emote|*=pronouns.Subjective= =verb:look:afterpronoun= at you expectantly.*}}
 				
 				I beg of ye, =name=, take me answer back to Rrromaw! 'Tis a yes, a thousand times if ye need them!				
 			</text>
@@ -496,7 +487,7 @@
 
 		<node ID="Gifts">
 			<text>			
-				{{emote|*=pronouns.Possessive= ears perk up as you present a solution to =pronouns.possessive= issues.*}}			
+				{{emote|*=pronouns.Possessive= ears perk up as you present a solution to =pronouns.possessive= issues.*}}
 				
 				Oh, Founder be thanked. A strong drink, and a proper festival gift for Oof Growf?
 			</text>
@@ -987,14 +978,14 @@
 
 		<node ID="Division" AllowEscape="false">
 			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
-				{{emote|*The second head does not have time to answer before being cut off.*}} 
+				{{emote|*The second head does not have time to answer before being cut off.*}}
 				
 				{{K|Tree! Gun!}}
 
 				... We have our paws full here. If you are looking into this matter, you should confer with Warden Arendubark. He can be found in the northern outskirts.
 			</text>
 			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
-				{{emote|*The first head prepares to answer, but reconsiders.*}} 
+				{{emote|*The first head prepares to answer, but reconsiders.*}}
 				
 				{{Y|There is not much that we can say, =player.formalAddressTerm=. Fetch Warden Arendubark, north of the wall -- he has been trying to fix this matter for many moons, now.}}
 			</text>
@@ -1272,7 +1263,7 @@
 
 		<node ID="Division" AllowEscape="false">
 			<text>
-				{{emote|*=pronouns.Subjective= =verb:take:afterpronoun= a sudden bitter interest in a disassembled recoiler.*}} 
+				{{emote|*=pronouns.Subjective= =verb:take:afterpronoun= a sudden bitter interest in a disassembled recoiler.*}}
 
 				The matter? You'll have to ask our good mayor on that, =player.apparentSpecies=. Or even better, head directly to Warden Arendubark. He is standing guard by the central wall, in the norther outskirts -- you cannot miss him.
 			</text>
@@ -1353,12 +1344,12 @@
 	
 		<node ID="Division">
 			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
-				{{emote|*Zanya =verb:lean= forward conspiratorially.*}} 
+				{{emote|*Zanya =verb:lean= forward conspiratorially.*}}
 
 				You noticed too, meow? Lady Morrarri, she's bent on none o' us visiting the other village. Makes for a downright dour atmosphere, le'me tell you.
 			</text>
 			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
-				{{emote|*=pronouns.Subjective= =verb:lean:afterpronoun= forward conspiratorially.*}} 
+				{{emote|*=pronouns.Subjective= =verb:lean:afterpronoun= forward conspiratorially.*}}
 
 				You noticed too, meow? Lady Morrarri, she's bent on none o' us visiting the other village. Makes for a downright dour atmosphere, le'me tell you.
 			</text>
@@ -1378,12 +1369,12 @@
 	
 		<node ID="Fix" AllowEscape="false">
 			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
-				{{emote|*Zanya =verb:look= left and right before continuing.*}} 
+				{{emote|*Zanya =verb:look= left and right before continuing.*}}
 				
 				Aye, for sure! Our good 'arden's been looking to solve the matter but he could most definitely use a paw or two, meow. Can't investigate much from 'here he's taken root, see?
 			</text>				
 			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
-				{{emote|*=pronouns.Subjective= =verb:look:affterpronoun= left and right before continuing.*}} 
+				{{emote|*=pronouns.Subjective= =verb:look:affterpronoun= left and right before continuing.*}}
 				
 				Aye, for sure! Our good 'arden's been looking to solve the matter but he coul' most definitely use a hand or two, meow. Can't investigate much from 'here he's taken root, see? You can find 'im in the northern outskirts.
 			</text>			
@@ -1392,12 +1383,12 @@
 	
 		<node ID="Opinion" Inherits="Welcome">
 			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
-				{{emote|*Zanya =verb:choose= =pronouns.possessive= next words carefully.*}} 
+				{{emote|*Zanya =verb:choose= =pronouns.possessive= next words carefully.*}}
 
 				It all seems a tad excessive to meow. Those dogs from Shik look catlike enough in meow opinion -- not that Lady Morrarri see things the same 'ay.
 			</text>
 			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
-				{{emote|*=pronouns.Subjective= =verb:choose:afterpronoun= =pronouns.possessive= next words carefully.*}} 
+				{{emote|*=pronouns.Subjective= =verb:choose:afterpronoun= =pronouns.possessive= next words carefully.*}}
 
 				It all seems a tad excessive to meow. Those dogs from Shik look catlike enough in meow opinion -- not that Lady Morrarri see things the same 'ay.
 			</text>	
@@ -1405,7 +1396,7 @@
 	
 		<node ID="DefinitelyACat">
 			<text>
-				{{emote|*Hope and appreciation light up =pronouns.possessive= face.*}} 
+				{{emote|*Hope and appreciation light up =pronouns.possessive= face.*}}
 				
 				Oh? You do?
 			</text>
@@ -1418,7 +1409,7 @@
 		
 		<node ID="ACatForReal" AllowEscape="false">
 			<text>
-				{{emote|*=pronouns.Subjective= =verb:answer:afterpronoun= with excitement palpable through hushed tones, as =pronouns.subjective= =verb:rummage:afterpronoun= through =pronouns.possessive= belongings and produce another headband, similar to the one =pronouns.subjective= =verb:wear:afterpronoun=: triangles of synthetic fibers mounted on a plastifer wreath.*}} 
+				{{emote|*=pronouns.Subjective= =verb:answer:afterpronoun= with excitement palpable through hushed tones, as =pronouns.subjective= =verb:rummage:afterpronoun= through =pronouns.possessive= belongings and produce another headband, similar to the one =pronouns.subjective= =verb:wear:afterpronoun=: triangles of synthetic fibers mounted on a plastifer wreath.*}}
 				
 				How good it is to find a similar spir't! You could some of this to look more catlike yourself! I craft those meowself.
 			</text>
@@ -1431,7 +1422,7 @@
 		
 		<node ID="Thanks" AllowEscape="false">
 			<text>
-				{{emote|*=pronouns.Subjective= =verb:watch:afterpronoun= intently, expecting you to put the headband on right away.*}} 
+				{{emote|*=pronouns.Subjective= =verb:watch:afterpronoun= intently, expecting you to put the headband on right away.*}}
 				
 				Meow name is Zanya, by the way.
 			</text>
@@ -1441,7 +1432,7 @@
 
 		<node ID="NoThanks" AllowEscape="false">
 			<text>
-				{{emote|*=pronouns.Subjective= =verb:seem:afterpronoun= slightly disappointed, and put the headband back in =pronouns.possessive= pack.*}} 
+				{{emote|*=pronouns.Subjective= =verb:seem:afterpronoun= slightly disappointed, and put the headband back in =pronouns.possessive= pack.*}}
 				
 				'Ave it your way, stranger. Meow name is Zanya, by the way.
 			</text>
@@ -1458,14 +1449,14 @@
 	
 		<node ID="About" Inherits="Welcome">
 			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
-				{{emote|*Zanya =verb:tap= =pronouns.possessive= chin pensively.*}} 
+				{{emote|*Zanya =verb:tap= =pronouns.possessive= chin pensively.*}}
 				
 				Not much to tell about this place, we all keep pretty much t'ourselves. Some o' the others tend to the pig farms, and prepare the cheese. Right o'er there is the 'orkshop of Imimiw, our tinker. She'll set any 'ires straight in just a moment. 
 				
 				There is the occasional traveler, but otherwise the days are spent working, trading and napping un'er the Hind Sun.							
 			</text>				
 			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
-				{{emote|*=pronouns.Subjective= =verb:tap:afterpronoun= =pronouns.possessive= chin pensively.*}} 
+				{{emote|*=pronouns.Subjective= =verb:tap:afterpronoun= =pronouns.possessive= chin pensively.*}}
 				
 				Not much to tell about this place, we all keep pretty much t'ourselves. Some o' the others tend to the pig farms, and prepare the cheese. Right o'er there is the 'orkshop of Imimiw, our tinker. She'll set any 'ires straight in just a moment. 
 				
@@ -1513,7 +1504,7 @@
 
 		<node ID="Stop">
 			<text>
-				{{emote|*The snapjaw =verb:stare= at you in disbelief.*}} 
+				{{emote|*The snapjaw =verb:stare= at you in disbelief.*}}
 				
 				cheez...
 			</text>
@@ -1535,7 +1526,7 @@
 	
 		<node ID="Byebye">
 			<text>		
-				{{emote|*The snapjaw's knuckles go white on =pronouns.possessive= weapon.*}} 
+				{{emote|*The snapjaw's knuckles go white on =pronouns.possessive= weapon.*}}
 				
 				LEAFFENDING!
 			</text>
@@ -1548,7 +1539,7 @@
 
 		<node ID="Solution">
 			<text>		
-				{{emote|*The snapjaw =verb:jump= up and down.*}} 
+				{{emote|*The snapjaw =verb:jump= up and down.*}}
 				
 				neheheheheh belly beat me, sulton ov suldon!
 			</text>
@@ -1558,7 +1549,7 @@
 	
 		<node ID="Idea" AllowEscape="false">
 			<text>		
-				{{emote|*The snapjaw =verb:lick= =pronouns.possessive= lips, a spark in =pronouns.possessive= gaze.*}} 
+				{{emote|*The snapjaw =verb:lick= =pronouns.possessive= lips, a spark in =pronouns.possessive= gaze.*}}
 				
 				uhuhuh smard! crisby juisy tasdy shrooz eheheheh...
 				
@@ -1582,7 +1573,7 @@
 				{{emote|*tired panting*}}~
 				Yes? {{emote|*interrogative bark*}}~
 				Better not steal them starapples, traveler.~
-				{{emote|*starapple in jaws*}} Hon't neeh hanhs to hick sharahhles.~
+				{{emote|*starapple in jaws*}}Hon't neeh hanhs to hick sharahhles.~
 				Anything I can help ye with? {{emote|*tilting head*}}~
 				Take me word for it =player.formalAddressTerm=: always spit out seeds.	
 			</text>

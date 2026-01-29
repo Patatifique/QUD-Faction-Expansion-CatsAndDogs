@@ -93,7 +93,7 @@
 			<prefix Name="ou" />
 			<prefix Name="OU" />
 		</prefixes>
-		<infixes Amount="2-5">
+		<infixes Amount="1-3">
 			<infix Name="ow" Weight="2" />
 			<infix Name="OW" Weight="2" />
 			<infix Name="aw" Weight="2" />
