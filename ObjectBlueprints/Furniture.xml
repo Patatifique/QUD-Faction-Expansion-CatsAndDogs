@@ -7,6 +7,7 @@
 		<stat Name="Hitpoints" Value="1200" />
 		<part Name="Description" Short="Erosion's gritted fingers have worked the likeness off recrystallized dolomite. A sand-smoothed suggestion of shape lingers still -- diacalyptus columns bearing the proud weight of vast shoulders, and a memory of snout jutting below a faded face. Verdure selfishly reclaims polished spaces and crawls in bryophite clumps, draping the nondescript subject in regal viridian." />
 		<part Name="RulesDescription" Text="This object is a monument to a scene from the history of {{M|Shikspar}}.&#10;&#10;In 857, Bubumube decided to quit traveling Qud. They left Ezra and settled with their followers beyond the southern jungles. There, they named the village Shikspar, and sowed starapple seeds in the furrowed dirt.&#10;" />
+		<part Name="RevealVillageHistoryOnLook" HistoryId="Brothers_ShiksparSecret1" />
 		<stag Name="Contemporary" />	
 	    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 		<part Name="Interesting" />
@@ -15,6 +16,7 @@
 	<object Name="Brothers_CatsDogs_ShikMonument" Inherits="Village Monument Diptych">
 		<part Name="Render" ColorString="&amp;w" DetailColor="y" />
 		<part Name="RulesDescription" Text="This object is a monument to a scene from the history of {{M|Shik}}.&#10;&#10;In 859, Bubumube left the direction of Shikspar to their loyal canine companion as their final will. They passed away peacefully, and from this day forth, the village was known as Shik.&#10;" />
+		<part Name="RevealVillageHistoryOnLook" HistoryId="Brothers_ShiksparSecret2" />
 		<part Name="Interesting" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
@@ -22,6 +24,7 @@
 	<object Name="Brothers_CatsDogs_SparMonument" Inherits="Village Monument Diptych">
 		<part Name="Render" ColorString="&amp;y" DetailColor="w" />
 		<part Name="RulesDescription" Text="This object is a monument to a scene from the history of {{M|Spar}}.&#10;&#10;In 859, Bubumube disappeared from Shikspar, never to be seen again. Come Harvest Dawn, a single feline babe was found swaddled in their bed and, from this day forth, the village was known as Spar.&#10;" />
+		<part Name="RevealVillageHistoryOnLook" HistoryId="Brothers_ShiksparSecret3" />
 		<part Name="Interesting" />
 	    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
