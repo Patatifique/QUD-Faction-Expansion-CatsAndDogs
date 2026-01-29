@@ -5,7 +5,7 @@
 	
 	<conversation ID="Brothers_CatsDogs_Hyrkhound Pet">
 		
-		<node ID="Start">
+		<start ID="Welcome">
 			<text>
 				{{emote|*Jerenah =verb:turn= in circles before lying down.*}}~
 				{{emote|*Jerenah =verb:chase= =pronouns.possessive= tail.*}}~
@@ -13,14 +13,14 @@
 				{{emote|*Jerenah =verb:get= up on =pronouns.possessive= hind legs.*}}
 			</text>
 			<choice Target="End">Live and drool, friendly hyrkhound.</choice>
-		</node>
+		</start>
 	
 	</conversation>
 	
 	
 	<conversation ID="Brothers_CatsDogs_Brainkitty Pet">
 		
-		<node ID="Start">
+		<start ID="Welcome">
 			<text>
 				Kids these days have it easy: when I was young, glotrot used to spoil your whole water supply.~
 				Back in my days, people knew the difference between daggers and short swords.~
@@ -31,7 +31,7 @@
 				{{emote|*Alther =verb:concentrate= intensely for a few seconds.*}}
 			</text>
 			<choice Target="End">Live and drink, elderly feline.</choice>
-		</node>
+		</start>
 	
 	</conversation>
 
@@ -214,39 +214,42 @@
 
 	<conversation ID="Brothers_CatsDogs_DogLover">
 		
-		<node ID="Start">
-			<text Priority="-1">
+		<start ID="Welcome" Inherits="DefaultChoices">
+			<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" Priority="-1">
 				{{emote|*=pronouns.Subjective= =verb:seem:afterpronoun= lost in thought.*}}
 				
 				Aye, a voice so melodic, me heart is mourning when I cannae hear it. Tell me, stranger, have ye peered the cat they call Rrromaw?
 			</text>
-			<text IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Gifts">			
+			<text IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Gifts" Priority="-1">			
 				{{emote|*=pronouns.Possessive= ears perk up.*}}
 
 				Have ye come bearing the wee gifts I need?
 			</text>
-			<text IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Gifts">			
+			<text IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Gifts" Priority="-1">			
 				=name=! Did ye deliver me note? What did Rrromaw say?			
 			</text>
-			<text IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Invite">
+			<text IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Invite" Priority="-1">
 				{{emote|*=pronouns.Subjective= =verb:mutter:afterpronoun= to =pronouns.reflexive=.*}}
 				
 				A wee wall issue... I cannae find a solution...
 			</text>
-			<text IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Invite">
+			<text IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Invite" Priority="-1">
 				{{emote|*=pronouns.Subjective= =verb:look:afterpronoun= at you expectantly.*}}			
 				
 				I beg of ye, =name=, take me answer back to Rrromaw! 'Tis a yes, a thousand times if ye need them!				
 			</text>
-			<text IfFinishedQuest="Brothers_CatsDogs_DogLoverQuest">
+			<text IfFinishedQuest="Brothers_CatsDogs_DogLoverQuest" Priority="-1">
 				{{emote|*=pronouns.Subjective= excitedly =verb:wag:afterpronoun= =pronouns.possessive= tail when seeing you.*}}
 								
 				Aye, 'tis me good friend =name=! I cannae thank ye enough for all ye did.
 			</text>			
-			<text IfFinishedQuest="Brothers_CatsDogs_CatLoverQuest">
+			<text IfFinishedQuest="Brothers_CatsDogs_CatLoverQuest" Priority="-1">
 				The festival cannae come soon enough, now. There is nae thanking you enough for yer work, =player.formalAddressTerm=!
 			</text>
-			<choice Target="Brief" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_CatLoverSeen">As a matter of fact I have, yes. Why do you want to know?</choice>
+		</start>
+
+		<node ID="DefaultChoices">
+			<choice Target="Brief" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_CatLoverSeen">As a matter of fact, I have seen a cat called Rrromaw. Why do you want to know?</choice>
 			<choice Target="Gifts" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Gifts" IfHaveLiquid="wine">I have everything you asked for.</choice>
 			<choice Target="Date" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfHaveItem="Brothers_CatsDogs_LoveNote">I come bearing a message: you have got yourself a proper date.</choice>
 			<choice Target="Debrief" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Invite">Great news: I have delivered your invitation to Rrromaw, and it has been accepted!</choice>			
@@ -254,11 +257,11 @@
 			<choice Target="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What is your stance on the division between Shik and Spar?</choice>
 			<choice Target="Family">Are you related to Shik's mayor?</choice>	
 			<choice Target="End">
-				<text IfHaveState="Brothers_CatsDogs_DogLoverSeen">Live and drink, infatuated dog.</text>
-				<text IfNotHaveState="Brothers_CatsDogs_DogLoverSeen">Sadly, I have not. Live and drink.</text>
+				<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)">I will keep you in the know should I ever see Rrromaw. For now, live and drink.</text>
+				<text IfHaveQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">Live and drink, infatuated dog.</text>
 			</choice>
 		</node>
-	
+		
 		<node ID="Brief">
 			<text>			
 				{{emote|*=pronouns.Possessive= gaze turns dreamy, but =pronouns.possessive= tone drops to hushed whispers.*}}
@@ -284,7 +287,7 @@
 	
 		<node ID="Secret">
 			<text>			
-				{{emote|Fear flashes on *=pronouns.possessive= face for a moment.*}}
+				{{emote|*Fear flashes on =pronouns.possessive= face for a moment.*}}
 
 				Have ye gone mad? Me paw'd skin me alive if he knew of this!
 			</text>
@@ -375,25 +378,21 @@
 			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1">Duly noted. I will go find the warden then.</choice>
 		</node>
 
-		<node ID="Opinion">
-			<text Priority="-1">
+		<node ID="Opinion" Inherits="Welcome">
+			<text IfNotFinishedQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">
 				'Tis a sorry affair, that much is certain. No living soul here even remembers why the wall was built, ye ken?
 			</text>
-			<text IfFinishedQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest">
+			<text IfFinishedQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">
 				'Tis a sorry affair, but there is a glimmer of hop in me eyes, =name=. Maybe all is not yet lost?
 			</text>							
-			<choice Target="Start">I wanted to talk about something else.</choice>
-			<choice Target="End">Thank you for your answer. Live and drink.</choice>	
 		</node>	
 		
-		<node ID="Family">
+		<node ID="Family" Inherits="Welcome">
 			<text>
 				{{emote|=pronouns.Subjective= =verb:let:afterpronoun= out a short, humorless laugh.*}}
 
-				Aye, related! He is me paw, and he keeps a good eye on me. Wouldnae want "dishonor" to strike the house.
+				Aye, related! He is me paw, and he keeps too good an eye on me. Wouldnae want "dishonor" to strike the house.
 			</text>
-			<choice Target="Start">That cannot be an easy situation. There is something else...</choice>
-			<choice Target="End">I see. I must go now -- live and drink.</choice>
 		</node>		
 	
 	</conversation>
@@ -401,50 +400,53 @@
 	
 	<conversation ID="Brothers_CatsDogs_CatLover">
 		
-		<node ID="Start">
-			<text Priority="-1">		
+		<start ID="Welcome" Inherits="DefaultChoices">
+			<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" Priority="-1">		
 				{{emote|*=pronouns.Subjective= =verb:fidget:afterpronoun= restlessly, unable to stay put.*}}
 				
-				What to do, what to do... I could maybe... No I can't! Wait, you there! Do you come from Shik? Have you seen the dog called Oof Growf?</text>
-			<text IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts">			
+				What to do, what to do... I could maybe... No I can't! Wait, you there! Do you come from Shik? If you have seen a dog called Oof Growf, I pray you tell me.</text>
+			<text IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts" Priority="-1">			
 				{{emote|=pronouns.Subjective= =verb:pace:afterpronoun= relentlessly.}}
 				
 				Oh, please, please, tell me you have everything! What if someone invite Oof Growf before I do?
 			</text>
-			<text IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts">			
+			<text IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts" Priority="-1">			
 				Oh =name=, I shall surely faint before the day is done. Have you delivered the invite? What did Oof Growf say?
 			</text>
-			<text IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Invite">
+			<text IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Invite" Priority="-1">
 				{{emote|The tip of =pronouns.possessive= ears go pink as you adress =pronouns.objective=.}}
 				
 				Oh? I think you must want to speak with the mayor -- she is right over there.
 			</text>
-			<text IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Invite">
+			<text IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Invite" Priority="-1">
 				{{emote|=pronouns.Subjective= =verb:knead:afterpronoun= the ground in impatience.}}
 				
 				You've not forgotten my answer, have you? I'm sorry... It's a yes, of course! 
 			</text>
-			<text IfFinishedQuest="Brothers_CatsDogs_CatLoverQuest">
+			<text IfFinishedQuest="Brothers_CatsDogs_CatLoverQuest" Priority="-1">
 				{{emote|*=pronouns.Subjective= =verb:blink:afterpronoun= slowly in your direction.*}}
 								
 				Oh, =name=, it is you! If you ever need help arranging a date or any get-together of your own, you can always count on me!
 			</text>			
-			<text IfFinishedQuest="Brothers_CatsDogs_DogLoverQuest">
+			<text IfFinishedQuest="Brothers_CatsDogs_DogLoverQuest" Priority="-1">
 				Is the bow fine? Is it too much? I have to master wearing it before the festival...
 			</text>
-			<choice Target="Brief" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_DogLoverSeen">As a matter of fact I have, yes. Why do you want to know?.</choice>
-			<choice Target="Gifts" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts" IfHaveLiquid="wine">Don't worry, I have what you asked for.</choice>
+		</start>
+
+		<node ID="DefaultChoices">
+			<choice Target="Brief" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_DogLoverSeen">As a matter of fact I have seen a dog called Oof Growf, yes. Why do you want to know?.</choice>
+			<choice Target="Gifts" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts" IfHaveLiquid="wine">I have the wine you asked for.</choice>
 			<choice Target="Date" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfHaveItem="Brothers_CatsDogs_LoveNote">I come bearing a message: you have got yourself a proper date.</choice>
 			<choice Target="Debrief" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Invite">Great news: I have delivered your invitation to Oof Growf, and it has been accepted!</choice>			
 			<choice Target="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is going between Shik and Sp...</choice>
 			<choice Target="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What is your stance on the division between Shik and Spar?</choice>
 			<choice Target="Family">Are you related to Spar's mayor?</choice>	
 			<choice Target="End">
-				<text IfHaveState="Brothers_CatsDogs_DogLoverSeen">Live and drink, enamored cat.</text>
-				<text IfNotHaveState="Brothers_CatsDogs_DogLoverSeen">I cannot say I have, but I must go. Live and drink.</text>
+				<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)">I will let you know if I ever see Oof Growf -- in the meantime, live and drink.</text>
+				<text IfHaveQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">Live and drink, enamored cat.</text>
 			</choice>
 		</node>
-	
+		
 		<node ID="Brief">
 			<text>			
 				{{emote|*=pronouns.Subjective= =verb:blush:afterpronoun= and =verb:lean:afterpronoun= forward, whispering.*}}
@@ -568,23 +570,19 @@
 			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1">Alright... In that case, I will go find the warden.</choice>
 		</node>
 
-		<node ID="Opinion">
-			<text Priority="-1">
+		<node ID="Opinion" Inherits="Welcome">
+			<text IfNotFinishedQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)" Priority="10">
 				It is just sad, honestly. To never meet one's neighbors... To never see the face of those you hear so much about...
 			</text>
-			<text IfFinishedQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest">
+			<text IfFinishedQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)" Priority="10">
 				Until recently I thought it a tragedy, but I believe you just may help us yet, =name=!
 			</text>					
-			<choice Target="Start">There was something else...</choice>
-			<choice Target="End">I have to go -- live and drink.</choice>	
 		</node>
 		
-		<node ID="Family">
+		<node ID="Family" Inherits="Welcome">
 			<text>
 				Pray Mother does not hear you call her a mayor! Founder knows she would rather be referred to as "Lady", these days.
 			</text>
-			<choice Target="Start">She does sound like a handful. About something else...</choice>
-			<choice Target="End">On that note, I must leave. Live and drink.</choice>
 		</node>
 
 	</conversation>	
@@ -592,18 +590,21 @@
 
 	<conversation ID="Brothers_CatsDogs_Catgod">
 		
-		<node ID="Start">
-			<text>
+		<start ID="Welcome" Inherits="DefaultChoices">
+			<text Priority="-1">
 				{{emote|*Miramihamia the Feline God lazily =verb:open= one eye, awakened from =pronouns.possessive= nap.*}}
 				
 				Hmm? Wakest thou me?
 			</text>
+		</start>
+
+		<node ID="DefaultChoices">
 			<choice Target="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Investigate">O goddess, I am sorry to disturb Your rest, but I am looking for information on a traveler named Bubumube. They who would have spent some time in Your abode.</choice>
 			<choice Target="Activity">How do You spend Your days here?</choice>
 			<choice Target="Worship">Are the pilgrims making their way here not disturbing You?</choice>
-			<choice Target="End">Live and drink, o goddess.</choice>
-		</node>
-	
+			<choice Target="End">I will take my leave, if you would allow me. Live and drink, o goddess.</choice>
+		</node>	
+		
 		<node ID="Bubumube">
 			<text>			
 				I did, in very truth. What then of them?
@@ -623,20 +624,16 @@
 			<choice Target="End">Thank You, o goddess. I shall do my best not to disturb You again.</choice>
 		</node>		
 	
-		<node ID="Activity">
+		<node ID="Activity" Inherits="Welcome">
 			<text>			
 				Fain would I sleep, were it not for interrupters -- think thyself blest, that thou meet'st me in gracious disposition.
 			</text>
-			<choice Target="Start">I shall impose just for a moment longer, if You would allow me.</choice>
-			<choice Target="End">I will leave You to it then. Live and drink, o goddess.</choice>
 		</node>
 	
-		<node ID="Worship">
+		<node ID="Worship" Inherits="Welcome">
 			<text>			
 				With fans they soothe me, and at my paws they lay their tribute: wherefore should they disturb me?
 			</text>
-			<choice Target="Start">Forgive I asked, then. I just have one more question for You.</choice>
-			<choice Target="End">I will take my leave, if You would allow me. Live and drink, o goddess.</choice>
 		</node>
 
 	</conversation>
@@ -644,16 +641,19 @@
 
 	<conversation ID="Brothers_CatsDogs_Doggod">
 		
-		<node ID="Start">
-			<text>
+		<start ID="Welcome">
+			<text Priority="-1">
 				{{emote|*Boroworof the Canine God =verb:stay= silent, deep in mournful contemplation.*}}
 			</text>
+		</start>
+
+		<node ID="DefaultChoices">
 			<choice Target="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Investigate">I intrude but for a moment: I am after a traveler named Bubumube, who would have spent some of their days here. Do You remember them?</choice>
 			<choice Target="Disturb">I do not with to disturb You -- is this a bad moment?</choice>
 			<choice Target="Pilgrims">I did not see any pilgrims on my way there...</choice>
-			<choice Target="End">Live and drink, o divine.</choice>
+			<choice Target="End">I apologize for disturbing you, and will be going. Live and drink, o divine.</choice>
 		</node>
-	
+		
 		<node ID="Bubumube">
 			<text>			
 				{{emote|*=pronouns.Subjective= =verb:nod:afterpronoun= slowly, gaze fixed on the large tombstone.*}}
@@ -674,20 +674,16 @@
 			<choice Target="End">I see. Thank You, o divine. I will take my leave now.</choice>
 		</node>		
 	
-		<node ID="Disturb">
+		<node ID="Disturb" Inherits="Welcome">
 			<text>			
 				{{emote|*=pronouns.Possessive= colossal paws set in grooves carved by habit in front of the memorial.*}}
 			</text>
-			<choice Target="Start">I see. I will not stay long then, but have other questions.</choice>
-			<choice Target="End">I apologize, and will be going. Live and drink, o divine.</choice>
 		</node>
 	
-		<node ID="Pilgrims">
+		<node ID="Pilgrims" Inherits="Welcome">
 			<text>			
 				{{emote|*=pronouns.Possessive= melancholic gaze turns toward the set of graves laid around the cave.*}}
 			</text>
-			<choice Target="Start">Grim prospects. I just have one more question for You.</choice>
-			<choice Target="End">I should go before meeting the same fate. Live and drink, o divine.</choice>
 		</node>	
 	
 	</conversation>
@@ -696,10 +692,35 @@
 	<conversation ID="Haddas" Load="Merge">
 		
 		<node ID="Start" Load="Merge">
-			<choice Target="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They lived in Ezra, some time ago.</choice>
+			<choice Target="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They lived in Ezra, many years ago.</choice>
+			<choice Target="BubumubeReminder" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Can you remind me where Bubumube went after they left Ezra?</choice>
+		</node>	
+
+		<node ID="Reliefs" Load="Merge">
+			<choice Target="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They lived in Ezra, many years ago.</choice>
 			<choice Target="BubumubeReminder" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Can you remind me where Bubumube went after they left Ezra?</choice>
 		</node>
-	
+
+		<node ID="StarTree" Load="Merge">
+			<choice Target="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They lived in Ezra, many years ago.</choice>
+			<choice Target="BubumubeReminder" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Can you remind me where Bubumube went after they left Ezra?</choice>
+		</node>
+
+		<node ID="Warden" Load="Merge">
+			<choice Target="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They lived in Ezra, many years ago.</choice>
+			<choice Target="BubumubeReminder" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Can you remind me where Bubumube went after they left Ezra?</choice>
+		</node>
+		
+		<node ID="Merchants" Load="Merge">
+			<choice Target="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They lived in Ezra, many years ago.</choice>
+			<choice Target="BubumubeReminder" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Can you remind me where Bubumube went after they left Ezra?</choice>
+		</node>
+
+		<node ID="Work" Load="Merge">
+			<choice Target="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They lived in Ezra, many years ago.</choice>
+			<choice Target="BubumubeReminder" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Can you remind me where Bubumube went after they left Ezra?</choice>
+		</node>
+
 		<node ID="Bubumube">
 			<text>			
 				HA! A tree-old name. They found shade under my fingers, many yesteryears ago. Gone to sow their own errancy.
@@ -741,16 +762,16 @@
 
 	<conversation ID="Brothers_CatsDogs_DogChef">
 		
-		<node ID="Start" IfSpeakerEvolutiveTileMoreOrEqual="3">
+		<start ID="TooManyHeads" IfSpeakerEvolutiveTileMoreOrEqual="3">
 			<text>			
 				{{emote|*The heads argue and bicker among each other in impenetrable cacophony.*}}
 			</text>
 			<choice ID="Trade" Load="Remove" />
 			<choice Target="End">{{emote|*back away slowly*}}</choice>
-		</node>
+		</start>
 	
-		<node ID="Start" IfSpeakerNotEvolutiveTileMoreOrEqual="3">
-			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+		<start ID="Welcome" IfSpeakerNotEvolutiveTileMoreOrEqual="3" Inherits="DefaultChoices">
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2" Priority="-1">			
 				{{emote|*The first head turns towards you, and greets you apathetically.*}}
 
 				Welcome to Growarow's Preserved Goods... Need any food for the road?
@@ -763,7 +784,7 @@
 
 				{{K|Preserved! Emporium!}}
 			</text>
-			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2" Priority="-1">
 				{{emote|*The first head turns towards you, and greets you energetically.*}}
 
 				Welcome to Growarow's Preserved Goods! Need any food for the road?
@@ -772,6 +793,9 @@
 
 				{{Y|And glad you came to Growarow's Trading Emporium! Can we interest you in some of our fine goods, =player.formalAddressTerm=?}}
 			</text>
+		</start>
+
+		<node ID="DefaultChoices" IfSpeakerNotEvolutiveTileMoreOrEqual="3">
 			<choice Target="Work" IfNotHaveQuest="Brothers_CatsDogs_ChefQuest">I am looking for work. Do you require assistance with anything?</choice>
 			<choice Target="TarBones" IfHaveActiveQuest="Brothers_CatsDogs_ChefQuest" IfHaveItem="TarBones">I have found the bones you were looking for.</choice>
 			<choice Target="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is happening with the other village?</choice>
@@ -977,7 +1001,7 @@
 			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1">I will talk to the warden, then. In the meantime, live and drink.</choice>	
 		</node>
 
-		<node ID="Opinion">
+		<node ID="Opinion" Inherits="Welcome">
 			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
 				{{K|Cat! Friend!}}
 
@@ -989,12 +1013,10 @@
 				{{Y|It is all quite ridiculous, =player.formalAddressTerm=.}}
 				
 				Can you picture what succulent meal we could prepare with a new tinker-touched oven? We fail to see how this helps either Shik or Spar.
-			</text>
-			<choice Target="Start">I see. Can I ask you something else?</choice>
-			<choice Target="End">A concise answer. Live and drink.</choice>	
+			</text>	
 		</node>
 
-		<node ID="TwoHeads">
+		<node ID="TwoHeads" Inherits="Welcome">
 			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
 				Neither were we. Please ignore our new partner...
 
@@ -1009,16 +1031,14 @@
 				
 				{{cloudy|We ask that you greet us separately, for clarity's sake.}}
 			</text>
-			<choice Target="Mutated">
+			<choice Target="Mutated" Priority="20">
 				<text>I am of one mind, but sport several heads myself. I am familiar with people seldom knowing which too adress.</text>
 				<part Name="Brothers_RequirePart" Part="TwoHeaded" Render="Mutation: Two-headed" />
 			</choice>
-			<choice Target="Relationship">How do you take decisions? Is the matter not uncomfortable?</choice>
-			<choice Target="Start">Duly noted. I had something else to ask you.</choice>
-			<choice Target="End">Live, drink, live, and drink.</choice>	
+			<choice Target="Relationship" Priority="10">How do you take decisions? Is the matter not uncomfortable?</choice>
 		</node>
 
-		<node ID="Mutated">
+		<node ID="Mutated" Inherits="Welcome">
 			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
 				{{emote|*The two larger heads look disheartened.*}}
 
@@ -1034,12 +1054,10 @@
 				{{cloudy|Folks get confused too easily nowadays.}}
 				
 				{{Y|I could not imagine sharing the same mind over two heads, =player.formalAddressTerm=. That sounds utterly lonely.}}
-			</text>
-			<choice Target="Start">Can I ask you something else?</choice>
-			<choice Target="End">Live and drink.</choice>		
+			</text>	
 		</node>
 
-		<node ID="Relationship">
+		<node ID="Relationship" Inherits="Welcome">
 			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
 				{{K|Left! Right! Left! Right!}}
 				
@@ -1052,11 +1070,9 @@
 				
 				{{emote|*The two heads briefly nuzzle each other.*}}
 			</text>
-			<choice Target="Start">There was something else...</choice>
-			<choice Target="End">I will leave you to it then. Live and drink.</choice>	
 		</node>
 
-		<node ID="About">
+		<node ID="About" Inherits="Welcome">
 			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
 				Up until now, we collected starapples from our herders, and made them sing until jammy.
 
@@ -1071,12 +1087,10 @@
 
 				{{cloudy|Whatever you desire, the Growarows are the place to spend freshwater!}}
 			</text>
-			<choice Target="Name">I am confused. Are you called Growarow or Growarows?</choice>
-			<choice Target="Start">This is an impressive pitch. I had something else to ask...</choice>
-			<choice Target="End">I will return if I need anything. Live and drink.</choice>	
+			<choice Target="Name" Priority="10">I am confused. Are you called Growarow or Growarows?</choice>
 		</node>
 
-		<node ID="Name">
+		<node ID="Name" Inherits="Welcome">
 			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
 				{{emote|*The two larger heads exchange a disheartened look.*}}
 
@@ -1095,31 +1109,32 @@
 
 				{{cloudy|Together, we are the Growarows.}}
 			</text>
-			<choice Target="Start">I see. My name is =name= -- I wanted to ask you something else.</choice>
-			<choice Target="End">Live and drink, Growarows.</choice>	
 		</node>
 	
-</conversation>
+	</conversation>
 
 
 	<conversation ID="Brothers_CatsDogs_CatTinker">
 		
-		<node ID="Start">
-			<text IfFinishedQuest="Brothers_CatsDogs_CheeseQuest">
+		<start ID="Welcome" Inherits="DefaultChoices">
+			<text IfFinishedQuest="Brothers_CatsDogs_CheeseQuest" Priority="-1">
 				{{emote|*Imimiw =verb:keep= working without paying much attention to you.*}}
 				
 				Settle comfortably if you need to, =player.apparentSpecies=, and grab a soldering iron. Work awaits.
 			</text>
-			<text IfHaveActiveQuest="Brothers_CatsDogs_CheeseQuest">
+			<text IfHaveActiveQuest="Brothers_CatsDogs_CheeseQuest" Priority="-1">
 				{{emote|*The tinker's bestacled gaze =verb:gauge= you mercilessly.*}}
 				
 				There you are, =player.apparentSpecies=! What news from the ripening caves?
 			</text>
-			<text IfNotHaveQuest="Brothers_CatsDogs_CheeseQuest">
+			<text IfNotHaveQuest="Brothers_CatsDogs_CheeseQuest" Priority="-1">
 				{{emote|*The tinker =verb:turn= towards you, =pronouns.possessive= workshop in complete disarray.*}}
 				
 				Speak quick, =player.apparentSpecies=! Solder is cooling down already.
 			</text>
+		</start>
+
+		<node ID="DefaultChoices">
 			<choice Target="Work" IfNotHaveQuest="Brothers_CatsDogs_CheeseQuest">I am in need of work. Is there any matter I can assist you with?</choice>
 			<choice Target="Shrews" IfHaveActiveQuest="Brothers_CatsDogs_CheeseQuest" IfFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Find" IfNotFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">The vermin in the ripening caves are canyon shrews, tinker. They have been feasting on the village's cheese stocks.</choice>
 			<choice Target="Reward" IfHaveActiveQuest="Brothers_CatsDogs_CheeseQuest" IfFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">I have handled the matter of the vermin in the ripening caves. They will not trouble the village anymore.</choice>
@@ -1129,6 +1144,7 @@
 			<choice Target="About">What do you do here in Spar?</choice>
 			<choice Target="End">Live and drink, feline tinker.</choice>
 		</node>
+
 	
 		<node ID="Work">
 			<text>
@@ -1263,22 +1279,18 @@
 			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1">I will ask the warden for more information, then. In the meantime, live and drink.</choice>	
 		</node>
 
-		<node ID="Opinion">
+		<node ID="Opinion" Inherits="Welcome">
 			<text>
 				{{emote|*=pronouns.Possessive= words are laced with frustration, and the fur on =pronouns.possessive= back sticks up slightly.*}}
 			
 				You know they have a proper merchant in Shik? I am denied a potential supplier, and for what? Some antique reason no living cat remembers? Founder, the whole affair gets on my nerves. Let us talk about something else, =player.apparentSpecies=.
 			</text>
-			<choice Target="Start">My apologies, tinker. Let us.</choice>
-			<choice Target="End">Maybe later -- live and drink.</choice>	
 		</node>	
 
-		<node ID="Zanya">
+		<node ID="Zanya" Inherits="Welcome">
 			<text>
 				Obviously, yes. They help me from time to time -- as it happens, bipedality proves unexpectantly useful in a cat.
 			</text>
-			<choice Target="Start">This makes sense. I had another question.</choice>
-			<choice Target="End">It does. Live and drink.</choice>	
 		</node>	
 
 		<node ID="About">
@@ -1294,22 +1306,18 @@
 			<choice Target="NotATinker">I dabble. Is that enough to be called a student of chrome?</choice>	
 		</node>	
 
-		<node ID="ATinker">
+		<node ID="ATinker" Inherits="Welcome">
 			<text>
 				Well, in that case, I hope you can refrain from spouting unsollicited "advice", =player.apparentSpecies=. If I need pointers, I will ask for them. Now do you need anything else?
-			</text>
-			<choice Target="Start">As a matter of fact, I do.</choice>
-			<choice Target="End">Not right now. Live and drink, tinker.</choice>	
+			</text>	
 		</node>	
 
-		<node ID="NotATinker">
+		<node ID="NotATinker" Inherits="Welcome">
 			<text>
 				Founder be thanked! I shall be able to work without "suggestions" on how to do things quicker or more efficiently.
 				
 				Well, if you need your gear repaired or your trinkets divined, I am the feline to ask.
 			</text>
-			<choice Target="Start">Thank you, tinker. There was something else...</choice>
-			<choice Target="End">I will keep that in mind. In the meantime, live and drink.</choice>	
 		</node>	
 	
 	</conversation>		
@@ -1317,29 +1325,30 @@
 	
 	<conversation ID="Brothers_CatsDogs_CatsuitGuy">
 			
-		<node ID="Start">
-			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
+		<start ID="Welcome" Inherits="DefaultChoices">
+			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered" Priority="-1">
 				{{emote|*Zanya =verb:beam= at you.*}}
 				
 				If it ain't my good friend =name=! Find some shade in our 'uts, meow!
 			</text>
-			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
+			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered" Priority="-1">
 				Meow, I say. I 'ope you will enjoy our 'umble abodes and fit right 'mong us cats!
 			</text>
+		</start>
+
+		<node ID="DefaultChoices">
 			<choice Target="Work" IfNotHaveQuest="Brothers_CatsDogs_CheeseQuest">Is there work that needs doing?</choice>
 			<choice Target="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the matter with the other village?</choice>
 			<choice Target="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What do you think of the current Shik and Spar situation?</choice>
 			<choice Target="DefinitelyACat" IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">Huh... I "meow" right back at you, fellow cat.</choice>
 			<choice Target="About">What is there to know about Spar?</choice>
-			<choice Target="End">I will try to. Live and drink.</choice>
+			<choice Target="End">I must go -- live and drink.</choice>
 		</node>
 	
-		<node ID="Work">
+		<node ID="Work" Inherits="Welcome">
 			<text>
 				You'll have to check in with the tinker of ours, Imimiw. She's been dealing with some vermin issues lately, meow. She oughta be in her 'orkshop, in that building right o'er there.
 			</text>
-			<choice Target="Start">I will see about helping her, thank you. There was something else...</choice>
-			<choice Target="End">Duly noted. Live and drink.</choice>
 		</node>
 	
 		<node ID="Division">
@@ -1364,7 +1373,6 @@
 				Why, she is Spar's mayor o'course! Although she ain't too keen on the title, prefers to be called a "Lady", meow. Can't blame her, really.
 			</text>
 			<choice Target="Fix">I see. And did anyone try to speak some sense into her?</choice>
-			<choice Target="Start">There was another matter...</choice>
 			<choice Target="End">I guess not. Live and drink.</choice>	
 		</node>	
 	
@@ -1382,7 +1390,7 @@
 			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1">I will talk to the warden then. In the meantime, live and drink.</choice>
 		</node>		
 	
-		<node ID="Opinion">
+		<node ID="Opinion" Inherits="Welcome">
 			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
 				{{emote|*Zanya =verb:choose= =pronouns.possessive= next words carefully.*}} 
 
@@ -1392,9 +1400,7 @@
 				{{emote|*=pronouns.Subjective= =verb:choose:afterpronoun= =pronouns.possessive= next words carefully.*}} 
 
 				It all seems a tad excessive to meow. Those dogs from Shik look catlike enough in meow opinion -- not that Lady Morrarri see things the same 'ay.
-			</text>
-			<choice Target="Start">I can imagine. There was something else I wanted to ask.</choice>
-			<choice Target="End">Thank you for your answer. Live and drink.</choice>	
+			</text>	
 		</node>	
 	
 		<node ID="DefinitelyACat">
@@ -1425,7 +1431,7 @@
 		
 		<node ID="Thanks" AllowEscape="false">
 			<text>
-				{{emote|*They =verb:watch:afterpronoun= intently, expecting you to put the headband on right away.*}} 
+				{{emote|*=pronouns.Subjective= =verb:watch:afterpronoun= intently, expecting you to put the headband on right away.*}} 
 				
 				Meow name is Zanya, by the way.
 			</text>
@@ -1435,7 +1441,7 @@
 
 		<node ID="NoThanks" AllowEscape="false">
 			<text>
-				{{emote|*They =verb:seem:afterpronoun= slightly disappointed, and put the headband back in =pronouns.possessive= pack.*}} 
+				{{emote|*=pronouns.Subjective= =verb:seem:afterpronoun= slightly disappointed, and put the headband back in =pronouns.possessive= pack.*}} 
 				
 				'Ave it your way, stranger. Meow name is Zanya, by the way.
 			</text>
@@ -1450,7 +1456,7 @@
 			<choice Target="End">Live and drink, Zanya.</choice>
 		</node>	
 	
-		<node ID="About">
+		<node ID="About" Inherits="Welcome">
 			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
 				{{emote|*Zanya =verb:tap= =pronouns.possessive= chin pensively.*}} 
 				
@@ -1459,14 +1465,12 @@
 				There is the occasional traveler, but otherwise the days are spent working, trading and napping un'er the Hind Sun.							
 			</text>				
 			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
-				{{emote|*They =verb:tap:afterpronoun= =pronouns.possessive= chin pensively.*}} 
+				{{emote|*=pronouns.Subjective= =verb:tap:afterpronoun= =pronouns.possessive= chin pensively.*}} 
 				
 				Not much to tell about this place, we all keep pretty much t'ourselves. Some o' the others tend to the pig farms, and prepare the cheese. Right o'er there is the 'orkshop of Imimiw, our tinker. She'll set any 'ires straight in just a moment. 
 				
 				There is the occasional traveler, but otherwise the days are spent working, trading and napping un'er the Hind Sun.	
 			</text>	
-			<choice Target="Start">Thank you for the pointers. I have a few questions still.</choice>
-			<choice Target="End">That is all I needed to know. Live and drink.</choice>
 		</node>	
 	
 	</conversation>	
@@ -1474,31 +1478,30 @@
 
 	<conversation ID="Brothers_CatsDogs_Cheesejaw">
 		
-		<node ID="Start" IfFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">
-			<text>
+		<start ID="Welcome">
+			<text IfFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">
 				eheheheheheh shrooz!~
 				geh! me sulton!~
 				nyeheheheheh, minemineminemine!~
 				sultonofshrooz uhuhuh...~
 				liffen. huh. SHROOZ!
 			</text>		
-			<choice Target="End">Live and eat, "sultan".</choice>
-		</node>
-		
-		<node ID="Start" IfNotFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">
-			<text>
+			<text IfNotFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">
 				eheheheheheh cheez!~
 				geh! me sulton!~
 				nyeheheheheh, minemineminemine!~
 				sultonofcheez uhuhuh...~
 				liffen. huh. CHEEZ!
 			</text>
-			<choice Target="What"> 
+			<choice Target="What" IfNotFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop"> 
 				<text>Will you resign your charge and swear to unvex the fromagers of this world?</text>
 				<part Name="RequireReputation" Faction="Snapjaws" Level="Liked" />
 			</choice>		
-			<choice Target="End">Live and drink. Milk, preferably.</choice>
-		</node>
+			<choice Target="End">
+				<text IfNotFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">Live and drink. Milk, preferably.</text>
+				<text IfNotFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">Live and eat, "sultan".</text>
+			</choice>
+		</start>
 
 		<node ID="What">
 			<text>
@@ -1573,7 +1576,7 @@
 
 	<conversation ID="Brothers_CatsDogs_ShikCitizen">
 		
-		<node ID="Start">
+		<start ID="Welcome">
 			<text>
 				{{emote|*soft growling*}}~
 				{{emote|*tired panting*}}~
@@ -1584,13 +1587,13 @@
 				Take me word for it =player.formalAddressTerm=: always spit out seeds.	
 			</text>
 			<choice Target="End">Live, drink, and herd starapples.</choice>
-		</node>
+		</start>
 	
 	</conversation>	
 
 	<conversation ID="Brothers_CatsDogs_SparCitizen">
 		
-		<node ID="Start">
+		<start ID="Welcome">
 			<text>
 				{{emote|*purring*}}~
 				{{emote|*soft meowing*}}~
@@ -1602,7 +1605,7 @@
 				Get yourself some meat to cook crispy, =player.formalAddressTerm=. You'll thank me later.
 			</text>
 			<choice Target="End">Live and drink, pig tender.</choice>
-		</node>
+		</start>
 	
 	</conversation>
 
