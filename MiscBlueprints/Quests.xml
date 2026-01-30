@@ -33,8 +33,12 @@
 			<text>Travel to Ezra and ask Mayor Haddas about Bubumube.</text>
 		</step>
 
-		<step ID="Investigate" Name="Investigate the Founder" XP="2500" Optional="true">
-			<text>Discover all of Bubumube's history.</text>
+		<step ID="Clue" Name="Investigate the Founder" XP="1000">
+			<text>Find out clues about Bubumube's history.</text>
+		</step>
+
+		<step ID="Investigate" Name="Finish Investigating the Founder" XP="1000" Optional="true">
+			<text>Discover Bubumube's history in its entirety.</text>
 		</step>
 
 		<step ID="Deliver" Name="Return to Shik and Spar" XP="1500">
