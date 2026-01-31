@@ -442,6 +442,7 @@
 		<tag Name="NoHateFactions" Value="Wardens,Shik,Spar,Farmers" />
 		<tag Name="staticFaction1" Value="Shik,friend,being a neutral arbiter" />
 		<tag Name="staticFaction2" Value="Spar,friend,never taking a side" />
+		<xtagWaterRitual SellSkill="Endurance" />
 		<tag Name="NoSleep" />
 		<part Name="Interesting" />
 		<tag Name="Gender" Value="nonspecific" />

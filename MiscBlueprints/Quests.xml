@@ -62,7 +62,7 @@
 			<text>Invite Spar's leader to take part in the Gathering of Shikspar.</text>
 		</step>
 
-		<step ID="Gathering" Name="Reveal the Truth" XP="1500">
+		<step ID="Gathering" Name="Reveal the Truth" XP="2000">
 			<text>Take part in the Gathering of Shikspar and reveal the truth about Shik and Spar's founder.</text>
 		</step>
 		

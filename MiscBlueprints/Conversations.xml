@@ -40,14 +40,47 @@
 
 
 	<conversation ID="Brothers_CatsDogs_Warden Arendubark">
-		
-		<node ID="Start">
-			<text>
-				I'm a tree.
+			
+		<start ID="Welcome" Inherits="DefaultChoices">
+			<text IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief" Priority="-1">		
+				{{emote|*A dreadful weapon sways gently as wind shakes the warden's foliage.*}}
+				
+				Tread peacefully and there won't be any trouble, stranger.
 			</text>
-			<choice Target="End">You're a tree.</choice>
+			<text IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief" Priority="-1">		
+				{{emote|*Heavy branches stoop lower to shield you from the wind.*}}				
+				
+				Have you reaped any knowledge, =name=?
+			</text>
+			<text IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" Priority="-1">		
+				{{emote|*A flutter runs through the foliage, shaking saltflies loose.*}}
+
+				I pray you hurry, =name=. The mayors have bared fangs and unsheathed claws -- there is only so much I can do from here.
+			</text>
+			<text IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" Priority="-1">		
+				{{emote|*Roots split the ground with assurance.*}}
+
+				The Gathering of Shikspar draws near... I will stand ready for anything.
+			</text>			
+			<text IfFinishedQuest="Brothers_CatsDogs_MainQuest3" Priority="-1">		
+				{{emote|*Branches stand tall as the watch continues.*}}
+				
+				Quite the unexpected outcome for Shik and Spar, in the end. Nonetheless, you have my thanks, =name=: I am quite certain blood would have been drawn if not for you.
+			</text>			
+		</start>
+
+		<node ID="DefaultChoices">
+			<choice Target="Division" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">I was told to come see you about the current situation between Shik and Spar.</choice>
+			<choice Target="FounderInfo" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Find" IfHaveVillageNote="(Brothers_ShiksparSecret1 OR Brothers_ShiksparSecret2 OR Brothers_ShiksparSecret1">Warden, I have some information about the Founder.</choice>
+			<choice Target="FounderSecrets" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Clue">I have learned all I could on Bubumube. What now?</choice>
+			<choice Target="Council" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="(Brothers_CatsDogs_MainQuest3~DogMayor AND Brothers_CatsDogs_MainQuest3~CatMayor)">I have delivered invites to both mayors -- the council can begin.</choice>
+			<choice Target="QuestReminder" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">What do you want me to do, again?</choice>
+			<choice Target="AboutTown">What can you tell me about Shik and Spar?</choice>
+			<choice Target="Travelers">I was not even aware there was a village here. You must not get many travelers.</choice>	
+			<choice Target="TreeWarden">I was not expecting a tree for a warden.</choice>	
+			<choice Target="End">I have to go. Live and drink, warden.</choice>
 		</node>
-	
+		
 	</conversation>
 
 
@@ -154,7 +187,7 @@
 				
 				Watch yerself if ye decide to speak with Spar's mayor: she is as cruel a lass as they make!
 			</text>
-			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1">Duly noted. I will talk to the warden then.</choice>
+			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1" SetBooleanState="Brothers_CatsDogs_QuestgiverDogMayor,true">Duly noted. I will talk to the warden then.</choice>
 		</node>	
 
 		<node ID="HistoryChoices">
@@ -305,7 +338,7 @@
 				
 				And should you find yourself in Shik, I recommend you avoid their mayor: this brigand would not hesitate to run you through for a mere dram of water.
 			</text>
-			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1">Thank you for the warning. I will go see the warden.</choice>
+			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1" SetBooleanState="Brothers_CatsDogs_QuestgiverCatMayor,true">Thank you for the warning. I will go see the warden.</choice>
 		</node>	
 
 		<node ID="HistoryChoices">
@@ -516,7 +549,7 @@
 				
 				I cannae mention it under this roof: go find Warden Arendubark, in the northern outskirts. He will tell ye all about our sorry history!
 			</text>
-			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1">Duly noted. I will go find the warden then.</choice>
+			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1" SetBooleanState="Brothers_CatsDogs_QuestgiverDogLover,true">Duly noted. I will go find the warden then.</choice>
 		</node>
 
 		<node ID="Opinion" Inherits="Welcome">
@@ -708,7 +741,7 @@
 				
 				Not now, not here! Go find our warden, north of the wall. He has been trying to fix that situation for years now.
 			</text>
-			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1">Alright... In that case, I will go find the warden.</choice>
+			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1" SetBooleanState="Brothers_CatsDogs_QuestgiverCatLover,true">Alright... In that case, I will go find the warden.</choice>
 		</node>
 
 		<node ID="Opinion" Inherits="Welcome">
@@ -1139,7 +1172,7 @@
 				
 				{{Y|There is not much that we can say, =player.formalAddressTerm=. Fetch Warden Arendubark, north of the wall -- he has been trying to fix this matter for many moons, now.}}
 			</text>
-			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1">I will talk to the warden, then. In the meantime, live and drink.</choice>	
+			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1" SetBooleanState="Brothers_CatsDogs_QuestgiverDogChef,true">I will talk to the warden, then. In the meantime, live and drink.</choice>	
 		</node>
 
 		<node ID="Opinion" Inherits="Welcome">
@@ -1417,7 +1450,7 @@
 
 				The matter? You'll have to ask our good mayor on that, =player.apparentSpecies=. Or even better, head directly to Warden Arendubark. He is standing guard by the central wall, in the norther outskirts -- you cannot miss him.
 			</text>
-			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1">I will ask the warden for more information, then. In the meantime, live and drink.</choice>	
+			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1" SetBooleanState="Brothers_CatsDogs_QuestgiverCatTinker,true">I will ask the warden for more information, then. In the meantime, live and drink.</choice>	
 		</node>
 
 		<node ID="Opinion" Inherits="Welcome">
@@ -1528,7 +1561,7 @@
 				
 				Aye, for sure! Our good 'arden's been looking to solve the matter but he coul' most definitely use a hand or two, meow. Can't investigate much from 'here he's taken root, see? You can find 'im in the northern outskirts.
 			</text>			
-			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1">I will talk to the warden then. In the meantime, live and drink.</choice>
+			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1" SetBooleanState="Brothers_CatsDogs_QuestgiverFurGuy,true">I will talk to the warden then. In the meantime, live and drink.</choice>
 		</node>		
 	
 		<node ID="Opinion" Inherits="Welcome">
