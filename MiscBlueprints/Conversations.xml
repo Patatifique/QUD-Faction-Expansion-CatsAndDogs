@@ -48,7 +48,7 @@
 				Tread peacefully and there won't be any trouble, stranger.
 			</text>
 			<text IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief" Priority="-1">		
-				{{emote|*Heavy branches stoop lower to shield you from the wind.*}}				
+				{{emote|*Heavy branches stoop lower to shield you from the wind.*}}
 				
 				Have you reaped any knowledge, =name=?
 			</text>
@@ -74,12 +74,52 @@
 			<choice Target="FounderInfo" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Find" IfHaveVillageNote="(Brothers_ShiksparSecret1 OR Brothers_ShiksparSecret2 OR Brothers_ShiksparSecret1">Warden, I have some information about the Founder.</choice>
 			<choice Target="FounderSecrets" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Clue">I have learned all I could on Bubumube. What now?</choice>
 			<choice Target="Council" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="(Brothers_CatsDogs_MainQuest3~DogMayor AND Brothers_CatsDogs_MainQuest3~CatMayor)">I have delivered invites to both mayors -- the council can begin.</choice>
-			<choice Target="QuestReminder" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">What do you want me to do, again?</choice>
+			<choice Target="QuestReminder" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">What do you want me to do, again?</choice>
 			<choice Target="AboutTown">What can you tell me about Shik and Spar?</choice>
 			<choice Target="Travelers">I was not even aware there was a village here. You must not get many travelers.</choice>	
 			<choice Target="TreeWarden">I was not expecting a tree for a warden.</choice>	
 			<choice Target="End">I have to go. Live and drink, warden.</choice>
 		</node>
+	
+
+
+
+
+
+
+
+
+
+		<node ID="QuestReminder" Inherits="Welcome">
+			<text>
+				you got stuff to do
+			</text>
+		</node>	
+		
+		<node ID="AboutTown" Inherits="Welcome">
+			<text>
+				two villages
+			</text>
+		</node>	
+		
+		<node ID="Travelers" Inherits="Welcome">
+			<text>
+				we get some
+			</text>
+		</node>	
+
+		<node ID="TreeWarden" Inherits="Welcome">
+			<text>
+				yeah im a tree guy
+			</text>
+			<choice Target="HowYouMove" Priority="10">dont you need to move tho</choice>				
+		</node>	
+
+		<node ID="HowYouMove" Inherits="Welcome">
+			<text>
+				nah unless you want me to chase you lol
+			</text>
+		</node>	
 		
 	</conversation>
 
