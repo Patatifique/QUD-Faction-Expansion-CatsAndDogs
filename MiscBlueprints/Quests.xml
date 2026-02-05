@@ -13,7 +13,7 @@
 		</step>
 
 		<step ID="Find" Name="Investigate the Founder" XP="500">
-			<text>Find clues on Shik and Spar's mysterious founder.</text>
+			<text>Find a decisive clue about Shik and Spar's mysterious founder.</text>
 		</step>
 
 		<step ID="Return" Name="Return to Warden Arendubark" XP="500">
