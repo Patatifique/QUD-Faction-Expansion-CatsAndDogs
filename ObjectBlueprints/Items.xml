@@ -171,7 +171,29 @@
 		<tag Name="NoSparkingQuest" />    
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
+	
+	<object Name="Brothers_CatsDogs_CatGodNote" Inherits="Book">
+		<part Name="Render" DisplayName="{{Y|divine feline note}}" ColorString="&amp;w" DetailColor="W" RenderString="=" RenderLayer="5" Tile="Items/sw_paper.bmp" />
+		<part Name="Description" Short="Feline divinity put memories to rest on pulped brinestalk." />
+		<part Name="Book" ID="Brothers_CatsDogs_CatGodNote" />
+		<part Name="RevealSecretOnRead" Secrets="$Brothers_CatsDogs_ShiksparFounder_Cat" />
+		<part Name="Commerce" Value="10" />    
+		<xtagGrammar Proper="false" adjunctNoun="" />
+		<tag Name="NoSparkingQuest" />    
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	</object>
 
+	<object Name="Brothers_CatsDogs_DogGodNote" Inherits="Book">
+		<part Name="Render" DisplayName="{{Y|divine canine note}}" ColorString="&amp;w" DetailColor="W" RenderString="=" RenderLayer="5" Tile="Items/sw_paper.bmp" />
+		<part Name="Description" Short="Canine divinity put memories to rest on pulped brinestalk." />
+		<part Name="Book" ID="Brothers_CatsDogs_CatGodNote" />
+		<part Name="RevealSecretOnRead" Secrets="$Brothers_CatsDogs_ShiksparFounder_Dog" />
+		<part Name="Commerce" Value="10" />    
+		<xtagGrammar Proper="false" adjunctNoun="" />
+		<tag Name="NoSparkingQuest" />    
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	</object>
+	
 	<object Name="TarBones" Load="Merge">
 		<part Name="CompleteQuestOnTaken" Quest="Brothers_CatsDogs_ChefQuest" QuestStep="Find" />
 	</object>

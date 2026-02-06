@@ -339,6 +339,8 @@
 		<tag Name="Gender" Value="female" />
 		<tag Name="PronounSet" Value="She/Her/Her/Her/Herself/goddess/godling/lady/Daughter/Sister/Mother" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+		<inventoryobject Blueprint="Brothers_CatsDogs_CatGodNote" Number="1"/>
+		<property Name="WontSell" Value="Brothers_CatsDogs_CatGodNote" />
 		<xtagGrammar Proper="true" />
 		<part Name="Interesting" />
 		<part Name="Slumberling" />
@@ -396,6 +398,8 @@
 		<tag Name="WorshipColorString" Value="&amp;M" />
 		<tag Name="WorshipDetailColor" Value="K" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+		<inventoryobject Blueprint="Brothers_CatsDogs_DogGodNote" Number="1"/>
+		<property Name="WontSell" Value="Brothers_CatsDogs_DogGodNote" />
 		<xtagGrammar Proper="true" />
 		<tag Name="NoSleep" />
 	    <part Name="ImmuneToSleepGas" />
