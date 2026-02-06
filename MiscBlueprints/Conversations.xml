@@ -39,15 +39,306 @@
 <!--Important NPCs-->
 
 
-	<conversation ID="Brothers_CatsDogs_Warden Arendurath">
-		
-		<node ID="Start">
-			<text>
-				I'm a tree.
+	<conversation ID="Brothers_CatsDogs_Warden Arendubark">
+			
+		<start ID="Welcome" Inherits="DefaultChoices">
+			<text IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief" Priority="-1">		
+				{{emote|*A dreadful weapon sways gently as wind shakes the warden's foliage.*}}
+				
+				Tread peacefully and there won't be any trouble, stranger.
 			</text>
-			<choice Target="End">You're a tree.</choice>
+			<text IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief" Priority="-1">		
+				{{emote|*Heavy branches stoop lower to shield you from the wind.*}}
+				
+				What knowledge have you reaped, =name=?
+			</text>
+			<text IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" Priority="-1">		
+				{{emote|*A flutter runs through the foliage, shaking saltflies loose.*}}
+
+				I pray you hurry, =name=. The mayors have bared fangs and unsheathed claws -- there is only so much I can do from here.
+			</text>
+			<text IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" Priority="-1">		
+				{{emote|*Roots split the ground with assurance.*}}
+
+				The Gathering of Shikspar draws near... I will stand ready for anything.
+			</text>			
+			<text IfFinishedQuest="Brothers_CatsDogs_MainQuest3" Priority="-1">		
+				{{emote|*Branches stand tall as the watch continues.*}}
+				
+				Quite the unexpected outcome for Shik and Spar, in the end. Nonetheless, you have my thanks, =name=: I am quite certain blood would have been drawn if not for you.
+			</text>			
+		</start>
+
+		<node ID="DefaultChoices">
+			<choice Target="Brief1" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">I was told to come see you about the current situation between Shik and Spar.</choice>
+			<choice Target="FounderInfo" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1" IfHaveVillageNote="(Brothers_ShiksparSecret1 OR Brothers_ShiksparSecret2 OR Brothers_ShiksparSecret3)">Warden, I have some information about the Founder.</choice>
+			<choice Target="FounderSecrets" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Clue">I have a first-hand account of Bubumube. What now?</choice>
+			<choice Target="CouncilNotHere" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="(Brothers_CatsDogs_MainQuest3~DogMayor AND Brothers_CatsDogs_MainQuest3~CatMayor)">I have delivered invites to both mayors -- they are on their way.</choice>
+			<choice Target="Council" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="(Brothers_CatsDogs_MainQuest3~DogMayor AND Brothers_CatsDogs_MainQuest3~CatMayor)">I have delivered invites to both mayors -- the Gathering can begin.</choice>
+			<choice Target="QuestReminder" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">What do you want me to do, again?</choice>
+			<choice Target="AboutTown">What can you tell me about Shik and Spar?</choice>
+			<choice Target="Travelers">I was not even aware there was a village here. You must not get many travelers.</choice>	
+			<choice Target="TreeWarden">I was not expecting a tree for a warden.</choice>	
+			<choice Target="End">I have to go. Live and drink, warden.</choice>
 		</node>
 	
+		<node ID="Brief1">
+			<text IfHaveState="Brothers_CatsDogs_QuestgiverDogMayor">
+				{{emote|*Silence passes you by as the warden =verb:listen= intently.*}}
+
+				Told? I wager Mayor Raroofwor sent you. He will not move from his position, will he?
+			</text>
+			<text IfHaveState="Brothers_CatsDogs_QuestgiverCatMayor">
+				{{emote|*Silence passes you by as the warden =verb:listen= intently.*}}
+
+				Lady Mayor Morrarri put you up to this, did she not? Surely she must think I will take her side.
+			</text>
+			<text IfHaveState="Brothers_CatsDogs_QuestgiverDogLover">
+				{{emote|*Silence passes you by as the warden =verb:listen= intently.*}}
+
+				I think I know who sent you: my kin has heard the love-plea of Oof Growf.
+			</text>
+			<text IfHaveState="Brothers_CatsDogs_QuestgiverCatLover">
+				{{emote|*Silence passes you by as the warden =verb:listen= intently.*}}
+
+				Rrromaw's passion must run deep, to inspire acting in a mother-mayor's back.
+			</text>
+			<text IfHaveState="Brothers_CatsDogs_QuestgiverDogChef">
+				{{emote|*Silence passes you by as the warden =verb:listen= intently.*}}
+
+				Had I to hazard a guess, I would say the Growarows sent you to me.
+			</text>
+			<text IfHaveState="Brothers_CatsDogs_QuestgiverCatTinker">
+				{{emote|*Silence passes you by as the warden =verb:listen= intently.*}}
+
+				Has Imimiw grown so tired of having no proper merchant that she sent you to me?
+			</text>
+			<text IfHaveState="Brothers_CatsDogs_QuestgiverFurGuy">
+				{{emote|*Silence passes you by as the warden =verb:listen= intently.*}}
+
+				Zanya's optimism is refreshing, that they still believe I can mend the rift between Shik and Spar.
+			</text>
+			<choice Target="Brief2">You are right as to who sent me. What is the matter between the two villages?</choice>
+			<choice Target="End">We will talk about this later. Live and drink, warden.</choice>
+		</node>
+
+		<node ID="BriefingChoices">
+			<choice Target="Agreement">Can the mayors really not come to an agreement?</choice>	
+			<choice Target="Predecessor">What about the warden before you? Didn't your predecessor brief you about the villages' history?</choice>		
+			<choice Target="Brief3">I have heard enough. What do you need me to do?</choice>
+			<choice Target="Start">That certainly is a concerning situation. Can we talk about something else?</choice>		
+			<choice Target="End">I cannot afford to help you right now. Live and drink, arboreal warden.</choice>
+		</node>	
+		
+		<node ID="Brief2" Inherits="BriefingChoices">
+			<text Priority="-1">
+				May my bark rot if I know, stranger. Even when I was but a small shoot were the two villages already at odds. Both mayors believe themselves to be the rightful successors to the Founder of Shik and Spar, but there is only so much I can learn from where I have taken root.
+			</text>		
+		</node>
+
+		<node ID="Agreement" Inherits="BriefingChoices">
+			<text>
+				That they cannot. I have conferred with them -- separately, mind you -- on multiple occasions. Lady Mayor Morrarri believes Oof Growf to be a mindless brute, while the latter suspects the former of cunning and cruel manipulations. Delivering any joint convocation is but a waste of time and effort.
+			</text>		
+		</node>
+
+		<node ID="Predecessor" Inherits="BriefingChoices">
+			<text>
+				What predecessor? The villages went without warden before I took up the mantle. I have for only knowledge the truths whispered by my kin, and one-sided accounts from those involved.
+			</text>		
+		</node>
+
+		<node ID="Brief3">
+			<text>
+				{{emote|*The tree stands still for a moment.*}}
+
+				I thank you for your offer, stranger. If we are to brighten the future of Shik and Spar, perhaps the first step is to learn about their past. All discussions seem to lead to the Founder. Can I trust you to investigate that being's history?
+			</text>		
+			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest1~Brief">You can, warden. I will be back as soon as I learn more about the Founder.</choice>		
+			<choice Target="End">I need to think about this. Live and drink, warden.</choice>
+		</node>
+
+		<node ID="FounderLoreChoices">
+			<choice Target="SharedAll" IfHaveState="(Brothers_CatsDogs_SharedShiksparLore AND Brothers_CatsDogs_SharedDogLore AND Brothers_CatsDogs_SharedCatLore)">That is all I learned in Shik and Spar, warden. What now?</choice>					
+			<choice Target="ShiksparLore" IfHaveVillageNote="Brothers_ShiksparSecret1" FlagSecret="true" SetBooleanState="Brothers_CatsDogs_SharedShiksparLore,true" IfNotHaveState="Brothers_CatsDogs_SharedShiksparLore">The Founder was named Bubumube. They came from Ezra and settled the village, calling it Shikspar.</choice>	
+			<choice Target="DogLore" IfHaveVillageNote="Brothers_ShiksparSecret2" FlagSecret="true" SetBooleanState="Brothers_CatsDogs_SharedDogLore,true" IfNotHaveState="Brothers_CatsDogs_SharedDogLore">According to the people of Shik, the Founder was a dog, and appointed their kin and closest companion to rule Shikspar after their death.</choice>	
+			<choice Target="CatLore" IfHaveVillageNote="Brothers_ShiksparSecret3" FlagSecret="true" SetBooleanState="Brothers_CatsDogs_SharedCatLore,true" IfNotHaveState="Brothers_CatsDogs_SharedCatLore">Spar's history presents Bubumube as a cat, and the foreparent of the current mayor. They supposedly disappeared without a trace, leaving their child to govern Shikspar in their absence.</choice>
+			<choice Target="Start">Can I ask you a few questions first?</choice>		
+			<choice Target="End">I will investigate the matter further. Live and drink, warden.</choice>
+		</node>	
+
+		<node ID="FounderInfo" Inherits="FounderLoreChoices">
+			<text Priority="-1">
+				I am listening, =name=. What did you find out?
+			</text>
+		</node>
+
+		<node ID="ShiksparLore" Inherits="FounderLoreChoices">
+			<text>
+				So the Founder -- Bubumube, rather -- hailed from Ezra before founding Shikspar. That is valuable information. Anything else?
+			</text>
+		</node>
+
+		<node ID="DogLore" Inherits="FounderLoreChoices">
+			<text>
+				Of course, the dogs of Shik are convinced the Founder was one of them. What else have you learned?
+			</text>
+		</node>
+
+		<node ID="CatLore" Inherits="FounderLoreChoices">
+			<text>
+				And thus the cats of Spar believe the Founder to have been a feline too. Any other discoveries?
+			</text>
+		</node>
+
+		<node ID="SharedAll">
+			<text>
+				{{emote|*Several seconds pass as the information you shared is picked apart.*}}
+				
+				Thank you, =name=. Please let me go over all you found. Founder Bubumube came from Ezra and founded Shikspar. When they disappeared -- or passed away, depending on who you ask -- the village split in two, each community convinced to be the righteous heir of Bubumube.
+			</text>
+			<choice Target="Solution">That is the gist of it, yes. How can we solve their disagreement?</choice>
+			<choice Target="Solution">Both affirmations cannot be simultaneously true. We need to investigate the matter further.</choice>								
+		</node>
+								
+		<node ID="CatOrDog">
+			<text>
+				Perhaps the solution lies in revealing who the Founder truly was. If we manage to prove whether they were a cat or a dog, we could solve this issue once and for all. Once the truth is exposed, there is a good chance one of the two will see the error of their ways.
+			</text>
+			<choice Target="TravelToEzra">The problem is Bubumube lived more than a century ago. Where could we even find more information about them?</choice>
+			<choice Target="TravelToEzra">This sounds awfully optimistic. I am not sure anyone even remembers Bubumube.</choice>								
+		</node>
+
+		<node ID="TravelToEzra">
+			<text>
+				Someone in Qud must have known Bubumube and be able to provide a firsthand account. You mentioned they supposedly came from Ezra, yes?
+				
+				{{emote|*The foliage shakes with inspiration.*}}
+			
+				There is one of my kin there. Older than me, older than Shikspar. Seek Ezra's mayor -- if the Founder truly lived in Ezra, maybe there lies the firsthand account that could help us solve our issue peacefully.
+			</text>
+			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest1~Return" StartQuest="Brothers_CatsDogs_MainQuest2">I will travel to Ezra and see what I can learn from Mayor Haddas.</choice>
+			<choice Target="End">I cannot spare the time to do this right now. Live and drink, warden.</choice>
+		</node>
+
+		<node ID="FounderSecrets">
+			<text>
+				I need not know the details, =name=. We need to convince both mayors to come here and take part in an exceptional council -- the Gathering of Shikspar. There, you will reveal what you learned on Bubumube and, hopefully, convince whichever of them was wrong to give their foolish convictions up. 
+			</text>
+			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest2~Deliver" FinishQuest="Brothers_CatsDogs_MainQuest2" StartQuest="Brothers_CatsDogs_MainQuest3">Duly noted. I will invite both mayors to the Gathering of Shikspar, then.</choice>
+			<choice Target="End">I cannot afford to do this for now. Live and drink, warden.</choice>
+		</node>
+
+		<node ID="CouncilNotHere" Inherits="DefaultChoices">
+			<text>
+				Good. Give the mayors time to arrive, and we will begin.
+			</text>
+		</node>
+		
+		<node ID="Council">
+			<text>
+				There they are indeed.
+
+				{{emote|*The tree stands taller, projecting authority provided by status as a peacekeeper.*}}
+
+				Welcome, one and all, to the Gathering of Shikspar. Here, the truth of history shall be revealed by a neutral party, someone hailing neither from Shik nor from Spar. An unbiased retelling of a firsthand account of Founder Bubumube, settling your conflict once and for all.
+				
+				{{emote|*Both mayors listen intently, uncharacteristically silent.*}}
+				
+				=name=, if you will.
+			</text>
+			<choice Target="BubumubeNeither" IfHaveObservation="($Brothers_CatsDogs_ShiksparFounder_Cat AND $Brothers_CatsDogs_ShiksparFounder_Dog)" FlagSecret="true">From what I gathered, it appears Founder Bubumube was neither a dog nor a cat. This entire conflict is misguided.</choice>	
+			<choice Target="BubumubeDog" IfHaveObservation="$Brothers_CatsDogs_ShiksparFounder_Cat" FlagSecret="true">Founder Bubumube had nonretractable claws and round ears. This sounds closer to a dog in my eyes.</choice>	
+			<choice Target="BubumubeCat" IfHaveObservation="$Brothers_CatsDogs_ShiksparFounder_Dog" FlagSecret="true">Founder Bubumube was a lonely being who enjoyed swiping fishes from Qud's rivers -- as close to a cat as one can get.</choice>			
+			<choice Target="End">Sorry, everyone. I need to gather my thoughts first.</choice>	
+		</node>
+
+		<node ID="BubumubeNeither" AllowEscape="false">
+			<text>
+				{{emote|*Stunned silence welcomes your declaration, only broken by Warden Arendubark's laugh.*}}
+				
+				HA! Decades of bickering, and for what? Pray tell, =name=, what kind of creature was Bubumube then?
+			</text>
+			<choice Target="Conclusion">Does it even matter? The people of Shik and Spar have been feuding on wrong grounds since the very beginning.</choice>
+			<choice Target="BubumubeBear">Round ears, fixed claws, and a lonely fisherfolk? By all accounts, Bubumube was a bear. By the mayors' logic, Shik and Spar should both be deserted in favor of a ursine population.</choice>
+		</node>
+
+		<node ID="DontMatter" AllowEscape="false">
+			<text>
+				{{emote|*Both mayors look utterly embarrassed, leaving the warden as your only, coy interlocutor.*}}
+				
+				Thank you, =name=. I will take it from here. I wager negotiations will last for quite a few days still. Your participation was invaluable nonetheless -- with that added information, our good mayors will certainly find some common ground.
+			</text>
+			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3">Glad I could be of service, warden. I will leave you to it, then. Live and drink.</choice>
+		</node>
+
+		<node ID="BubumubeBear" AllowEscape="false">
+			<text>
+				{{emote|*Confused mumbling is all the mayors manage to produce, with only the warden addressing you directly.*}}
+				
+				Thank you, =name=. I will take it from here -- I believe our good mayors will ultimately agree it matters little what Bubumube was, after all. Negotiations should last for a few days still, but I cannot state how essential your participation proved.
+			</text>
+			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3">Glad I could be of service, warden. I will leave you to it, then. Live and drink.</choice>
+		</node>
+
+		<node ID="BubumubeDog" AllowEscape="false">
+			<text>
+				{{emote|*Both mayors cry out, Raroofwor vociferating with renewed energy, the legitimacy of his claims now undisputed. Lady Morrarri's ear stay low as she considers the exile her people are facing, and only the warden addresses you directly*}}
+				
+				So Shik's account of history was right in the end. I thank you, =name=: I would not have been able to solve the matter on my own. I wager the village will take a few days to reorganize, as there is no doubt Spar's cats will have to find another place to live.
+			</text>
+			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3">A shame they cannot find any common ground. Still, glad I could be of service, warden. Live and drink.</choice>
+		</node>
+
+		<node ID="BubumubeCat" AllowEscape="false">
+			<text>
+				{{emote|*Both mayors cry out, Lady Morrarri' driving her arguments with renewed energy, the legitimacy of her claims now undisputed. Raroofwor's tail stay tucked between his legs as he considers the exile his people are facing, and only the warden addresses you directly*}}
+				
+				So Spar's account of history was right in the end. I thank you, =name=: I would not have been able to solve the matter on my own. I wager the village will take a few days to reorganize, as there is no doubt Shik's dogs will have to find another place to live.
+			</text>
+			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3">A shame they cannot find any common ground. Still, glad I could be of service, warden. Live and drink.</choice>
+		</node>
+
+		<node ID="QuestReminder" Inherits="Welcome">
+			<text Priority="-1">		
+				I do not need anything from you, =name=.
+			</text>	
+			<text IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3">		
+				Please invite both mayors to take part in the Gathering. Once they arrive, we will begin.
+			</text>	
+			<text IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2">		
+				We need to know more about Bubumube, =name=. Whatever you learn -- determining whether they were dog or cat could give us a peaceful resolution yet.
+			</text>
+			<text IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1">					
+				There must be some clues in Shik and Spar as to who exactly the Founder was. Perhaps this will be enough to bridge the gap between the villages.
+			</text>			
+		</node>	
+		
+		<node ID="AboutTown" Inherits="Welcome">
+			<text>
+				About as much as I can observe from here: the voices of my kin offering up starapples for harvest in Shik, and the splashing of swine-mud in Spar. Good folks on both sides of the wall.
+			</text>
+		</node>	
+		
+		<node ID="Travelers" Inherits="Welcome">
+			<text>
+				We do get the few that do not fear the jungle goatfolks. Dromad caravans, too. There is little reason for most to stop by Shik and Spar. Those who do set up camp in the outskirts, and rarely stay longer than is strictly needed.
+			</text>
+		</node>	
+
+		<node ID="TreeWarden" Inherits="Welcome">
+			<text>
+				How come? Keeping the peace involves settling disputes, and sitting under leaf-shade is a sure way to calm heated spirits.
+			</text>
+			<choice Target="HowYouMove" Priority="10">As a warden, do you not need to pursue wrongdoers?</choice>				
+		</node>	
+
+		<node ID="HowYouMove" Inherits="Welcome">
+			<text>
+				In my experience, few run faster than a long photon. I wager you will not want to put this theory to the test.
+			</text>
+		</node>	
+		
 	</conversation>
 
 
@@ -55,16 +346,16 @@
 		
 		<start ID="Welcome" Inherits="DefaultChoices">
 			<text Priority="-1">
-				{{emote|*With each of the hound's words, slime spittles from =pronouns.possessive= jowls.*}}
+				{{emote|*With each of the hound's words, slime splutters from =pronouns.possessive= jowls.*}}
 				
-				Oy, traveler, came to gawk at our wee village, have ye? Ye'll nae find a better spot to grab some shuteye or munch on starapples, heh?
+				Oy, traveler, came to gawk at our wee village, have ye? Ye willnae find a better spot to grab some shuteye or munch on starapples, heh?
 			</text>
 		</start>
 
 		<node ID="DefaultChoices">
 			<choice Target="Slynth" Priority="10" IfHaveActiveQuest="Landing Pads">In my travels I encountered a people, the slynth, seeking a new home.</choice>
 			<choice Target="Council" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest3~DogMayor">Warden Arendubark wants to settle the division between Shik and Spar once and for all, and wants you to take part in a council with Spar's mayor.</choice>
-			<choice Target="FounderInfo" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfHaveObservation="($Brothers_CatsDogs_ShiksparFounder_Cat OR $Brothers_CatsDogs_ShiksparFounder_Dog)">I have definite information about Shik and Spar's founder.</choice>
+			<choice Target="FounderInfo" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Clue">I have definite information about Shik and Spar's founder.</choice>
 			<choice Target="Work" IfNotHaveQuest="Brothers_CatsDogs_ChefQuest">Is there any work to do in Shik?</choice>
 			<choice Target="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the deal with the village on the wall's other side?</choice>
 			<choice Target="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">How come Shik and Spar are divided?</choice>
@@ -78,7 +369,7 @@
 			<text>
 				{{emote|*=pronouns.Subjective= =verb:shake:afterpronoun= =pronouns.possessive= head.*}}
 				
-				Ye would have us welcome them, traveler. That I cannae agree with. There is too much going on already in our abode without us having another folk around. I am sorry, but I am certain ye will undertand.
+				Ye would have us welcome them, traveler. That I cannae agree with. There is too much going on already in our abode without us having another folk around. I am sorry, but I am certain ye will understand.
 			</text>
 			<choice Target="Start">I think I do. There was something else I needed to ask you.</choice>
 			<choice Target="End">I understand. Live and drink, mayor.</choice>			
@@ -95,7 +386,7 @@
 	
 		<node ID="FounderInfo" Inherits="Welcome">
 			<text>
-				Heh! Ye dinna need to tell me anything, I already know Bubumube was a tried and true canine, nae doubt. Ye go and tell all that to the warden, yes? That he definitely settles our wee scuffle.
+				Heh! Ye dinna need to tell me anything, I already know the Founder was a tried and true canine, nae doubt. Ye go and tell all that to the warden, yes? That they definitely settle our wee scuffle.
 				
 				{{emote|*=pronouns.Subjective= =verb:sit:afterpronoun= on the ground, quite content with =pronouns.reflexive=.*}}
 			</text>
@@ -142,7 +433,7 @@
 				
 				The deal? I'll tell ye the deal, traveler: their mayor thinks she should rule over all of us! I dinna plan to take this lying down, ye hear? We dogs of Shik are a proud sort, mark me words. 
 				
-				Our good warden -- Founder bless his bark -- is trying to speak some sense into her. Think ye could see if he needs a wee hand?
+				Our good warden -- Founder bless their bark -- is trying to speak some sense into her. Think ye could see if they need a wee hand?
 			</text>
 			<choice Target="Where">I could always see about that. Where can I find this warden?</choice>
 			<choice Target="End">I sadly can't spare the time. Live and drink, mayor.</choice>			
@@ -154,11 +445,11 @@
 				
 				Watch yerself if ye decide to speak with Spar's mayor: she is as cruel a lass as they make!
 			</text>
-			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1">Duly noted. I will talk to the warden then.</choice>
+			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1" SetBooleanState="Brothers_CatsDogs_QuestgiverDogMayor,true">Duly noted. I will talk to the warden then.</choice>
 		</node>	
 
 		<node ID="HistoryChoices">
-			<choice Target="CatLore" IfHaveVillageNote="Brothers_ShiksparSecret3" FlagSecret="true">Your story does not quite match the monument I saw in Spar: supposedly, Bubumube disappeared without appointing a successor.</choice>	
+			<choice Target="CatLore" IfHaveVillageNote="Brothers_ShiksparSecret3" FlagSecret="true">Your story does not quite match the monument I saw in Spar: the Founder supposedly disappeared without appointing a successor.</choice>	
 			<choice Target="FounderSpecies">You said "their kin". Was the Founder a dog as well?</choice>		
 			<choice Target="Support">Where does the rest of Shik stand on that issue?</choice>
 			<choice Target="Start">A gripping tale. I wanted to ask you about something else.</choice>		
@@ -177,7 +468,7 @@
 
 		<node ID="CatLore" Inherits="HistoryChoices">
 			<text>		
-				{{emote|*=pronouns.Subjective= =verb:look:afterpronoun= outraged, and =pronouns.possessive= next words come with a shower of slimey spittle.*}}
+				{{emote|*=pronouns.Subjective= =verb:look:afterpronoun= outraged, and =pronouns.possessive= next words come with a shower of slimy spittle.*}}
 				
 				Yarn and falsehoods! I knew their mayor to be crafty, but I hadnae taken her for such a devious fabulist. Dinna believe everything you read, ye hear me? There *was* an appointed successor, otherwise I wouldnae be standing here in front of ye.
 			</text>
@@ -293,9 +584,9 @@
 				
 				Speak not of the wall, visitor. It is the thin veneer guarding us from the violence and savagery that stand on the other side. If not for it and our warden's rifle, Shik's bellicose leader would raze our village to the ground.
 					
-				You should talk to the warden about it. I am certain he needs help keeping brutality at bay.
+				You should talk to the warden about it. I am certain they need help keeping brutality at bay.
 			</text>
-			<choice Target="Where">No harm in talking to the warden. Where can I find him?</choice>
+			<choice Target="Where">No harm in talking to the warden. Where can I find them?</choice>
 			<choice Target="End">I would rather not get involved. Live and drink.</choice>			
 		</node>	
 
@@ -305,12 +596,12 @@
 				
 				And should you find yourself in Shik, I recommend you avoid their mayor: this brigand would not hesitate to run you through for a mere dram of water.
 			</text>
-			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1">Thank you for the warning. I will go see the warden.</choice>
+			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1" SetBooleanState="Brothers_CatsDogs_QuestgiverCatMayor,true">Thank you for the warning. I will go see the warden.</choice>
 		</node>	
 
 		<node ID="HistoryChoices">
-			<choice Target="DogLore" IfHaveVillageNote="Brothers_ShiksparSecret2" FlagSecret="true">In Shik, ancient writing presents Bubumube as having personally appointed a successor. Does that not contradict your story?</choice>	
-			<choice Target="FounderSpecies">If you trace your family line to Bubumube, does that mean the Founder was a cat too?</choice>		
+			<choice Target="DogLore" IfHaveVillageNote="Brothers_ShiksparSecret2" FlagSecret="true">In Shik, ancient writing present the Founder as having personally appointed a successor. Does that not contradict your story?</choice>	
+			<choice Target="FounderSpecies">If you trace your family line to the Founder, does that mean they were a cat too?</choice>		
 			<choice Target="Support">Does everyone in Spar agree with you?</choice>
 			<choice Target="Start">Thank you for answering my questions, but there is something else I need to ask.</choice>		
 			<choice Target="End">Enlightening. Live and drink, lady mayor.</choice>
@@ -318,7 +609,7 @@
 		
 		<node ID="Opinion" Inherits="HistoryChoices">
 			<text Priority="-1">		
-				Sheer inability from a dog to accept anything but a leader's throne. Before my grandmother's grandmother, this place was called Shikspar, the first wall erected by Founder Bubumube themselves. When they passed away, their first child naturally took over -- and years later, my line still guides our people.
+				Sheer inability from a dog to accept anything but a leader's throne. Before my grandmother's grandmother, this place was called Shikspar, the first wall erected by the Founder themselves. When they passed away, their first child naturally took over -- and years later, my line still guides our people.
 				
 				A few farmers came up with the outlandish claim our Founder had appointed one of them as leader of Shikspar, and when we refused their outrageous terms, they opted for robbing us of half the village name. So stands "Spar" as the Founder intended.
 				
@@ -409,7 +700,7 @@
 				
 				I've heard that voice through the walls, fancy as the Beetle Moon -- I cannae bear to live without knowing: is Rrromaw as bonnie as I imagine? 
 				
-				On second thought, dinna answer: it dinna matter what me heart's burglar looks like, only that I can get an invitation to the Ut yara Ux festival delivered to this hearthrob of mine. Could ye help me there, stranger?
+				On second thought, dinna answer: it dinna matter what me heart's burglar looks like, only that I can get an invitation to the Ut yara Ux festival delivered to this heartthrob of mine. Could ye help me there, stranger?
 			</text>
 			<choice Target="Why">Why do you need my help? Can't you take your invitation to Rrromaw yourself?</choice>
 			<choice Target="Secret">I'm not sure I understand why you feel the need to be so secretive.</choice>
@@ -496,7 +787,7 @@
 			<text>			
 				{{emote|After retrieving the carefully folded note, =pronouns.subjective= =verb:read:afterpronoun= it twice: precipitately at first, then more slowly once the initial shock has subsided.*}}
 				
-				Rrromaw! The hearthrob from Spar! The melodic voice that's been haunting me dreams e'er since I heard it first! Of course I'll be there, battling sultans if needs be!
+				Rrromaw! The heartthrob from Spar! The melodic voice that's been haunting me dreams e'er since I heard it first! Of course I'll be there, battling sultans if needs be!
 			</text>
 			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_CatLoverQuest~Invite">I will let Rrromaw know of your enthusiasm then. In the meantime, live and drink.</choice>
 		</node>			
@@ -505,18 +796,18 @@
 			<text>			
 				I can scarcely believe ye, =name=! I cannae thank ye enough for all ye've done. Now to prepare for the date... It is not coming up just yet, but I am grateful for the change ye've given me.
 				
-				{{emote|Determination shines bright in =pronouns.possesssive= eyes.*}}
+				{{emote|Determination shines bright in =pronouns.possessive= eyes.*}}
 			</text>
 			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_DogLoverQuest~Debrief">Glad I could help you, Oof Growf. Live and drink!</choice>
 		</node>			
 		
 		<node ID="Division" AllowEscape="false">
 			<text>
-				{{emote|*=pronouns.Subjective= =verb:lean:afterpronoun= forward and =verb:whisper:afterpronoun= hatively.*}}
+				{{emote|*=pronouns.Subjective= =verb:lean:afterpronoun= forward and =verb:whisper:afterpronoun= hastily.*}}
 				
-				I cannae mention it under this roof: go find Warden Arendubark, in the northern outskirts. He will tell ye all about our sorry history!
+				I cannae mention it under this roof: go find Warden Arendubark, in the northern outskirts. They will tell ye all about our sorry history!
 			</text>
-			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1">Duly noted. I will go find the warden then.</choice>
+			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1" SetBooleanState="Brothers_CatsDogs_QuestgiverDogLover,true">Duly noted. I will go find the warden then.</choice>
 		</node>
 
 		<node ID="Opinion" Inherits="Welcome">
@@ -555,7 +846,7 @@
 				Oh =name=, I shall surely faint before the day is done. Have you delivered the invite? What did Oof Growf say?
 			</text>
 			<text IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Invite" Priority="-1">
-				{{emote|The tip of =pronouns.possessive= ears go pink as you adress =pronouns.objective=.}}
+				{{emote|The tip of =pronouns.possessive= ears go pink as you address =pronouns.objective=.}}
 				
 				Oh? I think you must want to speak with the mayor -- she is right over there.
 			</text>
@@ -706,9 +997,9 @@
 			<text>
 				{{emote|*=pronouns.Subjective= =verb:cut:afterpronoun= you before you can finish, whispering.*}}
 				
-				Not now, not here! Go find our warden, north of the wall. He has been trying to fix that situation for years now.
+				Not now, not here! Go find our warden, north of the wall. They have been trying to fix that situation for years now.
 			</text>
-			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1">Alright... In that case, I will go find the warden.</choice>
+			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1" SetBooleanState="Brothers_CatsDogs_QuestgiverCatLover,true">Alright... In that case, I will go find the warden.</choice>
 		</node>
 
 		<node ID="Opinion" Inherits="Welcome">
@@ -838,7 +1129,7 @@
 		</node>	
 
 		<node ID="Reliefs" Load="Merge">
-			<choice Target="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They lived in Ezra, many years ago.</choice>
+			<choice Target="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They supposedly passed by Ezra, many decades ago.</choice>
 			<choice Target="BubumubeReminder" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Can you remind me where Bubumube went after they left Ezra?</choice>
 		</node>
 
@@ -864,7 +1155,7 @@
 
 		<node ID="Bubumube">
 			<text>			
-				HA! A tree-old name. They found shade under my fingers, many yesteryears ago. Gone to sow their own errancy.
+				HA! A tree-old name. They found shade under my fingers, many yesteryears back. Gone to sow their own errancy.
 			</text>
 			<choice Target="DogOrCat">Do you remember if they were a dog or a cat? I promise this is important.</choice>
 		</node>
@@ -1132,14 +1423,14 @@
 				
 				{{K|Tree! Gun!}}
 
-				... We have our paws full here. If you are looking into this matter, you should confer with Warden Arendubark. He can be found in the northern outskirts.
+				... We have our paws full here. If you are looking into this matter, you should confer with Warden Arendubark. They can be found in the northern outskirts.
 			</text>
 			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
 				{{emote|*The first head prepares to answer, but reconsiders.*}}
 				
-				{{Y|There is not much that we can say, =player.formalAddressTerm=. Fetch Warden Arendubark, north of the wall -- he has been trying to fix this matter for many moons, now.}}
+				{{Y|There is not much that we can say, =player.formalAddressTerm=. Fetch Warden Arendubark, north of the wall -- they have been trying to fix this matter for many moons, now.}}
 			</text>
-			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1">I will talk to the warden, then. In the meantime, live and drink.</choice>	
+			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1" SetBooleanState="Brothers_CatsDogs_QuestgiverDogChef,true">I will talk to the warden, then. In the meantime, live and drink.</choice>	
 		</node>
 
 		<node ID="Opinion" Inherits="Welcome">
@@ -1190,7 +1481,7 @@
 				{{K|Heads!}}
 			</text>
 			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
-				{{emote|*Both heads nod emphathetically.*}}
+				{{emote|*Both heads nod emphatically.*}}
 
 				{{cloudy|Folks get confused too easily nowadays.}}
 				
@@ -1264,7 +1555,7 @@
 				Settle comfortably if you need to, =player.apparentSpecies=, and grab a soldering iron. Work awaits.
 			</text>
 			<text IfHaveActiveQuest="Brothers_CatsDogs_CheeseQuest" Priority="-1">
-				{{emote|*The tinker's bestacled gaze =verb:gauge= you mercilessly.*}}
+				{{emote|*The tinker's bespectacled gaze =verb:gauge= you mercilessly.*}}
 				
 				There you are, =player.apparentSpecies=! What news from the ripening caves?
 			</text>
@@ -1415,9 +1706,9 @@
 			<text>
 				{{emote|*=pronouns.Subjective= =verb:take:afterpronoun= a sudden bitter interest in a disassembled recoiler.*}}
 
-				The matter? You'll have to ask our good mayor on that, =player.apparentSpecies=. Or even better, head directly to Warden Arendubark. He is standing guard by the central wall, in the norther outskirts -- you cannot miss him.
+				The matter? You'll have to ask our good mayor on that, =player.apparentSpecies=. Or even better, head directly to Warden Arendubark. They are standing guard by the central wall, in the norther outskirts -- you cannot miss them.
 			</text>
-			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1">I will ask the warden for more information, then. In the meantime, live and drink.</choice>	
+			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1" SetBooleanState="Brothers_CatsDogs_QuestgiverCatTinker,true">I will ask the warden for more information, then. In the meantime, live and drink.</choice>	
 		</node>
 
 		<node ID="Opinion" Inherits="Welcome">
@@ -1430,7 +1721,7 @@
 
 		<node ID="Zanya" Inherits="Welcome">
 			<text>
-				Obviously, yes. They help me from time to time -- as it happens, bipedality proves unexpectantly useful in a cat.
+				Obviously, yes. They help me from time to time -- as it happens, bipedality proves unexpectedly useful in a cat.
 			</text>
 		</node>	
 
@@ -1438,7 +1729,7 @@
 			<text>
 				{{emote|*=pronouns.Subjective= =verb:knead:afterpronoun= the ground for a few seconds, but =pronouns.possessive= expression quickly shifts to suspicion.*}}
 			
-				I cut open artifacts, learn of their innards, and put them back together. Somestimes I make more myself, out of the bits and trinkets brought by wandering traders. Are you another student of chrome?
+				I cut open artifacts, learn of their innards, and put them back together. Sometimes I make more myself, out of the bits and trinkets brought by wandering traders. Are you another student of chrome?
 			</text>
 			<choice Target="ATinker">
 				<text>I have been known to tinker my own machines when the need arises.</text>
@@ -1449,7 +1740,7 @@
 
 		<node ID="ATinker" Inherits="Welcome">
 			<text>
-				Well, in that case, I hope you can refrain from spouting unsollicited "advice", =player.apparentSpecies=. If I need pointers, I will ask for them. Now do you need anything else?
+				Well, in that case, I hope you can refrain from spouting unsolicited "advice", =player.apparentSpecies=. If I need pointers, I will ask for them. Now do you need anything else?
 			</text>	
 		</node>	
 
@@ -1521,14 +1812,14 @@
 			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
 				{{emote|*Zanya =verb:look= left and right before continuing.*}}
 				
-				Aye, for sure! Our good 'arden's been looking to solve the matter but he could most definitely use a paw or two, meow. Can't investigate much from 'here he's taken root, see?
+				Aye, for sure! Our good 'arden's been looking to solve the matter but they coul' most definitely use a hand or two, meow. Can't investigate much from 'here they've taken root, see? You can find 'em in the northern outskirts.
 			</text>				
 			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
-				{{emote|*=pronouns.Subjective= =verb:look:affterpronoun= left and right before continuing.*}}
+				{{emote|*=pronouns.Subjective= =verb:look:afterpronoun= left and right before continuing.*}}
 				
-				Aye, for sure! Our good 'arden's been looking to solve the matter but he coul' most definitely use a hand or two, meow. Can't investigate much from 'here he's taken root, see? You can find 'im in the northern outskirts.
+				Aye, for sure! Our good 'arden's been looking to solve the matter but they coul' most definitely use a hand or two, meow. Can't investigate much from 'here they've taken root, see? You can find 'em in the northern outskirts.
 			</text>			
-			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1">I will talk to the warden then. In the meantime, live and drink.</choice>
+			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1" SetBooleanState="Brothers_CatsDogs_QuestgiverFurGuy,true">I will talk to the warden then. In the meantime, live and drink.</choice>
 		</node>		
 	
 		<node ID="Opinion" Inherits="Welcome">

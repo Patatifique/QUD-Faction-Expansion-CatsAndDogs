@@ -12,8 +12,8 @@
 			<text>Ask Warden Arendubark of Shik and Spar, in the northern outskirts, about the villages' current situation.</text>
 		</step>
 
-		<step ID="Find" Name="Investigate the Founder" XP="500">
-			<text>Find clues on Shik and Spar's mysterious founder.</text>
+		<step ID="Find" Name="Investigate Shik and Spar's History" XP="500">
+			<text>Discover the complete village history of Shikspar, Shik and Spar.</text>
 		</step>
 
 		<step ID="Return" Name="Return to Warden Arendubark" XP="500">
@@ -33,8 +33,12 @@
 			<text>Travel to Ezra and ask Mayor Haddas about Bubumube.</text>
 		</step>
 
-		<step ID="Investigate" Name="Investigate the Founder" XP="2500" Optional="true">
-			<text>Discover all of Bubumube's history.</text>
+		<step ID="Clue" Name="Investigate the Founder" XP="1000">
+			<text>Find out clues about Bubumube's history.</text>
+		</step>
+
+		<step ID="Investigate" Name="Finish Investigating the Founder" XP="1000" Optional="true">
+			<text>Discover Bubumube's history in its entirety.</text>
 		</step>
 
 		<step ID="Deliver" Name="Return to Shik and Spar" XP="1500">
@@ -51,14 +55,14 @@
 	   Gospel="When administering justice, =name= was petitioned by siblings arguing over the property of a hut. In perfect fairness, =name= ordered the hut burnt down, and split the ashes evenly between siblings.">
 
 		<step ID="DogMayor" Name="Invite Mayor Raroofwor" XP="500">
-			<text>Invite Shik's leader to take part in the Gathering of Shikspar.</text>
+			<text>Invite Shik's mayor to take part in the Gathering of Shikspar.</text>
 		</step>
 
 		<step ID="CatMayor" Name="Invite Lady Morrarri" XP="500" >
-			<text>Invite Spar's leader to take part in the Gathering of Shikspar.</text>
+			<text>Invite Spar's mayor to take part in the Gathering of Shikspar.</text>
 		</step>
 
-		<step ID="Gathering" Name="Reveal the Truth" XP="1500">
+		<step ID="Gathering" Name="Reveal the Truth" XP="2000">
 			<text>Take part in the Gathering of Shikspar and reveal the truth about Shik and Spar's founder.</text>
 		</step>
 		
@@ -132,7 +136,7 @@
 		Accomplishment="You retrieved the final ingredient for an outstanding meal."
 		Hagiograph="Generous =name= feeds the hungry! Walking through the flames, =player.subjective= bestows manna to =player.possessive= attendants."
 		HagiographCategory="FindsObject"
-		Gospel="Let it be known that =name= counted amongst his foes a many-headed beast of hatred. =name= struck it down, and retrieved from its stomach the bituminous remains of a long-lost friend.">
+		Gospel="Let it be known that =name= counted among his foes a many-headed beast of hatred. =name= struck it down, and retrieved from its stomach the bituminous remains of a long-lost friend.">
 
 		<step ID="Travel" Name="Travel to the Asphalt Mines" XP="500" Optional="true">
 			<text>Journey three parasangs north and six parasangs east of the Six Day Stilt, to the Asphalt Mines.</text>

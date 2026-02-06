@@ -15,7 +15,7 @@
 
 	<object Name="Brothers_CatsDogs_ShikMonument" Inherits="Village Monument Diptych">
 		<part Name="Render" ColorString="&amp;w" DetailColor="y" />
-		<part Name="RulesDescription" Text="This object is a monument to a scene from the history of {{M|Shik}}.&#10;&#10;In 859, Bubumube left the direction of Shikspar to their loyal canine companion as their final will. They passed away peacefully, and from this day forth, the village was known as Shik.&#10;" />
+		<part Name="RulesDescription" Text="This object is a monument to a scene from the history of {{M|Shik}}.&#10;&#10;In 859, the Founder left the direction of Shikspar to their loyal canine companion as their final will. They passed away peacefully, and from this day forth, the village was known as Shik.&#10;" />
 		<part Name="RevealVillageHistoryOnLook" HistoryId="Brothers_ShiksparSecret2" />
 		<part Name="Interesting" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
@@ -23,7 +23,7 @@
 	
 	<object Name="Brothers_CatsDogs_SparMonument" Inherits="Village Monument Diptych">
 		<part Name="Render" ColorString="&amp;y" DetailColor="w" />
-		<part Name="RulesDescription" Text="This object is a monument to a scene from the history of {{M|Spar}}.&#10;&#10;In 859, Bubumube disappeared from Shikspar, never to be seen again. Come Harvest Dawn, a single feline babe was found swaddled in their bed and, from this day forth, the village was known as Spar.&#10;" />
+		<part Name="RulesDescription" Text="This object is a monument to a scene from the history of {{M|Spar}}.&#10;&#10;In 859, the Founder disappeared from Shikspar, never to be seen again. Come Harvest Dawn, a single feline babe was found swaddled in their bed and, from this day forth, the village was known as Spar.&#10;" />
 		<part Name="RevealVillageHistoryOnLook" HistoryId="Brothers_ShiksparSecret3" />
 		<part Name="Interesting" />
 	    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
@@ -43,7 +43,7 @@
 	<object Name="Brothers_CatsDogs_Cheeseshelf" Inherits="MountedFurniture">
 		<part Name="Render" DisplayName="ripening shelf" Tile="Terrain/catsdogs/tile_cheeseshelf1.png" DetailColor="W" ColorString="&amp;y" RenderString="182" />
 		<builder Name="RandomTile" Tiles="Terrain/catsdogs/tile_cheeseshelf1.png,Terrain/catsdogs/tile_cheeseshelf2.png,Terrain/catsdogs/tile_cheeseshelf3.png" />
-		<part Name="Description" Short="Chrome meshs form successive horizons upon which dairy blossoms and crust colonizes." />
+		<part Name="Description" Short="Chrome meshes form successive horizons upon which dairy blossoms and crust colonizes." />
 		<part Name="Container" OpenSound="Sounds/Interact/sfx_interact_open_desk" />
 		<part Name="Inventory" />
 		<inventoryobject Blueprint="Hunk of Cheese" Number="0-6" />

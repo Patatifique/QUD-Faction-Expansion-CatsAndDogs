@@ -22,7 +22,7 @@ namespace Brothers.CatsAndDogs
             );
 
             JournalAPI.AddObservation(
-                "Bubumube had solitary tendecies and fished in Qud's rivers.",
+                "Bubumube had solitary tendencies and fished in Qud's rivers.",
                 "$Brothers_CatsDogs_ShiksparFounder_Dog",
                 "Gossip",
                 "$Brothers_CatsDogs_ShiksparFounder_Dog",

@@ -54,10 +54,22 @@ Speculator Ptodelia reporting. I have stayed longer than expected, but will be l
 		</page>
 	</book>
 
-	<book ID="Brothers_CatsDogs_DateInvite" Title="{{W|folded sheet of paper}}">
+	<book ID="Brothers_CatsDogs_DateInvite" Title="{{W|folded sheet of paper}}" Format="Auto" Margins="1,2,2,2">
 		<page>
 {{emote|*much of the note waxes semantic and prose, yet the meaning remains clear: will the recipient come to the Ut yara Ux dance?*}}
 		</page>
+	</book>
+
+	<book ID="Brothers_CatsDogs_CatGodNote" Title="{{W|divine feline note}}" Format="Auto" Margins="1,2,2,2">
+		<page>{{w|This note holds information about the many creatures met by Miramiahmia, among which Bubumube.}}
+
+Bubumube had round ears and nonretractile claws.</page>
+	</book>
+
+	<book ID="Brothers_CatsDogs_DogGodNote" Title="{{W|divine canine note}}" Format="Auto" Margins="1,2,2,2">
+		<page>{{w|This note holds information about the many creatures met by Boroworof, among which Bubumube.}}
+
+Bubumube had solitary tendencies and fished in Qud's rivers.</page>
 	</book>
 
 </books>
