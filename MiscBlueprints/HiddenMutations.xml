@@ -3,7 +3,7 @@
 <mutations Hidden="true" ExcludeFromPool="true">
 
 	<category Name="Physical">
-		<mutation Name="Feral Jaws" Cost="1" Class="Brothers_CatsDogs_FeralMutation" BearerDescription="the feral jawed" Tile="Mutation/catsdogs/feraljaws.png" />
+		<mutation Name="Feral Jaws" Cost="1" Class="Brothers_FeralMutation" BearerDescription="the feral jawed" Tile="Mutation/catsdogs/feraljaws.png" />
 	</category>
  
 </mutations>
