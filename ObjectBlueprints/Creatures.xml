@@ -419,7 +419,7 @@
 		<stat Name="Level" Value="30" />
 		<stat Name="Hitpoints" Value="250" />
 		<part Name="Brain" Wanders="false" Mobile="false" Hostile="false" Calm="True" Factions="Wardens-100,Trees-50" />
-		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_Warden Arendurath" />
+		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_Warden Arendubark" />
 		<part Name="Physics" Weight="8000" Solid="true" Takeable="false" />
 		<stat Name="ColdResistance" Value="25" />
 		<stat Name="HeatResistance" Value="25" />

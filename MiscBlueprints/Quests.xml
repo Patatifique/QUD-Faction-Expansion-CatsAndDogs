@@ -12,8 +12,8 @@
 			<text>Ask Warden Arendubark of Shik and Spar, in the northern outskirts, about the villages' current situation.</text>
 		</step>
 
-		<step ID="Find" Name="Investigate the Founder" XP="500">
-			<text>Find a decisive clue about Shik and Spar's mysterious founder.</text>
+		<step ID="Find" Name="Investigate Shik and Spar's History" XP="500">
+			<text>Discover the complete village history of Shikspar, Shik and Spar.</text>
 		</step>
 
 		<step ID="Return" Name="Return to Warden Arendubark" XP="500">
@@ -55,11 +55,11 @@
 	   Gospel="When administering justice, =name= was petitioned by siblings arguing over the property of a hut. In perfect fairness, =name= ordered the hut burnt down, and split the ashes evenly between siblings.">
 
 		<step ID="DogMayor" Name="Invite Mayor Raroofwor" XP="500">
-			<text>Invite Shik's leader to take part in the Gathering of Shikspar.</text>
+			<text>Invite Shik's mayor to take part in the Gathering of Shikspar.</text>
 		</step>
 
 		<step ID="CatMayor" Name="Invite Lady Morrarri" XP="500" >
-			<text>Invite Spar's leader to take part in the Gathering of Shikspar.</text>
+			<text>Invite Spar's mayor to take part in the Gathering of Shikspar.</text>
 		</step>
 
 		<step ID="Gathering" Name="Reveal the Truth" XP="2000">

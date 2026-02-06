@@ -71,8 +71,9 @@
 
 		<node ID="DefaultChoices">
 			<choice Target="Brief1" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">I was told to come see you about the current situation between Shik and Spar.</choice>
-			<choice Target="FounderInfo" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Find" IfHaveVillageNote="(Brothers_ShiksparSecret1 OR Brothers_ShiksparSecret2 OR Brothers_ShiksparSecret3">Warden, I have some information about the Founder.</choice>
-			<choice Target="FounderSecrets" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Clue">I have learned all I could on Bubumube. What now?</choice>
+			<choice Target="FounderInfo" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1" IfHaveVillageNote="(Brothers_ShiksparSecret1 OR Brothers_ShiksparSecret2 OR Brothers_ShiksparSecret3)">Warden, I have some information about the Founder.</choice>
+			<choice Target="FounderSecrets" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Clue">I have a first-hand account of Bubumube. What now?</choice>
+			<choice Target="CouncilNotHere" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="(Brothers_CatsDogs_MainQuest3~DogMayor AND Brothers_CatsDogs_MainQuest3~CatMayor)">I have delivered invites to both mayors -- they are on their way.</choice>
 			<choice Target="Council" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="(Brothers_CatsDogs_MainQuest3~DogMayor AND Brothers_CatsDogs_MainQuest3~CatMayor)">I have delivered invites to both mayors -- the Gathering can begin.</choice>
 			<choice Target="QuestReminder" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">What do you want me to do, again?</choice>
 			<choice Target="AboutTown">What can you tell me about Shik and Spar?</choice>
@@ -157,55 +158,159 @@
 			<choice Target="End">I need to think about this. Live and drink, warden.</choice>
 		</node>
 
+		<node ID="FounderLoreChoices">
+			<choice Target="SharedAll" IfHaveState="(Brothers_CatsDogs_SharedShiksparLore AND Brothers_CatsDogs_SharedDogLore AND Brothers_CatsDogs_SharedCatLore)">That is all I learned in Shik and Spar, warden. What now?</choice>					
+			<choice Target="ShiksparLore" IfHaveVillageNote="Brothers_ShiksparSecret1" FlagSecret="true" SetBooleanState="Brothers_CatsDogs_SharedShiksparLore,true" IfNotHaveState="Brothers_CatsDogs_SharedShiksparLore">The Founder was named Bubumube. They came from Ezra and settled the village, calling it Shikspar.</choice>	
+			<choice Target="DogLore" IfHaveVillageNote="Brothers_ShiksparSecret2" FlagSecret="true" SetBooleanState="Brothers_CatsDogs_SharedDogLore,true" IfNotHaveState="Brothers_CatsDogs_SharedDogLore">According to the people of Shik, the Founder was a dog, and appointed their kin and closest companion to rule Shikspar after their death.</choice>	
+			<choice Target="CatLore" IfHaveVillageNote="Brothers_ShiksparSecret3" FlagSecret="true" SetBooleanState="Brothers_CatsDogs_SharedCatLore,true" IfNotHaveState="Brothers_CatsDogs_SharedCatLore">Spar's history presents Bubumube as a cat, and the foreparent of the current mayor. They supposedly disappeared without a trace, leaving their child to govern Shikspar in their absence.</choice>
+			<choice Target="Start">Can I ask you a few questions first?</choice>		
+			<choice Target="End">I will investigate the matter further. Live and drink, warden.</choice>
+		</node>	
 
-
-
-
-
-
-
-		<node ID="FounderInfo">
-			<text>
-				ok what did you find? (flag secrets properly)
+		<node ID="FounderInfo" Inherits="FounderLoreChoices">
+			<text Priority="-1">
+				I am listening, =name=. What did you find out?
 			</text>
+		</node>
+
+		<node ID="ShiksparLore" Inherits="FounderLoreChoices">
+			<text>
+				So the Founder -- Bubumube, rather -- hailed from Ezra before founding Shikspar. That is valuable information. Anything else?
+			</text>
+		</node>
+
+		<node ID="DogLore" Inherits="FounderLoreChoices">
+			<text>
+				Of course, the dogs of Shik are convinced the Founder was one of them. What else have you learned?
+			</text>
+		</node>
+
+		<node ID="CatLore" Inherits="FounderLoreChoices">
+			<text>
+				And thus the cats of Spar believe the Founder to have been a feline too. Any other discoveries?
+			</text>
+		</node>
+
+		<node ID="SharedAll">
+			<text>
+				{{emote|*Several seconds pass as the information you shared is picked apart.*}}
+				
+				Thank you, =name=. Please let me go over all you found. Founder Bubumube came from Ezra and founded Shikspar. When they disappeared -- or passed away, depending on who you ask -- the village split in two, each community convinced to be the righteous heir of Bubumube.
+			</text>
+			<choice Target="Solution">That is the gist of it, yes. How can we solve their disagreement?</choice>
+			<choice Target="Solution">Both affirmations cannot be simultaneously true. We need to investigate the matter further.</choice>								
+		</node>
+								
+		<node ID="CatOrDog">
+			<text>
+				Perhaps the solution lies in revealing who the Founder truly was. If we manage to prove whether they were a cat or a dog, we could solve this issue once and for all. Once the truth is exposed, there is a good chance one of the two will see the error of their ways.
+			</text>
+			<choice Target="TravelToEzra">The problem is Bubumube lived more than a century ago. Where could we even find more information about them?</choice>
+			<choice Target="TravelToEzra">This sounds awfully optimistic. I am not sure anyone even remembers Bubumube.</choice>								
+		</node>
+
+		<node ID="TravelToEzra">
+			<text>
+				Someone in Qud must have known Bubumube and be able to provide a firsthand account. You mentioned they supposedly came from Ezra, yes?
+				
+				{{emote|*The foliage shakes with inspiration.*}}
+			
+				There is one of my kin there. Older than me, older than Shikspar. Seek Ezra's mayor -- if the Founder truly lived in Ezra, maybe there lies the firsthand account that could help us solve our issue peacefully.
+			</text>
+			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest1~Return" StartQuest="Brothers_CatsDogs_MainQuest2">I will travel to Ezra and see what I can learn from Mayor Haddas.</choice>
+			<choice Target="End">I cannot spare the time to do this right now. Live and drink, warden.</choice>
 		</node>
 
 		<node ID="FounderSecrets">
 			<text>
-				ok good now give invites
+				I need not know the details, =name=. We need to convince both mayors to come here and take part in an exceptional council -- the Gathering of Shikspar. There, you will reveal what you learned on Bubumube and, hopefully, convince whichever of them was wrong to give their foolish convictions up. 
 			</text>
+			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest2~Deliver" FinishQuest="Brothers_CatsDogs_MainQuest2" StartQuest="Brothers_CatsDogs_MainQuest3">Duly noted. I will invite both mayors to the Gathering of Shikspar, then.</choice>
+			<choice Target="End">I cannot afford to do this for now. Live and drink, warden.</choice>
 		</node>
 
+		<node ID="CouncilNotHere" Inherits="DefaultChoices">
+			<text>
+				Good. Give the mayors time to arrive, and we will begin.
+			</text>
+		</node>
+		
 		<node ID="Council">
 			<text>
-				okkkkkkk letsgo
+				There they are indeed.
+
+				{{emote|*The tree stands taller, projecting authority provided by status as a peacekeeper.*}}
+
+				Welcome, one and all, to the Gathering of Shikspar. Here, the truth of history shall be revealed by a neutral party, someone hailing neither from Shik nor from Spar. An unbiased retelling of a firsthand account of Founder Bubumube, settling your conflict once and for all.
+				
+				{{emote|*Both mayors listen intently, uncharacteristically silent.*}}
+				
+				=name=, if you will.
 			</text>
+			<choice Target="BubumubeNeither" IfHaveObservation="($Brothers_CatsDogs_ShiksparFounder_Cat AND $Brothers_CatsDogs_ShiksparFounder_Dog)" FlagSecret="true">From what I gathered, it appears Founder Bubumube was neither a dog nor a cat. This entire conflict is misguided.</choice>	
+			<choice Target="BubumubeDog" IfHaveObservation="$Brothers_CatsDogs_ShiksparFounder_Cat" FlagSecret="true">Founder Bubumube had nonretractable claws and round ears. This sounds closer to a dog in my eyes.</choice>	
+			<choice Target="BubumubeCat" IfHaveObservation="$Brothers_CatsDogs_ShiksparFounder_Dog" FlagSecret="true">Founder Bubumube was a lonely being who enjoyed swiping fishes from Qud's rivers -- as close to a cat as one can get.</choice>			
+			<choice Target="End">Sorry, everyone. I need to gather my thoughts first.</choice>	
 		</node>
 
+		<node ID="BubumubeNeither" AllowEscape="false">
+			<text>
+				{{emote|*Stunned silence welcomes your declaration, only broken by Warden Arendubark's laugh.*}}
+				
+				HA! Decades of bickering, and for what? Pray tell, =name=, what kind of creature was Bubumube then?
+			</text>
+			<choice Target="Conclusion">Does it even matter? The people of Shik and Spar have been feuding on wrong grounds since the very beginning.</choice>
+			<choice Target="BubumubeBear">Round ears, fixed claws, and a lonely fisherfolk? By all accounts, Bubumube was a bear. By the mayors' logic, Shik and Spar should both be deserted in favor of a ursine population.</choice>
+		</node>
 
+		<node ID="DontMatter" AllowEscape="false">
+			<text>
+				{{emote|*Both mayors look utterly embarrassed, leaving the warden as your only, coy interlocutor.*}}
+				
+				Thank you, =name=. I will take it from here. I wager negotiations will last for quite a few days still. Your participation was invaluable nonetheless -- with that added information, our good mayors will certainly find some common ground.
+			</text>
+			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3">Glad I could be of service, warden. I will leave you to it, then. Live and drink.</choice>
+		</node>
 
+		<node ID="BubumubeBear" AllowEscape="false">
+			<text>
+				{{emote|*Confused mumbling is all the mayors manage to produce, with only the warden addressing you directly.*}}
+				
+				Thank you, =name=. I will take it from here -- I believe our good mayors will ultimately agree it matters little what Bubumube was, after all. Negotiations should last for a few days still, but I cannot state how essential your participation proved.
+			</text>
+			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3">Glad I could be of service, warden. I will leave you to it, then. Live and drink.</choice>
+		</node>
 
+		<node ID="BubumubeDog" AllowEscape="false">
+			<text>
+				{{emote|*Both mayors cry out, Raroofwor vociferating with renewed energy, the legitimacy of his claims now undisputed. Lady Morrarri's ear stay low as she considers the exile her people are facing, and only the warden addresses you directly*}}
+				
+				So Shik's account of history was right in the end. I thank you, =name=: I would not have been able to solve the matter on my own. I wager the village will take a few days to reorganize, as there is no doubt Spar's cats will have to find another place to live.
+			</text>
+			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3">A shame they cannot find any common ground. Still, glad I could be of service, warden. Live and drink.</choice>
+		</node>
 
-
-
-
-
-
-
-
-
-
-
+		<node ID="BubumubeCat" AllowEscape="false">
+			<text>
+				{{emote|*Both mayors cry out, Lady Morrarri' driving her arguments with renewed energy, the legitimacy of her claims now undisputed. Raroofwor's tail stay tucked between his legs as he considers the exile his people are facing, and only the warden addresses you directly*}}
+				
+				So Spar's account of history was right in the end. I thank you, =name=: I would not have been able to solve the matter on my own. I wager the village will take a few days to reorganize, as there is no doubt Shik's dogs will have to find another place to live.
+			</text>
+			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3">A shame they cannot find any common ground. Still, glad I could be of service, warden. Live and drink.</choice>
+		</node>
 
 		<node ID="QuestReminder" Inherits="Welcome">
-			<text IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief" Priority="-1">					
-				There must be some clues in Shik and Spar as to who exactly the Founder was. Perhaps this will be enough to bridge the gap between the villages.
-			</text>
-			<text IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" Priority="-1">		
-				We need to know more about the Founder, =name=. Whatever you learn -- knowing whether they were dog or cat could give us a peaceful resolution yet.
-			</text>
-			<text IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" Priority="-1">		
+			<text Priority="-1">		
+				I do not need anything from you, =name=.
+			</text>	
+			<text IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3">		
 				Please invite both mayors to take part in the Gathering. Once they arrive, we will begin.
+			</text>	
+			<text IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2">		
+				We need to know more about Bubumube, =name=. Whatever you learn -- determining whether they were dog or cat could give us a peaceful resolution yet.
+			</text>
+			<text IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1">					
+				There must be some clues in Shik and Spar as to who exactly the Founder was. Perhaps this will be enough to bridge the gap between the villages.
 			</text>			
 		</node>	
 		
@@ -250,7 +355,7 @@
 		<node ID="DefaultChoices">
 			<choice Target="Slynth" Priority="10" IfHaveActiveQuest="Landing Pads">In my travels I encountered a people, the slynth, seeking a new home.</choice>
 			<choice Target="Council" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest3~DogMayor">Warden Arendubark wants to settle the division between Shik and Spar once and for all, and wants you to take part in a council with Spar's mayor.</choice>
-			<choice Target="FounderInfo" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfHaveObservation="($Brothers_CatsDogs_ShiksparFounder_Cat OR $Brothers_CatsDogs_ShiksparFounder_Dog)">I have definite information about Shik and Spar's founder.</choice>
+			<choice Target="FounderInfo" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Clue">I have definite information about Shik and Spar's founder.</choice>
 			<choice Target="Work" IfNotHaveQuest="Brothers_CatsDogs_ChefQuest">Is there any work to do in Shik?</choice>
 			<choice Target="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the deal with the village on the wall's other side?</choice>
 			<choice Target="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">How come Shik and Spar are divided?</choice>
@@ -281,7 +386,7 @@
 	
 		<node ID="FounderInfo" Inherits="Welcome">
 			<text>
-				Heh! Ye dinna need to tell me anything, I already know Bubumube was a tried and true canine, nae doubt. Ye go and tell all that to the warden, yes? That they definitely settle our wee scuffle.
+				Heh! Ye dinna need to tell me anything, I already know the Founder was a tried and true canine, nae doubt. Ye go and tell all that to the warden, yes? That they definitely settle our wee scuffle.
 				
 				{{emote|*=pronouns.Subjective= =verb:sit:afterpronoun= on the ground, quite content with =pronouns.reflexive=.*}}
 			</text>
@@ -344,7 +449,7 @@
 		</node>	
 
 		<node ID="HistoryChoices">
-			<choice Target="CatLore" IfHaveVillageNote="Brothers_ShiksparSecret3" FlagSecret="true">Your story does not quite match the monument I saw in Spar: Bubumube supposedly disappeared without appointing a successor.</choice>	
+			<choice Target="CatLore" IfHaveVillageNote="Brothers_ShiksparSecret3" FlagSecret="true">Your story does not quite match the monument I saw in Spar: the Founder supposedly disappeared without appointing a successor.</choice>	
 			<choice Target="FounderSpecies">You said "their kin". Was the Founder a dog as well?</choice>		
 			<choice Target="Support">Where does the rest of Shik stand on that issue?</choice>
 			<choice Target="Start">A gripping tale. I wanted to ask you about something else.</choice>		
@@ -495,8 +600,8 @@
 		</node>	
 
 		<node ID="HistoryChoices">
-			<choice Target="DogLore" IfHaveVillageNote="Brothers_ShiksparSecret2" FlagSecret="true">In Shik, ancient writing presents Bubumube as having personally appointed a successor. Does that not contradict your story?</choice>	
-			<choice Target="FounderSpecies">If you trace your family line to Bubumube, does that mean the Founder was a cat too?</choice>		
+			<choice Target="DogLore" IfHaveVillageNote="Brothers_ShiksparSecret2" FlagSecret="true">In Shik, ancient writing present the Founder as having personally appointed a successor. Does that not contradict your story?</choice>	
+			<choice Target="FounderSpecies">If you trace your family line to the Founder, does that mean they were a cat too?</choice>		
 			<choice Target="Support">Does everyone in Spar agree with you?</choice>
 			<choice Target="Start">Thank you for answering my questions, but there is something else I need to ask.</choice>		
 			<choice Target="End">Enlightening. Live and drink, lady mayor.</choice>
@@ -504,7 +609,7 @@
 		
 		<node ID="Opinion" Inherits="HistoryChoices">
 			<text Priority="-1">		
-				Sheer inability from a dog to accept anything but a leader's throne. Before my grandmother's grandmother, this place was called Shikspar, the first wall erected by Founder Bubumube themselves. When they passed away, their first child naturally took over -- and years later, my line still guides our people.
+				Sheer inability from a dog to accept anything but a leader's throne. Before my grandmother's grandmother, this place was called Shikspar, the first wall erected by the Founder themselves. When they passed away, their first child naturally took over -- and years later, my line still guides our people.
 				
 				A few farmers came up with the outlandish claim our Founder had appointed one of them as leader of Shikspar, and when we refused their outrageous terms, they opted for robbing us of half the village name. So stands "Spar" as the Founder intended.
 				
