@@ -4,4 +4,9 @@ Faction Expansion: Cats & Dogs
 - C# Coding: Patatifique
 - Spritework: Balthichou
 - Writing: Balthichou
-- XML Formatting: Patatifique
+- XML Formatting: Balthichou & Patatifique
+
+Third party assets used:
+- Shik / Spar OST: Append from Craig Hamilton (https://craigoryhamilton.com/)
+
+Many thanks to the members of the Caves of Qud Discord modding community for their kindness, helpfulness, and reliability!
