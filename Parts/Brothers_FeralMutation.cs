@@ -23,12 +23,12 @@ namespace XRL.World.Parts.Mutation
 
         public override string GetDescription()
         {
-            return "You grow a set of feral jaws adapted for brutal close combat.";
+            return "Write description here.";
         }
 
         public override string GetLevelText(int Level)
         {
-            return "aaa";
+            return "Write level text here. (rest of description maybe idk)";
         }
 
         private GameObject FindFeralJaws()
