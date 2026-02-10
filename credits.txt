@@ -7,6 +7,6 @@ Faction Expansion: Cats & Dogs
 - XML Formatting: Balthichou & Patatifique
 
 Third party assets used:
-- Shik / Spar OST: Append from Craig Hamilton (https://craigoryhamilton.com/)
+- Shik / Spar OST: "Append" from Craig Hamilton (https://craigoryhamilton.com/)
 
 Many thanks to the members of the Caves of Qud Discord modding community for their kindness, helpfulness, and reliability!

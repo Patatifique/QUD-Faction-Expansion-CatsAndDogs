@@ -12,8 +12,8 @@ public class Brothers_FeralDinner : CookingRecipe
     public Brothers_FeralDinner()
     {
       this.Components.Add((ICookingRecipeComponent) new PreparedCookingRecipieComponentLiquid("blood"));
-      //this.Components.Add((ICookingRecipeComponent) new PreparedCookingRecipieComponentBlueprint("Bones"));
-      //this.Components.Add((ICookingRecipeComponent) new PreparedCookingRecipieComponentBlueprint("Furs"));
+      this.Components.Add((ICookingRecipeComponent) new PreparedCookingRecipeUnusualComponentBlueprint("Bones"));
+      this.Components.Add((ICookingRecipeComponent) new PreparedCookingRecipeUnusualComponentBlueprint("Furs"));
       this.Effects.Add((ICookingRecipeResult) new CookingRecipeResultProceduralEffect(ProceduralCookingEffect.CreateSpecific(new List<string>()
       {
         "Brothers_CookingDomainSpecial_UnitFeralTransform"

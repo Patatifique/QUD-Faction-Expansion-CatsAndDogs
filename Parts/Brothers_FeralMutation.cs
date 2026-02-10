@@ -23,12 +23,12 @@ namespace XRL.World.Parts.Mutation
 
         public override string GetDescription()
         {
-            return "Write description here.";
+            return "You bear long, fur-covered arms and powerful jaws.";
         }
 
         public override string GetLevelText(int Level)
         {
-            return "Write level text here. (rest of description maybe idk)";
+            return "" + "+4 Strength\n" + "+4 Toughness\n" + "+15 Cold Resistance\n" + "+15 Fire Resistance\n" + "+100 reputation with apes, baboons, bears, cats, dogs and grazing hedonists\n" + "Feral jaws act as a melee weapon with a chance to latch onto your target.";
         }
 
         private GameObject FindFeralJaws()

@@ -104,8 +104,8 @@
 	<!--Others-->
 
 	<object Name="Brothers_CatsDogs_MutationJaws" Inherits="NaturalWeapon">
-		<part Name="Render" DisplayName="{{w|feral jaws}}" Tile="Mutation/catsdogs/feraljaws.png" ColorString="&amp;w" />
-		<part Name="Description" Short="Wet rings of shuddering muscle shrink and spew body broth in peristaltic waves." />
+		<part Name="Render" DisplayName="{{w|feral jaws}}" Tile="Mutation/catsdogs/feraljaws.png" ColorString="&amp;w" DetailColor="W" />
+		<part Name="Description" Short="Jagged enamel craves violence." />
 		<part Name="Armor" AV="1" DV="0" WornOn="Face" />
 		<part Name="AddsRep" Faction="Apes:100,Baboons:100,Bears:100,Cats:100,Dogs:100,Prey:100" />
 		<part Name="EquipStatBoost" CountAsBase="true" Boosts="Strength:4;Toughness:4;FireResistance:15;ColdResistance:15" ChargeUse="0" IsBootSensitive="false" IsEMPSensitive="false" />
