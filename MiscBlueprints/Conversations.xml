@@ -1177,7 +1177,7 @@
 				
 				HA! Know the path to them if you did not already.
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Thank you, mayor. You were of great help.</choice>
+			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest2~Travel" RevealMapNote="($brothers_catgod_lair AND $brothers_doggod_lair">Thank you, mayor. You were of great help.</choice>
 		</node>
 		
 		<node ID="BubumubeReminder">
@@ -1393,7 +1393,7 @@
 				
 				Please pardon our manners -- very thankful indeed. As for tasting... The meal will sadly not be done for another couple of months, as it needs to cure and ripen properly. Still, you deserve a reward: the recipe of a unique signature dish loved by canines everywhere.
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_ChefQuest~Debrief" FinishQuest="Brothers_CatsDogs_ChefQuest">>Thank you, Growarow and Growarow -- Growarows. This knowledge will certainly come in handy. Live and drink.</choice>	
+			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_ChefQuest~Debrief" FinishQuest="Brothers_CatsDogs_ChefQuest" Brothers_GiveRecipe="Brothers_FeralDinner">Thank you, Growarow and Growarow -- Growarows. This knowledge will certainly come in handy. Live and drink.</choice>	
 		</node>
 
 		<node ID="RewardTrueKin" AllowEscape="false">
