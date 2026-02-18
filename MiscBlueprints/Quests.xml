@@ -23,7 +23,7 @@
 	</quest>
 
 
-	<quest ID="Brothers_CatsDogs_MainQuest2" Name="On Bubumube's Trail" Level="25" 
+	<quest ID="Brothers_CatsDogs_MainQuest2" Name="On Bubumube's Trail" Level="25" System="Brothers_CatsDogs_MainQuest2System"
 	   Accomplishment="You set out on a journey to discover the truth about Shik and Spar's founder."
 	   Hagiograph="Selfless =name=, remarking the absence of =player.possessive= counselor Bubumube, rescued them from wild beasts. The sultan protects =player.possessive= folk!"
 	   HagiographCategory="MeetsWithCounselors"

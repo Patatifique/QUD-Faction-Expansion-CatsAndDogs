@@ -17,8 +17,11 @@ namespace Brothers.CatsAndDogs
                 "Bubumube had round ears and nonretractile claws.", 
                 "$Brothers_CatsDogs_ShiksparFounder_Cat", 
                 "Gossip", 
-                "$Brothers_CatsDogs_ShiksparFounder_Cat", 
-                new string[1]
+                "$Brothers_CatsDogs_ShiksparFounder_Cat",
+                new string[]
+                {
+                    "brothers_godclue"
+                }
             );
 
             JournalAPI.AddObservation(
@@ -26,7 +29,10 @@ namespace Brothers.CatsAndDogs
                 "$Brothers_CatsDogs_ShiksparFounder_Dog",
                 "Gossip",
                 "$Brothers_CatsDogs_ShiksparFounder_Dog",
-                new string[1]
+                new string[]
+                {
+                    "brothers_godclue"
+                }
             );
 
 
