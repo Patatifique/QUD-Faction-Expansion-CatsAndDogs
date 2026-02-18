@@ -2,7 +2,7 @@
 
 <quests>
 
-	<quest ID="Brothers_CatsDogs_MainQuest1" Name="Ancient Grudges" Level="25" 
+	<quest ID="Brothers_CatsDogs_MainQuest1" Name="Ancient Grudges" Level="25" System="Brothers_CatsDogs_MainQuest1System"
 	   Accomplishment="You decided to investigate the foundation of Shik and Spar."
 	   Hagiograph="In the month of =month= of =year=, diligent =name= set the first stone of the Cathedral of Shikspar."
 	   HagiographCategory="DoesSomethingRad"
