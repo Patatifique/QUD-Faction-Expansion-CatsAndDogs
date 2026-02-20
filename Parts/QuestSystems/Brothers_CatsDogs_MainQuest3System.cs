@@ -19,9 +19,9 @@ namespace XRL.World.Quests
 
         public override bool HandleEvent(AfterConversationEvent E)
         {
+            // Move the dog mayor to the meeting
             if (The.Game.HasFinishedQuestStep("Brothers_CatsDogs_MainQuest3", "DogMayor"))
             {
-                // Move the dog mayor to the meeting
                 GameObject dogmayor = The.Player.Physics.CurrentCell.ParentZone.FindObject("Brothers_CatsDogs_DogMayor");
                 if (dogmayor != null)
                 {
@@ -31,8 +31,11 @@ namespace XRL.World.Quests
                     move.TargetY = 12;
                     move.setStateOnArrival = "Brothers_CatsDogs_DogMayorMoved";
                 }
-
-                // Move the cat mayor to the meeting
+            }
+            
+             // Move the cat mayor to the meeting
+             if (The.Game.HasFinishedQuestStep("Brothers_CatsDogs_MainQuest3", "CatMayor"))
+             {
                 GameObject catmayor = The.Player.Physics.CurrentCell.ParentZone.FindObject("Brothers_CatsDogs_CatMayor");
                 if (catmayor != null)
                 {
@@ -42,9 +45,8 @@ namespace XRL.World.Quests
                     move.TargetY = 12;
                     move.setStateOnArrival = "Brothers_CatsDogs_CatMayorMoved";
                 }
-
-
             }
+
 
             return base.HandleEvent(E);
         }
