@@ -32,7 +32,7 @@ namespace XRL.World.Quests
                     move.setStateOnArrival = "Brothers_CatsDogs_DogMayorMoved";
                 }
             }
-            
+
              // Move the cat mayor to the meeting
              if (The.Game.HasFinishedQuestStep("Brothers_CatsDogs_MainQuest3", "CatMayor"))
              {
@@ -47,8 +47,23 @@ namespace XRL.World.Quests
                 }
             }
 
-
             return base.HandleEvent(E);
+        }
+
+        public override void Finish()
+        {
+            // Liberate the mayors from the meeting
+            GameObject dogmayor = The.Player.Physics.CurrentCell.ParentZone.FindObject("Brothers_CatsDogs_DogMayor");
+            if (dogmayor != null)
+            {
+                dogmayor.RemovePart<Brothers_GlobalMove>();
+            }
+
+            GameObject catmayor = The.Player.Physics.CurrentCell.ParentZone.FindObject("Brothers_CatsDogs_CatMayor");
+            if (catmayor != null)
+            {
+                catmayor.RemovePart<Brothers_GlobalMove>();
+            }
         }
     }
 }
