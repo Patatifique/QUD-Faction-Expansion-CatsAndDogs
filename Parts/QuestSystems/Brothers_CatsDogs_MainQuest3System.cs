@@ -3,6 +3,7 @@ using XRL.World;
 using XRL.World.Quests;
 using XRL.World.Parts;
 using XRL.UI;
+using XRL.World.ZoneParts;  
 
 namespace XRL.World.Quests
 {
@@ -64,6 +65,13 @@ namespace XRL.World.Quests
             {
                 catmayor.RemovePart<Brothers_GlobalMove>();
             }
+
+
+            // Endings
+
+            The.ZoneManager.GetZone(meetingZone).AddPart(new Brothers_CatsDogs_MainQuestOutcome()); 
+
+
         }
     }
 }
