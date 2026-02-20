@@ -48,7 +48,7 @@
 	</quest>
 
 
-	<quest ID="Brothers_CatsDogs_MainQuest3" Name="The Gathering of Shikspar" Level="25" 
+	<quest ID="Brothers_CatsDogs_MainQuest3" Name="The Gathering of Shikspar" Level="25" System="Brothers_CatsDogs_MainQuest3System"
 	   Accomplishment="You revealed the truth about Shik and Spar's founder to the villages' mayors."
 	   Hagiograph="Knowledge pierces the darkness! =name= unearthed ancient knowledge to broker peace between warring nations."
 	   HagiographCategory="BecomesLoved"
