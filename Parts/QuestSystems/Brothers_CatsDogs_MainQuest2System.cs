@@ -11,7 +11,7 @@ namespace XRL.World.Quests
     {
         public override void Register(XRLGame Game, IEventRegistrar Registrar)
         {
-            Registrar.Register(AfterConversationEvent.ID);
+            Registrar.Register(SecretVisibilityChangedEvent.ID);
         }
 
         private int GetKnownGodClueCount()
@@ -22,7 +22,7 @@ namespace XRL.World.Quests
             );
         }
 
-        public override bool HandleEvent(AfterConversationEvent E)
+        private void CheckQuestProgress()
         {
             int godClueCount = GetKnownGodClueCount();
 
@@ -34,9 +34,18 @@ namespace XRL.World.Quests
             if (godClueCount > 1)
             {
                 The.Game.FinishQuestStep(Quest, "Investigate");
-            }
+            }  
+        }
 
+        public override bool HandleEvent(SecretVisibilityChangedEvent E)
+        {
+            CheckQuestProgress();
             return base.HandleEvent(E);
+        }
+
+        public override void Start()
+        {
+            CheckQuestProgress();
         }
     }
 }
