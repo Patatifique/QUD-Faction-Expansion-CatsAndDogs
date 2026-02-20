@@ -12,7 +12,6 @@ namespace XRL.World.Quests
         public override void Register(XRLGame Game, IEventRegistrar Registrar)
         {
             Registrar.Register(SecretVisibilityChangedEvent.ID);
-            Registrar.Register(EndTurnEvent.ID);
         }
 
         private int GetKnownShiksparNotes()
@@ -37,11 +36,10 @@ namespace XRL.World.Quests
             CheckQuestProgress();
             return base.HandleEvent(E);
         }
-
-        public override bool HandleEvent(EndTurnEvent E)
+        
+        public override void Start()
         {
             CheckQuestProgress();
-            return base.HandleEvent(E);
         }
     }
 }
