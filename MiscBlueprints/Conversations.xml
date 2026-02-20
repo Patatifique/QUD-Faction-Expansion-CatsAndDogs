@@ -73,8 +73,8 @@
 			<choice Target="Brief1" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">I was told to come see you about the current situation between Shik and Spar.</choice>
 			<choice Target="FounderInfo" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1" IfHaveVillageNote="(Brothers_ShiksparSecret1 OR Brothers_ShiksparSecret2 OR Brothers_ShiksparSecret3)">Warden, I have some information about the Founder.</choice>
 			<choice Target="FounderSecrets" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Clue">I have a first-hand account of Bubumube. What now?</choice>
-			<choice Target="CouncilNotHere" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="(Brothers_CatsDogs_MainQuest3~DogMayor AND Brothers_CatsDogs_MainQuest3~CatMayor)">I have delivered invites to both mayors -- they are on their way.</choice>
-			<choice Target="Council" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="(Brothers_CatsDogs_MainQuest3~DogMayor AND Brothers_CatsDogs_MainQuest3~CatMayor)">I have delivered invites to both mayors -- the Gathering can begin.</choice>
+			<choice Target="CouncilNotHere" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="(Brothers_CatsDogs_MainQuest3~DogMayor AND Brothers_CatsDogs_MainQuest3~CatMayor)" IfNotHaveState="(Brothers_CatsDogs_CatMayorMoved OR Brothers_CatsDogs_DogMayorMoved)">I have delivered invites to both mayors -- they are on their way.</choice>
+			<choice Target="Council" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="(Brothers_CatsDogs_MainQuest3~DogMayor AND Brothers_CatsDogs_MainQuest3~CatMayor)" IfHaveState="(Brothers_CatsDogs_CatMayorMoved AND Brothers_CatsDogs_DogMayorMoved)" IfZoneHaveObject="(Brothers_CatsDogs_DogMayor AND Brothers_CatsDogs_CatMayor)">I have delivered invites to both mayors -- the Gathering can begin.</choice>
 			<choice Target="QuestReminder" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">What do you want me to do, again?</choice>
 			<choice Target="AboutTown">What can you tell me about Shik and Spar?</choice>
 			<choice Target="Travelers">I was not even aware there was a village here. You must not get many travelers.</choice>	
@@ -269,7 +269,8 @@
 				
 				Thank you, =name=. I will take it from here. I wager negotiations will last for quite a few days still. Your participation was invaluable nonetheless -- with that added information, our good mayors will certainly find some common ground.
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3">Glad I could be of service, warden. I will leave you to it, then. Live and drink.</choice>
+			<choice Target="End" IfFinishedQuest="(Brothers_CatsDogs_CatLoverQuest OR Brothers_CatsDogs_DogLoverQuest)" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3" SetBooleanState="Brothers_CatsDogs_PerfectEnding,true">Glad I could be of service, warden. I will leave you to it, then. Live and drink.</choice>
+			<choice Target="End" IfNotFinishedQuest="(Brothers_CatsDogs_CatLoverQuest OR Brothers_CatsDogs_DogLoverQuest)" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3" SetBooleanState="Brothers_CatsDogs_NeutralEnding,true">Glad I could be of service, warden. I will leave you to it, then. Live and drink.</choice>
 		</node>
 
 		<node ID="BubumubeBear" AllowEscape="false">
@@ -278,7 +279,8 @@
 				
 				Thank you, =name=. I will take it from here -- I believe our good mayors will ultimately agree it matters little what Bubumube was, after all. Negotiations should last for a few days still, but I cannot state how essential your participation proved.
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3">Glad I could be of service, warden. I will leave you to it, then. Live and drink.</choice>
+			<choice Target="End" IfFinishedQuest="(Brothers_CatsDogs_CatLoverQuest OR Brothers_CatsDogs_DogLoverQuest)" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3" SetBooleanState="Brothers_CatsDogs_PerfectEnding,true">Glad I could be of service, warden. I will leave you to it, then. Live and drink.</choice>
+			<choice Target="End" IfNotFinishedQuest="(Brothers_CatsDogs_CatLoverQuest OR Brothers_CatsDogs_DogLoverQuest)" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3" SetBooleanState="Brothers_CatsDogs_NeutralEnding,true">Glad I could be of service, warden. I will leave you to it, then. Live and drink.</choice>
 		</node>
 
 		<node ID="BubumubeDog" AllowEscape="false">
@@ -287,7 +289,7 @@
 				
 				So Shik's account of history was right in the end. I thank you, =name=: I would not have been able to solve the matter on my own. I wager the village will take a few days to reorganize, as there is no doubt Spar's cats will have to find another place to live.
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3">A shame they cannot find any common ground. Still, glad I could be of service, warden. Live and drink.</choice>
+			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3" SetBooleanState="Brothers_CatsDogs_ShikEnding,true">A shame they cannot find any common ground. Still, glad I could be of service, warden. Live and drink.</choice>
 		</node>
 
 		<node ID="BubumubeCat" AllowEscape="false">
@@ -296,7 +298,7 @@
 				
 				So Spar's account of history was right in the end. I thank you, =name=: I would not have been able to solve the matter on my own. I wager the village will take a few days to reorganize, as there is no doubt Shik's dogs will have to find another place to live.
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3">A shame they cannot find any common ground. Still, glad I could be of service, warden. Live and drink.</choice>
+			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3" SetBooleanState="Brothers_CatsDogs_SparEnding,true">A shame they cannot find any common ground. Still, glad I could be of service, warden. Live and drink.</choice>
 		</node>
 
 		<node ID="QuestReminder" Inherits="Welcome">
