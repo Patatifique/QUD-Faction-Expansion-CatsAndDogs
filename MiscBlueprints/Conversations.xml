@@ -259,7 +259,7 @@
 				
 				HA! Decades of bickering, and for what? Pray tell, =name=, what kind of creature was Bubumube then?
 			</text>
-			<choice Target="Conclusion">Does it even matter? The people of Shik and Spar have been feuding on wrong grounds since the very beginning.</choice>
+			<choice Target="DontMatter">Does it even matter? The people of Shik and Spar have been feuding on wrong grounds since the very beginning.</choice>
 			<choice Target="BubumubeBear">Round ears, fixed claws, and a lonely fisherfolk? By all accounts, Bubumube was a bear. By the mayors' logic, Shik and Spar should both be deserted in favor of a ursine population.</choice>
 		</node>
 
