@@ -51,25 +51,41 @@ namespace XRL.World.ZoneParts
             // Neutral ending
             if(The.Game.GetBooleanGameState("Brothers_CatsDogs_NeutralEnding"))
             {
-                Popup.Show("Neutral Ending");
+                if(!The.Game.GetBooleanGameState("Brothers_CatsDogs_NeutralEnding_Occured"))
+                {
+                    The.Game.SetBooleanGameState("Brothers_CatsDogs_NeutralEnding_Occured", true);
+                    Popup.Show("Neutral Ending");
+                }
             }
             
             // Shik ending
             else if (The.Game.GetBooleanGameState("Brothers_CatsDogs_ShikEnding"))
             {
-                Popup.Show("Shik Ending");
+                if(!The.Game.GetBooleanGameState("Brothers_CatsDogs_ShikEnding_Occured"))
+                {
+                    The.Game.SetBooleanGameState("Brothers_CatsDogs_ShikEnding_Occured", true);
+                    Popup.Show("Shik Ending");
+                }
             }
             
             // Spar ending
             else if (The.Game.GetBooleanGameState("Brothers_CatsDogs_SparEnding"))
             {
-                Popup.Show("Spar Ending");
+                if(!The.Game.GetBooleanGameState("Brothers_CatsDogs_SparEnding_Occured"))
+                {
+                    The.Game.SetBooleanGameState("Brothers_CatsDogs_SparEnding_Occured", true);
+                    Popup.Show("Spar Ending");
+                }
             }
             
             // Perfect ending
             else if (The.Game.GetBooleanGameState("Brothers_CatsDogs_PerfectEnding"))
             {
-                Popup.Show("Perfect Ending");
+                if(!The.Game.GetBooleanGameState("Brothers_CatsDogs_PerfectEnding_Occured"))
+                {
+                    The.Game.SetBooleanGameState("Brothers_CatsDogs_PerfectEnding_Occured", true);
+                    Popup.Show("Perfect Ending");
+                }
             }
             
             // Debug
