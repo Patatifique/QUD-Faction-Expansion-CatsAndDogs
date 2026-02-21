@@ -48,7 +48,35 @@ namespace XRL.World.ZoneParts
 
         public void ApplyOutcome()
         {
-            Popup.Show("Time has passed and the quest outcome has been applied!");
+            // Neutral ending
+            if(The.Game.GetBooleanGameState("Brothers_CatsDogs_NeutralEnding"))
+            {
+                Popup.Show("Neutral Ending");
+            }
+            
+            // Shik ending
+            else if (The.Game.GetBooleanGameState("Brothers_CatsDogs_ShikEnding"))
+            {
+                Popup.Show("Shik Ending");
+            }
+            
+            // Spar ending
+            else if (The.Game.GetBooleanGameState("Brothers_CatsDogs_SparEnding"))
+            {
+                Popup.Show("Spar Ending");
+            }
+            
+            // Perfect ending
+            else if (The.Game.GetBooleanGameState("Brothers_CatsDogs_PerfectEnding"))
+            {
+                Popup.Show("Perfect Ending");
+            }
+            
+            // Debug
+            else
+            {
+                Popup.Show("No ending");
+            }
         }
     }
 }

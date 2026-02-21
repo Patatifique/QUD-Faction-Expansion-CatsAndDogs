@@ -114,7 +114,7 @@ namespace XRL.World.Quests
                 move.removeAfterFailsafe = true;
             }
 
-            // Endings
+            // Endings are handled in the outcome part
             foreach (var zone in Zones.Values)
             {
                 The.ZoneManager.GetZone(zone).AddPart(new Brothers_CatsDogs_MainQuestOutcome());
