@@ -21,28 +21,41 @@ namespace XRL.World.Parts
 
         // Optional failsafe timer to force arrival
         public long failSafeTicks = 0;
+        public bool removeAfterFailsafe = false;
         private long startTick;
         private bool failSafeTickStarted = false;
+        private bool failSafeTriggeredBuffer = false;
         private bool failsafeTriggered = false;
 
         public override bool WantEvent(int ID, int cascade)
         {
             return base.WantEvent(ID, cascade)
                 || ID == PooledEvent<AIBoredEvent>.ID
+                || ID == EndTurnEvent.ID
                 || ID == GetZoneSuspendabilityEvent.ID;
         }
 
+        // Only responsible for initiating global movement
         public override bool HandleEvent(AIBoredEvent E)
         {
-            // Attempt global movement toward the target
             if (!string.IsNullOrEmpty(TargetZone))
             {
                 ParentObject.SetIntProperty("AllowGlobalTraversal", 1);
                 ParentObject.Brain.MoveToGlobal(TargetZone, TargetX, TargetY);
             }
 
+            return false;
+        }
+
+
+        // Handles ticking, failsafe logic, and arrival detection
+        public override bool HandleEvent(EndTurnEvent E)
+        {
+            if (The.Game == null || string.IsNullOrEmpty(TargetZone))
+                return base.HandleEvent(E);
+
             // Start failsafe timer
-            if (The.Game != null && !failSafeTickStarted)
+            if (!failSafeTickStarted)
             {
                 startTick = The.Game.TimeTicks;
                 failSafeTickStarted = true;
@@ -50,24 +63,25 @@ namespace XRL.World.Parts
 
             // Force placement if movement takes too long
             if (failSafeTicks > 0
-                && The.Game.TimeTicks - this.startTick >= this.failSafeTicks
+                && The.Game.TimeTicks - startTick >= failSafeTicks
                 && !failsafeTriggered)
+            {
+                failSafeTriggeredBuffer = true;
+
+                Zone zone = The.ZoneManager.GetZone(TargetZone);
+
+                if (zone != null)
                 {
-                    failsafeTriggered = true;
-
-                    Zone zone = The.ZoneManager.GetZone(TargetZone);
-
-                    if (zone != null)
+                    var currentCell = ParentObject.Physics?.CurrentCell;
+                    if (currentCell != null)
                     {
-                        var currentCell = ParentObject.Physics?.CurrentCell;
-                        if (currentCell != null)
-                        {
-                            currentCell.RemoveObject(ParentObject);
-                        }
-
-                        zone.GetCell(TargetX, TargetY).AddObject(ParentObject);
+                        currentCell.RemoveObject(ParentObject);
                     }
+
+                    zone.GetCell(TargetX, TargetY)?.AddObject(ParentObject);
                 }
+            }
+
 
             var cell = ParentObject.Physics?.CurrentCell;
 
@@ -78,26 +92,35 @@ namespace XRL.World.Parts
                 && cell.X == TargetX
                 && cell.Y == TargetY)
             {
+                ParentObject.SetIntProperty("AllowGlobalTraversal", 0);
+
                 if (removeOnArrival)
                 {
-                    ParentObject.SetIntProperty("AllowGlobalTraversal", 0);
                     ParentObject.RemovePart(this);
                 }
 
-                // Optionally update a game state when arriving
+                if (removeAfterFailsafe && failsafeTriggered)
+                {
+                    ParentObject.RemovePart(this);
+                }
+
+                if (failSafeTriggeredBuffer)
+                {
+                    failsafeTriggered = true;
+                    failSafeTriggeredBuffer = false;
+                }
+
                 if (!string.IsNullOrEmpty(setStateOnArrival))
                 {
-                    if (The.Game.HasStringGameState(setStateOnArrival)
-                        && The.Game.GetStringGameState(setStateOnArrival) == stateValueOnArrival)
+                    if (!The.Game.HasStringGameState(setStateOnArrival) ||
+                        The.Game.GetStringGameState(setStateOnArrival) != stateValueOnArrival)
                     {
-                        return false;
+                        The.Game.SetStringGameState(setStateOnArrival, stateValueOnArrival);
                     }
-
-                    The.Game.SetStringGameState(setStateOnArrival, stateValueOnArrival);
                 }
             }
 
-            return false;
+            return base.HandleEvent(E);
         }
 
         public override bool HandleEvent(GetZoneSuspendabilityEvent E)

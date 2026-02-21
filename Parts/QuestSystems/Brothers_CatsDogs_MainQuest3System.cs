@@ -11,7 +11,6 @@ namespace XRL.World.Quests
     [Serializable]
     public class Brothers_CatsDogs_MainQuest3System : IQuestSystem
     {
-
         // Zones dictionary
         static Dictionary<string, string> Zones = new Dictionary<string, string>()
         {
@@ -28,6 +27,9 @@ namespace XRL.World.Quests
             { "SouthEast", "JoppaWorld.38.23.2.2.10" }
         };
 
+        // Prevent giving move part multiple times
+        private bool dogMayorMoveGiven = false;
+        private bool catMayorMoveGiven = false;
         
         public override void Register(XRLGame Game, IEventRegistrar Registrar)
         {
@@ -37,70 +39,86 @@ namespace XRL.World.Quests
         public override bool HandleEvent(AfterConversationEvent E)
         {
             // Move the dog mayor to the meeting
-            if (The.Game.HasFinishedQuestStep("Brothers_CatsDogs_MainQuest3", "DogMayor"))
+            if (!dogMayorMoveGiven && The.Game.HasFinishedQuestStep("Brothers_CatsDogs_MainQuest3", "DogMayor"))
             {
                 GameObject dogmayor = The.Player.Physics.CurrentCell.ParentZone.FindObject("Brothers_CatsDogs_DogMayor");
                 if (dogmayor != null)
                 {
-                    var move = dogmayor.AddPart<Brothers_GlobalMove>();
+                    Brothers_GlobalMove move;
+                    if (!dogmayor.TryGetPart<Brothers_GlobalMove>(out move))
+                    {
+                        move = dogmayor.AddPart<Brothers_GlobalMove>();
+                    }
+
                     move.TargetZone = Zones["North"];
                     move.TargetX = 33;
                     move.TargetY = 12;
-                    move.failSafeTicks = 150L; // Failsafe to prevent mayors from getting permanently stuck if something goes wrong with the move
+                    move.failSafeTicks = 150L;
                     move.setStateOnArrival = "Brothers_CatsDogs_DogMayorMoved";
+
+                    dogMayorMoveGiven = true;
                 }
             }
 
-             // Move the cat mayor to the meeting
-             if (The.Game.HasFinishedQuestStep("Brothers_CatsDogs_MainQuest3", "CatMayor"))
-             {
+            // Move the cat mayor to the meeting
+            if (!catMayorMoveGiven && The.Game.HasFinishedQuestStep("Brothers_CatsDogs_MainQuest3", "CatMayor"))
+            {
                 GameObject catmayor = The.Player.Physics.CurrentCell.ParentZone.FindObject("Brothers_CatsDogs_CatMayor");
                 if (catmayor != null)
                 {
-                    var move = catmayor.AddPart<Brothers_GlobalMove>();
+                    Brothers_GlobalMove move;
+                    if (!catmayor.TryGetPart<Brothers_GlobalMove>(out move))
+                    {
+                        move = catmayor.AddPart<Brothers_GlobalMove>();
+                    }
+
                     move.TargetZone = Zones["North"];
                     move.TargetX = 35;
                     move.TargetY = 12;
-                    move.failSafeTicks = 150L; // Failsafe to prevent mayors from getting permanently stuck if something goes wrong with the move
+                    move.failSafeTicks = 150L;
                     move.setStateOnArrival = "Brothers_CatsDogs_CatMayorMoved";
+
+                    catMayorMoveGiven = true;
                 }
-            }            
+            }
 
             return base.HandleEvent(E);
         }
 
         public override void Finish()
         {
-            // Liberate the mayors from the meeting
+            // bring the mayors back to their places
             GameObject dogmayor = The.Player.Physics.CurrentCell.ParentZone.FindObject("Brothers_CatsDogs_DogMayor");
             if (dogmayor != null)
             {
                 dogmayor.RemovePart<Brothers_GlobalMove>();
+
+                var move = dogmayor.AddPart<Brothers_GlobalMove>();
+                move.TargetZone = Zones["West"];
+                move.TargetX = 26;
+                move.TargetY = 18;
+                move.failSafeTicks = 150L;
+                move.removeAfterFailsafe = true;
             }
 
             GameObject catmayor = The.Player.Physics.CurrentCell.ParentZone.FindObject("Brothers_CatsDogs_CatMayor");
             if (catmayor != null)
             {
                 catmayor.RemovePart<Brothers_GlobalMove>();
+                
+                var move = catmayor.AddPart<Brothers_GlobalMove>();
+                move.TargetZone = Zones["East"];
+                move.TargetX = 39;
+                move.TargetY = 17;
+                move.failSafeTicks = 150L;
+                move.removeAfterFailsafe = true;
             }
-
 
             // Endings
-
-            // Every ending except neutral is handled in the outcome part, so we add the part to all zones     
-            if (!The.Game.GetBooleanGameState("Brothers_CatsDogs_NeutralEnding"))
+            foreach (var zone in Zones.Values)
             {
-                foreach (var zone in Zones.Values)
-                {
-                    The.ZoneManager.GetZone(zone).AddPart(new Brothers_CatsDogs_MainQuestOutcome());
-                }           
+                The.ZoneManager.GetZone(zone).AddPart(new Brothers_CatsDogs_MainQuestOutcome());
             }
-            else
-            {
-                // Fully skip the outcome if neutral ending, since it's all xml
-                Popup.Show("You have achieved the neutral ending.");
-            }
-
         }
     }
 }
