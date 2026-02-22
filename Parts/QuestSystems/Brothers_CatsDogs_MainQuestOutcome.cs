@@ -1,6 +1,7 @@
 using System;
 using XRL.World;
 using XRL.UI;
+using XRL.World.Parts;
 
 namespace XRL.World.ZoneParts
 {
@@ -46,6 +47,18 @@ namespace XRL.World.ZoneParts
                 this.startTick = The.Game.TimeTicks;
         }
 
+        public void DestroyPeopleFromFaction(string faction)
+        {
+            Zone activeZone = The.ZoneManager.ActiveZone;
+
+            foreach (GameObject gameObject in activeZone.GetObjects(
+                o => o.HasPart<Brain>() &&
+                o.GetPart<Brain>().GetPrimaryFaction() == faction
+            ))
+            {
+                gameObject.Destroy();
+            }
+        }
         public void ApplyOutcome()
         {
             // Neutral ending
@@ -66,6 +79,7 @@ namespace XRL.World.ZoneParts
                     The.Game.SetBooleanGameState("Brothers_CatsDogs_ShikEnding_Occured", true);
                     Popup.Show("Shik Ending");
                 }
+                this.DestroyPeopleFromFaction("Spar");
             }
             
             // Spar ending
@@ -76,6 +90,8 @@ namespace XRL.World.ZoneParts
                     The.Game.SetBooleanGameState("Brothers_CatsDogs_SparEnding_Occured", true);
                     Popup.Show("Spar Ending");
                 }
+                
+                this.DestroyPeopleFromFaction("Shik");
             }
             
             // Perfect ending
