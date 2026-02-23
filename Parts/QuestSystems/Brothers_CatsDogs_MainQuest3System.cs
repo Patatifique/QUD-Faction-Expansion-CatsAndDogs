@@ -114,11 +114,15 @@ namespace XRL.World.Quests
                 move.removeAfterFailsafe = true;
             }
 
-            // Endings are handled in the outcome part
+            // Endings are handled in the outcome part of each zone, and the timer is added to the player
             foreach (var zone in Zones.Values)
             {
                 The.ZoneManager.GetZone(zone).AddPart(new Brothers_CatsDogs_MainQuestOutcome());
             }
+            
+            var part = new Brothers_CatsDogs_EndingTimer();
+            part.startTurn = The.Game.Turns;
+            The.Player.AddPart(part);
         }
     }
 }

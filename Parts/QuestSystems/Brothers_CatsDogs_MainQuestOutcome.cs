@@ -28,43 +28,23 @@ namespace XRL.World.ZoneParts
             { "SouthEast", "JoppaWorld.38.23.2.2.10" }
         };
 
-        public long startTick;
-
-        public long ticksToApply = 50;
-
-        public bool outcomeApplied;
 
         public override bool SameAs(IZonePart p) => false;
 
         public override bool WantEvent(int ID, int cascade)
         {
             return base.WantEvent(ID, cascade)
-                || ID == ObjectCreatedEvent.ID
                 || ID == ZoneActivatedEvent.ID;
         }
 
-        public override bool HandleEvent(ObjectCreatedEvent E)
-        {
-            if (The.Game != null)
-                this.startTick = The.Game.TimeTicks;
-            return base.HandleEvent(E);
-        }
 
         public override bool HandleEvent(ZoneActivatedEvent E)
         {
-            if (!this.outcomeApplied && The.Game.TimeTicks - this.startTick >= this.ticksToApply)
-            {
-                this.outcomeApplied = true;               
+            if (The.Game.GetBooleanGameState("Brothers_CatsDogs_AnyEnding_Occured"))
+            {       
                 this.ApplyOutcome();
             }
             return base.HandleEvent(E);
-        }
-
-        public override void AddedAfterCreation()
-        {
-            base.AddedAfterCreation();
-            if (The.Game != null)
-                this.startTick = The.Game.TimeTicks;
         }
 
         public void DestroyPeopleFromFaction(string faction)
@@ -111,6 +91,9 @@ public void DestroyWalls()
         o.HasTag("Brothers_CatsDogs_DestroyedOnEnding") ||
         o.HasTag("Brothers_CatsDogs_RubbleOnEnding")))
     {
+        if (gameObject.HasPart<Brain>())
+            continue;
+            
         if (gameObject.HasTag("Brothers_CatsDogs_DestroyedOnEnding"))
         {
             gameObject.Obliterate();
@@ -151,8 +134,6 @@ public void DestroyWalls()
 
         public void ApplyOutcome()
         {
-
-            The.Game.SetBooleanGameState("Brothers_CatsDogs_AnyEnding_Occured", true);
 
             // Neutral ending
             if(The.Game.GetBooleanGameState("Brothers_CatsDogs_NeutralEnding"))
