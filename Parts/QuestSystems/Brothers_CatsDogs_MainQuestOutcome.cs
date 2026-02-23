@@ -111,8 +111,6 @@ public void DestroyWalls()
         o.HasTag("Brothers_CatsDogs_DestroyedOnEnding") ||
         o.HasTag("Brothers_CatsDogs_RubbleOnEnding")))
     {
-        if (gameObject.HasPart<Brain>())
-            continue;
         if (gameObject.HasTag("Brothers_CatsDogs_DestroyedOnEnding"))
         {
             gameObject.Obliterate();
@@ -174,9 +172,9 @@ public void DestroyWalls()
                 if(!The.Game.GetBooleanGameState("Brothers_CatsDogs_ShikEnding_Occured"))
                 {
                     The.Game.SetBooleanGameState("Brothers_CatsDogs_ShikEnding_Occured", true);
-                    Popup.Show("Shik Ending");
                 }
                 
+                Popup.Show("Shik Ending");
                 // Remove Spar people
                 this.DestroyPeopleFromFaction("Spar");
                 
