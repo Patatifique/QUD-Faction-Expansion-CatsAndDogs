@@ -103,6 +103,52 @@ namespace XRL.World.ZoneParts
             }
         }
 
+public void DestroyWalls()
+{
+    Zone activeZone = The.ZoneManager.ActiveZone;
+
+    foreach (GameObject gameObject in activeZone.GetObjects(o =>
+        o.HasTag("Brothers_CatsDogs_DestroyedOnEnding") ||
+        o.HasTag("Brothers_CatsDogs_RubbleOnEnding")))
+    {
+        if (gameObject.HasTag("Brothers_CatsDogs_DestroyedOnEnding"))
+        {
+            gameObject.Obliterate();
+        }
+        else if (gameObject.HasTag("Brothers_CatsDogs_RubbleOnEnding"))
+        {
+            var cell = gameObject.Physics?.CurrentCell;
+            if (cell != null)
+            {
+                cell.RemoveObject(gameObject);
+
+                // Roll For Random Rubble
+                string rubbleToAdd = null; 
+                int roll = Stat.Random(1, 11);
+
+                switch (roll)
+                {
+                    case 1:
+                        rubbleToAdd = "Rubble";
+                        break;
+                    case 2:
+                        rubbleToAdd = "LargeBoulder";
+                        break;
+                    case 3:
+                        rubbleToAdd = "MediumBoulder";
+                        break;
+                    case 4:
+                        rubbleToAdd = "SmallBoulder";
+                        break;
+                }
+
+                if (!string.IsNullOrEmpty(rubbleToAdd))
+                    cell.AddObject(rubbleToAdd);
+            }
+        }
+    }
+}
+
         public void ApplyOutcome()
         {
             // Neutral ending
@@ -142,6 +188,9 @@ namespace XRL.World.ZoneParts
 
                 // Replace Monument
                 this.ReplaceObject("Brothers_CatsDogs_SparMonument", "Brothers_CatsDogs_SparMonumentRuined");
+
+                // Destroy Walls
+                this.DestroyWalls();
             }
             
             // Spar ending
@@ -166,8 +215,9 @@ namespace XRL.World.ZoneParts
 
                 // Replace Monument
                 this.ReplaceObject("Brothers_CatsDogs_ShikMonument", "Brothers_CatsDogs_ShikMonumentRuined");
-                
 
+                // Destroy Walls
+                this.DestroyWalls();               
             }
             
             // Perfect ending
