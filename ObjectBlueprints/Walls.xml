@@ -37,4 +37,24 @@
 		<tag Name="DeathSounds" Value="Sounds/Damage/sfx_destroy_manufacturedWood" />
 	</object>
 
+	<object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding" Inherits="BrickWall">
+		<tag Name="Brothers_CatsDogs_RubbleOnEnding" />	
+	</object>
+
+	<object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding" Inherits="Brothers_CatsDogs_StarAppleWall">
+		<tag Name="Brothers_CatsDogs_DestroyedOnEnding" />
+	</object>
+
+	<object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding" Inherits="PigskinWall">
+		<tag Name="Brothers_CatsDogs_DestroyedOnEnding" />
+	</object>
+	
+	<object Name="Brothers_CatsDogs_BrinestalkFenceDestroyedOnEnding" Inherits="BrinestalkFence">
+		<tag Name="Brothers_CatsDogs_DestroyedOnEnding" />
+	</object>
+
+	<object Name="Brothers_CatsDogs_WornWoodWallDestroyedOnEnding" Inherits="WornWoodWall">
+		<tag Name="Brothers_CatsDogs_DestroyedOnEnding" />
+	</object>
+
 </objects>

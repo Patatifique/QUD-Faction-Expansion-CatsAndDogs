@@ -21,6 +21,13 @@
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 	
+	<object Name="Brothers_CatsDogs_ShikMonumentRuined" Inherits="Village Monument Diptych">
+		<part Name="Render" DisplayName="{{K|desecrated}} diptych" Tile="Terrain/catsdogs/tile_ruinedmonument.png" ColorString="&amp;r" DetailColor="K" />
+		<part Name="Description" Short="Unwelcome narrative was chiseled out storied duality." />
+		<part Name="RulesDescription" Text="Desecrated: This object has been desecrated by vandals." />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	</object>	
+	
 	<object Name="Brothers_CatsDogs_SparMonument" Inherits="Village Monument Diptych">
 		<part Name="Render" ColorString="&amp;y" DetailColor="w" />
 		<part Name="RulesDescription" Text="This object is a monument to a scene from the history of {{M|Spar}}.&#10;&#10;In 859, the Founder disappeared from Shikspar, never to be seen again. Come Harvest Dawn, a single feline babe was found swaddled in their bed and, from this day forth, the village was known as Spar.&#10;" />
@@ -28,6 +35,13 @@
 		<part Name="Interesting" />
 	    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
+	
+	<object Name="Brothers_CatsDogs_SparMonumentRuined" Inherits="Village Monument Diptych">
+		<part Name="Render" DisplayName="{{K|desecrated}} diptych" Tile="Terrain/catsdogs/tile_ruinedmonument.png" ColorString="&amp;K" DetailColor="r" />
+		<part Name="Description" Short="Unwelcome narrative was chiseled out storied duality." />
+		<part Name="RulesDescription" Text="Desecrated: This object has been desecrated by vandals." />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	</object>	
 
 	<object Name="Brothers_CatsDogs_BigTomb" Inherits="MountedFurniture">
 		<part Name="Render" DisplayName="large tombstone" RenderString="239" ColorString="&amp;y" DetailColor="K" Occluding="true" Tile="Terrain/catsdogs/tile_bigtomb.png" />
@@ -100,5 +114,14 @@
 		<tag Name="NoSparkingQuest" />
 		<tag Name="ExcludeFromDynamicEncounters" />
 	</object>
+	
+	<object Name="Brothers_CatsDogs_TorchpostDestroyedOnEnding" Inherits="Torchpost">
+		<tag Name="Brothers_CatsDogs_DestroyedOnEnding" />
+	</object>
+
+	<object Name="Brothers_CatsDogs_UnlitTorchpostDestroyedOnEnding" Inherits="Unlit Torchpost">
+		<tag Name="Brothers_CatsDogs_DestroyedOnEnding" />
+	</object>
+		
 	
 </objects>
