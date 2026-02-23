@@ -51,8 +51,8 @@ namespace XRL.World.Quests
                     }
 
                     move.TargetZone = Zones["North"];
-                    move.TargetX = 33;
-                    move.TargetY = 12;
+                    move.TargetX = 32;
+                    move.TargetY = 13;
                     move.failSafeTicks = 150L;
                     move.setStateOnArrival = "Brothers_CatsDogs_DogMayorMoved";
 
@@ -73,8 +73,8 @@ namespace XRL.World.Quests
                     }
 
                     move.TargetZone = Zones["North"];
-                    move.TargetX = 35;
-                    move.TargetY = 12;
+                    move.TargetX = 36;
+                    move.TargetY = 13;
                     move.failSafeTicks = 150L;
                     move.setStateOnArrival = "Brothers_CatsDogs_CatMayorMoved";
 
