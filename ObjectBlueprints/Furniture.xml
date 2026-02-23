@@ -101,4 +101,11 @@
 		<tag Name="ExcludeFromDynamicEncounters" />
 	</object>
 	
+	<object Name="Brothers_CatsDogs_TorchpostDestroyedOnEnding" Inherits="Torchpost">
+	</object>
+
+	<object Name="Brothers_CatsDogs_UnlitTorchpostDestroyedOnEnding" Inherits="Unlit Torchpost">
+	</object>
+		
+	
 </objects>

@@ -53,19 +53,19 @@
     <object Name="DirtPath"></object>
   </cell>
   <cell X="43" Y="0">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
   </cell>
   <cell X="44" Y="0">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
   </cell>
   <cell X="45" Y="0">
-    <object Name="BrickWall"></object>
+    <object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding"></object>
   </cell>
   <cell X="46" Y="0">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="47" Y="0">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="48" Y="0">
     <object Name="DirtPath"></object>
@@ -184,23 +184,23 @@
     <object Name="DirtPath"></object>
   </cell>
   <cell X="44" Y="1">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
   </cell>
   <cell X="45" Y="1">
-    <object Name="BrickWall"></object>
+    <object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding"></object>
   </cell>
   <cell X="46" Y="1">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="47" Y="1">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="48" Y="1">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="49" Y="1">
-    <object Name="Torchpost"></object>
+    <object Name="Brothers_CatsDogs_TorchpostDestroyedOnEnding"></object>
   </cell>
   <cell X="50" Y="1"></cell>
   <cell X="51" Y="1"></cell>
@@ -302,28 +302,28 @@
   <cell X="39" Y="2"></cell>
   <cell X="40" Y="2"></cell>
   <cell X="41" Y="2">
-    <object Name="Torchpost"></object>
+    <object Name="Brothers_CatsDogs_TorchpostDestroyedOnEnding"></object>
   </cell>
   <cell X="42" Y="2">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="43" Y="2">
-    <object Name="BrinestalkFence"></object>
     <object Name="DirtPath"></object>
+    <object Name="Brothers_CatsDogs_BrinestalkFenceDestroyedOnEnding"></object>
   </cell>
   <cell X="44" Y="2">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
   </cell>
   <cell X="45" Y="2">
-    <object Name="BrickWall"></object>
+    <object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="46" Y="2">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="47" Y="2">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="48" Y="2">
     <object Name="DirtPath"></object>
@@ -422,16 +422,16 @@
     <object Name="DirtPath"></object>
   </cell>
   <cell X="44" Y="3">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
   </cell>
   <cell X="45" Y="3">
-    <object Name="BrickWall"></object>
+    <object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding"></object>
   </cell>
   <cell X="46" Y="3">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="47" Y="3">
-    <object Name="BrinestalkFence"></object>
+    <object Name="Brothers_CatsDogs_BrinestalkFenceDestroyedOnEnding"></object>
   </cell>
   <cell X="48" Y="3">
     <object Name="DirtPath"></object>
@@ -515,21 +515,21 @@
   <cell X="41" Y="4"></cell>
   <cell X="42" Y="4"></cell>
   <cell X="43" Y="4">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="44" Y="4">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
   </cell>
   <cell X="45" Y="4">
-    <object Name="BrickWall"></object>
+    <object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="46" Y="4">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="47" Y="4">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="48" Y="4">
@@ -612,27 +612,27 @@
     <object Name="DirtPath"></object>
   </cell>
   <cell X="43" Y="5">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="44" Y="5">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
   </cell>
   <cell X="45" Y="5">
-    <object Name="BrickWall"></object>
+    <object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding"></object>
   </cell>
   <cell X="46" Y="5">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="47" Y="5">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="48" Y="5">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="49" Y="5">
-    <object Name="Torchpost"></object>
+    <object Name="Brothers_CatsDogs_TorchpostDestroyedOnEnding"></object>
   </cell>
   <cell X="50" Y="5"></cell>
   <cell X="51" Y="5"></cell>
@@ -713,17 +713,17 @@
   </cell>
   <cell X="43" Y="6"></cell>
   <cell X="44" Y="6">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
   </cell>
   <cell X="45" Y="6">
-    <object Name="BrickWall"></object>
+    <object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="46" Y="6">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="47" Y="6">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="48" Y="6">
@@ -804,27 +804,27 @@
   <cell X="39" Y="7"></cell>
   <cell X="40" Y="7"></cell>
   <cell X="41" Y="7">
-    <object Name="Torchpost"></object>
+    <object Name="Brothers_CatsDogs_TorchpostDestroyedOnEnding"></object>
   </cell>
   <cell X="42" Y="7">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="43" Y="7">
-    <object Name="BrinestalkFence"></object>
     <object Name="DirtPath"></object>
+    <object Name="Brothers_CatsDogs_BrinestalkFenceDestroyedOnEnding"></object>
   </cell>
   <cell X="44" Y="7">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
   </cell>
   <cell X="45" Y="7">
-    <object Name="BrickWall"></object>
+    <object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding"></object>
   </cell>
   <cell X="46" Y="7">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="47" Y="7">
-    <object Name="BrinestalkFence"></object>
+    <object Name="Brothers_CatsDogs_BrinestalkFenceDestroyedOnEnding"></object>
   </cell>
   <cell X="48" Y="7">
     <object Name="DirtPath"></object>
@@ -907,16 +907,16 @@
     <object Name="DirtPath"></object>
   </cell>
   <cell X="44" Y="8">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
   </cell>
   <cell X="45" Y="8">
-    <object Name="BrickWall"></object>
+    <object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding"></object>
   </cell>
   <cell X="46" Y="8">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="47" Y="8">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="48" Y="8">
@@ -1001,28 +1001,28 @@
     <object Name="DirtPath"></object>
   </cell>
   <cell X="43" Y="9">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="44" Y="9">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="45" Y="9">
-    <object Name="BrickWall"></object>
+    <object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding"></object>
   </cell>
   <cell X="46" Y="9">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="47" Y="9">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="48" Y="9">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="49" Y="9">
-    <object Name="Torchpost"></object>
+    <object Name="Brothers_CatsDogs_TorchpostDestroyedOnEnding"></object>
   </cell>
   <cell X="50" Y="9"></cell>
   <cell X="51" Y="9"></cell>
@@ -1110,21 +1110,21 @@
     <object Name="DirtPath"></object>
   </cell>
   <cell X="43" Y="10">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="44" Y="10">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="45" Y="10">
-    <object Name="BrickWall"></object>
+    <object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding"></object>
   </cell>
   <cell X="46" Y="10">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="47" Y="10">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="48" Y="10">
@@ -1238,19 +1238,19 @@
     <object Name="DirtPath"></object>
   </cell>
   <cell X="44" Y="11">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="45" Y="11">
-    <object Name="BrickWall"></object>
+    <object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding"></object>
   </cell>
   <cell X="46" Y="11">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="47" Y="11">
-    <object Name="BrinestalkFence"></object>
     <object Name="DirtPath"></object>
+    <object Name="Brothers_CatsDogs_BrinestalkFenceDestroyedOnEnding"></object>
   </cell>
   <cell X="48" Y="11">
     <object Name="DirtPath"></object>
@@ -1371,31 +1371,31 @@
   <cell X="39" Y="12"></cell>
   <cell X="40" Y="12"></cell>
   <cell X="41" Y="12">
-    <object Name="Torchpost"></object>
+    <object Name="Brothers_CatsDogs_TorchpostDestroyedOnEnding"></object>
   </cell>
   <cell X="42" Y="12">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="43" Y="12">
-    <object Name="BrinestalkFence"></object>
     <object Name="DirtPath"></object>
+    <object Name="Brothers_CatsDogs_BrinestalkFenceDestroyedOnEnding"></object>
   </cell>
   <cell X="44" Y="12">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
   </cell>
   <cell X="45" Y="12">
-    <object Name="BrickWall"></object>
-    <object Name="BrickWall"></object>
-    <object Name="BrickWall"></object>
+    <object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding"></object>
+    <object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding"></object>
+    <object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding"></object>
     <object Name="Vase"></object>
   </cell>
   <cell X="46" Y="12">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="47" Y="12">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="48" Y="12"></cell>
   <cell X="49" Y="12"></cell>
@@ -1529,23 +1529,23 @@
   </cell>
   <cell X="43" Y="13"></cell>
   <cell X="44" Y="13">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
   </cell>
   <cell X="45" Y="13">
-    <object Name="BrickWall"></object>
+    <object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding"></object>
   </cell>
   <cell X="46" Y="13">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="47" Y="13">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="48" Y="13">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="49" Y="13">
-    <object Name="Torchpost"></object>
+    <object Name="Brothers_CatsDogs_TorchpostDestroyedOnEnding"></object>
   </cell>
   <cell X="50" Y="13"></cell>
   <cell X="51" Y="13"></cell>
@@ -1676,20 +1676,20 @@
     <object Name="DirtPath"></object>
   </cell>
   <cell X="43" Y="14">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="44" Y="14">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
   </cell>
   <cell X="45" Y="14">
-    <object Name="BrickWall"></object>
+    <object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding"></object>
   </cell>
   <cell X="46" Y="14">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="47" Y="14">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="48" Y="14">
     <object Name="DirtPath"></object>
@@ -1831,21 +1831,21 @@
   <cell X="41" Y="15"></cell>
   <cell X="42" Y="15"></cell>
   <cell X="43" Y="15">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="44" Y="15">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
   </cell>
   <cell X="45" Y="15">
-    <object Name="BrickWall"></object>
+    <object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding"></object>
   </cell>
   <cell X="46" Y="15">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="47" Y="15">
-    <object Name="BrinestalkFence"></object>
     <object Name="DirtPath"></object>
+    <object Name="Brothers_CatsDogs_BrinestalkFenceDestroyedOnEnding"></object>
   </cell>
   <cell X="48" Y="15">
     <object Name="DirtPath"></object>
@@ -1978,16 +1978,16 @@
     <object Name="DirtPath"></object>
   </cell>
   <cell X="44" Y="16">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
   </cell>
   <cell X="45" Y="16">
-    <object Name="BrickWall"></object>
+    <object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding"></object>
   </cell>
   <cell X="46" Y="16">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="47" Y="16">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="48" Y="16"></cell>
@@ -2114,34 +2114,34 @@
   <cell X="39" Y="17"></cell>
   <cell X="40" Y="17"></cell>
   <cell X="41" Y="17">
-    <object Name="Torchpost"></object>
+    <object Name="Brothers_CatsDogs_TorchpostDestroyedOnEnding"></object>
   </cell>
   <cell X="42" Y="17">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="43" Y="17">
-    <object Name="BrinestalkFence"></object>
     <object Name="DirtPath"></object>
+    <object Name="Brothers_CatsDogs_BrinestalkFenceDestroyedOnEnding"></object>
   </cell>
   <cell X="44" Y="17">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
   </cell>
   <cell X="45" Y="17">
-    <object Name="BrickWall"></object>
+    <object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding"></object>
   </cell>
   <cell X="46" Y="17">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="47" Y="17">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="48" Y="17">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="49" Y="17">
-    <object Name="Unlit Torchpost"></object>
+    <object Name="Brothers_CatsDogs_UnlitTorchpostDestroyedOnEnding"></object>
   </cell>
   <cell X="50" Y="17"></cell>
   <cell X="51" Y="17"></cell>
@@ -2248,17 +2248,17 @@
     <object Name="DirtPath"></object>
   </cell>
   <cell X="44" Y="18">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="45" Y="18">
-    <object Name="BrickWall"></object>
+    <object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding"></object>
   </cell>
   <cell X="46" Y="18">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="47" Y="18">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="48" Y="18">
@@ -2370,22 +2370,21 @@
   <cell X="41" Y="19"></cell>
   <cell X="42" Y="19"></cell>
   <cell X="43" Y="19">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="44" Y="19">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
   </cell>
   <cell X="45" Y="19">
-    <object Name="BrickWall"></object>
+    <object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding"></object>
   </cell>
   <cell X="46" Y="19">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="47" Y="19">
     <object Name="DirtPath"></object>
-    <object Name="Rubble"></object>
   </cell>
   <cell X="48" Y="19">
     <object Name="DirtPath"></object>
@@ -2490,12 +2489,12 @@
   <cell X="41" Y="20"></cell>
   <cell X="42" Y="20"></cell>
   <cell X="43" Y="20">
-    <object Name="Brothers_CatsDogs_StarAppleWall"></object>
+    <object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="44" Y="20">
-    <object Name="WornWoodWall"></object>
     <object Name="DirtPath"></object>
+    <object Name="Brothers_CatsDogs_WornWoodWallDestroyedOnEnding"></object>
   </cell>
   <cell X="45" Y="20">
     <object Name="DirtPath"></object>
@@ -2503,7 +2502,7 @@
   </cell>
   <cell X="46" Y="20">
     <object Name="DirtPath"></object>
-    <object Name="Rubble"></object>
+    <object Name="SmallBoulder"></object>
   </cell>
   <cell X="47" Y="20">
     <object Name="DirtPath"></object>
@@ -2615,23 +2614,22 @@
     <object Name="DirtPath"></object>
   </cell>
   <cell X="43" Y="21">
-    <object Name="SmallBoulder"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="44" Y="21">
-    <object Name="WornWoodWall"></object>
     <object Name="DirtPath"></object>
+    <object Name="Brothers_CatsDogs_WornWoodWallDestroyedOnEnding"></object>
   </cell>
   <cell X="45" Y="21">
-    <object Name="BrickWall"></object>
+    <object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="46" Y="21">
     <object Name="DirtPath"></object>
-    <object Name="Rubble"></object>
+    <object Name="MediumBoulder"></object>
   </cell>
   <cell X="47" Y="21">
-    <object Name="PigskinWall"></object>
+    <object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding"></object>
   </cell>
   <cell X="48" Y="21"></cell>
   <cell X="49" Y="21"></cell>
@@ -2713,30 +2711,31 @@
     <object Name="DirtPath"></object>
   </cell>
   <cell X="41" Y="22">
-    <object Name="Unlit Torchpost"></object>
     <object Name="DirtPath"></object>
+    <object Name="Brothers_CatsDogs_UnlitTorchpostDestroyedOnEnding"></object>
   </cell>
   <cell X="42" Y="22">
-    <object Name="WornWoodWall"></object>
     <object Name="DirtPath"></object>
+    <object Name="Brothers_CatsDogs_WornWoodWallDestroyedOnEnding"></object>
   </cell>
   <cell X="43" Y="22">
-    <object Name="MediumBoulder"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="44" Y="22">
     <object Name="DirtPath"></object>
+    <object Name="SmallBoulder"></object>
   </cell>
   <cell X="45" Y="22">
-    <object Name="LargeBoulder"></object>
     <object Name="DirtPath"></object>
+    <object Name="LargeBoulder"></object>
   </cell>
   <cell X="46" Y="22">
     <object Name="DirtPath"></object>
-    <object Name="Rubble"></object>
+    <object Name="DirtPath"></object>
+    <object Name="DirtPath"></object>
+    <object Name="SmallBoulder"></object>
   </cell>
   <cell X="47" Y="22">
-    <object Name="SmallBoulder"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="48" Y="22">
@@ -2822,8 +2821,8 @@
     <object Name="DirtPath"></object>
   </cell>
   <cell X="44" Y="23">
-    <object Name="WornWoodWall"></object>
     <object Name="DirtPath"></object>
+    <object Name="Brothers_CatsDogs_WornWoodWallDestroyedOnEnding"></object>
   </cell>
   <cell X="45" Y="23">
     <object Name="MediumBoulder"></object>
@@ -2922,7 +2921,9 @@
   <cell X="45" Y="24">
     <object Name="DirtPath"></object>
   </cell>
-  <cell X="46" Y="24"></cell>
+  <cell X="46" Y="24">
+    <object Name="SmallBoulder"></object>
+  </cell>
   <cell X="47" Y="24"></cell>
   <cell X="48" Y="24"></cell>
   <cell X="49" Y="24"></cell>
