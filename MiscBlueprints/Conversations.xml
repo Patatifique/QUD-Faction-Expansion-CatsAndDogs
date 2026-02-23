@@ -345,6 +345,24 @@
 
 
 	<conversation ID="Brothers_CatsDogs_DogMayor">
+
+		<start ID="WelcomeTransit" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest3~DogMayor" IfNotHaveState="Brothers_CatsDogs_DogMayorMoved">
+			<text>
+				Nae time to talk now, I will see ye at the Gathering.
+			</text>
+			<choice ID="Trade" Load="Remove" />
+			<choice ID="WaterRitualChoice" Load="Remove" />
+		</start>
+		
+		<start ID="WelcomeGathering" IfHaveState="Brothers_CatsDogs_DogMayorMoved" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest3~DogMayor">
+			<text>
+				{{emote|*=pronouns.Subjective= =verb:paw:afterpronoun= the ground impatiently.*}}
+				
+				That devious lass willnae ken what hit her.
+			</text>
+			<choice ID="Trade" Load="Remove" />
+			<choice ID="WaterRitualChoice" Load="Remove" />
+		</start>		
 		
 		<start ID="Welcome" Inherits="DefaultChoices">
 			<text Priority="-1">
@@ -496,7 +514,25 @@
 
 
 	<conversation ID="Brothers_CatsDogs_CatMayor">
+	
+		<start ID="WelcomeTransit" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest3~CatMayor" IfNotHaveState="Brothers_CatsDogs_CatMayorMoved">
+			<text>
+				Lead the way, visitor. The Gathering draws near.
+			</text>
+			<choice ID="Trade" Load="Remove" />
+			<choice ID="WaterRitualChoice" Load="Remove" />
+		</start>
 		
+		<start ID="WelcomeGathering" IfHaveState="Brothers_CatsDogs_CatMayorMoved" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest3~CatMayor">
+			<text>
+				{{emote|*=pronouns.Subjective= =verb:lick:afterpronoun= the back of =pronouns.possessive= paw, calculating.*}}
+				
+				Let us put an end to that feud once and for all, shall we?
+			</text>
+			<choice ID="Trade" Load="Remove" />
+			<choice ID="WaterRitualChoice" Load="Remove" />
+		</start>
+	
 		<start ID="Welcome" Inherits="DefaultChoices">
 			<text Priority="-1">
 				{{emote|*=pronouns.Subjective= calmly =verb:lick:afterpronoun= the back of =pronouns.possessive= paw.*}}
