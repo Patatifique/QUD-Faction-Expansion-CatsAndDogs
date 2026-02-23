@@ -111,6 +111,8 @@ public void DestroyWalls()
         o.HasTag("Brothers_CatsDogs_DestroyedOnEnding") ||
         o.HasTag("Brothers_CatsDogs_RubbleOnEnding")))
     {
+        if (gameObject.HasPart<Brain>())
+            continue;
         if (gameObject.HasTag("Brothers_CatsDogs_DestroyedOnEnding"))
         {
             gameObject.Obliterate();
