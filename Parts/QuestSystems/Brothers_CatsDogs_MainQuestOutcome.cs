@@ -151,6 +151,9 @@ public void DestroyWalls()
 
         public void ApplyOutcome()
         {
+
+            The.Game.SetBooleanGameState("Brothers_CatsDogs_AnyEnding_Occured", true);
+
             // Neutral ending
             if(The.Game.GetBooleanGameState("Brothers_CatsDogs_NeutralEnding"))
             {
@@ -228,6 +231,9 @@ public void DestroyWalls()
                     The.Game.SetBooleanGameState("Brothers_CatsDogs_PerfectEnding_Occured", true);
                     Popup.Show("Perfect Ending");
                 }
+
+                // Destroy Walls
+                this.DestroyWalls();
             }
             
             // Debug
