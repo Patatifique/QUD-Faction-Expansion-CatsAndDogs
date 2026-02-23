@@ -76,7 +76,7 @@ namespace XRL.World.ZoneParts
                 o.GetPart<Brain>().GetPrimaryFaction() == faction
             ))
             {
-                gameObject.Destroy();
+                gameObject.Obliterate();
             }
         }
 
@@ -87,6 +87,22 @@ namespace XRL.World.ZoneParts
                 for (int index = Stat.Random(min, max); num1 < index; ++num1)
                     ((IEnumerable<Cell>) activeZone.GetEmptyCellsShuffled()).First<Cell>().AddObject(blueprint);
         }
+
+        public void ReplaceObject(string oldObjectBlueprint, string newObjectBlueprint)
+        {
+            Zone activeZone = The.ZoneManager.ActiveZone;
+
+            foreach (GameObject gameObject in activeZone.GetObjects(o => o.Blueprint == oldObjectBlueprint))
+            {
+                var cell = gameObject.Physics?.CurrentCell;
+                if (cell != null)
+                {
+                    cell.RemoveObject(gameObject);
+                    cell.AddObject(newObjectBlueprint);
+                }
+            }
+        }
+
         public void ApplyOutcome()
         {
             // Neutral ending
@@ -99,7 +115,9 @@ namespace XRL.World.ZoneParts
                 }
             }
             
+
             // Shik ending
+
             else if (The.Game.GetBooleanGameState("Brothers_CatsDogs_ShikEnding"))
             {
                 if(!The.Game.GetBooleanGameState("Brothers_CatsDogs_ShikEnding_Occured"))
@@ -108,8 +126,10 @@ namespace XRL.World.ZoneParts
                     Popup.Show("Shik Ending");
                 }
                 
+                // Remove Spar people
                 this.DestroyPeopleFromFaction("Spar");
                 
+                // Populating Shik people in the east zones
                 Zone activeZone = The.ZoneManager.ActiveZone;
                 if (
                     activeZone == The.ZoneManager.GetZone(Zones["East"]) || 
@@ -119,6 +139,9 @@ namespace XRL.World.ZoneParts
                 {
                     this.PopulateRandomly(3, 5, "Brothers_CatsDogs_ShikCitizen");
                 }
+
+                // Replace Monument
+                this.ReplaceObject("Brothers_CatsDogs_SparMonument", "Brothers_CatsDogs_SparMonumentRuined");
             }
             
             // Spar ending
@@ -140,6 +163,11 @@ namespace XRL.World.ZoneParts
                 {
                     this.PopulateRandomly(3, 5, "Brothers_CatsDogs_SparCitizen");
                 }
+
+                // Replace Monument
+                this.ReplaceObject("Brothers_CatsDogs_ShikMonument", "Brothers_CatsDogs_ShikMonumentRuined");
+                
+
             }
             
             // Perfect ending
