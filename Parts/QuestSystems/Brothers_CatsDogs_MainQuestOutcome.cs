@@ -2,12 +2,32 @@ using System;
 using XRL.World;
 using XRL.UI;
 using XRL.World.Parts;
+using System.Collections.Generic;
+using System.Linq;
+using XRL.Rules;
 
 namespace XRL.World.ZoneParts
 {
     [Serializable]
     public class Brothers_CatsDogs_MainQuestOutcome : IZonePart
     {
+
+                // Zones dictionary
+        static Dictionary<string, string> Zones = new Dictionary<string, string>()
+        {
+            { "NorthWest", "JoppaWorld.38.23.0.0.10" },
+            { "West", "JoppaWorld.38.23.0.1.10" },
+            { "SouthWest", "JoppaWorld.38.23.0.2.10" },
+
+            { "North", "JoppaWorld.38.23.1.0.10" },
+            { "Center", "JoppaWorld.38.23.1.1.10" },
+            { "South", "JoppaWorld.38.23.1.2.10" },
+
+            { "NorthEast", "JoppaWorld.38.23.2.0.10" },
+            { "East", "JoppaWorld.38.23.2.1.10" },
+            { "SouthEast", "JoppaWorld.38.23.2.2.10" }
+        };
+
         public long startTick;
 
         public long ticksToApply = 50;
@@ -59,6 +79,14 @@ namespace XRL.World.ZoneParts
                 gameObject.Destroy();
             }
         }
+
+        public void PopulateRandomly(int min, int max, string blueprint)
+        {
+                Zone activeZone = The.ZoneManager.ActiveZone;
+                int num1 = 0;
+                for (int index = Stat.Random(min, max); num1 < index; ++num1)
+                    ((IEnumerable<Cell>) activeZone.GetEmptyCellsShuffled()).First<Cell>().AddObject(blueprint);
+        }
         public void ApplyOutcome()
         {
             // Neutral ending
@@ -79,7 +107,18 @@ namespace XRL.World.ZoneParts
                     The.Game.SetBooleanGameState("Brothers_CatsDogs_ShikEnding_Occured", true);
                     Popup.Show("Shik Ending");
                 }
+                
                 this.DestroyPeopleFromFaction("Spar");
+                
+                Zone activeZone = The.ZoneManager.ActiveZone;
+                if (
+                    activeZone == The.ZoneManager.GetZone(Zones["East"]) || 
+                    activeZone == The.ZoneManager.GetZone(Zones["NorthEast"]) ||
+                    activeZone == The.ZoneManager.GetZone(Zones["SouthEast"])
+                )
+                {
+                    this.PopulateRandomly(3, 5, "Brothers_CatsDogs_ShikCitizen");
+                }
             }
             
             // Spar ending
@@ -92,6 +131,15 @@ namespace XRL.World.ZoneParts
                 }
                 
                 this.DestroyPeopleFromFaction("Shik");
+                Zone activeZone = The.ZoneManager.ActiveZone;
+                if (
+                    activeZone == The.ZoneManager.GetZone(Zones["West"]) || 
+                    activeZone == The.ZoneManager.GetZone(Zones["NorthWest"]) ||
+                    activeZone == The.ZoneManager.GetZone(Zones["SouthWest"])
+                )
+                {
+                    this.PopulateRandomly(3, 5, "Brothers_CatsDogs_SparCitizen");
+                }
             }
             
             // Perfect ending
