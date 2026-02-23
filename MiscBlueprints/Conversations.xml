@@ -62,11 +62,16 @@
 
 				The Gathering of Shikspar draws near... I will stand ready for anything.
 			</text>			
-			<text IfFinishedQuest="Brothers_CatsDogs_MainQuest3" Priority="-1">		
+			<text IfHaveQuest="Brothers_CatsDogs_MainQuestEpilogue" IfNotHaveState="Brothers_CatsDogs_AnyEnding_Occured" Priority="-1">		
+				{{emote|*Branches sway above you.*}}
+				
+				It will take a while for things to settle down here, =name=. Let the Beetle Moon set a few times, and return then.
+			</text>		
+			<text IfHaveState="Brothers_CatsDogs_AnyEnding_Occured" Priority="-1">		
 				{{emote|*Branches stand tall as the watch continues.*}}
 				
 				Quite the unexpected outcome for Shik and Spar, in the end. Nonetheless, you have my thanks, =name=: I am quite certain blood would have been drawn if not for you.
-			</text>			
+			</text>					
 		</start>
 
 		<node ID="DefaultChoices">
@@ -76,6 +81,8 @@
 			<choice Target="CouncilNotHere" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="(Brothers_CatsDogs_MainQuest3~DogMayor AND Brothers_CatsDogs_MainQuest3~CatMayor)" IfNotHaveState="(Brothers_CatsDogs_CatMayorMoved OR Brothers_CatsDogs_DogMayorMoved)">I have delivered invites to both mayors -- they are on their way.</choice>
 			<choice Target="Council" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="(Brothers_CatsDogs_MainQuest3~DogMayor AND Brothers_CatsDogs_MainQuest3~CatMayor)" IfHaveState="(Brothers_CatsDogs_CatMayorMoved AND Brothers_CatsDogs_DogMayorMoved)" IfZoneHaveObject="(Brothers_CatsDogs_DogMayor AND Brothers_CatsDogs_CatMayor)">I have delivered invites to both mayors -- the Gathering can begin.</choice>
 			<choice Target="QuestReminder" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">What do you want me to do, again?</choice>
+			<choice Target="Epilogue" IfHaveActiveQuest="Brothers_CatsDogs_MainQuestEpilogue" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">It has been quite a while, now. How have things changed around here?</choice>			
+			<choice Target="WhatNow" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">What do you make of Shik and Spar's fate, in the end?</choice>			
 			<choice Target="AboutTown">What can you tell me about Shik and Spar?</choice>
 			<choice Target="Travelers">I was not even aware there was a village here. You must not get many travelers.</choice>	
 			<choice Target="TreeWarden">I was not expecting a tree for a warden.</choice>	
@@ -269,8 +276,14 @@
 				
 				Thank you, =name=. I will take it from here. I wager negotiations will last for quite a few days still. Your participation was invaluable nonetheless -- with that added information, our good mayors will certainly find some common ground.
 			</text>
-			<choice Target="End" IfFinishedQuest="(Brothers_CatsDogs_CatLoverQuest OR Brothers_CatsDogs_DogLoverQuest)" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3" SetBooleanState="Brothers_CatsDogs_PerfectEnding,true" StartQuest="Brothers_CatsDogs_MainQuestEpilogue">Glad I could be of service, warden. I will leave you to it, then. Live and drink.</choice>
-			<choice Target="End" IfNotFinishedQuest="(Brothers_CatsDogs_CatLoverQuest OR Brothers_CatsDogs_DogLoverQuest)" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3" SetBooleanState="Brothers_CatsDogs_NeutralEnding,true" StartQuest="Brothers_CatsDogs_MainQuestEpilogue">Glad I could be of service, warden. I will leave you to it, then. Live and drink.</choice>
+			<choice Target="End" IfFinishedQuest="(Brothers_CatsDogs_CatLoverQuest OR Brothers_CatsDogs_DogLoverQuest)" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3" SetBooleanState="Brothers_CatsDogs_PerfectEnding,true" StartQuest="Brothers_CatsDogs_MainQuestEpilogue">
+				<text>Glad I could be of service, warden. I will leave you to it, then. Live and drink.</text>
+				<part Name="Brothers_ModifyReputation" Faction="Shik" Value="200" Faction2="Spar" Value2="200" Shown="False" />
+			</choice>
+			<choice Target="End" IfNotFinishedQuest="(Brothers_CatsDogs_CatLoverQuest AND Brothers_CatsDogs_DogLoverQuest)" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3" SetBooleanState="Brothers_CatsDogs_NeutralEnding,true" StartQuest="Brothers_CatsDogs_MainQuestEpilogue">
+				<text>Glad I could be of service, warden. I will leave you to it, then. Live and drink.</text>
+				<part Name="Brothers_ModifyReputation" Faction="Shik" Value="100" Faction2="Spar" Value2="100" Shown="False" />				
+			</choice>
 		</node>
 
 		<node ID="BubumubeBear" AllowEscape="false">
@@ -279,8 +292,14 @@
 				
 				Thank you, =name=. I will take it from here -- I believe our good mayors will ultimately agree it matters little what Bubumube was, after all. Negotiations should last for a few days still, but I cannot state how essential your participation proved.
 			</text>
-			<choice Target="End" IfFinishedQuest="(Brothers_CatsDogs_CatLoverQuest OR Brothers_CatsDogs_DogLoverQuest)" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3" SetBooleanState="Brothers_CatsDogs_PerfectEnding,true" StartQuest="Brothers_CatsDogs_MainQuestEpilogue">Glad I could be of service, warden. I will leave you to it, then. Live and drink.</choice>
-			<choice Target="End" IfNotFinishedQuest="(Brothers_CatsDogs_CatLoverQuest OR Brothers_CatsDogs_DogLoverQuest)" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3" SetBooleanState="Brothers_CatsDogs_NeutralEnding,true" StartQuest="Brothers_CatsDogs_MainQuestEpilogue">Glad I could be of service, warden. I will leave you to it, then. Live and drink.</choice>
+			<choice Target="End" IfFinishedQuest="(Brothers_CatsDogs_CatLoverQuest OR Brothers_CatsDogs_DogLoverQuest)" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3" SetBooleanState="Brothers_CatsDogs_PerfectEnding,true" StartQuest="Brothers_CatsDogs_MainQuestEpilogue">
+				<text>Glad I could be of service, warden. I will leave you to it, then. Live and drink.</text>
+				<part Name="Brothers_ModifyReputation" Faction="Shik" Value="200" Faction2="Spar" Value2="200" Shown="False" />
+			</choice>
+			<choice Target="End" IfNotFinishedQuest="(Brothers_CatsDogs_CatLoverQuest AND Brothers_CatsDogs_DogLoverQuest)" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3" SetBooleanState="Brothers_CatsDogs_NeutralEnding,true" StartQuest="Brothers_CatsDogs_MainQuestEpilogue">
+				<text>Glad I could be of service, warden. I will leave you to it, then. Live and drink.</text>
+				<part Name="Brothers_ModifyReputation" Faction="Shik" Value="100" Faction2="Spar" Value2="100" Shown="False" />				
+			</choice>
 		</node>
 
 		<node ID="BubumubeDog" AllowEscape="false">
@@ -289,7 +308,10 @@
 				
 				So Shik's account of history was right in the end. I thank you, =name=: I would not have been able to solve the matter on my own. I wager the village will take a few days to reorganize, as there is no doubt Spar's cats will have to find another place to live.
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3" SetBooleanState="Brothers_CatsDogs_ShikEnding,true" StartQuest="Brothers_CatsDogs_MainQuestEpilogue">A shame they cannot find any common ground. Still, glad I could be of service, warden. Live and drink.</choice>
+			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3" SetBooleanState="Brothers_CatsDogs_ShikEnding,true" StartQuest="Brothers_CatsDogs_MainQuestEpilogue">
+				<text>A shame they cannot find any common ground. Still, glad I could be of service, warden. Live and drink.</text>
+				<part Name="Brothers_ModifyReputation" Faction="Shik" Value="200" Faction2="Spar" Value2="-200" Shown="False" />				
+			</choice>
 		</node>
 
 		<node ID="BubumubeCat" AllowEscape="false">
@@ -298,7 +320,10 @@
 				
 				So Spar's account of history was right in the end. I thank you, =name=: I would not have been able to solve the matter on my own. I wager the village will take a few days to reorganize, as there is no doubt Shik's dogs will have to find another place to live.
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3" SetBooleanState="Brothers_CatsDogs_SparEnding,true" StartQuest="Brothers_CatsDogs_MainQuestEpilogue">A shame they cannot find any common ground. Still, glad I could be of service, warden. Live and drink.</choice>
+			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3" SetBooleanState="Brothers_CatsDogs_SparEnding,true" StartQuest="Brothers_CatsDogs_MainQuestEpilogue">
+				<text>A shame they cannot find any common ground. Still, glad I could be of service, warden. Live and drink.</text>
+				<part Name="Brothers_ModifyReputation" Faction="Spar" Value="200" Faction2="Shik" Value2="-200" Shown="False" />				
+			</choice>
 		</node>
 
 		<node ID="QuestReminder" Inherits="Welcome">
@@ -315,10 +340,41 @@
 				There must be some clues in Shik and Spar as to who exactly the Founder was. Perhaps this will be enough to bridge the gap between the villages.
 			</text>			
 		</node>	
+
+
+		<node ID="Epilogue" Inherits="Welcome">
+			<text>		
+				There is too much for me to say, =name=. You should confer with a mayor over that, as I can only observe that much from here.
+			</text>			
+		</node>	
+
+		<node ID="WhatNow" Inherits="Welcome">
+			<text IfHaveState="Brothers_CatsDogs_NeutralEnding">
+				{{emote|*The rustling of leaves gives way to an answer.*}}
+
+				Not much has changed, has it =name=? At the very least the mayors have stopped restlessly petitioning me. A step in the right direction, I wager.
+			</text>
+			<text IfHaveState="Brothers_CatsDogs_PerfectEnding">
+				{{emote|*The rustling of leaves gives way to an answer.*}}
+
+				The villages could not have asked for a better mediator than you, =name=. I have heard talks of reverting to its old name -- Shikspar. I shall let you know how it goes.
+			</text>
+			<text IfHaveState="Brothers_CatsDogs_ShikEnding">
+				{{emote|*The rustling of leaves gives way to an answer.*}}
+
+				I would not have expected the lady mayor to leave with her people -- if anything, she followed her own logic to the end.
+			</text>
+			<text IfHaveState="Brothers_CatsDogs_SparEnding">
+				{{emote|*The rustling of leaves gives way to an answer.*}}
+
+				To think the mayor would take his people along and leave Shik -- the downfall of a bruised ego.
+			</text>
+		</node>			
+
 		
 		<node ID="AboutTown" Inherits="Welcome">
 			<text>
-				About as much as I can observe from here: the voices of my kin offering up starapples for harvest in Shik, and the splashing of swine-mud in Spar. Good folks on both sides of the wall.
+				About as much as I can hear from here: the voices of my kin offering up starapples for harvest in Shik, and the splashing of swine-mud in Spar.
 			</text>
 		</node>	
 		
@@ -345,6 +401,17 @@
 
 
 	<conversation ID="Brothers_CatsDogs_DogMayor">
+
+		<start ID="BadWelcome" IfHaveState="Brothers_CatsDogs_SparEnding">
+			<text>			
+				{{emote|*=pronouns.Subjective= =verb:look:afterpronoun= utterly distraught.*}}
+
+				To have done this all for naught... We cannae stay here. Ye leave us know, traveler. There is much packing to be done.
+			</text>
+			<choice ID="Trade" Load="Remove" />
+			<choice ID="WaterRitualChoice" Load="Remove" />
+			<choice Target="End">I will let you prepare then. Live and drink, mayor.</choice>
+		</start>
 
 		<start ID="WelcomeTransit" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest3~DogMayor" IfNotHaveState="Brothers_CatsDogs_DogMayorMoved">
 			<text>
@@ -516,6 +583,17 @@
 
 
 	<conversation ID="Brothers_CatsDogs_CatMayor">
+
+		<start ID="BadWelcome" IfHaveState="Brothers_CatsDogs_ShikEnding">
+			<text>			
+				{{emote|*=pronouns.Subjective= =verb:gazes:afterpronoun= at the horizon, lost in thought.*}}
+
+				All a lie in the end... An elaborate ruse passed down through generations. We cannot stay. Leave us now, visitor. When you return, we will be gone.
+			</text>
+			<choice ID="Trade" Load="Remove" />
+			<choice ID="WaterRitualChoice" Load="Remove" />
+			<choice Target="End">I will let you prepare then. Live and drink, mayor.</choice>
+		</start>
 	
 		<start ID="WelcomeTransit" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest3~CatMayor" IfNotHaveState="Brothers_CatsDogs_CatMayorMoved">
 			<text>
@@ -687,6 +765,22 @@
 	
 
 	<conversation ID="Brothers_CatsDogs_DogLover">
+
+		<start ID="BadWelcome" IfHaveState="(Brothers_CatsDogs_ShikEnding OR Brothers_CatsDogs_SparEnding)">
+			<text IfHaveQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">
+				{{emote|*=pronouns.Subjective= nearly =verb:jump:afterpronoun= at you.*}}
+				
+				Ye knew about me love, and still ye ran yer bloody mouth! Now we will be parted forever... Away with ye!
+			</text>
+			<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)">
+				{{emote|*=pronouns.Possessive= ears stay down.*}}
+
+				Ye cannae do anything for me, stranger. Please leave me be.
+			</text>
+			<choice ID="Trade" Load="Remove" />
+			<choice ID="WaterRitualChoice" Load="Remove" />
+			<choice Target="End">I will leave you, then. Live and drink, I guess.</choice>
+		</start>
 		
 		<start ID="Welcome" Inherits="DefaultChoices">
 			<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" Priority="-1">
@@ -724,7 +818,7 @@
 
 		<node ID="DefaultChoices">
 			<choice Target="Brief" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_CatLoverSeen">As a matter of fact, I have seen a cat called Rrromaw. Why do you want to know?</choice>
-			<choice Target="Gifts" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Gifts" IfHaveLiquid="wine">I have everything you asked for.</choice>
+			<choice Target="Gifts" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Gifts" IfHaveLiquid="wine" IfHaveItemDescendsFrom="Polished Gemstone">I have everything you asked for.</choice>
 			<choice Target="Date" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfHaveItem="Brothers_CatsDogs_LoveNote">I come bearing a message: you have got yourself a proper date.</choice>
 			<choice Target="Debrief" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Invite">Great news: I have delivered your invitation to Rrromaw, and it has been accepted!</choice>			
 			<choice Target="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is going on with the other village?</choice>
@@ -873,6 +967,22 @@
 	
 	
 	<conversation ID="Brothers_CatsDogs_CatLover">
+
+		<start ID="BadWelcome" IfHaveState="(Brothers_CatsDogs_ShikEnding OR Brothers_CatsDogs_SparEnding)">
+			<text IfHaveQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">
+				{{emote|*=pronouns.Subjective= =verb:shake:afterpronoun= with rage.*}}
+				
+				To think you just had to stay silent, I could have had a chance to be with the love of my life... Begone now, before my patience runs even thinner.
+			</text>
+			<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)">
+				{{emote|*=pronouns.Possessive= tail slumps on the ground.*}}
+
+				Please leave me be. There is nothing you can do to help me.
+			</text>
+			<choice ID="Trade" Load="Remove" />
+			<choice ID="WaterRitualChoice" Load="Remove" />
+			<choice Target="End">I will take my leave. Live and drink, I suppose.</choice>
+		</start>
 		
 		<start ID="Welcome" Inherits="DefaultChoices">
 			<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" Priority="-1">		
@@ -909,7 +1019,7 @@
 
 		<node ID="DefaultChoices">
 			<choice Target="Brief" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_DogLoverSeen">As a matter of fact I have seen a dog called Oof Growf, yes. Why do you want to know?.</choice>
-			<choice Target="Gifts" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts" IfHaveLiquid="wine">I have the wine you asked for.</choice>
+			<choice Target="Gifts" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts" IfHaveLiquid="wine" IfHaveItemDescendsFrom="Polished Gemstone">I have the wine and gem you asked for.</choice>
 			<choice Target="Date" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfHaveItem="Brothers_CatsDogs_LoveNote">I come bearing a message: you have got yourself a proper date.</choice>
 			<choice Target="Debrief" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Invite">Great news: I have delivered your invitation to Oof Growf, and it has been accepted!</choice>			
 			<choice Target="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is going between Shik and Sp...</choice>
@@ -1243,7 +1353,21 @@
 			<choice ID="Trade" Load="Remove" />
 			<choice Target="End">{{emote|*back away slowly*}}</choice>
 		</start>
-	
+
+		<start ID="BadWelcome" IfHaveState="Brothers_CatsDogs_SparEnding" IfSpeakerNotEvolutiveTileMoreOrEqual="3">
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2" Priority="-1">			
+				{{emote|*The first two heads stay silent.*}}
+
+				{{K|Mayor! Leave!}}
+			</text>
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2" Priority="-1">
+				{{Y|The mayor told us we will need to leave -- we have nothing more to tell you.}}
+			</text>
+			<choice ID="Trade" Load="Remove" />
+			<choice ID="WaterRitualChoice" Load="Remove" />
+			<choice Target="End">I get it, and am sorry. Live and drink, all of you.</choice>
+		</start>	
+		
 		<start ID="Welcome" IfSpeakerNotEvolutiveTileMoreOrEqual="3" Inherits="DefaultChoices">
 			<text IfSpeakerEvolutiveTileMoreOrEqual="2" Priority="-1">			
 				{{emote|*The first head turns towards you, and greets you apathetically.*}}
@@ -1274,6 +1398,7 @@
 			<choice Target="TarBones" IfHaveActiveQuest="Brothers_CatsDogs_ChefQuest" IfHaveItem="TarBones">I have found the bones you were looking for.</choice>
 			<choice Target="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is happening with the other village?</choice>
 			<choice Target="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What are your stances on the division between Shik and Spar?</choice>
+			<choice Target="WhatNow" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">What do you make of all that happened here?</choice>	
 			<choice Target="TwoHeads">I was not expecting that amount of heads.</choice>
 			<choice Target="About">What do you do in Shik?</choice>
 			<choice Target="End">Live and drink, all of you.</choice>
@@ -1490,6 +1615,43 @@
 			</text>	
 		</node>
 
+		<node ID="WhatNow" Inherits="Welcome">
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_NeutralEnding">			
+				{{K|All for nothing!}}
+
+				{{emote|*The two larger heads stare at each other but neither speak up.*}}
+			</text>
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_NeutralEnding">
+				{{emote|*Both heads look rather disgruntled.*}}
+
+				It all seemed like quite a hubbub for both mayors to realize they were wrong.
+
+				{{Y|I would not be as dour as Growarow, =player.formalAddressTerm=. Things will improve with time, we are sure of it!}}
+			</text>	
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_PerfectEnding">			
+				{{K|Happy! Friends!}}
+
+				{{emote|*The two heads nuzzle each other.*}}
+			</text>
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_PerfectEnding">		
+				What we think? Spar's tinker is already planning to enhance our oven, can you picture it?
+				
+				{{Y|We gathered it was your doing, =player.formalAddressTerm=. You have done much for our communities!}}
+				
+				{{cloudy|You have the Growarows' gratitude!}}
+			</text>	
+			<text IfSpeakerEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_ShikEnding">			
+				{{K|Gone! Sad!}}
+
+				{{emote|*The two other heads stay judgmentally silent.*}}
+			</text>
+			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_ShikEnding">
+				Did the cats of Spar really have to leave? This is quite a waste. How will they even survive in Qud?
+				
+				{{Y|This could be the end of us too. Will travelers still stop by half a community, =player.formalAddressTerm=?.}}
+			</text>	
+		</node>	
+		
 		<node ID="TwoHeads" Inherits="Welcome">
 			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
 				Neither were we. Please ignore our new partner...
@@ -1589,7 +1751,18 @@
 
 
 	<conversation ID="Brothers_CatsDogs_CatTinker">
-		
+	
+		<start ID="BadWelcome" IfHaveState="Brothers_CatsDogs_ShikEnding">
+			<text>
+				{{emote|*Imimiw =verb:turn= =pronouns.possessive= head away from you.*}}
+
+				You, =player.apparentSpecies= -- the lady mayor has informed me we need to leave. I do not have time to talk to you.
+			</text>
+			<choice ID="Trade" Load="Remove" />
+			<choice ID="WaterRitualChoice" Load="Remove" />
+			<choice Target="End">Fair enough. Live and drink, feline tinker.</choice>
+		</start>
+	
 		<start ID="Welcome" Inherits="DefaultChoices">
 			<text IfFinishedQuest="Brothers_CatsDogs_CheeseQuest" Priority="-1">
 				{{emote|*Imimiw =verb:keep= working without paying much attention to you.*}}
@@ -1614,6 +1787,7 @@
 			<choice Target="Reward" IfHaveActiveQuest="Brothers_CatsDogs_CheeseQuest" IfFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">I have handled the matter of the vermin in the ripening caves. They will not trouble the village anymore.</choice>
 			<choice Target="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the matter with village behind the wall?</choice>
 			<choice Target="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What do you think of the division between Shik and Spar?</choice>
+			<choice Target="WhatNow" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">What is your opinion on how things changed for Shik and Spar?</choice>	
 			<choice Target="Zanya">You do know someone set up camp in front of your workshop, right?</choice>
 			<choice Target="About">What do you do here in Spar?</choice>
 			<choice Target="End">Live and drink, feline tinker.</choice>
@@ -1761,6 +1935,24 @@
 			</text>
 		</node>	
 
+		<node ID="WhatNow" Inherits="Welcome">
+			<text IfHaveState="Brothers_CatsDogs_NeutralEnding">
+				{{emote|*=pronouns.Subjective= =verb:whip:afterpronoun= =pronouns.possessive= tail, annoyed.*}}
+
+				Did things really change, =player.apparentSpecies=? It is more of the same, as far as I am concerned. At the very least the mayors have stopped bickering.
+			</text>
+			<text IfHaveState="Brothers_CatsDogs_PerfectEnding">
+				{{emote|*=pronouns.Possessive= ears perk up.*}}
+
+				Must you ask? We have a proper trader now, and a chef! Our cheese pairs with starapple jam just as well as a photonic oscillator does with a phasic capacitor! Can you even picture that, =player.apparentSpecies=?
+			</text>
+			<text IfHaveState="Brothers_CatsDogs_SparEnding">
+				{{emote|*=pronouns.Subjective= =verb:concentrate:afterpronoun= on =pronouns.possessive= work.*}}
+
+				Nothing but silence beyond the wall now, =player.apparentSpecies=. How long before traders skip this half-abandoned place, you think?
+			</text>
+		</node>		
+
 		<node ID="Zanya" Inherits="Welcome">
 			<text>
 				Obviously, yes. They help me from time to time -- as it happens, bipedality proves unexpectedly useful in a cat.
@@ -1798,7 +1990,18 @@
 
 	
 	<conversation ID="Brothers_CatsDogs_CatsuitGuy">
-			
+
+		<start ID="BadWelcome" IfHaveState="Brothers_CatsDogs_ShikEnding">
+			<text>			
+				{{emote|*=pronouns.Subjective= =verb:look= disheartened.*}}
+				
+				Have you hear the news? Lady mayor says we need to leave Spar, that it was ne'er our 'ome to begin with... You don't 'ave anything to do 'ith it, do you?
+			</text>
+			<choice ID="Trade" Load="Remove" />
+			<choice ID="WaterRitualChoice" Load="Remove" />
+			<choice Target="End">For what it is worth, I am sorry. Live and drink.</choice>
+		</start>
+		
 		<start ID="Welcome" Inherits="DefaultChoices">
 			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered" Priority="-1">
 				{{emote|*Zanya =verb:beam= at you.*}}
@@ -1814,6 +2017,7 @@
 			<choice Target="Work" IfNotHaveQuest="Brothers_CatsDogs_CheeseQuest">Is there work that needs doing?</choice>
 			<choice Target="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the matter with the other village?</choice>
 			<choice Target="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What do you think of the current Shik and Spar situation?</choice>
+			<choice Target="WhatNow" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">What do you make of everything that happened here?</choice>	
 			<choice Target="DefinitelyACat" IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">Huh... I "meow" right back at you, fellow cat.</choice>
 			<choice Target="About">What is there to know about Spar?</choice>
 			<choice Target="End">I must go -- live and drink.</choice>
@@ -1877,6 +2081,20 @@
 			</text>	
 		</node>	
 	
+		<node ID="WhatNow" Inherits="Welcome">
+			<text IfHaveState="Brothers_CatsDogs_NeutralEnding">
+				I'm glad things 'ill calm down a bit now. In meow opinion, this whole affair was complete overreaction from the mayors to begin 'ith!
+			</text>
+			<text IfHaveState="Brothers_CatsDogs_PerfectEnding">
+				Oh, I know for sure 'ho is to thank for it all! I heard you solved the entire issue on your own... I could never have done so meowself, that's for sure.
+			</text>
+			<text IfHaveState="Brothers_CatsDogs_SparEnding">
+				I don't make anything of it, not at all! This place is for cats, just like meow, see? Do you see my ears? I belong here!
+				
+				{{emote|*=pronouns.Subjective= =verb:stay:afterpronoun= vigilant, on the lookout for any danger that could come =pronouns.possessive= way.*}}
+			</text>
+		</node>
+		
 		<node ID="DefinitelyACat">
 			<text>
 				{{emote|*Hope and appreciation light up =pronouns.possessive= face.*}}
