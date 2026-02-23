@@ -102,9 +102,11 @@
 	</object>
 	
 	<object Name="Brothers_CatsDogs_TorchpostDestroyedOnEnding" Inherits="Torchpost">
+		<tag Name="Brothers_CatsDogs_DestroyedOnEnding" />
 	</object>
 
 	<object Name="Brothers_CatsDogs_UnlitTorchpostDestroyedOnEnding" Inherits="Unlit Torchpost">
+		<tag Name="Brothers_CatsDogs_DestroyedOnEnding" />
 	</object>
 		
 	
