@@ -69,6 +69,13 @@
 	</quest>
 
 
+	<quest ID="Brothers_CatsDogs_MainQuestEpilogue" Name="Return to Shik or Spar" Level="25">
+		<step ID="Return" Name="Check Back on the Village" XP="500">
+			<text>After a week has passed, return to check on the village.</text>
+		</step>		
+	</quest>
+	
+
 	<quest ID="Brothers_CatsDogs_DogLoverQuest" Name="Swear by the Beetle Moon" Level="25" 
 	   Accomplishment="You reunited two lovers against all odds."
 	   Hagiograph="Love prospers! In the month of =month= of =year=, adventurous =name= eloped from Shikspar with Oof Growf and Rrromaw."
