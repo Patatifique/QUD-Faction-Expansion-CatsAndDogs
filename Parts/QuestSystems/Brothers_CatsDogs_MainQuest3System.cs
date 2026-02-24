@@ -97,7 +97,7 @@ namespace XRL.World.Quests
                 move.TargetZone = Zones["West"];
                 move.TargetX = 26;
                 move.TargetY = 18;
-                move.failSafeTicks = 150L;
+                move.failSafeTicks = 400L;
                 move.removeAfterFailsafe = true;
             }
 
@@ -110,7 +110,7 @@ namespace XRL.World.Quests
                 move.TargetZone = Zones["East"];
                 move.TargetX = 39;
                 move.TargetY = 17;
-                move.failSafeTicks = 150L;
+                move.failSafeTicks = 400L;
                 move.removeAfterFailsafe = true;
             }
 
