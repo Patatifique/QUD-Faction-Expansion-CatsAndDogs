@@ -140,6 +140,35 @@ namespace XRL.World.ZoneParts
 
         public void ApplyOutcome()
         {
+            // Ultimate Mayor failsafe, bringing them back to their place if they somehow didn't come back from the meeting
+            foreach (var zoneID in Zones.Values)
+            {
+                var zone = The.ZoneManager.GetZone(zoneID);
+                The.ZoneManager.SetCachedZone(zone); // Caching will also be usefull later when grabbing the lovers
+                {
+                    var dogMayor = zone.FindObject("Brothers_CatsDogs_DogMayor");
+                    if (dogMayor != null)
+                    {
+                        var move = dogMayor.AddPart<Brothers_GlobalMove>();
+                        move.TargetZone = Zones["West"];
+                        move.TargetX = 26;
+                        move.TargetY = 18;
+                        move.failSafeTicks = 1L;
+                        move.removeAfterFailsafe = true;
+                    }
+
+                    var catMayor = zone.FindObject("Brothers_CatsDogs_CatMayor");
+                    if (catMayor != null)
+                    {
+                        var move = catMayor.AddPart<Brothers_GlobalMove>();
+                        move.TargetZone = Zones["East"];
+                        move.TargetX = 39;
+                        move.TargetY = 17;
+                        move.failSafeTicks = 1L;
+                        move.removeAfterFailsafe = true;
+                    }
+                }
+            }
             /////////////////////////////////////////
             // Neutral ending ///////////////////////
             /////////////////////////////////////////
@@ -178,7 +207,6 @@ namespace XRL.World.ZoneParts
                 
                 // Move Dog Lover
                 var loverZone = The.ZoneManager.GetZone(Zones["West"]);
-                The.ZoneManager.SetCachedZone(loverZone);
                 var lover = loverZone.FindObject("Brothers_CatsDogs_DogLover");
                 if (lover != null)
                 {
@@ -247,7 +275,6 @@ namespace XRL.World.ZoneParts
 
                 // Move Cat Lover
                 var loverZone = The.ZoneManager.GetZone(Zones["East"]);
-                The.ZoneManager.SetCachedZone(loverZone);
                 var lover = loverZone.FindObject("Brothers_CatsDogs_CatLover");
                 if (lover != null)
                 {
@@ -316,7 +343,6 @@ namespace XRL.World.ZoneParts
 
                 // Dog Lover
                 var westZone = The.ZoneManager.GetZone(Zones["West"]);
-                The.ZoneManager.SetCachedZone(westZone);
                 var dogLover = westZone.FindObject("Brothers_CatsDogs_DogLover");
                 if (dogLover != null)
                 {
@@ -329,7 +355,6 @@ namespace XRL.World.ZoneParts
 
                 // Cat Lover
                 var eastZone = The.ZoneManager.GetZone(Zones["East"]);
-                The.ZoneManager.SetCachedZone(eastZone);
                 var catLover = eastZone.FindObject("Brothers_CatsDogs_CatLover");
                 if (catLover != null)
                 {
