@@ -140,8 +140,9 @@ namespace XRL.World.ZoneParts
 
         public void ApplyOutcome()
         {
-
-            // Neutral ending
+            /////////////////////////////////////////
+            // Neutral ending ///////////////////////
+            /////////////////////////////////////////
 
             if(The.Game.GetBooleanGameState("Brothers_CatsDogs_NeutralEnding"))
             {
@@ -152,8 +153,9 @@ namespace XRL.World.ZoneParts
                 }
             }
             
-
-            // Shik ending
+            /////////////////////////////////////////
+            // Shik ending //////////////////////////
+            /////////////////////////////////////////
 
             else if (The.Game.GetBooleanGameState("Brothers_CatsDogs_ShikEnding"))
             {
@@ -222,8 +224,10 @@ namespace XRL.World.ZoneParts
                 // Destroy Walls
                 this.DestroyWalls();
             }
-            
-            // Spar ending
+
+            /////////////////////////////////////////
+            // Spar ending //////////////////////////
+            /////////////////////////////////////////
 
             else if (The.Game.GetBooleanGameState("Brothers_CatsDogs_SparEnding"))
             {
@@ -288,8 +292,10 @@ namespace XRL.World.ZoneParts
                 this.DestroyWalls();               
             }
             
-            // Perfect ending
-
+            /////////////////////////////////////////
+            // Perfect ending////////////////////////
+            /////////////////////////////////////////
+            
             else if (The.Game.GetBooleanGameState("Brothers_CatsDogs_PerfectEnding"))
             {
                 if(!The.Game.GetBooleanGameState("Brothers_CatsDogs_PerfectEnding_Occured"))
@@ -304,7 +310,89 @@ namespace XRL.World.ZoneParts
                         "A newfound sense of kinship tears down misbegotten feuds and reunites a mending fraternity.");
                 }
 
-                // Destroy Walls
+                //
+                // Move BOTH lovers to Center
+                //
+
+                // Dog Lover
+                var westZone = The.ZoneManager.GetZone(Zones["West"]);
+                The.ZoneManager.SetCachedZone(westZone);
+                var dogLover = westZone.FindObject("Brothers_CatsDogs_DogLover");
+                if (dogLover != null)
+                {
+                    var move = dogLover.AddPart<Brothers_GlobalMove>();
+                    move.TargetZone = Zones["Center"];
+                    move.TargetX = 26;
+                    move.TargetY = 7;
+                    move.failSafeTicks = 1L;
+                }
+
+                // Cat Lover
+                var eastZone = The.ZoneManager.GetZone(Zones["East"]);
+                The.ZoneManager.SetCachedZone(eastZone);
+                var catLover = eastZone.FindObject("Brothers_CatsDogs_CatLover");
+                if (catLover != null)
+                {
+                    var move = catLover.AddPart<Brothers_GlobalMove>();
+                    move.TargetZone = Zones["Center"];
+                    move.TargetX = 28;
+                    move.TargetY = 6;
+                    move.failSafeTicks = 1L;
+                }
+
+                //
+                // Population logic
+                //
+
+                // Center, 2–3 of EACH
+                if (
+                    (this.ParentZone.ZoneID == Zones["Center"]) ||
+                    (this.ParentZone.ZoneID == Zones["North"]) ||
+                    (this.ParentZone.ZoneID == Zones["South"])
+                    )
+                {
+                    this.PopulateRandomly(2, 3, "Brothers_CatsDogs_ShikCitizen");
+                    this.PopulateRandomly(2, 3, "Brothers_CatsDogs_SparCitizen");
+                }
+
+                // West side, 1–2 Spar
+                else if (
+                    this.ParentZone.ZoneID == Zones["West"] ||
+                    this.ParentZone.ZoneID == Zones["NorthWest"] ||
+                    this.ParentZone.ZoneID == Zones["SouthWest"]
+                )
+                {
+                    this.PopulateRandomly(1, 2, "Brothers_CatsDogs_SparCitizen");
+                }
+
+                // East side, 1–2 Shik
+                else if (
+                    this.ParentZone.ZoneID == Zones["East"] ||
+                    this.ParentZone.ZoneID == Zones["NorthEast"] ||
+                    this.ParentZone.ZoneID == Zones["SouthEast"]
+                )
+                {
+                    this.PopulateRandomly(1, 2, "Brothers_CatsDogs_ShikCitizen");
+                }
+
+                //
+                // Rename zones
+                //
+
+                if (
+                    this.ParentZone.ZoneID == Zones["West"] ||
+                    this.ParentZone.ZoneID == Zones["Center"] ||
+                    this.ParentZone.ZoneID == Zones["East"]
+                )
+                {
+                    The.ZoneManager.SetZoneName(this.ParentZone.ZoneID, "Shikspar");
+                }
+                else
+                {
+                    The.ZoneManager.SetZoneName(this.ParentZone.ZoneID, "outskirts, Shikspar");
+                }
+
+                // Destroy walls
                 this.DestroyWalls();
             }
             
