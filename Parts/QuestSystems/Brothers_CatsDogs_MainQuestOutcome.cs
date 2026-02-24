@@ -79,58 +79,70 @@ namespace XRL.World.ZoneParts
             }
         }
 
-public void DestroyWalls()
-{
-
-    foreach (GameObject gameObject in this.ParentZone.GetObjects(o =>
-        o.HasTag("Brothers_CatsDogs_DestroyedOnEnding") ||
-        o.HasTag("Brothers_CatsDogs_RubbleOnEnding")))
-    {
-        if (gameObject.HasPart<Brain>())
-            continue;
-
-        if (gameObject.HasTag("Brothers_CatsDogs_DestroyedOnEnding"))
+        public void DestroyWalls()
         {
-            gameObject.Obliterate();
-        }
-        else if (gameObject.HasTag("Brothers_CatsDogs_RubbleOnEnding"))
-        {
-            var cell = gameObject.Physics?.CurrentCell;
-            if (cell != null)
+
+            foreach (GameObject gameObject in this.ParentZone.GetObjects(o =>
+                o.HasTag("Brothers_CatsDogs_DestroyedOnEnding") ||
+                o.HasTag("Brothers_CatsDogs_RubbleOnEnding")))
             {
-                cell.RemoveObject(gameObject);
+                if (gameObject.HasPart<Brain>())
+                    continue;
 
-                // Roll For Random Rubble
-                string rubbleToAdd = null; 
-                int roll = Stat.Random(1, 11);
-
-                switch (roll)
+                if (gameObject.HasTag("Brothers_CatsDogs_DestroyedOnEnding"))
                 {
-                    case 1:
-                        rubbleToAdd = "Rubble";
-                        break;
-                    case 2:
-                        rubbleToAdd = "LargeBoulder";
-                        break;
-                    case 3:
-                        rubbleToAdd = "MediumBoulder";
-                        break;
-                    case 4:
-                        rubbleToAdd = "SmallBoulder";
-                        break;
+                    gameObject.Obliterate();
                 }
+                else if (gameObject.HasTag("Brothers_CatsDogs_RubbleOnEnding"))
+                {
+                    var cell = gameObject.Physics?.CurrentCell;
+                    if (cell != null)
+                    {
+                        cell.RemoveObject(gameObject);
 
-                if (!string.IsNullOrEmpty(rubbleToAdd))
-                    cell.AddObject(rubbleToAdd);
+                        // Roll For Random Rubble
+                        string rubbleToAdd = null; 
+                        int roll = Stat.Random(1, 11);
+
+                        switch (roll)
+                        {
+                            case 1:
+                                rubbleToAdd = "Rubble";
+                                break;
+                            case 2:
+                                rubbleToAdd = "LargeBoulder";
+                                break;
+                            case 3:
+                                rubbleToAdd = "MediumBoulder";
+                                break;
+                            case 4:
+                                rubbleToAdd = "SmallBoulder";
+                                break;
+                        }
+
+                        if (!string.IsNullOrEmpty(rubbleToAdd))
+                            cell.AddObject(rubbleToAdd);
+                    }
+                }
             }
         }
-    }
-}
+
+        public void ReplaceTerrainData(string newDetail, string newName, string newDescription)
+        {
+            Cell cell = The.ZoneManager.GetZone("JoppaWorld").GetCell(38, 23);
+            var terrain = cell.GetFirstObjectWithPart("TerrainTravel");
+            if (terrain != null)
+            {
+                terrain.Render.DetailColor = newDetail;
+                terrain.Render.DisplayName = newName;
+                terrain.GetPart<Description>().Short = newDescription;}
+        }
 
         public void ApplyOutcome()
         {
 
             // Neutral ending
+
             if(The.Game.GetBooleanGameState("Brothers_CatsDogs_NeutralEnding"))
             {
                 if(!The.Game.GetBooleanGameState("Brothers_CatsDogs_NeutralEnding_Occured"))
@@ -149,6 +161,12 @@ public void DestroyWalls()
                 {
                     The.Game.SetBooleanGameState("Brothers_CatsDogs_ShikEnding_Occured", true);
                     Popup.Show("Shik Ending");
+                    
+                    // Change Terrain Data
+                    ReplaceTerrainData(
+                        "k", 
+                        "Shik", 
+                        "Shik Description");
                 }
                 // Remove Spar people
                 this.DestroyPeopleFromFaction("Spar");
@@ -192,6 +210,12 @@ public void DestroyWalls()
                 {
                     The.Game.SetBooleanGameState("Brothers_CatsDogs_SparEnding_Occured", true);
                     Popup.Show("Spar Ending");
+
+                    // Change Terrain Data
+                    ReplaceTerrainData(
+                        "k", 
+                        "Spar", 
+                        "Spar Description");
                 }
                 
                 this.DestroyPeopleFromFaction("Shik");
@@ -227,12 +251,19 @@ public void DestroyWalls()
             }
             
             // Perfect ending
+
             else if (The.Game.GetBooleanGameState("Brothers_CatsDogs_PerfectEnding"))
             {
                 if(!The.Game.GetBooleanGameState("Brothers_CatsDogs_PerfectEnding_Occured"))
                 {
                     The.Game.SetBooleanGameState("Brothers_CatsDogs_PerfectEnding_Occured", true);
                     Popup.Show("Perfect Ending");
+
+                    // Change Terrain Data
+                    ReplaceTerrainData(
+                        "k", 
+                        "Shikspar", 
+                        "Shikspar Description");
                 }
 
                 // Destroy Walls
