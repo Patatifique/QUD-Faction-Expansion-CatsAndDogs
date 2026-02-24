@@ -166,7 +166,7 @@ namespace XRL.World.ZoneParts
                     ReplaceTerrainData(
                         "k", 
                         "Shik", 
-                        "Shik Description");
+                        "Twin huts stand in memory of a community bisected by self-imposed exile.");
                 }
                 // Remove Spar people
                 this.DestroyPeopleFromFaction("Spar");
@@ -215,7 +215,7 @@ namespace XRL.World.ZoneParts
                     ReplaceTerrainData(
                         "k", 
                         "Spar", 
-                        "Spar Description");
+                        "Twin huts stand in memory of a community bisected by self-imposed exile.");
                 }
                 
                 this.DestroyPeopleFromFaction("Shik");
@@ -263,7 +263,7 @@ namespace XRL.World.ZoneParts
                     ReplaceTerrainData(
                         "k", 
                         "Shikspar", 
-                        "Shikspar Description");
+                        "A newfound sense of kinship tears down misbegotten feuds and reunites a mending fraternity.");
                 }
 
                 // Destroy Walls
