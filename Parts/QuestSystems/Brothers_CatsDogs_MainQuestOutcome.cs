@@ -148,11 +148,24 @@ public void DestroyWalls()
                 if(!The.Game.GetBooleanGameState("Brothers_CatsDogs_ShikEnding_Occured"))
                 {
                     The.Game.SetBooleanGameState("Brothers_CatsDogs_ShikEnding_Occured", true);
+                    Popup.Show("Shik Ending");
                 }
-                
-                Popup.Show("Shik Ending");
                 // Remove Spar people
                 this.DestroyPeopleFromFaction("Spar");
+
+                
+                // Move Dog Lover
+                var loverZone = The.ZoneManager.GetZone(Zones["West"]);
+                The.ZoneManager.SetCachedZone(loverZone);
+                var lover = loverZone.FindObject("Brothers_CatsDogs_DogLover");
+                if (lover != null)
+                {
+                    var move = lover.AddPart<Brothers_GlobalMove>();
+                    move.TargetZone = Zones["East"];
+                    move.TargetX = 33;
+                    move.TargetY = 18;
+                    move.failSafeTicks = 1L;
+                }
                 
                 // Populating Shik people in the east zones
                 if (
@@ -172,6 +185,7 @@ public void DestroyWalls()
             }
             
             // Spar ending
+
             else if (The.Game.GetBooleanGameState("Brothers_CatsDogs_SparEnding"))
             {
                 if(!The.Game.GetBooleanGameState("Brothers_CatsDogs_SparEnding_Occured"))
@@ -181,6 +195,21 @@ public void DestroyWalls()
                 }
                 
                 this.DestroyPeopleFromFaction("Shik");
+
+                // Move Cat Lover
+                var loverZone = The.ZoneManager.GetZone(Zones["East"]);
+                The.ZoneManager.SetCachedZone(loverZone);
+                var lover = loverZone.FindObject("Brothers_CatsDogs_CatLover");
+                if (lover != null)
+                {
+                    var move = lover.AddPart<Brothers_GlobalMove>();
+                    move.TargetZone = Zones["West"];
+                    move.TargetX = 11;
+                    move.TargetY = 15;
+                    move.failSafeTicks = 1L;
+                }
+                
+                // Populating Spar people in the west zones
                 if (
                     this.ParentZone == The.ZoneManager.GetZone(Zones["West"]) || 
                     this.ParentZone == The.ZoneManager.GetZone(Zones["NorthWest"]) ||
