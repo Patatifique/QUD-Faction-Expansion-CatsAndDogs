@@ -49,9 +49,7 @@ namespace XRL.World.ZoneParts
 
         public void DestroyPeopleFromFaction(string faction)
         {
-            Zone activeZone = The.ZoneManager.ActiveZone;
-
-            foreach (GameObject gameObject in activeZone.GetObjects(
+            foreach (GameObject gameObject in this.ParentZone.GetObjects(
                 o => o.HasPart<Brain>() &&
                 o.GetPart<Brain>().GetPrimaryFaction() == faction
             ))
@@ -62,17 +60,15 @@ namespace XRL.World.ZoneParts
 
         public void PopulateRandomly(int min, int max, string blueprint)
         {
-                Zone activeZone = The.ZoneManager.ActiveZone;
                 int num1 = 0;
                 for (int index = Stat.Random(min, max); num1 < index; ++num1)
-                    ((IEnumerable<Cell>) activeZone.GetEmptyCellsShuffled()).First<Cell>().AddObject(blueprint);
+                    ((IEnumerable<Cell>) this.ParentZone.GetEmptyCellsShuffled()).First<Cell>().AddObject(blueprint);
         }
 
         public void ReplaceObject(string oldObjectBlueprint, string newObjectBlueprint)
         {
-            Zone activeZone = The.ZoneManager.ActiveZone;
 
-            foreach (GameObject gameObject in activeZone.GetObjects(o => o.Blueprint == oldObjectBlueprint))
+            foreach (GameObject gameObject in this.ParentZone.GetObjects(o => o.Blueprint == oldObjectBlueprint))
             {
                 var cell = gameObject.Physics?.CurrentCell;
                 if (cell != null)
@@ -85,15 +81,14 @@ namespace XRL.World.ZoneParts
 
 public void DestroyWalls()
 {
-    Zone activeZone = The.ZoneManager.ActiveZone;
 
-    foreach (GameObject gameObject in activeZone.GetObjects(o =>
+    foreach (GameObject gameObject in this.ParentZone.GetObjects(o =>
         o.HasTag("Brothers_CatsDogs_DestroyedOnEnding") ||
         o.HasTag("Brothers_CatsDogs_RubbleOnEnding")))
     {
         if (gameObject.HasPart<Brain>())
             continue;
-            
+
         if (gameObject.HasTag("Brothers_CatsDogs_DestroyedOnEnding"))
         {
             gameObject.Obliterate();
@@ -160,11 +155,10 @@ public void DestroyWalls()
                 this.DestroyPeopleFromFaction("Spar");
                 
                 // Populating Shik people in the east zones
-                Zone activeZone = The.ZoneManager.ActiveZone;
                 if (
-                    activeZone == The.ZoneManager.GetZone(Zones["East"]) || 
-                    activeZone == The.ZoneManager.GetZone(Zones["NorthEast"]) ||
-                    activeZone == The.ZoneManager.GetZone(Zones["SouthEast"])
+                    this.ParentZone == The.ZoneManager.GetZone(Zones["East"]) || 
+                    this.ParentZone == The.ZoneManager.GetZone(Zones["NorthEast"]) ||
+                    this.ParentZone == The.ZoneManager.GetZone(Zones["SouthEast"])
                 )
                 {
                     this.PopulateRandomly(3, 5, "Brothers_CatsDogs_ShikCitizen");
@@ -187,11 +181,10 @@ public void DestroyWalls()
                 }
                 
                 this.DestroyPeopleFromFaction("Shik");
-                Zone activeZone = The.ZoneManager.ActiveZone;
                 if (
-                    activeZone == The.ZoneManager.GetZone(Zones["West"]) || 
-                    activeZone == The.ZoneManager.GetZone(Zones["NorthWest"]) ||
-                    activeZone == The.ZoneManager.GetZone(Zones["SouthWest"])
+                    this.ParentZone == The.ZoneManager.GetZone(Zones["West"]) || 
+                    this.ParentZone == The.ZoneManager.GetZone(Zones["NorthWest"]) ||
+                    this.ParentZone == The.ZoneManager.GetZone(Zones["SouthWest"])
                 )
                 {
                     this.PopulateRandomly(3, 5, "Brothers_CatsDogs_SparCitizen");
@@ -222,6 +215,9 @@ public void DestroyWalls()
             {
                 Popup.Show("No ending");
             }
+
+            // Remove part after applying the outcome
+            this.ParentZone.RemovePart(this);
         }
     }
 }
