@@ -168,6 +168,8 @@ namespace XRL.World.ZoneParts
                         "Shik", 
                         "Shik Description");
                 }
+
+
                 // Remove Spar people
                 this.DestroyPeopleFromFaction("Spar");
 
@@ -185,14 +187,33 @@ namespace XRL.World.ZoneParts
                     move.failSafeTicks = 1L;
                 }
                 
-                // Populating Shik people in the east zones
+                // Zone specifc changes
                 if (
                     this.ParentZone == The.ZoneManager.GetZone(Zones["East"]) || 
                     this.ParentZone == The.ZoneManager.GetZone(Zones["NorthEast"]) ||
-                    this.ParentZone == The.ZoneManager.GetZone(Zones["SouthEast"])
-                )
+                    this.ParentZone == The.ZoneManager.GetZone(Zones["SouthEast"]) ||
+                    this.ParentZone == The.ZoneManager.GetZone(Zones["Center"]) || 
+                    this.ParentZone == The.ZoneManager.GetZone(Zones["North"]) ||
+                    this.ParentZone == The.ZoneManager.GetZone(Zones["South"])
+                    )
                 {
-                    this.PopulateRandomly(3, 5, "Brothers_CatsDogs_ShikCitizen");
+                    // Populate everywhere except Shik
+                    this.PopulateRandomly(2, 4, "Brothers_CatsDogs_ShikCitizen");
+                    
+                    // Change zone names
+                    if (this.ParentZone == The.ZoneManager.GetZone(Zones["NorthEast"]) ||
+                        this.ParentZone == The.ZoneManager.GetZone(Zones["SouthEast"]) ||
+                        this.ParentZone == The.ZoneManager.GetZone(Zones["North"]) ||
+                        this.ParentZone == The.ZoneManager.GetZone(Zones["South"]))
+                    {
+                        The.ZoneManager.SetZoneName(this.ParentZone.ZoneID, "outskirts, Shik");
+                    }
+                    else if (this.ParentZone == The.ZoneManager.GetZone(Zones["Center"]) ||
+                             this.ParentZone == The.ZoneManager.GetZone(Zones["East"]))
+                    {
+                        The.ZoneManager.SetZoneName(this.ParentZone.ZoneID, "Shik");
+                    }
+
                 }
 
                 // Replace Monument
@@ -233,14 +254,31 @@ namespace XRL.World.ZoneParts
                     move.failSafeTicks = 1L;
                 }
                 
-                // Populating Spar people in the west zones
+                // Zone specifc changes
                 if (
                     this.ParentZone == The.ZoneManager.GetZone(Zones["West"]) || 
                     this.ParentZone == The.ZoneManager.GetZone(Zones["NorthWest"]) ||
-                    this.ParentZone == The.ZoneManager.GetZone(Zones["SouthWest"])
-                )
+                    this.ParentZone == The.ZoneManager.GetZone(Zones["SouthWest"]) ||
+                    this.ParentZone == The.ZoneManager.GetZone(Zones["Center"]) || 
+                    this.ParentZone == The.ZoneManager.GetZone(Zones["North"]) ||
+                    this.ParentZone == The.ZoneManager.GetZone(Zones["South"])
+                    )
                 {
-                    this.PopulateRandomly(3, 5, "Brothers_CatsDogs_SparCitizen");
+                    // Populate everywhere except Spar
+                    this.PopulateRandomly(2, 4, "Brothers_CatsDogs_SparCitizen");
+                    // Change zone names
+                    if (this.ParentZone == The.ZoneManager.GetZone(Zones["NorthWest"]) ||
+                        this.ParentZone == The.ZoneManager.GetZone(Zones["SouthWest"]) ||
+                        this.ParentZone == The.ZoneManager.GetZone(Zones["North"]) ||
+                        this.ParentZone == The.ZoneManager.GetZone(Zones["South"]))
+                    {
+                        The.ZoneManager.SetZoneName(this.ParentZone.ZoneID, "outskirts, Spar");
+                    }
+                    else if (this.ParentZone == The.ZoneManager.GetZone(Zones["Center"]) ||
+                             this.ParentZone == The.ZoneManager.GetZone(Zones["West"]))
+                    {
+                        The.ZoneManager.SetZoneName(this.ParentZone.ZoneID, "Spar");
+                    }
                 }
 
                 // Replace Monument
