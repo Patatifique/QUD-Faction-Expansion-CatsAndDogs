@@ -118,7 +118,7 @@
 	</quest>
 	
 	
-	<quest ID="Brothers_CatsDogs_CheeseQuest" Name="What's Eating the Porcine Cheese?" Faction="Spar" Level="25" Reputation="200" 
+	<quest ID="Brothers_CatsDogs_CheeseQuest" Name="What's Eating the Porcine Cheese?" Factions="Spar,Cats" Level="25" Reputation="200" 
 		Accomplishment="You solved the mystery of the missing cheese."
 		Hagiograph="In the month of =month= of =year=, canny =name= pierced the secret of fermenting milk."
 		HagiographCategory="CreatesSomething"
@@ -139,7 +139,7 @@
 	</quest>
 
 
-	<quest ID="Brothers_CatsDogs_ChefQuest" Name="Drenched in Asphalt" Faction="Shik" Level="25" Reputation="200" 
+	<quest ID="Brothers_CatsDogs_ChefQuest" Name="Drenched in Asphalt" Factions="Shik,Dogs" Level="25" Reputation="200" 
 		Accomplishment="You retrieved the final ingredient for an outstanding meal."
 		Hagiograph="Generous =name= feeds the hungry! Walking through the flames, =player.subjective= bestows manna to =player.possessive= attendants."
 		HagiographCategory="FindsObject"

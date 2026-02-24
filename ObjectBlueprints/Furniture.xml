@@ -94,11 +94,13 @@
 	<object Name="Brothers_CatsDogs_Shiksign" Inherits="Sign">
 		<part Name="Render" DisplayName="sign" Tile="Items/sw_sign_west.bmp" Occluding="false" />
 		<part Name="Chat" Says="&#27; To Shik" ShowInShortDescription="true" />
+		<tag Name="Brothers_CatsDogs_DestroyedOnEnding" />
 	</object>
 	
 	<object Name="Brothers_CatsDogs_Sparsign" Inherits="Sign">
 		<part Name="Render" DisplayName="sign" Tile="Items/sw_sign_east.bmp" Occluding="false" />
 		<part Name="Chat" Says="&#26; To Spar" ShowInShortDescription="true" />
+		<tag Name="Brothers_CatsDogs_DestroyedOnEnding" />
 	</object>
   
 	<object Name="Brothers_CatsDogs_ShikChest" Inherits="Chest">

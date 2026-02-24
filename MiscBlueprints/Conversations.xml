@@ -204,8 +204,8 @@
 				
 				Thank you, =name=. Please let me go over all you found. Founder Bubumube came from Ezra and founded Shikspar. When they disappeared -- or passed away, depending on who you ask -- the village split in two, each community convinced to be the righteous heir of Bubumube.
 			</text>
-			<choice Target="Solution">That is the gist of it, yes. How can we solve their disagreement?</choice>
-			<choice Target="Solution">Both affirmations cannot be simultaneously true. We need to investigate the matter further.</choice>								
+			<choice Target="CatOrDog">That is the gist of it, yes. How can we solve their disagreement?</choice>
+			<choice Target="CatOrDog">Both affirmations cannot be simultaneously true. We need to investigate the matter further.</choice>								
 		</node>
 								
 		<node ID="CatOrDog">
@@ -349,28 +349,27 @@
 		</node>	
 
 		<node ID="WhatNow" Inherits="Welcome">
-			<text IfHaveState="Brothers_CatsDogs_NeutralEnding">
+			<text ID="WhatNowWardenNeutral" IfHaveState="Brothers_CatsDogs_NeutralEnding">
 				{{emote|*The rustling of leaves gives way to an answer.*}}
 
 				Not much has changed, has it =name=? At the very least the mayors have stopped restlessly petitioning me. A step in the right direction, I wager.
 			</text>
-			<text IfHaveState="Brothers_CatsDogs_PerfectEnding">
+			<text ID="WhatNowWardenPerfect" IfHaveState="Brothers_CatsDogs_PerfectEnding">
 				{{emote|*The rustling of leaves gives way to an answer.*}}
 
-				The villages could not have asked for a better mediator than you, =name=. I have heard talks of reverting to its old name -- Shikspar. I shall let you know how it goes.
+				The villages could not have asked for a better mediator than you, =name=. I have heard talks of reverting to its old name -- Shikspar. Undeniable proof of the good you did here.
 			</text>
-			<text IfHaveState="Brothers_CatsDogs_ShikEnding">
+			<text ID="WhatNowWardenShik" IfHaveState="Brothers_CatsDogs_ShikEnding">
 				{{emote|*The rustling of leaves gives way to an answer.*}}
 
 				I would not have expected the lady mayor to leave with her people -- if anything, she followed her own logic to the end.
 			</text>
-			<text IfHaveState="Brothers_CatsDogs_SparEnding">
+			<text ID="WhatNowWardenSpar" IfHaveState="Brothers_CatsDogs_SparEnding">
 				{{emote|*The rustling of leaves gives way to an answer.*}}
 
 				To think the mayor would take his people along and leave Shik -- the downfall of a bruised ego.
 			</text>
 		</node>			
-
 		
 		<node ID="AboutTown" Inherits="Welcome">
 			<text>
@@ -1616,36 +1615,36 @@
 		</node>
 
 		<node ID="WhatNow" Inherits="Welcome">
-			<text IfSpeakerEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_NeutralEnding">			
+			<text ID="WhatNowChefNeutral3" IfSpeakerEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_NeutralEnding">			
 				{{K|All for nothing!}}
 
 				{{emote|*The two larger heads stare at each other but neither speak up.*}}
 			</text>
-			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_NeutralEnding">
+			<text ID="WhatNowChefNeutral2" IfSpeakerNotEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_NeutralEnding">
 				{{emote|*Both heads look rather disgruntled.*}}
 
 				It all seemed like quite a hubbub for both mayors to realize they were wrong.
 
-				{{Y|I would not be as dour as Growarow, =player.formalAddressTerm=. Things will improve with time, we are sure of it!}}
+				{{Y|We would not be as dour as Growarow, =player.formalAddressTerm=. Things will improve with time, we are sure of it!}}
 			</text>	
-			<text IfSpeakerEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_PerfectEnding">			
+			<text ID="WhatNowChefPerfect3" IfSpeakerEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_PerfectEnding">			
 				{{K|Happy! Friends!}}
 
 				{{emote|*The two heads nuzzle each other.*}}
 			</text>
-			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_PerfectEnding">		
+			<text ID="WhatNowChefPerfect2" IfSpeakerNotEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_PerfectEnding">		
 				What we think? Spar's tinker is already planning to enhance our oven, can you picture it?
 				
 				{{Y|We gathered it was your doing, =player.formalAddressTerm=. You have done much for our communities!}}
 				
 				{{cloudy|You have the Growarows' gratitude!}}
 			</text>	
-			<text IfSpeakerEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_ShikEnding">			
+			<text ID="WhatNowChefShik3" IfSpeakerEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_ShikEnding">			
 				{{K|Gone! Sad!}}
 
 				{{emote|*The two other heads stay judgmentally silent.*}}
 			</text>
-			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_ShikEnding">
+			<text ID="WhatNowChefShik2" IfSpeakerNotEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_ShikEnding">
 				Did the cats of Spar really have to leave? This is quite a waste. How will they even survive in Qud?
 				
 				{{Y|This could be the end of us too. Will travelers still stop by half a community, =player.formalAddressTerm=?.}}
@@ -1936,17 +1935,17 @@
 		</node>	
 
 		<node ID="WhatNow" Inherits="Welcome">
-			<text IfHaveState="Brothers_CatsDogs_NeutralEnding">
+			<text ID="WhatNowTinkerNeutral" IfHaveState="Brothers_CatsDogs_NeutralEnding">
 				{{emote|*=pronouns.Subjective= =verb:whip:afterpronoun= =pronouns.possessive= tail, annoyed.*}}
 
 				Did things really change, =player.apparentSpecies=? It is more of the same, as far as I am concerned. At the very least the mayors have stopped bickering.
 			</text>
-			<text IfHaveState="Brothers_CatsDogs_PerfectEnding">
+			<text ID="WhatNowTinkerPerfect" IfHaveState="Brothers_CatsDogs_PerfectEnding">
 				{{emote|*=pronouns.Possessive= ears perk up.*}}
 
 				Must you ask? We have a proper trader now, and a chef! Our cheese pairs with starapple jam just as well as a photonic oscillator does with a phasic capacitor! Can you even picture that, =player.apparentSpecies=?
 			</text>
-			<text IfHaveState="Brothers_CatsDogs_SparEnding">
+			<text ID="WhatNowTinkerSpar" IfHaveState="Brothers_CatsDogs_SparEnding">
 				{{emote|*=pronouns.Subjective= =verb:concentrate:afterpronoun= on =pronouns.possessive= work.*}}
 
 				Nothing but silence beyond the wall now, =player.apparentSpecies=. How long before traders skip this half-abandoned place, you think?
@@ -2082,13 +2081,13 @@
 		</node>	
 	
 		<node ID="WhatNow" Inherits="Welcome">
-			<text IfHaveState="Brothers_CatsDogs_NeutralEnding">
+			<text ID="WhatNowZanyaNeutral" IfHaveState="Brothers_CatsDogs_NeutralEnding">
 				I'm glad things 'ill calm down a bit now. In meow opinion, this whole affair was complete overreaction from the mayors to begin 'ith!
 			</text>
-			<text IfHaveState="Brothers_CatsDogs_PerfectEnding">
+			<text ID="WhatNowZanyaPerfect" IfHaveState="Brothers_CatsDogs_PerfectEnding">
 				Oh, I know for sure 'ho is to thank for it all! I heard you solved the entire issue on your own... I could never have done so meowself, that's for sure.
 			</text>
-			<text IfHaveState="Brothers_CatsDogs_SparEnding">
+			<text ID="WhatNowZanyaSpar" IfHaveState="Brothers_CatsDogs_SparEnding">
 				I don't make anything of it, not at all! This place is for cats, just like meow, see? Do you see my ears? I belong here!
 				
 				{{emote|*=pronouns.Subjective= =verb:stay:afterpronoun= vigilant, on the lookout for any danger that could come =pronouns.possessive= way.*}}

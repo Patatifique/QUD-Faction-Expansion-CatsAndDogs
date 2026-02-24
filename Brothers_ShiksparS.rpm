@@ -1530,6 +1530,7 @@
   </cell>
   <cell X="25" Y="13">
     <object Name="DirtFloor"></object>
+    <object Name="Brothers_CatsDogs_Journal"></object>
   </cell>
   <cell X="26" Y="13">
     <object Name="DirtFloor"></object>
