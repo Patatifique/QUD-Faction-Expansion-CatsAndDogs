@@ -374,7 +374,7 @@
 		<skill Name="Axe_Cleave" />
 		<skill Name="Axe_HookAndDrag" />
 	    <skill Name="Axe_Berserk" />
-		<skill Name="Axe_ChargingStrike" />
+		<skill Name="Cudgel_ChargingStrike" />
 		<skill Name="Tactics_Charge" />
 		<skill Name="SingleWeaponFighting" />
 		<skill Name="SingleWeaponFighting_OpportuneAttacks" />
