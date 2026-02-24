@@ -79,7 +79,7 @@
 		<tag Name="NoAIEquipAsThrownWeapon" />
 		<tag Name="HideThrownWeaponPerformance" />
 		<tag Name="ExcludeFromDynamicEncounters" />
-		<tag Name="SwingSound" Value="Sounds/Abilities/sfx_ability_mutation_stinger_tailWhip" />
+		<tag Name="SwingSound" Value="Sounds/catsdogs/ClawSound.wav" />
 		<tag Name="EquipSound" Value="sfx_equip_material_generic_organic" />
 		<tag Name="EquipmentFrameColors" Value="Yryr" />
 	</object>
