@@ -18,43 +18,43 @@
 			
 			<zone Level="10" x="1" y="1" Name="palisade between Shik and Spar" IndefiniteArticle="the" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000" >
 				<map FileName="Brothers_ShiksparCenter.rpm" />
-				<music Track="Music/3rd Spore Phase" />
+				<music Track="Music/catsdogs/Append.wav" />
 			</zone>
 			
 			<zone Level="10" x="1" y="0" Name="outskirts between Shik and Spar" IndefiniteArticle="the" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000" >
 				<map FileName="Brothers_ShiksparN.rpm" />
-				<music Track="Music/3rd Spore Phase" />
+				<music Track="Music/catsdogs/Append.wav" />
 			</zone>
 			
 			<zone Level="10" x="1" y="2" Name="outskirts between Shik and Spar" IndefiniteArticle="the" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000" >
 				<map FileName="Brothers_ShiksparS.rpm" />
-				<music Track="Music/3rd Spore Phase" />
+				<music Track="Music/catsdogs/Append.wav" />
 			</zone>
 			
 			<zone Level="10" x="0" y="0" Name="outskirts" NameContext="Shik" IndefiniteArticle="some" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000">
 				<map FileName="Brothers_ShiksparNW.rpm" />
-				<music Track="Music/3rd Spore Phase" />
+				<music Track="Music/catsdogs/Append.wav" />
 			</zone>
 
 			<zone Level="10" x="0" y="1" Name="Shik" ProperName="true" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000">
 				<map FileName="Brothers_ShiksparShik.rpm"></map>
-				<music Track="Music/3rd Spore Phase" />
+				<music Track="Music/catsdogs/Append.wav" />
 				<prebuilder Class="IsCheckpoint" Key="Shik"></prebuilder>
 			</zone>
 			
 			<zone Level="10" x="0" y="2" Name="outskirts" NameContext="Shik" IndefiniteArticle="some" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000">
 				<map FileName="Brothers_ShiksparSW.rpm" />
-				<music Track="Music/3rd Spore Phase" />
+				<music Track="Music/catsdogs/Append.wav" />
 			</zone>
 			
 			<zone Level="10" x="2" y="0" Name="outskirts" NameContext="Spar" IndefiniteArticle="some" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000">
 				<map FileName="Brothers_ShiksparNE.rpm" />
-				<music Track="Music/3rd Spore Phase" />
+				<music Track="Music/catsdogs/Append.wav" />
 			</zone>
 
 			<zone Level="10" x="2" y="1" Name="Spar" ProperName="true" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000">
 				<map FileName="Brothers_ShiksparSpar.rpm"></map>
-				<music Track="Music/3rd Spore Phase" />
+				<music Track="Music/catsdogs/Append.wav" />
 				<prebuilder Class="IsCheckpoint" Key="Spar"></prebuilder>
 			</zone>
 
@@ -65,7 +65,7 @@
 	  
 			<zone Level="10" x="2" y="2" Name="outskirts" NameContext="Spar" IndefiniteArticle="some" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000">
 				<map FileName="Brothers_ShiksparSE.rpm" />
-				<music Track="Music/3rd Spore Phase" />
+				<music Track="Music/catsdogs/Append.wav" />
 			</zone>
 	
 		</cell>
