@@ -4,10 +4,14 @@ using XRL.World;
 namespace XRL.World.Parts
 {
     [Serializable]
-    public class Brothers_CatsDogs_EndingTimer : IPart
+    public class Brothers_BoolStateTimer : IPart
     {
         public long startTurn;
-        public long targetTurns = 200L;
+        public long targetTurns;
+
+        public string state;
+
+        public bool value = true;
 
         public override void Register(GameObject Object, IEventRegistrar Registrar)
         {
@@ -20,7 +24,7 @@ namespace XRL.World.Parts
             if (E.ID == "BeginTakeAction" &&
                 The.Game.Turns - this.startTurn > this.targetTurns)
             {
-                The.Game.SetBooleanGameState("Brothers_CatsDogs_AnyEnding_Occured", true);
+                The.Game.SetBooleanGameState(state, value);
                 this.ParentObject.RemovePart(this);
             }
 

@@ -120,9 +120,12 @@ namespace XRL.World.Quests
                 The.ZoneManager.GetZone(zone).AddPart(new Brothers_CatsDogs_MainQuestOutcome());
             }
             
-            var part = new Brothers_CatsDogs_EndingTimer();
+            var part = new Brothers_BoolStateTimer();
             part.startTurn = The.Game.Turns;
+            part.state = "Brothers_CatsDogs_AnyEnding_Occured";
+            part.targetTurns = 200L;
             The.Player.AddPart(part);
+        
         }
     }
 }
