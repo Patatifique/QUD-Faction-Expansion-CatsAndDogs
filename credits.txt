@@ -5,8 +5,9 @@ Faction Expansion: Cats & Dogs
 - Spritework: Balthichou
 - Writing: Balthichou
 - XML Formatting: Balthichou & Patatifique
+- Workshop Art and Banner: Patatifique
 
 Third party assets used:
 - Shik / Spar OST: "Append" from Craig Hamilton (https://craigoryhamilton.com/)
 
-Many thanks to the members of the Caves of Qud Discord modding community for their kindness, helpfulness, and reliability!
+Many thanks to the members of the Qudcord modding community for their patience, kindness, helpfulness, and reliability! A lot of that project would not have been possible without them.

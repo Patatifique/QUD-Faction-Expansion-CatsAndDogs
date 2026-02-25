@@ -405,7 +405,7 @@
 			<text>			
 				{{emote|*=pronouns.Subjective= =verb:look:afterpronoun= utterly distraught.*}}
 
-				To have done this all for naught... We cannae stay here. Ye leave us know, traveler. There is much packing to be done.
+				To have done this all fer naught... We cannae stay here. Ye leave us know, traveler. There is much packing to be done.
 			</text>
 			<choice ID="Trade" Load="Remove" />
 			<choice ID="WaterRitualChoice" Load="Remove" />
@@ -493,7 +493,7 @@
 			<text>			
 				{{emote|*=pronouns.Subjective= =verb:guffaw:afterpronoun= loudly.*}}
 
-				A tinker? Ye be serious now, there's nae need for dissecting chrome when ye could enjoy our wee village, heh?
+				A tinker? Ye be serious now, there's nae need fer dissecting chrome when ye could enjoy our wee village, heh?
 			</text>
 		</node>	
 	
@@ -511,7 +511,7 @@
 		
 		<node ID="Work" Inherits="Welcome">
 			<text>
-				Aye, there is: go see the Growarows, just across the village square. They've been looking for some kitchen help, and ye seem capable enough. Apart from that, ye can always make the orchard lighter and have yer pick of starapples -- the work is its own reward.
+				Aye, there is: go see the Growarows, just across the village square. They've been looking fer some kitchen help, and ye seem capable enough. Apart from that, ye can always make the orchard lighter and have yer pick of starapples -- the work is its own reward.
 			</text>
 		</node>	
 
@@ -558,7 +558,7 @@
 			<text>		
 				{{emote|*=pronouns.Subjective= =verb:look:afterpronoun= outraged, and =pronouns.possessive= next words come with a shower of slimy spittle.*}}
 				
-				Yarn and falsehoods! I knew their mayor to be crafty, but I hadnae taken her for such a devious fabulist. Dinna believe everything you read, ye hear me? There *was* an appointed successor, otherwise I wouldnae be standing here in front of ye.
+				Yarn and falsehoods! I knew their mayor to be crafty, but I hadnae taken her fer such a devious fabulist. Dinna believe everything you read, ye hear me? There *was* an appointed successor, otherwise I wouldnae be standing here in front of ye.
 			</text>
 		</node>				
 		
@@ -765,6 +765,97 @@
 
 	<conversation ID="Brothers_CatsDogs_DogLover">
 
+		<start ID="PerfectWelcome" IfHaveState="Brothers_CatsDogs_PerfectEnding_Occured" Inherits="PerfectChoices">
+			<text Priority="-1">
+				{{emote|*=pronouns.Subjective= =verb:offer:afterpronoun= you a toothy smile dripping with slime.*}}
+				
+				Me eyes dinna deceive me, 'tis our good friend =name=! Come in the shade, make yerself comfortable with us, will ye?
+			</text>
+		</start>
+
+		<node ID="PerfectChoices">
+ 			<choice Target="Epilogue" IfHaveActiveQuest="Brothers_CatsDogs_MainQuestEpilogue">I see the wall between Shik and Spar has been brought down! Was that your doing?</choice>
+			<choice Target="WhatNowPerfect">What do you reckon will become of this place now?</choice>
+			<choice Target="Cute">The two of you make quite the striking couple.</choice>
+			<choice Target="End">I wish the two of you the best. Live and drink, Oof Growf!</choice>
+		</node>
+
+		<node ID="Epilogue">
+			<text Priority="-1">						
+				In a way! See, Rrromaw and I, after ye left, we both went to our respective paw and maw and told them we fancied each other. 'Tis learning about ye traveling all through Qud that spurred us to action, ye ken?
+			</text>
+			<choice Target="HowDidItGo">How did the mayors take the news?</choice>
+			<choice Target="MovedTogether">Were you kicked out from home? Is that why you moved together here?</choice>
+			<choice Target="Brave">That is rather brave. I am proud of you, Oof Growf.</choice>
+			<choice Target="Wall">Did you bring down the wall by yourself?</choice>			
+		</node>	
+
+		<node ID="HowDidItGo" Inherits="Epilogue">
+			<text>						
+				Methinks me old paw was too stunned by yer revelations to answer anything. He did some thinking, and here we are now.
+			</text>
+			<choice Target="Glad" Priority="-1">I am glad to know all is well that ends well for the two of you.</choice>
+		</node>	
+
+		<node ID="MovedTogether" Inherits="Epilogue">
+			<text>						
+				Kicked out! Founder no!
+
+				{{emote|*=pronouns.Subjective= =verb:laugh:afterpronoun=, a hacking and spluttering sound.*}}
+				
+				He conferred with Spar's mayor, and they figured they'd best bury the proverbial hatchet, ye see? Gave their blessing fer the two of us to settle one of the old huts! Still needs a wee bit of patching up, but it is home nonetheless..
+			</text>
+			<choice Target="Glad" Priority="-1">I am glad to know all is well that ends well for the two of you.</choice>
+		</node>	
+		
+		<node ID="Brave" Inherits="Epilogue">
+			<text>						
+				{{emote|*=pronouns.Subjective= =verb:puff:afterpronoun= =pronouns.possessive= chest.*}}
+				
+				I wouldnae be worth the love Rrromaw has fer me if I dinnae fight for it.
+			</text>
+			<choice Target="Glad" Priority="-1">I am glad to know all is well that ends well for the two of you.</choice>
+		</node>	
+
+		<node ID="Wall" Inherits="Epilogue">
+			<text>						
+				It was what ye'd call a collective effort. Folks from Shik and Spar pitched in, made fer quite a scene! If ye've never seen the Growarows tearing down a wall, 'tis a sight worth seeing!
+			</text>
+			<choice Target="Glad" Priority="-1">I am glad to know all is well that ends well for the two of you.</choice>
+		</node>	
+		
+		<node ID="Glad">
+			<text>						
+				{{emote|*=pronouns.Subjective= =verb:nuzzle:afterpronoun= Rrromaw.*}}
+				
+				Aye, that it does. There are words other people here see us as a symbol of a reunited Shik and Spar -- Shikspar, mind ye! And none of it would have been possible without ye, =name=. Ye have our heartfelt thanks... And if that was nae enough, some trinket we got ye from the first dromad that stopped in the new Shikspar. 
+
+				Made us think of ye, if ye'd believe it.
+			</text>
+			<choice Target="End" FinishQuest="Brothers_CatsDogs_MainQuestEpilogue">
+				<text>It really was nothing, Oof Growf. I wish the two of you the best -- live and drink.</text>
+				<part Name="ReceiveItem" Blueprints="Helping Hands" Identify="Helping Hands" />
+			</choice>
+		</node>	
+
+		<node ID="WhatNowPerfect" Inherits="PerfectWelcome">
+			<text>						
+				Thanks to ye, anything! 'Tis Shikspar now. No wall and no enmity! Of course old habits die hard, but I'm ready to crack skulls if some need a reminder!
+
+				{{emote|*Rrromaw objects to =pronouns.possessive= bellicosity.*}}
+				
+				Aye, aye, I be joking a wee bit. On a more serious note, we will assuredly thrive -- all thanks to ye, =name=.
+			</text>
+		</node>	
+
+		<node ID="Cute" Inherits="PerfectWelcome">
+			<text>						
+				{{emote|*=pronouns.Subjective= =verb:stammer:afterpronoun: somewhat, =pronouns.possessive= bravado somewhat cracked.*}}
+				
+				Ye truly think so? Then I am doubly blessed, fer I already am the luckiest of dogs that Rrromaw even looks at me!
+			</text>
+		</node>	
+
 		<start ID="BadWelcome" IfHaveState="(Brothers_CatsDogs_ShikEnding OR Brothers_CatsDogs_SparEnding)">
 			<text ID="BadWelcomeQuest" IfHaveQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">
 				{{emote|*=pronouns.Subjective= nearly =verb:jump:afterpronoun= at you.*}}
@@ -774,7 +865,7 @@
 			<text ID="BadWelcomeNoQuest" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)">
 				{{emote|*=pronouns.Possessive= ears stay down.*}}
 
-				Ye cannae do anything for me, stranger. Please leave me be.
+				Ye cannae do anything fer me, stranger. Please leave me be.
 			</text>
 			<choice ID="Trade" Load="Remove" />
 			<choice ID="WaterRitualChoice" Load="Remove" />
@@ -782,7 +873,17 @@
 		</start>
 		
 		<start ID="Welcome" Inherits="DefaultChoices">
-			<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" Priority="-1">
+			<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfFinishedQuest="Brothers_CatsDogs_MainQuest3" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured" Priority="-1">
+				{{emote|*=pronouns.Subjective= =verb:perk:afterpronoun= up when seeing you.*}}
+				
+				I heard ye solved the issue between our wee villages, stranger. Ye dinna ken it, but ye were of great help to me.
+			</text>	
+			<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfFinishedQuest="Brothers_CatsDogs_MainQuest3" IfNotHaveState="Brothers_CatsDogs_AnyEnding_Occured" Priority="-1">
+				{{emote|*=pronouns.Subjective= =verb:mutter:afterpronoun= to =pronouns.reflexive=.*}}
+				
+				A wee wall issue... I cannae find a solution...
+			</text>				
+			<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" Priority="-1">
 				{{emote|*=pronouns.Subjective= =verb:seem:afterpronoun= lost in thought.*}}
 				
 				Aye, a voice so melodic, me heart is mourning when I cannae hear it. Tell me, stranger, have ye peered the cat they call Rrromaw?
@@ -808,20 +909,21 @@
 			<text IfFinishedQuest="Brothers_CatsDogs_DogLoverQuest" Priority="-1">
 				{{emote|*=pronouns.Subjective= excitedly =verb:wag:afterpronoun= =pronouns.possessive= tail when seeing you.*}}
 								
-				Aye, 'tis me good friend =name=! I cannae thank ye enough for all ye did.
+				Aye, 'tis me good friend =name=! I cannae thank ye enough fer all ye did.
 			</text>			
 			<text IfFinishedQuest="Brothers_CatsDogs_CatLoverQuest" Priority="-1">
-				The festival cannae come soon enough, now. There is nae thanking you enough for yer work, =player.formalAddressTerm=!
+				The festival cannae come soon enough, now. There is nae thanking you enough fer yer work, =player.formalAddressTerm=!
 			</text>
 		</start>
 
 		<node ID="DefaultChoices">
-			<choice Target="Brief" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_CatLoverSeen">As a matter of fact, I have seen a cat called Rrromaw. Why do you want to know?</choice>
+			<choice Target="Brief" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_CatLoverSeen" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">As a matter of fact, I have seen a cat called Rrromaw. Why do you want to know?</choice>
 			<choice Target="Gifts" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Gifts" IfHaveLiquid="wine" IfHaveItemDescendsFrom="Polished Gemstone">I have everything you asked for.</choice>
 			<choice Target="Date" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfHaveItem="Brothers_CatsDogs_LoveNote">I come bearing a message: you have got yourself a proper date.</choice>
 			<choice Target="Debrief" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Invite">Great news: I have delivered your invitation to Rrromaw, and it has been accepted!</choice>			
 			<choice Target="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is going on with the other village?</choice>
 			<choice Target="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What is your stance on the division between Shik and Spar?</choice>
+			<choice Target="WhatNow" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">How was I of great help to you?</choice>
 			<choice Target="Family">Are you related to Shik's mayor?</choice>	
 			<choice Target="End">
 				<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)">I will keep you in the know should I ever see Rrromaw. For now, live and drink.</text>
@@ -891,7 +993,7 @@
 			<text>			
 				{{emote|Oof Growf =verb:retrieve= the dram of wine and the precious stone you hand =pronouns.objective=.*}}
 
-				I had not taken ye for a poet! To think I still dinna ken yer name either, ye must think me a brute.
+				I had not taken ye fer a poet! To think I still dinna ken yer name either, ye must think me a brute.
 			</text>
 			<choice Target="Invite">It was my pleasure, really. You can call me =name= -- do you need anything else?</choice>			
 			<choice Target="Invite">My name is =name= and trust me, I've seen ruder. What now?</choice>
@@ -929,7 +1031,7 @@
 		
 		<node ID="Debrief">
 			<text>			
-				I can scarcely believe ye, =name=! I cannae thank ye enough for all ye've done. Now to prepare for the date... It is not coming up just yet, but I am grateful for the change ye've given me.
+				I can scarcely believe ye, =name=! I cannae thank ye enough fer all ye've done. Now to prepare fer the date... It is not coming up just yet, but I am grateful for the change ye've given me.
 				
 				{{emote|Determination shines bright in =pronouns.possessive= eyes.*}}
 			</text>
@@ -950,15 +1052,23 @@
 				'Tis a sorry affair, that much is certain. No living soul here even remembers why the wall was built, ye ken?
 			</text>
 			<text ID="OpinionQuestDone" IfFinishedQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">
-				'Tis a sorry affair, but there is a glimmer of hop in me eyes, =name=. Maybe all is not yet lost?
+				'Tis a sorry affair, but there is a glimmer of hope in me eyes, =name=. Maybe all is not yet lost?
 			</text>							
 		</node>	
+
+		<node ID="WhatNow" Inherits="Welcome">
+			<text>
+				Would ye believe me if I told ye I dinnae dare see a cat living in Spar? Thanks to yer intervention we might dance together yet, what with the villages coming together and all.
+				
+				So in a way, ye certainly did help! I cannae thank you enough, truly.
+			</text>
+		</node>
 		
 		<node ID="Family" Inherits="Welcome">
 			<text>
 				{{emote|=pronouns.Subjective= =verb:let:afterpronoun= out a short, humorless laugh.*}}
 
-				Aye, related! He is me paw, and he keeps too good an eye on me. Wouldnae want "dishonor" to strike the house.
+				Aye, related! He is me paw, and he keeps too good an eye on me. Wouldnae want "misfortune" to strike the house.
 			</text>
 		</node>		
 	
@@ -984,10 +1094,20 @@
 		</start>
 		
 		<start ID="Welcome" Inherits="DefaultChoices">
-			<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" Priority="-1">		
+			<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfFinishedQuest="Brothers_CatsDogs_MainQuest3" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured" Priority="-1">		
+				{{emote|*=pronouns.Subjective= =verb:sits:afterpronoun= calmly.*}}
+				
+				Oh, I have heard of you! Word is you solved the feud between our villages. You were of great help to us!</text>
+			<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfFinishedQuest="Brothers_CatsDogs_MainQuest3" IfNotHaveState="Brothers_CatsDogs_AnyEnding_Occured" Priority="-1">		
+				{{emote|The tip of =pronouns.possessive= ears go pink as you address =pronouns.objective=.}}
+				
+				Oh? I think you must want to speak with the mayor -- she is right over there.
+			</text>
+			<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" Priority="-1">		
 				{{emote|*=pronouns.Subjective= =verb:fidget:afterpronoun= restlessly, unable to stay put.*}}
 				
-				What to do, what to do... I could maybe... No I can't! Wait, you there! Do you come from Shik? If you have seen a dog called Oof Growf, I pray you tell me.</text>
+				What to do, what to do... I could maybe... No I can't! Wait, you there! Do you come from Shik? If you have seen a dog called Oof Growf, I pray you tell me.
+			</text>
 			<text IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts" Priority="-1">			
 				{{emote|=pronouns.Subjective= =verb:pace:afterpronoun= relentlessly.}}
 				
@@ -1017,12 +1137,13 @@
 		</start>
 
 		<node ID="DefaultChoices">
-			<choice Target="Brief" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_DogLoverSeen">As a matter of fact I have seen a dog called Oof Growf, yes. Why do you want to know?.</choice>
+			<choice Target="Brief" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_DogLoverSeen" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">As a matter of fact I have seen a dog called Oof Growf, yes. Why do you want to know?.</choice>
 			<choice Target="Gifts" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts" IfHaveLiquid="wine" IfHaveItemDescendsFrom="Polished Gemstone">I have the wine and gem you asked for.</choice>
 			<choice Target="Date" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfHaveItem="Brothers_CatsDogs_LoveNote">I come bearing a message: you have got yourself a proper date.</choice>
 			<choice Target="Debrief" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Invite">Great news: I have delivered your invitation to Oof Growf, and it has been accepted!</choice>			
 			<choice Target="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is going between Shik and Sp...</choice>
 			<choice Target="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What is your stance on the division between Shik and Spar?</choice>
+			<choice Target="WhatNow" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">I am not sure I understand how I was of any help to you.</choice>
 			<choice Target="Family">Are you related to Spar's mayor?</choice>	
 			<choice Target="End">
 				<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)">I will let you know if I ever see Oof Growf -- in the meantime, live and drink.</text>
@@ -1160,6 +1281,14 @@
 			<text ID="OpinionQuestDone" IfFinishedQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)" Priority="10">
 				Until recently I thought it a tragedy, but I believe you just may help us yet, =name=!
 			</text>					
+		</node>
+
+		<node ID="WhatNow" Inherits="Welcome">
+			<text>
+				Oh, it is quite a silly thing, really. There is a mighty dog in Shik that really caught my eye... And thanks to you convincing our parents, we can now freely travel between Shik and Spar! We might share a dance at the next Ut yara Ux festival, mind you...
+				
+				None of it would have been possible if not for you!
+			</text>
 		</node>
 		
 		<node ID="Family" Inherits="Welcome">
@@ -2281,6 +2410,7 @@
 		</start>
 	
 	</conversation>	
+
 
 	<conversation ID="Brothers_CatsDogs_SparCitizen">
 		
