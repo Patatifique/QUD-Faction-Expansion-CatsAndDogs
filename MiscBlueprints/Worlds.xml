@@ -58,7 +58,7 @@
 				<prebuilder Class="IsCheckpoint" Key="Spar"></prebuilder>
 			</zone>
 
-			<zone Level="11" x="2" y="1" Name="undervillage" NameContext="Spar" DisableForcedConnections="Yes" >
+			<zone Level="11" x="2" y="1" Name="cheese-ripening cave" DisableForcedConnections="Yes" >
 				<map FileName="Brothers_ShiksparCheeseCave.rpm" />
 				<music Track="Music/Substrate" />
 			</zone>
