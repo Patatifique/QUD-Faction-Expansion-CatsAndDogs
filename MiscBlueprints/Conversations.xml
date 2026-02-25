@@ -90,37 +90,37 @@
 		</node>
 	
 		<node ID="Brief1">
-			<text IfHaveState="Brothers_CatsDogs_QuestgiverDogMayor">
+			<text ID="BriefDogMayor" IfHaveState="Brothers_CatsDogs_QuestgiverDogMayor">
 				{{emote|*Silence passes you by as the warden =verb:listen= intently.*}}
 
 				Told? I wager Mayor Raroofwor sent you. He will not move from his position, will he?
 			</text>
-			<text IfHaveState="Brothers_CatsDogs_QuestgiverCatMayor">
+			<text ID="BriefCatMayor" IfHaveState="Brothers_CatsDogs_QuestgiverCatMayor">
 				{{emote|*Silence passes you by as the warden =verb:listen= intently.*}}
 
 				Lady Mayor Morrarri put you up to this, did she not? Surely she must think I will take her side.
 			</text>
-			<text IfHaveState="Brothers_CatsDogs_QuestgiverDogLover">
+			<text ID="BriefDogLover" IfHaveState="Brothers_CatsDogs_QuestgiverDogLover">
 				{{emote|*Silence passes you by as the warden =verb:listen= intently.*}}
 
 				I think I know who sent you: my kin has heard the love-plea of Oof Growf.
 			</text>
-			<text IfHaveState="Brothers_CatsDogs_QuestgiverCatLover">
+			<text ID="BriefCatLover" IfHaveState="Brothers_CatsDogs_QuestgiverCatLover">
 				{{emote|*Silence passes you by as the warden =verb:listen= intently.*}}
 
 				Rrromaw's passion must run deep, to inspire acting in a mother-mayor's back.
 			</text>
-			<text IfHaveState="Brothers_CatsDogs_QuestgiverDogChef">
+			<text ID="BriefDogChef" IfHaveState="Brothers_CatsDogs_QuestgiverDogChef">
 				{{emote|*Silence passes you by as the warden =verb:listen= intently.*}}
 
 				Had I to hazard a guess, I would say the Growarows sent you to me.
 			</text>
-			<text IfHaveState="Brothers_CatsDogs_QuestgiverCatTinker">
+			<text ID="BriefCatTinker" IfHaveState="Brothers_CatsDogs_QuestgiverCatTinker">
 				{{emote|*Silence passes you by as the warden =verb:listen= intently.*}}
 
 				Has Imimiw grown so tired of having no proper merchant that she sent you to me?
 			</text>
-			<text IfHaveState="Brothers_CatsDogs_QuestgiverFurGuy">
+			<text ID="BriefZanya" IfHaveState="Brothers_CatsDogs_QuestgiverFurGuy">
 				{{emote|*Silence passes you by as the warden =verb:listen= intently.*}}
 
 				Zanya's optimism is refreshing, that they still believe I can mend the rift between Shik and Spar.
@@ -330,13 +330,13 @@
 			<text Priority="-1">		
 				I do not need anything from you, =name=.
 			</text>	
-			<text IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3">		
+			<text ID="ReminderMainQuest3" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3">		
 				Please invite both mayors to take part in the Gathering. Once they arrive, we will begin.
 			</text>	
-			<text IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2">		
+			<text ID="ReminderMainQuest2" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2">		
 				We need to know more about Bubumube, =name=. Whatever you learn -- determining whether they were dog or cat could give us a peaceful resolution yet.
 			</text>
-			<text IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1">					
+			<text ID="ReminderMainQuest1" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1">					
 				There must be some clues in Shik and Spar as to who exactly the Founder was. Perhaps this will be enough to bridge the gap between the villages.
 			</text>			
 		</node>	
@@ -766,12 +766,12 @@
 	<conversation ID="Brothers_CatsDogs_DogLover">
 
 		<start ID="BadWelcome" IfHaveState="(Brothers_CatsDogs_ShikEnding OR Brothers_CatsDogs_SparEnding)">
-			<text IfHaveQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">
+			<text ID="BadWelcomeQuest" IfHaveQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">
 				{{emote|*=pronouns.Subjective= nearly =verb:jump:afterpronoun= at you.*}}
 				
 				Ye knew about me love, and still ye ran yer bloody mouth! Now we will be parted forever... Away with ye!
 			</text>
-			<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)">
+			<text ID="BadWelcomeNoQuest" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)">
 				{{emote|*=pronouns.Possessive= ears stay down.*}}
 
 				Ye cannae do anything for me, stranger. Please leave me be.
@@ -946,10 +946,10 @@
 		</node>
 
 		<node ID="Opinion" Inherits="Welcome">
-			<text IfNotFinishedQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">
+			<text ID="OpinionQuestNotDone" IfNotFinishedQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">
 				'Tis a sorry affair, that much is certain. No living soul here even remembers why the wall was built, ye ken?
 			</text>
-			<text IfFinishedQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">
+			<text ID="OpinionQuestDone" IfFinishedQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">
 				'Tis a sorry affair, but there is a glimmer of hop in me eyes, =name=. Maybe all is not yet lost?
 			</text>							
 		</node>	
@@ -968,12 +968,12 @@
 	<conversation ID="Brothers_CatsDogs_CatLover">
 
 		<start ID="BadWelcome" IfHaveState="(Brothers_CatsDogs_ShikEnding OR Brothers_CatsDogs_SparEnding)">
-			<text IfHaveQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">
+			<text ID="BadWelcomeQuest" IfHaveQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">
 				{{emote|*=pronouns.Subjective= =verb:shake:afterpronoun= with rage.*}}
 				
 				To think you just had to stay silent, I could have had a chance to be with the love of my life... Begone now, before my patience runs even thinner.
 			</text>
-			<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)">
+			<text ID="BadWelcomeNoQuest" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)">
 				{{emote|*=pronouns.Possessive= tail slumps on the ground.*}}
 
 				Please leave me be. There is nothing you can do to help me.
@@ -1154,10 +1154,10 @@
 		</node>
 
 		<node ID="Opinion" Inherits="Welcome">
-			<text IfNotFinishedQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)" Priority="10">
+			<text ID="OpinionQuestNotDone" IfNotFinishedQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)" Priority="10">
 				It is just sad, honestly. To never meet one's neighbors... To never see the face of those you hear so much about...
 			</text>
-			<text IfFinishedQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)" Priority="10">
+			<text ID="OpinionQuestDone" IfFinishedQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)" Priority="10">
 				Until recently I thought it a tragedy, but I believe you just may help us yet, =name=!
 			</text>					
 		</node>
@@ -1354,12 +1354,12 @@
 		</start>
 
 		<start ID="BadWelcome" IfHaveState="Brothers_CatsDogs_SparEnding" IfSpeakerNotEvolutiveTileMoreOrEqual="3">
-			<text IfSpeakerEvolutiveTileMoreOrEqual="2" Priority="-1">			
+			<text ID="BadWelcome3Heads" IfSpeakerEvolutiveTileMoreOrEqual="2" Priority="-1">			
 				{{emote|*The first two heads stay silent.*}}
 
 				{{K|Mayor! Leave!}}
 			</text>
-			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2" Priority="-1">
+			<text ID="BadWelcome2Heads" IfSpeakerNotEvolutiveTileMoreOrEqual="2" Priority="-1">
 				{{Y|The mayor told us we will need to leave -- we have nothing more to tell you.}}
 			</text>
 			<choice ID="Trade" Load="Remove" />
@@ -1600,12 +1600,12 @@
 		</node>
 
 		<node ID="Opinion" Inherits="Welcome">
-			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+			<text ID="Opinion3Heads" IfSpeakerEvolutiveTileMoreOrEqual="2">			
 				{{K|Cat! Friend!}}
 
 				{{emote|*None of the larger heads contradict this exclamation.*}}
 			</text>
-			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+			<text ID="Opinion2Heads" IfSpeakerNotEvolutiveTileMoreOrEqual="2">
 				{{emote|*Mild annoyance flashes on both their faces.*}}
 
 				{{Y|It is all quite ridiculous, =player.formalAddressTerm=.}}
@@ -1652,14 +1652,14 @@
 		</node>	
 		
 		<node ID="TwoHeads" Inherits="Welcome">
-			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+			<text ID="TwoHeads3Heads" IfSpeakerEvolutiveTileMoreOrEqual="2">			
 				Neither were we. Please ignore our new partner...
 
 				{{Y|As Growarow says, our situation has evolved somewhat. Fret not, =player.formalAddressTerm=, we will soon find a new arrangement.}}
 				
 				{{K|Head! Head!}}
 			</text>
-			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+			<text ID="TwoHeads2Heads" IfSpeakerNotEvolutiveTileMoreOrEqual="2">
 				Us hydric hounds are quite the uncommon sight indeed.
 				
 				{{Y|It is little surprise you have not seen our kind before, =player.formalAddressTerm=!}}
@@ -1674,7 +1674,7 @@
 		</node>
 
 		<node ID="Mutated" Inherits="Welcome">
-			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+			<text ID="Mutated3Heads" IfSpeakerEvolutiveTileMoreOrEqual="2">			
 				{{emote|*The two larger heads look disheartened.*}}
 
 				Count yourself lucky.
@@ -1683,7 +1683,7 @@
 
 				{{K|Heads!}}
 			</text>
-			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+			<text ID="Mutated2Heads" IfSpeakerNotEvolutiveTileMoreOrEqual="2">
 				{{emote|*Both heads nod emphatically.*}}
 
 				{{cloudy|Folks get confused too easily nowadays.}}
@@ -1693,12 +1693,12 @@
 		</node>
 
 		<node ID="Relationship" Inherits="Welcome">
-			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+			<text ID="Relationship3Heads" IfSpeakerEvolutiveTileMoreOrEqual="2">			
 				{{K|Left! Right! Left! Right!}}
 				
 				Does that answer your question?
 			</text>
-			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+			<text ID="Relationship2Heads" IfSpeakerNotEvolutiveTileMoreOrEqual="2">
 				{{Y|Uncomfortable? How so, =player.formalAddressTerm=? I get to share every moment with my favorite person in Qud.}}
 				
 				What Growarow says. Founder knows I could not ask for a better cohead.
@@ -1708,14 +1708,14 @@
 		</node>
 
 		<node ID="About" Inherits="Welcome">
-			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+			<text ID="About3Heads" IfSpeakerEvolutiveTileMoreOrEqual="2">			
 				Up until now, we collected starapples from our herders, and made them sing until jammy.
 
 				{{Y|We used to trade in commodities with the local travelers. We would ask that you excuse our current situation, =player.formalAddressTerm=.}}
 
 				{{K|Star! Apples!}}
 			</text>
-			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+			<text ID="About2Heads" IfSpeakerNotEvolutiveTileMoreOrEqual="2">
 				Will you believe it if we tell you we are a chef? Collecting starapples from our herders, and making them sing until jammy.
 
 				{{Y|We trade in commodities with the local travelers. Does your pack feel too heavy? We have solutions to offer you, =player.formalAddressTerm=.}}
@@ -1726,7 +1726,7 @@
 		</node>
 
 		<node ID="Name" Inherits="Welcome">
-			<text IfSpeakerEvolutiveTileMoreOrEqual="2">			
+			<text ID="Name3Heads" IfSpeakerEvolutiveTileMoreOrEqual="2">			
 				{{emote|*The two larger heads exchange a disheartened look.*}}
 
 				The two of us are the Growarows.
@@ -1735,7 +1735,7 @@
 
 				{{K|Grarows!}}
 			</text>
-			<text IfSpeakerNotEvolutiveTileMoreOrEqual="2">
+			<text ID="Name2Heads" IfSpeakerNotEvolutiveTileMoreOrEqual="2">
 				{{emote|*Both heads exchange a knowing look.*}}
 
 				It is quite simple, really. We are called Growarow.
@@ -2068,12 +2068,12 @@
 		</node>		
 	
 		<node ID="Opinion" Inherits="Welcome">
-			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
+			<text ID="OpinionFlattered" IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
 				{{emote|*Zanya =verb:choose= =pronouns.possessive= next words carefully.*}}
 
 				It all seems a tad excessive to meow. Those dogs from Shik look catlike enough in meow opinion -- not that Lady Morrarri see things the same 'ay.
 			</text>
-			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
+			<text ID="OpinionDefault" IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
 				{{emote|*=pronouns.Subjective= =verb:choose:afterpronoun= =pronouns.possessive= next words carefully.*}}
 
 				It all seems a tad excessive to meow. Those dogs from Shik look catlike enough in meow opinion -- not that Lady Morrarri see things the same 'ay.
@@ -2148,14 +2148,14 @@
 		</node>	
 	
 		<node ID="About" Inherits="Welcome">
-			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
+			<text ID="AboutFlattered" IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
 				{{emote|*Zanya =verb:tap= =pronouns.possessive= chin pensively.*}}
 				
 				Not much to tell about this place, we all keep pretty much t'ourselves. Some o' the others tend to the pig farms, and prepare the cheese. Right o'er there is the 'orkshop of Imimiw, our tinker. She'll set any 'ires straight in just a moment. 
 				
 				There is the occasional traveler, but otherwise the days are spent working, trading and napping un'er the Hind Sun.							
 			</text>				
-			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
+			<text ID="AboutDefault" IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
 				{{emote|*=pronouns.Subjective= =verb:tap:afterpronoun= =pronouns.possessive= chin pensively.*}}
 				
 				Not much to tell about this place, we all keep pretty much t'ourselves. Some o' the others tend to the pig farms, and prepare the cheese. Right o'er there is the 'orkshop of Imimiw, our tinker. She'll set any 'ires straight in just a moment. 
