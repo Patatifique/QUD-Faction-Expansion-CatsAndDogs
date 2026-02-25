@@ -787,7 +787,7 @@
 			<choice Target="HowDidItGo">How did the mayors take the news?</choice>
 			<choice Target="MovedTogether">Were you kicked out from home? Is that why you moved together here?</choice>
 			<choice Target="Brave">That is rather brave. I am proud of you, Oof Growf.</choice>
-			<choice Target="Wall">Did you bring down the wall by yourself?</choice>			
+			<choice Target="Wall">Did you bring down the wall all by yourself?</choice>			
 		</node>	
 
 		<node ID="HowDidItGo" Inherits="Epilogue">
@@ -828,7 +828,7 @@
 			<text>						
 				{{emote|*=pronouns.Subjective= =verb:nuzzle:afterpronoun= Rrromaw.*}}
 				
-				Aye, that it does. There are words other people here see us as a symbol of a reunited Shik and Spar -- Shikspar, mind ye! And none of it would have been possible without ye, =name=. Ye have our heartfelt thanks... And if that was nae enough, some trinket we got ye from the first dromad that stopped in the new Shikspar. 
+				Aye, that it does. There are words other people here see us as a symbol of a reunited Shik and Spar -- Shikspar, mind ye! And none of it would have been possible without ye, =name=. Ye have our heartfelt thanks... And if that was nae enough, some trinket we got ye from the first dromad who stopped in the new Shikspar. 
 
 				Made us think of ye, if ye'd believe it.
 			</text>
@@ -850,7 +850,7 @@
 
 		<node ID="Cute" Inherits="PerfectWelcome">
 			<text>						
-				{{emote|*=pronouns.Subjective= =verb:stammer:afterpronoun: somewhat, =pronouns.possessive= bravado somewhat cracked.*}}
+				{{emote|*=pronouns.Subjective= =verb:stammer:afterpronoun= somewhat, =pronouns.possessive= bravado somewhat cracked.*}}
 				
 				Ye truly think so? Then I am doubly blessed, fer I already am the luckiest of dogs that Rrromaw even looks at me!
 			</text>
@@ -1077,6 +1077,97 @@
 	
 	<conversation ID="Brothers_CatsDogs_CatLover">
 
+		<start ID="PerfectWelcome" IfHaveState="Brothers_CatsDogs_PerfectEnding_Occured" Inherits="PerfectChoices">
+			<text Priority="-1">
+				{{emote|*=pronouns.Subjective= =verb:wave:afterpronoun= at you with a tiny paw.*}}
+				
+				Oh, =name=, it is you! Please do come in, there is plenty of room for all of us here!
+			</text>
+		</start>
+
+		<node ID="PerfectChoices">
+ 			<choice Target="Epilogue" IfHaveActiveQuest="Brothers_CatsDogs_MainQuestEpilogue">I seem to recall a wall between Shik and Spar...</choice>
+			<choice Target="WhatNowPerfect">What are your plans for the future?</choice>
+			<choice Target="Cute">From the look of things, I reckon the date went rather well.</choice>
+			<choice Target="End">Best of things to both of you. Live and drink, Rrromaw!</choice>
+		</node>
+
+		<node ID="Epilogue">
+			<text Priority="-1">						
+				{{emote|*=pronouns.Subjective= =verb:let:afterpronoun= out a crystaline laugh.*}}
+						
+				Quite a lot has changed since you last came here! After you left, Oof Growf and I used the confusion to reveal our mutual feelings both to each other and to our respective parents. That came as quite a shock to them, really...
+			</text>
+			<choice Target="HowDidItGo">How did your parents take the news?</choice>
+			<choice Target="MovedTogether">Are you not welcome home anymore? This hut is not exactly top comfort...</choice>
+			<choice Target="Brave">I would not have expected this from you, actually. Standing up to your mother cannot have been easy.</choice>
+			<choice Target="Wall">Did the mayors just decide to get rid of the wall, then?</choice>			
+		</node>	
+
+		<node ID="HowDidItGo" Inherits="Epilogue">
+			<text>						
+				Well, I cannot say for Oof Growf's father, but my mother was too shaken by the revelation she had been feuding over false grounds to be anything other than initially stunned. She seems to have accepted the situation, nowadays.
+			</text>
+			<choice Target="Glad" Priority="-1">I am glad to know there was a happy ending in store for the two of you, in the end.</choice>
+		</node>	
+
+		<node ID="MovedTogether" Inherits="Epilogue">
+			<text>						
+				Of course I am still welcome home!
+				
+				{{emote|*=pronouns.Subjective= =verb:nuzzle:afterpronoun= against the large dog's chest.*}}
+				
+				But this is our place. A little worse for wear for now, but we shall rebuild it, wall by wall, until it stands as the coziest hut of all Qud.
+			</text>
+			<choice Target="Glad" Priority="-1">I am glad to know there was a happy ending in store for the two of you, in the end.</choice>
+		</node>	
+		
+		<node ID="Brave" Inherits="Epilogue">
+			<text>						
+				{{emote|*The tip of =pronouns.possessive= ears go pink for just a moment.*}}
+				
+				Could I really be any less brave than the traveler who crossed all of Qud to lay the feud of an unrelated village to rest?
+			</text>
+			<choice Target="Glad" Priority="-1">I am glad to know there was a happy ending in store for the two of you, in the end.</choice>
+		</node>	
+
+		<node ID="Wall" Inherits="Epilogue">
+			<text>						
+				Oh no! Everybody just figured the wall growing quite superfluous, and non of the mayors dared oppose them after what you revealed. You should have seen Imimiw, she tinkered some artifact and blew up half of it by herself!
+			</text>
+			<choice Target="Glad" Priority="-1">I am glad to know there was a happy ending in store for the two of you, in the end.</choice>
+		</node>	
+		
+		<node ID="Glad">
+			<text>						
+				{{emote|*Oof Growf licks the top of =pronouns.possessive= head, giving =pronouns.objective= a cowlick of sort.*}}
+				
+				More than a happy ending! Good folks around here see in the two of us a reunited village, a new Shikspar. But that conclusion did not arrive on its own, did it? None of it would have been possible without you, =name=. Oof Growf and I actually got you a little something, from the first dromad caravan that came after the wall fell.
+				
+				It may not be much, but it reminded us of you, in a way.
+			</text>
+			<choice Target="End" FinishQuest="Brothers_CatsDogs_MainQuestEpilogue">
+				<text>I am simply glad I could help, Rrromaw. I wish the two of you the best -- live and drink.</text>
+				<part Name="ReceiveItem" Blueprints="Helping Hands" Identify="Helping Hands" />
+			</choice>
+		</node>	
+
+		<node ID="WhatNowPerfect" Inherits="PerfectWelcome">
+			<text>						
+				There is so much left to do! Thanks to you, anything seems possible. I figure the first step will probably be to build the village's reputation back up. And perhaps a cidermoon... I have always wanted to see Kyakukya.
+
+				{{emote|*Oof Growf and Rrromaw start discussing travel plans before you.*}}
+			</text>
+		</node>	
+
+		<node ID="Cute" Inherits="PerfectWelcome">
+			<text>						
+				{{emote|*=pronouns.Subjective= =verb:lean:afterpronoun= forward with newfound confidence.*}}
+				
+				Better than well, actually. Oh you should have seen our confession... If you ever need help setting up a date of your own, just let us know!
+			</text>
+		</node>	
+		
 		<start ID="BadWelcome" IfHaveState="(Brothers_CatsDogs_ShikEnding OR Brothers_CatsDogs_SparEnding)">
 			<text ID="BadWelcomeQuest" IfHaveQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">
 				{{emote|*=pronouns.Subjective= =verb:shake:afterpronoun= with rage.*}}
