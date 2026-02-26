@@ -401,6 +401,14 @@
 
 	<conversation ID="Brothers_CatsDogs_DogMayor">
 
+		<start ID="TransitionWelcome" IfHaveQuest="Brothers_CatsDogs_MainQuestEpilogue" IfNotHaveState="(Brothers_CatsDogs_AnyEnding_Occured AND Brothers_CatsDogs_SparEnding)">
+			<text>			
+				{{emote|*=pronouns.Subjective= =verb:shake:afterpronoun= =pronouns.possessive= massive head.*}}
+
+				Not now, traveler. Shik needs time to process what was revealed at the Gathering.</text>
+			<choice Target="End">ok ill be back later.</choice>
+		</start>
+
 		<start ID="BadWelcome" IfHaveState="Brothers_CatsDogs_SparEnding">
 			<text>			
 				{{emote|*=pronouns.Subjective= =verb:look:afterpronoun= utterly distraught.*}}
@@ -447,8 +455,10 @@
 			<choice Target="Work" IfNotHaveQuest="Brothers_CatsDogs_ChefQuest">Is there any work to do in Shik?</choice>
 			<choice Target="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the deal with the village on the wall's other side?</choice>
 			<choice Target="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">How come Shik and Spar are divided?</choice>
+			<choice Target="Epilogue" IfHaveActiveQuest="Brothers_CatsDogs_MainQuestEpilogue" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">I have returned, mayor. How have things changed around here?</choice>			
+			<choice Target="WhatNow" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">What shall happen with this place now?</choice>		
 			<choice Target="Services">What can I expect to find in Shik, beside starapples?</choice>
-			<choice Target="Travelers">I see only dogs living here. Am I allowed here?</choice>	
+			<choice Target="Travelers" IfNotHaveState="Brothers_CatsDogs_AnyEnding_Occured">I see only dogs living here. Am I allowed here?</choice>	
 			<choice Target="Goatfolk">Don't you fear attacks from the jungle goatfolk?</choice>	
 			<choice Target="End">I must take my leave now. Live and drink, mayor.</choice>
 		</node>
@@ -479,14 +489,77 @@
 				{{emote|*=pronouns.Subjective= =verb:sit:afterpronoun= on the ground, quite content with =pronouns.reflexive=.*}}
 			</text>
 		</node>	
+		
+		<node ID="Epilogue">
+			<text ID="EpilogueBriefNeutral" IfHaveState="Brothers_CatsDogs_NeutralEnding">			
+				{{emote|*=pronouns.Subjective= =verb:look:afterpronoun= embarassed for a moment.*}}
+				
+				Aye well, even if I cannae say much has changed, folks go from village to village now. Their side has grown a wee bit more reasonable, and folks say I'm getting soft in me years.
+			</text>
+			<text ID="EpilogueBriefPerfect" IfHaveState="Brothers_CatsDogs_PerfectEnding">			
+				{{emote|*=pronouns.Subjective= uncomfortably =verb:shift:afterpronoun= =pronouns.possessive= weight from paw to paw.*}}
+				
+				Traveler, it might be best if ye talk to Oof Growf about it, will ye? Blood of me blood has moved into a hut nearby with... Aye, I beg ye talk with the two of them.</text>
+			<text ID="EpilogueBriefShik" IfHaveState="Brothers_CatsDogs_ShikEnding">			
+				{{emote|*Ego glimmers in =pronouns.possesssive= eyes.*}}
+				
+				Fer the best, that much is sure, traveler! Devious liars hung their heads in shame and left, all sycophants that they were. Now we dogs from Shik have the entire village for ourselves, as the Founder intended.
+			</text>
+			<choice Target="EpilogueNeutral" IfHaveState="Brothers_CatsDogs_NeutralEnding">Is the feud properly buried then?</choice>
+			<choice Target="EpilogueShik" IfHaveState="Brothers_CatsDogs_ShikEnding">Did people from Spar really just up and leave?</choice>
+			<choice Target="End" IfHaveState="Brothers_CatsDogs_PerfectEnding">Duly noted, I will go find your child. Live and drink, mayor.</choice>
+		</node>		
 	
+		<node ID="EpilogueNeutral">
+			<text>						
+				Buried as can be, although I still find some of them unsufferable. Still, I wager I ought to thank ye, traveler, for setting things straight in Shik and Spar. Had ye not intervened, folks from the other side might have grown a wee bit too rowdy, ye ken?
+				
+				Figure ye deserve a reward fer yer help in settling this matter. It may not be much, but I trust ye will put it to good use.
+			</text>
+			<choice Target="End" FinishQuest="Brothers_CatsDogs_MainQuestEpilogue">
+				<text>I am glad things ended without violence. Live and drink, mayor.</text>
+				<part Name="ReceiveItem" Blueprints="Helping Hands" Identify="Helping Hands" />
+				<part Name="Brothers_ModifyReputation" Faction="Cats" Value="100" Faction2="Dogs" Value2="100" Shown="False" />
+			</choice>
+		</node>	
+
+		<node ID="EpilogueShik">
+			<text>						
+				{{emote|*A bellowing laugh splatters slime on the ground in front of you.*}}
+				
+				That they did! I would have paid good freshwater to witness that firstpaw, but only the Beetle Moon peered at their shameful escape. I had the wall brought down, it dinnae serve any purpose anymore. Oh, and please have this -- as thanks fer yer help in the matter. Laid unused in some messy worskhop, would ye believe that?
+			</text>
+			<choice Target="End" FinishQuest="Brothers_CatsDogs_MainQuestEpilogue">
+				<text>I am not sure what to think about this whole affair. Live and drink, mayor.</text>
+				<part Name="ReceiveItem" Blueprints="Helping Hands" Identify="Helping Hands" />
+				<part Name="Brothers_ModifyReputation" Faction="Dogs" Value="200" Shown="False" />
+			</choice>
+		</node>		
+	
+		<node ID="WhatNow" Inherits="Welcome">
+			<text ID="WhatNowDogMayorNeutral" IfHaveState="Brothers_CatsDogs_NeutralEnding">			
+				The same thing that happened for decades, in a wee bit more peaceful climate by any chance. I heard me child is seeing one of them cats from Spar now -- what to think of that, I cannae tell ye.
+			</text>
+			<text ID="WhatNowDogMayorPerfect" IfHaveState="Brothers_CatsDogs_PerfectEnding"> 
+				"This place"? If the blood of me blood heard ye calling it that instead of Shikspar, ye would get yer ears boxed in. I reckon I will be stepping down in a few years time -- me clouded judgment dinnae do Shik much good, now did it?
+			</text>
+			<text ID="WhatNowDogMayorShik" IfHaveState="Brothers_CatsDogs_ShikEnding">			
+				Our future is bright, that I can assure ye traveler. This place is ours, as it should be -- only great things await us now.
+			</text>
+		</node>	
+
 		<node ID="Services" Inherits="Welcome">
-			<text>
+			<text ID="ServicesPerfect" IfHaveState="Brothers_CatsDogs_PerfectEnding_Occured">
+				Heh, ye will want to call it Shikspar nowadays. But we have everything ye could possibly need: soft cushions, tasty cooking, a place to trade in commodities and the best tinker ye could ask fer.
+				
+				{{emote|*The mayor swells with pride at the list of what =pronouns.possessive= village has to offer.*}}
+			</text>
+			<text ID="ServicesNotPerfect" IfNotHaveState="Brothers_CatsDogs_PerfectEnding_Occured">
 				Heh, ye will find Shik to have everything ye could possibly need: soft cushions, tasty cooking and a place to trade in commodities.
 				
 				{{emote|*The mayor swells with pride at the list of what =pronouns.possessive= village has to offer.*}}
 			</text>
-			<choice Target="Tinker" Priority="10">And if my equipment needs tinkering, where should I head?</choice>				
+			<choice Target="Tinker" Priority="10" IfNotHaveState="Brothers_CatsDogs_AnyEnding_Occured">And if my equipment needs tinkering, where should I head?</choice>				
 		</node>	
 
 		<node ID="Tinker" Inherits="Welcome">
@@ -583,6 +656,14 @@
 
 	<conversation ID="Brothers_CatsDogs_CatMayor">
 
+		<start ID="TransitionWelcome" IfHaveQuest="Brothers_CatsDogs_MainQuestEpilogue" IfNotHaveState="(Brothers_CatsDogs_AnyEnding_Occured AND Brothers_CatsDogs_ShikEnding)">
+			<text>			
+				{{emote|*=pronouns.Subjective= =verb:sits:afterpronoun=, pondering the situation.*}}
+
+				Visitor, in other circumstancs you would be welcome -- but with the recent Gathering, I cannot spare the time to discuss with you.</text>
+			<choice Target="End">ok ill be back later.</choice>
+		</start>
+		
 		<start ID="BadWelcome" IfHaveState="Brothers_CatsDogs_ShikEnding">
 			<text>			
 				{{emote|*=pronouns.Subjective= =verb:gazes:afterpronoun= at the horizon, lost in thought.*}}
@@ -629,8 +710,10 @@
 			<choice Target="Work" IfNotHaveQuest="Brothers_CatsDogs_CheeseQuest">Is there any work to do in Spar?</choice>
 			<choice Target="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">How come a wall stands in the middle of this town?</choice>
 			<choice Target="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What led to Shik and Spar's division?</choice>
+			<choice Target="Epilogue" IfHaveActiveQuest="Brothers_CatsDogs_MainQuestEpilogue" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">I am back, lady mayor. What happened while I was away?</choice>			
+			<choice Target="WhatNow" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">What does the future hold for this community?</choice>	
 			<choice Target="Services">What can I expect to find in Spar, once I am done napping?</choice>
-			<choice Target="Travelers">There seems to be only cats in Shik. Is my presence not an issue?</choice>	
+			<choice Target="Travelers" IfNotHaveState="Brothers_CatsDogs_AnyEnding_Occured">There seems to be only cats in Shik. Is my presence not an issue?</choice>	
 			<choice Target="Goatfolk">Are you not bothered by the jungle goatfolk?</choice>			
 			<choice Target="End">Live and drink, lady mayor.</choice>
 		</node>
@@ -661,14 +744,77 @@
 				You need not convince me -- I already know we are in the right. It is the warden who needs reminding of whose side the truth lies with.	
 			</text>
 		</node>	
+
+		<node ID="Epilogue">
+			<text ID="EpilogueBriefNeutral" IfHaveState="Brothers_CatsDogs_NeutralEnding">			
+				{{emote|*=pronouns.Subjective= =verb:seem:afterpronoun= uneasy answering that question.*}}
+				
+				Well, what thought to be brutes out more moderate than I first thought, and people from Shik visit from time to time. I have decided we can tolerate that situation, in light of your recent revelations.
+			</text>
+			<text ID="EpilogueBriefPerfect" IfHaveState="Brothers_CatsDogs_PerfectEnding">	
+				{{emote|*=pronouns.Subjective= uncomfortably =verb:knead:afterpronoun= the ground beneath =pronouns.possessive= paws.*}}
+				
+				Why visitor, you ought to discuss the matter with young Rrromaw. My heir has moved out to a hut inbetween villages with a dog from Shik and... Well, you will get a better explanation from them.</text>
+			<text ID="EpilogueBriefShik" IfHaveState="Brothers_CatsDogs_ShikEnding">			
+				{{emote|*=pronouns.Subjective= =verb:smile:afterpronoun= devilishly.*}}
+				
+				Justice happened, visitor. And the best kind -- self-served. After those brutes realized they were in the wrong, all of Shik's thugs left. Poor things could not sit with the weight of their own failure. Disappointing, but to be expected from the likes of them.
+			</text>
+			<choice Target="EpilogueNeutral" IfHaveState="Brothers_CatsDogs_NeutralEnding">Is the feud between Shik and Spar truly over?</choice>
+			<choice Target="EpilogueShik" IfHaveState="Brothers_CatsDogs_ShikEnding">Am I to believe the people from Shik simply left their homes behind?</choice>
+			<choice Target="End" IfHaveState="Brothers_CatsDogs_PerfectEnding">I will talk to Rrromaw, then. Live and drink, lady mayor.</choice>
+		</node>		
 	
+		<node ID="EpilogueNeutral">
+			<text>						
+				The answer does not lie only with me, visitor. But if you must ask, yes: as far as I am concerned, that whole matter is behind us. Do not mistake my words, some of them are still shaggy brutes -- but they can do some good nonetheless. Your help was invaluable here: who knows to what ends they might have gone if not for you.
+
+				I also know gifts carry gratitude better than words, so I would like you to have this in addition to Spar's heartfelt thanks.
+			</text>
+			<choice Target="End" FinishQuest="Brothers_CatsDogs_MainQuestEpilogue">
+				<text>At least things were resolved peacefully. Live and drink, lady mayor.</text>
+				<part Name="ReceiveItem" Blueprints="Helping Hands" Identify="Helping Hands" />
+				<part Name="Brothers_ModifyReputation" Faction="Cats" Value="100" Faction2="Dogs" Value2="100" Shown="False" />
+			</choice>
+		</node>	
+
+		<node ID="EpilogueShik">
+			<text>						
+				{{emote|*=pronouns.Subjective= =verb:smrik:afterpronoun= at your question.*}}
+				
+				Believe what you must, visitor, it matters little to me. Still, why would I lie? The cover of the night was the only witness to their ridiculous exile. The wall came down soon after, stripped of purpose. All of Spar would want you to have this: a fitting reward for the role you played into it, retrieved from their own stores.
+			</text>
+			<choice Target="End" FinishQuest="Brothers_CatsDogs_MainQuestEpilogue">
+				<text>So this is how it ends? Live and drink, lady mayor.</text>
+				<part Name="ReceiveItem" Blueprints="Helping Hands" Identify="Helping Hands" />
+				<part Name="Brothers_ModifyReputation" Faction="Cats" Value="200" Shown="False" />
+			</choice>
+		</node>		
+	
+		<node ID="WhatNow" Inherits="Welcome">
+			<text ID="WhatNowDogMayorNeutral" IfHaveState="Brothers_CatsDogs_NeutralEnding">			
+				More of the same, I reckon. Spar shall approach the situation carefully. As for my family, it would happen Rrromaw fancies a dog from Shik -- heartbreak in the making.
+			</text>
+			<text ID="WhatNowDogMayorPerfect" IfHaveState="Brothers_CatsDogs_PerfectEnding"> 
+				Rrromaw would hiss upon hearing you avoid the name Shikspar. My child is wiser than me, and I expect a new mayor should be appointed soon -- this old feline has had her vision obscured by tradition for much too long.
+			</text>
+			<text ID="WhatNowDogMayorShik" IfHaveState="Brothers_CatsDogs_ShikEnding">			
+				Having shed the burden of Shik, our road is paved with greatness. You will always be welcome, visitor, for having proven instrumental in our success.
+			</text>
+		</node>	
+
 		<node ID="Services" Inherits="Welcome">
-			<text>				
+			<text ID="ServicesPerfect" IfHaveState="Brothers_CatsDogs_PerfectEnding_Occured">
+				{{emote|*The glimmer in =pronouns.possessive= eye betrays pride at =pronouns.possessive= village's amenities.*}}
+				
+				Oh, traveler, this place is called Shikspar now. But surely you will need to break your fast: we have plenty of cheese for that, arranged by the Growarows in delicious meals. And if it is tinkering you require, our chrome-surgeon proved her worth time and time again.
+			</text>
+			<text ID="ServicesNotPerfect" IfNotHaveState="Brothers_CatsDogs_PerfectEnding_Occured">				
 				{{emote|*The glimmer in =pronouns.possessive= eye betrays pride at =pronouns.possessive= village's amenities.*}}
 				
 				Surely you will need to break your fast: we have plenty of cheese for that. And if it is tinkering you require, our chrome-surgeon proved her worth time and time again.
 			</text>
-			<choice Target="Chef" Priority="10">Thank you for the pointers. But if I need some general trading, or a chef, what would you recommend?</choice>				
+			<choice Target="Chef" Priority="10" IfNotHaveState="Brothers_CatsDogs_AnyEnding_Occured">Thank you for the pointers. But if I need some general trading, or a chef, what would you recommend?</choice>				
 		</node>	
 
 		<node ID="Chef" Inherits="Welcome">
@@ -835,6 +981,7 @@
 			<choice Target="End" FinishQuest="Brothers_CatsDogs_MainQuestEpilogue">
 				<text>It really was nothing, Oof Growf. I wish the two of you the best -- live and drink.</text>
 				<part Name="ReceiveItem" Blueprints="Helping Hands" Identify="Helping Hands" />
+				<part Name="Brothers_ModifyReputation" Faction="Cats" Value="200" Faction2="Dogs" Value2="200" Shown="False" />
 			</choice>
 		</node>	
 
@@ -1149,6 +1296,7 @@
 			<choice Target="End" FinishQuest="Brothers_CatsDogs_MainQuestEpilogue">
 				<text>I am simply glad I could help, Rrromaw. I wish the two of you the best -- live and drink.</text>
 				<part Name="ReceiveItem" Blueprints="Helping Hands" Identify="Helping Hands" />
+				<part Name="Brothers_ModifyReputation" Faction="Cats" Value="200" Faction2="Dogs" Value2="200" Shown="False" />
 			</choice>
 		</node>	
 
