@@ -352,7 +352,7 @@
 			<text ID="WhatNowWardenNeutral" IfHaveState="Brothers_CatsDogs_NeutralEnding">
 				{{emote|*The rustling of leaves gives way to an answer.*}}
 
-				Not much has changed, has it =name=? At the very least the mayors have stopped restlessly petitioning me. A step in the right direction, I wager.
+				Not much has changed, has it =name=? At the very least I am not restlessly petitioned on a century-long feud. A step in the right direction, I wager.
 			</text>
 			<text ID="WhatNowWardenPerfect" IfHaveState="Brothers_CatsDogs_PerfectEnding">
 				{{emote|*The rustling of leaves gives way to an answer.*}}
@@ -362,12 +362,12 @@
 			<text ID="WhatNowWardenShik" IfHaveState="Brothers_CatsDogs_ShikEnding">
 				{{emote|*The rustling of leaves gives way to an answer.*}}
 
-				I would not have expected the lady mayor to leave with her people -- if anything, she followed her own logic to the end.
+				I would not have expected Spar's people to leave -- will Shik survive on its own?
 			</text>
 			<text ID="WhatNowWardenSpar" IfHaveState="Brothers_CatsDogs_SparEnding">
 				{{emote|*The rustling of leaves gives way to an answer.*}}
 
-				To think the mayor would take his people along and leave Shik -- the downfall of a bruised ego.
+				To think Shik would end up deserted -- can Spar really stand alone in Qud?
 			</text>
 		</node>			
 		
@@ -501,7 +501,7 @@
 				
 				Traveler, it might be best if ye talk to Oof Growf about it, will ye? Blood of me blood has moved into a hut nearby with... Aye, I beg ye talk with the two of them.</text>
 			<text ID="EpilogueBriefShik" IfHaveState="Brothers_CatsDogs_ShikEnding">			
-				{{emote|*Ego glimmers in =pronouns.possesssive= eyes.*}}
+				{{emote|*Ego glimmers in =pronouns.possessive= eyes.*}}
 				
 				Fer the best, that much is sure, traveler! Devious liars hung their heads in shame and left, all sycophants that they were. Now we dogs from Shik have the entire village for ourselves, as the Founder intended.
 			</text>
@@ -755,13 +755,13 @@
 				{{emote|*=pronouns.Subjective= uncomfortably =verb:knead:afterpronoun= the ground beneath =pronouns.possessive= paws.*}}
 				
 				Why visitor, you ought to discuss the matter with young Rrromaw. My heir has moved out to a hut inbetween villages with a dog from Shik and... Well, you will get a better explanation from them.</text>
-			<text ID="EpilogueBriefShik" IfHaveState="Brothers_CatsDogs_ShikEnding">			
+			<text ID="EpilogueBriefShik" IfHaveState="Brothers_CatsDogs_SparEnding">			
 				{{emote|*=pronouns.Subjective= =verb:smile:afterpronoun= devilishly.*}}
 				
-				Justice happened, visitor. And the best kind -- self-served. After those brutes realized they were in the wrong, all of Shik's thugs left. Poor things could not sit with the weight of their own failure. Disappointing, but to be expected from the likes of them.
+				Justice happened, visitor. And the best kind -- self-served. After those brutes realized they were in the wrong, all of Shik's thugs left. Poor things could not sit with the weight of their own failures. Disappointing, but to be expected from the likes of them.
 			</text>
 			<choice Target="EpilogueNeutral" IfHaveState="Brothers_CatsDogs_NeutralEnding">Is the feud between Shik and Spar truly over?</choice>
-			<choice Target="EpilogueShik" IfHaveState="Brothers_CatsDogs_ShikEnding">Am I to believe the people from Shik simply left their homes behind?</choice>
+			<choice Target="EpilogueSpar" IfHaveState="Brothers_CatsDogs_SparEnding">Am I to believe the people from Shik simply left their homes behind?</choice>
 			<choice Target="End" IfHaveState="Brothers_CatsDogs_PerfectEnding">I will talk to Rrromaw, then. Live and drink, lady mayor.</choice>
 		</node>		
 	
@@ -778,7 +778,7 @@
 			</choice>
 		</node>	
 
-		<node ID="EpilogueShik">
+		<node ID="EpilogueSpar">
 			<text>						
 				{{emote|*=pronouns.Subjective= =verb:smrik:afterpronoun= at your question.*}}
 				
@@ -1073,7 +1073,8 @@
 			<choice Target="WhatNow" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">How was I of great help to you?</choice>
 			<choice Target="Family">Are you related to Shik's mayor?</choice>	
 			<choice Target="End">
-				<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)">I will keep you in the know should I ever see Rrromaw. For now, live and drink.</text>
+				<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">Live and drink, infatuated dog..</text>
+				<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfNotHaveState="Brothers_CatsDogs_AnyEnding_Occured">I will keep you in the know should I ever see Rrromaw. For now, live and drink.</text>
 				<text IfHaveQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">Live and drink, infatuated dog.</text>
 			</choice>
 		</node>
@@ -1376,7 +1377,7 @@
 		</start>
 
 		<node ID="DefaultChoices">
-			<choice Target="Brief" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_DogLoverSeen" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">As a matter of fact I have seen a dog called Oof Growf, yes. Why do you want to know?.</choice>
+			<choice Target="Brief" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_DogLoverSeen" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">As a matter of fact I have seen a dog called Oof Growf, yes. Why do you want to know?</choice>
 			<choice Target="Gifts" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts" IfHaveLiquid="wine" IfHaveItemDescendsFrom="Polished Gemstone">I have the wine and gem you asked for.</choice>
 			<choice Target="Date" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfHaveItem="Brothers_CatsDogs_LoveNote">I come bearing a message: you have got yourself a proper date.</choice>
 			<choice Target="Debrief" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Invite">Great news: I have delivered your invitation to Oof Growf, and it has been accepted!</choice>			
@@ -1385,7 +1386,8 @@
 			<choice Target="WhatNow" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">I am not sure I understand how I was of any help to you.</choice>
 			<choice Target="Family">Are you related to Spar's mayor?</choice>	
 			<choice Target="End">
-				<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)">I will let you know if I ever see Oof Growf -- in the meantime, live and drink.</text>
+				<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">Live and drink, enamored cat.</text>
+				<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfNotHaveState="Brothers_CatsDogs_AnyEnding_Occured">I will let you know if I ever see Oof Growf -- in the meantime, live and drink.</text>
 				<text IfHaveQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">Live and drink, enamored cat.</text>
 			</choice>
 		</node>
@@ -2015,7 +2017,7 @@
 			<text ID="WhatNowChefShik2" IfSpeakerNotEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_ShikEnding">
 				Did the cats of Spar really have to leave? This is quite a waste. How will they even survive in Qud?
 				
-				{{Y|This could be the end of us too. Will travelers still stop by half a community, =player.formalAddressTerm=?.}}
+				{{Y|This could be the end of us too. Will travelers still stop by half a community, =player.formalAddressTerm=?}}
 			</text>	
 		</node>	
 		
@@ -2316,7 +2318,7 @@
 			<text ID="WhatNowTinkerSpar" IfHaveState="Brothers_CatsDogs_SparEnding">
 				{{emote|*=pronouns.Subjective= =verb:concentrate:afterpronoun= on =pronouns.possessive= work.*}}
 
-				Nothing but silence beyond the wall now, =player.apparentSpecies=. How long before traders skip this half-abandoned place, you think?
+				Mostly silence beyond the outskirts now, =player.apparentSpecies=. How long before trading caravans skip this half-abandoned place, you think?
 			</text>
 		</node>		
 
