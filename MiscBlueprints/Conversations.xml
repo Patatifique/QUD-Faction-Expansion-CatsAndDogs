@@ -1073,7 +1073,7 @@
 			<choice Target="WhatNow" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">How was I of great help to you?</choice>
 			<choice Target="Family">Are you related to Shik's mayor?</choice>	
 			<choice Target="End">
-				<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">Live and drink, infatuated dog..</text>
+				<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">Live and drink, infatuated dog.</text>
 				<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfNotHaveState="Brothers_CatsDogs_AnyEnding_Occured">I will keep you in the know should I ever see Rrromaw. For now, live and drink.</text>
 				<text IfHaveQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">Live and drink, infatuated dog.</text>
 			</choice>
