@@ -4,7 +4,8 @@ using XRL.World;
 using XRL.World.Quests;
 using XRL.World.Parts;
 using XRL.UI;
-using XRL.World.ZoneParts;  
+using XRL.World.ZoneParts;
+using System.Globalization;
 
 namespace XRL.World.Quests
 {
@@ -121,7 +122,7 @@ namespace XRL.World.Quests
             }
             
             var part = new Brothers_BoolStateTimer();
-            part.startTurn = The.Game.Turns;
+            part.startTurn = Calendar.TotalTimeTicks;
             part.state = "Brothers_CatsDogs_AnyEnding_Occured";
             part.targetTurns = 6000L;
             The.Player.AddPart(part);

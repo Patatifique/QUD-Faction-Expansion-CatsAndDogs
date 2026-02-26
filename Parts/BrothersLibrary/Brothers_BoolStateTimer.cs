@@ -22,7 +22,7 @@ namespace XRL.World.Parts
         public override bool FireEvent(Event E)
         {
             if (E.ID == "BeginTakeAction" &&
-                The.Game.Turns - this.startTurn > this.targetTurns)
+                Calendar.TotalTimeTicks - this.startTurn > this.targetTurns)
             {
                 The.Game.SetBooleanGameState(state, value);
                 this.ParentObject.RemovePart(this);
