@@ -123,7 +123,7 @@ namespace XRL.World.Quests
             var part = new Brothers_BoolStateTimer();
             part.startTurn = The.Game.Turns;
             part.state = "Brothers_CatsDogs_AnyEnding_Occured";
-            part.targetTurns = 200L;
+            part.targetTurns = 6000L;
             The.Player.AddPart(part);
         
         }
