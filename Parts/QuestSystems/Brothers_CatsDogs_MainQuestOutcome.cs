@@ -178,7 +178,7 @@ namespace XRL.World.ZoneParts
                 if(!The.Game.GetBooleanGameState("Brothers_CatsDogs_NeutralEnding_Occured"))
                 {
                     The.Game.SetBooleanGameState("Brothers_CatsDogs_NeutralEnding_Occured", true);
-                    Popup.Show("Neutral Ending");
+                    //Popup.Show("Neutral Ending");
                 }
             }
             
@@ -191,7 +191,7 @@ namespace XRL.World.ZoneParts
                 if(!The.Game.GetBooleanGameState("Brothers_CatsDogs_ShikEnding_Occured"))
                 {
                     The.Game.SetBooleanGameState("Brothers_CatsDogs_ShikEnding_Occured", true);
-                    Popup.Show("Shik Ending");
+                    //Popup.Show("Shik Ending");
                     
                     // Change Terrain Data
                     ReplaceTerrainData(
@@ -262,7 +262,7 @@ namespace XRL.World.ZoneParts
                 if(!The.Game.GetBooleanGameState("Brothers_CatsDogs_SparEnding_Occured"))
                 {
                     The.Game.SetBooleanGameState("Brothers_CatsDogs_SparEnding_Occured", true);
-                    Popup.Show("Spar Ending");
+                    //Popup.Show("Spar Ending");
 
                     // Change Terrain Data
                     ReplaceTerrainData(
@@ -328,7 +328,7 @@ namespace XRL.World.ZoneParts
                 if(!The.Game.GetBooleanGameState("Brothers_CatsDogs_PerfectEnding_Occured"))
                 {
                     The.Game.SetBooleanGameState("Brothers_CatsDogs_PerfectEnding_Occured", true);
-                    Popup.Show("Perfect Ending");
+                    //Popup.Show("Perfect Ending");
 
                     // Change Terrain Data
                     ReplaceTerrainData(
@@ -424,7 +424,7 @@ namespace XRL.World.ZoneParts
             // Debug
             else
             {
-                Popup.Show("No ending");
+                Popup.Show("No ending, something went wrong.");
             }
 
             // Remove part after applying the outcome
