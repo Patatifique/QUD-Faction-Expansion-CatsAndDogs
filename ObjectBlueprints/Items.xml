@@ -51,7 +51,7 @@
 		<part Name="Physics" Weight="3" Organic="true"/>
 		<part Name="Metal" />
 		<tag Name="Tier" Value="2" />
-		<part Name="ModGlassArmor" Tier="3" Type="spiked" />
+		<part Name="Brothers_ModMeleeReflectiveArmor" Tier="3" Type="spiked" />
 	</object>
   
   	<object Name="Brothers_CatsDogs_Herding Scarf" Inherits="BaseFaceJewelry">
