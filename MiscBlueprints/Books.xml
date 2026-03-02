@@ -2,32 +2,25 @@
 
 <books>
   
-	<book ID="Brothers_CatsDogs_DroolhoundStory" Title="{{W|An Unusual Pup}}">
-		<page>
-With elevated anguish, the small hyrkhound pup bites in the tough gnu carcass again, expecting his saliva to dissolve the leathery meat and let him feast like his siblings. Despite his efforts, neutral saliva pools on the hide, without the telltale hissing nor sizzling that would announce a delicious meal.
+	<book ID="Brothers_CatsDogs_DroolhoundStory" Title="{{W|An Unusual Pup}}" Format="Auto" Margins="1,2,2,2">
+<page>With elevated anguish, the small hyrkhound pup bites in the tough gnu carcass again, expecting his saliva to dissolve the leathery meat and let him feast like his siblings. Despite his efforts, neutral saliva pools on the hide, without the telltale hissing nor sizzling that would announce a delicious meal.
 
 A whimpers escape his frail jaws as other pups nudge him out of the way to access delicious meat. The towering silhouettes of the rest of the pack roam the nearby shadows, bleached fangs bared in an unspoken threat against the runt-of-the-litter, unable to feed by itself.
 
 He makes another attempt to reach for the gnu, but already the rumps of its pack-sibs have taken his place. Pulling one of their tail only gets him a snapping bite on the snout, and he is forced back by yapping barks.
 
-The adults close in, now. With the pups having fed comes their turn, and soon enough there is nothing but faded bones left exposed under the Waning Salt Sun. Yet another day to spend on an empty stomach, and the pack is already on the move.
-		</page>
-		<page>
-With each day they grow stronger and feed faster, while the pup wanes, barely subsisting on tough meat strips. They run faster too, and one day they leave him behind, glowcrows already circling the weakened hyrkhound that could not feed properly.
+The adults close in, now. With the pups having fed comes their turn, and soon enough there is nothing but faded bones left exposed under the Waning Salt Sun. Yet another day to spend on an empty stomach, and the pack is already on the move.</page>
+<page>With each day they grow stronger and feed faster, while the pup wanes, barely subsisting on tough meat strips. They run faster too, and one day they leave him behind, glowcrows already circling the weakened hyrkhound that could not feed properly.
 
-Such is life in Qud.
-		</page>
+Such is life in Qud.</page>
 	</book>
  
-	<book ID="Brothers_CatsDogs_BrainkittyStory" Title="{{W|The Oldest Kitten Alive}}">
-		<page>
-One could assume time comes for all things in equal manner. In this specific case however, one would be wrong. Ego projection may safeguard the body against the river of time, letting its water glide harmlessly on soft fur that has never known silver nor wrinkle. The mind is keened to point, challenging the expression "wise beyond one's years" with the abrupt insertion of "apparent".
-		</page>
+	<book ID="Brothers_CatsDogs_BrainkittyStory" Title="{{W|The Oldest Kitten Alive}}" Format="Auto" Margins="1,2,2,2">
+<page>One could assume time comes for all things in equal manner. In this specific case however, one would be wrong. Ego projection may safeguard the body against the river of time, letting its water glide harmlessly on soft fur that has never known silver nor wrinkle. The mind is keened to point, challenging the expression "wise beyond one's years" with the abrupt insertion of "apparent".</page>
 	</book>
 
 	<book ID="Brothers_CatsDogs_TravelerJournal" Title="{{W|Audio Travelog CLIV}}" Format="Auto" Margins="1,2,2,2">
-		<page>
-[[{{w|16th of Uulu Ut}}]]
+<page>[[{{w|16th of Uulu Ut}}]]
 
 Speculator Ptodelia reporting. I am out of the salt marshes, at long last, and have managed to clean the worst of the rust from my weapon. It is now the... {{emote|*rummaging sounds*}} ...16th, if my closcillator has not been completely thrown off. Compared to my last recording, the situation has improved somewhat. I have managed to retrieve most of the packbot's equipment, although I was forced to leave it behind, Academy forgives me.
 
@@ -50,24 +43,21 @@ I found the expected services: trading, and some rudimentary tinkering. I have g
 
 [[{{w|27th of Uulu Ut}}]]
 
-Speculator Ptodelia reporting. I have stayed longer than expected, but will be leaving the villages behind today. I have packed already and intend to be out before Ut yara Ux. The local leaders spared no effort to sway me to their cause, producing empty promises of lavish gifts. As per the Principles I will be limiting my impact and merely documenting -- I already should have left days ago. Speculator Ptodelia, out.
-		</page>
+Speculator Ptodelia reporting. I have stayed longer than expected, but will be leaving the villages behind today. I have packed already and intend to be out before Ut yara Ux. The local leaders spared no effort to sway me to their cause, producing empty promises of lavish gifts. As per the Principles I will be limiting my impact and merely documenting -- I already should have left days ago. Speculator Ptodelia, out.</page>
 	</book>
 
 	<book ID="Brothers_CatsDogs_DateInvite" Title="{{W|folded sheet of paper}}" Format="Auto" Margins="1,2,2,2">
-		<page>
-{{emote|*much of the note waxes semantic and prose, yet the meaning remains clear: will the recipient come to the Ut yara Ux dance?*}}
-		</page>
+<page>{{emote|*much of the note waxes semantic and prose, yet the meaning remains clear: will the recipient come to the Ut yara Ux dance?*}}</page>
 	</book>
 
 	<book ID="Brothers_CatsDogs_CatGodNote" Title="{{W|divine feline note}}" Format="Auto" Margins="1,2,2,2">
-		<page>{{w|This note holds information about the many creatures met by Miramiahmia, among which Bubumube.}}
+<page>{{w|This note holds information about the many creatures met by Miramiahmia, among which Bubumube.}}
 
 Bubumube had round ears and nonretractile claws.</page>
 	</book>
 
 	<book ID="Brothers_CatsDogs_DogGodNote" Title="{{W|divine canine note}}" Format="Auto" Margins="1,2,2,2">
-		<page>{{w|This note holds information about the many creatures met by Boroworof, among which Bubumube.}}
+<page>{{w|This note holds information about the many creatures met by Boroworof, among which Bubumube.}}
 
 Bubumube had solitary tendencies and fished in Qud's rivers.</page>
 	</book>
