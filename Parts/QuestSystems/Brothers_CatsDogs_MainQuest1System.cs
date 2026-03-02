@@ -41,5 +41,9 @@ namespace XRL.World.Quests
         {
             CheckQuestProgress();
         }
+        public override GameObject GetInfluencer()
+        {
+            return GameObject.FindByBlueprint("Brothers_CatsDogs_Warden Arendubark");
+        }
     }
 }
