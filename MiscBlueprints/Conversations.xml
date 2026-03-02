@@ -76,7 +76,7 @@
 
 		<node ID="DefaultChoices">
 			<choice Target="Brief1" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">I was told to come see you about the current situation between Shik and Spar.</choice>
-			<choice Target="FounderInfo" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1" IfHaveVillageNote="(Brothers_ShiksparSecret1 OR Brothers_ShiksparSecret2 OR Brothers_ShiksparSecret3)">Warden, I have some information about the Founder.</choice>
+			<choice Target="FounderInfo" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief" IfHaveVillageNote="(Brothers_ShiksparSecret1 OR Brothers_ShiksparSecret2 OR Brothers_ShiksparSecret3)">Warden, I have some information about the Founder.</choice>
 			<choice Target="FounderSecrets" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Clue">I have a first-hand account of Bubumube. What now?</choice>
 			<choice Target="CouncilNotHere" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="(Brothers_CatsDogs_MainQuest3~DogMayor AND Brothers_CatsDogs_MainQuest3~CatMayor)" IfNotHaveState="(Brothers_CatsDogs_CatMayorMoved OR Brothers_CatsDogs_DogMayorMoved)">I have delivered invites to both mayors -- they are on their way.</choice>
 			<choice Target="Council" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="(Brothers_CatsDogs_MainQuest3~DogMayor AND Brothers_CatsDogs_MainQuest3~CatMayor)" IfHaveState="(Brothers_CatsDogs_CatMayorMoved AND Brothers_CatsDogs_DogMayorMoved)" IfZoneHaveObject="(Brothers_CatsDogs_DogMayor AND Brothers_CatsDogs_CatMayor)">I have delivered invites to both mayors -- the Gathering can begin.</choice>
@@ -379,7 +379,7 @@
 		
 		<node ID="Travelers" Inherits="Welcome">
 			<text>
-				We do get the few that do not fear the jungle goatfolks. Dromad caravans, too. There is little reason for most to stop by Shik and Spar. Those who do set up camp in the outskirts, and rarely stay longer than is strictly needed.
+				We do get the few that do not fear the jungle goatfolk. Dromad caravans, too. There is little reason for most to stop by Shik and Spar. Those who do set up camp in the outskirts, and rarely stay longer than is strictly needed.
 			</text>
 		</node>	
 
@@ -807,12 +807,12 @@
 			<text ID="ServicesPerfect" IfHaveState="Brothers_CatsDogs_PerfectEnding_Occured">
 				{{emote|*The glimmer in =pronouns.possessive= eye betrays pride at =pronouns.possessive= village's amenities.*}}
 				
-				Oh, traveler, this place is called Shikspar now. But surely you will need to break your fast: we have plenty of cheese for that, arranged by the Growarows in delicious meals. And if it is tinkering you require, our chrome-surgeon proved her worth time and time again.
+				Oh, traveler, this place is called Shikspar now. But surely you will need to break your fast: we have plenty of cheese for that, arranged by the Growarows in delicious meals. And if it is tinkering you require, our chrome-surgeon has proved her worth time and time again.
 			</text>
 			<text ID="ServicesNotPerfect" IfNotHaveState="Brothers_CatsDogs_PerfectEnding_Occured">				
 				{{emote|*The glimmer in =pronouns.possessive= eye betrays pride at =pronouns.possessive= village's amenities.*}}
 				
-				Surely you will need to break your fast: we have plenty of cheese for that. And if it is tinkering you require, our chrome-surgeon proved her worth time and time again.
+				Surely you will need to break your fast: we have plenty of cheese for that. And if it is tinkering you require, our chrome-surgeon has proved her worth time and time again.
 			</text>
 			<choice Target="Chef" Priority="10" IfNotHaveState="Brothers_CatsDogs_AnyEnding_Occured">Thank you for the pointers. But if I need some general trading, or a chef, what would you recommend?</choice>				
 		</node>	
@@ -2216,7 +2216,7 @@
 	
 		<node ID="Brief3" AllowEscape="false">
 			<text>
-				{{emote|*=pronouns.Subjective= =verb:turn:afterpronoun= back to you, letting =pronouns.possessive= chrome work incomplete for the time being.*}}
+				{{emote|*=pronouns.Subjective= =verb:turn:afterpronoun= back to you, leaving =pronouns.possessive= chrome work incomplete for the time being.*}}
 			
 				Well, there has been stealing from the ripening caves. Vermin of some sort, I would wager. I would ask that you go there and solve the matter, any way you see fit. It goes without saying you will be duly compensated for your efforts.
 			</text>

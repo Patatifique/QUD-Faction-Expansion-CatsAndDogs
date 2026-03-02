@@ -69,6 +69,7 @@
 		<tag Name="PetResponse" Value="licks you back until you are clean,covers you in cleaning saliva,drools all over you and your equipment" />
 		<property Name="Story" Value="Brothers_CatsDogs_DroolhoundStory" />
 		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_Hyrkhound Pet" />
+		<tag Name="Pet" />
 		<tag Name="StartingPet" />
 		<tag Name="NoXP" />
 		<tag Name="Gender" Value="male" />
@@ -201,6 +202,7 @@
 		<tag Name="PetResponse" Value="looks at you tiredly,levitates for a few seconds" />
 		<property Name="Story" Value="Brothers_CatsDogs_BrainkittyStory" />
 		<part Name="ConversationScript" ConversationID="Brothers_CatsDogs_Brainkitty Pet" />
+		<tag Name="Pet" />
 		<tag Name="StartingPet" />
 		<tag Name="NoXP" />
 		<tag Name="Gender" Value="male" />
