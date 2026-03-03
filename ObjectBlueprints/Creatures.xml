@@ -166,7 +166,7 @@
 	<object Name="Brothers_CatsDogs_Rocky Lion M" Inherits="Brothers_CatsDogs_Rocky Lion Base">
 		<part Name="Render" Tile="creatures/catsdogs/rockylionm.png" DisplayName="{{w|lithic lion}}" ColorString="&amp;y" DetailColor="w" />
 		<tag Name="Gender" Value="male" />
-		<part Name="Description" Short="Here stands the solitary monarch of petrified waterfalls, hide cascading with shale and quarts. Flecks of mica shimmer in =pronouns.possessive= fur, coating a muscular intention made manifest with ponderous materialization." />
+		<part Name="Description" Short="Here stands the solitary monarch of petrified waterfalls, hide cascading with shale and quartz. Flecks of mica shimmer in =pronouns.possessive= fur, coating a muscular intention made manifest with ponderous materialization." />
 		<tag Name="DynamicObjectsTable:Mountains_Creatures" />
 	</object>
 	
