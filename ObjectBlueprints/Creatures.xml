@@ -136,7 +136,7 @@
 		<skill Name="Tactics" />
 		<skill Name="Tactics_Charge" />
 		<skill Name="Tactics_Run" />
-		<part Name="Hidden" Difficulty="15" />
+		<part Name="Hidden" Difficulty="10" />
 		<tag Name="DynamicObjectsTable:DeepJungle_Creatures" />
 		<tag Name="Role" Value="Uncommon" />
 	</object>
@@ -593,6 +593,7 @@
 		<inventoryobject Blueprint="Wide-brimmed Hat" />
 		<inventoryobject Blueprint="@Junk 1" Number="1-4" />
 		<skill Name="CookingAndGathering_Harvestry" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 
 	<object Name="Brothers_CatsDogs_SparCitizen" Inherits="BaseCat">
@@ -613,6 +614,7 @@
 		<inventoryobject Blueprint="Leather Cap" />
 		<inventoryobject Blueprint="@Junk 1" Number="1-4" />
 		<skill Name="CookingAndGathering_Butchery" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 
 	<object Name="Brothers_CatsDogs_SparPig" Inherits="Farm Pig">
