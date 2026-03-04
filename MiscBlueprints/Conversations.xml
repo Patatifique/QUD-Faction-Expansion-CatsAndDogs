@@ -2229,7 +2229,7 @@
 			<text>
 				{{emote|*=pronouns.Subjective= =verb:roll:afterpronoun= eyes behind oscillating eyewear.*}}
 			
-				So now we know for certain the cheese did not walk away of its own volition. Have you handled the matter of those shrews?
+				So now we know for certain the cheese did not walk away of its own volition. They are likely pouring in from a crack in a wall, somewhere. Have you handled the matter of those shrews yet?
 			</text>
 			<choice Target="Start">Not quite yet, but there is another matter we need to discuss.</choice>
 			<choice Target="End">I am on my way to do just that. Live and drink.</choice>	
