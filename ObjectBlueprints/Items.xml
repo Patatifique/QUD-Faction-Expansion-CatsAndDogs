@@ -108,7 +108,7 @@
 		<part Name="Description" Short="Jagged enamel craves violence." />
 		<part Name="Armor" AV="1" DV="0" WornOn="Face" />
 		<part Name="AddsRep" Faction="Apes:100,Baboons:100,Bears:100,Cats:100,Dogs:100,Prey:100" />
-		<part Name="EquipStatBoost" CountAsBase="true" Boosts="Strength:4;Toughness:4;FireResistance:15;ColdResistance:15" ChargeUse="0" IsBootSensitive="false" IsEMPSensitive="false" />
+		<part Name="EquipStatBoost" CountAsBase="true" Boosts="Strength:4;Toughness:4;HeatResistance:15;ColdResistance:15" ChargeUse="0" IsBootSensitive="false" IsEMPSensitive="false" />
 		<part Name="MeleeWeapon" MaxStrengthBonus="9999" BaseDamage="2d4" Skill="Axe" Stat="Strength" Slot="Face" />
 		<part Name="LatchesOn" InitialSaveTarget="25" InitialSaveStat="Agility" InitialSaveDifficultyStat="Agility" MoveSaveTarget="25" MoveSaveStat="Strength" MoveSaveDifficultyStat="Strength" BreakSaveTarget="25" BreakSaveStat="Strength" BreakSaveDifficultyStat="Strength" Duration="3d4" AutoAttackOnMove="false" AutoAttackOnMoveAway="false" AutoAttackPerTurn="true" BloodSpatterOnLatch="true" />
 		<part Name="NaturalEquipment" />

@@ -2,11 +2,11 @@
 
 <bodies>
 
-	<bodyparttypes>
+	<bodyparttypevariants>
 
-		<bodyparttype Type="Forearm" LimbBlueprintProperty="SeveredArmBlueprint" Appendage="true" UsuallyOn="Arm" Branching="Lateral,Vertical,Longitudinal,Stratal" ChimeraWeight="0" />
+		<bodyparttypevariant VariantOf="Arm" Type="Forearm" LimbBlueprintProperty="SeveredArmBlueprint" Appendage="true" UsuallyOn="Arm" Branching="Lateral,Vertical,Longitudinal,Stratal" ChimeraWeight="0" />
 
-	</bodyparttypes>
+	</bodyparttypevariants>
 
 	<anatomies>
 
