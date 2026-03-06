@@ -2182,7 +2182,7 @@
 
 				Alright, you are an expert, I get it! Founder, no need to brag about the matter. 			
 			</text>
-			<choice Target="Brief">Well, you asked and got your answer. What is the job about?</choice>
+			<choice Target="Brief1">Well, you asked and got your answer. What is the job about?</choice>
 			<choice Target="End">I don't like your attitude much. Live and drink.</choice>
 		</node>
 	
