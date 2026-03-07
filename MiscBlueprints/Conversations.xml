@@ -1483,7 +1483,7 @@
 				A date? But... I do not even know you...
 			</text>
 			<choice Target="Delivered" TakeItem="Brothers_CatsDogs_LoveNote">Not with me, obviously. With Oof Growf, from Shik: this note will explain everything.</choice>
-			<choice Target="GiveInvite" TakeItem="Brothers_CatsDogs_LoveNote">I am heartbroken, but shall recover swiftly. In the meantime, please have this note -- the actual date invitation.</choice>
+			<choice Target="Delivered" TakeItem="Brothers_CatsDogs_LoveNote">I am heartbroken, but shall recover swiftly. In the meantime, please have this note -- the actual date invitation.</choice>
 		</node>
 	
 		<node ID="Delivered" AllowEscape="false">
