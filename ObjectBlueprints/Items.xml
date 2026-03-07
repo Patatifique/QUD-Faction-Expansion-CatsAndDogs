@@ -186,7 +186,7 @@
 	<object Name="Brothers_CatsDogs_DogGodNote" Inherits="Book">
 		<part Name="Render" DisplayName="{{Y|divine canine note}}" ColorString="&amp;w" DetailColor="W" RenderString="=" RenderLayer="5" Tile="Items/sw_paper.bmp" />
 		<part Name="Description" Short="Canine divinity put memories to rest on pulped brinestalk." />
-		<part Name="Book" ID="Brothers_CatsDogs_CatGodNote" />
+		<part Name="Book" ID="Brothers_CatsDogs_DogGodNote" />
 		<part Name="RevealSecretOnRead" Secrets="$Brothers_CatsDogs_ShiksparFounder_Dog" />
 		<part Name="Commerce" Value="10" />    
 		<xtagGrammar Proper="false" adjunctNoun="" />
