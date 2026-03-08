@@ -126,7 +126,7 @@
 		<stat Name="AV" Value="6" />
 		<stat Name="Level" Value="31" />
 		<stat Name="Hitpoints" Value="120" />
-		<part Name="Brain" Hostile="false" Factions="Cats-100" />
+		<part Name="Brain" Hostile="true" Factions="Cats-100" />
 		<inventoryobject Blueprint="Brothers_CatsDogs_Black Puma Claw" Number="2" />
 		<part Name="Description" Short="Slick opal black fur rustles in reaction to light, selfishly hoarding the Hind Sun as a prisoner. Beneath =pronouns.possessive= lithe body, paws crowned with khopeshs furrow the ground in ceremonial silence." />
 		<skill Name="ShortBlades" />
@@ -152,7 +152,7 @@
 		<stat Name="AV" Value="8" />
 		<stat Name="Level" Value="18" />
 		<stat Name="Hitpoints" Value="60" />
-		<part Name="Brain" Hostile="false" Factions="Cats-100" />
+		<part Name="Brain" Hostile="true" Factions="Cats-100" />
 		<inventoryobject Blueprint="Brothers_CatsDogs_Rocky Lion Paw" Number="2" />
 		<skill Name="Cudgel_Expertise" />
 		<skill Name="Cudgel_Bludgeon" />
