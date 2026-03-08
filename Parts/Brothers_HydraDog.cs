@@ -6,6 +6,7 @@ using XRL.World.Anatomy;
 using XRL.Rules;
 
 using XRL.Messages;
+using System.ComponentModel;
 
 
 namespace XRL.World.Parts
@@ -206,7 +207,10 @@ namespace XRL.World.Parts
                 AddHead();
                 
                 // player message
-                MessageQueue.AddPlayerMessage($"{this.ParentObject.the}{this.ParentObject.DisplayNameOnly}'s crest ripples and another head bursts out!");
+                if (this.ParentObject.IsPlayer())
+                    MessageQueue.AddPlayerMessage("Your crest ripples and another head bursts out!");
+                else if (IComponent<GameObject>.Visible(this.ParentObject))
+                    MessageQueue.AddPlayerMessage($"{this.ParentObject.the}{this.ParentObject.DisplayNameOnly}'s crest ripples and another head bursts out!");
             }
             return base.FireEvent(E);
         }
