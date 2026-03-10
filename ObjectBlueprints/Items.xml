@@ -150,7 +150,8 @@
 		<part Name="Physics" Weight="2" />
 		<tag Name="EquipSound" Value="Sounds/Equip/sfx_equip_weapon_bludgeon_artifact" />
 		<tag Name="Mods" Value="WeaponMods,CommonMods,ElectronicsMods" />
-		<tag Name="Tier" Value="3" />    
+		<tag Name="Tier" Value="3" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
  
 	<object Name="Brothers_CatsDogs_Journal" Inherits="Book">
