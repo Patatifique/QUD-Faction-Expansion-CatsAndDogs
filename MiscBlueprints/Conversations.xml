@@ -1790,7 +1790,7 @@
 			</text>
 			<choice Target="CookALot">
 				<text>My skill is recognized far and wide, and I know a fellow chef when I see one. What are you preparing? Freeze-dried yuckwheat? Fermented tortoise scute? Hoarshroom jam?</text>
-				<part Name="Brothers_RequirePart" Part="CookingAndGathering_CarbideChef " Render="Cooking and Gathering: Carbide Chef" />
+				<part Name="Brothers_RequirePart" Part="CookingAndGathering_CarbideChef" Render="Cooking and Gathering: Carbide Chef" />
 			</choice>
 			<choice Target="CookABit">
 				<text>I am enough of a cook to follow recipes, at least. Do you need me to retrieve some?</text>
