@@ -449,7 +449,7 @@
   </cell>
   <cell X="61" Y="4">
     <object Name="DirtFloor"></object>
-    <object Name="Starapple Preserves"></object>
+    <object Name="Starapple Preserves" Owner="Shik"></object>
   </cell>
   <cell X="62" Y="4">
     <object Name="BrinestalkFence"></object>

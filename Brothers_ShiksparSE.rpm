@@ -1485,11 +1485,11 @@
   </cell>
   <cell X="27" Y="15">
     <object Name="DirtFloor"></object>
-    <object Name="Jug"></object>
+    <object Name="Jug" Owner="Spar"></object>
   </cell>
   <cell X="28" Y="15">
     <object Name="DirtFloor"></object>
-    <object Name="Hunk of Cheese"></object>
+    <object Name="Hunk of Cheese" Owner="Spar"></object>
   </cell>
   <cell X="29" Y="15">
     <object Name="DirtFloor"></object>
@@ -1615,15 +1615,15 @@
   </cell>
   <cell X="27" Y="16">
     <object Name="DirtFloor"></object>
-    <object Name="Jug"></object>
+    <object Name="Jug" Owner="Spar"></object>
   </cell>
   <cell X="28" Y="16">
     <object Name="DirtFloor"></object>
-    <object Name="Jug"></object>
+    <object Name="Jug" Owner="Spar"></object>
   </cell>
   <cell X="29" Y="16">
     <object Name="DirtFloor"></object>
-    <object Name="Jug"></object>
+    <object Name="Jug" Owner="Spar"></object>
   </cell>
   <cell X="30" Y="16">
     <object Name="DirtFloor"></object>
@@ -1641,7 +1641,7 @@
   </cell>
   <cell X="34" Y="16">
     <object Name="DirtFloor"></object>
-    <object Name="Hunk of Cheese"></object>
+    <object Name="Hunk of Cheese" Owner="Spar"></object>
   </cell>
   <cell X="35" Y="16">
     <object Name="DirtFloor"></object>

@@ -542,7 +542,7 @@
     <object Name="Brothers_CatsDogs_StarAppleWall"></object>
   </cell>
   <cell X="21" Y="4">
-    <object Name="Dresser"></object>
+    <object Name="Dresser" Owner="Shik"></object>
     <object Name="DirtFloor"></object>
   </cell>
   <cell X="22" Y="4">
@@ -567,15 +567,15 @@
     <object Name="DirtFloor"></object>
   </cell>
   <cell X="28" Y="4">
-    <object Name="Table"></object>
+    <object Name="Table" Owner="Shik"></object>
     <object Name="DirtFloor"></object>
   </cell>
   <cell X="29" Y="4">
-    <object Name="Table"></object>
+    <object Name="Table" Owner="Shik"></object>
     <object Name="DirtFloor"></object>
   </cell>
   <cell X="30" Y="4">
-    <object Name="Table"></object>
+    <object Name="Table" Owner="Shik"></object>
     <object Name="DirtFloor"></object>
   </cell>
   <cell X="31" Y="4">
@@ -587,7 +587,7 @@
     <object Name="DirtFloor"></object>
   </cell>
   <cell X="33" Y="4">
-    <object Name="Preserved Food Basket"></object>
+    <object Name="Preserved Food Basket" Owner="Shik"></object>
     <object Name="DirtFloor"></object>
   </cell>
   <cell X="34" Y="4">
@@ -943,7 +943,7 @@
   </cell>
   <cell X="55" Y="6">
     <object Name="DirtFloor"></object>
-    <object Name="Dresser"></object>
+    <object Name="Dresser" Owner="Shik"></object>
   </cell>
   <cell X="56" Y="6">
     <object Name="DirtFloor"></object>
@@ -1200,7 +1200,7 @@
   </cell>
   <cell X="43" Y="8">
     <object Name="DirtFloor"></object>
-    <object Name="Table"></object>
+    <object Name="Table" Owner="Shik"></object>
   </cell>
   <cell X="44" Y="8">
     <object Name="DirtFloor"></object>
@@ -1237,7 +1237,7 @@
   </cell>
   <cell X="57" Y="8">
     <object Name="DirtFloor"></object>
-    <object Name="Cider Bottle"></object>
+    <object Name="Cider Bottle" Owner="Shik"></object>
   </cell>
   <cell X="58" Y="8">
     <object Name="Brothers_CatsDogs_StarAppleWall"></object>
@@ -2115,7 +2115,7 @@
     <object Name="DirtPath"></object>
   </cell>
   <cell X="31" Y="14">
-    <object Name="Wine Bottle"></object>
+    <object Name="Wine Bottle" Owner="Shik"></object>
     <object Name="DirtPath"></object>
   </cell>
   <cell X="32" Y="14">
@@ -2225,7 +2225,7 @@
   </cell>
   <cell X="18" Y="15">
     <object Name="DirtFloor"></object>
-    <object Name="Cider Bottle"></object>
+    <object Name="Cider Bottle" Owner="Shik"></object>
   </cell>
   <cell X="19" Y="15">
     <object Name="BrinestalkFence"></object>
@@ -2339,7 +2339,7 @@
   </cell>
   <cell X="12" Y="16">
     <object Name="DirtFloor"></object>
-    <object Name="Dresser"></object>
+    <object Name="Dresser" Owner="Shik"></object>
   </cell>
   <cell X="13" Y="16">
     <object Name="Brothers_CatsDogs_StarAppleWall"></object>
@@ -2565,7 +2565,7 @@
   </cell>
   <cell X="42" Y="17">
     <object Name="DirtFloor"></object>
-    <object Name="Dresser"></object>
+    <object Name="Dresser" Owner="Shik"></object>
   </cell>
   <cell X="43" Y="17">
     <object Name="Brothers_CatsDogs_StarAppleWall"></object>

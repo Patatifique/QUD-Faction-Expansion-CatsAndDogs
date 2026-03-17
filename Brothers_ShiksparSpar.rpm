@@ -525,7 +525,7 @@
   </cell>
   <cell X="55" Y="3">
     <object Name="DirtFloor"></object>
-    <object Name="Jug"></object>
+    <object Name="Jug" Owner="Spar"></object>
   </cell>
   <cell X="56" Y="3">
     <object Name="PigskinWall"></object>
@@ -774,7 +774,7 @@
   </cell>
   <cell X="11" Y="5">
     <object Name="DirtFloor"></object>
-    <object Name="HalfFullWaterskin"></object>
+    <object Name="HalfFullWaterskin" Owner="Spar"></object>
   </cell>
   <cell X="12" Y="5">
     <object Name="PigskinWall"></object>
@@ -2402,7 +2402,7 @@
   <cell X="37" Y="14">
     <object Name="DirtFloor"></object>
     <object Name="Flowers"></object>
-    <object Name="Wide Bottle"></object>
+    <object Name="Wide Bottle" Owner="Spar"></object>
   </cell>
   <cell X="38" Y="14">
     <object Name="DirtFloor"></object>
@@ -2852,7 +2852,7 @@
   <cell X="11" Y="17"></cell>
   <cell X="12" Y="17"></cell>
   <cell X="13" Y="17">
-    <object Name="Nylon Bodypack"></object>
+    <object Name="Nylon Bodypack" Owner="Spar"></object>
   </cell>
   <cell X="14" Y="17">
     <object Name="Bedroll"></object>
@@ -2948,7 +2948,7 @@
   </cell>
   <cell X="45" Y="17">
     <object Name="DirtFloor"></object>
-    <object Name="Dresser"></object>
+    <object Name="Dresser" Owner="Spar"></object>
   </cell>
   <cell X="46" Y="17">
     <object Name="PigskinWall"></object>
@@ -3570,7 +3570,7 @@
   </cell>
   <cell X="54" Y="20">
     <object Name="DirtFloor"></object>
-    <object Name="Hunk of Cheese"></object>
+    <object Name="Hunk of Cheese" Owner="Spar"></object>
   </cell>
   <cell X="55" Y="20">
     <object Name="DirtFloor"></object>
@@ -3833,7 +3833,7 @@
   </cell>
   <cell X="17" Y="22">
     <object Name="DirtFloor"></object>
-    <object Name="Multicabinet"></object>
+    <object Name="Multicabinet" Owner="Spar"></object>
   </cell>
   <cell X="18" Y="22">
     <object Name="DirtFloor"></object>
@@ -3851,15 +3851,15 @@
     <object Name="DirtFloor"></object>
     <object Name="DirtFloor"></object>
     <object Name="DirtFloor"></object>
-    <object Name="Metal Workbench"></object>
+    <object Name="Metal Workbench" Owner="Spar"></object>
   </cell>
   <cell X="22" Y="22">
     <object Name="DirtFloor"></object>
-    <object Name="Metal Workbench"></object>
+    <object Name="Metal Workbench" Owner="Spar"></object>
   </cell>
   <cell X="23" Y="22">
     <object Name="DirtFloor"></object>
-    <object Name="Multicabinet"></object>
+    <object Name="Multicabinet" Owner="Spar"></object>
   </cell>
   <cell X="24" Y="22">
     <object Name="PigskinWall"></object>

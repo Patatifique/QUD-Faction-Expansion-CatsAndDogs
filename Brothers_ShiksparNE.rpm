@@ -3116,15 +3116,15 @@
   </cell>
   <cell X="33" Y="22">
     <object Name="DirtFloor"></object>
-    <object Name="Jug"></object>
+    <object Name="Jug" Owner="Spar"></object>
   </cell>
   <cell X="34" Y="22">
     <object Name="DirtFloor"></object>
-    <object Name="Jug"></object>
+    <object Name="Jug" Owner="Spar"></object>
   </cell>
   <cell X="35" Y="22">
     <object Name="DirtFloor"></object>
-    <object Name="Jug"></object>
+    <object Name="Jug" Owner="Spar"></object>
   </cell>
   <cell X="36" Y="22">
     <object Name="DirtFloor"></object>
