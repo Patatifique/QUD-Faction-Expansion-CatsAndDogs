@@ -74,55 +74,63 @@
 	<object Name="Brothers_CatsDogs_Cheesesign" Inherits="Sign">
 		<part Name="Render" DisplayName="sign" Tile="Terrain/catsdogs/tile_cheesesign.png" Occluding="false" />
 		<part Name="Chat" Says="Ripening Caves" ShowInShortDescription="true" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 
 	<object Name="Brothers_CatsDogs_Tradesign" Inherits="Sign">
 		<part Name="Render" DisplayName="sign" Tile="Items/sw_sign_goods.bmp" Occluding="false" />
 		<part Name="Chat" Says="Growarow's Trading Emporium" ShowInShortDescription="true" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 	
 	<object Name="Brothers_CatsDogs_Cooksign" Inherits="Sign">
 		<part Name="Render" DisplayName="sign" Tile="Items/sw_sign_pepper.bmp" Occluding="false" />
 		<part Name="Chat" Says="Growarow's Preserved Goods" ShowInShortDescription="true" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 
 	<object Name="Brothers_CatsDogs_Tinkersign" Inherits="Sign">
 		<part Name="Render" DisplayName="sign" Tile="Items/sw_sign_datadisc.bmp" Occluding="false" />
 		<part Name="Chat" Says="Meowticulous Engineering" ShowInShortDescription="true" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 	
 	<object Name="Brothers_CatsDogs_Shiksign" Inherits="Sign">
 		<part Name="Render" DisplayName="sign" Tile="Items/sw_sign_west.bmp" Occluding="false" />
 		<part Name="Chat" Says="&#27; To Shik" ShowInShortDescription="true" />
 		<tag Name="Brothers_CatsDogs_DestroyedOnEnding" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 	
 	<object Name="Brothers_CatsDogs_Sparsign" Inherits="Sign">
 		<part Name="Render" DisplayName="sign" Tile="Items/sw_sign_east.bmp" Occluding="false" />
 		<part Name="Chat" Says="&#26; To Spar" ShowInShortDescription="true" />
 		<tag Name="Brothers_CatsDogs_DestroyedOnEnding" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
   
 	<object Name="Brothers_CatsDogs_ShikChest" Inherits="Chest">
 		<part Name="Inventory" Builder="InventoryChestJunk2" />
 		<part Name="Physics" Owner="Shik" />
 		<tag Name="NoSparkingQuest" />
-		<tag Name="ExcludeFromDynamicEncounters" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 
 	<object Name="Brothers_CatsDogs_SparChest" Inherits="Chest">
 		<part Name="Inventory" Builder="InventoryChestJunk2" />
 		<part Name="Physics" Owner="Spar" />
 		<tag Name="NoSparkingQuest" />
-		<tag Name="ExcludeFromDynamicEncounters" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 	
 	<object Name="Brothers_CatsDogs_TorchpostDestroyedOnEnding" Inherits="Torchpost">
 		<tag Name="Brothers_CatsDogs_DestroyedOnEnding" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 
 	<object Name="Brothers_CatsDogs_UnlitTorchpostDestroyedOnEnding" Inherits="Unlit Torchpost">
 		<tag Name="Brothers_CatsDogs_DestroyedOnEnding" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 		
 	
