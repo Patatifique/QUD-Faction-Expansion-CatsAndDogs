@@ -1,0 +1,31 @@
+{
+	"spice": {
+ 
+		"cooking": {
+
+			"recipeNames": {
+
+				"ingredients": {
+			
+					"Brothers_CatsDogs_Dimensional Jerky": {
+						"adj": [ "<^.adj1.!random>", "<^.adj2.!random>" ],
+						"adj1": [ "blink", "tele-", "far-", "there-", "recomposing" ],
+						"adj2": [ "blink", "blinking", "teleporting", "recomposing" ],
+						"nounPlural": [ "blinkoodle strips", "strips", "jerky" ],
+						"noun": [ "blinkoodle strip", "strip", "jerky" ]
+					},
+		  
+					"Brothers_CatsDogs_Burgeoning Meat": {
+						"adj": [ "<^.adj1.!random>", "<^.adj2.!random>" ],
+						"adj1": [ "evolutive", "hydric", "polycephalous", "humongous", "copious" ],
+						"adj2": [ "evolutive", "hydric", "polycephalous", "humongous", "copious" ],
+						"nounPlural": [ "hydric", "hydric steaks", "meat" ],
+						"noun": [ "hydric", "hydric steak", "meat" ]
+					}
+		  
+				}
+			}
+		}
+
+	}
+}
