@@ -406,7 +406,7 @@
 				{{emote|*=pronouns.Subjective= =verb:shake:afterpronoun= =pronouns.possessive= massive head.*}}
 
 				Not now, traveler. Shik needs time to process what was revealed at the Gathering.</text>
-			<choice Target="End">ok ill be back later.</choice>
+			<choice Target="End">Understood, mayor. I will be back later; in the meantime, live and drink.</choice>
 		</start>
 
 		<start ID="BadWelcome" IfHaveState="Brothers_CatsDogs_SparEnding">
@@ -661,7 +661,7 @@
 				{{emote|*=pronouns.Subjective= =verb:sits:afterpronoun=, pondering the situation.*}}
 
 				Visitor, in other circumstancs you would be welcome -- but with the recent Gathering, I cannot spare the time to discuss with you.</text>
-			<choice Target="End">ok ill be back later.</choice>
+			<choice Target="End">Understood, mayor. I will be back later; in the meantime, live and drink.</choice>
 		</start>
 		
 		<start ID="BadWelcome" IfHaveState="Brothers_CatsDogs_ShikEnding">
