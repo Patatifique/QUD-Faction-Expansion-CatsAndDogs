@@ -3,7 +3,7 @@
 	
 <!--Pet dialogue-->
 	
-	<conversation ID="Brothers_CatsDogs_Hyrkhound Pet">
+	<conversation ID="Sibs_CatsDogs_Hyrkhound Pet">
 		
 		<start ID="Welcome">
 			<text>
@@ -18,7 +18,7 @@
 	</conversation>
 	
 	
-	<conversation ID="Brothers_CatsDogs_Brainkitty Pet">
+	<conversation ID="Sibs_CatsDogs_Brainkitty Pet">
 		
 		<start ID="Welcome">
 			<text>
@@ -39,35 +39,35 @@
 <!--Important NPCs-->
 
 
-	<conversation ID="Brothers_CatsDogs_Warden Arendubark">
+	<conversation ID="Sibs_CatsDogs_Warden Arendubark">
 			
 		<start ID="Welcome" Inherits="DefaultChoices">
-			<text IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief" Priority="-1">		
+			<text IfNotFinishedQuestStep="Sibs_CatsDogs_MainQuest1~Brief" Priority="-1">		
 				{{emote|*A dreadful weapon sways gently as wind shakes the warden's foliage.*}}
 				
 				Tread peacefully and there won't be any trouble, stranger.
 			</text>
-			<text IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief" Priority="-1">		
+			<text IfHaveActiveQuest="Sibs_CatsDogs_MainQuest1" IfFinishedQuestStep="Sibs_CatsDogs_MainQuest1~Brief" Priority="-1">		
 				{{emote|*Heavy branches stoop lower to shield you from the wind.*}}
 				
 				What knowledge have you reaped, =name=?
 			</text>
-			<text IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" Priority="-1">		
+			<text IfHaveActiveQuest="Sibs_CatsDogs_MainQuest2" Priority="-1">		
 				{{emote|*A flutter runs through the foliage, shaking saltflies loose.*}}
 
 				I pray you hurry, =name=. The mayors have bared fangs and unsheathed claws -- there is only so much I can do from here.
 			</text>
-			<text IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" Priority="-1">		
+			<text IfHaveActiveQuest="Sibs_CatsDogs_MainQuest3" Priority="-1">		
 				{{emote|*Roots split the ground with assurance.*}}
 
 				The Gathering of Shikspar draws near... I will stand ready for anything.
 			</text>			
-			<text IfHaveQuest="Brothers_CatsDogs_MainQuestEpilogue" IfNotHaveState="Brothers_CatsDogs_AnyEnding_Occured" Priority="-1">		
+			<text IfHaveQuest="Sibs_CatsDogs_MainQuestEpilogue" IfNotHaveState="Sibs_CatsDogs_AnyEnding_Occured" Priority="-1">		
 				{{emote|*Branches sway above you.*}}
 				
 				It will take a while for things to settle down here, =name=. Let the Beetle Moon set a few times, and return then.
 			</text>		
-			<text IfHaveState="Brothers_CatsDogs_AnyEnding_Occured" Priority="-1">		
+			<text IfHaveState="Sibs_CatsDogs_AnyEnding_Occured" Priority="-1">		
 				{{emote|*Branches stand tall as the watch continues.*}}
 				
 				Quite the unexpected outcome for Shik and Spar, in the end. Nonetheless, you have my thanks, =name=: I am quite certain blood would have been drawn if not for you.
@@ -75,14 +75,14 @@
 		</start>
 
 		<node ID="DefaultChoices">
-			<choice Target="Brief1" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">I was told to come see you about the current situation between Shik and Spar.</choice>
-			<choice Target="FounderInfo" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief" IfHaveVillageNote="(Brothers_ShiksparSecret1 OR Brothers_ShiksparSecret2 OR Brothers_ShiksparSecret3)">Warden, I have some information about the Founder.</choice>
-			<choice Target="FounderSecrets" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Clue">I have a first-hand account of Bubumube. What now?</choice>
-			<choice Target="CouncilNotHere" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="(Brothers_CatsDogs_MainQuest3~DogMayor AND Brothers_CatsDogs_MainQuest3~CatMayor)" IfNotHaveState="(Brothers_CatsDogs_CatMayorMoved OR Brothers_CatsDogs_DogMayorMoved)">I have delivered invites to both mayors -- they are on their way.</choice>
-			<choice Target="Council" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="(Brothers_CatsDogs_MainQuest3~DogMayor AND Brothers_CatsDogs_MainQuest3~CatMayor)" IfHaveState="(Brothers_CatsDogs_CatMayorMoved AND Brothers_CatsDogs_DogMayorMoved)" IfZoneHaveObject="(Brothers_CatsDogs_DogMayor AND Brothers_CatsDogs_CatMayor)">I have delivered invites to both mayors -- the Gathering can begin.</choice>
-			<choice Target="QuestReminder" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">What do you want me to do, again?</choice>
-			<choice Target="Epilogue" IfHaveActiveQuest="Brothers_CatsDogs_MainQuestEpilogue" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">It has been quite a while, now. How have things changed around here?</choice>			
-			<choice Target="WhatNow" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">What do you make of Shik and Spar's fate, in the end?</choice>			
+			<choice Target="Brief1" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest1" IfNotFinishedQuestStep="Sibs_CatsDogs_MainQuest1~Brief">I was told to come see you about the current situation between Shik and Spar.</choice>
+			<choice Target="FounderInfo" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest1" IfFinishedQuestStep="Sibs_CatsDogs_MainQuest1~Brief" IfHaveVillageNote="(Sibs_ShiksparSecret1 OR Sibs_ShiksparSecret2 OR Sibs_ShiksparSecret3)">Warden, I have some information about the Founder.</choice>
+			<choice Target="FounderSecrets" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest2" IfFinishedQuestStep="Sibs_CatsDogs_MainQuest2~Clue">I have a first-hand account of Bubumube. What now?</choice>
+			<choice Target="CouncilNotHere" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest3" IfFinishedQuestStep="(Sibs_CatsDogs_MainQuest3~DogMayor AND Sibs_CatsDogs_MainQuest3~CatMayor)" IfNotHaveState="(Sibs_CatsDogs_CatMayorMoved OR Sibs_CatsDogs_DogMayorMoved)">I have delivered invites to both mayors -- they are on their way.</choice>
+			<choice Target="Council" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest3" IfFinishedQuestStep="(Sibs_CatsDogs_MainQuest3~DogMayor AND Sibs_CatsDogs_MainQuest3~CatMayor)" IfHaveState="(Sibs_CatsDogs_CatMayorMoved AND Sibs_CatsDogs_DogMayorMoved)" IfZoneHaveObject="(Sibs_CatsDogs_DogMayor AND Sibs_CatsDogs_CatMayor)">I have delivered invites to both mayors -- the Gathering can begin.</choice>
+			<choice Target="QuestReminder" IfFinishedQuestStep="Sibs_CatsDogs_MainQuest1~Brief" IfNotFinishedQuest="Sibs_CatsDogs_MainQuest3">What do you want me to do, again?</choice>
+			<choice Target="Epilogue" IfHaveActiveQuest="Sibs_CatsDogs_MainQuestEpilogue" IfHaveState="Sibs_CatsDogs_AnyEnding_Occured">It has been quite a while, now. How have things changed around here?</choice>			
+			<choice Target="WhatNow" IfHaveState="Sibs_CatsDogs_AnyEnding_Occured">What do you make of Shik and Spar's fate, in the end?</choice>			
 			<choice Target="AboutTown">What can you tell me about Shik and Spar?</choice>
 			<choice Target="Travelers">I was not even aware there was a village here. You must not get many travelers.</choice>	
 			<choice Target="TreeWarden">I was not expecting a tree for a warden.</choice>	
@@ -90,37 +90,37 @@
 		</node>
 	
 		<node ID="Brief1">
-			<text ID="BriefDogMayor" IfHaveState="Brothers_CatsDogs_QuestgiverDogMayor">
+			<text ID="BriefDogMayor" IfHaveState="Sibs_CatsDogs_QuestgiverDogMayor">
 				{{emote|*Silence passes you by as the warden =verb:listen= intently.*}}
 
 				Told? I wager Mayor Raroofwor sent you. He will not move from his position, will he?
 			</text>
-			<text ID="BriefCatMayor" IfHaveState="Brothers_CatsDogs_QuestgiverCatMayor">
+			<text ID="BriefCatMayor" IfHaveState="Sibs_CatsDogs_QuestgiverCatMayor">
 				{{emote|*Silence passes you by as the warden =verb:listen= intently.*}}
 
 				Lady Mayor Morrarri put you up to this, did she not? Surely she must think I will take her side.
 			</text>
-			<text ID="BriefDogLover" IfHaveState="Brothers_CatsDogs_QuestgiverDogLover">
+			<text ID="BriefDogLover" IfHaveState="Sibs_CatsDogs_QuestgiverDogLover">
 				{{emote|*Silence passes you by as the warden =verb:listen= intently.*}}
 
 				I think I know who sent you: my kin has heard the love-plea of Oof Growf.
 			</text>
-			<text ID="BriefCatLover" IfHaveState="Brothers_CatsDogs_QuestgiverCatLover">
+			<text ID="BriefCatLover" IfHaveState="Sibs_CatsDogs_QuestgiverCatLover">
 				{{emote|*Silence passes you by as the warden =verb:listen= intently.*}}
 
 				Rrromaw's passion must run deep, to inspire acting in a mother-mayor's back.
 			</text>
-			<text ID="BriefDogChef" IfHaveState="Brothers_CatsDogs_QuestgiverDogChef">
+			<text ID="BriefDogChef" IfHaveState="Sibs_CatsDogs_QuestgiverDogChef">
 				{{emote|*Silence passes you by as the warden =verb:listen= intently.*}}
 
 				Had I to hazard a guess, I would say the Growarows sent you to me.
 			</text>
-			<text ID="BriefCatTinker" IfHaveState="Brothers_CatsDogs_QuestgiverCatTinker">
+			<text ID="BriefCatTinker" IfHaveState="Sibs_CatsDogs_QuestgiverCatTinker">
 				{{emote|*Silence passes you by as the warden =verb:listen= intently.*}}
 
 				Has Imimiw grown so tired of having no proper merchant that she sent you to me?
 			</text>
-			<text ID="BriefZanya" IfHaveState="Brothers_CatsDogs_QuestgiverFurGuy">
+			<text ID="BriefZanya" IfHaveState="Sibs_CatsDogs_QuestgiverFurGuy">
 				{{emote|*Silence passes you by as the warden =verb:listen= intently.*}}
 
 				Zanya's optimism is refreshing, that they still believe I can mend the rift between Shik and Spar.
@@ -161,15 +161,15 @@
 
 				I thank you for your offer, stranger. If we are to brighten the future of Shik and Spar, perhaps the first step is to learn about their past. All discussions seem to lead to the Founder. Can I trust you to investigate that being's history?
 			</text>		
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest1~Brief">You can, warden. I will be back as soon as I learn more about the Founder.</choice>		
+			<choice Target="End" CompleteQuestStep="Sibs_CatsDogs_MainQuest1~Brief">You can, warden. I will be back as soon as I learn more about the Founder.</choice>		
 			<choice Target="End">I need to think about this. Live and drink, warden.</choice>
 		</node>
 
 		<node ID="FounderLoreChoices">
-			<choice Target="SharedAll" IfHaveState="(Brothers_CatsDogs_SharedShiksparLore AND Brothers_CatsDogs_SharedDogLore AND Brothers_CatsDogs_SharedCatLore)">That is all I learned in Shik and Spar, warden. What now?</choice>					
-			<choice Target="ShiksparLore" IfHaveVillageNote="Brothers_ShiksparSecret1" FlagSecret="true" SetBooleanState="Brothers_CatsDogs_SharedShiksparLore,true" IfNotHaveState="Brothers_CatsDogs_SharedShiksparLore">The Founder was named Bubumube. They came from Ezra and settled the village, calling it Shikspar.</choice>	
-			<choice Target="DogLore" IfHaveVillageNote="Brothers_ShiksparSecret2" FlagSecret="true" SetBooleanState="Brothers_CatsDogs_SharedDogLore,true" IfNotHaveState="Brothers_CatsDogs_SharedDogLore">According to the people of Shik, the Founder was a dog, and appointed their kin and closest companion to rule Shikspar after their death.</choice>	
-			<choice Target="CatLore" IfHaveVillageNote="Brothers_ShiksparSecret3" FlagSecret="true" SetBooleanState="Brothers_CatsDogs_SharedCatLore,true" IfNotHaveState="Brothers_CatsDogs_SharedCatLore">Spar's history presents Bubumube as a cat, and the foreparent of the current mayor. They supposedly disappeared without a trace, leaving their child to govern Shikspar in their absence.</choice>
+			<choice Target="SharedAll" IfHaveState="(Sibs_CatsDogs_SharedShiksparLore AND Sibs_CatsDogs_SharedDogLore AND Sibs_CatsDogs_SharedCatLore)">That is all I learned in Shik and Spar, warden. What now?</choice>					
+			<choice Target="ShiksparLore" IfHaveVillageNote="Sibs_ShiksparSecret1" FlagSecret="true" SetBooleanState="Sibs_CatsDogs_SharedShiksparLore,true" IfNotHaveState="Sibs_CatsDogs_SharedShiksparLore">The Founder was named Bubumube. They came from Ezra and settled the village, calling it Shikspar.</choice>	
+			<choice Target="DogLore" IfHaveVillageNote="Sibs_ShiksparSecret2" FlagSecret="true" SetBooleanState="Sibs_CatsDogs_SharedDogLore,true" IfNotHaveState="Sibs_CatsDogs_SharedDogLore">According to the people of Shik, the Founder was a dog, and appointed their kin and closest companion to rule Shikspar after their death.</choice>	
+			<choice Target="CatLore" IfHaveVillageNote="Sibs_ShiksparSecret3" FlagSecret="true" SetBooleanState="Sibs_CatsDogs_SharedCatLore,true" IfNotHaveState="Sibs_CatsDogs_SharedCatLore">Spar's history presents Bubumube as a cat, and the foreparent of the current mayor. They supposedly disappeared without a trace, leaving their child to govern Shikspar in their absence.</choice>
 			<choice Target="Start">Can I ask you a few questions first?</choice>		
 			<choice Target="End">I will investigate the matter further. Live and drink, warden.</choice>
 		</node>	
@@ -224,7 +224,7 @@
 			
 				There is one of my kin there. Older than me, older than Shikspar. Seek Ezra's mayor -- if the Founder truly lived in Ezra, maybe there lies the firsthand account that could help us solve our issue peacefully.
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest1~Return" StartQuest="Brothers_CatsDogs_MainQuest2">I will travel to Ezra and see what I can learn from Mayor Haddas.</choice>
+			<choice Target="End" CompleteQuestStep="Sibs_CatsDogs_MainQuest1~Return" StartQuest="Sibs_CatsDogs_MainQuest2">I will travel to Ezra and see what I can learn from Mayor Haddas.</choice>
 			<choice Target="End">I cannot spare the time to do this right now. Live and drink, warden.</choice>
 		</node>
 
@@ -232,7 +232,7 @@
 			<text>
 				I need not know the details, =name=. We need to convince both mayors to come here and take part in an exceptional council -- the Gathering of Shikspar. There, you will reveal what you learned on Bubumube and, hopefully, convince whichever of them was wrong to give their foolish convictions up. 
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest2~Deliver" FinishQuest="Brothers_CatsDogs_MainQuest2" StartQuest="Brothers_CatsDogs_MainQuest3">Duly noted. I will invite both mayors to the Gathering of Shikspar, then.</choice>
+			<choice Target="End" CompleteQuestStep="Sibs_CatsDogs_MainQuest2~Deliver" FinishQuest="Sibs_CatsDogs_MainQuest2" StartQuest="Sibs_CatsDogs_MainQuest3">Duly noted. I will invite both mayors to the Gathering of Shikspar, then.</choice>
 			<choice Target="End">I cannot afford to do this for now. Live and drink, warden.</choice>
 		</node>
 
@@ -254,9 +254,9 @@
 				
 				=name=, if you will.
 			</text>
-			<choice Target="BubumubeNeither" IfHaveObservation="($Brothers_CatsDogs_ShiksparFounder_Cat AND $Brothers_CatsDogs_ShiksparFounder_Dog)" FlagSecret="true">From what I gathered, it appears Founder Bubumube was neither a dog nor a cat. This entire conflict is misguided.</choice>	
-			<choice Target="BubumubeDog" IfHaveObservation="$Brothers_CatsDogs_ShiksparFounder_Cat" FlagSecret="true">Founder Bubumube had nonretractable claws and round ears. This sounds closer to a dog in my eyes.</choice>	
-			<choice Target="BubumubeCat" IfHaveObservation="$Brothers_CatsDogs_ShiksparFounder_Dog" FlagSecret="true">Founder Bubumube was a lonely being who enjoyed swiping fishes from Qud's rivers -- as close to a cat as one can get.</choice>			
+			<choice Target="BubumubeNeither" IfHaveObservation="($Sibs_CatsDogs_ShiksparFounder_Cat AND $Sibs_CatsDogs_ShiksparFounder_Dog)" FlagSecret="true">From what I gathered, it appears Founder Bubumube was neither a dog nor a cat. This entire conflict is misguided.</choice>	
+			<choice Target="BubumubeDog" IfHaveObservation="$Sibs_CatsDogs_ShiksparFounder_Cat" FlagSecret="true">Founder Bubumube had nonretractable claws and round ears. This sounds closer to a dog in my eyes.</choice>	
+			<choice Target="BubumubeCat" IfHaveObservation="$Sibs_CatsDogs_ShiksparFounder_Dog" FlagSecret="true">Founder Bubumube was a lonely being who enjoyed swiping fishes from Qud's rivers -- as close to a cat as one can get.</choice>			
 			<choice Target="End">Sorry, everyone. I need to gather my thoughts first.</choice>	
 		</node>
 
@@ -276,13 +276,13 @@
 				
 				Thank you, =name=. I will take it from here. I wager negotiations will last for quite a few days still. Your participation was invaluable nonetheless -- with that added information, our good mayors will certainly find some common ground.
 			</text>
-			<choice Target="End" IfFinishedQuest="(Brothers_CatsDogs_CatLoverQuest OR Brothers_CatsDogs_DogLoverQuest)" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3" SetBooleanState="Brothers_CatsDogs_PerfectEnding,true" StartQuest="Brothers_CatsDogs_MainQuestEpilogue">
+			<choice Target="End" IfFinishedQuest="(Sibs_CatsDogs_CatLoverQuest OR Sibs_CatsDogs_DogLoverQuest)" CompleteQuestStep="Sibs_CatsDogs_MainQuest3~Gathering" FinishQuest="Sibs_CatsDogs_MainQuest3" SetBooleanState="Sibs_CatsDogs_PerfectEnding,true" StartQuest="Sibs_CatsDogs_MainQuestEpilogue">
 				<text>Glad I could be of service, warden. I will leave you to it, then. Live and drink.</text>
-				<part Name="Brothers_ModifyReputation" Faction="Shik" Value="200" Faction2="Spar" Value2="200" Shown="False" />
+				<part Name="Sibs_ModifyReputation" Faction="Shik" Value="200" Faction2="Spar" Value2="200" Shown="False" />
 			</choice>
-			<choice Target="End" IfNotFinishedQuest="(Brothers_CatsDogs_CatLoverQuest AND Brothers_CatsDogs_DogLoverQuest)" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3" SetBooleanState="Brothers_CatsDogs_NeutralEnding,true" StartQuest="Brothers_CatsDogs_MainQuestEpilogue">
+			<choice Target="End" IfNotFinishedQuest="(Sibs_CatsDogs_CatLoverQuest AND Sibs_CatsDogs_DogLoverQuest)" CompleteQuestStep="Sibs_CatsDogs_MainQuest3~Gathering" FinishQuest="Sibs_CatsDogs_MainQuest3" SetBooleanState="Sibs_CatsDogs_NeutralEnding,true" StartQuest="Sibs_CatsDogs_MainQuestEpilogue">
 				<text>Glad I could be of service, warden. I will leave you to it, then. Live and drink.</text>
-				<part Name="Brothers_ModifyReputation" Faction="Shik" Value="100" Faction2="Spar" Value2="100" Shown="False" />				
+				<part Name="Sibs_ModifyReputation" Faction="Shik" Value="100" Faction2="Spar" Value2="100" Shown="False" />				
 			</choice>
 		</node>
 
@@ -292,13 +292,13 @@
 				
 				Thank you, =name=. I will take it from here -- I believe our good mayors will ultimately agree it matters little what Bubumube was, after all. Negotiations should last for a few days still, but I cannot state how essential your participation proved.
 			</text>
-			<choice Target="End" IfFinishedQuest="(Brothers_CatsDogs_CatLoverQuest OR Brothers_CatsDogs_DogLoverQuest)" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3" SetBooleanState="Brothers_CatsDogs_PerfectEnding,true" StartQuest="Brothers_CatsDogs_MainQuestEpilogue">
+			<choice Target="End" IfFinishedQuest="(Sibs_CatsDogs_CatLoverQuest OR Sibs_CatsDogs_DogLoverQuest)" CompleteQuestStep="Sibs_CatsDogs_MainQuest3~Gathering" FinishQuest="Sibs_CatsDogs_MainQuest3" SetBooleanState="Sibs_CatsDogs_PerfectEnding,true" StartQuest="Sibs_CatsDogs_MainQuestEpilogue">
 				<text>Glad I could be of service, warden. I will leave you to it, then. Live and drink.</text>
-				<part Name="Brothers_ModifyReputation" Faction="Shik" Value="200" Faction2="Spar" Value2="200" Shown="False" />
+				<part Name="Sibs_ModifyReputation" Faction="Shik" Value="200" Faction2="Spar" Value2="200" Shown="False" />
 			</choice>
-			<choice Target="End" IfNotFinishedQuest="(Brothers_CatsDogs_CatLoverQuest AND Brothers_CatsDogs_DogLoverQuest)" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3" SetBooleanState="Brothers_CatsDogs_NeutralEnding,true" StartQuest="Brothers_CatsDogs_MainQuestEpilogue">
+			<choice Target="End" IfNotFinishedQuest="(Sibs_CatsDogs_CatLoverQuest AND Sibs_CatsDogs_DogLoverQuest)" CompleteQuestStep="Sibs_CatsDogs_MainQuest3~Gathering" FinishQuest="Sibs_CatsDogs_MainQuest3" SetBooleanState="Sibs_CatsDogs_NeutralEnding,true" StartQuest="Sibs_CatsDogs_MainQuestEpilogue">
 				<text>Glad I could be of service, warden. I will leave you to it, then. Live and drink.</text>
-				<part Name="Brothers_ModifyReputation" Faction="Shik" Value="100" Faction2="Spar" Value2="100" Shown="False" />				
+				<part Name="Sibs_ModifyReputation" Faction="Shik" Value="100" Faction2="Spar" Value2="100" Shown="False" />				
 			</choice>
 		</node>
 
@@ -308,9 +308,9 @@
 				
 				So Shik's account of history was right in the end. I thank you, =name=: I would not have been able to solve the matter on my own. I wager the village will take a few days to reorganize, as there is no doubt Spar's cats will have to find another place to live.
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3" SetBooleanState="Brothers_CatsDogs_ShikEnding,true" StartQuest="Brothers_CatsDogs_MainQuestEpilogue">
+			<choice Target="End" CompleteQuestStep="Sibs_CatsDogs_MainQuest3~Gathering" FinishQuest="Sibs_CatsDogs_MainQuest3" SetBooleanState="Sibs_CatsDogs_ShikEnding,true" StartQuest="Sibs_CatsDogs_MainQuestEpilogue">
 				<text>A shame they cannot find any common ground. Still, glad I could be of service, warden. Live and drink.</text>
-				<part Name="Brothers_ModifyReputation" Faction="Shik" Value="200" Faction2="Spar" Value2="-200" Shown="False" />				
+				<part Name="Sibs_ModifyReputation" Faction="Shik" Value="200" Faction2="Spar" Value2="-200" Shown="False" />				
 			</choice>
 		</node>
 
@@ -320,9 +320,9 @@
 				
 				So Spar's account of history was right in the end. I thank you, =name=: I would not have been able to solve the matter on my own. I wager the village will take a few days to reorganize, as there is no doubt Shik's dogs will have to find another place to live.
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~Gathering" FinishQuest="Brothers_CatsDogs_MainQuest3" SetBooleanState="Brothers_CatsDogs_SparEnding,true" StartQuest="Brothers_CatsDogs_MainQuestEpilogue">
+			<choice Target="End" CompleteQuestStep="Sibs_CatsDogs_MainQuest3~Gathering" FinishQuest="Sibs_CatsDogs_MainQuest3" SetBooleanState="Sibs_CatsDogs_SparEnding,true" StartQuest="Sibs_CatsDogs_MainQuestEpilogue">
 				<text>A shame they cannot find any common ground. Still, glad I could be of service, warden. Live and drink.</text>
-				<part Name="Brothers_ModifyReputation" Faction="Spar" Value="200" Faction2="Shik" Value2="-200" Shown="False" />				
+				<part Name="Sibs_ModifyReputation" Faction="Spar" Value="200" Faction2="Shik" Value2="-200" Shown="False" />				
 			</choice>
 		</node>
 
@@ -330,13 +330,13 @@
 			<text Priority="-1">		
 				I do not need anything from you, =name=.
 			</text>	
-			<text ID="ReminderMainQuest3" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3">		
+			<text ID="ReminderMainQuest3" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest3">		
 				Please invite both mayors to take part in the Gathering. Once they arrive, we will begin.
 			</text>	
-			<text ID="ReminderMainQuest2" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2">		
+			<text ID="ReminderMainQuest2" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest2">		
 				We need to know more about Bubumube, =name=. Whatever you learn -- determining whether they were dog or cat could give us a peaceful resolution yet.
 			</text>
-			<text ID="ReminderMainQuest1" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest1">					
+			<text ID="ReminderMainQuest1" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest1">					
 				There must be some clues in Shik and Spar as to who exactly the Founder was. Perhaps this will be enough to bridge the gap between the villages.
 			</text>			
 		</node>	
@@ -349,22 +349,22 @@
 		</node>	
 
 		<node ID="WhatNow" Inherits="Welcome">
-			<text ID="WhatNowWardenNeutral" IfHaveState="Brothers_CatsDogs_NeutralEnding">
+			<text ID="WhatNowWardenNeutral" IfHaveState="Sibs_CatsDogs_NeutralEnding">
 				{{emote|*The rustling of leaves gives way to an answer.*}}
 
 				Not much has changed, has it =name=? At the very least I am not restlessly petitioned on a century-long feud. A step in the right direction, I wager.
 			</text>
-			<text ID="WhatNowWardenPerfect" IfHaveState="Brothers_CatsDogs_PerfectEnding">
+			<text ID="WhatNowWardenPerfect" IfHaveState="Sibs_CatsDogs_PerfectEnding">
 				{{emote|*The rustling of leaves gives way to an answer.*}}
 
 				The villages could not have asked for a better mediator than you, =name=. I have heard talks of reverting to its old name -- Shikspar. Undeniable proof of the good you did here.
 			</text>
-			<text ID="WhatNowWardenShik" IfHaveState="Brothers_CatsDogs_ShikEnding">
+			<text ID="WhatNowWardenShik" IfHaveState="Sibs_CatsDogs_ShikEnding">
 				{{emote|*The rustling of leaves gives way to an answer.*}}
 
 				I would not have expected Spar's people to leave -- will Shik survive on its own?
 			</text>
-			<text ID="WhatNowWardenSpar" IfHaveState="Brothers_CatsDogs_SparEnding">
+			<text ID="WhatNowWardenSpar" IfHaveState="Sibs_CatsDogs_SparEnding">
 				{{emote|*The rustling of leaves gives way to an answer.*}}
 
 				To think Shik would end up deserted -- can Spar really stand alone in Qud?
@@ -399,9 +399,9 @@
 	</conversation>
 
 
-	<conversation ID="Brothers_CatsDogs_DogMayor">
+	<conversation ID="Sibs_CatsDogs_DogMayor">
 
-		<start ID="TransitionWelcome" IfHaveQuest="Brothers_CatsDogs_MainQuestEpilogue" IfNotHaveState="(Brothers_CatsDogs_AnyEnding_Occured AND Brothers_CatsDogs_SparEnding)">
+		<start ID="TransitionWelcome" IfHaveQuest="Sibs_CatsDogs_MainQuestEpilogue" IfNotHaveState="(Sibs_CatsDogs_AnyEnding_Occured AND Sibs_CatsDogs_SparEnding)">
 			<text>			
 				{{emote|*=pronouns.Subjective= =verb:shake:afterpronoun= =pronouns.possessive= massive head.*}}
 
@@ -409,7 +409,7 @@
 			<choice Target="End">Understood, mayor. I will be back later; in the meantime, live and drink.</choice>
 		</start>
 
-		<start ID="BadWelcome" IfHaveState="Brothers_CatsDogs_SparEnding">
+		<start ID="BadWelcome" IfHaveState="Sibs_CatsDogs_SparEnding">
 			<text>			
 				{{emote|*=pronouns.Subjective= =verb:look:afterpronoun= utterly distraught.*}}
 
@@ -420,7 +420,7 @@
 			<choice Target="End">I will let you prepare then. Live and drink, mayor.</choice>
 		</start>
 
-		<start ID="WelcomeTransit" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest3~DogMayor" IfNotHaveState="Brothers_CatsDogs_DogMayorMoved">
+		<start ID="WelcomeTransit" IfFinishedQuestStep="Sibs_CatsDogs_MainQuest3~DogMayor" IfNotHaveState="Sibs_CatsDogs_DogMayorMoved">
 			<text>
 				Nae time to talk now, I will see ye at the Gathering.
 			</text>
@@ -429,7 +429,7 @@
 			<choice Target="End">Live and drink, mayor.</choice>
 		</start>
 		
-		<start ID="WelcomeGathering" IfHaveState="Brothers_CatsDogs_DogMayorMoved" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest3~DogMayor">
+		<start ID="WelcomeGathering" IfHaveState="Sibs_CatsDogs_DogMayorMoved" IfNotFinishedQuest="Sibs_CatsDogs_MainQuest3" IfFinishedQuestStep="Sibs_CatsDogs_MainQuest3~DogMayor">
 			<text>
 				{{emote|*=pronouns.Subjective= =verb:paw:afterpronoun= the ground impatiently.*}}
 				
@@ -450,15 +450,15 @@
 
 		<node ID="DefaultChoices">
 			<choice Target="Slynth" Priority="10" IfHaveActiveQuest="Landing Pads">In my travels I encountered a people, the slynth, seeking a new home.</choice>
-			<choice Target="Council" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest3~DogMayor">Warden Arendubark wants to settle the division between Shik and Spar once and for all, and wants you to take part in a council with Spar's mayor.</choice>
-			<choice Target="FounderInfo" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Clue">I have definite information about Shik and Spar's founder.</choice>
-			<choice Target="Work" IfNotHaveQuest="Brothers_CatsDogs_ChefQuest">Is there any work to do in Shik?</choice>
-			<choice Target="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the deal with the village on the wall's other side?</choice>
-			<choice Target="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">How come Shik and Spar are divided?</choice>
-			<choice Target="Epilogue" IfHaveActiveQuest="Brothers_CatsDogs_MainQuestEpilogue" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">I have returned, mayor. How have things changed around here?</choice>			
-			<choice Target="WhatNow" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">What shall happen with this place now?</choice>		
+			<choice Target="Council" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest3" IfNotFinishedQuestStep="Sibs_CatsDogs_MainQuest3~DogMayor">Warden Arendubark wants to settle the division between Shik and Spar once and for all, and wants you to take part in a council with Spar's mayor.</choice>
+			<choice Target="FounderInfo" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest2" IfFinishedQuestStep="Sibs_CatsDogs_MainQuest2~Clue">I have definite information about Shik and Spar's founder.</choice>
+			<choice Target="Work" IfNotHaveQuest="Sibs_CatsDogs_ChefQuest">Is there any work to do in Shik?</choice>
+			<choice Target="Division" IfNotHaveQuest="Sibs_CatsDogs_MainQuest1">What is the deal with the village on the wall's other side?</choice>
+			<choice Target="Opinion" IfHaveQuest="Sibs_CatsDogs_MainQuest1" IfNotFinishedQuest="Sibs_CatsDogs_MainQuest3" IfFinishedQuestStep="Sibs_CatsDogs_MainQuest1~Brief">How come Shik and Spar are divided?</choice>
+			<choice Target="Epilogue" IfHaveActiveQuest="Sibs_CatsDogs_MainQuestEpilogue" IfHaveState="Sibs_CatsDogs_AnyEnding_Occured">I have returned, mayor. How have things changed around here?</choice>			
+			<choice Target="WhatNow" IfHaveState="Sibs_CatsDogs_AnyEnding_Occured">What shall happen with this place now?</choice>		
 			<choice Target="Services">What can I expect to find in Shik, beside starapples?</choice>
-			<choice Target="Travelers" IfNotHaveState="Brothers_CatsDogs_AnyEnding_Occured">I see only dogs living here. Am I allowed here?</choice>	
+			<choice Target="Travelers" IfNotHaveState="Sibs_CatsDogs_AnyEnding_Occured">I see only dogs living here. Am I allowed here?</choice>	
 			<choice Target="Goatfolk">Don't you fear attacks from the jungle goatfolk?</choice>	
 			<choice Target="End">I must take my leave now. Live and drink, mayor.</choice>
 		</node>
@@ -479,7 +479,7 @@
 				
 				In our favor, I wager. 'Twas about bloody time that those nasty hairballs got what was coming to them. Lead the way, will ye?
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~DogMayor">That seems awfully excessive. See you there.</choice>
+			<choice Target="End" CompleteQuestStep="Sibs_CatsDogs_MainQuest3~DogMayor">That seems awfully excessive. See you there.</choice>
 		</node>
 	
 		<node ID="FounderInfo" Inherits="Welcome">
@@ -491,23 +491,23 @@
 		</node>	
 		
 		<node ID="Epilogue">
-			<text ID="EpilogueBriefNeutral" IfHaveState="Brothers_CatsDogs_NeutralEnding">			
+			<text ID="EpilogueBriefNeutral" IfHaveState="Sibs_CatsDogs_NeutralEnding">			
 				{{emote|*=pronouns.Subjective= =verb:look:afterpronoun= embarassed for a moment.*}}
 				
 				Aye well, even if I cannae say much has changed, folks go from village to village now. Their side has grown a wee bit more reasonable, and folks say I'm getting soft in me years.
 			</text>
-			<text ID="EpilogueBriefPerfect" IfHaveState="Brothers_CatsDogs_PerfectEnding">			
+			<text ID="EpilogueBriefPerfect" IfHaveState="Sibs_CatsDogs_PerfectEnding">			
 				{{emote|*=pronouns.Subjective= uncomfortably =verb:shift:afterpronoun= =pronouns.possessive= weight from paw to paw.*}}
 				
 				Traveler, it might be best if ye talk to Oof Growf about it, will ye? Blood of me blood has moved into a hut nearby with... Aye, I beg ye talk with the two of them.</text>
-			<text ID="EpilogueBriefShik" IfHaveState="Brothers_CatsDogs_ShikEnding">			
+			<text ID="EpilogueBriefShik" IfHaveState="Sibs_CatsDogs_ShikEnding">			
 				{{emote|*Ego glimmers in =pronouns.possessive= eyes.*}}
 				
 				Fer the best, that much is sure, traveler! Devious liars hung their heads in shame and left, all sycophants that they were. Now we dogs from Shik have the entire village for ourselves, as the Founder intended.
 			</text>
-			<choice Target="EpilogueNeutral" IfHaveState="Brothers_CatsDogs_NeutralEnding">Is the feud properly buried then?</choice>
-			<choice Target="EpilogueShik" IfHaveState="Brothers_CatsDogs_ShikEnding">Did people from Spar really just up and leave?</choice>
-			<choice Target="End" IfHaveState="Brothers_CatsDogs_PerfectEnding">Duly noted, I will go find your child. Live and drink, mayor.</choice>
+			<choice Target="EpilogueNeutral" IfHaveState="Sibs_CatsDogs_NeutralEnding">Is the feud properly buried then?</choice>
+			<choice Target="EpilogueShik" IfHaveState="Sibs_CatsDogs_ShikEnding">Did people from Spar really just up and leave?</choice>
+			<choice Target="End" IfHaveState="Sibs_CatsDogs_PerfectEnding">Duly noted, I will go find your child. Live and drink, mayor.</choice>
 		</node>		
 	
 		<node ID="EpilogueNeutral">
@@ -516,10 +516,10 @@
 				
 				Figure ye deserve a reward fer yer help in settling this matter. It may not be much, but I trust ye will put it to good use.
 			</text>
-			<choice Target="End" FinishQuest="Brothers_CatsDogs_MainQuestEpilogue">
+			<choice Target="End" FinishQuest="Sibs_CatsDogs_MainQuestEpilogue">
 				<text>I am glad things ended without violence. Live and drink, mayor.</text>
 				<part Name="ReceiveItem" Blueprints="Helping Hands" Identify="Helping Hands" />
-				<part Name="Brothers_ModifyReputation" Faction="Cats" Value="100" Faction2="Dogs" Value2="100" Shown="False" />
+				<part Name="Sibs_ModifyReputation" Faction="Cats" Value="100" Faction2="Dogs" Value2="100" Shown="False" />
 			</choice>
 		</node>	
 
@@ -529,37 +529,37 @@
 				
 				That they did! I would have paid good freshwater to witness that firstpaw, but only the Beetle Moon peered at their shameful escape. I had the wall brought down, it dinnae serve any purpose anymore. Oh, and please have this -- as thanks fer yer help in the matter. Laid unused in some messy worskhop, would ye believe that?
 			</text>
-			<choice Target="End" FinishQuest="Brothers_CatsDogs_MainQuestEpilogue">
+			<choice Target="End" FinishQuest="Sibs_CatsDogs_MainQuestEpilogue">
 				<text>I am not sure what to think about this whole affair. Live and drink, mayor.</text>
 				<part Name="ReceiveItem" Blueprints="Helping Hands" Identify="Helping Hands" />
-				<part Name="Brothers_ModifyReputation" Faction="Dogs" Value="200" Shown="False" />
+				<part Name="Sibs_ModifyReputation" Faction="Dogs" Value="200" Shown="False" />
 			</choice>
 		</node>		
 	
 		<node ID="WhatNow" Inherits="Welcome">
-			<text ID="WhatNowDogMayorNeutral" IfHaveState="Brothers_CatsDogs_NeutralEnding">			
+			<text ID="WhatNowDogMayorNeutral" IfHaveState="Sibs_CatsDogs_NeutralEnding">			
 				The same thing that happened for decades, in a wee bit more peaceful climate by any chance. I heard me child is seeing one of them cats from Spar now -- what to think of that, I cannae tell ye.
 			</text>
-			<text ID="WhatNowDogMayorPerfect" IfHaveState="Brothers_CatsDogs_PerfectEnding"> 
+			<text ID="WhatNowDogMayorPerfect" IfHaveState="Sibs_CatsDogs_PerfectEnding"> 
 				"This place"? If the blood of me blood heard ye calling it that instead of Shikspar, ye would get yer ears boxed in. I reckon I will be stepping down in a few years time -- me clouded judgment dinnae do Shik much good, now did it?
 			</text>
-			<text ID="WhatNowDogMayorShik" IfHaveState="Brothers_CatsDogs_ShikEnding">			
+			<text ID="WhatNowDogMayorShik" IfHaveState="Sibs_CatsDogs_ShikEnding">			
 				Our future is bright, that I can assure ye traveler. This place is ours, as it should be -- only great things await us now.
 			</text>
 		</node>	
 
 		<node ID="Services" Inherits="Welcome">
-			<text ID="ServicesPerfect" IfHaveState="Brothers_CatsDogs_PerfectEnding_Occured">
+			<text ID="ServicesPerfect" IfHaveState="Sibs_CatsDogs_PerfectEnding_Occured">
 				Heh, ye will want to call it Shikspar nowadays. But we have everything ye could possibly need: soft cushions, tasty cooking, a place to trade in commodities and the best tinker ye could ask fer.
 				
 				{{emote|*The mayor swells with pride at the list of what =pronouns.possessive= village has to offer.*}}
 			</text>
-			<text ID="ServicesNotPerfect" IfNotHaveState="Brothers_CatsDogs_PerfectEnding_Occured">
+			<text ID="ServicesNotPerfect" IfNotHaveState="Sibs_CatsDogs_PerfectEnding_Occured">
 				Heh, ye will find Shik to have everything ye could possibly need: soft cushions, tasty cooking and a place to trade in commodities.
 				
 				{{emote|*The mayor swells with pride at the list of what =pronouns.possessive= village has to offer.*}}
 			</text>
-			<choice Target="Tinker" Priority="10" IfNotHaveState="Brothers_CatsDogs_AnyEnding_Occured">And if my equipment needs tinkering, where should I head?</choice>				
+			<choice Target="Tinker" Priority="10" IfNotHaveState="Sibs_CatsDogs_AnyEnding_Occured">And if my equipment needs tinkering, where should I head?</choice>				
 		</node>	
 
 		<node ID="Tinker" Inherits="Welcome">
@@ -606,11 +606,11 @@
 				
 				Watch yerself if ye decide to speak with Spar's mayor: she is as cruel a lass as they make!
 			</text>
-			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1" SetBooleanState="Brothers_CatsDogs_QuestgiverDogMayor,true">Duly noted. I will talk to the warden then.</choice>
+			<choice Target="End" StartQuest="Sibs_CatsDogs_MainQuest1" SetBooleanState="Sibs_CatsDogs_QuestgiverDogMayor,true">Duly noted. I will talk to the warden then.</choice>
 		</node>	
 
 		<node ID="HistoryChoices">
-			<choice Target="CatLore" IfHaveVillageNote="Brothers_ShiksparSecret3" FlagSecret="true">Your story does not quite match the monument I saw in Spar: the Founder supposedly disappeared without appointing a successor.</choice>	
+			<choice Target="CatLore" IfHaveVillageNote="Sibs_ShiksparSecret3" FlagSecret="true">Your story does not quite match the monument I saw in Spar: the Founder supposedly disappeared without appointing a successor.</choice>	
 			<choice Target="FounderSpecies">You said "their kin". Was the Founder a dog as well?</choice>		
 			<choice Target="Support">Where does the rest of Shik stand on that issue?</choice>
 			<choice Target="Start">A gripping tale. I wanted to ask you about something else.</choice>		
@@ -654,9 +654,9 @@
 	</conversation>
 
 
-	<conversation ID="Brothers_CatsDogs_CatMayor">
+	<conversation ID="Sibs_CatsDogs_CatMayor">
 
-		<start ID="TransitionWelcome" IfHaveQuest="Brothers_CatsDogs_MainQuestEpilogue" IfNotHaveState="(Brothers_CatsDogs_AnyEnding_Occured AND Brothers_CatsDogs_ShikEnding)">
+		<start ID="TransitionWelcome" IfHaveQuest="Sibs_CatsDogs_MainQuestEpilogue" IfNotHaveState="(Sibs_CatsDogs_AnyEnding_Occured AND Sibs_CatsDogs_ShikEnding)">
 			<text>			
 				{{emote|*=pronouns.Subjective= =verb:sits:afterpronoun=, pondering the situation.*}}
 
@@ -664,7 +664,7 @@
 			<choice Target="End">Understood, mayor. I will be back later; in the meantime, live and drink.</choice>
 		</start>
 		
-		<start ID="BadWelcome" IfHaveState="Brothers_CatsDogs_ShikEnding">
+		<start ID="BadWelcome" IfHaveState="Sibs_CatsDogs_ShikEnding">
 			<text>			
 				{{emote|*=pronouns.Subjective= =verb:gazes:afterpronoun= at the horizon, lost in thought.*}}
 
@@ -675,7 +675,7 @@
 			<choice Target="End">I will let you prepare then. Live and drink, mayor.</choice>
 		</start>
 	
-		<start ID="WelcomeTransit" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest3~CatMayor" IfNotHaveState="Brothers_CatsDogs_CatMayorMoved">
+		<start ID="WelcomeTransit" IfFinishedQuestStep="Sibs_CatsDogs_MainQuest3~CatMayor" IfNotHaveState="Sibs_CatsDogs_CatMayorMoved">
 			<text>
 				Lead the way, visitor. The Gathering draws near.
 			</text>
@@ -684,7 +684,7 @@
 			<choice Target="End">Live and drink, lady mayor.</choice>
 		</start>
 		
-		<start ID="WelcomeGathering" IfHaveState="Brothers_CatsDogs_CatMayorMoved" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest3~CatMayor">
+		<start ID="WelcomeGathering" IfHaveState="Sibs_CatsDogs_CatMayorMoved" IfNotFinishedQuest="Sibs_CatsDogs_MainQuest3" IfFinishedQuestStep="Sibs_CatsDogs_MainQuest3~CatMayor">
 			<text>
 				{{emote|*=pronouns.Subjective= =verb:lick:afterpronoun= the back of =pronouns.possessive= paw, calculating.*}}
 				
@@ -705,15 +705,15 @@
 
 		<node ID="DefaultChoices">
 			<choice Target="Slynth" Priority="10" IfHaveActiveQuest="Landing Pads">In my travels I encountered a people, the slynth, seeking a new home.</choice>
-			<choice Target="Council" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest3" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest3~CatMayor">Warden Arendubark wants to settle the division between Shik and Spar once and for all, and wants you to take part in a council with Shik's mayor.</choice>
-			<choice Target="FounderInfo" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfHaveObservation="($Brothers_CatsDogs_ShiksparFounder_Cat OR $Brothers_CatsDogs_ShiksparFounder_Dog)">I have definite information about Shik and Spar's founder.</choice>
-			<choice Target="Work" IfNotHaveQuest="Brothers_CatsDogs_CheeseQuest">Is there any work to do in Spar?</choice>
-			<choice Target="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">How come a wall stands in the middle of this town?</choice>
-			<choice Target="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What led to Shik and Spar's division?</choice>
-			<choice Target="Epilogue" IfHaveActiveQuest="Brothers_CatsDogs_MainQuestEpilogue" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">I am back, lady mayor. What happened while I was away?</choice>			
-			<choice Target="WhatNow" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">What does the future hold for this community?</choice>	
+			<choice Target="Council" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest3" IfNotFinishedQuestStep="Sibs_CatsDogs_MainQuest3~CatMayor">Warden Arendubark wants to settle the division between Shik and Spar once and for all, and wants you to take part in a council with Shik's mayor.</choice>
+			<choice Target="FounderInfo" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest2" IfHaveObservation="($Sibs_CatsDogs_ShiksparFounder_Cat OR $Sibs_CatsDogs_ShiksparFounder_Dog)">I have definite information about Shik and Spar's founder.</choice>
+			<choice Target="Work" IfNotHaveQuest="Sibs_CatsDogs_CheeseQuest">Is there any work to do in Spar?</choice>
+			<choice Target="Division" IfNotHaveQuest="Sibs_CatsDogs_MainQuest1">How come a wall stands in the middle of this town?</choice>
+			<choice Target="Opinion" IfHaveQuest="Sibs_CatsDogs_MainQuest1" IfNotFinishedQuest="Sibs_CatsDogs_MainQuest3" IfFinishedQuestStep="Sibs_CatsDogs_MainQuest1~Brief">What led to Shik and Spar's division?</choice>
+			<choice Target="Epilogue" IfHaveActiveQuest="Sibs_CatsDogs_MainQuestEpilogue" IfHaveState="Sibs_CatsDogs_AnyEnding_Occured">I am back, lady mayor. What happened while I was away?</choice>			
+			<choice Target="WhatNow" IfHaveState="Sibs_CatsDogs_AnyEnding_Occured">What does the future hold for this community?</choice>	
 			<choice Target="Services">What can I expect to find in Spar, once I am done napping?</choice>
-			<choice Target="Travelers" IfNotHaveState="Brothers_CatsDogs_AnyEnding_Occured">There seems to be only cats in Shik. Is my presence not an issue?</choice>	
+			<choice Target="Travelers" IfNotHaveState="Sibs_CatsDogs_AnyEnding_Occured">There seems to be only cats in Shik. Is my presence not an issue?</choice>	
 			<choice Target="Goatfolk">Are you not bothered by the jungle goatfolk?</choice>			
 			<choice Target="End">Live and drink, lady mayor.</choice>
 		</node>
@@ -734,7 +734,7 @@
 				
 				A council, you say? Perhaps this will be enough for those shaggy brutes to finally come to term with their faults. I will be right behind you.
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest3~CatMayor">I am not too sure about that, but I will see you there.</choice>
+			<choice Target="End" CompleteQuestStep="Sibs_CatsDogs_MainQuest3~CatMayor">I am not too sure about that, but I will see you there.</choice>
 		</node>
 	
 		<node ID="FounderInfo" Inherits="Welcome">
@@ -746,23 +746,23 @@
 		</node>	
 
 		<node ID="Epilogue">
-			<text ID="EpilogueBriefNeutral" IfHaveState="Brothers_CatsDogs_NeutralEnding">			
+			<text ID="EpilogueBriefNeutral" IfHaveState="Sibs_CatsDogs_NeutralEnding">			
 				{{emote|*=pronouns.Subjective= =verb:seem:afterpronoun= uneasy answering that question.*}}
 				
 				Well, what thought to be brutes out more moderate than I first thought, and people from Shik visit from time to time. I have decided we can tolerate that situation, in light of your recent revelations.
 			</text>
-			<text ID="EpilogueBriefPerfect" IfHaveState="Brothers_CatsDogs_PerfectEnding">	
+			<text ID="EpilogueBriefPerfect" IfHaveState="Sibs_CatsDogs_PerfectEnding">	
 				{{emote|*=pronouns.Subjective= uncomfortably =verb:knead:afterpronoun= the ground beneath =pronouns.possessive= paws.*}}
 				
 				Why visitor, you ought to discuss the matter with young Rrromaw. My heir has moved out to a hut inbetween villages with a dog from Shik and... Well, you will get a better explanation from them.</text>
-			<text ID="EpilogueBriefShik" IfHaveState="Brothers_CatsDogs_SparEnding">			
+			<text ID="EpilogueBriefShik" IfHaveState="Sibs_CatsDogs_SparEnding">			
 				{{emote|*=pronouns.Subjective= =verb:smile:afterpronoun= devilishly.*}}
 				
 				Justice happened, visitor. And the best kind -- self-served. After those brutes realized they were in the wrong, all of Shik's thugs left. Poor things could not sit with the weight of their own failures. Disappointing, but to be expected from the likes of them.
 			</text>
-			<choice Target="EpilogueNeutral" IfHaveState="Brothers_CatsDogs_NeutralEnding">Is the feud between Shik and Spar truly over?</choice>
-			<choice Target="EpilogueSpar" IfHaveState="Brothers_CatsDogs_SparEnding">Am I to believe the people from Shik simply left their homes behind?</choice>
-			<choice Target="End" IfHaveState="Brothers_CatsDogs_PerfectEnding">I will talk to Rrromaw, then. Live and drink, lady mayor.</choice>
+			<choice Target="EpilogueNeutral" IfHaveState="Sibs_CatsDogs_NeutralEnding">Is the feud between Shik and Spar truly over?</choice>
+			<choice Target="EpilogueSpar" IfHaveState="Sibs_CatsDogs_SparEnding">Am I to believe the people from Shik simply left their homes behind?</choice>
+			<choice Target="End" IfHaveState="Sibs_CatsDogs_PerfectEnding">I will talk to Rrromaw, then. Live and drink, lady mayor.</choice>
 		</node>		
 	
 		<node ID="EpilogueNeutral">
@@ -771,10 +771,10 @@
 
 				I also know gifts carry gratitude better than words, so I would like you to have this in addition to Spar's heartfelt thanks.
 			</text>
-			<choice Target="End" FinishQuest="Brothers_CatsDogs_MainQuestEpilogue">
+			<choice Target="End" FinishQuest="Sibs_CatsDogs_MainQuestEpilogue">
 				<text>At least things were resolved peacefully. Live and drink, lady mayor.</text>
 				<part Name="ReceiveItem" Blueprints="Helping Hands" Identify="Helping Hands" />
-				<part Name="Brothers_ModifyReputation" Faction="Cats" Value="100" Faction2="Dogs" Value2="100" Shown="False" />
+				<part Name="Sibs_ModifyReputation" Faction="Cats" Value="100" Faction2="Dogs" Value2="100" Shown="False" />
 			</choice>
 		</node>	
 
@@ -784,37 +784,37 @@
 				
 				Believe what you must, visitor, it matters little to me. Still, why would I lie? The cover of the night was the only witness to their ridiculous exile. The wall came down soon after, stripped of purpose. All of Spar would want you to have this: a fitting reward for the role you played into it, retrieved from their own stores.
 			</text>
-			<choice Target="End" FinishQuest="Brothers_CatsDogs_MainQuestEpilogue">
+			<choice Target="End" FinishQuest="Sibs_CatsDogs_MainQuestEpilogue">
 				<text>So this is how it ends? Live and drink, lady mayor.</text>
 				<part Name="ReceiveItem" Blueprints="Helping Hands" Identify="Helping Hands" />
-				<part Name="Brothers_ModifyReputation" Faction="Cats" Value="200" Shown="False" />
+				<part Name="Sibs_ModifyReputation" Faction="Cats" Value="200" Shown="False" />
 			</choice>
 		</node>		
 	
 		<node ID="WhatNow" Inherits="Welcome">
-			<text ID="WhatNowDogMayorNeutral" IfHaveState="Brothers_CatsDogs_NeutralEnding">			
+			<text ID="WhatNowDogMayorNeutral" IfHaveState="Sibs_CatsDogs_NeutralEnding">			
 				More of the same, I reckon. Spar shall approach the situation carefully. As for my family, it would happen Rrromaw fancies a dog from Shik -- heartbreak in the making.
 			</text>
-			<text ID="WhatNowDogMayorPerfect" IfHaveState="Brothers_CatsDogs_PerfectEnding"> 
+			<text ID="WhatNowDogMayorPerfect" IfHaveState="Sibs_CatsDogs_PerfectEnding"> 
 				Rrromaw would hiss upon hearing you avoid the name Shikspar. My child is wiser than me, and I expect a new mayor should be appointed soon -- this old feline has had her vision obscured by tradition for much too long.
 			</text>
-			<text ID="WhatNowDogMayorShik" IfHaveState="Brothers_CatsDogs_ShikEnding">			
+			<text ID="WhatNowDogMayorShik" IfHaveState="Sibs_CatsDogs_ShikEnding">			
 				Having shed the burden of Shik, our road is paved with greatness. You will always be welcome, visitor, for having proven instrumental in our success.
 			</text>
 		</node>	
 
 		<node ID="Services" Inherits="Welcome">
-			<text ID="ServicesPerfect" IfHaveState="Brothers_CatsDogs_PerfectEnding_Occured">
+			<text ID="ServicesPerfect" IfHaveState="Sibs_CatsDogs_PerfectEnding_Occured">
 				{{emote|*The glimmer in =pronouns.possessive= eye betrays pride at =pronouns.possessive= village's amenities.*}}
 				
 				Oh, traveler, this place is called Shikspar now. But surely you will need to break your fast: we have plenty of cheese for that, arranged by the Growarows in delicious meals. And if it is tinkering you require, our chrome-surgeon has proved her worth time and time again.
 			</text>
-			<text ID="ServicesNotPerfect" IfNotHaveState="Brothers_CatsDogs_PerfectEnding_Occured">				
+			<text ID="ServicesNotPerfect" IfNotHaveState="Sibs_CatsDogs_PerfectEnding_Occured">				
 				{{emote|*The glimmer in =pronouns.possessive= eye betrays pride at =pronouns.possessive= village's amenities.*}}
 				
 				Surely you will need to break your fast: we have plenty of cheese for that. And if it is tinkering you require, our chrome-surgeon has proved her worth time and time again.
 			</text>
-			<choice Target="Chef" Priority="10" IfNotHaveState="Brothers_CatsDogs_AnyEnding_Occured">Thank you for the pointers. But if I need some general trading, or a chef, what would you recommend?</choice>				
+			<choice Target="Chef" Priority="10" IfNotHaveState="Sibs_CatsDogs_AnyEnding_Occured">Thank you for the pointers. But if I need some general trading, or a chef, what would you recommend?</choice>				
 		</node>	
 
 		<node ID="Chef" Inherits="Welcome">
@@ -861,11 +861,11 @@
 				
 				And should you find yourself in Shik, I recommend you avoid their mayor: this brigand would not hesitate to run you through for a mere dram of water.
 			</text>
-			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1" SetBooleanState="Brothers_CatsDogs_QuestgiverCatMayor,true">Thank you for the warning. I will go see the warden.</choice>
+			<choice Target="End" StartQuest="Sibs_CatsDogs_MainQuest1" SetBooleanState="Sibs_CatsDogs_QuestgiverCatMayor,true">Thank you for the warning. I will go see the warden.</choice>
 		</node>	
 
 		<node ID="HistoryChoices">
-			<choice Target="DogLore" IfHaveVillageNote="Brothers_ShiksparSecret2" FlagSecret="true">In Shik, ancient writing present the Founder as having personally appointed a successor. Does that not contradict your story?</choice>	
+			<choice Target="DogLore" IfHaveVillageNote="Sibs_ShiksparSecret2" FlagSecret="true">In Shik, ancient writing present the Founder as having personally appointed a successor. Does that not contradict your story?</choice>	
 			<choice Target="FounderSpecies">If you trace your family line to the Founder, does that mean they were a cat too?</choice>		
 			<choice Target="Support">Does everyone in Spar agree with you?</choice>
 			<choice Target="Start">Thank you for answering my questions, but there is something else I need to ask.</choice>		
@@ -909,9 +909,9 @@
 	</conversation>
 	
 
-	<conversation ID="Brothers_CatsDogs_DogLover">
+	<conversation ID="Sibs_CatsDogs_DogLover">
 
-		<start ID="PerfectWelcome" IfHaveState="Brothers_CatsDogs_PerfectEnding_Occured" Inherits="PerfectChoices">
+		<start ID="PerfectWelcome" IfHaveState="Sibs_CatsDogs_PerfectEnding_Occured" Inherits="PerfectChoices">
 			<text Priority="-1">
 				{{emote|*=pronouns.Subjective= =verb:offer:afterpronoun= you a toothy smile dripping with slime.*}}
 				
@@ -920,7 +920,7 @@
 		</start>
 
 		<node ID="PerfectChoices">
- 			<choice Target="Epilogue" IfHaveActiveQuest="Brothers_CatsDogs_MainQuestEpilogue">I see the wall between Shik and Spar has been brought down! Was that your doing?</choice>
+ 			<choice Target="Epilogue" IfHaveActiveQuest="Sibs_CatsDogs_MainQuestEpilogue">I see the wall between Shik and Spar has been brought down! Was that your doing?</choice>
 			<choice Target="WhatNowPerfect">What do you reckon will become of this place now?</choice>
 			<choice Target="Cute">The two of you make quite the striking couple.</choice>
 			<choice Target="End">I wish the two of you the best. Live and drink, Oof Growf!</choice>
@@ -978,10 +978,10 @@
 
 				Made us think of ye, if ye'd believe it.
 			</text>
-			<choice Target="End" FinishQuest="Brothers_CatsDogs_MainQuestEpilogue">
+			<choice Target="End" FinishQuest="Sibs_CatsDogs_MainQuestEpilogue">
 				<text>It really was nothing, Oof Growf. I wish the two of you the best -- live and drink.</text>
 				<part Name="ReceiveItem" Blueprints="Helping Hands" Identify="Helping Hands" />
-				<part Name="Brothers_ModifyReputation" Faction="Cats" Value="200" Faction2="Dogs" Value2="200" Shown="False" />
+				<part Name="Sibs_ModifyReputation" Faction="Cats" Value="200" Faction2="Dogs" Value2="200" Shown="False" />
 			</choice>
 		</node>	
 
@@ -1003,13 +1003,13 @@
 			</text>
 		</node>	
 
-		<start ID="BadWelcome" IfHaveState="(Brothers_CatsDogs_ShikEnding OR Brothers_CatsDogs_SparEnding)">
-			<text ID="BadWelcomeQuest" IfHaveQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">
+		<start ID="BadWelcome" IfHaveState="(Sibs_CatsDogs_ShikEnding OR Sibs_CatsDogs_SparEnding)">
+			<text ID="BadWelcomeQuest" IfHaveQuest="(Sibs_CatsDogs_DogLoverQuest OR Sibs_CatsDogs_CatLoverQuest)">
 				{{emote|*=pronouns.Subjective= nearly =verb:jump:afterpronoun= at you.*}}
 				
 				Ye knew about me love, and still ye ran yer bloody mouth! Now we will be parted forever... Away with ye!
 			</text>
-			<text ID="BadWelcomeNoQuest" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)">
+			<text ID="BadWelcomeNoQuest" IfNotHaveQuest="(Sibs_CatsDogs_DogLoverQuest AND Sibs_CatsDogs_CatLoverQuest)">
 				{{emote|*=pronouns.Possessive= ears stay down.*}}
 
 				Ye cannae do anything fer me, stranger. Please leave me be.
@@ -1020,62 +1020,62 @@
 		</start>
 		
 		<start ID="Welcome" Inherits="DefaultChoices">
-			<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfFinishedQuest="Brothers_CatsDogs_MainQuest3" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured" Priority="-1">
+			<text IfNotHaveQuest="(Sibs_CatsDogs_DogLoverQuest AND Sibs_CatsDogs_CatLoverQuest)" IfFinishedQuest="Sibs_CatsDogs_MainQuest3" IfHaveState="Sibs_CatsDogs_AnyEnding_Occured" Priority="-1">
 				{{emote|*=pronouns.Subjective= =verb:perk:afterpronoun= up when seeing you.*}}
 				
 				I heard ye solved the issue between our wee villages, stranger. Ye dinna ken it, but ye were of great help to me.
 			</text>	
-			<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfFinishedQuest="Brothers_CatsDogs_MainQuest3" IfNotHaveState="Brothers_CatsDogs_AnyEnding_Occured" Priority="-1">
+			<text IfNotHaveQuest="(Sibs_CatsDogs_DogLoverQuest AND Sibs_CatsDogs_CatLoverQuest)" IfFinishedQuest="Sibs_CatsDogs_MainQuest3" IfNotHaveState="Sibs_CatsDogs_AnyEnding_Occured" Priority="-1">
 				{{emote|*=pronouns.Subjective= =verb:mutter:afterpronoun= to =pronouns.reflexive=.*}}
 				
 				A wee wall issue... I cannae find a solution...
 			</text>				
-			<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" Priority="-1">
+			<text IfNotHaveQuest="(Sibs_CatsDogs_DogLoverQuest AND Sibs_CatsDogs_CatLoverQuest)" IfNotFinishedQuest="Sibs_CatsDogs_MainQuest3" Priority="-1">
 				{{emote|*=pronouns.Subjective= =verb:seem:afterpronoun= lost in thought.*}}
 				
 				Aye, a voice so melodic, me heart is mourning when I cannae hear it. Tell me, stranger, have ye peered the cat they call Rrromaw?
 			</text>
-			<text IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Gifts" Priority="-1">			
+			<text IfHaveActiveQuest="Sibs_CatsDogs_DogLoverQuest" IfNotFinishedQuestStep="Sibs_CatsDogs_DogLoverQuest~Gifts" Priority="-1">			
 				{{emote|*=pronouns.Possessive= ears perk up.*}}
 
 				Have ye come bearing the wee gifts I need?
 			</text>
-			<text IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Gifts" Priority="-1">			
+			<text IfHaveActiveQuest="Sibs_CatsDogs_DogLoverQuest" IfFinishedQuestStep="Sibs_CatsDogs_DogLoverQuest~Gifts" Priority="-1">			
 				=name=! Did ye deliver me note? What did Rrromaw say?			
 			</text>
-			<text IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Invite" Priority="-1">
+			<text IfHaveActiveQuest="Sibs_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Sibs_CatsDogs_CatLoverQuest~Invite" Priority="-1">
 				{{emote|*=pronouns.Subjective= =verb:mutter:afterpronoun= to =pronouns.reflexive=.*}}
 				
 				A wee wall issue... I cannae find a solution...
 			</text>
-			<text IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Invite" Priority="-1">
+			<text IfHaveActiveQuest="Sibs_CatsDogs_CatLoverQuest" IfFinishedQuestStep="Sibs_CatsDogs_CatLoverQuest~Invite" Priority="-1">
 				{{emote|*=pronouns.Subjective= =verb:look:afterpronoun= at you expectantly.*}}
 				
 				I beg of ye, =name=, take me answer back to Rrromaw! 'Tis a yes, a thousand times if ye need them!				
 			</text>
-			<text IfFinishedQuest="Brothers_CatsDogs_DogLoverQuest" Priority="-1">
+			<text IfFinishedQuest="Sibs_CatsDogs_DogLoverQuest" Priority="-1">
 				{{emote|*=pronouns.Subjective= excitedly =verb:wag:afterpronoun= =pronouns.possessive= tail when seeing you.*}}
 								
 				Aye, 'tis me good friend =name=! I cannae thank ye enough fer all ye did.
 			</text>			
-			<text IfFinishedQuest="Brothers_CatsDogs_CatLoverQuest" Priority="-1">
+			<text IfFinishedQuest="Sibs_CatsDogs_CatLoverQuest" Priority="-1">
 				The festival cannae come soon enough, now. There is nae thanking you enough fer yer work, =player.formalAddressTerm=!
 			</text>
 		</start>
 
 		<node ID="DefaultChoices">
-			<choice Target="Brief" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_CatLoverSeen" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">As a matter of fact, I have seen a cat called Rrromaw. Why do you want to know?</choice>
-			<choice Target="Gifts" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Gifts" IfHaveLiquid="wine" IfHaveItemDescendsFrom="Polished Gemstone">I have everything you asked for.</choice>
-			<choice Target="Date" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfHaveItem="Brothers_CatsDogs_LoveNote">I come bearing a message: you have got yourself a proper date.</choice>
-			<choice Target="Debrief" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Invite">Great news: I have delivered your invitation to Rrromaw, and it has been accepted!</choice>			
-			<choice Target="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is going on with the other village?</choice>
-			<choice Target="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What is your stance on the division between Shik and Spar?</choice>
-			<choice Target="WhatNow" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">How was I of great help to you?</choice>
+			<choice Target="Brief" IfNotHaveQuest="(Sibs_CatsDogs_DogLoverQuest AND Sibs_CatsDogs_CatLoverQuest)" IfHaveState="Sibs_CatsDogs_CatLoverSeen" IfNotFinishedQuest="Sibs_CatsDogs_MainQuest3">As a matter of fact, I have seen a cat called Rrromaw. Why do you want to know?</choice>
+			<choice Target="Gifts" IfHaveActiveQuest="Sibs_CatsDogs_DogLoverQuest" IfNotFinishedQuestStep="Sibs_CatsDogs_DogLoverQuest~Gifts" IfHaveLiquid="wine" IfHaveItemDescendsFrom="Polished Gemstone">I have everything you asked for.</choice>
+			<choice Target="Date" IfHaveActiveQuest="Sibs_CatsDogs_CatLoverQuest" IfHaveItem="Sibs_CatsDogs_LoveNote">I come bearing a message: you have got yourself a proper date.</choice>
+			<choice Target="Debrief" IfHaveActiveQuest="Sibs_CatsDogs_DogLoverQuest" IfFinishedQuestStep="Sibs_CatsDogs_DogLoverQuest~Invite">Great news: I have delivered your invitation to Rrromaw, and it has been accepted!</choice>			
+			<choice Target="Division" IfNotHaveQuest="Sibs_CatsDogs_MainQuest1">What is going on with the other village?</choice>
+			<choice Target="Opinion" IfHaveQuest="Sibs_CatsDogs_MainQuest1" IfNotFinishedQuest="Sibs_CatsDogs_MainQuest3" IfFinishedQuestStep="Sibs_CatsDogs_MainQuest1~Brief">What is your stance on the division between Shik and Spar?</choice>
+			<choice Target="WhatNow" IfHaveState="Sibs_CatsDogs_AnyEnding_Occured">How was I of great help to you?</choice>
 			<choice Target="Family">Are you related to Shik's mayor?</choice>	
 			<choice Target="End">
-				<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">Live and drink, infatuated dog.</text>
-				<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfNotHaveState="Brothers_CatsDogs_AnyEnding_Occured">I will keep you in the know should I ever see Rrromaw. For now, live and drink.</text>
-				<text IfHaveQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">Live and drink, infatuated dog.</text>
+				<text IfNotHaveQuest="(Sibs_CatsDogs_DogLoverQuest AND Sibs_CatsDogs_CatLoverQuest)" IfHaveState="Sibs_CatsDogs_AnyEnding_Occured">Live and drink, infatuated dog.</text>
+				<text IfNotHaveQuest="(Sibs_CatsDogs_DogLoverQuest AND Sibs_CatsDogs_CatLoverQuest)" IfNotHaveState="Sibs_CatsDogs_AnyEnding_Occured">I will keep you in the know should I ever see Rrromaw. For now, live and drink.</text>
+				<text IfHaveQuest="(Sibs_CatsDogs_DogLoverQuest OR Sibs_CatsDogs_CatLoverQuest)">Live and drink, infatuated dog.</text>
 			</choice>
 		</node>
 		
@@ -1117,7 +1117,7 @@
 			<text>			
 				Well, 'tis a proper offering I'm after! Cannae invite the object of one's affection without a proper gift, heh? A dram of wine, to give me pluck -- and I think only the most flawless of gems would befit Rrromaw.
 			</text>
-			<choice Target="End" StartQuest="Brothers_CatsDogs_DogLoverQuest">Wine for you, and a polished gemstone. I will be back with those, Oof Growf.</choice>
+			<choice Target="End" StartQuest="Sibs_CatsDogs_DogLoverQuest">Wine for you, and a polished gemstone. I will be back with those, Oof Growf.</choice>
 			<choice Target="End">I cannot afford to go look for gemstones right now. Live and drink.</choice>
 		</node>
 
@@ -1155,7 +1155,7 @@
 
 				There ye go, =name=. All that's left now is to invite Rrromaw to elope to a wee dance where I will come bearing the gift ye got. 
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_DogLoverQuest~Gifts" GiveItem="Brothers_CatsDogs_LoveNote">I am on my way. Live and drink, Oof Growf.</choice>
+			<choice Target="End" CompleteQuestStep="Sibs_CatsDogs_DogLoverQuest~Gifts" GiveItem="Sibs_CatsDogs_LoveNote">I am on my way. Live and drink, Oof Growf.</choice>
 		</node>
 		
 		<node ID="Date">
@@ -1164,8 +1164,8 @@
 				
 				A date, ye say? Who with?
 			</text>
-			<choice Target="Delivered" TakeItem="Brothers_CatsDogs_LoveNote">Rrromaw, from Spar -- this note will explain things better than me.</choice>
-			<choice Target="Delivered" TakeItem="Brothers_CatsDogs_LoveNote">A secret admirer who wanted you to have this note.</choice>
+			<choice Target="Delivered" TakeItem="Sibs_CatsDogs_LoveNote">Rrromaw, from Spar -- this note will explain things better than me.</choice>
+			<choice Target="Delivered" TakeItem="Sibs_CatsDogs_LoveNote">A secret admirer who wanted you to have this note.</choice>
 		</node>
 		
 		<node ID="Delivered" AllowEscape="false">
@@ -1174,7 +1174,7 @@
 				
 				Rrromaw! The heartthrob from Spar! The melodic voice that's been haunting me dreams e'er since I heard it first! Of course I'll be there, battling sultans if needs be!
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_CatLoverQuest~Invite">I will let Rrromaw know of your enthusiasm then. In the meantime, live and drink.</choice>
+			<choice Target="End" CompleteQuestStep="Sibs_CatsDogs_CatLoverQuest~Invite">I will let Rrromaw know of your enthusiasm then. In the meantime, live and drink.</choice>
 		</node>			
 		
 		<node ID="Debrief">
@@ -1183,7 +1183,7 @@
 				
 				{{emote|Determination shines bright in =pronouns.possessive= eyes.*}}
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_DogLoverQuest~Debrief">Glad I could help you, Oof Growf. Live and drink!</choice>
+			<choice Target="End" CompleteQuestStep="Sibs_CatsDogs_DogLoverQuest~Debrief">Glad I could help you, Oof Growf. Live and drink!</choice>
 		</node>			
 		
 		<node ID="Division" AllowEscape="false">
@@ -1192,14 +1192,14 @@
 				
 				I cannae mention it under this roof: go find Warden Arendubark, in the northern outskirts. They will tell ye all about our sorry history!
 			</text>
-			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1" SetBooleanState="Brothers_CatsDogs_QuestgiverDogLover,true">Duly noted. I will go find the warden then.</choice>
+			<choice Target="End" StartQuest="Sibs_CatsDogs_MainQuest1" SetBooleanState="Sibs_CatsDogs_QuestgiverDogLover,true">Duly noted. I will go find the warden then.</choice>
 		</node>
 
 		<node ID="Opinion" Inherits="Welcome">
-			<text ID="OpinionQuestNotDone" IfNotFinishedQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">
+			<text ID="OpinionQuestNotDone" IfNotFinishedQuest="(Sibs_CatsDogs_DogLoverQuest OR Sibs_CatsDogs_CatLoverQuest)">
 				'Tis a sorry affair, that much is certain. No living soul here even remembers why the wall was built, ye ken?
 			</text>
-			<text ID="OpinionQuestDone" IfFinishedQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">
+			<text ID="OpinionQuestDone" IfFinishedQuest="(Sibs_CatsDogs_DogLoverQuest OR Sibs_CatsDogs_CatLoverQuest)">
 				'Tis a sorry affair, but there is a glimmer of hope in me eyes, =name=. Maybe all is not yet lost?
 			</text>							
 		</node>	
@@ -1223,9 +1223,9 @@
 	</conversation>
 	
 	
-	<conversation ID="Brothers_CatsDogs_CatLover">
+	<conversation ID="Sibs_CatsDogs_CatLover">
 
-		<start ID="PerfectWelcome" IfHaveState="Brothers_CatsDogs_PerfectEnding_Occured" Inherits="PerfectChoices">
+		<start ID="PerfectWelcome" IfHaveState="Sibs_CatsDogs_PerfectEnding_Occured" Inherits="PerfectChoices">
 			<text Priority="-1">
 				{{emote|*=pronouns.Subjective= =verb:wave:afterpronoun= at you with a tiny paw.*}}
 				
@@ -1234,7 +1234,7 @@
 		</start>
 
 		<node ID="PerfectChoices">
- 			<choice Target="Epilogue" IfHaveActiveQuest="Brothers_CatsDogs_MainQuestEpilogue">I seem to recall a wall between Shik and Spar...</choice>
+ 			<choice Target="Epilogue" IfHaveActiveQuest="Sibs_CatsDogs_MainQuestEpilogue">I seem to recall a wall between Shik and Spar...</choice>
 			<choice Target="WhatNowPerfect">What are your plans for the future?</choice>
 			<choice Target="Cute">From the look of things, I reckon the date went rather well.</choice>
 			<choice Target="End">Best of things to both of you. Live and drink, Rrromaw!</choice>
@@ -1294,10 +1294,10 @@
 				
 				It may not be much, but it reminded us of you, in a way.
 			</text>
-			<choice Target="End" FinishQuest="Brothers_CatsDogs_MainQuestEpilogue">
+			<choice Target="End" FinishQuest="Sibs_CatsDogs_MainQuestEpilogue">
 				<text>I am simply glad I could help, Rrromaw. I wish the two of you the best -- live and drink.</text>
 				<part Name="ReceiveItem" Blueprints="Helping Hands" Identify="Helping Hands" />
-				<part Name="Brothers_ModifyReputation" Faction="Cats" Value="200" Faction2="Dogs" Value2="200" Shown="False" />
+				<part Name="Sibs_ModifyReputation" Faction="Cats" Value="200" Faction2="Dogs" Value2="200" Shown="False" />
 			</choice>
 		</node>	
 
@@ -1317,13 +1317,13 @@
 			</text>
 		</node>	
 		
-		<start ID="BadWelcome" IfHaveState="(Brothers_CatsDogs_ShikEnding OR Brothers_CatsDogs_SparEnding)">
-			<text ID="BadWelcomeQuest" IfHaveQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">
+		<start ID="BadWelcome" IfHaveState="(Sibs_CatsDogs_ShikEnding OR Sibs_CatsDogs_SparEnding)">
+			<text ID="BadWelcomeQuest" IfHaveQuest="(Sibs_CatsDogs_DogLoverQuest OR Sibs_CatsDogs_CatLoverQuest)">
 				{{emote|*=pronouns.Subjective= =verb:shake:afterpronoun= with rage.*}}
 				
 				To think you just had to stay silent, I could have had a chance to be with the love of my life... Begone now, before my patience runs even thinner.
 			</text>
-			<text ID="BadWelcomeNoQuest" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)">
+			<text ID="BadWelcomeNoQuest" IfNotHaveQuest="(Sibs_CatsDogs_DogLoverQuest AND Sibs_CatsDogs_CatLoverQuest)">
 				{{emote|*=pronouns.Possessive= tail slumps on the ground.*}}
 
 				Please leave me be. There is nothing you can do to help me.
@@ -1334,61 +1334,61 @@
 		</start>
 		
 		<start ID="Welcome" Inherits="DefaultChoices">
-			<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfFinishedQuest="Brothers_CatsDogs_MainQuest3" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured" Priority="-1">		
+			<text IfNotHaveQuest="(Sibs_CatsDogs_DogLoverQuest AND Sibs_CatsDogs_CatLoverQuest)" IfFinishedQuest="Sibs_CatsDogs_MainQuest3" IfHaveState="Sibs_CatsDogs_AnyEnding_Occured" Priority="-1">		
 				{{emote|*=pronouns.Subjective= =verb:sits:afterpronoun= calmly.*}}
 				
 				Oh, I have heard of you! Word is you solved the feud between our villages. You were of great help to us!</text>
-			<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfFinishedQuest="Brothers_CatsDogs_MainQuest3" IfNotHaveState="Brothers_CatsDogs_AnyEnding_Occured" Priority="-1">		
+			<text IfNotHaveQuest="(Sibs_CatsDogs_DogLoverQuest AND Sibs_CatsDogs_CatLoverQuest)" IfFinishedQuest="Sibs_CatsDogs_MainQuest3" IfNotHaveState="Sibs_CatsDogs_AnyEnding_Occured" Priority="-1">		
 				{{emote|The tip of =pronouns.possessive= ears go pink as you address =pronouns.objective=.}}
 				
 				Oh? I think you must want to speak with the mayor -- she is right over there.
 			</text>
-			<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" Priority="-1">		
+			<text IfNotHaveQuest="(Sibs_CatsDogs_DogLoverQuest AND Sibs_CatsDogs_CatLoverQuest)" IfNotFinishedQuest="Sibs_CatsDogs_MainQuest3" Priority="-1">		
 				{{emote|*=pronouns.Subjective= =verb:fidget:afterpronoun= restlessly, unable to stay put.*}}
 				
 				What to do, what to do... I could maybe... No I can't! Wait, you there! Do you come from Shik? If you have seen a dog called Oof Growf, I pray you tell me.
 			</text>
-			<text IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts" Priority="-1">			
+			<text IfHaveActiveQuest="Sibs_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Sibs_CatsDogs_CatLoverQuest~Gifts" Priority="-1">			
 				{{emote|=pronouns.Subjective= =verb:pace:afterpronoun= relentlessly.}}
 				
 				Oh, please, please, tell me you have everything! What if someone invite Oof Growf before I do?
 			</text>
-			<text IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts" Priority="-1">			
+			<text IfHaveActiveQuest="Sibs_CatsDogs_CatLoverQuest" IfFinishedQuestStep="Sibs_CatsDogs_CatLoverQuest~Gifts" Priority="-1">			
 				Oh =name=, I shall surely faint before the day is done. Have you delivered the invite? What did Oof Growf say?
 			</text>
-			<text IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Invite" Priority="-1">
+			<text IfHaveActiveQuest="Sibs_CatsDogs_DogLoverQuest" IfNotFinishedQuestStep="Sibs_CatsDogs_DogLoverQuest~Invite" Priority="-1">
 				{{emote|The tip of =pronouns.possessive= ears go pink as you address =pronouns.objective=.}}
 				
 				Oh? I think you must want to speak with the mayor -- she is right over there.
 			</text>
-			<text IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_DogLoverQuest~Invite" Priority="-1">
+			<text IfHaveActiveQuest="Sibs_CatsDogs_DogLoverQuest" IfFinishedQuestStep="Sibs_CatsDogs_DogLoverQuest~Invite" Priority="-1">
 				{{emote|=pronouns.Subjective= =verb:knead:afterpronoun= the ground in impatience.}}
 				
 				You've not forgotten my answer, have you? I'm sorry... It's a yes, of course! 
 			</text>
-			<text IfFinishedQuest="Brothers_CatsDogs_CatLoverQuest" Priority="-1">
+			<text IfFinishedQuest="Sibs_CatsDogs_CatLoverQuest" Priority="-1">
 				{{emote|*=pronouns.Subjective= =verb:blink:afterpronoun= slowly in your direction.*}}
 								
 				Oh, =name=, it is you! If you ever need help arranging a date or any get-together of your own, you can always count on me!
 			</text>			
-			<text IfFinishedQuest="Brothers_CatsDogs_DogLoverQuest" Priority="-1">
+			<text IfFinishedQuest="Sibs_CatsDogs_DogLoverQuest" Priority="-1">
 				Is the bow fine? Is it too much? I have to master wearing it before the festival...
 			</text>
 		</start>
 
 		<node ID="DefaultChoices">
-			<choice Target="Brief" IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_DogLoverSeen" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3">As a matter of fact I have seen a dog called Oof Growf, yes. Why do you want to know?</choice>
-			<choice Target="Gifts" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts" IfHaveLiquid="wine" IfHaveItemDescendsFrom="Polished Gemstone">I have the wine and gem you asked for.</choice>
-			<choice Target="Date" IfHaveActiveQuest="Brothers_CatsDogs_DogLoverQuest" IfHaveItem="Brothers_CatsDogs_LoveNote">I come bearing a message: you have got yourself a proper date.</choice>
-			<choice Target="Debrief" IfHaveActiveQuest="Brothers_CatsDogs_CatLoverQuest" IfFinishedQuestStep="Brothers_CatsDogs_CatLoverQuest~Invite">Great news: I have delivered your invitation to Oof Growf, and it has been accepted!</choice>			
-			<choice Target="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is going between Shik and Sp...</choice>
-			<choice Target="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What is your stance on the division between Shik and Spar?</choice>
-			<choice Target="WhatNow" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">I am not sure I understand how I was of any help to you.</choice>
+			<choice Target="Brief" IfNotHaveQuest="(Sibs_CatsDogs_DogLoverQuest AND Sibs_CatsDogs_CatLoverQuest)" IfHaveState="Sibs_CatsDogs_DogLoverSeen" IfNotFinishedQuest="Sibs_CatsDogs_MainQuest3">As a matter of fact I have seen a dog called Oof Growf, yes. Why do you want to know?</choice>
+			<choice Target="Gifts" IfHaveActiveQuest="Sibs_CatsDogs_CatLoverQuest" IfNotFinishedQuestStep="Sibs_CatsDogs_CatLoverQuest~Gifts" IfHaveLiquid="wine" IfHaveItemDescendsFrom="Polished Gemstone">I have the wine and gem you asked for.</choice>
+			<choice Target="Date" IfHaveActiveQuest="Sibs_CatsDogs_DogLoverQuest" IfHaveItem="Sibs_CatsDogs_LoveNote">I come bearing a message: you have got yourself a proper date.</choice>
+			<choice Target="Debrief" IfHaveActiveQuest="Sibs_CatsDogs_CatLoverQuest" IfFinishedQuestStep="Sibs_CatsDogs_CatLoverQuest~Invite">Great news: I have delivered your invitation to Oof Growf, and it has been accepted!</choice>			
+			<choice Target="Division" IfNotHaveQuest="Sibs_CatsDogs_MainQuest1">What is going between Shik and Sp...</choice>
+			<choice Target="Opinion" IfHaveQuest="Sibs_CatsDogs_MainQuest1" IfNotFinishedQuest="Sibs_CatsDogs_MainQuest3" IfFinishedQuestStep="Sibs_CatsDogs_MainQuest1~Brief">What is your stance on the division between Shik and Spar?</choice>
+			<choice Target="WhatNow" IfHaveState="Sibs_CatsDogs_AnyEnding_Occured">I am not sure I understand how I was of any help to you.</choice>
 			<choice Target="Family">Are you related to Spar's mayor?</choice>	
 			<choice Target="End">
-				<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">Live and drink, enamored cat.</text>
-				<text IfNotHaveQuest="(Brothers_CatsDogs_DogLoverQuest AND Brothers_CatsDogs_CatLoverQuest)" IfNotHaveState="Brothers_CatsDogs_AnyEnding_Occured">I will let you know if I ever see Oof Growf -- in the meantime, live and drink.</text>
-				<text IfHaveQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)">Live and drink, enamored cat.</text>
+				<text IfNotHaveQuest="(Sibs_CatsDogs_DogLoverQuest AND Sibs_CatsDogs_CatLoverQuest)" IfHaveState="Sibs_CatsDogs_AnyEnding_Occured">Live and drink, enamored cat.</text>
+				<text IfNotHaveQuest="(Sibs_CatsDogs_DogLoverQuest AND Sibs_CatsDogs_CatLoverQuest)" IfNotHaveState="Sibs_CatsDogs_AnyEnding_Occured">I will let you know if I ever see Oof Growf -- in the meantime, live and drink.</text>
+				<text IfHaveQuest="(Sibs_CatsDogs_DogLoverQuest OR Sibs_CatsDogs_CatLoverQuest)">Live and drink, enamored cat.</text>
 			</choice>
 		</node>
 		
@@ -1435,7 +1435,7 @@
 				
 				Something precious, and rare -- I'm thinking only the most flawless gemstone would do. And huh... Some wine. For the nerves, Founder knows I will need some.
 			</text>
-			<choice Target="End" StartQuest="Brothers_CatsDogs_CatLoverQuest">A smooth gemstone, and some wine for you. I will be back in no time, Rrromaw.</choice>
+			<choice Target="End" StartQuest="Sibs_CatsDogs_CatLoverQuest">A smooth gemstone, and some wine for you. I will be back in no time, Rrromaw.</choice>
 			<choice Target="End">I cannot afford to go look for gemstones right now. Live and drink.</choice>
 		</node>
 
@@ -1473,7 +1473,7 @@
 
 				Please, =name=, could you give this to Oof Growf? It is an invitation to elope to a festival so I can offer the gift you got me and well, I can't really give it in person, can I?
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_CatLoverQuest~Gifts" GiveItem="Brothers_CatsDogs_LoveNote">I am on my way. Live and drink, Rrromaw.</choice>
+			<choice Target="End" CompleteQuestStep="Sibs_CatsDogs_CatLoverQuest~Gifts" GiveItem="Sibs_CatsDogs_LoveNote">I am on my way. Live and drink, Rrromaw.</choice>
 		</node>
 
 		<node ID="Date">
@@ -1482,8 +1482,8 @@
 
 				A date? But... I do not even know you...
 			</text>
-			<choice Target="Delivered" TakeItem="Brothers_CatsDogs_LoveNote">Not with me, obviously. With Oof Growf, from Shik: this note will explain everything.</choice>
-			<choice Target="Delivered" TakeItem="Brothers_CatsDogs_LoveNote">I am heartbroken, but shall recover swiftly. In the meantime, please have this note -- the actual date invitation.</choice>
+			<choice Target="Delivered" TakeItem="Sibs_CatsDogs_LoveNote">Not with me, obviously. With Oof Growf, from Shik: this note will explain everything.</choice>
+			<choice Target="Delivered" TakeItem="Sibs_CatsDogs_LoveNote">I am heartbroken, but shall recover swiftly. In the meantime, please have this note -- the actual date invitation.</choice>
 		</node>
 	
 		<node ID="Delivered" AllowEscape="false">
@@ -1492,7 +1492,7 @@
 				
 				Oof Growf, whom I've heard so much about! A model of valor and bravery... I cannot let this occasion pass! I will be there at any cost!
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_DogLoverQuest~Invite">Oof Growf will be delighted. Live and drink!</choice>
+			<choice Target="End" CompleteQuestStep="Sibs_CatsDogs_DogLoverQuest~Invite">Oof Growf will be delighted. Live and drink!</choice>
 		</node>			
 		
 		<node ID="Debrief">
@@ -1503,7 +1503,7 @@
 
 				This is amazing news, =name=! Oh, I've got everything to plan for, the day must be perfect... I have both so much and so little time -- I will never be able to thank you enough, but I will repay you one day, I swear!
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_CatLoverQuest~Debrief">No need to, I am just happy I could help. Live and drink, Rrromaw!</choice>
+			<choice Target="End" CompleteQuestStep="Sibs_CatsDogs_CatLoverQuest~Debrief">No need to, I am just happy I could help. Live and drink, Rrromaw!</choice>
 		</node>			
 		
 		<node ID="Division" AllowEscape="false">
@@ -1512,14 +1512,14 @@
 				
 				Not now, not here! Go find our warden, north of the wall. They have been trying to fix that situation for years now.
 			</text>
-			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1" SetBooleanState="Brothers_CatsDogs_QuestgiverCatLover,true">Alright... In that case, I will go find the warden.</choice>
+			<choice Target="End" StartQuest="Sibs_CatsDogs_MainQuest1" SetBooleanState="Sibs_CatsDogs_QuestgiverCatLover,true">Alright... In that case, I will go find the warden.</choice>
 		</node>
 
 		<node ID="Opinion" Inherits="Welcome">
-			<text ID="OpinionQuestNotDone" IfNotFinishedQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)" Priority="10">
+			<text ID="OpinionQuestNotDone" IfNotFinishedQuest="(Sibs_CatsDogs_DogLoverQuest OR Sibs_CatsDogs_CatLoverQuest)" Priority="10">
 				It is just sad, honestly. To never meet one's neighbors... To never see the face of those you hear so much about...
 			</text>
-			<text ID="OpinionQuestDone" IfFinishedQuest="(Brothers_CatsDogs_DogLoverQuest OR Brothers_CatsDogs_CatLoverQuest)" Priority="10">
+			<text ID="OpinionQuestDone" IfFinishedQuest="(Sibs_CatsDogs_DogLoverQuest OR Sibs_CatsDogs_CatLoverQuest)" Priority="10">
 				Until recently I thought it a tragedy, but I believe you just may help us yet, =name=!
 			</text>					
 		</node>
@@ -1541,7 +1541,7 @@
 	</conversation>	
 
 
-	<conversation ID="Brothers_CatsDogs_Catgod">
+	<conversation ID="Sibs_CatsDogs_Catgod">
 		
 		<start ID="Welcome" Inherits="DefaultChoices">
 			<text Priority="-1">
@@ -1552,7 +1552,7 @@
 		</start>
 
 		<node ID="DefaultChoices">
-			<choice Target="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Investigate" IfNotHaveObservation="$Brothers_CatsDogs_ShiksparFounder_Cat">O goddess, I am sorry to disturb Your rest, but I am looking for information on a traveler named Bubumube. They who would have spent some time in Your abode.</choice>
+			<choice Target="Bubumube" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Sibs_CatsDogs_MainQuest2~Investigate" IfNotHaveObservation="$Sibs_CatsDogs_ShiksparFounder_Cat">O goddess, I am sorry to disturb Your rest, but I am looking for information on a traveler named Bubumube. They who would have spent some time in Your abode.</choice>
 			<choice Target="Activity">How do You spend Your days here?</choice>
 			<choice Target="Worship">Are the pilgrims making their way here not disturbing You?</choice>
 			<choice Target="End">I will take my leave, if you would allow me. Live and drink, o goddess.</choice>
@@ -1574,7 +1574,7 @@
 
 				Away with thee, and leave me now, for rest I need.
 			</text>
-			<choice Target="End" RevealObservation="$Brothers_CatsDogs_ShiksparFounder_Cat">Thank You, o goddess. I shall do my best not to disturb You again.</choice>
+			<choice Target="End" RevealObservation="$Sibs_CatsDogs_ShiksparFounder_Cat">Thank You, o goddess. I shall do my best not to disturb You again.</choice>
 		</node>		
 	
 		<node ID="Activity" Inherits="Welcome">
@@ -1592,7 +1592,7 @@
 	</conversation>
 
 
-	<conversation ID="Brothers_CatsDogs_Doggod">
+	<conversation ID="Sibs_CatsDogs_Doggod">
 		
 		<start ID="Welcome" Inherits="DefaultChoices">
 			<text Priority="-1">
@@ -1601,7 +1601,7 @@
 		</start>
 
 		<node ID="DefaultChoices">
-			<choice Target="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Investigate" IfNotHaveObservation="$Brothers_CatsDogs_ShiksparFounder_Dog">I intrude but for a moment: I am after a traveler named Bubumube, who would have spent some of their days here. Do You remember them?</choice>
+			<choice Target="Bubumube" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Sibs_CatsDogs_MainQuest2~Investigate" IfNotHaveObservation="$Sibs_CatsDogs_ShiksparFounder_Dog">I intrude but for a moment: I am after a traveler named Bubumube, who would have spent some of their days here. Do You remember them?</choice>
 			<choice Target="Disturb">I do not with to disturb You -- is this a bad moment?</choice>
 			<choice Target="Pilgrims">I did not see any pilgrims on my way there...</choice>
 			<choice Target="End">I apologize for disturbing you, and will be going. Live and drink, o divine.</choice>
@@ -1624,7 +1624,7 @@
 				By the river they caught,
 				Gleaming mail of swimmers.
 			</text>
-			<choice Target="End" RevealObservation="$Brothers_CatsDogs_ShiksparFounder_Dog">I see. Thank You, o divine. I will take my leave now.</choice>
+			<choice Target="End" RevealObservation="$Sibs_CatsDogs_ShiksparFounder_Dog">I see. Thank You, o divine. I will take my leave now.</choice>
 		</node>		
 	
 		<node ID="Disturb" Inherits="Welcome">
@@ -1645,33 +1645,33 @@
 	<conversation ID="Haddas" Load="Merge">
 		
 		<node ID="Start" Load="Merge">
-			<choice Target="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They lived in Ezra, many years ago.</choice>
-			<choice Target="BubumubeReminder" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Can you remind me where Bubumube went after they left Ezra?</choice>
+			<choice Target="Bubumube" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Sibs_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They lived in Ezra, many years ago.</choice>
+			<choice Target="BubumubeReminder" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest2" IfFinishedQuestStep="Sibs_CatsDogs_MainQuest2~Travel">Can you remind me where Bubumube went after they left Ezra?</choice>
 		</node>	
 
 		<node ID="Reliefs" Load="Merge">
-			<choice Target="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They supposedly passed by Ezra, many decades ago.</choice>
-			<choice Target="BubumubeReminder" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Can you remind me where Bubumube went after they left Ezra?</choice>
+			<choice Target="Bubumube" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Sibs_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They supposedly passed by Ezra, many decades ago.</choice>
+			<choice Target="BubumubeReminder" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest2" IfFinishedQuestStep="Sibs_CatsDogs_MainQuest2~Travel">Can you remind me where Bubumube went after they left Ezra?</choice>
 		</node>
 
 		<node ID="StarTree" Load="Merge">
-			<choice Target="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They lived in Ezra, many years ago.</choice>
-			<choice Target="BubumubeReminder" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Can you remind me where Bubumube went after they left Ezra?</choice>
+			<choice Target="Bubumube" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Sibs_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They lived in Ezra, many years ago.</choice>
+			<choice Target="BubumubeReminder" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest2" IfFinishedQuestStep="Sibs_CatsDogs_MainQuest2~Travel">Can you remind me where Bubumube went after they left Ezra?</choice>
 		</node>
 
 		<node ID="Warden" Load="Merge">
-			<choice Target="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They lived in Ezra, many years ago.</choice>
-			<choice Target="BubumubeReminder" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Can you remind me where Bubumube went after they left Ezra?</choice>
+			<choice Target="Bubumube" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Sibs_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They lived in Ezra, many years ago.</choice>
+			<choice Target="BubumubeReminder" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest2" IfFinishedQuestStep="Sibs_CatsDogs_MainQuest2~Travel">Can you remind me where Bubumube went after they left Ezra?</choice>
 		</node>
 		
 		<node ID="Merchants" Load="Merge">
-			<choice Target="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They lived in Ezra, many years ago.</choice>
-			<choice Target="BubumubeReminder" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Can you remind me where Bubumube went after they left Ezra?</choice>
+			<choice Target="Bubumube" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Sibs_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They lived in Ezra, many years ago.</choice>
+			<choice Target="BubumubeReminder" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest2" IfFinishedQuestStep="Sibs_CatsDogs_MainQuest2~Travel">Can you remind me where Bubumube went after they left Ezra?</choice>
 		</node>
 
 		<node ID="Work" Load="Merge">
-			<choice Target="Bubumube" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They lived in Ezra, many years ago.</choice>
-			<choice Target="BubumubeReminder" IfHaveActiveQuest="Brothers_CatsDogs_MainQuest2" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest2~Travel">Can you remind me where Bubumube went after they left Ezra?</choice>
+			<choice Target="Bubumube" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Sibs_CatsDogs_MainQuest2~Travel">Please, mayor, are you familiar with someone called Bubumube? They lived in Ezra, many years ago.</choice>
+			<choice Target="BubumubeReminder" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest2" IfFinishedQuestStep="Sibs_CatsDogs_MainQuest2~Travel">Can you remind me where Bubumube went after they left Ezra?</choice>
 		</node>
 
 		<node ID="Bubumube">
@@ -1698,7 +1698,7 @@
 				
 				HA! Know the path to them if you did not already.
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_MainQuest2~Travel" RevealMapNote="($brothers_catgod_lair AND $brothers_doggod_lair">Thank you, mayor. You were of great help.</choice>
+			<choice Target="End" CompleteQuestStep="Sibs_CatsDogs_MainQuest2~Travel" RevealMapNote="($Sibs_catgod_lair AND $Sibs_doggod_lair">Thank you, mayor. You were of great help.</choice>
 		</node>
 		
 		<node ID="BubumubeReminder">
@@ -1713,7 +1713,7 @@
 	</conversation>
 	
 
-	<conversation ID="Brothers_CatsDogs_DogChef">
+	<conversation ID="Sibs_CatsDogs_DogChef">
 		
 		<start ID="TooManyHeads" IfSpeakerEvolutiveTileMoreOrEqual="3">
 			<text>			
@@ -1723,7 +1723,7 @@
 			<choice Target="End">{{emote|*back away slowly*}}</choice>
 		</start>
 
-		<start ID="BadWelcome" IfHaveState="Brothers_CatsDogs_SparEnding" IfSpeakerNotEvolutiveTileMoreOrEqual="3">
+		<start ID="BadWelcome" IfHaveState="Sibs_CatsDogs_SparEnding" IfSpeakerNotEvolutiveTileMoreOrEqual="3">
 			<text ID="BadWelcome3Heads" IfSpeakerEvolutiveTileMoreOrEqual="2" Priority="-1">			
 				{{emote|*The first two heads stay silent.*}}
 
@@ -1763,11 +1763,11 @@
 		</start>
 
 		<node ID="DefaultChoices" IfSpeakerNotEvolutiveTileMoreOrEqual="3">
-			<choice Target="Work" IfNotHaveQuest="Brothers_CatsDogs_ChefQuest">I am looking for work. Do you require assistance with anything?</choice>
-			<choice Target="TarBones" IfHaveActiveQuest="Brothers_CatsDogs_ChefQuest" IfHaveItem="TarBones">I have found the bones you were looking for.</choice>
-			<choice Target="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is happening with the other village?</choice>
-			<choice Target="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What are your stances on the division between Shik and Spar?</choice>
-			<choice Target="WhatNow" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">What do you make of all that happened here?</choice>	
+			<choice Target="Work" IfNotHaveQuest="Sibs_CatsDogs_ChefQuest">I am looking for work. Do you require assistance with anything?</choice>
+			<choice Target="TarBones" IfHaveActiveQuest="Sibs_CatsDogs_ChefQuest" IfHaveItem="TarBones">I have found the bones you were looking for.</choice>
+			<choice Target="Division" IfNotHaveQuest="Sibs_CatsDogs_MainQuest1">What is happening with the other village?</choice>
+			<choice Target="Opinion" IfHaveQuest="Sibs_CatsDogs_MainQuest1" IfNotFinishedQuest="Sibs_CatsDogs_MainQuest3" IfFinishedQuestStep="Sibs_CatsDogs_MainQuest1~Brief">What are your stances on the division between Shik and Spar?</choice>
+			<choice Target="WhatNow" IfHaveState="Sibs_CatsDogs_AnyEnding_Occured">What do you make of all that happened here?</choice>	
 			<choice Target="TwoHeads">I was not expecting that amount of heads.</choice>
 			<choice Target="About">What do you do in Shik?</choice>
 			<choice Target="End">Live and drink, all of you.</choice>
@@ -1790,11 +1790,11 @@
 			</text>
 			<choice Target="CookALot">
 				<text>My skill is recognized far and wide, and I know a fellow chef when I see one. What are you preparing? Freeze-dried yuckwheat? Fermented tortoise scute? Hoarshroom jam?</text>
-				<part Name="Brothers_RequirePart" Part="CookingAndGathering_CarbideChef" Render="Cooking and Gathering: Carbide Chef" />
+				<part Name="Sibs_RequirePart" Part="CookingAndGathering_CarbideChef" Render="Cooking and Gathering: Carbide Chef" />
 			</choice>
 			<choice Target="CookABit">
 				<text>I am enough of a cook to follow recipes, at least. Do you need me to retrieve some?</text>
-				<part Name="Brothers_RequirePart" Part="CookingAndGathering" Render="Cooking and Gathering: Meal Preparation" />
+				<part Name="Sibs_RequirePart" Part="CookingAndGathering" Render="Cooking and Gathering: Meal Preparation" />
 			</choice>		
 			<choice Target="DoNotCook">I can improvise with foraged ingredients -- enough to keep myself fed, at least.</choice>
 			<choice Target="End">I will come back to you on that matter.</choice>	
@@ -1885,8 +1885,8 @@
 
 				We have heard tales of abandoned tunnels near the Mechanimist cathedral, holding jet-black liquids. While we never ventured this far north, this could be a place to investigate.		
 			</text>
-			<choice Target="End" IfNotHaveItem="TarBones" StartQuest="Brothers_CatsDogs_ChefQuest">If there is nothing else you need, I will be back with your final ingredient. In the meantime, live and drink!</choice>
-			<choice Target="End" IfHaveItem="TarBones" StartQuest="Brothers_CatsDogs_ChefQuest" CompleteQuestStep="Brothers_CatsDogs_ChefQuest~Find">I already have what you ask for -- just give me a second to fetch it for you, and I will be right back.</choice>
+			<choice Target="End" IfNotHaveItem="TarBones" StartQuest="Sibs_CatsDogs_ChefQuest">If there is nothing else you need, I will be back with your final ingredient. In the meantime, live and drink!</choice>
+			<choice Target="End" IfHaveItem="TarBones" StartQuest="Sibs_CatsDogs_ChefQuest" CompleteQuestStep="Sibs_CatsDogs_ChefQuest~Find">I already have what you ask for -- just give me a second to fetch it for you, and I will be right back.</choice>
 			<choice Target="End">I am nary equipped for such a trip and must decline. Live and drink.</choice>	
 		</node>
 
@@ -1929,7 +1929,7 @@
 				
 				Please pardon our manners -- very thankful indeed. As for tasting... The meal will sadly not be done for another couple of months, as it needs to cure and ripen properly. Still, you deserve a reward: the recipe of a unique signature dish loved by canines everywhere.
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_ChefQuest~Debrief" FinishQuest="Brothers_CatsDogs_ChefQuest" Brothers_GiveRecipe="Brothers_FeralDinner">Thank you, Growarow and Growarow -- Growarows. This knowledge will certainly come in handy. Live and drink.</choice>	
+			<choice Target="End" CompleteQuestStep="Sibs_CatsDogs_ChefQuest~Debrief" FinishQuest="Sibs_CatsDogs_ChefQuest" Sibs_GiveRecipe="Sibs_FeralDinner">Thank you, Growarow and Growarow -- Growarows. This knowledge will certainly come in handy. Live and drink.</choice>	
 		</node>
 
 		<node ID="RewardTrueKin" AllowEscape="false">
@@ -1947,7 +1947,7 @@
 				
 				Please pardon our manners -- very thankful indeed. As for tasting... The meal will sadly not be done for another couple of months, as it needs to cure and ripen properly. Still, you deserve a reward: twin drops of nectar, to bring a divine kick to any of your meals.
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_ChefQuest~Debrief" FinishQuest="Brothers_CatsDogs_ChefQuest">
+			<choice Target="End" CompleteQuestStep="Sibs_CatsDogs_ChefQuest~Debrief" FinishQuest="Sibs_CatsDogs_ChefQuest">
 				<text>Thank you, Growarow and Growarow -- Growarows. These ingredients will certainly come in handy. Live and drink.</text>
 				<part Name="ReceiveItem" Blueprints="Drop of Nectar,Drop of Nectar"/>
 			</choice>	
@@ -1966,7 +1966,7 @@
 				
 				{{Y|There is not much that we can say, =player.formalAddressTerm=. Fetch Warden Arendubark, north of the wall -- they have been trying to fix this matter for many moons, now.}}
 			</text>
-			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1" SetBooleanState="Brothers_CatsDogs_QuestgiverDogChef,true">I will talk to the warden, then. In the meantime, live and drink.</choice>	
+			<choice Target="End" StartQuest="Sibs_CatsDogs_MainQuest1" SetBooleanState="Sibs_CatsDogs_QuestgiverDogChef,true">I will talk to the warden, then. In the meantime, live and drink.</choice>	
 		</node>
 
 		<node ID="Opinion" Inherits="Welcome">
@@ -1985,36 +1985,36 @@
 		</node>
 
 		<node ID="WhatNow" Inherits="Welcome">
-			<text ID="WhatNowChefNeutral3" IfSpeakerEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_NeutralEnding">			
+			<text ID="WhatNowChefNeutral3" IfSpeakerEvolutiveTileMoreOrEqual="2" IfHaveState="Sibs_CatsDogs_NeutralEnding">			
 				{{K|All for nothing!}}
 
 				{{emote|*The two larger heads stare at each other but neither speak up.*}}
 			</text>
-			<text ID="WhatNowChefNeutral2" IfSpeakerNotEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_NeutralEnding">
+			<text ID="WhatNowChefNeutral2" IfSpeakerNotEvolutiveTileMoreOrEqual="2" IfHaveState="Sibs_CatsDogs_NeutralEnding">
 				{{emote|*Both heads look rather disgruntled.*}}
 
 				It all seemed like quite a hubbub for both mayors to realize they were wrong.
 
 				{{Y|We would not be as dour as Growarow, =player.formalAddressTerm=. Things will improve with time, we are sure of it!}}
 			</text>	
-			<text ID="WhatNowChefPerfect3" IfSpeakerEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_PerfectEnding">			
+			<text ID="WhatNowChefPerfect3" IfSpeakerEvolutiveTileMoreOrEqual="2" IfHaveState="Sibs_CatsDogs_PerfectEnding">			
 				{{K|Happy! Friends!}}
 
 				{{emote|*The two heads nuzzle each other.*}}
 			</text>
-			<text ID="WhatNowChefPerfect2" IfSpeakerNotEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_PerfectEnding">		
+			<text ID="WhatNowChefPerfect2" IfSpeakerNotEvolutiveTileMoreOrEqual="2" IfHaveState="Sibs_CatsDogs_PerfectEnding">		
 				What we think? Spar's tinker is already planning to enhance our oven, can you picture it?
 				
 				{{Y|We gathered it was your doing, =player.formalAddressTerm=. You have done much for our communities!}}
 				
 				{{cloudy|You have the Growarows' gratitude!}}
 			</text>	
-			<text ID="WhatNowChefShik3" IfSpeakerEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_ShikEnding">			
+			<text ID="WhatNowChefShik3" IfSpeakerEvolutiveTileMoreOrEqual="2" IfHaveState="Sibs_CatsDogs_ShikEnding">			
 				{{K|Gone! Sad!}}
 
 				{{emote|*The two other heads stay judgmentally silent.*}}
 			</text>
-			<text ID="WhatNowChefShik2" IfSpeakerNotEvolutiveTileMoreOrEqual="2" IfHaveState="Brothers_CatsDogs_ShikEnding">
+			<text ID="WhatNowChefShik2" IfSpeakerNotEvolutiveTileMoreOrEqual="2" IfHaveState="Sibs_CatsDogs_ShikEnding">
 				Did the cats of Spar really have to leave? This is quite a waste. How will they even survive in Qud?
 				
 				{{Y|This could be the end of us too. Will travelers still stop by half a community, =player.formalAddressTerm=?}}
@@ -2038,7 +2038,7 @@
 			</text>
 			<choice Target="Mutated" Priority="20">
 				<text>I am of one mind, but sport several heads myself. I am familiar with people seldom knowing which too adress.</text>
-				<part Name="Brothers_RequirePart" Part="TwoHeaded" Render="Mutation: Two-headed" />
+				<part Name="Sibs_RequirePart" Part="TwoHeaded" Render="Mutation: Two-headed" />
 			</choice>
 			<choice Target="Relationship" Priority="10">How do you take decisions? Is the matter not uncomfortable?</choice>
 		</node>
@@ -2119,9 +2119,9 @@
 	</conversation>
 
 
-	<conversation ID="Brothers_CatsDogs_CatTinker">
+	<conversation ID="Sibs_CatsDogs_CatTinker">
 	
-		<start ID="BadWelcome" IfHaveState="Brothers_CatsDogs_ShikEnding">
+		<start ID="BadWelcome" IfHaveState="Sibs_CatsDogs_ShikEnding">
 			<text>
 				{{emote|*Imimiw =verb:turn= =pronouns.possessive= head away from you.*}}
 
@@ -2133,17 +2133,17 @@
 		</start>
 	
 		<start ID="Welcome" Inherits="DefaultChoices">
-			<text IfFinishedQuest="Brothers_CatsDogs_CheeseQuest" Priority="-1">
+			<text IfFinishedQuest="Sibs_CatsDogs_CheeseQuest" Priority="-1">
 				{{emote|*Imimiw =verb:keep= working without paying much attention to you.*}}
 				
 				Settle comfortably if you need to, =player.apparentSpecies=, and grab a soldering iron. Work awaits.
 			</text>
-			<text IfHaveActiveQuest="Brothers_CatsDogs_CheeseQuest" Priority="-1">
+			<text IfHaveActiveQuest="Sibs_CatsDogs_CheeseQuest" Priority="-1">
 				{{emote|*The tinker's bespectacled gaze =verb:gauge= you mercilessly.*}}
 				
 				There you are, =player.apparentSpecies=! What news from the ripening caves?
 			</text>
-			<text IfNotHaveQuest="Brothers_CatsDogs_CheeseQuest" Priority="-1">
+			<text IfNotHaveQuest="Sibs_CatsDogs_CheeseQuest" Priority="-1">
 				{{emote|*The tinker =verb:turn= towards you, =pronouns.possessive= workshop in complete disarray.*}}
 				
 				Speak quick, =player.apparentSpecies=! Solder is cooling down already.
@@ -2151,12 +2151,12 @@
 		</start>
 
 		<node ID="DefaultChoices">
-			<choice Target="Work" IfNotHaveQuest="Brothers_CatsDogs_CheeseQuest">I am in need of work. Is there any matter I can assist you with?</choice>
-			<choice Target="Shrews" IfHaveActiveQuest="Brothers_CatsDogs_CheeseQuest" IfFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Find" IfNotFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">The vermin in the ripening caves are canyon shrews, tinker. They have been feasting on the village's cheese stocks.</choice>
-			<choice Target="Reward" IfHaveActiveQuest="Brothers_CatsDogs_CheeseQuest" IfFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">I have handled the matter of the vermin in the ripening caves. They will not trouble the village anymore.</choice>
-			<choice Target="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the matter with village behind the wall?</choice>
-			<choice Target="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What do you think of the division between Shik and Spar?</choice>
-			<choice Target="WhatNow" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">What is your opinion on how things changed for Shik and Spar?</choice>	
+			<choice Target="Work" IfNotHaveQuest="Sibs_CatsDogs_CheeseQuest">I am in need of work. Is there any matter I can assist you with?</choice>
+			<choice Target="Shrews" IfHaveActiveQuest="Sibs_CatsDogs_CheeseQuest" IfFinishedQuestStep="Sibs_CatsDogs_CheeseQuest~Find" IfNotFinishedQuestStep="Sibs_CatsDogs_CheeseQuest~Stop">The vermin in the ripening caves are canyon shrews, tinker. They have been feasting on the village's cheese stocks.</choice>
+			<choice Target="Reward" IfHaveActiveQuest="Sibs_CatsDogs_CheeseQuest" IfFinishedQuestStep="Sibs_CatsDogs_CheeseQuest~Stop">I have handled the matter of the vermin in the ripening caves. They will not trouble the village anymore.</choice>
+			<choice Target="Division" IfNotHaveQuest="Sibs_CatsDogs_MainQuest1">What is the matter with village behind the wall?</choice>
+			<choice Target="Opinion" IfHaveQuest="Sibs_CatsDogs_MainQuest1" IfNotFinishedQuest="Sibs_CatsDogs_MainQuest3" IfFinishedQuestStep="Sibs_CatsDogs_MainQuest1~Brief">What do you think of the division between Shik and Spar?</choice>
+			<choice Target="WhatNow" IfHaveState="Sibs_CatsDogs_AnyEnding_Occured">What is your opinion on how things changed for Shik and Spar?</choice>	
 			<choice Target="Zanya">You do know someone set up camp in front of your workshop, right?</choice>
 			<choice Target="About">What do you do here in Spar?</choice>
 			<choice Target="End">Live and drink, feline tinker.</choice>
@@ -2171,7 +2171,7 @@
 			</text>
 			<choice Target="Know">
 				<text>That is somewhat of a broad question. Are we talking pressed or not? Fresh, cooked or stretched? Soft or mold-ripened? There is also the matter of-</text>
-				<part Name="Brothers_RequirePart" Part="CookingAndGathering_Spicer" Render="Cooking and Gathering: Spicer" />
+				<part Name="Sibs_RequirePart" Part="CookingAndGathering_Spicer" Render="Cooking and Gathering: Spicer" />
 			</choice>
 			<choice Target="DontKnow">Well, most people would agree it tastes delicious, for starters.</choice>
 		</node>
@@ -2220,8 +2220,8 @@
 			
 				Well, there has been stealing from the ripening caves. Vermin of some sort, I would wager. I would ask that you go there and solve the matter, any way you see fit. It goes without saying you will be duly compensated for your efforts.
 			</text>
-			<choice Target="End" IfNotTestState="Brothers_CatsDogs_BeastmasterKilled" StartQuest="Brothers_CatsDogs_CheeseQuest">End the vermin infestation in Spar's cheese ripening caves. Sounds simple enough. Live and drink, tinker -- next time we talk, Spar's food stocks will be safe.</choice>
-			<choice Target="End" IfTestState="Brothers_CatsDogs_BeastmasterKilled" StartQuest="Brothers_CatsDogs_CheeseQuest" CompleteQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">End the vermin infestation in Spar's cheese ripening caves. Sounds simple enough. Live and drink, tinker -- I have a feeling I have solved the matter already.</choice>
+			<choice Target="End" IfNotTestState="Sibs_CatsDogs_BeastmasterKilled" StartQuest="Sibs_CatsDogs_CheeseQuest">End the vermin infestation in Spar's cheese ripening caves. Sounds simple enough. Live and drink, tinker -- next time we talk, Spar's food stocks will be safe.</choice>
+			<choice Target="End" IfTestState="Sibs_CatsDogs_BeastmasterKilled" StartQuest="Sibs_CatsDogs_CheeseQuest" CompleteQuestStep="Sibs_CatsDogs_CheeseQuest~Stop">End the vermin infestation in Spar's cheese ripening caves. Sounds simple enough. Live and drink, tinker -- I have a feeling I have solved the matter already.</choice>
 			<choice Target="End">Vermin and cheese? This cannot possibly be worth my time. Live and drink, tinker.</choice>
 		</node>	
 	
@@ -2281,9 +2281,9 @@
 				
 				There you go, =player.apparentSpecies=. This would conclude our business, yes? Let it not be said Imimiw ever shorted her associates.				
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_CheeseQuest~Debrief" FinishQuest="Brothers_CatsDogs_CheeseQuest">
+			<choice Target="End" CompleteQuestStep="Sibs_CatsDogs_CheeseQuest~Debrief" FinishQuest="Sibs_CatsDogs_CheeseQuest">
 				<text>I will put those to good use. Live and drink, Imimiw.</text>
-				<part Name="ReceiveItem" Blueprints="Brothers_CatsDogs_SparRecoiler,Fixit Spray,Advanced Toolkit" Identify="Brothers_CatsDogs_SparRecoiler" />
+				<part Name="ReceiveItem" Blueprints="Sibs_CatsDogs_SparRecoiler,Fixit Spray,Advanced Toolkit" Identify="Sibs_CatsDogs_SparRecoiler" />
 			</choice>
 		</node>		
 
@@ -2293,7 +2293,7 @@
 
 				The matter? You'll have to ask our good mayor on that, =player.apparentSpecies=. Or even better, head directly to Warden Arendubark. They are standing guard by the central wall, in the norther outskirts -- you cannot miss them.
 			</text>
-			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1" SetBooleanState="Brothers_CatsDogs_QuestgiverCatTinker,true">I will ask the warden for more information, then. In the meantime, live and drink.</choice>	
+			<choice Target="End" StartQuest="Sibs_CatsDogs_MainQuest1" SetBooleanState="Sibs_CatsDogs_QuestgiverCatTinker,true">I will ask the warden for more information, then. In the meantime, live and drink.</choice>	
 		</node>
 
 		<node ID="Opinion" Inherits="Welcome">
@@ -2305,17 +2305,17 @@
 		</node>	
 
 		<node ID="WhatNow" Inherits="Welcome">
-			<text ID="WhatNowTinkerNeutral" IfHaveState="Brothers_CatsDogs_NeutralEnding">
+			<text ID="WhatNowTinkerNeutral" IfHaveState="Sibs_CatsDogs_NeutralEnding">
 				{{emote|*=pronouns.Subjective= =verb:whip:afterpronoun= =pronouns.possessive= tail, annoyed.*}}
 
 				Did things really change, =player.apparentSpecies=? It is more of the same, as far as I am concerned. At the very least the mayors have stopped bickering.
 			</text>
-			<text ID="WhatNowTinkerPerfect" IfHaveState="Brothers_CatsDogs_PerfectEnding">
+			<text ID="WhatNowTinkerPerfect" IfHaveState="Sibs_CatsDogs_PerfectEnding">
 				{{emote|*=pronouns.Possessive= ears perk up.*}}
 
 				Must you ask? We have a proper trader now, and a chef! Our cheese pairs with starapple jam just as well as a photonic oscillator does with a phasic capacitor! Can you even picture that, =player.apparentSpecies=?
 			</text>
-			<text ID="WhatNowTinkerSpar" IfHaveState="Brothers_CatsDogs_SparEnding">
+			<text ID="WhatNowTinkerSpar" IfHaveState="Sibs_CatsDogs_SparEnding">
 				{{emote|*=pronouns.Subjective= =verb:concentrate:afterpronoun= on =pronouns.possessive= work.*}}
 
 				Mostly silence beyond the outskirts now, =player.apparentSpecies=. How long before trading caravans skip this half-abandoned place, you think?
@@ -2336,7 +2336,7 @@
 			</text>
 			<choice Target="ATinker">
 				<text>I have been known to tinker my own machines when the need arises.</text>
-				<part Name="Brothers_RequirePart" Part="Tinkering_Tinker1" Render="Tinkering: Tinker I" />
+				<part Name="Sibs_RequirePart" Part="Tinkering_Tinker1" Render="Tinkering: Tinker I" />
 			</choice>
 			<choice Target="NotATinker">I dabble. Is that enough to be called a student of chrome?</choice>	
 		</node>	
@@ -2358,9 +2358,9 @@
 	</conversation>		
 
 	
-	<conversation ID="Brothers_CatsDogs_CatsuitGuy">
+	<conversation ID="Sibs_CatsDogs_CatsuitGuy">
 
-		<start ID="BadWelcome" IfHaveState="Brothers_CatsDogs_ShikEnding">
+		<start ID="BadWelcome" IfHaveState="Sibs_CatsDogs_ShikEnding">
 			<text>			
 				{{emote|*=pronouns.Subjective= =verb:look= disheartened.*}}
 				
@@ -2372,22 +2372,22 @@
 		</start>
 		
 		<start ID="Welcome" Inherits="DefaultChoices">
-			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered" Priority="-1">
+			<text IfHaveState="Sibs_CatsDogs_FurGuyFlattered" Priority="-1">
 				{{emote|*Zanya =verb:beam= at you.*}}
 				
 				If it ain't my good friend =name=! Find some shade in our 'uts, meow!
 			</text>
-			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered" Priority="-1">
+			<text IfNotHaveState="Sibs_CatsDogs_FurGuyFlattered" Priority="-1">
 				Meow, I say. I 'ope you will enjoy our 'umble abodes and fit right 'mong us cats!
 			</text>
 		</start>
 
 		<node ID="DefaultChoices">
-			<choice Target="Work" IfNotHaveQuest="Brothers_CatsDogs_CheeseQuest">Is there work that needs doing?</choice>
-			<choice Target="Division" IfNotHaveQuest="Brothers_CatsDogs_MainQuest1">What is the matter with the other village?</choice>
-			<choice Target="Opinion" IfHaveQuest="Brothers_CatsDogs_MainQuest1" IfNotFinishedQuest="Brothers_CatsDogs_MainQuest3" IfFinishedQuestStep="Brothers_CatsDogs_MainQuest1~Brief">What do you think of the current Shik and Spar situation?</choice>
-			<choice Target="WhatNow" IfHaveState="Brothers_CatsDogs_AnyEnding_Occured">What do you make of everything that happened here?</choice>	
-			<choice Target="DefinitelyACat" IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">Huh... I "meow" right back at you, fellow cat.</choice>
+			<choice Target="Work" IfNotHaveQuest="Sibs_CatsDogs_CheeseQuest">Is there work that needs doing?</choice>
+			<choice Target="Division" IfNotHaveQuest="Sibs_CatsDogs_MainQuest1">What is the matter with the other village?</choice>
+			<choice Target="Opinion" IfHaveQuest="Sibs_CatsDogs_MainQuest1" IfNotFinishedQuest="Sibs_CatsDogs_MainQuest3" IfFinishedQuestStep="Sibs_CatsDogs_MainQuest1~Brief">What do you think of the current Shik and Spar situation?</choice>
+			<choice Target="WhatNow" IfHaveState="Sibs_CatsDogs_AnyEnding_Occured">What do you make of everything that happened here?</choice>	
+			<choice Target="DefinitelyACat" IfNotHaveState="Sibs_CatsDogs_FurGuyFlattered">Huh... I "meow" right back at you, fellow cat.</choice>
 			<choice Target="About">What is there to know about Spar?</choice>
 			<choice Target="End">I must go -- live and drink.</choice>
 		</node>
@@ -2399,12 +2399,12 @@
 		</node>
 	
 		<node ID="Division">
-			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
+			<text IfHaveState="Sibs_CatsDogs_FurGuyFlattered">
 				{{emote|*Zanya =verb:lean= forward conspiratorially.*}}
 
 				You noticed too, meow? Lady Morrarri, she's bent on none o' us visiting the other village. Makes for a downright dour atmosphere, le'me tell you.
 			</text>
-			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
+			<text IfNotHaveState="Sibs_CatsDogs_FurGuyFlattered">
 				{{emote|*=pronouns.Subjective= =verb:lean:afterpronoun= forward conspiratorially.*}}
 
 				You noticed too, meow? Lady Morrarri, she's bent on none o' us visiting the other village. Makes for a downright dour atmosphere, le'me tell you.
@@ -2424,26 +2424,26 @@
 		</node>	
 	
 		<node ID="Fix" AllowEscape="false">
-			<text IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
+			<text IfHaveState="Sibs_CatsDogs_FurGuyFlattered">
 				{{emote|*Zanya =verb:look= left and right before continuing.*}}
 				
 				Aye, for sure! Our good 'arden's been looking to solve the matter but they coul' most definitely use a hand or two, meow. Can't investigate much from 'here they've taken root, see? You can find 'em in the northern outskirts.
 			</text>				
-			<text IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
+			<text IfNotHaveState="Sibs_CatsDogs_FurGuyFlattered">
 				{{emote|*=pronouns.Subjective= =verb:look:afterpronoun= left and right before continuing.*}}
 				
 				Aye, for sure! Our good 'arden's been looking to solve the matter but they coul' most definitely use a hand or two, meow. Can't investigate much from 'here they've taken root, see? You can find 'em in the northern outskirts.
 			</text>			
-			<choice Target="End" StartQuest="Brothers_CatsDogs_MainQuest1" SetBooleanState="Brothers_CatsDogs_QuestgiverFurGuy,true">I will talk to the warden then. In the meantime, live and drink.</choice>
+			<choice Target="End" StartQuest="Sibs_CatsDogs_MainQuest1" SetBooleanState="Sibs_CatsDogs_QuestgiverFurGuy,true">I will talk to the warden then. In the meantime, live and drink.</choice>
 		</node>		
 	
 		<node ID="Opinion" Inherits="Welcome">
-			<text ID="OpinionFlattered" IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
+			<text ID="OpinionFlattered" IfHaveState="Sibs_CatsDogs_FurGuyFlattered">
 				{{emote|*Zanya =verb:choose= =pronouns.possessive= next words carefully.*}}
 
 				It all seems a tad excessive to meow. Those dogs from Shik look catlike enough in meow opinion -- not that Lady Morrarri see things the same 'ay.
 			</text>
-			<text ID="OpinionDefault" IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
+			<text ID="OpinionDefault" IfNotHaveState="Sibs_CatsDogs_FurGuyFlattered">
 				{{emote|*=pronouns.Subjective= =verb:choose:afterpronoun= =pronouns.possessive= next words carefully.*}}
 
 				It all seems a tad excessive to meow. Those dogs from Shik look catlike enough in meow opinion -- not that Lady Morrarri see things the same 'ay.
@@ -2451,13 +2451,13 @@
 		</node>	
 	
 		<node ID="WhatNow" Inherits="Welcome">
-			<text ID="WhatNowZanyaNeutral" IfHaveState="Brothers_CatsDogs_NeutralEnding">
+			<text ID="WhatNowZanyaNeutral" IfHaveState="Sibs_CatsDogs_NeutralEnding">
 				I'm glad things 'ill calm down a bit now. In meow opinion, this whole affair was complete overreaction from the mayors to begin 'ith!
 			</text>
-			<text ID="WhatNowZanyaPerfect" IfHaveState="Brothers_CatsDogs_PerfectEnding">
+			<text ID="WhatNowZanyaPerfect" IfHaveState="Sibs_CatsDogs_PerfectEnding">
 				Oh, I know for sure 'ho is to thank for it all! I heard you solved the entire issue on your own... I could never have done so meowself, that's for sure.
 			</text>
-			<text ID="WhatNowZanyaSpar" IfHaveState="Brothers_CatsDogs_SparEnding">
+			<text ID="WhatNowZanyaSpar" IfHaveState="Sibs_CatsDogs_SparEnding">
 				I don't make anything of it, not at all! This place is for cats, just like meow, see? Do you see my ears? I belong here!
 				
 				{{emote|*=pronouns.Subjective= =verb:stay:afterpronoun= vigilant, on the lookout for any danger that could come =pronouns.possessive= way.*}}
@@ -2470,9 +2470,9 @@
 				
 				Oh? You do?
 			</text>
-			<choice Target="ACatForReal" SetBooleanState="Brothers_CatsDogs_FurGuyFlattered,true">
+			<choice Target="ACatForReal" SetBooleanState="Sibs_CatsDogs_FurGuyFlattered,true">
 				<text>I do. You're as fine a cat as I've ever seen!</text>
-				<part Name="Brothers_ModifyReputation" Faction="Spar" Value="50" Shown="True" />
+				<part Name="Sibs_ModifyReputation" Faction="Spar" Value="50" Shown="True" />
 			</choice>
 			<choice Target="Start">Potentially, but I wanted to ask you something else first.</choice>
 		</node>	
@@ -2485,7 +2485,7 @@
 			</text>
 			<choice Target="Thanks">
 				<text>Thank you! I will take good care of this.</text>
-				<part Name="ReceiveItem" Blueprints="Brothers_CatsDogs_Catears" Identify="All" />			
+				<part Name="ReceiveItem" Blueprints="Sibs_CatsDogs_Catears" Identify="All" />			
 			</choice>
 			<choice Target="NoThanks">I am flattered, but feel catlike enough.</choice>
 		</node>			
@@ -2518,14 +2518,14 @@
 		</node>	
 	
 		<node ID="About" Inherits="Welcome">
-			<text ID="AboutFlattered" IfHaveState="Brothers_CatsDogs_FurGuyFlattered">
+			<text ID="AboutFlattered" IfHaveState="Sibs_CatsDogs_FurGuyFlattered">
 				{{emote|*Zanya =verb:tap= =pronouns.possessive= chin pensively.*}}
 				
 				Not much to tell about this place, we all keep pretty much t'ourselves. Some o' the others tend to the pig farms, and prepare the cheese. Right o'er there is the 'orkshop of Imimiw, our tinker. She'll set any 'ires straight in just a moment. 
 				
 				There is the occasional traveler, but otherwise the days are spent working, trading and napping un'er the Hind Sun.							
 			</text>				
-			<text ID="AboutDefault" IfNotHaveState="Brothers_CatsDogs_FurGuyFlattered">
+			<text ID="AboutDefault" IfNotHaveState="Sibs_CatsDogs_FurGuyFlattered">
 				{{emote|*=pronouns.Subjective= =verb:tap:afterpronoun= =pronouns.possessive= chin pensively.*}}
 				
 				Not much to tell about this place, we all keep pretty much t'ourselves. Some o' the others tend to the pig farms, and prepare the cheese. Right o'er there is the 'orkshop of Imimiw, our tinker. She'll set any 'ires straight in just a moment. 
@@ -2537,30 +2537,30 @@
 	</conversation>	
 
 
-	<conversation ID="Brothers_CatsDogs_Cheesejaw">
+	<conversation ID="Sibs_CatsDogs_Cheesejaw">
 		
 		<start ID="Welcome">
-			<text IfFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">
+			<text IfFinishedQuestStep="Sibs_CatsDogs_CheeseQuest~Stop">
 				eheheheheheh shrooz!~
 				geh! me sulton!~
 				nyeheheheheh, minemineminemine!~
 				sultonofshrooz uhuhuh...~
 				liffen. huh. SHROOZ!
 			</text>		
-			<text IfNotFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">
+			<text IfNotFinishedQuestStep="Sibs_CatsDogs_CheeseQuest~Stop">
 				eheheheheheh cheez!~
 				geh! me sulton!~
 				nyeheheheheh, minemineminemine!~
 				sultonofcheez uhuhuh...~
 				liffen. huh. CHEEZ!
 			</text>
-			<choice Target="What" IfNotFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop"> 
+			<choice Target="What" IfNotFinishedQuestStep="Sibs_CatsDogs_CheeseQuest~Stop"> 
 				<text>Will you resign your charge and swear to unvex the fromagers of this world?</text>
 				<part Name="RequireReputation" Faction="Snapjaws" Level="Liked" />
 			</choice>		
 			<choice Target="End">
-				<text IfNotFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">Live and drink. Milk, preferably.</text>
-				<text IfNotFinishedQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">Live and eat, "sultan".</text>
+				<text IfNotFinishedQuestStep="Sibs_CatsDogs_CheeseQuest~Stop">Live and drink. Milk, preferably.</text>
+				<text IfNotFinishedQuestStep="Sibs_CatsDogs_CheeseQuest~Stop">Live and eat, "sultan".</text>
 			</choice>
 		</start>
 
@@ -2588,7 +2588,7 @@
 			</text>
 			<choice Target="Solution">
 				<text>Wait, is the problem that you'll get hungry without cheese?</text>				
-				<part Name="Brothers_RequireStat" Stat="Intelligence" Value="19" />
+				<part Name="Sibs_RequireStat" Stat="Intelligence" Value="19" />
 			</choice>
 			<choice Target="Byebye">Are you... dismissing me?</choice>
 			<choice Target="End">Live and drink, I guess.</choice>
@@ -2625,7 +2625,7 @@
 				
 				gogo! nocheez! suldon eat shroo now! LIBNEAT!
 			</text>
-			<choice Target="End" CompleteQuestStep="Brothers_CatsDogs_CheeseQuest~Stop">That seems settled, then. Live and... eat.</choice>
+			<choice Target="End" CompleteQuestStep="Sibs_CatsDogs_CheeseQuest~Stop">That seems settled, then. Live and... eat.</choice>
 		</node>
 	
 	
@@ -2635,7 +2635,7 @@
 <!--Generic NPCs-->
 
 
-	<conversation ID="Brothers_CatsDogs_ShikCitizen">
+	<conversation ID="Sibs_CatsDogs_ShikCitizen">
 		
 		<start ID="Welcome">
 			<text>
@@ -2653,7 +2653,7 @@
 	</conversation>	
 
 
-	<conversation ID="Brothers_CatsDogs_SparCitizen">
+	<conversation ID="Sibs_CatsDogs_SparCitizen">
 		
 		<start ID="Welcome">
 			<text>

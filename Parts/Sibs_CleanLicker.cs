@@ -10,7 +10,7 @@ using XRL.Messages;
 namespace XRL.World.Parts
 {
     [Serializable]
-    public class Brothers_CleanLicker : IPart
+    public class Sibs_CleanLicker : IPart
     {
         public override bool WantEvent(int ID, int cascade)
         {

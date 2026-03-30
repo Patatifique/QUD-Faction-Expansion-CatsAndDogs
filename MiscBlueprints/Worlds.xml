@@ -2,7 +2,7 @@
 <worlds>
 	<world Name="JoppaWorld" Load="Merge">
 	
-		<cell Name="Brothers_CellShikspar" Inherits="DesertCanyon" ApplyTo="Brothers_TerrainShikspar" Mutable="false">
+		<cell Name="Sibs_CellShikspar" Inherits="DesertCanyon" ApplyTo="Sibs_TerrainShikspar" Mutable="false">
 			
 			<zone Level="5-9" x="0" y="0-2" Name="sky above Shik" IndefiniteArticle="the" >
 				<builder Class="Sky" />
@@ -17,54 +17,54 @@
 			</zone>
 			
 			<zone Level="10" x="1" y="1" Name="palisade between Shik and Spar" IndefiniteArticle="the" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000" AmbientBed="Sounds/Ambiences/amb_bed_canyons">
-				<map FileName="Brothers_ShiksparCenter.rpm" />
+				<map FileName="Sibs_ShiksparCenter.rpm" />
 				<music Track="Music/catsdogs/Append.wav" />
 			</zone>
 			
 			<zone Level="10" x="1" y="0" Name="outskirts between Shik and Spar" IndefiniteArticle="the" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000" AmbientBed="Sounds/Ambiences/amb_bed_canyons">
-				<map FileName="Brothers_ShiksparN.rpm" />
+				<map FileName="Sibs_ShiksparN.rpm" />
 				<music Track="Music/catsdogs/Append.wav" />
 			</zone>
 			
 			<zone Level="10" x="1" y="2" Name="outskirts between Shik and Spar" IndefiniteArticle="the" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000" AmbientBed="Sounds/Ambiences/amb_bed_canyons">
-				<map FileName="Brothers_ShiksparS.rpm" />
+				<map FileName="Sibs_ShiksparS.rpm" />
 				<music Track="Music/catsdogs/Append.wav" />
 			</zone>
 			
 			<zone Level="10" x="0" y="0" Name="outskirts" NameContext="Shik" IndefiniteArticle="some" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000" AmbientBed="Sounds/Ambiences/amb_bed_canyons">
-				<map FileName="Brothers_ShiksparNW.rpm" />
+				<map FileName="Sibs_ShiksparNW.rpm" />
 				<music Track="Music/catsdogs/Append.wav" />
 			</zone>
 
 			<zone Level="10" x="0" y="1" Name="Shik" ProperName="true" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000" AmbientBed="Sounds/Ambiences/amb_bed_canyons">
-				<map FileName="Brothers_ShiksparShik.rpm"></map>
+				<map FileName="Sibs_ShiksparShik.rpm"></map>
 				<music Track="Music/catsdogs/Append.wav" />
 				<prebuilder Class="IsCheckpoint" Key="Shik"></prebuilder>
 			</zone>
 			
 			<zone Level="10" x="0" y="2" Name="outskirts" NameContext="Shik" IndefiniteArticle="some" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000" AmbientBed="Sounds/Ambiences/amb_bed_canyons">
-				<map FileName="Brothers_ShiksparSW.rpm" />
+				<map FileName="Sibs_ShiksparSW.rpm" />
 				<music Track="Music/catsdogs/Append.wav" />
 			</zone>
 			
 			<zone Level="10" x="2" y="0" Name="outskirts" NameContext="Spar" IndefiniteArticle="some" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000" AmbientBed="Sounds/Ambiences/amb_bed_canyons">
-				<map FileName="Brothers_ShiksparNE.rpm" />
+				<map FileName="Sibs_ShiksparNE.rpm" />
 				<music Track="Music/catsdogs/Append.wav" />
 			</zone>
 
 			<zone Level="10" x="2" y="1" Name="Spar" ProperName="true" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000" AmbientBed="Sounds/Ambiences/amb_bed_canyons">
-				<map FileName="Brothers_ShiksparSpar.rpm"></map>
+				<map FileName="Sibs_ShiksparSpar.rpm"></map>
 				<music Track="Music/catsdogs/Append.wav" />
 				<prebuilder Class="IsCheckpoint" Key="Spar"></prebuilder>
 			</zone>
 
 			<zone Level="11" x="2" y="1" Name="cheese-ripening cave" DisableForcedConnections="Yes">
-				<map FileName="Brothers_ShiksparCheeseCave.rpm" />
+				<map FileName="Sibs_ShiksparCheeseCave.rpm" />
 				<music Track="Music/Substrate" />
 			</zone>
 	  
 			<zone Level="10" x="2" y="2" Name="outskirts" NameContext="Spar" IndefiniteArticle="some" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000" AmbientBed="Sounds/Ambiences/amb_bed_canyons">
-				<map FileName="Brothers_ShiksparSE.rpm" />
+				<map FileName="Sibs_ShiksparSE.rpm" />
 				<music Track="Music/catsdogs/Append.wav" />
 			</zone>
 	

@@ -10,7 +10,7 @@ namespace XRL.World.Parts
 {
 
     [Serializable]
-    public class Brothers_VomitOnEat : IPart
+    public class Sibs_VomitOnEat : IPart
     {
 
         public override void Register(GameObject Object, IEventRegistrar Registrar)

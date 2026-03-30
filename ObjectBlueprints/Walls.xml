@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <objects>
 	
-	<object Name="Brothers_CatsDogs_CrackedMarl" Inherits="BaseSedimentaryRock">
+	<object Name="Sibs_CatsDogs_CrackedMarl" Inherits="BaseSedimentaryRock">
 		<part Name="Render" DisplayName="cracked marl" ColorString="&amp;y^Y" Tile="Terrain/catsdogs/tile_crackedwall.png" TileColor="&amp;y" DetailColor="Y" Occluding="true"  />
 		<stat Name="AV" Value="4" />
 		<stat Name="Hitpoints" Value="30" />
@@ -9,15 +9,15 @@
 		<xtagGrammar massNoun="true" />
 		<removetag Name="SingleTile" />
 		<removetag Name="PaintedWall" />
-		<tag Name="PaintWith" Value="Brothers_Catdogs_MarlWalls" />
+		<tag Name="PaintWith" Value="Sibs_Catdogs_MarlWalls" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 
 	<object Name="Marl" Load="Merge">
-		<tag Name="PaintWith" Value="Brothers_Catdogs_MarlWalls" />
+		<tag Name="PaintWith" Value="Sibs_Catdogs_MarlWalls" />
 	</object>
 
-	<object Name="Brothers_CatsDogs_StarAppleWall" Inherits="BaseWallWood">
+	<object Name="Sibs_CatsDogs_StarAppleWall" Inherits="BaseWallWood">
 		<part Name="Render" DisplayName="starapple wood wall" Tile="Walls/wall_brinestalk-00000000.png" RenderString="215" ColorString="&amp;w^y" TileColor="&amp;w" DetailColor="r" Occluding="true" />
 		<part Name="Physics" Weight="10000" Takeable="false" Solid="true" Organic="true" />
 		<part Name="Description" Short="Stripped free of harvest, lignin is forced to stand upright, tied together by natural fiber." />
@@ -27,7 +27,7 @@
 		<tag Name="PaintedWall" Value="wall_brinestalk" />
 		<tag Name="PaintedWallAtlas" Value="Assets_Content_Textures_Walls_" />
 		<tag Name="PaintedWallExtension" Value=".png" />
-		<tag Name="PaintWith" Value="Brothers_CatsDogs_StarAppleWalls" />
+		<tag Name="PaintWith" Value="Sibs_CatsDogs_StarAppleWalls" />
 		<tag Name="ImmutableWhenUnexplored" Value="1" />
 		<tag Name="Category_Settlement" />
 		<tag Name="Tier" Value="0" />
@@ -37,24 +37,24 @@
 		<tag Name="DeathSounds" Value="Sounds/Damage/sfx_destroy_manufacturedWood" />
 	</object>
 
-	<object Name="Brothers_CatsDogs_BrickWallRubbleOnEnding" Inherits="BrickWall">
-		<tag Name="Brothers_CatsDogs_RubbleOnEnding" />	
+	<object Name="Sibs_CatsDogs_BrickWallRubbleOnEnding" Inherits="BrickWall">
+		<tag Name="Sibs_CatsDogs_RubbleOnEnding" />	
 	</object>
 
-	<object Name="Brothers_CatsDogs_StarAppleWallDestroyedOnEnding" Inherits="Brothers_CatsDogs_StarAppleWall">
-		<tag Name="Brothers_CatsDogs_RubbleOnEnding" />
+	<object Name="Sibs_CatsDogs_StarAppleWallDestroyedOnEnding" Inherits="Sibs_CatsDogs_StarAppleWall">
+		<tag Name="Sibs_CatsDogs_RubbleOnEnding" />
 	</object>
 
-	<object Name="Brothers_CatsDogs_PigSkinWallDestroyedOnEnding" Inherits="PigskinWall">
-		<tag Name="Brothers_CatsDogs_RubbleOnEnding" />
+	<object Name="Sibs_CatsDogs_PigSkinWallDestroyedOnEnding" Inherits="PigskinWall">
+		<tag Name="Sibs_CatsDogs_RubbleOnEnding" />
 	</object>
 	
-	<object Name="Brothers_CatsDogs_BrinestalkFenceDestroyedOnEnding" Inherits="BrinestalkFence">
-		<tag Name="Brothers_CatsDogs_DestroyedOnEnding" />
+	<object Name="Sibs_CatsDogs_BrinestalkFenceDestroyedOnEnding" Inherits="BrinestalkFence">
+		<tag Name="Sibs_CatsDogs_DestroyedOnEnding" />
 	</object>
 
-	<object Name="Brothers_CatsDogs_WornWoodWallDestroyedOnEnding" Inherits="WornWoodWall">
-		<tag Name="Brothers_CatsDogs_DestroyedOnEnding" />
+	<object Name="Sibs_CatsDogs_WornWoodWallDestroyedOnEnding" Inherits="WornWoodWall">
+		<tag Name="Sibs_CatsDogs_DestroyedOnEnding" />
 	</object>
 
 </objects>

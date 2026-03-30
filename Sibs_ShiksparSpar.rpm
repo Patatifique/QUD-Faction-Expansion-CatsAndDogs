@@ -597,7 +597,7 @@
   </cell>
   <cell X="7" Y="4">
     <object Name="DirtFloor"></object>
-    <object Name="Brothers_CatsDogs_SparChest"></object>
+    <object Name="Sibs_CatsDogs_SparChest"></object>
   </cell>
   <cell X="8" Y="4">
     <object Name="DirtFloor"></object>
@@ -679,7 +679,7 @@
   </cell>
   <cell X="53" Y="4">
     <object Name="DirtFloor"></object>
-    <object Name="Brothers_CatsDogs_SparCitizen"></object>
+    <object Name="Sibs_CatsDogs_SparCitizen"></object>
   </cell>
   <cell X="54" Y="4">
     <object Name="DirtFloor"></object>
@@ -689,7 +689,7 @@
   </cell>
   <cell X="56" Y="4">
     <object Name="DirtFloor"></object>
-    <object Name="Brothers_CatsDogs_SparChest"></object>
+    <object Name="Sibs_CatsDogs_SparChest"></object>
   </cell>
   <cell X="57" Y="4">
     <object Name="PigskinWall"></object>
@@ -1239,7 +1239,7 @@
   <cell X="62" Y="7"></cell>
   <cell X="63" Y="7"></cell>
   <cell X="64" Y="7">
-    <object Name="Brothers_CatsDogs_Cheesesign"></object>
+    <object Name="Sibs_CatsDogs_Cheesesign"></object>
   </cell>
   <cell X="65" Y="7">
     <object Name="BrinestalkFence"></object>
@@ -1627,7 +1627,7 @@
     <object Name="DirtPath"></object>
   </cell>
   <cell X="13" Y="10">
-    <object Name="Brothers_CatsDogs_SparCitizen"></object>
+    <object Name="Sibs_CatsDogs_SparCitizen"></object>
   </cell>
   <cell X="14" Y="10"></cell>
   <cell X="15" Y="10"></cell>
@@ -2228,7 +2228,7 @@
   </cell>
   <cell X="38" Y="13">
     <object Name="DirtFloor"></object>
-    <object Name="Brothers_CatsDogs_SparMonument"></object>
+    <object Name="Sibs_CatsDogs_SparMonument"></object>
   </cell>
   <cell X="39" Y="13">
     <object Name="DirtFloor"></object>
@@ -2321,7 +2321,7 @@
   <cell X="71" Y="13"></cell>
   <cell X="72" Y="13"></cell>
   <cell X="73" Y="13">
-    <object Name="Brothers_CatsDogs_SparCitizen"></object>
+    <object Name="Sibs_CatsDogs_SparCitizen"></object>
   </cell>
   <cell X="74" Y="13"></cell>
   <cell X="75" Y="13"></cell>
@@ -2460,7 +2460,7 @@
   </cell>
   <cell X="55" Y="14">
     <object Name="DirtPath"></object>
-    <object Name="Brothers_CatsDogs_SparCitizen"></object>
+    <object Name="Sibs_CatsDogs_SparCitizen"></object>
   </cell>
   <cell X="56" Y="14">
     <object Name="DirtPath"></object>
@@ -2524,7 +2524,7 @@
   <cell X="11" Y="15"></cell>
   <cell X="12" Y="15"></cell>
   <cell X="13" Y="15">
-    <object Name="Brothers_CatsDogs_CatsuitGuy"></object>
+    <object Name="Sibs_CatsDogs_CatsuitGuy"></object>
   </cell>
   <cell X="14" Y="15"></cell>
   <cell X="15" Y="15"></cell>
@@ -2835,7 +2835,7 @@
   <cell X="0" Y="17"></cell>
   <cell X="1" Y="17"></cell>
   <cell X="2" Y="17">
-    <object Name="Brothers_CatsDogs_SparCitizen"></object>
+    <object Name="Sibs_CatsDogs_SparCitizen"></object>
   </cell>
   <cell X="3" Y="17"></cell>
   <cell X="4" Y="17"></cell>
@@ -2928,7 +2928,7 @@
   </cell>
   <cell X="39" Y="17">
     <object Name="DirtFloor"></object>
-    <object Name="Brothers_CatsDogs_CatMayor"></object>
+    <object Name="Sibs_CatsDogs_CatMayor"></object>
   </cell>
   <cell X="40" Y="17">
     <object Name="DirtFloor"></object>
@@ -3044,7 +3044,7 @@
   </cell>
   <cell X="11" Y="18"></cell>
   <cell X="12" Y="18">
-    <object Name="Brothers_CatsDogs_Tinkersign"></object>
+    <object Name="Sibs_CatsDogs_Tinkersign"></object>
   </cell>
   <cell X="13" Y="18">
     <object Name="BrinestalkFence"></object>
@@ -3113,7 +3113,7 @@
   </cell>
   <cell X="33" Y="18">
     <object Name="DirtFloor"></object>
-    <object Name="Brothers_CatsDogs_CatLover"></object>
+    <object Name="Sibs_CatsDogs_CatLover"></object>
   </cell>
   <cell X="34" Y="18">
     <object Name="DirtFloor"></object>
@@ -3150,7 +3150,7 @@
   </cell>
   <cell X="44" Y="18">
     <object Name="DirtFloor"></object>
-    <object Name="Brothers_CatsDogs_SparChest"></object>
+    <object Name="Sibs_CatsDogs_SparChest"></object>
   </cell>
   <cell X="45" Y="18">
     <object Name="PigskinWall"></object>
@@ -3181,7 +3181,7 @@
   </cell>
   <cell X="57" Y="18">
     <object Name="DirtFloor"></object>
-    <object Name="Brothers_CatsDogs_SparChest"></object>
+    <object Name="Sibs_CatsDogs_SparChest"></object>
   </cell>
   <cell X="58" Y="18">
     <object Name="PigskinWall"></object>
@@ -3411,7 +3411,7 @@
   </cell>
   <cell X="67" Y="19">
     <object Name="DirtFloor"></object>
-    <object Name="Brothers_CatsDogs_SparChest"></object>
+    <object Name="Sibs_CatsDogs_SparChest"></object>
   </cell>
   <cell X="68" Y="19">
     <object Name="DirtFloor"></object>
@@ -3487,7 +3487,7 @@
   </cell>
   <cell X="22" Y="20">
     <object Name="DirtFloor"></object>
-    <object Name="Brothers_CatsDogs_CatTinker"></object>
+    <object Name="Sibs_CatsDogs_CatTinker"></object>
   </cell>
   <cell X="23" Y="20">
     <object Name="DirtFloor"></object>
@@ -3837,7 +3837,7 @@
   </cell>
   <cell X="18" Y="22">
     <object Name="DirtFloor"></object>
-    <object Name="Brothers_CatsDogs_SparChest"></object>
+    <object Name="Sibs_CatsDogs_SparChest"></object>
   </cell>
   <cell X="19" Y="22">
     <object Name="DirtFloor"></object>

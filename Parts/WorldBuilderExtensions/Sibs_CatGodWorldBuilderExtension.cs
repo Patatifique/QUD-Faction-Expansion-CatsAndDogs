@@ -4,10 +4,10 @@ using XRL.World.WorldBuilders;
 using XRL.World.ZoneBuilders;
 using XRL.World.Parts;
 
-namespace Brothers.CatsAndDogs
+namespace Sibs.CatsAndDogs
 {
     [JoppaWorldBuilderExtension]
-    public class Brothers_CatGodWorldBuilderExtension  : IJoppaWorldBuilderExtension
+    public class Sibs_CatGodWorldBuilderExtension  : IJoppaWorldBuilderExtension
     {
         public override void OnAfterBuild(JoppaWorldBuilder builder)
         {
@@ -19,7 +19,7 @@ namespace Brothers.CatsAndDogs
                 "the napping spot of {{M|Miramihamia, Feline God}}",
                 new string[2] { "lair", "cats" },
                 "Lairs",
-                "$brothers_catgod_lair"
+                "$Sibs_catgod_lair"
             );
 
             var zoneManager = The.ZoneManager;
@@ -29,7 +29,7 @@ namespace Brothers.CatsAndDogs
             faction.HolyPlaces.Add(zoneID);
 
             zoneManager.SetZoneProperty(zoneID, "SkipTerrainBuilders", true);
-            zoneManager.AddZonePostBuilder(zoneID, "MapBuilder", "FileName", "Brothers_ShrineCat.rpm");
+            zoneManager.AddZonePostBuilder(zoneID, "MapBuilder", "FileName", "Sibs_ShrineCat.rpm");
 
 
 

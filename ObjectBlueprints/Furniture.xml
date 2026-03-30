@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <objects>
 	
-	<object Name="Brothers_CatsDogs_FounderStatue" Inherits="Statue">
+	<object Name="Sibs_CatsDogs_FounderStatue" Inherits="Statue">
 		<part Name="Render" DisplayName="dilapidated statue" Tile="Terrain/catsdogs/tile_founder.png" RenderLayer="6" RenderString="U" ColorString="&amp;y" DetailColor="g" Occluding="true" />
 		<part Name="Physics" Weight="12000" />
 		<stat Name="Hitpoints" Value="1200" />
 		<part Name="Description" Short="Erosion's gritted fingers have worked the likeness off recrystallized dolomite. A sand-smoothed suggestion of shape lingers still -- diacalyptus columns bearing the proud weight of vast shoulders, and a memory of snout jutting below a faded face. Verdure selfishly reclaims polished spaces and crawls in bryophite clumps, draping the nondescript subject in regal viridian." />
 		<part Name="RulesDescription" Text="This object is a monument to a scene from the history of {{M|Shikspar}}.&#10;&#10;In 857, Bubumube decided to quit traveling Qud. They left Ezra and settled with their followers beyond the southern jungles. There, they named the village Shikspar, and sowed starapple seeds in the furrowed dirt.&#10;" />
-		<part Name="RevealVillageHistoryOnLook" HistoryId="Brothers_ShiksparSecret1" />
+		<part Name="RevealVillageHistoryOnLook" HistoryId="Sibs_ShiksparSecret1" />
 		<stag Name="Contemporary" />	
 	    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 		<part Name="Interesting" />
 	</object>
 
-	<object Name="Brothers_CatsDogs_ShikMonument" Inherits="Village Monument Diptych">
+	<object Name="Sibs_CatsDogs_ShikMonument" Inherits="Village Monument Diptych">
 		<part Name="Render" ColorString="&amp;w" DetailColor="y" />
 		<part Name="RulesDescription" Text="This object is a monument to a scene from the history of {{M|Shik}}.&#10;&#10;In 859, the Founder left the direction of Shikspar to their loyal canine companion as their final will. They passed away peacefully, and from this day forth, the village was known as Shik.&#10;" />
-		<part Name="RevealVillageHistoryOnLook" HistoryId="Brothers_ShiksparSecret2" />
+		<part Name="RevealVillageHistoryOnLook" HistoryId="Sibs_ShiksparSecret2" />
 		<part Name="Interesting" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 	
-	<object Name="Brothers_CatsDogs_ShikMonumentRuined" Inherits="Village Monument Diptych">
+	<object Name="Sibs_CatsDogs_ShikMonumentRuined" Inherits="Village Monument Diptych">
 		<part Name="Render" DisplayName="{{K|desecrated}} diptych" Tile="Terrain/catsdogs/tile_ruinedmonument.png" ColorString="&amp;r" DetailColor="K" />
 		<part Name="Description" Short="Unwelcome narrative was chiseled out of storied duality." />
 		<part Name="RulesDescription" Text="Desecrated: This object has been desecrated by vandals." />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>	
 	
-	<object Name="Brothers_CatsDogs_SparMonument" Inherits="Village Monument Diptych">
+	<object Name="Sibs_CatsDogs_SparMonument" Inherits="Village Monument Diptych">
 		<part Name="Render" ColorString="&amp;y" DetailColor="w" />
 		<part Name="RulesDescription" Text="This object is a monument to a scene from the history of {{M|Spar}}.&#10;&#10;In 859, the Founder disappeared from Shikspar, never to be seen again. Come Harvest Dawn, a single feline babe was found swaddled in their bed and, from this day forth, the village was known as Spar.&#10;" />
-		<part Name="RevealVillageHistoryOnLook" HistoryId="Brothers_ShiksparSecret3" />
+		<part Name="RevealVillageHistoryOnLook" HistoryId="Sibs_ShiksparSecret3" />
 		<part Name="Interesting" />
 	    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 	
-	<object Name="Brothers_CatsDogs_SparMonumentRuined" Inherits="Village Monument Diptych">
+	<object Name="Sibs_CatsDogs_SparMonumentRuined" Inherits="Village Monument Diptych">
 		<part Name="Render" DisplayName="{{K|desecrated}} diptych" Tile="Terrain/catsdogs/tile_ruinedmonument.png" ColorString="&amp;K" DetailColor="r" />
 		<part Name="Description" Short="Unwelcome narrative was chiseled out of storied duality." />
 		<part Name="RulesDescription" Text="Desecrated: This object has been desecrated by vandals." />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>	
 
-	<object Name="Brothers_CatsDogs_BigTomb" Inherits="MountedFurniture">
+	<object Name="Sibs_CatsDogs_BigTomb" Inherits="MountedFurniture">
 		<part Name="Render" DisplayName="large tombstone" RenderString="239" ColorString="&amp;y" DetailColor="K" Occluding="true" Tile="Terrain/catsdogs/tile_bigtomb.png" />
 		<part Name="Physics" Weight="10000" FlameTemperature="99999" VaporTemperature="1500" />
 		<stat Name="AV" Value="20" />
@@ -54,7 +54,7 @@
 	    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 	
-	<object Name="Brothers_CatsDogs_Cheeseshelf" Inherits="MountedFurniture">
+	<object Name="Sibs_CatsDogs_Cheeseshelf" Inherits="MountedFurniture">
 		<part Name="Render" DisplayName="ripening shelf" Tile="Terrain/catsdogs/tile_cheeseshelf1.png" DetailColor="W" ColorString="&amp;y" RenderString="182" />
 		<builder Name="RandomTile" Tiles="Terrain/catsdogs/tile_cheeseshelf1.png,Terrain/catsdogs/tile_cheeseshelf2.png,Terrain/catsdogs/tile_cheeseshelf3.png" />
 		<part Name="Description" Short="Chrome meshes form successive horizons upon which dairy blossoms and crust colonizes." />
@@ -71,65 +71,65 @@
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 
-	<object Name="Brothers_CatsDogs_Cheesesign" Inherits="Sign">
+	<object Name="Sibs_CatsDogs_Cheesesign" Inherits="Sign">
 		<part Name="Render" DisplayName="sign" Tile="Terrain/catsdogs/tile_cheesesign.png" Occluding="false" />
 		<part Name="Chat" Says="Ripening Caves" ShowInShortDescription="true" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 
-	<object Name="Brothers_CatsDogs_Tradesign" Inherits="Sign">
+	<object Name="Sibs_CatsDogs_Tradesign" Inherits="Sign">
 		<part Name="Render" DisplayName="sign" Tile="Items/sw_sign_goods.bmp" Occluding="false" />
 		<part Name="Chat" Says="Growarow's Trading Emporium" ShowInShortDescription="true" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 	
-	<object Name="Brothers_CatsDogs_Cooksign" Inherits="Sign">
+	<object Name="Sibs_CatsDogs_Cooksign" Inherits="Sign">
 		<part Name="Render" DisplayName="sign" Tile="Items/sw_sign_pepper.bmp" Occluding="false" />
 		<part Name="Chat" Says="Growarow's Preserved Goods" ShowInShortDescription="true" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 
-	<object Name="Brothers_CatsDogs_Tinkersign" Inherits="Sign">
+	<object Name="Sibs_CatsDogs_Tinkersign" Inherits="Sign">
 		<part Name="Render" DisplayName="sign" Tile="Items/sw_sign_datadisc.bmp" Occluding="false" />
 		<part Name="Chat" Says="Meowticulous Engineering" ShowInShortDescription="true" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 	
-	<object Name="Brothers_CatsDogs_Shiksign" Inherits="Sign">
+	<object Name="Sibs_CatsDogs_Shiksign" Inherits="Sign">
 		<part Name="Render" DisplayName="sign" Tile="Items/sw_sign_west.bmp" Occluding="false" />
 		<part Name="Chat" Says="&#27; To Shik" ShowInShortDescription="true" />
-		<tag Name="Brothers_CatsDogs_DestroyedOnEnding" />
+		<tag Name="Sibs_CatsDogs_DestroyedOnEnding" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 	
-	<object Name="Brothers_CatsDogs_Sparsign" Inherits="Sign">
+	<object Name="Sibs_CatsDogs_Sparsign" Inherits="Sign">
 		<part Name="Render" DisplayName="sign" Tile="Items/sw_sign_east.bmp" Occluding="false" />
 		<part Name="Chat" Says="&#26; To Spar" ShowInShortDescription="true" />
-		<tag Name="Brothers_CatsDogs_DestroyedOnEnding" />
+		<tag Name="Sibs_CatsDogs_DestroyedOnEnding" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
   
-	<object Name="Brothers_CatsDogs_ShikChest" Inherits="Chest">
+	<object Name="Sibs_CatsDogs_ShikChest" Inherits="Chest">
 		<part Name="Inventory" Builder="InventoryChestJunk2" />
 		<part Name="Physics" Owner="Shik" />
 		<tag Name="NoSparkingQuest" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 
-	<object Name="Brothers_CatsDogs_SparChest" Inherits="Chest">
+	<object Name="Sibs_CatsDogs_SparChest" Inherits="Chest">
 		<part Name="Inventory" Builder="InventoryChestJunk2" />
 		<part Name="Physics" Owner="Spar" />
 		<tag Name="NoSparkingQuest" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 	
-	<object Name="Brothers_CatsDogs_TorchpostDestroyedOnEnding" Inherits="Torchpost">
-		<tag Name="Brothers_CatsDogs_DestroyedOnEnding" />
+	<object Name="Sibs_CatsDogs_TorchpostDestroyedOnEnding" Inherits="Torchpost">
+		<tag Name="Sibs_CatsDogs_DestroyedOnEnding" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 
-	<object Name="Brothers_CatsDogs_UnlitTorchpostDestroyedOnEnding" Inherits="Unlit Torchpost">
-		<tag Name="Brothers_CatsDogs_DestroyedOnEnding" />
+	<object Name="Sibs_CatsDogs_UnlitTorchpostDestroyedOnEnding" Inherits="Unlit Torchpost">
+		<tag Name="Sibs_CatsDogs_DestroyedOnEnding" />
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 		

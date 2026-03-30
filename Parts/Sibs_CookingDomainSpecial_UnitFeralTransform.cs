@@ -10,7 +10,7 @@ namespace XRL.World.Effects
 {
 
   [Serializable]
-  public class Brothers_CookingDomainSpecial_UnitFeralTransform : ProceduralCookingEffectUnit
+  public class Sibs_CookingDomainSpecial_UnitFeralTransform : ProceduralCookingEffectUnit
   {
     public override string GetDescription() => "@they became a feral beast permanently.";
 
@@ -22,7 +22,7 @@ namespace XRL.World.Effects
 
     public override void Apply(GameObject Object, Effect parent)
     {
-      Brothers_CookingDomainSpecial_UnitFeralTransform.ApplyTo(Object);
+      Sibs_CookingDomainSpecial_UnitFeralTransform.ApplyTo(Object);
     }
 
     public override void Remove(GameObject Object, Effect parent)
@@ -31,7 +31,7 @@ namespace XRL.World.Effects
 
     public static void ApplyTo(GameObject Object)
     {
-      if (Object.GetPropertyOrTag("Brothers_AteFeralDinner") == "true")
+      if (Object.GetPropertyOrTag("Sibs_AteFeralDinner") == "true")
       {
         Object.ShowFailure("Your genome has already undergone this transformation.");
       }
@@ -49,13 +49,13 @@ namespace XRL.World.Effects
         }
 
 
-        Object.Body.Rebuild("Brothers_CatsDogs_FeralTransformation");
-        Object.RequirePart<Mutations>().AddMutation((BaseMutation) new Brothers_FeralMutation());
+        Object.Body.Rebuild("Sibs_CatsDogs_FeralTransformation");
+        Object.RequirePart<Mutations>().AddMutation((BaseMutation) new Sibs_FeralMutation());
         
         Object.Render.RenderString = "Q";
 
         Object.Render.Tile = "Creatures/catsdogs/feraltransformation.png";
-        Object.SetStringProperty("Brothers_AteFeralDinner", "true");
+        Object.SetStringProperty("Sibs_AteFeralDinner", "true");
 
         Object.SetStringProperty("Species", "dog");
       }

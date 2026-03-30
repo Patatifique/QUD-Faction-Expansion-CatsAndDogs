@@ -10,7 +10,7 @@
 
 	<anatomies>
 
-		<anatomy Name="Brothers_CatsDogs_FeralTransformation">
+		<anatomy Name="Sibs_CatsDogs_FeralTransformation">
 			<part Type="Head">
 				<part Type="Face" Integral="true" />
 			</part>

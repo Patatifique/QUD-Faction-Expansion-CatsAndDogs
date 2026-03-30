@@ -1225,7 +1225,7 @@
   </cell>
   <cell X="43" Y="7">
     <object Name="Floor"></object>
-    <object Name="Brothers_CatsDogs_BigTomb"></object>
+    <object Name="Sibs_CatsDogs_BigTomb"></object>
   </cell>
   <cell X="44" Y="7">
     <object Name="Floor"></object>
@@ -1601,7 +1601,7 @@
   </cell>
   <cell X="43" Y="9">
     <object Name="Floor"></object>
-    <object Name="Brothers_CatsDogs_Doggod"></object>
+    <object Name="Sibs_CatsDogs_Doggod"></object>
   </cell>
   <cell X="44" Y="9">
     <object Name="Floor"></object>

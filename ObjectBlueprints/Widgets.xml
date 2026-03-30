@@ -7,8 +7,8 @@
 
   -->
 
-  <object Name="Finish_Brothers_CatsDogs_ChefQuest_Travel" Inherits="Widget">
-    <part Name="QuestStepFinisher" Trigger="Created" Quest="Brothers_CatsDogs_ChefQuest" Step="Travel" />
+  <object Name="Finish_Sibs_CatsDogs_ChefQuest_Travel" Inherits="Widget">
+    <part Name="QuestStepFinisher" Trigger="Created" Quest="Sibs_CatsDogs_ChefQuest" Step="Travel" />
   </object>
 
 </objects>
