@@ -1602,7 +1602,7 @@
 
 		<node ID="DefaultChoices">
 			<choice Target="Bubumube" IfHaveActiveQuest="Sibs_CatsDogs_MainQuest2" IfNotFinishedQuestStep="Sibs_CatsDogs_MainQuest2~Investigate" IfNotHaveObservation="$Sibs_CatsDogs_ShiksparFounder_Dog">I intrude but for a moment: I am after a traveler named Bubumube, who would have spent some of their days here. Do You remember them?</choice>
-			<choice Target="Disturb">I do not with to disturb You -- is this a bad moment?</choice>
+			<choice Target="Disturb">I do not wish to disturb You -- is this a bad moment?</choice>
 			<choice Target="Pilgrims">I did not see any pilgrims on my way there...</choice>
 			<choice Target="End">I apologize for disturbing you, and will be going. Live and drink, o divine.</choice>
 		</node>
