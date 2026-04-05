@@ -7,7 +7,7 @@ using XRL.World.Quests;
 namespace XRL.World.Quests
 {
     [Serializable]
-    public class Brothers_CatsDogs_MainQuest1System : IQuestSystem
+    public class Sibs_CatsDogs_MainQuest1System : IQuestSystem
     {
         public override void Register(XRLGame Game, IEventRegistrar Registrar)
         {
@@ -43,7 +43,7 @@ namespace XRL.World.Quests
         }
         public override GameObject GetInfluencer()
         {
-            return GameObject.FindByBlueprint("Brothers_CatsDogs_Warden Arendubark");
+            return GameObject.FindByBlueprint("Sibs_CatsDogs_Warden Arendubark");
         }
     }
 }

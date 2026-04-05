@@ -9,7 +9,7 @@ namespace XRL.World.Effects
     // The changes were made to account for true kin characters
 
     [Serializable]
-    public class Brothers_CookingDomainRegen_UnitRegenerationMutationOrToughness : ProceduralCookingEffectUnit
+    public class Sibs_CookingDomainRegen_UnitRegenerationMutationOrToughness : ProceduralCookingEffectUnit
     {
         // True kin stuff
         public int Bonus = 1;

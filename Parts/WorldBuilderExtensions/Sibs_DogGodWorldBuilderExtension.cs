@@ -4,10 +4,10 @@ using XRL.World.WorldBuilders;
 using XRL.World.ZoneBuilders;
 using XRL.World.Parts;
 
-namespace Brothers.CatsAndDogs
+namespace Sibs.CatsAndDogs
 {
     [JoppaWorldBuilderExtension]
-    public class Brothers_DogGodWorldBuilderExtension  : IJoppaWorldBuilderExtension
+    public class Sibs_DogGodWorldBuilderExtension  : IJoppaWorldBuilderExtension
     {
         public override void OnAfterBuild(JoppaWorldBuilder builder)
         {
@@ -19,7 +19,7 @@ namespace Brothers.CatsAndDogs
                 "the mourning cave of {{M|Boroworof, Canine God}}",
                 new string[2] { "lair", "dogs" },
                 "Lairs",
-                "$brothers_doggod_lair"
+                "$Sibs_doggod_lair"
             );
 
             var zoneManager = The.ZoneManager;
@@ -29,7 +29,7 @@ namespace Brothers.CatsAndDogs
 
 
             zoneManager.SetZoneProperty(zoneID, "SkipTerrainBuilders", true);
-            zoneManager.AddZonePostBuilder(zoneID, "MapBuilder", "FileName", "Brothers_ShrineDog.rpm");
+            zoneManager.AddZonePostBuilder(zoneID, "MapBuilder", "FileName", "Sibs_ShrineDog.rpm");
 
 
             // I might add a music later

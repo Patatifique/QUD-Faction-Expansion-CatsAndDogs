@@ -7,7 +7,7 @@
 
 				"ingredients": {
 			
-					"Brothers_CatsDogs_Dimensional Jerky": {
+					"Sibs_CatsDogs_Dimensional Jerky": {
 						"adj": [ "<^.adj1.!random>", "<^.adj2.!random>" ],
 						"adj1": [ "blink", "tele-", "far-", "there-", "recomposing" ],
 						"adj2": [ "blink", "blinking", "teleporting", "recomposing" ],
@@ -15,7 +15,7 @@
 						"noun": [ "blinkoodle strip", "strip", "jerky" ]
 					},
 		  
-					"Brothers_CatsDogs_Burgeoning Meat": {
+					"Sibs_CatsDogs_Burgeoning Meat": {
 						"adj": [ "<^.adj1.!random>", "<^.adj2.!random>" ],
 						"adj1": [ "evolutive", "hydric", "polycephalous", "humongous", "copious" ],
 						"adj2": [ "evolutive", "hydric", "polycephalous", "humongous", "copious" ],

@@ -7,15 +7,15 @@ using System.Collections.Generic;
 namespace XRL.World.Parts
 {
     [Serializable]
-    public class Brothers_ModMeleeReflectiveArmor : IModification
+    public class Sibs_ModMeleeReflectiveArmor : IModification
     {
         public string Type = "glass";
 
-        public Brothers_ModMeleeReflectiveArmor()
+        public Sibs_ModMeleeReflectiveArmor()
         {
         }
 
-        public Brothers_ModMeleeReflectiveArmor(int Tier)
+        public Sibs_ModMeleeReflectiveArmor(int Tier)
             : base(Tier)
         {
         }

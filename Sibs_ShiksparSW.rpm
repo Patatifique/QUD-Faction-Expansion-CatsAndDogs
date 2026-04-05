@@ -1413,7 +1413,7 @@
   <cell X="41" Y="14"></cell>
   <cell X="42" Y="14"></cell>
   <cell X="43" Y="14">
-    <object Name="Brothers_CatsDogs_ShikCitizen"></object>
+    <object Name="Sibs_CatsDogs_ShikCitizen"></object>
   </cell>
   <cell X="44" Y="14"></cell>
   <cell X="45" Y="14"></cell>
@@ -1431,7 +1431,7 @@
   <cell X="57" Y="14"></cell>
   <cell X="58" Y="14"></cell>
   <cell X="59" Y="14">
-    <object Name="Brothers_CatsDogs_ShikCitizen"></object>
+    <object Name="Sibs_CatsDogs_ShikCitizen"></object>
   </cell>
   <cell X="60" Y="14"></cell>
   <cell X="61" Y="14"></cell>
@@ -2074,7 +2074,7 @@
   <cell X="28" Y="19"></cell>
   <cell X="29" Y="19"></cell>
   <cell X="30" Y="19">
-    <object Name="Brothers_CatsDogs_ShikCitizen"></object>
+    <object Name="Sibs_CatsDogs_ShikCitizen"></object>
   </cell>
   <cell X="31" Y="19"></cell>
   <cell X="32" Y="19"></cell>
@@ -2160,7 +2160,7 @@
   <cell X="64" Y="19"></cell>
   <cell X="65" Y="19"></cell>
   <cell X="66" Y="19">
-    <object Name="Brothers_CatsDogs_ShikCitizen"></object>
+    <object Name="Sibs_CatsDogs_ShikCitizen"></object>
   </cell>
   <cell X="67" Y="19"></cell>
   <cell X="68" Y="19"></cell>

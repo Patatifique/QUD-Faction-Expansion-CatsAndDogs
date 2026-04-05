@@ -7,8 +7,8 @@
 
   -->
 
-   <object Name="ProceduralCookingIngredient_brothersRegen" Inherits="IngredientMapping">
-    <tag Name="Units" Value="Brothers_CookingDomainRegen_UnitRegenerationMutationOrToughness" />
+   <object Name="ProceduralCookingIngredient_SibsRegen" Inherits="IngredientMapping">
+    <tag Name="Units" Value="Sibs_CookingDomainRegen_UnitRegenerationMutationOrToughness" />
     <tag Name="Description" Value="regeneration and toughness-based" />
     <tag Name="RandomWeight" Value="0" />
         <tag Name="RandomHighTierWeight" Value="10" />

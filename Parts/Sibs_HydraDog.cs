@@ -12,7 +12,7 @@ using System.ComponentModel;
 namespace XRL.World.Parts
 {
     [Serializable]
-    public class Brothers_HydraDog : IPart
+    public class Sibs_HydraDog : IPart
     {
         public string AdditionsManagerID => this.ParentObject.ID + "::HydraDog::Add";
         public string ChangesManagerID => this.ParentObject.ID + "::HydraDog::Change";
@@ -149,7 +149,7 @@ namespace XRL.World.Parts
                 foreach (BodyPart Part in body1.GetPart("Face"))
                     {
                         if (Part.Equipped == null)
-                            this.ParentObject.ForceEquipObject(GameObject.Create("Brothers_CatsDogs_Hydric Bite"), Part, true, new int?(0));
+                            this.ParentObject.ForceEquipObject(GameObject.Create("Sibs_CatsDogs_Hydric Bite"), Part, true, new int?(0));
                     }
             }
         }
@@ -165,9 +165,9 @@ namespace XRL.World.Parts
         public override bool HandleEvent(AfterObjectCreatedEvent E)
         {
             // set initial heads
-            Brothers_EvolutiveTile evolutiveTile;
+            Sibs_EvolutiveTile evolutiveTile;
 
-            if (this.ParentObject.TryGetPart<Brothers_EvolutiveTile>(out evolutiveTile))
+            if (this.ParentObject.TryGetPart<Sibs_EvolutiveTile>(out evolutiveTile))
             {
                 for (int i = 0; i < evolutiveTile.Stage; i++)
                 {
@@ -201,7 +201,7 @@ namespace XRL.World.Parts
                 }
                 
                 // Trigger evolutive tile change
-                this.ParentObject.FireEvent(Event.New("Brothers_ChangeEvolutiveState"));
+                this.ParentObject.FireEvent(Event.New("Sibs_ChangeEvolutiveState"));
                 
                 // Add Head
                 AddHead();

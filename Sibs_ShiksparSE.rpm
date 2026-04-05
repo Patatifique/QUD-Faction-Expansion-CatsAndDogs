@@ -2,11 +2,20 @@
 <Map Width="80" Height="25">
   <cell X="0" Y="0">
     <object Name="Dirty"></object>
+    <object Name="Shale"></object>
   </cell>
-  <cell X="1" Y="0"></cell>
-  <cell X="2" Y="0"></cell>
-  <cell X="3" Y="0"></cell>
-  <cell X="4" Y="0"></cell>
+  <cell X="1" Y="0">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="2" Y="0">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="3" Y="0">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="4" Y="0">
+    <object Name="Shale"></object>
+  </cell>
   <cell X="5" Y="0"></cell>
   <cell X="6" Y="0"></cell>
   <cell X="7" Y="0"></cell>
@@ -21,7 +30,9 @@
   <cell X="16" Y="0"></cell>
   <cell X="17" Y="0"></cell>
   <cell X="18" Y="0"></cell>
-  <cell X="19" Y="0"></cell>
+  <cell X="19" Y="0">
+    <object Name="Dogthorn Tree2"></object>
+  </cell>
   <cell X="20" Y="0"></cell>
   <cell X="21" Y="0"></cell>
   <cell X="22" Y="0"></cell>
@@ -60,34 +71,68 @@
   <cell X="55" Y="0"></cell>
   <cell X="56" Y="0"></cell>
   <cell X="57" Y="0"></cell>
-  <cell X="58" Y="0">
-    <object Name="Dogthorn Tree2"></object>
-  </cell>
+  <cell X="58" Y="0"></cell>
   <cell X="59" Y="0"></cell>
   <cell X="60" Y="0"></cell>
   <cell X="61" Y="0"></cell>
   <cell X="62" Y="0"></cell>
-  <cell X="63" Y="0"></cell>
-  <cell X="64" Y="0"></cell>
-  <cell X="65" Y="0"></cell>
-  <cell X="66" Y="0"></cell>
-  <cell X="67" Y="0"></cell>
-  <cell X="68" Y="0"></cell>
-  <cell X="69" Y="0"></cell>
-  <cell X="70" Y="0"></cell>
-  <cell X="71" Y="0"></cell>
-  <cell X="72" Y="0"></cell>
-  <cell X="73" Y="0"></cell>
-  <cell X="74" Y="0"></cell>
-  <cell X="75" Y="0"></cell>
-  <cell X="76" Y="0"></cell>
+  <cell X="63" Y="0">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="64" Y="0">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="65" Y="0">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="66" Y="0">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="67" Y="0">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="68" Y="0">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="69" Y="0">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="70" Y="0">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="71" Y="0">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="72" Y="0">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="73" Y="0">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="74" Y="0">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="75" Y="0">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="76" Y="0">
+    <object Name="Shale"></object>
+  </cell>
   <cell X="77" Y="0"></cell>
   <cell X="78" Y="0"></cell>
   <cell X="79" Y="0"></cell>
-  <cell X="0" Y="1"></cell>
-  <cell X="1" Y="1"></cell>
-  <cell X="2" Y="1"></cell>
-  <cell X="3" Y="1"></cell>
+  <cell X="0" Y="1">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="1" Y="1">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="2" Y="1">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="3" Y="1">
+    <object Name="Shale"></object>
+  </cell>
   <cell X="4" Y="1"></cell>
   <cell X="5" Y="1"></cell>
   <cell X="6" Y="1"></cell>
@@ -108,25 +153,15 @@
   <cell X="21" Y="1"></cell>
   <cell X="22" Y="1"></cell>
   <cell X="23" Y="1"></cell>
-  <cell X="24" Y="1">
-    <object Name="Dogthorn Tree2"></object>
-  </cell>
+  <cell X="24" Y="1"></cell>
   <cell X="25" Y="1"></cell>
   <cell X="26" Y="1"></cell>
   <cell X="27" Y="1"></cell>
   <cell X="28" Y="1"></cell>
-  <cell X="29" Y="1">
-    <object Name="MediumBoulder"></object>
-  </cell>
-  <cell X="30" Y="1">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="31" Y="1">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="32" Y="1">
-    <object Name="Shale"></object>
-  </cell>
+  <cell X="29" Y="1"></cell>
+  <cell X="30" Y="1"></cell>
+  <cell X="31" Y="1"></cell>
+  <cell X="32" Y="1"></cell>
   <cell X="33" Y="1"></cell>
   <cell X="34" Y="1"></cell>
   <cell X="35" Y="1"></cell>
@@ -138,9 +173,7 @@
   <cell X="41" Y="1"></cell>
   <cell X="42" Y="1"></cell>
   <cell X="43" Y="1"></cell>
-  <cell X="44" Y="1">
-    <object Name="Dogthorn Tree"></object>
-  </cell>
+  <cell X="44" Y="1"></cell>
   <cell X="45" Y="1"></cell>
   <cell X="46" Y="1"></cell>
   <cell X="47" Y="1"></cell>
@@ -160,30 +193,60 @@
   <cell X="61" Y="1"></cell>
   <cell X="62" Y="1"></cell>
   <cell X="63" Y="1"></cell>
-  <cell X="64" Y="1"></cell>
-  <cell X="65" Y="1"></cell>
-  <cell X="66" Y="1"></cell>
-  <cell X="67" Y="1"></cell>
-  <cell X="68" Y="1"></cell>
-  <cell X="69" Y="1"></cell>
-  <cell X="70" Y="1"></cell>
-  <cell X="71" Y="1"></cell>
-  <cell X="72" Y="1">
-    <object Name="Dogthorn Tree"></object>
+  <cell X="64" Y="1">
+    <object Name="SmallBoulder"></object>
   </cell>
-  <cell X="73" Y="1"></cell>
-  <cell X="74" Y="1"></cell>
-  <cell X="75" Y="1"></cell>
-  <cell X="76" Y="1"></cell>
+  <cell X="65" Y="1">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="66" Y="1">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="67" Y="1">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="68" Y="1">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="69" Y="1">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="70" Y="1">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="71" Y="1">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="72" Y="1">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="73" Y="1">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="74" Y="1">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="75" Y="1">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="76" Y="1">
+    <object Name="MediumBoulder"></object>
+  </cell>
   <cell X="77" Y="1"></cell>
   <cell X="78" Y="1"></cell>
   <cell X="79" Y="1"></cell>
-  <cell X="0" Y="2"></cell>
-  <cell X="1" Y="2"></cell>
-  <cell X="2" Y="2">
-    <object Name="Dogthorn Tree2"></object>
+  <cell X="0" Y="2">
+    <object Name="Shale"></object>
   </cell>
-  <cell X="3" Y="2"></cell>
+  <cell X="1" Y="2">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="2" Y="2">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="3" Y="2">
+    <object Name="LargeBoulder"></object>
+  </cell>
   <cell X="4" Y="2"></cell>
   <cell X="5" Y="2"></cell>
   <cell X="6" Y="2"></cell>
@@ -192,9 +255,7 @@
   <cell X="9" Y="2"></cell>
   <cell X="10" Y="2"></cell>
   <cell X="11" Y="2"></cell>
-  <cell X="12" Y="2">
-    <object Name="Dogthorn Tree"></object>
-  </cell>
+  <cell X="12" Y="2"></cell>
   <cell X="13" Y="2"></cell>
   <cell X="14" Y="2"></cell>
   <cell X="15" Y="2"></cell>
@@ -211,18 +272,10 @@
   <cell X="26" Y="2"></cell>
   <cell X="27" Y="2"></cell>
   <cell X="28" Y="2"></cell>
-  <cell X="29" Y="2">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="30" Y="2">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="31" Y="2">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="32" Y="2">
-    <object Name="Shale"></object>
-  </cell>
+  <cell X="29" Y="2"></cell>
+  <cell X="30" Y="2"></cell>
+  <cell X="31" Y="2"></cell>
+  <cell X="32" Y="2"></cell>
   <cell X="33" Y="2"></cell>
   <cell X="34" Y="2"></cell>
   <cell X="35" Y="2"></cell>
@@ -257,21 +310,39 @@
   <cell X="64" Y="2"></cell>
   <cell X="65" Y="2"></cell>
   <cell X="66" Y="2"></cell>
-  <cell X="67" Y="2"></cell>
-  <cell X="68" Y="2"></cell>
-  <cell X="69" Y="2"></cell>
-  <cell X="70" Y="2"></cell>
-  <cell X="71" Y="2"></cell>
-  <cell X="72" Y="2"></cell>
-  <cell X="73" Y="2"></cell>
+  <cell X="67" Y="2">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="68" Y="2">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="69" Y="2">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="70" Y="2">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="71" Y="2">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="72" Y="2">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="73" Y="2">
+    <object Name="SmallBoulder"></object>
+  </cell>
   <cell X="74" Y="2"></cell>
   <cell X="75" Y="2"></cell>
   <cell X="76" Y="2"></cell>
   <cell X="77" Y="2"></cell>
   <cell X="78" Y="2"></cell>
   <cell X="79" Y="2"></cell>
-  <cell X="0" Y="3"></cell>
-  <cell X="1" Y="3"></cell>
+  <cell X="0" Y="3">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="1" Y="3">
+    <object Name="MediumBoulder"></object>
+  </cell>
   <cell X="2" Y="3"></cell>
   <cell X="3" Y="3"></cell>
   <cell X="4" Y="3"></cell>
@@ -300,12 +371,8 @@
   <cell X="27" Y="3"></cell>
   <cell X="28" Y="3"></cell>
   <cell X="29" Y="3"></cell>
-  <cell X="30" Y="3">
-    <object Name="SmallBoulder"></object>
-  </cell>
-  <cell X="31" Y="3">
-    <object Name="Shale"></object>
-  </cell>
+  <cell X="30" Y="3"></cell>
+  <cell X="31" Y="3"></cell>
   <cell X="32" Y="3"></cell>
   <cell X="33" Y="3"></cell>
   <cell X="34" Y="3"></cell>
@@ -330,41 +397,30 @@
   <cell X="53" Y="3"></cell>
   <cell X="54" Y="3"></cell>
   <cell X="55" Y="3"></cell>
-  <cell X="56" Y="3">
-    <object Name="DirtFloor"></object>
-  </cell>
-  <cell X="57" Y="3">
-    <object Name="DirtFloor"></object>
-  </cell>
-  <cell X="58" Y="3">
-    <object Name="BrinestalkFence"></object>
-    <object Name="DirtFloor"></object>
-  </cell>
-  <cell X="59" Y="3">
-    <object Name="BrinestalkFence"></object>
-    <object Name="DirtFloor"></object>
-  </cell>
-  <cell X="60" Y="3">
-    <object Name="BrinestalkFence"></object>
-    <object Name="DirtFloor"></object>
-  </cell>
-  <cell X="61" Y="3">
-    <object Name="BrinestalkFence"></object>
-    <object Name="DirtFloor"></object>
-  </cell>
-  <cell X="62" Y="3">
-    <object Name="BrinestalkFence"></object>
-    <object Name="DirtFloor"></object>
-  </cell>
+  <cell X="56" Y="3"></cell>
+  <cell X="57" Y="3"></cell>
+  <cell X="58" Y="3"></cell>
+  <cell X="59" Y="3"></cell>
+  <cell X="60" Y="3"></cell>
+  <cell X="61" Y="3"></cell>
+  <cell X="62" Y="3"></cell>
   <cell X="63" Y="3"></cell>
-  <cell X="64" Y="3"></cell>
+  <cell X="64" Y="3">
+    <object Name="Dogthorn Tree2"></object>
+  </cell>
   <cell X="65" Y="3"></cell>
   <cell X="66" Y="3"></cell>
   <cell X="67" Y="3"></cell>
   <cell X="68" Y="3"></cell>
-  <cell X="69" Y="3"></cell>
-  <cell X="70" Y="3"></cell>
-  <cell X="71" Y="3"></cell>
+  <cell X="69" Y="3">
+    <object Name="MediumBoulder"></object>
+  </cell>
+  <cell X="70" Y="3">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="71" Y="3">
+    <object Name="Shale"></object>
+  </cell>
   <cell X="72" Y="3"></cell>
   <cell X="73" Y="3"></cell>
   <cell X="74" Y="3"></cell>
@@ -378,13 +434,15 @@
   <cell X="2" Y="4"></cell>
   <cell X="3" Y="4"></cell>
   <cell X="4" Y="4"></cell>
-  <cell X="5" Y="4"></cell>
-  <cell X="6" Y="4">
-    <object Name="Shale"></object>
+  <cell X="5" Y="4">
+    <object Name="Dogthorn Tree2"></object>
   </cell>
+  <cell X="6" Y="4"></cell>
   <cell X="7" Y="4"></cell>
   <cell X="8" Y="4"></cell>
-  <cell X="9" Y="4"></cell>
+  <cell X="9" Y="4">
+    <object Name="Dogthorn Tree"></object>
+  </cell>
   <cell X="10" Y="4"></cell>
   <cell X="11" Y="4"></cell>
   <cell X="12" Y="4"></cell>
@@ -432,29 +490,18 @@
   <cell X="54" Y="4"></cell>
   <cell X="55" Y="4"></cell>
   <cell X="56" Y="4">
-    <object Name="DirtFloor"></object>
+    <object Name="Pond"></object>
   </cell>
   <cell X="57" Y="4">
-    <object Name="DirtFloor"></object>
+    <object Name="Pond"></object>
   </cell>
   <cell X="58" Y="4">
-    <object Name="DirtFloor"></object>
+    <object Name="Brinestalk"></object>
   </cell>
-  <cell X="59" Y="4">
-    <object Name="DirtFloor"></object>
-    <object Name="Brothers_CatsDogs_ShikCitizen"></object>
-  </cell>
-  <cell X="60" Y="4">
-    <object Name="DirtFloor"></object>
-  </cell>
-  <cell X="61" Y="4">
-    <object Name="DirtFloor"></object>
-    <object Name="Starapple Preserves" Owner="Shik"></object>
-  </cell>
-  <cell X="62" Y="4">
-    <object Name="BrinestalkFence"></object>
-    <object Name="DirtFloor"></object>
-  </cell>
+  <cell X="59" Y="4"></cell>
+  <cell X="60" Y="4"></cell>
+  <cell X="61" Y="4"></cell>
+  <cell X="62" Y="4"></cell>
   <cell X="63" Y="4"></cell>
   <cell X="64" Y="4"></cell>
   <cell X="65" Y="4"></cell>
@@ -470,30 +517,16 @@
   <cell X="75" Y="4"></cell>
   <cell X="76" Y="4"></cell>
   <cell X="77" Y="4"></cell>
-  <cell X="78" Y="4">
-    <object Name="LargeBoulder"></object>
-  </cell>
-  <cell X="79" Y="4">
-    <object Name="Shale"></object>
-  </cell>
+  <cell X="78" Y="4"></cell>
+  <cell X="79" Y="4"></cell>
   <cell X="0" Y="5"></cell>
   <cell X="1" Y="5"></cell>
   <cell X="2" Y="5"></cell>
-  <cell X="3" Y="5">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="4" Y="5">
-    <object Name="LargeBoulder"></object>
-  </cell>
-  <cell X="5" Y="5">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="6" Y="5">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="7" Y="5">
-    <object Name="Shale"></object>
-  </cell>
+  <cell X="3" Y="5"></cell>
+  <cell X="4" Y="5"></cell>
+  <cell X="5" Y="5"></cell>
+  <cell X="6" Y="5"></cell>
+  <cell X="7" Y="5"></cell>
   <cell X="8" Y="5"></cell>
   <cell X="9" Y="5"></cell>
   <cell X="10" Y="5"></cell>
@@ -506,7 +539,9 @@
   <cell X="17" Y="5"></cell>
   <cell X="18" Y="5"></cell>
   <cell X="19" Y="5"></cell>
-  <cell X="20" Y="5"></cell>
+  <cell X="20" Y="5">
+    <object Name="SmallBoulder"></object>
+  </cell>
   <cell X="21" Y="5"></cell>
   <cell X="22" Y="5"></cell>
   <cell X="23" Y="5"></cell>
@@ -542,25 +577,26 @@
   <cell X="53" Y="5"></cell>
   <cell X="54" Y="5"></cell>
   <cell X="55" Y="5"></cell>
-  <cell X="56" Y="5"></cell>
+  <cell X="56" Y="5">
+    <object Name="Pond"></object>
+  </cell>
   <cell X="57" Y="5">
-    <object Name="DirtFloor"></object>
+    <object Name="Pond"></object>
   </cell>
   <cell X="58" Y="5">
-    <object Name="DirtFloor"></object>
+    <object Name="Pond"></object>
   </cell>
   <cell X="59" Y="5">
-    <object Name="DirtFloor"></object>
+    <object Name="Pond"></object>
   </cell>
   <cell X="60" Y="5">
-    <object Name="DirtFloor"></object>
+    <object Name="Pond"></object>
   </cell>
   <cell X="61" Y="5">
-    <object Name="DirtFloor"></object>
+    <object Name="Pond"></object>
   </cell>
   <cell X="62" Y="5">
-    <object Name="BrinestalkFence"></object>
-    <object Name="DirtFloor"></object>
+    <object Name="Pond"></object>
   </cell>
   <cell X="63" Y="5"></cell>
   <cell X="64" Y="5"></cell>
@@ -575,50 +611,22 @@
   <cell X="73" Y="5"></cell>
   <cell X="74" Y="5"></cell>
   <cell X="75" Y="5"></cell>
-  <cell X="76" Y="5">
-    <object Name="SmallBoulder"></object>
-  </cell>
-  <cell X="77" Y="5">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="78" Y="5">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="79" Y="5">
-    <object Name="Shale"></object>
-  </cell>
+  <cell X="76" Y="5"></cell>
+  <cell X="77" Y="5"></cell>
+  <cell X="78" Y="5"></cell>
+  <cell X="79" Y="5"></cell>
   <cell X="0" Y="6"></cell>
   <cell X="1" Y="6"></cell>
-  <cell X="2" Y="6">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="3" Y="6">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="4" Y="6">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="5" Y="6">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="6" Y="6">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="7" Y="6">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="8" Y="6">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="9" Y="6">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="10" Y="6">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="11" Y="6">
-    <object Name="MediumBoulder"></object>
-  </cell>
+  <cell X="2" Y="6"></cell>
+  <cell X="3" Y="6"></cell>
+  <cell X="4" Y="6"></cell>
+  <cell X="5" Y="6"></cell>
+  <cell X="6" Y="6"></cell>
+  <cell X="7" Y="6"></cell>
+  <cell X="8" Y="6"></cell>
+  <cell X="9" Y="6"></cell>
+  <cell X="10" Y="6"></cell>
+  <cell X="11" Y="6"></cell>
   <cell X="12" Y="6"></cell>
   <cell X="13" Y="6"></cell>
   <cell X="14" Y="6"></cell>
@@ -626,9 +634,15 @@
   <cell X="16" Y="6"></cell>
   <cell X="17" Y="6"></cell>
   <cell X="18" Y="6"></cell>
-  <cell X="19" Y="6"></cell>
-  <cell X="20" Y="6"></cell>
-  <cell X="21" Y="6"></cell>
+  <cell X="19" Y="6">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="20" Y="6">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="21" Y="6">
+    <object Name="Shale"></object>
+  </cell>
   <cell X="22" Y="6"></cell>
   <cell X="23" Y="6"></cell>
   <cell X="24" Y="6"></cell>
@@ -649,7 +663,9 @@
   <cell X="39" Y="6"></cell>
   <cell X="40" Y="6"></cell>
   <cell X="41" Y="6"></cell>
-  <cell X="42" Y="6"></cell>
+  <cell X="42" Y="6">
+    <object Name="Sibs_CatsDogs_SparCitizen"></object>
+  </cell>
   <cell X="43" Y="6"></cell>
   <cell X="44" Y="6"></cell>
   <cell X="45" Y="6"></cell>
@@ -666,18 +682,20 @@
   <cell X="56" Y="6"></cell>
   <cell X="57" Y="6"></cell>
   <cell X="58" Y="6">
-    <object Name="DirtFloor"></object>
+    <object Name="Pond"></object>
   </cell>
   <cell X="59" Y="6">
-    <object Name="DirtFloor"></object>
+    <object Name="Pond"></object>
   </cell>
   <cell X="60" Y="6">
-    <object Name="DirtFloor"></object>
+    <object Name="Pond"></object>
   </cell>
   <cell X="61" Y="6">
-    <object Name="DirtFloor"></object>
+    <object Name="Pond"></object>
   </cell>
-  <cell X="62" Y="6"></cell>
+  <cell X="62" Y="6">
+    <object Name="Brinestalk"></object>
+  </cell>
   <cell X="63" Y="6"></cell>
   <cell X="64" Y="6"></cell>
   <cell X="65" Y="6"></cell>
@@ -691,52 +709,22 @@
   <cell X="73" Y="6"></cell>
   <cell X="74" Y="6"></cell>
   <cell X="75" Y="6"></cell>
-  <cell X="76" Y="6">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="77" Y="6">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="78" Y="6">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="79" Y="6">
-    <object Name="Shale"></object>
-  </cell>
+  <cell X="76" Y="6"></cell>
+  <cell X="77" Y="6"></cell>
+  <cell X="78" Y="6"></cell>
+  <cell X="79" Y="6"></cell>
   <cell X="0" Y="7"></cell>
-  <cell X="1" Y="7">
-    <object Name="SmallBoulder"></object>
-  </cell>
-  <cell X="2" Y="7">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="3" Y="7">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="4" Y="7">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="5" Y="7">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="6" Y="7">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="7" Y="7">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="8" Y="7">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="9" Y="7">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="10" Y="7">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="11" Y="7">
-    <object Name="Shale"></object>
-  </cell>
+  <cell X="1" Y="7"></cell>
+  <cell X="2" Y="7"></cell>
+  <cell X="3" Y="7"></cell>
+  <cell X="4" Y="7"></cell>
+  <cell X="5" Y="7"></cell>
+  <cell X="6" Y="7"></cell>
+  <cell X="7" Y="7"></cell>
+  <cell X="8" Y="7"></cell>
+  <cell X="9" Y="7"></cell>
+  <cell X="10" Y="7"></cell>
+  <cell X="11" Y="7"></cell>
   <cell X="12" Y="7"></cell>
   <cell X="13" Y="7"></cell>
   <cell X="14" Y="7"></cell>
@@ -744,9 +732,15 @@
   <cell X="16" Y="7"></cell>
   <cell X="17" Y="7"></cell>
   <cell X="18" Y="7"></cell>
-  <cell X="19" Y="7"></cell>
-  <cell X="20" Y="7"></cell>
-  <cell X="21" Y="7"></cell>
+  <cell X="19" Y="7">
+    <object Name="LargeBoulder"></object>
+  </cell>
+  <cell X="20" Y="7">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="21" Y="7">
+    <object Name="Shale"></object>
+  </cell>
   <cell X="22" Y="7"></cell>
   <cell X="23" Y="7"></cell>
   <cell X="24" Y="7"></cell>
@@ -786,9 +780,7 @@
   <cell X="58" Y="7"></cell>
   <cell X="59" Y="7"></cell>
   <cell X="60" Y="7"></cell>
-  <cell X="61" Y="7">
-    <object Name="DirtFloor"></object>
-  </cell>
+  <cell X="61" Y="7"></cell>
   <cell X="62" Y="7"></cell>
   <cell X="63" Y="7"></cell>
   <cell X="64" Y="7"></cell>
@@ -798,60 +790,30 @@
   <cell X="68" Y="7"></cell>
   <cell X="69" Y="7"></cell>
   <cell X="70" Y="7"></cell>
-  <cell X="71" Y="7"></cell>
+  <cell X="71" Y="7">
+    <object Name="Dogthorn Tree"></object>
+  </cell>
   <cell X="72" Y="7"></cell>
   <cell X="73" Y="7"></cell>
   <cell X="74" Y="7"></cell>
   <cell X="75" Y="7"></cell>
   <cell X="76" Y="7"></cell>
-  <cell X="77" Y="7">
-    <object Name="MediumBoulder"></object>
-  </cell>
-  <cell X="78" Y="7">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="79" Y="7">
-    <object Name="Shale"></object>
-  </cell>
+  <cell X="77" Y="7"></cell>
+  <cell X="78" Y="7"></cell>
+  <cell X="79" Y="7"></cell>
   <cell X="0" Y="8"></cell>
-  <cell X="1" Y="8">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="2" Y="8">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="3" Y="8">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="4" Y="8">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="5" Y="8">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="6" Y="8">
-    <object Name="Shale"></object>
-    <object Name="Shale"></object>
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="7" Y="8">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="8" Y="8">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="9" Y="8">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="10" Y="8">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="11" Y="8">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="12" Y="8">
-    <object Name="Shale"></object>
-  </cell>
+  <cell X="1" Y="8"></cell>
+  <cell X="2" Y="8"></cell>
+  <cell X="3" Y="8"></cell>
+  <cell X="4" Y="8"></cell>
+  <cell X="5" Y="8"></cell>
+  <cell X="6" Y="8"></cell>
+  <cell X="7" Y="8"></cell>
+  <cell X="8" Y="8"></cell>
+  <cell X="9" Y="8"></cell>
+  <cell X="10" Y="8"></cell>
+  <cell X="11" Y="8"></cell>
+  <cell X="12" Y="8"></cell>
   <cell X="13" Y="8"></cell>
   <cell X="14" Y="8"></cell>
   <cell X="15" Y="8"></cell>
@@ -886,15 +848,9 @@
   <cell X="44" Y="8"></cell>
   <cell X="45" Y="8"></cell>
   <cell X="46" Y="8"></cell>
-  <cell X="47" Y="8">
-    <object Name="DirtFloor"></object>
-  </cell>
-  <cell X="48" Y="8">
-    <object Name="DirtFloor"></object>
-  </cell>
-  <cell X="49" Y="8">
-    <object Name="DirtFloor"></object>
-  </cell>
+  <cell X="47" Y="8"></cell>
+  <cell X="48" Y="8"></cell>
+  <cell X="49" Y="8"></cell>
   <cell X="50" Y="8"></cell>
   <cell X="51" Y="8"></cell>
   <cell X="52" Y="8"></cell>
@@ -924,45 +880,23 @@
   <cell X="76" Y="8"></cell>
   <cell X="77" Y="8"></cell>
   <cell X="78" Y="8"></cell>
-  <cell X="79" Y="8">
-    <object Name="Shale"></object>
-  </cell>
+  <cell X="79" Y="8"></cell>
   <cell X="0" Y="9"></cell>
   <cell X="1" Y="9"></cell>
-  <cell X="2" Y="9">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="3" Y="9">
-    <object Name="Shale"></object>
-  </cell>
+  <cell X="2" Y="9"></cell>
+  <cell X="3" Y="9"></cell>
   <cell X="4" Y="9">
-    <object Name="Shale"></object>
+    <object Name="Dogthorn Tree"></object>
   </cell>
-  <cell X="5" Y="9">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="6" Y="9">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="7" Y="9">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="8" Y="9">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="9" Y="9">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="10" Y="9">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="11" Y="9">
-    <object Name="Shale"></object>
-  </cell>
+  <cell X="5" Y="9"></cell>
+  <cell X="6" Y="9"></cell>
+  <cell X="7" Y="9"></cell>
+  <cell X="8" Y="9"></cell>
+  <cell X="9" Y="9"></cell>
+  <cell X="10" Y="9"></cell>
+  <cell X="11" Y="9"></cell>
   <cell X="12" Y="9"></cell>
-  <cell X="13" Y="9">
-    <object Name="Dogthorn Tree2"></object>
-  </cell>
+  <cell X="13" Y="9"></cell>
   <cell X="14" Y="9"></cell>
   <cell X="15" Y="9"></cell>
   <cell X="16" Y="9"></cell>
@@ -996,19 +930,10 @@
   <cell X="44" Y="9"></cell>
   <cell X="45" Y="9"></cell>
   <cell X="46" Y="9"></cell>
-  <cell X="47" Y="9">
-    <object Name="DirtFloor"></object>
-  </cell>
-  <cell X="48" Y="9">
-    <object Name="DirtFloor"></object>
-  </cell>
-  <cell X="49" Y="9">
-    <object Name="DirtFloor"></object>
-    <object Name="Brothers_CatsDogs_ShikCitizen"></object>
-  </cell>
-  <cell X="50" Y="9">
-    <object Name="DirtFloor"></object>
-  </cell>
+  <cell X="47" Y="9"></cell>
+  <cell X="48" Y="9"></cell>
+  <cell X="49" Y="9"></cell>
+  <cell X="50" Y="9"></cell>
   <cell X="51" Y="9"></cell>
   <cell X="52" Y="9"></cell>
   <cell X="53" Y="9"></cell>
@@ -1040,36 +965,16 @@
   <cell X="79" Y="9"></cell>
   <cell X="0" Y="10"></cell>
   <cell X="1" Y="10"></cell>
-  <cell X="2" Y="10">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="3" Y="10">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="4" Y="10">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="5" Y="10">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="6" Y="10">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="7" Y="10">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="8" Y="10">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="9" Y="10">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="10" Y="10">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="11" Y="10">
-    <object Name="SmallBoulder"></object>
-  </cell>
+  <cell X="2" Y="10"></cell>
+  <cell X="3" Y="10"></cell>
+  <cell X="4" Y="10"></cell>
+  <cell X="5" Y="10"></cell>
+  <cell X="6" Y="10"></cell>
+  <cell X="7" Y="10"></cell>
+  <cell X="8" Y="10"></cell>
+  <cell X="9" Y="10"></cell>
+  <cell X="10" Y="10"></cell>
+  <cell X="11" Y="10"></cell>
   <cell X="12" Y="10"></cell>
   <cell X="13" Y="10"></cell>
   <cell X="14" Y="10"></cell>
@@ -1084,8 +989,12 @@
   <cell X="23" Y="10"></cell>
   <cell X="24" Y="10"></cell>
   <cell X="25" Y="10"></cell>
-  <cell X="26" Y="10"></cell>
-  <cell X="27" Y="10"></cell>
+  <cell X="26" Y="10">
+    <object Name="BrinestalkFence"></object>
+  </cell>
+  <cell X="27" Y="10">
+    <object Name="DirtFloor"></object>
+  </cell>
   <cell X="28" Y="10"></cell>
   <cell X="29" Y="10"></cell>
   <cell X="30" Y="10"></cell>
@@ -1105,25 +1014,12 @@
   <cell X="44" Y="10"></cell>
   <cell X="45" Y="10"></cell>
   <cell X="46" Y="10"></cell>
-  <cell X="47" Y="10">
-    <object Name="BrinestalkFence"></object>
-    <object Name="DirtFloor"></object>
-  </cell>
-  <cell X="48" Y="10">
-    <object Name="DirtFloor"></object>
-  </cell>
-  <cell X="49" Y="10">
-    <object Name="DirtFloor"></object>
-  </cell>
-  <cell X="50" Y="10">
-    <object Name="DirtFloor"></object>
-  </cell>
-  <cell X="51" Y="10">
-    <object Name="DirtFloor"></object>
-  </cell>
-  <cell X="52" Y="10">
-    <object Name="DirtFloor"></object>
-  </cell>
+  <cell X="47" Y="10"></cell>
+  <cell X="48" Y="10"></cell>
+  <cell X="49" Y="10"></cell>
+  <cell X="50" Y="10"></cell>
+  <cell X="51" Y="10"></cell>
+  <cell X="52" Y="10"></cell>
   <cell X="53" Y="10"></cell>
   <cell X="54" Y="10"></cell>
   <cell X="55" Y="10"></cell>
@@ -1147,34 +1043,22 @@
   <cell X="73" Y="10"></cell>
   <cell X="74" Y="10"></cell>
   <cell X="75" Y="10"></cell>
-  <cell X="76" Y="10"></cell>
+  <cell X="76" Y="10">
+    <object Name="Dogthorn Tree2"></object>
+  </cell>
   <cell X="77" Y="10"></cell>
   <cell X="78" Y="10"></cell>
   <cell X="79" Y="10"></cell>
   <cell X="0" Y="11"></cell>
   <cell X="1" Y="11"></cell>
   <cell X="2" Y="11"></cell>
-  <cell X="3" Y="11">
-    <object Name="MediumBoulder"></object>
-  </cell>
-  <cell X="4" Y="11">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="5" Y="11">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="6" Y="11">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="7" Y="11">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="8" Y="11">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="9" Y="11">
-    <object Name="LargeBoulder"></object>
-  </cell>
+  <cell X="3" Y="11"></cell>
+  <cell X="4" Y="11"></cell>
+  <cell X="5" Y="11"></cell>
+  <cell X="6" Y="11"></cell>
+  <cell X="7" Y="11"></cell>
+  <cell X="8" Y="11"></cell>
+  <cell X="9" Y="11"></cell>
   <cell X="10" Y="11"></cell>
   <cell X="11" Y="11"></cell>
   <cell X="12" Y="11"></cell>
@@ -1186,15 +1070,26 @@
   <cell X="18" Y="11"></cell>
   <cell X="19" Y="11"></cell>
   <cell X="20" Y="11"></cell>
-  <cell X="21" Y="11"></cell>
+  <cell X="21" Y="11">
+    <object Name="Sibs_CatsDogs_SparCitizen"></object>
+  </cell>
   <cell X="22" Y="11"></cell>
   <cell X="23" Y="11"></cell>
   <cell X="24" Y="11"></cell>
   <cell X="25" Y="11"></cell>
-  <cell X="26" Y="11"></cell>
-  <cell X="27" Y="11"></cell>
-  <cell X="28" Y="11"></cell>
-  <cell X="29" Y="11"></cell>
+  <cell X="26" Y="11">
+    <object Name="BrinestalkFence"></object>
+    <object Name="DirtFloor"></object>
+  </cell>
+  <cell X="27" Y="11">
+    <object Name="DirtFloor"></object>
+  </cell>
+  <cell X="28" Y="11">
+    <object Name="DirtFloor"></object>
+  </cell>
+  <cell X="29" Y="11">
+    <object Name="DirtFloor"></object>
+  </cell>
   <cell X="30" Y="11"></cell>
   <cell X="31" Y="11"></cell>
   <cell X="32" Y="11"></cell>
@@ -1212,27 +1107,12 @@
   <cell X="44" Y="11"></cell>
   <cell X="45" Y="11"></cell>
   <cell X="46" Y="11"></cell>
-  <cell X="47" Y="11">
-    <object Name="BrinestalkFence"></object>
-    <object Name="DirtFloor"></object>
-  </cell>
-  <cell X="48" Y="11">
-    <object Name="Woven Basket"></object>
-    <object Name="DirtFloor"></object>
-  </cell>
-  <cell X="49" Y="11">
-    <object Name="Woven Basket"></object>
-    <object Name="DirtFloor"></object>
-  </cell>
-  <cell X="50" Y="11">
-    <object Name="DirtFloor"></object>
-  </cell>
-  <cell X="51" Y="11">
-    <object Name="DirtFloor"></object>
-  </cell>
-  <cell X="52" Y="11">
-    <object Name="DirtFloor"></object>
-  </cell>
+  <cell X="47" Y="11"></cell>
+  <cell X="48" Y="11"></cell>
+  <cell X="49" Y="11"></cell>
+  <cell X="50" Y="11"></cell>
+  <cell X="51" Y="11"></cell>
+  <cell X="52" Y="11"></cell>
   <cell X="53" Y="11"></cell>
   <cell X="54" Y="11"></cell>
   <cell X="55" Y="11"></cell>
@@ -1261,17 +1141,15 @@
   <cell X="78" Y="11"></cell>
   <cell X="79" Y="11"></cell>
   <cell X="0" Y="12"></cell>
-  <cell X="1" Y="12"></cell>
+  <cell X="1" Y="12">
+    <object Name="Dogthorn Tree2"></object>
+  </cell>
   <cell X="2" Y="12"></cell>
   <cell X="3" Y="12"></cell>
   <cell X="4" Y="12"></cell>
   <cell X="5" Y="12"></cell>
-  <cell X="6" Y="12">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="7" Y="12">
-    <object Name="Shale"></object>
-  </cell>
+  <cell X="6" Y="12"></cell>
+  <cell X="7" Y="12"></cell>
   <cell X="8" Y="12"></cell>
   <cell X="9" Y="12"></cell>
   <cell X="10" Y="12"></cell>
@@ -1283,24 +1161,41 @@
   <cell X="16" Y="12"></cell>
   <cell X="17" Y="12"></cell>
   <cell X="18" Y="12"></cell>
-  <cell X="19" Y="12">
-    <object Name="Brothers_CatsDogs_ShikCitizen"></object>
-  </cell>
+  <cell X="19" Y="12"></cell>
   <cell X="20" Y="12"></cell>
   <cell X="21" Y="12"></cell>
   <cell X="22" Y="12"></cell>
   <cell X="23" Y="12"></cell>
   <cell X="24" Y="12"></cell>
   <cell X="25" Y="12"></cell>
-  <cell X="26" Y="12"></cell>
-  <cell X="27" Y="12"></cell>
-  <cell X="28" Y="12"></cell>
-  <cell X="29" Y="12"></cell>
-  <cell X="30" Y="12"></cell>
-  <cell X="31" Y="12"></cell>
-  <cell X="32" Y="12"></cell>
-  <cell X="33" Y="12"></cell>
-  <cell X="34" Y="12"></cell>
+  <cell X="26" Y="12">
+    <object Name="BrinestalkFence"></object>
+  </cell>
+  <cell X="27" Y="12">
+    <object Name="DirtFloor"></object>
+  </cell>
+  <cell X="28" Y="12">
+    <object Name="DirtFloor"></object>
+  </cell>
+  <cell X="29" Y="12">
+    <object Name="DirtFloor"></object>
+    <object Name="Sibs_CatsDogs_SparPig"></object>
+  </cell>
+  <cell X="30" Y="12">
+    <object Name="DirtFloor"></object>
+  </cell>
+  <cell X="31" Y="12">
+    <object Name="DirtFloor"></object>
+  </cell>
+  <cell X="32" Y="12">
+    <object Name="DirtFloor"></object>
+  </cell>
+  <cell X="33" Y="12">
+    <object Name="DirtFloor"></object>
+  </cell>
+  <cell X="34" Y="12">
+    <object Name="DirtFloor"></object>
+  </cell>
   <cell X="35" Y="12"></cell>
   <cell X="36" Y="12"></cell>
   <cell X="37" Y="12"></cell>
@@ -1313,21 +1208,11 @@
   <cell X="44" Y="12"></cell>
   <cell X="45" Y="12"></cell>
   <cell X="46" Y="12"></cell>
-  <cell X="47" Y="12">
-    <object Name="BrinestalkFence"></object>
-  </cell>
-  <cell X="48" Y="12">
-    <object Name="BrinestalkFence"></object>
-  </cell>
-  <cell X="49" Y="12">
-    <object Name="BrinestalkFence"></object>
-  </cell>
-  <cell X="50" Y="12">
-    <object Name="BrinestalkFence"></object>
-  </cell>
-  <cell X="51" Y="12">
-    <object Name="BrinestalkFence"></object>
-  </cell>
+  <cell X="47" Y="12"></cell>
+  <cell X="48" Y="12"></cell>
+  <cell X="49" Y="12"></cell>
+  <cell X="50" Y="12"></cell>
+  <cell X="51" Y="12"></cell>
   <cell X="52" Y="12"></cell>
   <cell X="53" Y="12"></cell>
   <cell X="54" Y="12"></cell>
@@ -1382,15 +1267,34 @@
   <cell X="23" Y="13"></cell>
   <cell X="24" Y="13"></cell>
   <cell X="25" Y="13"></cell>
-  <cell X="26" Y="13"></cell>
-  <cell X="27" Y="13"></cell>
-  <cell X="28" Y="13"></cell>
-  <cell X="29" Y="13"></cell>
-  <cell X="30" Y="13"></cell>
-  <cell X="31" Y="13"></cell>
-  <cell X="32" Y="13"></cell>
-  <cell X="33" Y="13"></cell>
-  <cell X="34" Y="13"></cell>
+  <cell X="26" Y="13">
+    <object Name="BrinestalkFence"></object>
+  </cell>
+  <cell X="27" Y="13">
+    <object Name="DirtFloor"></object>
+  </cell>
+  <cell X="28" Y="13">
+    <object Name="DirtFloor"></object>
+  </cell>
+  <cell X="29" Y="13">
+    <object Name="DirtFloor"></object>
+  </cell>
+  <cell X="30" Y="13">
+    <object Name="DirtFloor"></object>
+  </cell>
+  <cell X="31" Y="13">
+    <object Name="DirtFloor"></object>
+  </cell>
+  <cell X="32" Y="13">
+    <object Name="DirtFloor"></object>
+    <object Name="Sibs_CatsDogs_SparPig"></object>
+  </cell>
+  <cell X="33" Y="13">
+    <object Name="DirtFloor"></object>
+  </cell>
+  <cell X="34" Y="13">
+    <object Name="DirtFloor"></object>
+  </cell>
   <cell X="35" Y="13"></cell>
   <cell X="36" Y="13"></cell>
   <cell X="37" Y="13"></cell>
@@ -1435,87 +1339,69 @@
   <cell X="76" Y="13"></cell>
   <cell X="77" Y="13"></cell>
   <cell X="78" Y="13"></cell>
-  <cell X="79" Y="13">
-    <object Name="Dogthorn Tree2"></object>
-  </cell>
+  <cell X="79" Y="13"></cell>
   <cell X="0" Y="14"></cell>
   <cell X="1" Y="14"></cell>
   <cell X="2" Y="14"></cell>
   <cell X="3" Y="14"></cell>
   <cell X="4" Y="14"></cell>
   <cell X="5" Y="14"></cell>
-  <cell X="6" Y="14">
-    <object Name="Starapple Farm Tree"></object>
+  <cell X="6" Y="14"></cell>
+  <cell X="7" Y="14"></cell>
+  <cell X="8" Y="14"></cell>
+  <cell X="9" Y="14"></cell>
+  <cell X="10" Y="14"></cell>
+  <cell X="11" Y="14"></cell>
+  <cell X="12" Y="14"></cell>
+  <cell X="13" Y="14"></cell>
+  <cell X="14" Y="14"></cell>
+  <cell X="15" Y="14"></cell>
+  <cell X="16" Y="14"></cell>
+  <cell X="17" Y="14"></cell>
+  <cell X="18" Y="14"></cell>
+  <cell X="19" Y="14"></cell>
+  <cell X="20" Y="14"></cell>
+  <cell X="21" Y="14"></cell>
+  <cell X="22" Y="14"></cell>
+  <cell X="23" Y="14"></cell>
+  <cell X="24" Y="14"></cell>
+  <cell X="25" Y="14"></cell>
+  <cell X="26" Y="14">
+    <object Name="BrinestalkFence"></object>
   </cell>
-  <cell X="7" Y="14">
-    <object Name="Starapple Farm Tree"></object>
+  <cell X="27" Y="14">
+    <object Name="DirtFloor"></object>
   </cell>
-  <cell X="8" Y="14">
-    <object Name="Starapple Farm Tree"></object>
+  <cell X="28" Y="14">
+    <object Name="DirtFloor"></object>
   </cell>
-  <cell X="9" Y="14">
-    <object Name="Starapple Farm Tree"></object>
+  <cell X="29" Y="14">
+    <object Name="DirtFloor"></object>
   </cell>
-  <cell X="10" Y="14">
-    <object Name="Starapple Farm Tree"></object>
+  <cell X="30" Y="14">
+    <object Name="DirtFloor"></object>
   </cell>
-  <cell X="11" Y="14">
-    <object Name="Starapple Farm Tree"></object>
+  <cell X="31" Y="14">
+    <object Name="DirtFloor"></object>
   </cell>
-  <cell X="12" Y="14">
-    <object Name="Starapple Farm Tree"></object>
+  <cell X="32" Y="14">
+    <object Name="DirtFloor"></object>
   </cell>
-  <cell X="13" Y="14">
-    <object Name="Starapple Farm Tree"></object>
+  <cell X="33" Y="14">
+    <object Name="DirtFloor"></object>
   </cell>
-  <cell X="14" Y="14">
-    <object Name="Starapple Farm Tree"></object>
+  <cell X="34" Y="14">
+    <object Name="DirtFloor"></object>
   </cell>
-  <cell X="15" Y="14">
-    <object Name="Starapple Farm Tree"></object>
+  <cell X="35" Y="14">
+    <object Name="DirtFloor"></object>
   </cell>
-  <cell X="16" Y="14">
-    <object Name="Starapple Farm Tree"></object>
+  <cell X="36" Y="14">
+    <object Name="DirtFloor"></object>
   </cell>
-  <cell X="17" Y="14">
-    <object Name="Starapple Farm Tree"></object>
+  <cell X="37" Y="14">
+    <object Name="DirtFloor"></object>
   </cell>
-  <cell X="18" Y="14">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="19" Y="14">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="20" Y="14">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="21" Y="14">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="22" Y="14">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="23" Y="14">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="24" Y="14">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="25" Y="14">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="26" Y="14"></cell>
-  <cell X="27" Y="14"></cell>
-  <cell X="28" Y="14"></cell>
-  <cell X="29" Y="14"></cell>
-  <cell X="30" Y="14"></cell>
-  <cell X="31" Y="14"></cell>
-  <cell X="32" Y="14"></cell>
-  <cell X="33" Y="14"></cell>
-  <cell X="34" Y="14"></cell>
-  <cell X="35" Y="14"></cell>
-  <cell X="36" Y="14"></cell>
-  <cell X="37" Y="14"></cell>
   <cell X="38" Y="14"></cell>
   <cell X="39" Y="14"></cell>
   <cell X="40" Y="14"></cell>
@@ -1532,7 +1418,9 @@
   <cell X="51" Y="14"></cell>
   <cell X="52" Y="14"></cell>
   <cell X="53" Y="14"></cell>
-  <cell X="54" Y="14"></cell>
+  <cell X="54" Y="14">
+    <object Name="Sibs_CatsDogs_SparCitizen"></object>
+  </cell>
   <cell X="55" Y="14"></cell>
   <cell X="56" Y="14"></cell>
   <cell X="57" Y="14"></cell>
@@ -1559,85 +1447,71 @@
   <cell X="78" Y="14"></cell>
   <cell X="79" Y="14"></cell>
   <cell X="0" Y="15"></cell>
-  <cell X="1" Y="15">
-    <object Name="Dogthorn Tree2"></object>
-  </cell>
+  <cell X="1" Y="15"></cell>
   <cell X="2" Y="15"></cell>
   <cell X="3" Y="15"></cell>
-  <cell X="4" Y="15"></cell>
-  <cell X="5" Y="15"></cell>
+  <cell X="4" Y="15">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="5" Y="15">
+    <object Name="Shale"></object>
+  </cell>
   <cell X="6" Y="15">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="7" Y="15">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
-  <cell X="8" Y="15">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="9" Y="15">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="10" Y="15">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="11" Y="15">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="12" Y="15">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="13" Y="15">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="14" Y="15">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="15" Y="15">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="16" Y="15">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="17" Y="15">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="18" Y="15">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="19" Y="15">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="20" Y="15">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="21" Y="15">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="22" Y="15">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="23" Y="15">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="24" Y="15">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="25" Y="15">
-    <object Name="Pond"></object>
-  </cell>
+  <cell X="8" Y="15"></cell>
+  <cell X="9" Y="15"></cell>
+  <cell X="10" Y="15"></cell>
+  <cell X="11" Y="15"></cell>
+  <cell X="12" Y="15"></cell>
+  <cell X="13" Y="15"></cell>
+  <cell X="14" Y="15"></cell>
+  <cell X="15" Y="15"></cell>
+  <cell X="16" Y="15"></cell>
+  <cell X="17" Y="15"></cell>
+  <cell X="18" Y="15"></cell>
+  <cell X="19" Y="15"></cell>
+  <cell X="20" Y="15"></cell>
+  <cell X="21" Y="15"></cell>
+  <cell X="22" Y="15"></cell>
+  <cell X="23" Y="15"></cell>
+  <cell X="24" Y="15"></cell>
+  <cell X="25" Y="15"></cell>
   <cell X="26" Y="15">
-    <object Name="Pond"></object>
+    <object Name="BrinestalkFence"></object>
   </cell>
-  <cell X="27" Y="15"></cell>
-  <cell X="28" Y="15"></cell>
-  <cell X="29" Y="15"></cell>
-  <cell X="30" Y="15"></cell>
-  <cell X="31" Y="15"></cell>
-  <cell X="32" Y="15"></cell>
-  <cell X="33" Y="15"></cell>
-  <cell X="34" Y="15"></cell>
-  <cell X="35" Y="15"></cell>
+  <cell X="27" Y="15">
+    <object Name="DirtFloor"></object>
+    <object Name="Jug" Owner="Spar"></object>
+  </cell>
+  <cell X="28" Y="15">
+    <object Name="DirtFloor"></object>
+    <object Name="Hunk of Cheese" Owner="Spar"></object>
+  </cell>
+  <cell X="29" Y="15">
+    <object Name="DirtFloor"></object>
+  </cell>
+  <cell X="30" Y="15">
+    <object Name="DirtFloor"></object>
+  </cell>
+  <cell X="31" Y="15">
+    <object Name="DirtFloor"></object>
+  </cell>
+  <cell X="32" Y="15">
+    <object Name="DirtFloor"></object>
+  </cell>
+  <cell X="33" Y="15">
+    <object Name="DirtFloor"></object>
+  </cell>
+  <cell X="34" Y="15">
+    <object Name="DirtFloor"></object>
+  </cell>
+  <cell X="35" Y="15">
+    <object Name="DirtFloor"></object>
+  </cell>
   <cell X="36" Y="15"></cell>
   <cell X="37" Y="15"></cell>
   <cell X="38" Y="15"></cell>
@@ -1647,10 +1521,18 @@
   <cell X="42" Y="15"></cell>
   <cell X="43" Y="15"></cell>
   <cell X="44" Y="15"></cell>
-  <cell X="45" Y="15"></cell>
-  <cell X="46" Y="15"></cell>
-  <cell X="47" Y="15"></cell>
-  <cell X="48" Y="15"></cell>
+  <cell X="45" Y="15">
+    <object Name="Pond"></object>
+  </cell>
+  <cell X="46" Y="15">
+    <object Name="Pond"></object>
+  </cell>
+  <cell X="47" Y="15">
+    <object Name="Pond"></object>
+  </cell>
+  <cell X="48" Y="15">
+    <object Name="Pond"></object>
+  </cell>
   <cell X="49" Y="15"></cell>
   <cell X="50" Y="15"></cell>
   <cell X="51" Y="15"></cell>
@@ -1685,96 +1567,112 @@
   <cell X="0" Y="16"></cell>
   <cell X="1" Y="16"></cell>
   <cell X="2" Y="16"></cell>
-  <cell X="3" Y="16"></cell>
-  <cell X="4" Y="16"></cell>
-  <cell X="5" Y="16"></cell>
+  <cell X="3" Y="16">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="4" Y="16">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="5" Y="16">
+    <object Name="Shale"></object>
+  </cell>
   <cell X="6" Y="16">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="7" Y="16">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="8" Y="16">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="9" Y="16">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="10" Y="16">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="MediumBoulder"></object>
   </cell>
-  <cell X="11" Y="16">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="12" Y="16">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
+  <cell X="11" Y="16"></cell>
+  <cell X="12" Y="16"></cell>
   <cell X="13" Y="16">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="14" Y="16">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="SmallBoulder"></object>
   </cell>
-  <cell X="15" Y="16">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="16" Y="16">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="17" Y="16">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="18" Y="16">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="19" Y="16">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="20" Y="16">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="21" Y="16">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="22" Y="16">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="23" Y="16">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="24" Y="16">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="25" Y="16">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
+  <cell X="15" Y="16"></cell>
+  <cell X="16" Y="16"></cell>
+  <cell X="17" Y="16"></cell>
+  <cell X="18" Y="16"></cell>
+  <cell X="19" Y="16"></cell>
+  <cell X="20" Y="16"></cell>
+  <cell X="21" Y="16"></cell>
+  <cell X="22" Y="16"></cell>
+  <cell X="23" Y="16"></cell>
+  <cell X="24" Y="16"></cell>
+  <cell X="25" Y="16"></cell>
   <cell X="26" Y="16">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="BrinestalkFence"></object>
   </cell>
-  <cell X="27" Y="16"></cell>
-  <cell X="28" Y="16"></cell>
+  <cell X="27" Y="16">
+    <object Name="DirtFloor"></object>
+    <object Name="Jug" Owner="Spar"></object>
+  </cell>
+  <cell X="28" Y="16">
+    <object Name="DirtFloor"></object>
+    <object Name="Jug" Owner="Spar"></object>
+  </cell>
   <cell X="29" Y="16">
+    <object Name="DirtFloor"></object>
+    <object Name="Jug" Owner="Spar"></object>
+  </cell>
+  <cell X="30" Y="16">
+    <object Name="DirtFloor"></object>
     <object Name="Woven Basket"></object>
   </cell>
-  <cell X="30" Y="16"></cell>
-  <cell X="31" Y="16"></cell>
-  <cell X="32" Y="16"></cell>
-  <cell X="33" Y="16"></cell>
-  <cell X="34" Y="16"></cell>
-  <cell X="35" Y="16"></cell>
-  <cell X="36" Y="16"></cell>
+  <cell X="31" Y="16">
+    <object Name="DirtFloor"></object>
+  </cell>
+  <cell X="32" Y="16">
+    <object Name="DirtFloor"></object>
+    <object Name="Woven Basket"></object>
+  </cell>
+  <cell X="33" Y="16">
+    <object Name="DirtFloor"></object>
+  </cell>
+  <cell X="34" Y="16">
+    <object Name="DirtFloor"></object>
+    <object Name="Hunk of Cheese" Owner="Spar"></object>
+  </cell>
+  <cell X="35" Y="16">
+    <object Name="DirtFloor"></object>
+  </cell>
+  <cell X="36" Y="16">
+    <object Name="DirtFloor"></object>
+  </cell>
   <cell X="37" Y="16"></cell>
   <cell X="38" Y="16"></cell>
   <cell X="39" Y="16"></cell>
   <cell X="40" Y="16"></cell>
   <cell X="41" Y="16"></cell>
   <cell X="42" Y="16"></cell>
-  <cell X="43" Y="16"></cell>
-  <cell X="44" Y="16"></cell>
-  <cell X="45" Y="16"></cell>
-  <cell X="46" Y="16"></cell>
-  <cell X="47" Y="16"></cell>
-  <cell X="48" Y="16"></cell>
+  <cell X="43" Y="16">
+    <object Name="Brinestalk"></object>
+  </cell>
+  <cell X="44" Y="16">
+    <object Name="Pond"></object>
+  </cell>
+  <cell X="45" Y="16">
+    <object Name="Pond"></object>
+  </cell>
+  <cell X="46" Y="16">
+    <object Name="Pond"></object>
+  </cell>
+  <cell X="47" Y="16">
+    <object Name="Pond"></object>
+  </cell>
+  <cell X="48" Y="16">
+    <object Name="Pond"></object>
+  </cell>
   <cell X="49" Y="16"></cell>
   <cell X="50" Y="16"></cell>
   <cell X="51" Y="16"></cell>
@@ -1809,98 +1707,118 @@
   <cell X="0" Y="17"></cell>
   <cell X="1" Y="17"></cell>
   <cell X="2" Y="17"></cell>
-  <cell X="3" Y="17"></cell>
-  <cell X="4" Y="17"></cell>
-  <cell X="5" Y="17"></cell>
+  <cell X="3" Y="17">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="4" Y="17">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="5" Y="17">
+    <object Name="Shale"></object>
+  </cell>
   <cell X="6" Y="17">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="7" Y="17">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="8" Y="17">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="9" Y="17">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="10" Y="17">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="11" Y="17">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="12" Y="17">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="13" Y="17">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="14" Y="17">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="15" Y="17">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="16" Y="17">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="17" Y="17">
-    <object Name="Pond"></object>
+    <object Name="MediumBoulder"></object>
   </cell>
-  <cell X="18" Y="17">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="19" Y="17">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="20" Y="17">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="21" Y="17">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="22" Y="17">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="23" Y="17">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="24" Y="17">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="25" Y="17">
-    <object Name="Pond"></object>
-  </cell>
+  <cell X="18" Y="17"></cell>
+  <cell X="19" Y="17"></cell>
+  <cell X="20" Y="17"></cell>
+  <cell X="21" Y="17"></cell>
+  <cell X="22" Y="17"></cell>
+  <cell X="23" Y="17"></cell>
+  <cell X="24" Y="17"></cell>
+  <cell X="25" Y="17"></cell>
   <cell X="26" Y="17">
-    <object Name="Pond"></object>
+    <object Name="BrinestalkFence"></object>
   </cell>
   <cell X="27" Y="17">
-    <object Name="Pond"></object>
+    <object Name="BrinestalkFence"></object>
   </cell>
-  <cell X="28" Y="17"></cell>
-  <cell X="29" Y="17"></cell>
-  <cell X="30" Y="17"></cell>
-  <cell X="31" Y="17"></cell>
-  <cell X="32" Y="17"></cell>
-  <cell X="33" Y="17"></cell>
+  <cell X="28" Y="17">
+    <object Name="BrinestalkFence"></object>
+  </cell>
+  <cell X="29" Y="17">
+    <object Name="BrinestalkFence"></object>
+  </cell>
+  <cell X="30" Y="17">
+    <object Name="BrinestalkFence"></object>
+  </cell>
+  <cell X="31" Y="17">
+    <object Name="BrinestalkFence"></object>
+  </cell>
+  <cell X="32" Y="17">
+    <object Name="BrinestalkFence"></object>
+  </cell>
+  <cell X="33" Y="17">
+    <object Name="BrinestalkFence"></object>
+  </cell>
   <cell X="34" Y="17">
-    <object Name="Brothers_CatsDogs_ShikCitizen"></object>
+    <object Name="BrinestalkFence"></object>
   </cell>
-  <cell X="35" Y="17"></cell>
-  <cell X="36" Y="17"></cell>
-  <cell X="37" Y="17"></cell>
-  <cell X="38" Y="17"></cell>
+  <cell X="35" Y="17">
+    <object Name="BrinestalkFence"></object>
+  </cell>
+  <cell X="36" Y="17">
+    <object Name="BrinestalkFence"></object>
+  </cell>
+  <cell X="37" Y="17">
+    <object Name="BrinestalkFence"></object>
+  </cell>
+  <cell X="38" Y="17">
+    <object Name="BrinestalkFence"></object>
+  </cell>
   <cell X="39" Y="17"></cell>
   <cell X="40" Y="17"></cell>
   <cell X="41" Y="17"></cell>
   <cell X="42" Y="17"></cell>
   <cell X="43" Y="17"></cell>
-  <cell X="44" Y="17"></cell>
-  <cell X="45" Y="17"></cell>
-  <cell X="46" Y="17"></cell>
-  <cell X="47" Y="17"></cell>
-  <cell X="48" Y="17"></cell>
+  <cell X="44" Y="17">
+    <object Name="Pond"></object>
+  </cell>
+  <cell X="45" Y="17">
+    <object Name="Pond"></object>
+  </cell>
+  <cell X="46" Y="17">
+    <object Name="Pond"></object>
+  </cell>
+  <cell X="47" Y="17">
+    <object Name="Pond"></object>
+  </cell>
+  <cell X="48" Y="17">
+    <object Name="Brinestalk"></object>
+  </cell>
   <cell X="49" Y="17"></cell>
   <cell X="50" Y="17"></cell>
   <cell X="51" Y="17"></cell>
@@ -1928,88 +1846,70 @@
   <cell X="73" Y="17"></cell>
   <cell X="74" Y="17"></cell>
   <cell X="75" Y="17"></cell>
-  <cell X="76" Y="17"></cell>
-  <cell X="77" Y="17">
-    <object Name="SmallBoulder"></object>
+  <cell X="76" Y="17">
+    <object Name="Dogthorn Tree"></object>
   </cell>
-  <cell X="78" Y="17">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="79" Y="17">
-    <object Name="Shale"></object>
-  </cell>
+  <cell X="77" Y="17"></cell>
+  <cell X="78" Y="17"></cell>
+  <cell X="79" Y="17"></cell>
   <cell X="0" Y="18"></cell>
   <cell X="1" Y="18"></cell>
   <cell X="2" Y="18"></cell>
-  <cell X="3" Y="18"></cell>
-  <cell X="4" Y="18"></cell>
-  <cell X="5" Y="18"></cell>
+  <cell X="3" Y="18">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="4" Y="18">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="5" Y="18">
+    <object Name="Shale"></object>
+  </cell>
   <cell X="6" Y="18">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="7" Y="18">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="8" Y="18">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="9" Y="18">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="10" Y="18">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="11" Y="18">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="12" Y="18">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="13" Y="18">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="14" Y="18">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="15" Y="18">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="16" Y="18">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="17" Y="18">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
-  <cell X="18" Y="18">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="19" Y="18">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="20" Y="18">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="21" Y="18">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="22" Y="18">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="23" Y="18">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="24" Y="18">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="25" Y="18">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="26" Y="18">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="27" Y="18">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
+  <cell X="18" Y="18"></cell>
+  <cell X="19" Y="18"></cell>
+  <cell X="20" Y="18"></cell>
+  <cell X="21" Y="18"></cell>
+  <cell X="22" Y="18"></cell>
+  <cell X="23" Y="18"></cell>
+  <cell X="24" Y="18"></cell>
+  <cell X="25" Y="18"></cell>
+  <cell X="26" Y="18"></cell>
+  <cell X="27" Y="18"></cell>
   <cell X="28" Y="18"></cell>
   <cell X="29" Y="18"></cell>
   <cell X="30" Y="18"></cell>
@@ -2027,7 +1927,9 @@
   <cell X="42" Y="18"></cell>
   <cell X="43" Y="18"></cell>
   <cell X="44" Y="18"></cell>
-  <cell X="45" Y="18"></cell>
+  <cell X="45" Y="18">
+    <object Name="Brinestalk"></object>
+  </cell>
   <cell X="46" Y="18"></cell>
   <cell X="47" Y="18"></cell>
   <cell X="48" Y="18"></cell>
@@ -2038,7 +1940,9 @@
   <cell X="53" Y="18"></cell>
   <cell X="54" Y="18"></cell>
   <cell X="55" Y="18"></cell>
-  <cell X="56" Y="18"></cell>
+  <cell X="56" Y="18">
+    <object Name="Dogthorn Tree2"></object>
+  </cell>
   <cell X="57" Y="18"></cell>
   <cell X="58" Y="18"></cell>
   <cell X="59" Y="18"></cell>
@@ -2059,95 +1963,71 @@
   <cell X="74" Y="18"></cell>
   <cell X="75" Y="18"></cell>
   <cell X="76" Y="18"></cell>
-  <cell X="77" Y="18">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="78" Y="18">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="79" Y="18">
-    <object Name="Shale"></object>
-  </cell>
+  <cell X="77" Y="18"></cell>
+  <cell X="78" Y="18"></cell>
+  <cell X="79" Y="18"></cell>
   <cell X="0" Y="19"></cell>
   <cell X="1" Y="19"></cell>
   <cell X="2" Y="19"></cell>
-  <cell X="3" Y="19"></cell>
-  <cell X="4" Y="19"></cell>
-  <cell X="5" Y="19"></cell>
+  <cell X="3" Y="19">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="4" Y="19">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="5" Y="19">
+    <object Name="Shale"></object>
+  </cell>
   <cell X="6" Y="19">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="7" Y="19">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="8" Y="19">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="9" Y="19">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="10" Y="19">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="11" Y="19">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="12" Y="19">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="13" Y="19">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="14" Y="19">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="15" Y="19">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="16" Y="19">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="17" Y="19">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
-  <cell X="18" Y="19">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="19" Y="19">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="20" Y="19">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="21" Y="19">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="22" Y="19">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="23" Y="19">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="24" Y="19">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="25" Y="19">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="26" Y="19">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="27" Y="19">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="28" Y="19">
-    <object Name="Pond"></object>
-  </cell>
+  <cell X="18" Y="19"></cell>
+  <cell X="19" Y="19"></cell>
+  <cell X="20" Y="19"></cell>
+  <cell X="21" Y="19"></cell>
+  <cell X="22" Y="19"></cell>
+  <cell X="23" Y="19"></cell>
+  <cell X="24" Y="19"></cell>
+  <cell X="25" Y="19"></cell>
+  <cell X="26" Y="19"></cell>
+  <cell X="27" Y="19"></cell>
+  <cell X="28" Y="19"></cell>
   <cell X="29" Y="19"></cell>
   <cell X="30" Y="19"></cell>
-  <cell X="31" Y="19">
-    <object Name="Woven Basket"></object>
-  </cell>
+  <cell X="31" Y="19"></cell>
   <cell X="32" Y="19"></cell>
   <cell X="33" Y="19"></cell>
   <cell X="34" Y="19"></cell>
@@ -2185,96 +2065,83 @@
   <cell X="66" Y="19"></cell>
   <cell X="67" Y="19"></cell>
   <cell X="68" Y="19"></cell>
-  <cell X="69" Y="19"></cell>
-  <cell X="70" Y="19"></cell>
-  <cell X="71" Y="19"></cell>
+  <cell X="69" Y="19">
+    <object Name="MediumBoulder"></object>
+  </cell>
+  <cell X="70" Y="19">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="71" Y="19">
+    <object Name="Shale"></object>
+  </cell>
   <cell X="72" Y="19"></cell>
   <cell X="73" Y="19"></cell>
   <cell X="74" Y="19"></cell>
   <cell X="75" Y="19"></cell>
   <cell X="76" Y="19"></cell>
   <cell X="77" Y="19"></cell>
-  <cell X="78" Y="19">
-    <object Name="LargeBoulder"></object>
-  </cell>
-  <cell X="79" Y="19">
-    <object Name="Shale"></object>
-  </cell>
+  <cell X="78" Y="19"></cell>
+  <cell X="79" Y="19"></cell>
   <cell X="0" Y="20"></cell>
   <cell X="1" Y="20"></cell>
   <cell X="2" Y="20"></cell>
-  <cell X="3" Y="20"></cell>
-  <cell X="4" Y="20"></cell>
-  <cell X="5" Y="20"></cell>
+  <cell X="3" Y="20">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="4" Y="20">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="5" Y="20">
+    <object Name="Shale"></object>
+  </cell>
   <cell X="6" Y="20">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="7" Y="20">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="8" Y="20">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="9" Y="20">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="10" Y="20">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="11" Y="20">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="12" Y="20">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="13" Y="20">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="14" Y="20">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="15" Y="20">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="16" Y="20">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="17" Y="20">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
-  <cell X="18" Y="20">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="19" Y="20">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="20" Y="20">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="21" Y="20">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="22" Y="20">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="23" Y="20">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="24" Y="20">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="25" Y="20">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="26" Y="20">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="27" Y="20">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="28" Y="20">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
+  <cell X="18" Y="20"></cell>
+  <cell X="19" Y="20"></cell>
+  <cell X="20" Y="20"></cell>
+  <cell X="21" Y="20"></cell>
+  <cell X="22" Y="20"></cell>
+  <cell X="23" Y="20"></cell>
+  <cell X="24" Y="20"></cell>
+  <cell X="25" Y="20"></cell>
+  <cell X="26" Y="20"></cell>
+  <cell X="27" Y="20"></cell>
+  <cell X="28" Y="20"></cell>
   <cell X="29" Y="20"></cell>
   <cell X="30" Y="20"></cell>
   <cell X="31" Y="20"></cell>
@@ -2299,9 +2166,7 @@
   <cell X="50" Y="20"></cell>
   <cell X="51" Y="20"></cell>
   <cell X="52" Y="20"></cell>
-  <cell X="53" Y="20">
-    <object Name="Shale"></object>
-  </cell>
+  <cell X="53" Y="20"></cell>
   <cell X="54" Y="20"></cell>
   <cell X="55" Y="20"></cell>
   <cell X="56" Y="20"></cell>
@@ -2309,7 +2174,9 @@
   <cell X="58" Y="20"></cell>
   <cell X="59" Y="20"></cell>
   <cell X="60" Y="20"></cell>
-  <cell X="61" Y="20"></cell>
+  <cell X="61" Y="20">
+    <object Name="Dogthorn Tree"></object>
+  </cell>
   <cell X="62" Y="20"></cell>
   <cell X="63" Y="20"></cell>
   <cell X="64" Y="20"></cell>
@@ -2317,11 +2184,21 @@
   <cell X="66" Y="20"></cell>
   <cell X="67" Y="20"></cell>
   <cell X="68" Y="20"></cell>
-  <cell X="69" Y="20"></cell>
-  <cell X="70" Y="20"></cell>
-  <cell X="71" Y="20"></cell>
-  <cell X="72" Y="20"></cell>
-  <cell X="73" Y="20"></cell>
+  <cell X="69" Y="20">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="70" Y="20">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="71" Y="20">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="72" Y="20">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="73" Y="20">
+    <object Name="SmallBoulder"></object>
+  </cell>
   <cell X="74" Y="20"></cell>
   <cell X="75" Y="20"></cell>
   <cell X="76" Y="20"></cell>
@@ -2330,89 +2207,63 @@
   <cell X="79" Y="20"></cell>
   <cell X="0" Y="21"></cell>
   <cell X="1" Y="21"></cell>
-  <cell X="2" Y="21">
-    <object Name="Dogthorn Tree"></object>
-  </cell>
+  <cell X="2" Y="21"></cell>
   <cell X="3" Y="21"></cell>
-  <cell X="4" Y="21"></cell>
-  <cell X="5" Y="21"></cell>
+  <cell X="4" Y="21">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="5" Y="21">
+    <object Name="Shale"></object>
+  </cell>
   <cell X="6" Y="21">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="7" Y="21">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="8" Y="21">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="9" Y="21">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="10" Y="21">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="11" Y="21">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="12" Y="21">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="13" Y="21">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="14" Y="21">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="15" Y="21">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="16" Y="21">
-    <object Name="Pond"></object>
+    <object Name="Shale"></object>
   </cell>
-  <cell X="17" Y="21">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="18" Y="21">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="19" Y="21">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="20" Y="21">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="21" Y="21">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="22" Y="21">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="23" Y="21">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="24" Y="21">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="25" Y="21">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="26" Y="21">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="27" Y="21">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="28" Y="21">
-    <object Name="Pond"></object>
-  </cell>
-  <cell X="29" Y="21">
-    <object Name="Pond"></object>
-  </cell>
+  <cell X="17" Y="21"></cell>
+  <cell X="18" Y="21"></cell>
+  <cell X="19" Y="21"></cell>
+  <cell X="20" Y="21"></cell>
+  <cell X="21" Y="21"></cell>
+  <cell X="22" Y="21"></cell>
+  <cell X="23" Y="21"></cell>
+  <cell X="24" Y="21"></cell>
+  <cell X="25" Y="21"></cell>
+  <cell X="26" Y="21"></cell>
+  <cell X="27" Y="21"></cell>
+  <cell X="28" Y="21"></cell>
+  <cell X="29" Y="21"></cell>
   <cell X="30" Y="21"></cell>
   <cell X="31" Y="21"></cell>
-  <cell X="32" Y="21">
-    <object Name="Woven Basket"></object>
-  </cell>
+  <cell X="32" Y="21"></cell>
   <cell X="33" Y="21"></cell>
   <cell X="34" Y="21"></cell>
   <cell X="35" Y="21"></cell>
@@ -2420,7 +2271,9 @@
   <cell X="37" Y="21"></cell>
   <cell X="38" Y="21"></cell>
   <cell X="39" Y="21"></cell>
-  <cell X="40" Y="21"></cell>
+  <cell X="40" Y="21">
+    <object Name="Dogthorn Tree"></object>
+  </cell>
   <cell X="41" Y="21"></cell>
   <cell X="42" Y="21"></cell>
   <cell X="43" Y="21"></cell>
@@ -2430,9 +2283,11 @@
   <cell X="47" Y="21"></cell>
   <cell X="48" Y="21"></cell>
   <cell X="49" Y="21"></cell>
-  <cell X="50" Y="21"></cell>
+  <cell X="50" Y="21">
+    <object Name="LargeBoulder"></object>
+  </cell>
   <cell X="51" Y="21">
-    <object Name="SmallBoulder"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="52" Y="21">
     <object Name="Shale"></object>
@@ -2440,17 +2295,11 @@
   <cell X="53" Y="21">
     <object Name="Shale"></object>
   </cell>
-  <cell X="54" Y="21">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="55" Y="21">
-    <object Name="LargeBoulder"></object>
-  </cell>
+  <cell X="54" Y="21"></cell>
+  <cell X="55" Y="21"></cell>
   <cell X="56" Y="21"></cell>
   <cell X="57" Y="21"></cell>
-  <cell X="58" Y="21">
-    <object Name="Dogthorn Tree2"></object>
-  </cell>
+  <cell X="58" Y="21"></cell>
   <cell X="59" Y="21"></cell>
   <cell X="60" Y="21"></cell>
   <cell X="61" Y="21"></cell>
@@ -2461,15 +2310,23 @@
   <cell X="66" Y="21"></cell>
   <cell X="67" Y="21"></cell>
   <cell X="68" Y="21"></cell>
-  <cell X="69" Y="21"></cell>
-  <cell X="70" Y="21"></cell>
-  <cell X="71" Y="21"></cell>
-  <cell X="72" Y="21"></cell>
-  <cell X="73" Y="21"></cell>
-  <cell X="74" Y="21"></cell>
-  <cell X="75" Y="21">
-    <object Name="Dogthorn Tree2"></object>
+  <cell X="69" Y="21">
+    <object Name="Shale"></object>
   </cell>
+  <cell X="70" Y="21">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="71" Y="21">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="72" Y="21">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="73" Y="21">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="74" Y="21"></cell>
+  <cell X="75" Y="21"></cell>
   <cell X="76" Y="21"></cell>
   <cell X="77" Y="21"></cell>
   <cell X="78" Y="21"></cell>
@@ -2478,81 +2335,63 @@
   <cell X="1" Y="22"></cell>
   <cell X="2" Y="22"></cell>
   <cell X="3" Y="22"></cell>
-  <cell X="4" Y="22"></cell>
-  <cell X="5" Y="22"></cell>
+  <cell X="4" Y="22">
+    <object Name="MediumBoulder"></object>
+  </cell>
+  <cell X="5" Y="22">
+    <object Name="Shale"></object>
+  </cell>
   <cell X="6" Y="22">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="7" Y="22">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="8" Y="22">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="9" Y="22">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="10" Y="22">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="11" Y="22">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="12" Y="22">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="13" Y="22">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="14" Y="22">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="15" Y="22">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="16" Y="22">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="LargeBoulder"></object>
   </cell>
-  <cell X="17" Y="22">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="18" Y="22">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="19" Y="22">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="20" Y="22">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="21" Y="22">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
+  <cell X="17" Y="22"></cell>
+  <cell X="18" Y="22"></cell>
+  <cell X="19" Y="22"></cell>
+  <cell X="20" Y="22"></cell>
+  <cell X="21" Y="22"></cell>
   <cell X="22" Y="22">
-    <object Name="Starapple Farm Tree"></object>
+    <object Name="Dogthorn Tree"></object>
   </cell>
-  <cell X="23" Y="22">
-    <object Name="Starapple Farm Tree"></object>
+  <cell X="23" Y="22"></cell>
+  <cell X="24" Y="22"></cell>
+  <cell X="25" Y="22"></cell>
+  <cell X="26" Y="22"></cell>
+  <cell X="27" Y="22"></cell>
+  <cell X="28" Y="22"></cell>
+  <cell X="29" Y="22"></cell>
+  <cell X="30" Y="22">
+    <object Name="Dogthorn Tree2"></object>
   </cell>
-  <cell X="24" Y="22">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="25" Y="22">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="26" Y="22">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="27" Y="22">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="28" Y="22">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="29" Y="22">
-    <object Name="Starapple Farm Tree"></object>
-  </cell>
-  <cell X="30" Y="22"></cell>
   <cell X="31" Y="22"></cell>
   <cell X="32" Y="22"></cell>
   <cell X="33" Y="22"></cell>
@@ -2572,7 +2411,7 @@
   <cell X="47" Y="22"></cell>
   <cell X="48" Y="22"></cell>
   <cell X="49" Y="22">
-    <object Name="MediumBoulder"></object>
+    <object Name="Shale"></object>
   </cell>
   <cell X="50" Y="22">
     <object Name="Shale"></object>
@@ -2586,15 +2425,9 @@
   <cell X="53" Y="22">
     <object Name="Shale"></object>
   </cell>
-  <cell X="54" Y="22">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="55" Y="22">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="56" Y="22">
-    <object Name="Shale"></object>
-  </cell>
+  <cell X="54" Y="22"></cell>
+  <cell X="55" Y="22"></cell>
+  <cell X="56" Y="22"></cell>
   <cell X="57" Y="22"></cell>
   <cell X="58" Y="22"></cell>
   <cell X="59" Y="22"></cell>
@@ -2609,7 +2442,9 @@
   <cell X="68" Y="22"></cell>
   <cell X="69" Y="22"></cell>
   <cell X="70" Y="22"></cell>
-  <cell X="71" Y="22"></cell>
+  <cell X="71" Y="22">
+    <object Name="Shale"></object>
+  </cell>
   <cell X="72" Y="22"></cell>
   <cell X="73" Y="22"></cell>
   <cell X="74" Y="22"></cell>
@@ -2625,14 +2460,30 @@
   <cell X="4" Y="23"></cell>
   <cell X="5" Y="23"></cell>
   <cell X="6" Y="23"></cell>
-  <cell X="7" Y="23"></cell>
-  <cell X="8" Y="23"></cell>
-  <cell X="9" Y="23"></cell>
-  <cell X="10" Y="23"></cell>
-  <cell X="11" Y="23"></cell>
-  <cell X="12" Y="23"></cell>
-  <cell X="13" Y="23"></cell>
-  <cell X="14" Y="23"></cell>
+  <cell X="7" Y="23">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="8" Y="23">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="9" Y="23">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="10" Y="23">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="11" Y="23">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="12" Y="23">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="13" Y="23">
+    <object Name="Shale"></object>
+  </cell>
+  <cell X="14" Y="23">
+    <object Name="Shale"></object>
+  </cell>
   <cell X="15" Y="23"></cell>
   <cell X="16" Y="23"></cell>
   <cell X="17" Y="23"></cell>
@@ -2656,9 +2507,7 @@
   <cell X="35" Y="23"></cell>
   <cell X="36" Y="23"></cell>
   <cell X="37" Y="23"></cell>
-  <cell X="38" Y="23">
-    <object Name="Dogthorn Tree"></object>
-  </cell>
+  <cell X="38" Y="23"></cell>
   <cell X="39" Y="23"></cell>
   <cell X="40" Y="23"></cell>
   <cell X="41" Y="23"></cell>
@@ -2669,9 +2518,7 @@
   <cell X="46" Y="23"></cell>
   <cell X="47" Y="23"></cell>
   <cell X="48" Y="23"></cell>
-  <cell X="49" Y="23">
-    <object Name="Shale"></object>
-  </cell>
+  <cell X="49" Y="23"></cell>
   <cell X="50" Y="23">
     <object Name="Shale"></object>
   </cell>
@@ -2682,32 +2529,16 @@
     <object Name="Shale"></object>
   </cell>
   <cell X="53" Y="23">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="54" Y="23">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="55" Y="23">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="56" Y="23">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="57" Y="23">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="58" Y="23">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="59" Y="23">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="60" Y="23">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="61" Y="23">
     <object Name="SmallBoulder"></object>
   </cell>
+  <cell X="54" Y="23"></cell>
+  <cell X="55" Y="23"></cell>
+  <cell X="56" Y="23"></cell>
+  <cell X="57" Y="23"></cell>
+  <cell X="58" Y="23"></cell>
+  <cell X="59" Y="23"></cell>
+  <cell X="60" Y="23"></cell>
+  <cell X="61" Y="23"></cell>
   <cell X="62" Y="23"></cell>
   <cell X="63" Y="23"></cell>
   <cell X="64" Y="23"></cell>
@@ -2719,9 +2550,7 @@
   <cell X="70" Y="23"></cell>
   <cell X="71" Y="23"></cell>
   <cell X="72" Y="23"></cell>
-  <cell X="73" Y="23">
-    <object Name="Dogthorn Tree"></object>
-  </cell>
+  <cell X="73" Y="23"></cell>
   <cell X="74" Y="23"></cell>
   <cell X="75" Y="23"></cell>
   <cell X="76" Y="23"></cell>
@@ -2776,48 +2605,20 @@
   <cell X="45" Y="24"></cell>
   <cell X="46" Y="24"></cell>
   <cell X="47" Y="24"></cell>
-  <cell X="48" Y="24">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="49" Y="24">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="50" Y="24">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="51" Y="24">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="52" Y="24">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="53" Y="24">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="54" Y="24">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="55" Y="24">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="56" Y="24">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="57" Y="24">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="58" Y="24">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="59" Y="24">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="60" Y="24">
-    <object Name="Shale"></object>
-  </cell>
-  <cell X="61" Y="24">
-    <object Name="Shale"></object>
-  </cell>
+  <cell X="48" Y="24"></cell>
+  <cell X="49" Y="24"></cell>
+  <cell X="50" Y="24"></cell>
+  <cell X="51" Y="24"></cell>
+  <cell X="52" Y="24"></cell>
+  <cell X="53" Y="24"></cell>
+  <cell X="54" Y="24"></cell>
+  <cell X="55" Y="24"></cell>
+  <cell X="56" Y="24"></cell>
+  <cell X="57" Y="24"></cell>
+  <cell X="58" Y="24"></cell>
+  <cell X="59" Y="24"></cell>
+  <cell X="60" Y="24"></cell>
+  <cell X="61" Y="24"></cell>
   <cell X="62" Y="24"></cell>
   <cell X="63" Y="24"></cell>
   <cell X="64" Y="24"></cell>

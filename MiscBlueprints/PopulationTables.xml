@@ -5,113 +5,113 @@
 	
 	<population Name="LairOwners_Ruins" Load="Merge">
 		<group Name="Options" Load="Merge">
-			<object Blueprint="Brothers_CatsDogs_Hyrkhound Alpha"/>
+			<object Blueprint="Sibs_CatsDogs_Hyrkhound Alpha"/>
 		</group>
 	</population>
 
 	<population Name="RuinsZoneGlobals-Creatures" Load="Merge">
 		<group Name="Hyrk Pack" Chance="5" Style="pickeach">
 			<object Number="4-8" Blueprint="Hyrkhound" />
-			<object Chance="50" Number="1" Blueprint="Brothers_CatsDogs_Hyrkhound Alpha" />
+			<object Chance="50" Number="1" Blueprint="Sibs_CatsDogs_Hyrkhound Alpha" />
 		</group>
 	</population>
 
 	<population Name="Tier4RuinsCreatures" Load="Merge">
 		<group Name="Creatures" Load="Merge">
-			<object Weight="5" Number="1" Blueprint="Brothers_CatsDogs_Hyrkhound Alpha" />    
+			<object Weight="5" Number="1" Blueprint="Sibs_CatsDogs_Hyrkhound Alpha" />    
 		</group>
 	</population>
 	
 	<population Name="Tier5RuinsCreatures" Load="Merge">
 		<group Name="Creatures" Load="Merge">
-			<object Weight="5" Number="1" Blueprint="Brothers_CatsDogs_Hyrkhound Alpha" />    
+			<object Weight="5" Number="1" Blueprint="Sibs_CatsDogs_Hyrkhound Alpha" />    
 		</group>
 	</population>
 
 	<population Name="FlowerfieldCreatures" Load="Merge">
 		<group Name="Creatures" Load="Merge">
-			<object Weight="10" Number="1d2" Blueprint="Brothers_CatsDogs_Blinkoodle" />    
+			<object Weight="10" Number="1d2" Blueprint="Sibs_CatsDogs_Blinkoodle" />    
 		</group>
 	</population>
 	
 	<population Name="FlowerFieldsPopulation" Load="Merge">
 		<group Name="Creatures" Load="Merge">
-			<object Weight="10" Number="1d2" Blueprint="Brothers_CatsDogs_Blinkoodle" />    
+			<object Weight="10" Number="1d2" Blueprint="Sibs_CatsDogs_Blinkoodle" />    
 		</group>
 	</population>
 
 	<population Name="LairOwners_Flowerfields" Load="Merge">
 		<group Name="Options" Load="Merge">
-			<object Blueprint="Brothers_CatsDogs_Blinkoodle"/>
+			<object Blueprint="Sibs_CatsDogs_Blinkoodle"/>
 		</group>
 	</population>
 	
 	<population Name="DeepJungleZoneGlobals-Creatures" Load="Merge">
-		<object Chance="1" Number="1-2" Blueprint="Brothers_CatsDogs_Black Puma" />
+		<object Chance="1" Number="1-2" Blueprint="Sibs_CatsDogs_Black Puma" />
 	</population>		
 
 	<population Name="LairOwners_DeepJungle" Load="Merge">
 		<group Name="Options" Load="Merge">
-			<object Blueprint="Brothers_CatsDogs_Black Puma"/>
+			<object Blueprint="Sibs_CatsDogs_Black Puma"/>
 		</group>
 	</population>
 
 	<population Name="MountainsPerSector" Load="Merge">
 		<group Name="Creatures" Load="Merge">
-			<object Weight="900" Number="1" Blueprint="Brothers_CatsDogs_Rocky Lion F" />
-			<object Weight="900" Number="1" Blueprint="Brothers_CatsDogs_Rocky Lion M" />
+			<object Weight="900" Number="1" Blueprint="Sibs_CatsDogs_Rocky Lion F" />
+			<object Weight="900" Number="1" Blueprint="Sibs_CatsDogs_Rocky Lion M" />
 		</group>
 	</population>
 
 	<population Name="MountainCreatures" Load="Merge">
 		<group Name="Creatures" Load="Merge">
-			<object Weight="10" Number="1" Blueprint="Brothers_CatsDogs_Rocky Lion M" />
-			<object Weight="10" Number="1" Blueprint="Brothers_CatsDogs_Rocky Lion F" />
+			<object Weight="10" Number="1" Blueprint="Sibs_CatsDogs_Rocky Lion M" />
+			<object Weight="10" Number="1" Blueprint="Sibs_CatsDogs_Rocky Lion F" />
 		</group>
 	</population>
 
 	<population Name="MountainsZoneGlobals-Reachable" Load="Merge">
 		<group Chance="5" Name="RockyLion" Style="pickone">
-			<object Weight="50" Blueprint="Brothers_CatsDogs_Rocky Lion M" />
-			<object Weight="50" Blueprint="Brothers_CatsDogs_Rocky Lion F" />
+			<object Weight="50" Blueprint="Sibs_CatsDogs_Rocky Lion M" />
+			<object Weight="50" Blueprint="Sibs_CatsDogs_Rocky Lion F" />
 		</group>
 	</population>
   
 	<population Name="LairOwners_Mountains" Load="Merge">
 		<group Name="Options" Load="Merge">
-			<object Weight="2" Blueprint="Brothers_CatsDogs_Rocky Lion M" />
-			<object Weight="2" Blueprint="Brothers_CatsDogs_Rocky Lion F" />
+			<object Weight="2" Blueprint="Sibs_CatsDogs_Rocky Lion M" />
+			<object Weight="2" Blueprint="Sibs_CatsDogs_Rocky Lion F" />
 		</group>
 	</population>
 
 	<population Name="BananaGroveCreatures" Load="Merge">
 		<group Name="Creatures" Load="Merge">
-			<object Weight="10" Number="1-2" Blueprint="Brothers_CatsDogs_Hydric Hound" />
+			<object Weight="10" Number="1-2" Blueprint="Sibs_CatsDogs_Hydric Hound" />
 		</group>
 	</population>
 
 	<population Name="BananaGroveZoneGlobals" Load="Merge">
-		<object Chance="50" Number="2-4" Blueprint="Brothers_CatsDogs_Hydric Hound" />
+		<object Chance="50" Number="2-4" Blueprint="Sibs_CatsDogs_Hydric Hound" />
 	</population>
 
 	<population Name="LairOwners_BananaGrove" Load="Merge">
 		<group Name="Options" Load="Merge">
-			<object Blueprint="Brothers_CatsDogs_Hydric Hound" />
+			<object Blueprint="Sibs_CatsDogs_Hydric Hound" />
 		</group>
 	</population>
   
 	<population Name="Tier5CaveCreatures" Load="Merge">
 		<group Name="Creatures" Load="Merge">
-			<object Weight="10" Number="1" Blueprint="Brothers_CatsDogs_Rocky Lion M" />
-			<object Weight="10" Number="1" Blueprint="Brothers_CatsDogs_Rocky Lion F" />
-			<object Weight="5" Number="1" Blueprint="Brothers_CatsDogs_Black Puma" />
-			<object Weight="5" Number="1" Blueprint="Brothers_CatsDogs_Hydric Hound" />
+			<object Weight="10" Number="1" Blueprint="Sibs_CatsDogs_Rocky Lion M" />
+			<object Weight="10" Number="1" Blueprint="Sibs_CatsDogs_Rocky Lion F" />
+			<object Weight="5" Number="1" Blueprint="Sibs_CatsDogs_Black Puma" />
+			<object Weight="5" Number="1" Blueprint="Sibs_CatsDogs_Hydric Hound" />
 		</group>
 	</population>
 
 <!--New shopping inventories-->
 
-	<population Name="Brothers_CatsDogs_DogChefWares">
+	<population Name="Sibs_CatsDogs_DogChefWares">
 		<group Name="Items" Style="pickeach">
 			<table Name="ChefInventory" />
 			<table Name="Tier3Wares" />
@@ -121,7 +121,7 @@
 <!-- Widgets-->
 
   	<population Name="AsphaltMines" Load="Merge">
-	  <object Blueprint="Finish_Brothers_CatsDogs_ChefQuest_Travel" />
+	  <object Blueprint="Finish_Sibs_CatsDogs_ChefQuest_Travel" />
 	</population>
 
 </populations>

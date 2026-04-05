@@ -10,7 +10,7 @@ using System.Globalization;
 namespace XRL.World.Quests
 {
     [Serializable]
-    public class Brothers_CatsDogs_MainQuest3System : IQuestSystem
+    public class Sibs_CatsDogs_MainQuest3System : IQuestSystem
     {
         // Zones dictionary
         static Dictionary<string, string> Zones = new Dictionary<string, string>()
@@ -40,44 +40,44 @@ namespace XRL.World.Quests
         public override bool HandleEvent(AfterConversationEvent E)
         {
             // Move the dog mayor to the meeting
-            if (!dogMayorMoveGiven && The.Game.HasFinishedQuestStep("Brothers_CatsDogs_MainQuest3", "DogMayor"))
+            if (!dogMayorMoveGiven && The.Game.HasFinishedQuestStep("Sibs_CatsDogs_MainQuest3", "DogMayor"))
             {
-                GameObject dogmayor = The.Player.Physics.CurrentCell.ParentZone.FindObject("Brothers_CatsDogs_DogMayor");
+                GameObject dogmayor = The.Player.Physics.CurrentCell.ParentZone.FindObject("Sibs_CatsDogs_DogMayor");
                 if (dogmayor != null)
                 {
-                    Brothers_GlobalMove move;
-                    if (!dogmayor.TryGetPart<Brothers_GlobalMove>(out move))
+                    Sibs_GlobalMove move;
+                    if (!dogmayor.TryGetPart<Sibs_GlobalMove>(out move))
                     {
-                        move = dogmayor.AddPart<Brothers_GlobalMove>();
+                        move = dogmayor.AddPart<Sibs_GlobalMove>();
                     }
 
                     move.TargetZone = Zones["North"];
                     move.TargetX = 32;
                     move.TargetY = 13;
                     move.failSafeTicks = 250L;
-                    move.setStateOnArrival = "Brothers_CatsDogs_DogMayorMoved";
+                    move.setStateOnArrival = "Sibs_CatsDogs_DogMayorMoved";
 
                     dogMayorMoveGiven = true;
                 }
             }
 
             // Move the cat mayor to the meeting
-            if (!catMayorMoveGiven && The.Game.HasFinishedQuestStep("Brothers_CatsDogs_MainQuest3", "CatMayor"))
+            if (!catMayorMoveGiven && The.Game.HasFinishedQuestStep("Sibs_CatsDogs_MainQuest3", "CatMayor"))
             {
-                GameObject catmayor = The.Player.Physics.CurrentCell.ParentZone.FindObject("Brothers_CatsDogs_CatMayor");
+                GameObject catmayor = The.Player.Physics.CurrentCell.ParentZone.FindObject("Sibs_CatsDogs_CatMayor");
                 if (catmayor != null)
                 {
-                    Brothers_GlobalMove move;
-                    if (!catmayor.TryGetPart<Brothers_GlobalMove>(out move))
+                    Sibs_GlobalMove move;
+                    if (!catmayor.TryGetPart<Sibs_GlobalMove>(out move))
                     {
-                        move = catmayor.AddPart<Brothers_GlobalMove>();
+                        move = catmayor.AddPart<Sibs_GlobalMove>();
                     }
 
                     move.TargetZone = Zones["North"];
                     move.TargetX = 36;
                     move.TargetY = 13;
                     move.failSafeTicks = 250L;
-                    move.setStateOnArrival = "Brothers_CatsDogs_CatMayorMoved";
+                    move.setStateOnArrival = "Sibs_CatsDogs_CatMayorMoved";
 
                     catMayorMoveGiven = true;
                 }
@@ -89,12 +89,12 @@ namespace XRL.World.Quests
         public override void Finish()
         {
             // bring the mayors back to their places
-            GameObject dogmayor = The.Player.Physics.CurrentCell.ParentZone.FindObject("Brothers_CatsDogs_DogMayor");
+            GameObject dogmayor = The.Player.Physics.CurrentCell.ParentZone.FindObject("Sibs_CatsDogs_DogMayor");
             if (dogmayor != null)
             {
-                dogmayor.RemovePart<Brothers_GlobalMove>();
+                dogmayor.RemovePart<Sibs_GlobalMove>();
 
-                var move = dogmayor.AddPart<Brothers_GlobalMove>();
+                var move = dogmayor.AddPart<Sibs_GlobalMove>();
                 move.TargetZone = Zones["West"];
                 move.TargetX = 26;
                 move.TargetY = 18;
@@ -102,12 +102,12 @@ namespace XRL.World.Quests
                 move.removeAfterFailsafe = true;
             }
 
-            GameObject catmayor = The.Player.Physics.CurrentCell.ParentZone.FindObject("Brothers_CatsDogs_CatMayor");
+            GameObject catmayor = The.Player.Physics.CurrentCell.ParentZone.FindObject("Sibs_CatsDogs_CatMayor");
             if (catmayor != null)
             {
-                catmayor.RemovePart<Brothers_GlobalMove>();
+                catmayor.RemovePart<Sibs_GlobalMove>();
                 
-                var move = catmayor.AddPart<Brothers_GlobalMove>();
+                var move = catmayor.AddPart<Sibs_GlobalMove>();
                 move.TargetZone = Zones["East"];
                 move.TargetX = 39;
                 move.TargetY = 17;
@@ -118,19 +118,19 @@ namespace XRL.World.Quests
             // Endings are handled in the outcome part of each zone, and the timer is added to the player
             foreach (var zone in Zones.Values)
             {
-                The.ZoneManager.GetZone(zone).AddPart(new Brothers_CatsDogs_MainQuestOutcome());
+                The.ZoneManager.GetZone(zone).AddPart(new Sibs_CatsDogs_MainQuestOutcome());
             }
             
-            var part = new Brothers_BoolStateTimer();
+            var part = new Sibs_BoolStateTimer();
             part.startTurn = Calendar.TotalTimeTicks;
-            part.state = "Brothers_CatsDogs_AnyEnding_Occured";
+            part.state = "Sibs_CatsDogs_AnyEnding_Occured";
             part.targetTurns = 6000L;
             The.Player.AddPart(part);
         
         }
         public override GameObject GetInfluencer()
         {           
-            return GameObject.FindByBlueprint("Brothers_CatsDogs_Warden Arendubark");
+            return GameObject.FindByBlueprint("Sibs_CatsDogs_Warden Arendubark");
         }
     }
 }

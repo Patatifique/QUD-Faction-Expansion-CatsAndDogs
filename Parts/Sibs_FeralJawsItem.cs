@@ -5,7 +5,7 @@ using XRL.World.Parts.Mutation;
 namespace XRL.World.Parts
 {
     [Serializable]
-    public class Brothers_FeralJawsItem : IPart
+    public class Sibs_FeralJawsItem : IPart
     {
         public override void Register(GameObject Object, IEventRegistrar Registrar)
         {
@@ -18,7 +18,7 @@ namespace XRL.World.Parts
             if (E.ID == "Unequipped")
             {
                 GameObject unequippingObject = E.GetGameObjectParameter("UnequippingObject");
-                unequippingObject?.GetPart<Brothers_FeralMutation>()?.Unmutate(unequippingObject);
+                unequippingObject?.GetPart<Sibs_FeralMutation>()?.Unmutate(unequippingObject);
             }
 
             return base.FireEvent(E);

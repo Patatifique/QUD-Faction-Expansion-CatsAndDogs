@@ -9,7 +9,7 @@ using XRL.Rules;
 namespace XRL.World.ZoneParts
 {
     [Serializable]
-    public class Brothers_CatsDogs_MainQuestOutcome : IZonePart
+    public class Sibs_CatsDogs_MainQuestOutcome : IZonePart
     {
 
                 // Zones dictionary
@@ -40,7 +40,7 @@ namespace XRL.World.ZoneParts
 
         public override bool HandleEvent(ZoneActivatedEvent E)
         {
-            if (The.Game.GetBooleanGameState("Brothers_CatsDogs_AnyEnding_Occured"))
+            if (The.Game.GetBooleanGameState("Sibs_CatsDogs_AnyEnding_Occured"))
             {       
                 this.ApplyOutcome();
             }
@@ -83,17 +83,17 @@ namespace XRL.World.ZoneParts
         {
 
             foreach (GameObject gameObject in this.ParentZone.GetObjects(o =>
-                o.HasTag("Brothers_CatsDogs_DestroyedOnEnding") ||
-                o.HasTag("Brothers_CatsDogs_RubbleOnEnding")))
+                o.HasTag("Sibs_CatsDogs_DestroyedOnEnding") ||
+                o.HasTag("Sibs_CatsDogs_RubbleOnEnding")))
             {
                 if (gameObject.HasPart<Brain>())
                     continue;
 
-                if (gameObject.HasTag("Brothers_CatsDogs_DestroyedOnEnding"))
+                if (gameObject.HasTag("Sibs_CatsDogs_DestroyedOnEnding"))
                 {
                     gameObject.Obliterate();
                 }
-                else if (gameObject.HasTag("Brothers_CatsDogs_RubbleOnEnding"))
+                else if (gameObject.HasTag("Sibs_CatsDogs_RubbleOnEnding"))
                 {
                     var cell = gameObject.Physics?.CurrentCell;
                     if (cell != null)
@@ -146,10 +146,10 @@ namespace XRL.World.ZoneParts
                 var zone = The.ZoneManager.GetZone(zoneID);
                 The.ZoneManager.SetCachedZone(zone); // Caching will also be usefull later when grabbing the lovers
                 {
-                    var dogMayor = zone.FindObject("Brothers_CatsDogs_DogMayor");
+                    var dogMayor = zone.FindObject("Sibs_CatsDogs_DogMayor");
                     if (dogMayor != null)
                     {
-                        var move = dogMayor.AddPart<Brothers_GlobalMove>();
+                        var move = dogMayor.AddPart<Sibs_GlobalMove>();
                         move.TargetZone = Zones["West"];
                         move.TargetX = 26;
                         move.TargetY = 18;
@@ -157,10 +157,10 @@ namespace XRL.World.ZoneParts
                         move.removeAfterFailsafe = true;
                     }
 
-                    var catMayor = zone.FindObject("Brothers_CatsDogs_CatMayor");
+                    var catMayor = zone.FindObject("Sibs_CatsDogs_CatMayor");
                     if (catMayor != null)
                     {
-                        var move = catMayor.AddPart<Brothers_GlobalMove>();
+                        var move = catMayor.AddPart<Sibs_GlobalMove>();
                         move.TargetZone = Zones["East"];
                         move.TargetX = 39;
                         move.TargetY = 17;
@@ -173,11 +173,11 @@ namespace XRL.World.ZoneParts
             // Neutral ending ///////////////////////
             /////////////////////////////////////////
 
-            if(The.Game.GetBooleanGameState("Brothers_CatsDogs_NeutralEnding"))
+            if(The.Game.GetBooleanGameState("Sibs_CatsDogs_NeutralEnding"))
             {
-                if(!The.Game.GetBooleanGameState("Brothers_CatsDogs_NeutralEnding_Occured"))
+                if(!The.Game.GetBooleanGameState("Sibs_CatsDogs_NeutralEnding_Occured"))
                 {
-                    The.Game.SetBooleanGameState("Brothers_CatsDogs_NeutralEnding_Occured", true);
+                    The.Game.SetBooleanGameState("Sibs_CatsDogs_NeutralEnding_Occured", true);
                     //Popup.Show("Neutral Ending");
                 }
             }
@@ -186,11 +186,11 @@ namespace XRL.World.ZoneParts
             // Shik ending //////////////////////////
             /////////////////////////////////////////
 
-            else if (The.Game.GetBooleanGameState("Brothers_CatsDogs_ShikEnding"))
+            else if (The.Game.GetBooleanGameState("Sibs_CatsDogs_ShikEnding"))
             {
-                if(!The.Game.GetBooleanGameState("Brothers_CatsDogs_ShikEnding_Occured"))
+                if(!The.Game.GetBooleanGameState("Sibs_CatsDogs_ShikEnding_Occured"))
                 {
-                    The.Game.SetBooleanGameState("Brothers_CatsDogs_ShikEnding_Occured", true);
+                    The.Game.SetBooleanGameState("Sibs_CatsDogs_ShikEnding_Occured", true);
                     //Popup.Show("Shik Ending");
                     
                     // Change Terrain Data
@@ -207,10 +207,10 @@ namespace XRL.World.ZoneParts
                 
                 // Move Dog Lover
                 var loverZone = The.ZoneManager.GetZone(Zones["West"]);
-                var lover = loverZone.FindObject("Brothers_CatsDogs_DogLover");
+                var lover = loverZone.FindObject("Sibs_CatsDogs_DogLover");
                 if (lover != null)
                 {
-                    var move = lover.AddPart<Brothers_GlobalMove>();
+                    var move = lover.AddPart<Sibs_GlobalMove>();
                     move.TargetZone = Zones["East"];
                     move.TargetX = 33;
                     move.TargetY = 18;
@@ -228,7 +228,7 @@ namespace XRL.World.ZoneParts
                     )
                 {
                     // Populate everywhere except Shik
-                    this.PopulateRandomly(2, 4, "Brothers_CatsDogs_ShikCitizen");
+                    this.PopulateRandomly(2, 4, "Sibs_CatsDogs_ShikCitizen");
                     
                     // Change zone names
                     if (this.ParentZone == The.ZoneManager.GetZone(Zones["NorthEast"]) ||
@@ -247,7 +247,7 @@ namespace XRL.World.ZoneParts
                 }
 
                 // Replace Monument
-                this.ReplaceObject("Brothers_CatsDogs_SparMonument", "Brothers_CatsDogs_SparMonumentRuined");
+                this.ReplaceObject("Sibs_CatsDogs_SparMonument", "Sibs_CatsDogs_SparMonumentRuined");
 
                 // Destroy Walls
                 this.DestroyWalls();
@@ -257,11 +257,11 @@ namespace XRL.World.ZoneParts
             // Spar ending //////////////////////////
             /////////////////////////////////////////
 
-            else if (The.Game.GetBooleanGameState("Brothers_CatsDogs_SparEnding"))
+            else if (The.Game.GetBooleanGameState("Sibs_CatsDogs_SparEnding"))
             {
-                if(!The.Game.GetBooleanGameState("Brothers_CatsDogs_SparEnding_Occured"))
+                if(!The.Game.GetBooleanGameState("Sibs_CatsDogs_SparEnding_Occured"))
                 {
-                    The.Game.SetBooleanGameState("Brothers_CatsDogs_SparEnding_Occured", true);
+                    The.Game.SetBooleanGameState("Sibs_CatsDogs_SparEnding_Occured", true);
                     //Popup.Show("Spar Ending");
 
                     // Change Terrain Data
@@ -275,10 +275,10 @@ namespace XRL.World.ZoneParts
 
                 // Move Cat Lover
                 var loverZone = The.ZoneManager.GetZone(Zones["East"]);
-                var lover = loverZone.FindObject("Brothers_CatsDogs_CatLover");
+                var lover = loverZone.FindObject("Sibs_CatsDogs_CatLover");
                 if (lover != null)
                 {
-                    var move = lover.AddPart<Brothers_GlobalMove>();
+                    var move = lover.AddPart<Sibs_GlobalMove>();
                     move.TargetZone = Zones["West"];
                     move.TargetX = 11;
                     move.TargetY = 15;
@@ -296,7 +296,7 @@ namespace XRL.World.ZoneParts
                     )
                 {
                     // Populate everywhere except Spar
-                    this.PopulateRandomly(2, 4, "Brothers_CatsDogs_SparCitizen");
+                    this.PopulateRandomly(2, 4, "Sibs_CatsDogs_SparCitizen");
                     // Change zone names
                     if (this.ParentZone == The.ZoneManager.GetZone(Zones["NorthWest"]) ||
                         this.ParentZone == The.ZoneManager.GetZone(Zones["SouthWest"]) ||
@@ -313,7 +313,7 @@ namespace XRL.World.ZoneParts
                 }
 
                 // Replace Monument
-                this.ReplaceObject("Brothers_CatsDogs_ShikMonument", "Brothers_CatsDogs_ShikMonumentRuined");
+                this.ReplaceObject("Sibs_CatsDogs_ShikMonument", "Sibs_CatsDogs_ShikMonumentRuined");
 
                 // Destroy Walls
                 this.DestroyWalls();               
@@ -323,11 +323,11 @@ namespace XRL.World.ZoneParts
             // Perfect ending////////////////////////
             /////////////////////////////////////////
             
-            else if (The.Game.GetBooleanGameState("Brothers_CatsDogs_PerfectEnding"))
+            else if (The.Game.GetBooleanGameState("Sibs_CatsDogs_PerfectEnding"))
             {
-                if(!The.Game.GetBooleanGameState("Brothers_CatsDogs_PerfectEnding_Occured"))
+                if(!The.Game.GetBooleanGameState("Sibs_CatsDogs_PerfectEnding_Occured"))
                 {
-                    The.Game.SetBooleanGameState("Brothers_CatsDogs_PerfectEnding_Occured", true);
+                    The.Game.SetBooleanGameState("Sibs_CatsDogs_PerfectEnding_Occured", true);
                     //Popup.Show("Perfect Ending");
 
                     // Change Terrain Data
@@ -343,10 +343,10 @@ namespace XRL.World.ZoneParts
 
                 // Dog Lover
                 var westZone = The.ZoneManager.GetZone(Zones["West"]);
-                var dogLover = westZone.FindObject("Brothers_CatsDogs_DogLover");
+                var dogLover = westZone.FindObject("Sibs_CatsDogs_DogLover");
                 if (dogLover != null)
                 {
-                    var move = dogLover.AddPart<Brothers_GlobalMove>();
+                    var move = dogLover.AddPart<Sibs_GlobalMove>();
                     move.TargetZone = Zones["Center"];
                     move.TargetX = 26;
                     move.TargetY = 7;
@@ -355,10 +355,10 @@ namespace XRL.World.ZoneParts
 
                 // Cat Lover
                 var eastZone = The.ZoneManager.GetZone(Zones["East"]);
-                var catLover = eastZone.FindObject("Brothers_CatsDogs_CatLover");
+                var catLover = eastZone.FindObject("Sibs_CatsDogs_CatLover");
                 if (catLover != null)
                 {
-                    var move = catLover.AddPart<Brothers_GlobalMove>();
+                    var move = catLover.AddPart<Sibs_GlobalMove>();
                     move.TargetZone = Zones["Center"];
                     move.TargetX = 28;
                     move.TargetY = 6;
@@ -376,8 +376,8 @@ namespace XRL.World.ZoneParts
                     (this.ParentZone.ZoneID == Zones["South"])
                     )
                 {
-                    this.PopulateRandomly(2, 3, "Brothers_CatsDogs_ShikCitizen");
-                    this.PopulateRandomly(2, 3, "Brothers_CatsDogs_SparCitizen");
+                    this.PopulateRandomly(2, 3, "Sibs_CatsDogs_ShikCitizen");
+                    this.PopulateRandomly(2, 3, "Sibs_CatsDogs_SparCitizen");
                 }
 
                 // West side, 1–2 Spar
@@ -387,7 +387,7 @@ namespace XRL.World.ZoneParts
                     this.ParentZone.ZoneID == Zones["SouthWest"]
                 )
                 {
-                    this.PopulateRandomly(1, 2, "Brothers_CatsDogs_SparCitizen");
+                    this.PopulateRandomly(1, 2, "Sibs_CatsDogs_SparCitizen");
                 }
 
                 // East side, 1–2 Shik
@@ -397,7 +397,7 @@ namespace XRL.World.ZoneParts
                     this.ParentZone.ZoneID == Zones["SouthEast"]
                 )
                 {
-                    this.PopulateRandomly(1, 2, "Brothers_CatsDogs_ShikCitizen");
+                    this.PopulateRandomly(1, 2, "Sibs_CatsDogs_ShikCitizen");
                 }
 
                 //

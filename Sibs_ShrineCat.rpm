@@ -1666,7 +1666,7 @@
     <object Name="Floor Cushion"></object>
   </cell>
   <cell X="43" Y="13">
-    <object Name="Brothers_CatsDogs_Catgod"></object>
+    <object Name="Sibs_CatsDogs_Catgod"></object>
   </cell>
   <cell X="44" Y="13">
     <object Name="Floor Cushion"></object>

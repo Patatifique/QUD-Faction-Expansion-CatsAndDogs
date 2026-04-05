@@ -6,12 +6,12 @@ using XRL.World.Parts;
 namespace XRL.World.Parts.Mutation
 {
     [Serializable]
-    public class Brothers_FeralMutation : BaseMutation
+    public class Sibs_FeralMutation : BaseMutation
     {
-        public const string EQUIPMENT_BLUEPRINT = "Brothers_CatsDogs_MutationJaws";
-        public const string MANAGER_ID = "Mutation::Brothers_FeralMutation";
+        public const string EQUIPMENT_BLUEPRINT = "Sibs_CatsDogs_MutationJaws";
+        public const string MANAGER_ID = "Mutation::Sibs_FeralMutation";
 
-        public Brothers_FeralMutation()
+        public Sibs_FeralMutation()
         {
             DisplayName = "Feral Jaws";
             Type = "Physical";
@@ -33,7 +33,7 @@ namespace XRL.World.Parts.Mutation
 
         private GameObject FindFeralJaws()
         {
-            return this.ParentObject.Body?.FindEquipmentOrDefaultByBlueprint("Brothers_CatsDogs_MutationJaws");
+            return this.ParentObject.Body?.FindEquipmentOrDefaultByBlueprint("Sibs_CatsDogs_MutationJaws");
         }
 
         private void AddJawsTo(BodyPart part)
@@ -43,7 +43,7 @@ namespace XRL.World.Parts.Mutation
             {
                 jaws = GameObject.Create(EQUIPMENT_BLUEPRINT);
                 jaws.GetPart<Armor>().WornOn = part.Type;
-                jaws.RequirePart<Brothers_FeralJawsItem>();
+                jaws.RequirePart<Sibs_FeralJawsItem>();
             }
 
             bool equippedAsDefault = jaws.EquipAsDefaultBehavior();

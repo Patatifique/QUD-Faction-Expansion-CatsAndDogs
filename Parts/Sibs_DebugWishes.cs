@@ -11,21 +11,21 @@ namespace XRL.World.Capabilities
 {
 [HasWishCommand]
 
-public class Brothers_DebugWishes
+public class Sibs_DebugWishes
 {
 
 
   [WishCommand(Command = "feraldinnerTestOwO")]
-  public static void Brothers_FeralDinnerWishHandler()
+  public static void Sibs_FeralDinnerWishHandler()
   {
-    CookingGameState.LearnRecipe((CookingRecipe) new Brothers_FeralDinner());
+    CookingGameState.LearnRecipe((CookingRecipe) new Sibs_FeralDinner());
     The.Player.ReceiveObject("Bones", 1);
     The.Player.ReceiveObject("Furs", 1);
     The.Player.ReceiveObject("BloodCanteen", 1);
   }
 
   [WishCommand(Command = "TimeToChooseASide")]
-  public static void Brothers_TimeToChooseASideWishHandler()
+  public static void Sibs_TimeToChooseASideWishHandler()
   {
     
     // Goto Shikspar
@@ -38,7 +38,7 @@ public class Brothers_DebugWishes
 
 
     // Start the quest
-    The.Game.StartQuest("Brothers_CatsDogs_MainQuest3");
+    The.Game.StartQuest("Sibs_CatsDogs_MainQuest3");
 
     // Reveal All Observations
     Popup.Suppress = true;
