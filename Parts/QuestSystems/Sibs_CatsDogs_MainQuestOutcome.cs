@@ -179,6 +179,8 @@ namespace XRL.World.ZoneParts
                 {
                     The.Game.SetBooleanGameState("Sibs_CatsDogs_NeutralEnding_Occured", true);
                     //Popup.Show("Neutral Ending");
+                    // Apply achivement
+                    AchievementManager.SetAchievement("ACH_SIBS_CATSDOGS_NEUTRAL_ENDING");
                 }
             }
             
@@ -198,6 +200,9 @@ namespace XRL.World.ZoneParts
                         "k", 
                         "Shik", 
                         "Twin huts stand in memory of a community bisected by self-imposed exile.");
+
+                    // Apply achivement
+                    AchievementManager.SetAchievement("ACH_SIBS_CATSDOGS_SHIK_ENDING");
                 }
 
 
@@ -269,6 +274,8 @@ namespace XRL.World.ZoneParts
                         "k", 
                         "Spar", 
                         "Twin huts stand in memory of a community bisected by self-imposed exile.");
+                    // Apply achivement
+                    AchievementManager.SetAchievement("ACH_SIBS_CATSDOGS_SPAR_ENDING");
                 }
                 
                 this.DestroyPeopleFromFaction("Shik");
@@ -335,6 +342,8 @@ namespace XRL.World.ZoneParts
                         "k", 
                         "Shikspar", 
                         "A newfound sense of kinship tears down misbegotten feuds and reunites a mending fraternity.");
+                    // Apply achivement
+                    AchievementManager.SetAchievement("ACH_SIBS_CATSDOGS_PERFECT_ENDING");
                 }
 
                 //
