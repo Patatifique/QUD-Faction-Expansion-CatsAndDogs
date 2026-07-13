@@ -206,6 +206,11 @@ namespace XRL.World.Parts
                 // Add Head
                 AddHead();
                 
+                // If 10 heads, grant achievement
+                if (this.ParentObject.Body.GetPart("Head").Count == MaxHeads)
+                    AchievementManager.SetAchievement("ACH_SIBS_CATSDOGS_HYDRA_DOG");  
+
+
                 // player message
                 if (this.ParentObject.IsPlayer())
                     MessageQueue.AddPlayerMessage("Your crest ripples and another head bursts out!");

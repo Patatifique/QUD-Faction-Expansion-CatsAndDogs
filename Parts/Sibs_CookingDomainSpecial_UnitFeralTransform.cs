@@ -46,6 +46,7 @@ namespace XRL.World.Effects
           Popup.Show("Jagged fangs jut out of your gums, tasting the air in search of blood.");
 		  Popup.Show("You gained the mutation {{C|Feral Jaws}}!");
           JournalAPI.AddAccomplishment("You ate the Feral Dinner.", $"Houndform! Houndform! On the {Calendar.GetDay()} of {Calendar.GetMonth()}, in the year {Calendar.GetYear().ToString()} AR, =name= underwent the divine transformation and became a great hound.", $"To defend the city of Shikspar against invading goatfolk, =name= howled by the Beetle Moon until {The.Player.GetPronounProvider().Subjective} assumed the form of a great hound.", muralCategory: MuralCategory.BodyExperienceNeutral, muralWeight: MuralWeight.VeryHigh);
+          AchievementManager.SetAchievement("ACH_SIBS_CATSDOGS_FERAL_DINNER");
         }
 
 

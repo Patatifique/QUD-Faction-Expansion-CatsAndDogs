@@ -28,6 +28,20 @@ namespace XRL
       "welcome.png", 
       "End the feud and reunite Shikspar.");
 
+
+    public static readonly AchievementInfo SIBS_CATSDOGS_FERAL_DINNER = new AchievementInfo(
+      "ACH_SIBS_CATSDOGS_FERAL_DINNER", 
+      "FE - Cats and Dogs : Gone Feral", 
+      "welcome.png", 
+      "Eat the Feral Dinner.");
+
+   public static readonly AchievementInfo SIBS_CATSDOGS_HYDRA_DOG = new AchievementInfo(
+      "ACH_SIBS_CATSDOGS_HYDRA_DOG", 
+      "FE - Cats and Dogs : The Pack Within", 
+      "welcome.png", 
+      "Cause a Hydric Hound to reach 10 heads.");
+
+
     [ModSensitiveCacheInit]
     public static void Init()
     {
