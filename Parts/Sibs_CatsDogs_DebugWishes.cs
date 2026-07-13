@@ -11,7 +11,7 @@ namespace XRL.World.Capabilities
 {
 [HasWishCommand]
 
-public class Sibs_DebugWishes
+public class Sibs_CatsDogs_DebugWishes
 {
 
 
