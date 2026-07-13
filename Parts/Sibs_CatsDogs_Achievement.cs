@@ -9,7 +9,7 @@ namespace XRL
       "FE - Cats and Dogs : Status Quo", 
       "welcome.png", 
       "Maintain the fragile peace in the villages of Shik and Spar.");
-
+ 
     public static readonly AchievementInfo SIBS_CATSDOGS_SHIK_ENDING = new AchievementInfo(
       "ACH_SIBS_CATSDOGS_SHIK_ENDING", 
       "FE - Cats and Dogs : The Dog's Bite", 
@@ -32,7 +32,7 @@ namespace XRL
     public static readonly AchievementInfo SIBS_CATSDOGS_FERAL_DINNER = new AchievementInfo(
       "ACH_SIBS_CATSDOGS_FERAL_DINNER", 
       "FE - Cats and Dogs : Gone Feral", 
-      "welcome.png", 
+      "UI/Achievements/catsdogs/feraldinner.png", 
       "Eat the Feral Dinner.");
 
    public static readonly AchievementInfo SIBS_CATSDOGS_HYDRA_DOG = new AchievementInfo(
