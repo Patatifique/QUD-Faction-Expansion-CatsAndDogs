@@ -38,7 +38,7 @@ namespace XRL
    public static readonly AchievementInfo SIBS_CATSDOGS_HYDRA_DOG = new AchievementInfo(
       "ACH_SIBS_CATSDOGS_HYDRA_DOG", 
       "FE - Cats and Dogs : The Pack Within", 
-      "welcome.png", 
+      "UI/Achievements/catsdogs/hydradog.png", 
       "Cause a Hydric Hound to reach 10 heads.");
 
 
