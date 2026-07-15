@@ -2,7 +2,7 @@
     "id": "Github_Sibs_CatsDogs",
     "title": "(Github) Faction Expansion: Cats and Dogs",
     "description": "Expands the 'cats' and 'dogs' factions by updating sprites, adding more creatures, loot and a new settlement in the desert canyons.",
-    "version": "1.1",
+    "version": "1.2",
     "dependency": "Github_Sibs_Library",
     "author": "{{tarnished|Balthichou}} and {{lovesickness|Patatifique}}",
     "tags": "Faction",
