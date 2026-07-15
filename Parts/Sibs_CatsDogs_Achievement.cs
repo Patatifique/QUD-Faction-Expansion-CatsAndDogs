@@ -7,7 +7,7 @@ namespace XRL
     public static readonly AchievementInfo SIBS_CATSDOGS_NEUTRAL_ENDING = new AchievementInfo(
       "ACH_SIBS_CATSDOGS_NEUTRAL_ENDING", 
       "FE - Cats and Dogs: Status Quo", 
-      "welcome.png", 
+      "UI/Achievements/catsdogs/statusquo.png", 
       "Maintain the fragile peace between the villages of Shik and Spar.");
  
     public static readonly AchievementInfo SIBS_CATSDOGS_SHIK_ENDING = new AchievementInfo(
