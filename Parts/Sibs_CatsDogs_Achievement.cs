@@ -13,7 +13,7 @@ namespace XRL
     public static readonly AchievementInfo SIBS_CATSDOGS_SHIK_ENDING = new AchievementInfo(
       "ACH_SIBS_CATSDOGS_SHIK_ENDING", 
       "FE - Cats and Dogs: The Dog's Bite", 
-      "welcome.png", 
+      "UI/Achievements/catsdogs/dogsbite.png", 
       "Settle the dispute in Shik and Spar in Shik's favor.");
 
     public static readonly AchievementInfo SIBS_CATSDOGS_SPAR_ENDING = new AchievementInfo(
