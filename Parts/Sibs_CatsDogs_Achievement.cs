@@ -19,7 +19,7 @@ namespace XRL
     public static readonly AchievementInfo SIBS_CATSDOGS_SPAR_ENDING = new AchievementInfo(
       "ACH_SIBS_CATSDOGS_SPAR_ENDING", 
       "FE - Cats and Dogs: The Cat's Claw", 
-      "welcome.png", 
+      "UI/Achievements/catsdogs/catsclaw.png", 
       "Settle the dispute in Shik and Spar in Spar's favor.");
 
     public static readonly AchievementInfo SIBS_CATSDOGS_PERFECT_ENDING = new AchievementInfo(
