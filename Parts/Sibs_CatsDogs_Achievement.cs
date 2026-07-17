@@ -6,7 +6,7 @@ namespace XRL
   {
     public static readonly AchievementInfo SIBS_CATSDOGS_NEUTRAL_ENDING = new AchievementInfo(
       "ACH_SIBS_CATSDOGS_NEUTRAL_ENDING", 
-      "FE - Cats and Dogs: Status Quo", 
+      "{{G|FE - Cats and Dogs:}} Status Quo", 
       "UI/Achievements/catsdogs/statusquo.png", 
       "Maintain the fragile peace between the villages of Shik and Spar.");
  
@@ -25,7 +25,7 @@ namespace XRL
     public static readonly AchievementInfo SIBS_CATSDOGS_PERFECT_ENDING = new AchievementInfo(
       "ACH_SIBS_CATSDOGS_PERFECT_ENDING", 
       "FE - Cats and Dogs: Family", 
-      "welcome.png", 
+      "UI/Achievements/catsdogs/family.png", 
       "End the feud and reunite Shikspar.");
 
 
