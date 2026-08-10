@@ -458,7 +458,7 @@
 			<choice Target="Epilogue" IfHaveActiveQuest="Sibs_CatsDogs_MainQuestEpilogue" IfHaveState="Sibs_CatsDogs_AnyEnding_Occured">I have returned, mayor. How have things changed around here?</choice>			
 			<choice Target="WhatNow" IfHaveState="Sibs_CatsDogs_AnyEnding_Occured">What shall happen with this place now?</choice>		
 			<choice Target="Services">What can I expect to find in Shik, beside starapples?</choice>
-			<choice Target="Travelers" IfNotHaveState="Sibs_CatsDogs_AnyEnding_Occured">I see only dogs living here. Am I allowed here?</choice>	
+			<choice Target="Travelers" IfNotHaveState="Sibs_CatsDogs_AnyEnding_Occured">I see only dogs living in this village. Am I allowed here?</choice>	
 			<choice Target="Goatfolk">Don't you fear attacks from the jungle goatfolk?</choice>	
 			<choice Target="End">I must take my leave now. Live and drink, mayor.</choice>
 		</node>
@@ -713,7 +713,7 @@
 			<choice Target="Epilogue" IfHaveActiveQuest="Sibs_CatsDogs_MainQuestEpilogue" IfHaveState="Sibs_CatsDogs_AnyEnding_Occured">I am back, lady mayor. What happened while I was away?</choice>			
 			<choice Target="WhatNow" IfHaveState="Sibs_CatsDogs_AnyEnding_Occured">What does the future hold for this community?</choice>	
 			<choice Target="Services">What can I expect to find in Spar, once I am done napping?</choice>
-			<choice Target="Travelers" IfNotHaveState="Sibs_CatsDogs_AnyEnding_Occured">There seems to be only cats in Shik. Is my presence not an issue?</choice>	
+			<choice Target="Travelers" IfNotHaveState="Sibs_CatsDogs_AnyEnding_Occured">There seem to be only cats in Spar. Is my presence not an issue?</choice>
 			<choice Target="Goatfolk">Are you not bothered by the jungle goatfolk?</choice>			
 			<choice Target="End">Live and drink, lady mayor.</choice>
 		</node>
