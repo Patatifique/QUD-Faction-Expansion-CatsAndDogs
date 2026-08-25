@@ -1,5 +1,6 @@
 Faction Expansion: Cats & Dogs
 
+- Achievement Art: Balthichou & Patatifique
 - Concept and Design: Balthichou & Patatifique
 - C# Coding: Patatifique
 - Spritework: Balthichou
