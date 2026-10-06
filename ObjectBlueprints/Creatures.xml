@@ -3,14 +3,14 @@
 	
 <!--New Dogs-->
 	
-	<object Name="Sibs_CatsDogs_Hyrkhound Alpha" Inherits="BaseDog">
+	<object Name="Sibs_CatsDogs_HyrkhoundAlpha" Inherits="BaseDog">
 		<part Name="Render" ColorString="&amp;w" DetailColor="G" RenderString="d" Tile="Creatures/catsdogs/hyrkleader.png" DisplayName="{{Y|hyrkhound}} pack leader" />
 		<stat Name="Level" Value="22" />
 		<part Name="Brain" Hostile="true" Factions="Dogs-100" />
-		<stat Name="Strength" Boost="4" />
-		<stat Name="Agility" Boost="2" />
-		<stat Name="Toughness" Boost="4" />
-		<stat Name="Ego" Boost="6" />
+		<stat Name="Strength" Boost="1" />
+		<stat Name="Agility" Boost="1" />
+		<stat Name="Toughness" Boost="1" />
+		<stat Name="Ego" Boost="1" />
 		<stat Name="Hitpoints" Value="50" />
 		<stat Name="AV" Value="5" />
 		<stat Name="Speed" Value="120" />
@@ -18,7 +18,7 @@
 		<part Name="Description" Short="Legs trample acid-drenched soil, the snarling beast assuming a commanding stance over =pronouns.possessive= packmates. A chrome-like droning escapes =pronouns.possessive= chest as the promise of harm yet to come." />
 		<part Name="Swarmer" ExtraBonus="2" />
 		<skill Name="Persuasion_Intimidate" />
-		<part Name="Corpse" CorpseChance="20" CorpseBlueprint="Sibs_CatsDogs_Hyrkhound Alpha Corpse" />
+		<part Name="Corpse" CorpseChance="20" CorpseBlueprint="Sibs_CatsDogs_HyrkhoundAlphaCorpse" />
 		<tag Name="DynamicObjectsTable:Jungle_Creatures" />
 		<tag Name="Role" Value="Leader" />
 	</object>
@@ -35,26 +35,24 @@
 		<stat Name="Level" Value="16" />
 		<part Name="Brain" Hostile="false" Factions="Dogs-100" />
 		<stat Name="Hitpoints" Value="20" />
-		<stat Name="Strength" Boost="2" />
-		<stat Name="Agility" Boost="2" />
-		<stat Name="Toughness" Boost="2" />
+		<stat Name="Agility" Boost="1" />
 		<part Name="Swarmer" />
 		<stat Name="Speed" Value="100" />
-		<inventoryobject Blueprint="Sibs_CatsDogs_Blinkoodle Bite" Number="1" />
+		<inventoryobject Blueprint="Sibs_CatsDogs_BlinkoodleBite" Number="1" />
 		<part Name="Description" Short="Instinct and guile stack space on itself as =pronouns.subjective= =verb:step:afterpronoun= into the created fold. =pronouns.Subjective= =verb:are:afterpronoun= already gone when you turn -- there lingers in =pronouns.possessive= stead the memory of putative barks." />
 		<mutation Name="Teleportation" Level="10" />
 		<tag Name="DynamicObjectsTable:Flowerfields_Creatures" />
-		<part Name="Corpse" CorpseChance="15" CorpseBlueprint="Sibs_CatsDogs_Blinkoodle Corpse" />
+		<part Name="Corpse" CorpseChance="15" CorpseBlueprint="Sibs_CatsDogs_BlinkoodleCorpse" />
 		<tag Name="Role" Value="Skirmisher" />
 	</object>
 
-	<object Name="Sibs_CatsDogs_Blinkoodle Bite" Inherits="Bite">
+	<object Name="Sibs_CatsDogs_BlinkoodleBite" Inherits="Bite">
 		<part Name="Render" DisplayName="sharp fangs" />
 		<part Name="MeleeWeapon" BaseDamage="2d3" />
 		<tag Name="Gender" Value="plural" />
 	</object>
  
- 	<object Name="Sibs_CatsDogs_Hyrkhound Pet" Inherits="BaseDog">
+ 	<object Name="Sibs_CatsDogs_HyrkhoundPet" Inherits="BaseDog">
 		<part Name="Render" DisplayName="{{M|Jerenah, slobbering droolhound}}" Tile="Creatures/catsdogs/hyrkpet.png" ColorString="&amp;w" DetailColor="c" />
 		<part Name="Corpse" CorpseChance="0" />
 		<stat Name="Hitpoints" Value="50" />
@@ -62,13 +60,13 @@
 		<stat Name="Speed" Value="120" />
 		<part Name="Swarmer" />
 		<stat Name="Level" Value="5" />
-		<inventoryobject Blueprint="Sibs_CatsDogs_Hyrkhound_Pet_Bite" Number="1" />
+		<inventoryobject Blueprint="Sibs_CatsDogs_HyrkhoundPetBite" Number="1" />
 		<part Name="Description" Short="Without a care for the measure of success amongst hyrkhounds, =pronouns.possessive= jaws pool with translucent appetite turned liquid. Over =pronouns.possessive= body, hair is drowned into matted submission." />
 	<!--pet stuff-->
 		<part Name="Pettable" />
 		<tag Name="PetResponse" Value="licks you back until you are clean,covers you in cleaning saliva,drools all over you and your equipment" />
-		<property Name="Story" Value="Sibs_CatsDogs_DroolhoundStory" />
-		<part Name="ConversationScript" ConversationID="Sibs_CatsDogs_Hyrkhound Pet" />
+		<property Name="Story" Value="Sibs_CatsDogs_HyrkhoundPetStory" />
+		<part Name="ConversationScript" ConversationID="Sibs_CatsDogs_HyrkhoundPet" />
 		<tag Name="Pet" />
 		<tag Name="StartingPet" />
 		<tag Name="NoXP" />
@@ -78,13 +76,13 @@
 		<part Name="Sibs_CleanLicker" />
 	</object>
 	
-	<object Name="Sibs_CatsDogs_Hyrkhound_Pet_Bite" Inherits="Bite">
+	<object Name="Sibs_CatsDogs_HyrkhoundPetBite" Inherits="Bite">
 		<part Name="Render" DisplayName="{{b|drool-wet}} fangs" />
 		<part Name="MeleeWeapon" BaseDamage="4d2" />
 		<tag Name="Gender" Value="plural" />
 	</object>
 
-	<object Name="Sibs_CatsDogs_Hydric Hound" Inherits="BaseDog">
+	<object Name="Sibs_CatsDogs_HydricHound" Inherits="BaseDog">
 		<part Name="Render" ColorString="&amp;r" DetailColor="y" RenderString="d" Tile="Creatures/catsdogs/hydrichound1.png" DisplayName="hydric hound" />
 		<stat Name="Level" Value="25" />
 		<part Name="Brain" Hostile="true" Factions="Dogs-100" />
@@ -97,21 +95,21 @@
 		<stat Name="Hitpoints" Value="50" />
 		<stat Name="AV" Value="6" />
 		<stat Name="Speed" Value="100" />
-		<inventoryobject Blueprint="Sibs_CatsDogs_Hydric Bite" Number="1" />
+		<inventoryobject Blueprint="Sibs_CatsDogs_HydricBite" Number="1" />
 		<skill Name="Multiweapon_Fighting" />
 		<skill Name="Multiweapon_Flurry" />
 		<skill Name="Axe" />
 		<skill Name="Axe_Cleave" />
 		<mutation Name="Regeneration" Level="5" />
 		<part Name="Description" Short="A bouquet of growls and yips simmers within the imposing canine. The sparse hair on =pronouns.possessive= crest is pulled taut by snouts poised to burst out, tears in =pronouns.possessive= coat mended by the busy hands of renascence." />
-		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Sibs_CatsDogs_Hydric Hound Corpse" />
+		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Sibs_CatsDogs_HydricHoundCorpse" />
 		<tag Name="DynamicObjectsTable:BananaGrove_Creatures" />
 	    <tag Name="Role" Value="Brute" />
-		<part Name="Sibs_EvolutiveTile" Stage="0" StageTiles="Creatures/catsdogs/hydrichound1.png, Creatures/catsdogs/hydrichound2.png, Creatures/catsdogs/hydrichound3.png, Creatures/catsdogs/hydrichound4.png, Creatures/catsdogs/hydrichound5.png, Creatures/catsdogs/hydrichound6.png, Creatures/catsdogs/hydrichound7.png, Creatures/catsdogs/hydrichound8.png, Creatures/catsdogs/hydrichound9.png, Creatures/catsdogs/hydrichound10.png" />
+		<part Name="Sibs_EvolutiveTile" Stage="0" StageTiles="Creatures/catsdogs/hydrichound1.png,Creatures/catsdogs/hydrichound2.png,Creatures/catsdogs/hydrichound3.png,Creatures/catsdogs/hydrichound4.png,Creatures/catsdogs/hydrichound5.png,Creatures/catsdogs/hydrichound6.png,Creatures/catsdogs/hydrichound7.png,Creatures/catsdogs/hydrichound8.png,Creatures/catsdogs/hydrichound9.png,Creatures/catsdogs/hydrichound10.png" />
 		<part Name="Sibs_HydraDog" />
 	</object>
 
-	<object Name="Sibs_CatsDogs_Hydric Bite" Inherits="Bite">
+	<object Name="Sibs_CatsDogs_HydricBite" Inherits="Bite">
 		<part Name="Render" DisplayName="terrific fangs" />
 		<part Name="MeleeWeapon" BaseDamage="4d3" />
 		<tag Name="Gender" Value="plural" />
@@ -120,14 +118,14 @@
 
 <!--New Cats-->
 
-	<object Name="Sibs_CatsDogs_Black Puma" Inherits="BaseCat">
+	<object Name="Sibs_CatsDogs_BlackPuma" Inherits="BaseCat">
 		<part Name="Render" DisplayName="{{K|black puma}}" Tile="Creatures/catsdogs/blackpuma.png" RenderString="l" ColorString="&amp;K" DetailColor="r"/>
-		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Sibs_CatsDogs_Black Puma Corpse" />
+		<part Name="Corpse" CorpseChance="5" CorpseBlueprint="Sibs_CatsDogs_BlackPumaCorpse" />
 		<stat Name="AV" Value="6" />
 		<stat Name="Level" Value="31" />
 		<stat Name="Hitpoints" Value="120" />
 		<part Name="Brain" Hostile="true" Factions="Cats-100" />
-		<inventoryobject Blueprint="Sibs_CatsDogs_Black Puma Claw" Number="2" />
+		<inventoryobject Blueprint="Sibs_CatsDogs_BlackPumaClaw" Number="2" />
 		<part Name="Description" Short="Slick opal black fur rustles in reaction to light, selfishly hoarding the Hind Sun as a prisoner. Beneath =pronouns.possessive= lithe body, paws crowned with khopeshs furrow the ground in ceremonial silence." />
 		<skill Name="ShortBlades" />
 		<skill Name="Multiweapon_Fighting" />
@@ -141,19 +139,19 @@
 		<tag Name="Role" Value="Uncommon" />
 	</object>
   
-	<object Name="Sibs_CatsDogs_Black Puma Claw" Inherits="NaturalWeapon">
+	<object Name="Sibs_CatsDogs_BlackPumaClaw" Inherits="NaturalWeapon">
 		<part Name="Render" DisplayName="{{K|shaded claw}}" Tile="Creatures/natural-weapon-paw.bmp" ColorString="&amp;w" />
 		<part Name="MeleeWeapon" BaseDamage="2d6" Skill="ShortBlades" Stat="Strength" Slot="Foot" />
 	</object>
 
-	<object Name="Sibs_CatsDogs_Rocky Lion Base" Inherits="BaseCat">
+	<object Name="Sibs_CatsDogs_RockyLionBase" Inherits="BaseCat">
 		<tag Name="BaseObject" Value="*noinherit" />
-		<part Name="Corpse" CorpseChance="40" CorpseBlueprint="Sibs_CatsDogs_Rocky Lion Corpse" />
+		<part Name="Corpse" CorpseChance="40" CorpseBlueprint="Sibs_CatsDogs_RockyLionCorpse" />
 		<stat Name="AV" Value="8" />
 		<stat Name="Level" Value="18" />
 		<stat Name="Hitpoints" Value="60" />
 		<part Name="Brain" Hostile="true" Factions="Cats-100" />
-		<inventoryobject Blueprint="Sibs_CatsDogs_Rocky Lion Paw" Number="2" />
+		<inventoryobject Blueprint="Sibs_CatsDogs_RockyLionPaw" Number="2" />
 		<skill Name="Cudgel_Expertise" />
 		<skill Name="Cudgel_Bludgeon" />
 		<skill Name="Cudgel_ChargingStrike" />
@@ -163,26 +161,26 @@
 		<stag Name="HardMaterial" Value="hide" />
 	</object>
  
-	<object Name="Sibs_CatsDogs_Rocky Lion M" Inherits="Sibs_CatsDogs_Rocky Lion Base">
+	<object Name="Sibs_CatsDogs_RockyLionM" Inherits="Sibs_CatsDogs_RockyLionBase">
 		<part Name="Render" Tile="creatures/catsdogs/rockylionm.png" DisplayName="{{w|lithic lion}}" ColorString="&amp;y" DetailColor="w" />
 		<tag Name="Gender" Value="male" />
 		<part Name="Description" Short="Here stands the solitary monarch of petrified waterfalls, hide cascading with shale and quartz. Flecks of mica shimmer in =pronouns.possessive= fur, coating a muscular intention made manifest with ponderous materialization." />
 		<tag Name="DynamicObjectsTable:Mountains_Creatures" />
 	</object>
 	
-	<object Name="Sibs_CatsDogs_Rocky Lion F" Inherits="Sibs_CatsDogs_Rocky Lion Base">
+	<object Name="Sibs_CatsDogs_RockyLionF" Inherits="Sibs_CatsDogs_RockyLionBase">
 		<part Name="Render" Tile="creatures/catsdogs/rockylionf.png" DisplayName="{{w|lithic lion}}" ColorString="&amp;y" DetailColor="w" />
 		<tag Name="Gender" Value="female" />
 		<part Name="Description" Short="Here stands the solitary queen of petrified waterfalls, =pronouns.possessive= slick neck chiseled by existence. Flecks of mica shimmer in =pronouns.possessive= fur, coating a muscular intention made manifest with ponderous materialization." />
 		<tag Name="DynamicObjectsTable:Mountains_Creatures" />
 	</object>
 	
-	<object Name="Sibs_CatsDogs_Rocky Lion Paw" Inherits="NaturalWeapon">
+	<object Name="Sibs_CatsDogs_RockyLionPaw" Inherits="NaturalWeapon">
 		<part Name="Render" DisplayName="pummeling claw" Tile="Creatures/natural-weapon-paw.bmp" ColorString="&amp;w" />
 		<part Name="MeleeWeapon" BaseDamage="2d4" Skill="Cudgel" Stat="Strength" Slot="Foot" />
 	</object>
 
- 	<object Name="Sibs_CatsDogs_Brainkitty Pet" Inherits="BaseCat">
+ 	<object Name="Sibs_CatsDogs_BrainkittyPet" Inherits="BaseCat">
 		<part Name="Render" DisplayName="{{M|Alther, elder kitten}}" Tile="Creatures/catsdogs/brainpet.png" ColorString="&amp;c" DetailColor="C" />
 		<part Name="Corpse" CorpseChance="0" />
 		<stat Name="Hitpoints" Value="50" />
@@ -200,8 +198,8 @@
 	<!--pet stuff-->
 		<part Name="Pettable" />
 		<tag Name="PetResponse" Value="looks at you tiredly,levitates for a few seconds" />
-		<property Name="Story" Value="Sibs_CatsDogs_BrainkittyStory" />
-		<part Name="ConversationScript" ConversationID="Sibs_CatsDogs_Brainkitty Pet" />
+		<property Name="Story" Value="Sibs_CatsDogs_BrainkittyPetStory" />
+		<part Name="ConversationScript" ConversationID="Sibs_CatsDogs_BrainkittyPet" />
 		<tag Name="Pet" />
 		<tag Name="StartingPet" />
 		<tag Name="NoXP" />
@@ -223,17 +221,17 @@
 	
 	<object Name="Guard Dog" Load="Merge">
 		<part Name="Render" Tile="Creatures/catsdogs/guarddog.png" />
-		<inventoryobject Blueprint="Sibs_CatsDogs_Spiked Collar" Number="1" />
+		<inventoryobject Blueprint="Sibs_CatsDogs_SpikedCollar" Number="1" />
 	</object>
 
 	<object Name="Herding Dog" Load="Merge">
 		<part Name="Render" Tile="Creatures/catsdogs/herdingdog.png" />
-		<inventoryobject Blueprint="Sibs_CatsDogs_Herding Scarf" Number="1" />
+		<inventoryobject Blueprint="Sibs_CatsDogs_HerdingScarf" Number="1" />
 	</object>
 	
 	<object Name="Hyrkhound" Load="Merge">
 		<part Name="Render" Tile="Creatures/catsdogs/hyrkhound.png" />
-		<part Name="Corpse" CorpseChance="10" CorpseBlueprint="Sibs_CatsDogs_Hyrkhound Corpse" />
+		<part Name="Corpse" CorpseChance="10" CorpseBlueprint="Sibs_CatsDogs_HyrkhoundCorpse" />
 	</object>
 
 	<object Name="Ray Cat" Load="Merge">
@@ -242,34 +240,34 @@
 	
 <!--Corpses-->
 
-	<object Name="Sibs_CatsDogs_Hyrkhound Corpse" Inherits="Small Animal Corpse">
+	<object Name="Sibs_CatsDogs_HyrkhoundCorpse" Inherits="Animal Corpse">
 		<part Name="Render" DisplayName="hyrkhound corpse" />     
-		<part Name="Butcherable" OnSuccess="Sibs_CatsDogs_Hyrk Cestus" />
+		<part Name="Butcherable" OnSuccess="Sibs_CatsDogs_HyrkCestus" />
 		<part Name="Food" Message="Chewing through the meat makes your tooth enamel fizzle." />
 		<part Name="Physics" Weight="75" />
 		<part Name="Commerce" Value="10" />
 		<tag Name="Tier" Value="3" />    		
 	</object>
 
-	<object Name="Sibs_CatsDogs_Hyrkhound Alpha Corpse" Inherits="Small Animal Corpse">
+	<object Name="Sibs_CatsDogs_HyrkhoundAlphaCorpse" Inherits="Animal Corpse">
 		<part Name="Render" DisplayName="hyrkhound pack leader corpse" />     
-		<part Name="Butcherable" OnSuccess="Sibs_CatsDogs_Hyrk Hood" />
+		<part Name="Butcherable" OnSuccess="Sibs_CatsDogs_HyrkHood" />
 		<part Name="Food" Message="The meat is tough, chewy and cankerous." />
 		<part Name="Physics" Weight="100" />
 		<part Name="Commerce" Value="15" />
 		<tag Name="Tier" Value="4" />    		
 	</object>
 	
-	<object Name="Sibs_CatsDogs_Blinkoodle Corpse" Inherits="Small Animal Corpse">
+	<object Name="Sibs_CatsDogs_BlinkoodleCorpse" Inherits="Small Animal Corpse">
 		<part Name="Render" DisplayName="blinkoodle corpse" />     
-		<part Name="Butcherable" OnSuccess="Sibs_CatsDogs_Blinking Flesh" />
+		<part Name="Butcherable" OnSuccess="Sibs_CatsDogs_BlinkingFlesh" />
 		<part Name="Food" Message="Despite the meat blinking out of your mouth, you still manage to down it all." />
 		<part Name="Physics" Weight="60" />
 		<part Name="Commerce" Value="5" />
 		<tag Name="Tier" Value="2" />    		
 	</object>
 
-	<object Name="Sibs_CatsDogs_Black Puma Corpse" Inherits="Animal Corpse">
+	<object Name="Sibs_CatsDogs_BlackPumaCorpse" Inherits="Animal Corpse">
 		<part Name="Butcherable" OnSuccess="Black Puma Haunch" />
 		<part Name="Render" DisplayName="{{K|black puma}} corpse" ColorString="&amp;w" />
 		<part Name="Food" Message="The meat feels elusive in your mouth, and takes some effort hunting down." />
@@ -278,8 +276,8 @@
 		<tag Name="Tier" Value="4" />    
 	</object>
 	
-	<object Name="Sibs_CatsDogs_Rocky Lion Corpse" Inherits="Animal Corpse">
-		<part Name="Butcherable" OnSuccess="Sibs_CatsDogs_Rocky Pelt" />
+	<object Name="Sibs_CatsDogs_RockyLionCorpse" Inherits="Animal Corpse">
+		<part Name="Butcherable" OnSuccess="Sibs_CatsDogs_RockyPelt" />
 		<part Name="Render" DisplayName="{{w|lithic lion}} corpse" ColorString="&amp;w" />
 		<part Name="Food" Message="You have some trouble chewing through chips of meat." />
 		<part Name="Physics" Weight="200" />
@@ -287,8 +285,8 @@
 		<tag Name="Tier" Value="3" />    
 	</object>
 	
-	<object Name="Sibs_CatsDogs_Hydric Hound Corpse" Inherits="Animal Corpse">
-		<part Name="Butcherable" OnSuccess="Sibs_CatsDogs_Burgeoning Meat" />
+	<object Name="Sibs_CatsDogs_HydricHoundCorpse" Inherits="Animal Corpse">
+		<part Name="Butcherable" OnSuccess="Sibs_CatsDogs_BurgeoningMeat" />
 		<part Name="Render" DisplayName="hydric hound corpse" ColorString="&amp;w" />
 		<part Name="Food" Message="The meal is impossible to finish, and you throw most of it away." />
 		<part Name="Physics" Weight="200" />
@@ -298,12 +296,12 @@
 
 <!--New Gods-->
 
-	<object Name="Sibs_CatsDogs_Catgod" Inherits="BaseCat">
+	<object Name="Sibs_CatsDogs_CatGod" Inherits="BaseCat">
 		<removepart Name="SmartuseForceTwiddles" />
 		<intproperty Name="Hero" Value="1" />
 		<tag Name="PreferChatToPet" />
-		<part Name="DropOnDeath" Blueprints="Sibs_CatsDogs_Catgod Drop,Sibs_CatsDogs_Catgod Drop,Sibs_CatsDogs_Catgod Drop,Sibs_CatsDogs_Catgod Drop,Sibs_CatsDogs_Catgod Drop,Sibs_CatsDogs_Catgod Drop" />
-		<part Name="ConversationScript" ConversationID="Sibs_CatsDogs_Catgod" />
+		<part Name="DropOnDeath" Blueprints="Sibs_CatsDogs_CatGodDrop,Sibs_CatsDogs_CatGodDrop,Sibs_CatsDogs_CatGodDrop,Sibs_CatsDogs_CatGodDrop,Sibs_CatsDogs_CatGodDrop,Sibs_CatsDogs_CatGodDrop" />
+		<part Name="ConversationScript" ConversationID="Sibs_CatsDogs_CatGod" />
 		<part Name="Brain" Hostile="true" Wanders="false" Hibernating="true" Factions="Cats-100" />
 		<part Name="Render" DisplayName="Miramihamia" RenderString="L" ColorString="&amp;M" DetailColor="w" Tile="Creatures/catsdogs/catgod.png" />
 		<part Name="Titles" Primary="Feline God" />
@@ -311,7 +309,7 @@
 		<stat Name="Level" Value="40" />
 		<stat Name="AV" Value="12" />
 		<stat Name="Hitpoints" Value="760" />
-		<inventoryobject Blueprint="Sibs_CatsDogs_Catgod Weapon" Number="4" />
+		<inventoryobject Blueprint="Sibs_CatsDogs_CatGodWeapon" Number="4" />
 		<part Name="Description" Short="An antique statue crossed the threshold of eons and stepped in Qud, flesh and sinew where antique scholars would see nummulite. A sheer personification of the feline form, =pronouns.possessive= peers' likeness raising the interrogation of which came first. The pondering left unanswered, =pronouns.possessive= claws have furrowed the ground and sown it with the countained fury of =pronouns.possessive= kind. No longer watching over decrepit gates, =pronouns.subjective= =verb:find:afterpronoun= solace in twin scores of nictitation: before you stands the resting divine, neither to be importuned nor awoken." />
 		<skill Name="ShortBlades" />
 		<skill Name="ShortBlades_Expertise" />
@@ -348,17 +346,17 @@
 		<part Name="Slumberling" />
 	</object>
   
-	<object Name="Sibs_CatsDogs_Catgod Weapon" Inherits="NaturalWeapon">
+	<object Name="Sibs_CatsDogs_CatGodWeapon" Inherits="NaturalWeapon">
 		<part Name="Render" DisplayName="mighty claw" Tile="Creatures/natural-weapon-paw.bmp" ColorString="&amp;Y" />
 		<part Name="MeleeWeapon" MaxStrengthBonus="9999" BaseDamage="4d3" Skill="ShortBlades" Stat="Strength" Slot="Foot" />
 	</object>
 
-	<object Name="Sibs_CatsDogs_Doggod" Inherits="BaseDog">
+	<object Name="Sibs_CatsDogs_DogGod" Inherits="BaseDog">
 		<removepart Name="SmartuseForceTwiddles" />
 		<intproperty Name="Hero" Value="1" />
 		<tag Name="PreferChatToPet" />
-		<part Name="DropOnDeath" Blueprints="Sibs_CatsDogs_Doggod Drop" />		
-		<part Name="ConversationScript" ConversationID="Sibs_CatsDogs_Doggod" />
+		<part Name="DropOnDeath" Blueprints="Sibs_CatsDogs_DogGodDrop" />		
+		<part Name="ConversationScript" ConversationID="Sibs_CatsDogs_DogGod" />
 		<part Name="Brain" Hostile="false" Wanders="false" Factions="Dogs-100" />
 		<part Name="Render" DisplayName="Boroworof" RenderString="D" ColorString="&amp;M" DetailColor="w" Tile="Creatures/catsdogs/doggod.png" />
 		<part Name="Titles" Primary="Canine God" />
@@ -366,7 +364,7 @@
 		<stat Name="Level" Value="40" />
 		<stat Name="AV" Value="13" />
 		<stat Name="Hitpoints" Value="820" />
-		<inventoryobject Blueprint="Sibs_CatsDogs_Doggod Weapon" Number="1" />
+		<inventoryobject Blueprint="Sibs_CatsDogs_DogGodWeapon" Number="1" />
 		<tag Name="Gender" Value="nonspecific" />
 		<tag Name="PronounSet" Value="pseudo-plural/They/Them/Their/Their/Themself/god/godling/regent/Child/Sibling/Parent" />
 		<part Name="Description" Short="Constant vigilance is realized in a noble quadrupedal shape bearing the marks of trials past. Carved out of the canine ideal, inspiration, and achievement, =pronouns.subjective= =verb:point:afterpronoun= wherever =pronouns.possessive= epithelium sorted out the yuckwheat from the chaff. Eons have chiseled =pronouns.possessive= oculi with wisdom unchallenged, and a silent warning not to overstep =pronouns.possessive= forbearance. =pronouns.Subjective= =verb:leave:afterpronoun= but a single trail of pawprints on Qud, devoid of the prospective vessel for =pronouns.possessive= unbound loyalty." />
@@ -408,7 +406,7 @@
 		<part Name="Interesting" />
 	</object>
   
-	<object Name="Sibs_CatsDogs_Doggod Weapon" Inherits="Bite">
+	<object Name="Sibs_CatsDogs_DogGodWeapon" Inherits="Bite">
 		<part Name="Render" DisplayName="mighty fangs" ColorString="&amp;Y" />
 		<part Name="MeleeWeapon" MaxStrengthBonus="9999" BaseDamage="8d6+8" />
 		<tag Name="Gender" Value="plural" />
@@ -417,7 +415,7 @@
 
 <!--NPCs-->
 
-	<object Name="Sibs_CatsDogs_Warden Arendubark" Inherits="SapientMutatedTree">
+	<object Name="Sibs_CatsDogs_Warden" Inherits="SapientMutatedTree">
 		<part Name="Render" DisplayName="Arendubark" Tile="Creatures/catsdogs/treewarden.png" ColorString="&amp;B" DetailColor="g" RenderString="157" Occluding="true" />
 		<part Name="Honorifics" Primary="Warden" />
 		<part Name="Description" Short="Ballistically scarred rhitidome lines the core of the vegetal guardian, hunched over the tool of =pronouns.possessive= trade. A halo of leaves not yet lowered by age provides shade against the High Salt Sun, and roots poised in anchorage write in the soil a poem of permanency. =pronouns.Possessive= foliage rustles with vigilance, denying the futileness of a stationary guardian." />
@@ -425,7 +423,7 @@
 		<stat Name="Level" Value="30" />
 		<stat Name="Hitpoints" Value="250" />
 		<part Name="Brain" Wanders="false" Mobile="false" Hostile="false" Calm="True" Factions="Wardens-100,Trees-50" />
-		<part Name="ConversationScript" ConversationID="Sibs_CatsDogs_Warden Arendubark" />
+		<part Name="ConversationScript" ConversationID="Sibs_CatsDogs_Warden" />
 		<part Name="Physics" Weight="8000" Solid="true" Takeable="false" />
 		<stat Name="ColdResistance" Value="25" />
 		<stat Name="HeatResistance" Value="25" />
@@ -509,7 +507,7 @@
 		<stat Name="Ego" Boost="1" />
 		<skill Name="Customs" />
 		<skill Name="Survival_DesertCanyonSurvival" />
-		<inventoryobject Blueprint="Sibs_CatsDogs_Black Puma Claw" Number="2" />
+		<inventoryobject Blueprint="Sibs_CatsDogs_BlackPumaClaw" Number="2" />
 		<inventoryobject Blueprint="Cat Bite" Number="1" />
 		<mutation Name="HeightenedAgility" Level="10" />
 		<mutation Name="Teleportation" Level="1" />
@@ -584,7 +582,6 @@
 		<part Name="Brain" Wanders="true" Factions="Shik-100" />
 		<part Name="AISelfPreservation" Threshold="40" />
 		<stat Name="AV" Value="3" />
-		<stat Name="Strength" Boost="1" />
 		<stat Name="Hitpoints" Value="45" />
 		<stat Name="Level" Value="5" />
 		<part Name="GenericInventoryRestocker" Table="AppleFarmerInventory" Chance="71" />
@@ -606,7 +603,6 @@
 		<part Name="Brain" Wanders="true" Factions="Spar-100" />
 		<part Name="AISelfPreservation" Threshold="40" />
 		<stat Name="AV" Value="3" />
-		<stat Name="Strength" Boost="1" />
 		<stat Name="Hitpoints" Value="45" />
 		<part Name="GenericInventoryRestocker" Table="PigFarmerInventory" Chance="71" />
 		<inventoryobject Blueprint="Cat Bite" Number="1" />
@@ -635,7 +631,7 @@
 		<inventoryobject Blueprint="Furs" />
 		<inventoryobject Blueprint="Sandals" />
 		<inventoryobject Blueprint="Boar-skin gloves" />
-		<inventoryobject Blueprint="Sibs_CatsDogs_Catears" />
+		<inventoryobject Blueprint="Sibs_CatsDogs_CatEars" />
 		<tag Name="Gender" Value="nonspecific" />
 		<tag Name="NoSleep" />
 		<xtagGrammar Proper="true" />
@@ -688,8 +684,8 @@
 		<stat Name="Agility" sValue="24" />
 		<stat Name="Toughness" sValue="22" />
 		<stat Name="Intelligence" sValue="15" />
-		<stat Name="Willpower" Value="36" />
-		<stat Name="Ego" Value="36" />
+		<stat Name="Willpower" sValue="26" />
+		<stat Name="Ego" sValue="26" />
 		<stat Name="Level" Value="25" />
 		<stat Name="Hitpoints" Value="105" />
 		<stat Name="AV" Value="6" />
@@ -705,8 +701,8 @@
 		<skill Name="CookingAndGathering_Spicer" />
 		<mutation Name="Regeneration" Level="5" />
 		<inventoryobject Blueprint="Leather Apron" />
-		<inventoryobject Blueprint="Sibs_CatsDogs_Hydric Bite" Number="0" />
-		<part Name="Corpse" CorpseChance="100" CorpseBlueprint="Sibs_CatsDogs_Hydric Hound Corpse" />
+		<inventoryobject Blueprint="Sibs_CatsDogs_HydricBite" Number="0" />
+		<part Name="Corpse" CorpseChance="100" CorpseBlueprint="Sibs_CatsDogs_HydricHoundCorpse" />
 		<tag Name="Gender" Value="plural" />
 		<tag Name="NoSleep" />
 		<tag Name="Unenslavable" />
@@ -725,7 +721,7 @@
 		<part Name="Description" Short="Skittering along canyon caves, this rodent is reborn a scavenging monarch. Freed from the tyranny of aerial raptors, =pronouns.possessive= septic nose lined with enamel points prods trash and treasure alike." />
 		<stat Name="Agility" Boost="1" />
 		<stat Name="Level" Value="15" />
-		<stat Name="AV" Value="4" />
+		<stat Name="AV" Value="2" />
 		<stat Name="DV" Value="4" />
 		<stat Name="Hitpoints" Value="40" />
 		<skill Name="Acrobatics" />
@@ -735,7 +731,7 @@
 		<skill Name="Tactics_Juke" />
 		<tag Name="Role" Value="Lurker" />
 		<stat Name="Speed" Value="110" />
-		<inventoryobject Blueprint="Sibs_CatsDogs_CheeseRat Bite" Number="1" />
+		<inventoryobject Blueprint="Sibs_CatsDogs_CheeseRatBite" Number="1" />
 		<inventoryobject Blueprint="Hunk of Cheese" Number="0-3" />
 		<mutation Name="ThickFur" />
 		<tag Name="NoFigurine" />
@@ -746,7 +742,7 @@
 		<part Name="QuestStepFinisher" Trigger="Seen" Quest="Sibs_CatsDogs_CheeseQuest" Step="Find" />            
 	</object>
 
-	<object Name="Sibs_CatsDogs_CheeseRat Bite" Inherits="Bite">
+	<object Name="Sibs_CatsDogs_CheeseRatBite" Inherits="Bite">
 		<part Name="Render" DisplayName="noxious bite" />
 		<part Name="MeleeWeapon" BaseDamage="2d2" />
 		<part Name="PoisonOnHit" Chance="100" Strength="15" DamageIncrement="1-2" Duration="6-9" />

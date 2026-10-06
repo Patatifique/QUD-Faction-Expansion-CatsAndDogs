@@ -1502,7 +1502,7 @@
     <object Name="DirtPath"></object>
   </cell>
   <cell X="34" Y="12">
-    <object Name="Sibs_CatsDogs_Warden Arendubark"></object>
+    <object Name="Sibs_CatsDogs_Warden"></object>
   </cell>
   <cell X="35" Y="12">
     <object Name="DirtPath"></object>

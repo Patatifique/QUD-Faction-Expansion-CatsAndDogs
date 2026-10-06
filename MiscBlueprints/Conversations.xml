@@ -3,7 +3,7 @@
 	
 <!--Pet dialogue-->
 	
-	<conversation ID="Sibs_CatsDogs_Hyrkhound Pet">
+	<conversation ID="Sibs_CatsDogs_HyrkhoundPet">
 		
 		<start ID="Welcome">
 			<text>
@@ -18,7 +18,7 @@
 	</conversation>
 	
 	
-	<conversation ID="Sibs_CatsDogs_Brainkitty Pet">
+	<conversation ID="Sibs_CatsDogs_BrainkittyPet">
 		
 		<start ID="Welcome">
 			<text>
@@ -39,7 +39,7 @@
 <!--Important NPCs-->
 
 
-	<conversation ID="Sibs_CatsDogs_Warden Arendubark">
+	<conversation ID="Sibs_CatsDogs_Warden">
 			
 		<start ID="Welcome" Inherits="DefaultChoices">
 			<text IfNotFinishedQuestStep="Sibs_CatsDogs_MainQuest1~Brief" Priority="-1">		
@@ -1541,7 +1541,7 @@
 	</conversation>	
 
 
-	<conversation ID="Sibs_CatsDogs_Catgod">
+	<conversation ID="Sibs_CatsDogs_CatGod">
 		
 		<start ID="Welcome" Inherits="DefaultChoices">
 			<text Priority="-1">
@@ -1592,7 +1592,7 @@
 	</conversation>
 
 
-	<conversation ID="Sibs_CatsDogs_Doggod">
+	<conversation ID="Sibs_CatsDogs_DogGod">
 		
 		<start ID="Welcome" Inherits="DefaultChoices">
 			<text Priority="-1">
@@ -2485,7 +2485,7 @@
 			</text>
 			<choice Target="Thanks">
 				<text>Thank you! I will take good care of this.</text>
-				<part Name="ReceiveItem" Blueprints="Sibs_CatsDogs_Catears" Identify="All" />			
+				<part Name="ReceiveItem" Blueprints="Sibs_CatsDogs_CatEars" Identify="All" />			
 			</choice>
 			<choice Target="NoThanks">I am flattered, but feel catlike enough.</choice>
 		</node>			

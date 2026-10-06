@@ -149,7 +149,7 @@ namespace XRL.World.Parts
                 foreach (BodyPart Part in body1.GetPart("Face"))
                     {
                         if (Part.Equipped == null)
-                            this.ParentObject.ForceEquipObject(GameObject.Create("Sibs_CatsDogs_Hydric Bite"), Part, true, new int?(0));
+                            this.ParentObject.ForceEquipObject(GameObject.Create("Sibs_CatsDogs_HydricBite"), Part, true, new int?(0));
                     }
             }
         }

@@ -43,7 +43,7 @@ namespace XRL.World.Quests
         }
         public override GameObject GetInfluencer()
         {
-            return GameObject.FindByBlueprint("Sibs_CatsDogs_Warden Arendubark");
+            return GameObject.FindByBlueprint("Sibs_CatsDogs_Warden");
         }
     }
 }
