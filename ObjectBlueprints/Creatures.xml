@@ -310,7 +310,7 @@
 		<stat Name="AV" Value="12" />
 		<stat Name="Hitpoints" Value="760" />
 		<inventoryobject Blueprint="Sibs_CatsDogs_CatGodWeapon" Number="4" />
-		<part Name="Description" Short="An antique statue crossed the threshold of eons and stepped in Qud, flesh and sinew where antique scholars would see nummulite. A sheer personification of the feline form, =pronouns.possessive= peers' likeness raising the interrogation of which came first. The pondering left unanswered, =pronouns.possessive= claws have furrowed the ground and sown it with the countained fury of =pronouns.possessive= kind. No longer watching over decrepit gates, =pronouns.subjective= =verb:find:afterpronoun= solace in twin scores of nictitation: before you stands the resting divine, neither to be importuned nor awoken." />
+		<part Name="Description" Short="An antique statue crossed the threshold of eons and stepped in Qud, flesh and sinew where antique scholars would see nummulite. A sheer personification of the feline form, =pronouns.possessive= peers' likeness raising the interrogation of which came first. The pondering left unanswered, =pronouns.possessive= claws have furrowed the ground and sown it with the contained fury of =pronouns.possessive= kind. No longer watching over decrepit gates, =pronouns.subjective= =verb:find:afterpronoun= solace in twin scores of nictitation: before you stands the resting divine, neither to be importuned nor awoken." />
 		<skill Name="ShortBlades" />
 		<skill Name="ShortBlades_Expertise" />
 		<skill Name="ShortBlades_Bloodletter" />
@@ -577,7 +577,7 @@
 		<intproperty Name="ParticipantVillager" Value="1" />
 		<tag Name="PreferChatToPet" />
 		<part Name="Render" DisplayName="starapple herder" Tile="Creatures/catsdogs/dogfarmer.png" ColorString="&amp;w" DetailColor="y" RenderString="d" />
-		<part Name="Description" Short="Stout and quadrupedal, =pronouns.possessive= coat is matted with starapple juice stains. A wide-brimmed hat casts a redeeming shadow over =pronouns.possessive= short snout, letting =pronouns.objective= exert the finesse needed to grasp fruits unteared. =pronouns.Possessive= sharp fangs become tools of agriculture, sowing and reaping life." />
+		<part Name="Description" Short="Stout and quadrupedal, =pronouns.possessive= coat is matted with starapple juice stains. A wide-brimmed hat casts a redeeming shadow over =pronouns.possessive= short snout, letting =pronouns.objective= exert the finesse needed to grasp fruits untorn. =pronouns.Possessive= sharp fangs become tools of agriculture, sowing and reaping life." />
 		<part Name="ConversationScript" ConversationID="Sibs_CatsDogs_ShikCitizen" />
 		<part Name="Brain" Wanders="true" Factions="Shik-100" />
 		<part Name="AISelfPreservation" Threshold="40" />
