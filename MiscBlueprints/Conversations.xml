@@ -2358,7 +2358,7 @@
 	</conversation>		
 
 	
-	<conversation ID="Sibs_CatsDogs_CatsuitGuy">
+	<conversation ID="Sibs_CatsDogs_CatsuitPerson">
 
 		<start ID="BadWelcome" IfHaveState="Sibs_CatsDogs_ShikEnding">
 			<text>			

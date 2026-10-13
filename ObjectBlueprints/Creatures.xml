@@ -618,11 +618,11 @@
 		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
 	</object>
 
-	<object Name="Sibs_CatsDogs_CatsuitGuy" Inherits="NPC">
+	<object Name="Sibs_CatsDogs_CatsuitPerson" Inherits="NPC">
 		<part Name="Render" DisplayName="Zanya" Tile="Creatures/catsdogs/catfursuit.png" ColorString="&amp;y" DetailColor="w" RenderString="h" />
-		<part Name="Description" Short="Before you stands the assemblage of humanoid figure and feline garb. =pronouns.Possessive= body is covered with fur poached from Qud's dust-grazers, rethreaded to immaculateness, while =pronouns.possessive= hands wear a mud-dweller's hide. Triangular statements have found their place to a plastifer wreath and adverstise the =pronouns.personTerm='s belonging to felids, bipedal posture notwithstanding." />
+		<part Name="Description" Short="Before you stands the assemblage of humanoid figure and feline garb. =pronouns.Possessive= body is covered with fur poached from Qud's dust-grazers, rethreaded to immaculateness, while =pronouns.possessive= hands wear a mud-dweller's hide. Triangular statements have found their place to a plastifer wreath and advertise the wearer's belonging to felids, bipedal posture notwithstanding." />
 		<tag Name="Species" Value="cat" />
-		<part Name="ConversationScript" ConversationID="Sibs_CatsDogs_CatsuitGuy" />
+		<part Name="ConversationScript" ConversationID="Sibs_CatsDogs_CatsuitPerson" />
 		<part Name="Brain" Wanders="false" Factions="Spar-100" />
 		<part Name="AISelfPreservation" Threshold="40" />
 		<stat Name="Hitpoints" Value="60" />
@@ -677,7 +677,7 @@
 		<intproperty Name="NamedVillager" Value="1" />
 		<tag Name="PreferChatToPet" />
     	<part Name="Render" DisplayName="Growarows" Tile="Creatures/catsdogs/dogmerchant2.png" ColorString="&amp;W" DetailColor="Y" RenderString="d"  />
-		<part Name="Description" Short="Out of fur turned into constellation by the remnants of sustenance past jut two necks. The inaugural stands proud and muscular, capped with a white declaration of culinary skill. The successor stoops low, tasting salt in the air, spotting patron and client alike. Both swivel in unisson as =pronouns.subjective= =verb:greet:afterpronoun= a new prospect in a joint homage to water: currency and broth." />
+		<part Name="Description" Short="Out of fur turned into constellation by the remnants of sustenance past jut two necks. The inaugural stands proud and muscular, capped with a white declaration of culinary skill. The successor stoops low, tasting salt in the air, spotting patron and client alike. Both swivel in unison as =pronouns.subjective= =verb:greet:afterpronoun= a new prospect in a joint homage to water: currency and broth." />
 		<part Name="ConversationScript" ConversationID="Sibs_CatsDogs_DogChef" />
 		<part Name="Brain" Hostile="false" Wanders="False" Factions="Shik-100" />	
 		<stat Name="Strength" sValue="26" />

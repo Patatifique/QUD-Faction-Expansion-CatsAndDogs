@@ -2524,7 +2524,7 @@
   <cell X="11" Y="15"></cell>
   <cell X="12" Y="15"></cell>
   <cell X="13" Y="15">
-    <object Name="Sibs_CatsDogs_CatsuitGuy"></object>
+    <object Name="Sibs_CatsDogs_CatsuitPerson"></object>
   </cell>
   <cell X="14" Y="15"></cell>
   <cell X="15" Y="15"></cell>
