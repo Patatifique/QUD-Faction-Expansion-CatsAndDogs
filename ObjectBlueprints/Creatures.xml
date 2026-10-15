@@ -19,7 +19,7 @@
 		<part Name="Swarmer" ExtraBonus="2" />
 		<skill Name="Persuasion_Intimidate" />
 		<part Name="Corpse" CorpseChance="20" CorpseBlueprint="Sibs_CatsDogs_HyrkhoundAlphaCorpse" />
-		<tag Name="DynamicObjectsTable:Jungle_Creatures" />
+		<tag Name="DynamicObjectsTable:Ruins_Creatures" />
 		<tag Name="Role" Value="Leader" />
 	</object>
 	
