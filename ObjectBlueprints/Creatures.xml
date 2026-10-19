@@ -19,14 +19,14 @@
 		<part Name="Swarmer" ExtraBonus="2" />
 		<skill Name="Persuasion_Intimidate" />
 		<part Name="Corpse" CorpseChance="20" CorpseBlueprint="Sibs_CatsDogs_HyrkhoundAlphaCorpse" />
-		<tag Name="DynamicObjectsTable:Jungle_Creatures" />
+		<tag Name="DynamicObjectsTable:Ruins_Creatures" />
 		<tag Name="Role" Value="Leader" />
 	</object>
 	
 	<object Name="Sibs_CatsDogs_Hyrkhound_BigBite" Inherits="Bite">
 		<part Name="Render" DisplayName="{{G|acid-wet}} nasty fangs" />
-		<part Name="MeleeWeapon" BaseDamage="4d2" />
-		<part Name="ElementalDamage" Damage="2d6+12" Attributes="Acid" />
+		<part Name="MeleeWeapon" BaseDamage="2d3" />
+		<part Name="ElementalDamage" Damage="1d6+12" Attributes="Acid" />
 		<tag Name="Gender" Value="plural" />
 	</object>
  
