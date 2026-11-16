@@ -154,7 +154,7 @@
 		</step>
 
 		<step ID="Debrief" Name="Return with the Ingredient" XP="2000">
-			<text>Bring tar-encrusted bones back to Growarows so they can finish their recipe.</text>
+			<text>Bring tar-encrusted bones back to the Growarows so they can finish their recipe.</text>
 		</step>
 		
 	</quest>
