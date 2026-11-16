@@ -255,7 +255,7 @@
 				=name=, if you will.
 			</text>
 			<choice Target="BubumubeNeither" IfHaveObservation="($Sibs_CatsDogs_ShiksparFounder_Cat AND $Sibs_CatsDogs_ShiksparFounder_Dog)" FlagSecret="true">From what I gathered, it appears Founder Bubumube was neither a dog nor a cat. This entire conflict is misguided.</choice>	
-			<choice Target="BubumubeDog" IfHaveObservation="$Sibs_CatsDogs_ShiksparFounder_Cat" FlagSecret="true">Founder Bubumube had nonretractable claws and round ears. This sounds closer to a dog in my eyes.</choice>	
+			<choice Target="BubumubeDog" IfHaveObservation="$Sibs_CatsDogs_ShiksparFounder_Cat" FlagSecret="true">Founder Bubumube had non-retractile claws and round ears. This sounds closer to a dog in my eyes.</choice>	
 			<choice Target="BubumubeCat" IfHaveObservation="$Sibs_CatsDogs_ShiksparFounder_Dog" FlagSecret="true">Founder Bubumube was a lonely being who enjoyed swiping fishes from Qud's rivers -- as close to a cat as one can get.</choice>			
 			<choice Target="End">Sorry, everyone. I need to gather my thoughts first.</choice>	
 		</node>
@@ -304,7 +304,7 @@
 
 		<node ID="BubumubeDog" AllowEscape="false">
 			<text>
-				{{emote|*Both mayors cry out, Raroofwor vociferating with renewed energy, the legitimacy of his claims now undisputed. Lady Morrarri's ear stay low as she considers the exile her people are facing, and only the warden addresses you directly*}}
+				{{emote|*Both mayors cry out, Raroofwor vociferating with renewed energy, the legitimacy of his claims now undisputed. Lady Morrarri's ears stay low as she considers the exile her people are facing, and only the warden addresses you directly*}}
 				
 				So Shik's account of history was right in the end. I thank you, =name=: I would not have been able to solve the matter on my own. I wager the village will take a few days to reorganize, as there is no doubt Spar's cats will have to find another place to live.
 			</text>
@@ -316,7 +316,7 @@
 
 		<node ID="BubumubeCat" AllowEscape="false">
 			<text>
-				{{emote|*Both mayors cry out, Lady Morrarri' driving her arguments with renewed energy, the legitimacy of her claims now undisputed. Raroofwor's tail stay tucked between his legs as he considers the exile his people are facing, and only the warden addresses you directly*}}
+				{{emote|*Both mayors cry out, Lady Morrarri' driving her arguments with renewed energy, the legitimacy of her claims now undisputed. Raroofwor's tail stays tucked between his legs as he considers the exile his people are facing, and only the warden addresses you directly*}}
 				
 				So Spar's account of history was right in the end. I thank you, =name=: I would not have been able to solve the matter on my own. I wager the village will take a few days to reorganize, as there is no doubt Shik's dogs will have to find another place to live.
 			</text>
@@ -492,7 +492,7 @@
 		
 		<node ID="Epilogue">
 			<text ID="EpilogueBriefNeutral" IfHaveState="Sibs_CatsDogs_NeutralEnding">			
-				{{emote|*=pronouns.Subjective= =verb:look:afterpronoun= embarassed for a moment.*}}
+				{{emote|*=pronouns.Subjective= =verb:look:afterpronoun= embarrassed for a moment.*}}
 				
 				Aye well, even if I cannae say much has changed, folks go from village to village now. Their side has grown a wee bit more reasonable, and folks say I'm getting soft in me years.
 			</text>
@@ -512,7 +512,7 @@
 	
 		<node ID="EpilogueNeutral">
 			<text>						
-				Buried as can be, although I still find some of them unsufferable. Still, I wager I ought to thank ye, traveler, for setting things straight in Shik and Spar. Had ye not intervened, folks from the other side might have grown a wee bit too rowdy, ye ken?
+				Buried as can be, although I still find some of them insufferable. Still, I wager I ought to thank ye, traveler, for setting things straight in Shik and Spar. Had ye not intervened, folks from the other side might have grown a wee bit too rowdy, ye ken?
 				
 				Figure ye deserve a reward fer yer help in settling this matter. It may not be much, but I trust ye will put it to good use.
 			</text>
@@ -527,7 +527,7 @@
 			<text>						
 				{{emote|*A bellowing laugh splatters slime on the ground in front of you.*}}
 				
-				That they did! I would have paid good freshwater to witness that firstpaw, but only the Beetle Moon peered at their shameful escape. I had the wall brought down, it dinnae serve any purpose anymore. Oh, and please have this -- as thanks fer yer help in the matter. Laid unused in some messy worskhop, would ye believe that?
+				That they did! I would have paid good freshwater to witness that firstpaw, but only the Beetle Moon peered at their shameful escape. I had the wall brought down, it dinnae serve any purpose anymore. Oh, and please have this -- as thanks fer yer help in the matter. Laid unused in some messy workshop, would ye believe that?
 			</text>
 			<choice Target="End" FinishQuest="Sibs_CatsDogs_MainQuestEpilogue">
 				<text>I am not sure what to think about this whole affair. Live and drink, mayor.</text>
@@ -660,7 +660,7 @@
 			<text>			
 				{{emote|*=pronouns.Subjective= =verb:sits:afterpronoun=, pondering the situation.*}}
 
-				Visitor, in other circumstancs you would be welcome -- but with the recent Gathering, I cannot spare the time to discuss with you.</text>
+				Visitor, in other circumstances you would be welcome -- but with the recent Gathering, I cannot spare the time to discuss with you.</text>
 			<choice Target="End">Understood, mayor. I will be back later; in the meantime, live and drink.</choice>
 		</start>
 		
@@ -754,7 +754,7 @@
 			<text ID="EpilogueBriefPerfect" IfHaveState="Sibs_CatsDogs_PerfectEnding">	
 				{{emote|*=pronouns.Subjective= uncomfortably =verb:knead:afterpronoun= the ground beneath =pronouns.possessive= paws.*}}
 				
-				Why visitor, you ought to discuss the matter with young Rrromaw. My heir has moved out to a hut inbetween villages with a dog from Shik and... Well, you will get a better explanation from them.</text>
+				Why visitor, you ought to discuss the matter with young Rrromaw. My heir has moved out to a hut in-between villages with a dog from Shik and... Well, you will get a better explanation from them.</text>
 			<text ID="EpilogueBriefShik" IfHaveState="Sibs_CatsDogs_SparEnding">			
 				{{emote|*=pronouns.Subjective= =verb:smile:afterpronoun= devilishly.*}}
 				
@@ -780,7 +780,7 @@
 
 		<node ID="EpilogueSpar">
 			<text>						
-				{{emote|*=pronouns.Subjective= =verb:smrik:afterpronoun= at your question.*}}
+				{{emote|*=pronouns.Subjective= =verb:smirk:afterpronoun= at your question.*}}
 				
 				Believe what you must, visitor, it matters little to me. Still, why would I lie? The cover of the night was the only witness to their ridiculous exile. The wall came down soon after, stripped of purpose. All of Spar would want you to have this: a fitting reward for the role you played into it, retrieved from their own stores.
 			</text>
@@ -1242,7 +1242,7 @@
 
 		<node ID="Epilogue">
 			<text Priority="-1">						
-				{{emote|*=pronouns.Subjective= =verb:let:afterpronoun= out a crystaline laugh.*}}
+				{{emote|*=pronouns.Subjective= =verb:let:afterpronoun= out a crystalline laugh.*}}
 						
 				Quite a lot has changed since you last came here! After you left, Oof Growf and I used the confusion to reveal our mutual feelings both to each other and to our respective parents. That came as quite a shock to them, really...
 			</text>
@@ -1488,7 +1488,7 @@
 	
 		<node ID="Delivered" AllowEscape="false">
 			<text>			
-				{{emote|=pronouns.Subjective= =verb:read:afterpronoun= but half the note before tossing it aside, nodding energically.*}}
+				{{emote|=pronouns.Subjective= =verb:read:afterpronoun= but half the note before tossing it aside, nodding energetically.*}}
 				
 				Oof Growf, whom I've heard so much about! A model of valor and bravery... I cannot let this occasion pass! I will be there at any cost!
 			</text>
@@ -2037,7 +2037,7 @@
 				{{cloudy|We ask that you greet us separately, for clarity's sake.}}
 			</text>
 			<choice Target="Mutated" Priority="20">
-				<text>I am of one mind, but sport several heads myself. I am familiar with people seldom knowing which too adress.</text>
+				<text>I am of one mind, but sport several heads myself. I am familiar with people seldom knowing which too address.</text>
 				<part Name="Sibs_RequirePart" Part="TwoHeaded" Render="Mutation: Two-headed" />
 			</choice>
 			<choice Target="Relationship" Priority="10">How do you take decisions? Is the matter not uncomfortable?</choice>

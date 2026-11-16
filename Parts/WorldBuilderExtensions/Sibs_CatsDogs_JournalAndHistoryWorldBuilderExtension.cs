@@ -14,7 +14,7 @@ namespace Sibs.CatsAndDogs
         {
             //  Gossips to be given by the Gods
             JournalAPI.AddObservation(
-                "Bubumube had round ears and nonretractile claws.", 
+                "Bubumube had round ears and non-retractile claws.", 
                 "$Sibs_CatsDogs_ShiksparFounder_Cat", 
                 "Gossip", 
                 "$Sibs_CatsDogs_ShiksparFounder_Cat",
