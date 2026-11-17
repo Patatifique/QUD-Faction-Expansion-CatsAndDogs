@@ -427,7 +427,7 @@
 		<part Name="Description" Short="Ballistically scarred rhitidome lines the core of the vegetal guardian, hunched over the tool of =pronouns.possessive= trade. A halo of leaves not yet lowered by age provides shade against the High Salt Sun, and roots poised in anchorage write in the soil a poem of permanency. =pronouns.Possessive= foliage rustles with vigilance, denying the futileness of a stationary guardian." />
 		<stat Name="AV" Value="12" />
 		<stat Name="Level" Value="30" />
-		<stat Name="Hitpoints" Value="250" />
+		<stat Name="Hitpoints" Value="600" />
 		<part Name="Brain" Wanders="false" Mobile="false" Hostile="false" Calm="True" Factions="Wardens-100,Trees-50" />
 		<part Name="ConversationScript" ConversationID="Sibs_CatsDogs_Warden" />
 		<part Name="Physics" Weight="8000" Solid="true" Takeable="false" />
@@ -435,10 +435,7 @@
 		<stat Name="HeatResistance" Value="25" />
 		<stat Name="ElectricResistance" Value="25" />
 		<stat Name="AcidResistance" Value="25" />
-		<stat Name="Strength" sValue="32" />
 		<stat Name="Agility" sValue="28" />
-		<stat Name="Toughness" sValue="38" />
-		<stat Name="Willpower" sValue="30" />
 		<skill Name="Rifle_DrawABead" />
 		<skill Name="Rifle_SteadyHands" />
 		<skill Name="Endurance_Weathered" />
@@ -780,7 +777,6 @@
 		<stat Name="Agility" Boost="1" />
 		<stat Name="Toughness" Boost="1" />
 		<stat Name="AV" Value="3" />
-		<stat Name="DV" Value="5" />
 		<tag Name="Role" Value="Hero" />
 		<part Name="Swarmer" ExtraBonus="2" />
 		<skill Name="Persuasion_MenacingStare" />
